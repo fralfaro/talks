@@ -1,12 +1,23 @@
 ---
-title: "No es Magia, es Ciencia"
-subtitle: "M3 - Diplomado TD"
+title: "Diplomado Transformación Digital"
+subtitle: "M3 - Semana 03"
 author: 
   - Francisco Alfaro
 date: 21 may 2026
 format: 
   revealjs:
+    width: 1366
+    height: 768
+    theme: simple
+    slide-number: true
+    controls: true
+    controls-layout: edges
+    controls-back-arrows: faded
     transition: slide
+    chalkboard: true
+    callout-appearance: simple
+    code-copy: true
+    highlight-style: arrow
     title-slide-attributes: 
       data-background-image: images/background.jpg
     logo: images/usm.png
@@ -184,19 +195,18 @@ format:
 
 Transcribir texto es guardar letras como bits.
 
-
 ::: panel-tabset
 ### ASCII
 
-- 1 byte (8 bits)
-- 128 caracteres
-- No incluye ñ ni tildes
+-   1 byte (8 bits)
+-   128 caracteres
+-   No incluye ñ ni tildes
 
 ### UTF-8
 
-- 1 a 4 bytes
-- Compatible con ASCII
-- Incluye emojis 😁
+-   1 a 4 bytes
+-   Compatible con ASCII
+-   Incluye emojis 😁
 :::
 
 ------------------------------------------------------------------------
