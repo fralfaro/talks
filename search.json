@@ -1,0 +1,1073 @@
+[
+  {
+    "objectID": "WebscrappingFrancais.html",
+    "href": "WebscrappingFrancais.html",
+    "title": "Talks",
+    "section": "",
+    "text": "import pandas as pd\nfrom time import sleep\nfrom selenium import webdriver\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.common.keys import Keys\nfrom selenium.webdriver import ActionChains\nfrom selenium.webdriver.chrome.service import Service\n\ndef iniciar_chromedriver():\n    service = Service()\n    options = webdriver.ChromeOptions()\n    options.add_argument('start-maximized')\n    options.add_argument(\"--safebrowsing-disable-download-protection\")\n    return webdriver.Chrome(service=service, options=options)\n\ndf_path = \"C:/Users/jmetc/OneDrive/Documents/Prueba/prueba_robot.xlsx\"\n\n# Se ingresa a https://www.immo-data.fr/explorateur/transaction/recherche\nurl = \"https://www.immo-data.fr/explorateur/transaction/recherche\"\ndriver = iniciar_chromedriver()\ndriver.get(url)\nsleep(10)\n\n# Iteramos por todos los valores posibles que encontramos\nindice = 0\ndireccion_list = []\ntipo_edificio_list = []\nprecio_venta_list = []\nprecio_metro_cuadrado_list = []\nnumero_piezas_list = []\nsuperficie_list = []\nsuperficie_terreno_list = []\nfecha_venta_list = []\n\nindice = 0\nquedan_propiedades = True\nwhile indice &lt; 101:\n    indice = indice + 1\n    print(indice)\n\n    base_xpath = f\"/html/body/div[1]/div[1]/div/div[2]/div[2]/div[2]/div[{indice}]\"\n\n    direccion_xpath = base_xpath + \"/div/div[2]/div[1]/div[1]/div/p\"\n    tipo_edificio_xpath = base_xpath + \"/div/div[2]/div[1]/div[1]/p\"\n    precio_venta_xpath = base_xpath + \"/div/div[2]/div[1]/div[2]/p[1]/span\"\n    precio_metro_cuadrado_xpath = base_xpath + \"/div/div[2]/div[1]/div[2]/p[2]/span\"\n    numero_piezas_xpath = base_xpath + \"/div/div[2]/div[2]/div[1]/div/span[1]\"\n    superficie_xpath = base_xpath + \"/div/div[2]/div[2]/div[2]/div/span[1]\"\n    superficie_terreno_xpath = base_xpath + \"/div/div[2]/div[2]/div[3]/div/span[1]\"\n    fecha_venta_xpath = base_xpath + \"/div/div[2]/div[2]/div[4]/div/span[1]/time\"\n\n    try:\n        direccion_list.append(driver.find_element(By.XPATH, direccion_xpath).text)\n    except:\n        direccion_list.append(\"No se encontro la direccion para esta vivienda\")\n\n    try:\n        tipo_edificio_list.append(driver.find_element(By.XPATH, precio_venta_xpath).text)\n    except:\n        tipo_edificio_list.append(\"No se encontro el tipo de vivienda para esta vivienda\")\n\n    try:\n        precio_venta_list.append(driver.find_element(By.XPATH, precio_venta_xpath).text)\n    except:\n        precio_venta_list.append(\"No se encontro el precio de venta para esta vivienda\")\n\n    try:\n        precio_metro_cuadrado_list.append(driver.find_element(By.XPATH, precio_metro_cuadrado_xpath).text)\n    except:\n        precio_metro_cuadrado_list.append(\"No se encontro el precio por metro cuadrado para esta vivienda\")\n\n    try:\n        superficie_list.append(driver.find_element(By.XPATH, superficie_xpath).text)\n    except:\n        superficie_list.append(\"No se encontro la superficie en metros cuadrados para esta vivienda\")\n\n    try:\n        numero_piezas_list.append(driver.find_element(By.XPATH, numero_piezas_xpath).text)\n    except:\n        numero_piezas_list.append(\"No se encontro el numero de piezas para esta vivienda\")\n\n    try:\n        superficie_terreno_list.append(driver.find_element(By.XPATH, superficie_terreno_xpath).text)\n    except:\n        superficie_terreno_list.append(\"No se encontro la superficie del terreno en metros cuadrados para esta vivienda\")\n\n    try:\n        fecha_venta_list.append(driver.find_element(By.XPATH, fecha_venta_xpath).text)\n    except:\n        fecha_venta_list.append(\"No se encontro la fecha de venta para esta vivienda\")\n\n# No quedan mas viviendas en venta en el panel derecho\ncolumns = ['direccion', 'tipo_edificio', 'precio_de_venta', 'precio_metro_cuadrado', 'numero_de_piezas', 'superficie_en_m2', 'superficie_terreno_en_m2', 'fecha_de_venta']\ndf = pd.DataFrame(columns=columns)\n\ndf['direccion'] = direccion_list\ndf['tipo_edificio'] = tipo_edificio_list\ndf['precio_de_venta'] = precio_venta_list\ndf['precio_metro_cuadrado'] = precio_metro_cuadrado_list\ndf['numero_de_piezas'] = numero_piezas_list\ndf['superficie_en_m2'] = superficie_list\ndf['superficie_terreno_en_m2'] = superficie_terreno_list\ndf['fecha_de_venta'] = fecha_venta_list\n\ndf.to_excel(df_path, index=False)\n\nHola"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#hello-quarto-title",
+    "href": "hello-quarto/presentacion_uah.html#hello-quarto-title",
+    "title": "Talks",
+    "section": "",
+    "text": "Hola Quarto\ncompartir • colaborar • enseñar • reimaginar\nFrancisco Alfaro Medina  Valeska Canales Pozo\nhttps://sethnut.com/talks"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#qué-es-quarto",
+    "href": "hello-quarto/presentacion_uah.html#qué-es-quarto",
+    "title": "Talks",
+    "section": "¿Qué es Quarto ?",
+    "text": "¿Qué es Quarto ?"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#publishing-system-1",
+    "href": "hello-quarto/presentacion_uah.html#publishing-system-1",
+    "title": "Talks",
+    "section": "",
+    "text": "Quarto es un sistema abierto de publicación científica y técnica"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#publishing-system-2",
+    "href": "hello-quarto/presentacion_uah.html#publishing-system-2",
+    "title": "Talks",
+    "section": "",
+    "text": "Quarto es un sistema abierto de publicación científica y técnica\n\n\nel objetivo es hacer que el proceso de creación y colaboración sea drásticamente mejor"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#por-qué-quarto",
+    "href": "hello-quarto/presentacion_uah.html#por-qué-quarto",
+    "title": "Talks",
+    "section": "¿Por qué Quarto?",
+    "text": "¿Por qué Quarto?"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#por-qué-quarto-1",
+    "href": "hello-quarto/presentacion_uah.html#por-qué-quarto-1",
+    "title": "Talks",
+    "section": "¿Por qué Quarto?",
+    "text": "¿Por qué Quarto?\n\n\n\n\n\n\n\n Un solo documento, múltiples formatos: HTML, PDF, presentaciones o sitios web.\n\n\n\n\n\n\n\n Materiales más accesibles y fáciles de usar, con soporte para la enseñanza y la inclusión.\n\n\n\n\n\n\n\n\n\n\n\n\n Fácil de aprender: usa Markdown simple y cuenta con ayudas para empezar rápido.\n\n\n\n\n\n\n\n Flexibilidad total: integra texto, imágenes y código en R, Python, Julia u otros lenguajes."
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#ejemplos",
+    "href": "hello-quarto/presentacion_uah.html#ejemplos",
+    "title": "Talks",
+    "section": "Ejemplos",
+    "text": "Ejemplos"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#quarto-organiza-cada-paso-del-renderizado",
+    "href": "hello-quarto/presentacion_uah.html#quarto-organiza-cada-paso-del-renderizado",
+    "title": "Talks",
+    "section": "Quarto organizacada paso del renderizado",
+    "text": "Quarto organizacada paso del renderizado"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#quarto-facilita-el-cambio-entre-formatos",
+    "href": "hello-quarto/presentacion_uah.html#quarto-facilita-el-cambio-entre-formatos",
+    "title": "Talks",
+    "section": "Quarto facilita el cambio entre formatos",
+    "text": "Quarto facilita el cambio entre formatos\n\n\n\nDocument\n\n lesson-1.qmd\n\ntitle: \"Lesson 1\"\nformat: html\n\n\n\nPresentation\n\n lesson-1.qmd\n\ntitle: \"Lesson 1\"\nformat: revealjs\n\n\n\nWebsite\n\n _quarto.yml\n\nproject:\n  type: website\n\nwebsite: \n  navbar: \n    left:\n      - lesson-1.qmd"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#primeros-pasos-con-quarto",
+    "href": "hello-quarto/presentacion_uah.html#primeros-pasos-con-quarto",
+    "title": "Talks",
+    "section": "Primeros Pasos con Quarto",
+    "text": "Primeros Pasos con Quarto"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#instalar-y-configurar-quarto",
+    "href": "hello-quarto/presentacion_uah.html#instalar-y-configurar-quarto",
+    "title": "Talks",
+    "section": "Instalar y configurar Quarto",
+    "text": "Instalar y configurar Quarto\n\n\n\n\n\n\n\n\n\nDescarga e instalación:\n\nQuarto.org (Windows, macOS y Linux)\n\nVerificación:\n\nEjecutar quarto check en la terminal\n\nEditores recomendados:\n\nRStudio , VSCode + Quarto Extension"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#instalar-y-configurar-quarto-1",
+    "href": "hello-quarto/presentacion_uah.html#instalar-y-configurar-quarto-1",
+    "title": "Talks",
+    "section": "Instalar y configurar Quarto",
+    "text": "Instalar y configurar Quarto"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#section-1",
+    "href": "hello-quarto/presentacion_uah.html#section-1",
+    "title": "Talks",
+    "section": "",
+    "text": "🌐 Asegúrate de tener instalado R (RStudio) y/o Python (Jupyter)"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#section-2",
+    "href": "hello-quarto/presentacion_uah.html#section-2",
+    "title": "Talks",
+    "section": "",
+    "text": "Código: hello.qmd\n---\ntitle: \"Hello, Quarto\"\nformat: html\neditor: visual\n---\n\n## Meet Quarto\n\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see &lt;https://quarto.org&gt;.\n\n## Meet the penguins\n\n![](https://raw.githubusercontent.com/quarto-dev/quarto-web/main/docs/get-started/hello/rstudio/lter_penguins.png){style=\"float:right;\" fig-alt=\"Illustration of three species of Palmer Archipelago penguins: Chinstrap, Gentoo, and Adelie. Artwork by @allison_horst.\" width=\"401\"}\n\nThe `penguins` data from the [**palmerpenguins**](https://allisonhorst.github.io/palmerpenguins \"palmerpenguins R package\") package contains size measurements for `{r} nrow(penguins)` penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.\n\nThe plot below shows the relationship between flipper and bill lengths of these penguins.\n\nHTML: hello.html"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#section-3",
+    "href": "hello-quarto/presentacion_uah.html#section-3",
+    "title": "Talks",
+    "section": "",
+    "text": "Código: example.qmd\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat:\n  revealjs:\n    transition: fade\n    theme: black\n    toc: true\n    center: true\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n---\n\n## Going to sleep \n::: { .incremental }\n\n- Get in bed\n- Count sheep\n\n:::\n\nSlides: example.html"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#qué-podemos-hacer-con-quarto",
+    "href": "hello-quarto/presentacion_uah.html#qué-podemos-hacer-con-quarto",
+    "title": "Talks",
+    "section": "¿ Qué podemos hacer con Quarto?",
+    "text": "¿ Qué podemos hacer con Quarto?"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#código-con-estilo",
+    "href": "hello-quarto/presentacion_uah.html#código-con-estilo",
+    "title": "Talks",
+    "section": "Código con Estilo",
+    "text": "Código con Estilo\n\nMás de 20 temas para resaltar tu código\n\nEl tema por defecto está optimizado para accesibilidad\n\n# Define a server for the Shiny app\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot &lt;- renderPlot({\n    # Render a barplot\n  })\n}"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#código-en-movimiento",
+    "href": "hello-quarto/presentacion_uah.html#código-en-movimiento",
+    "title": "Talks",
+    "section": "Código en Movimiento",
+    "text": "Código en Movimiento\n\nMás de 20 estilos de resaltado listos para usar\n\nTema por defecto diseñado para máxima accesibilidad\n\n# Define a server for the Shiny app\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot &lt;- renderPlot({\n    # Render a barplot\n    barplot(WorldPhones[,input$region]*1000, \n            main=input$region,\n            ylab=\"Number of Telephones\",\n            xlab=\"Year\")\n  })\n}"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#enfoque-en-líneas",
+    "href": "hello-quarto/presentacion_uah.html#enfoque-en-líneas",
+    "title": "Talks",
+    "section": "Enfoque en Líneas",
+    "text": "Enfoque en Líneas\n\nSeñala las líneas clave para mayor claridad\n\nAgrega resaltados paso a paso\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#código-ejecutable",
+    "href": "hello-quarto/presentacion_uah.html#código-ejecutable",
+    "title": "Talks",
+    "section": "Código Ejecutable",
+    "text": "Código Ejecutable\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\nmpg = sns.load_dataset(\"mpg\")\nsns.scatterplot(data=mpg, x=\"horsepower\", y=\"mpg\")\nplt.show()"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#ecuaciones-en-latex",
+    "href": "hello-quarto/presentacion_uah.html#ecuaciones-en-latex",
+    "title": "Talks",
+    "section": "Ecuaciones en LaTeX",
+    "text": "Ecuaciones en LaTeX\nRenderizado de ecuaciones a HTML con MathJax.\n\n\n\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\n\n\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\n\n\\[\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\\]\n\\[\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\\]"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#columnas-flexibles",
+    "href": "hello-quarto/presentacion_uah.html#columnas-flexibles",
+    "title": "Talks",
+    "section": "Columnas Flexibles",
+    "text": "Columnas Flexibles\nAcomoda texto, imágenes o código en columnas de varios tamaños.\n\n\n\nMotor Trend Car Road Tests\nThe data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\n18.000000\n8\n307.000000\n130.000000\n3504\n\n\n15.000000\n8\n350.000000\n165.000000\n3693\n\n\n18.000000\n8\n318.000000\n150.000000\n3436\n\n\n16.000000\n8\n304.000000\n150.000000\n3433\n\n\n17.000000\n8\n302.000000\n140.000000\n3449"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#tabsets",
+    "href": "hello-quarto/presentacion_uah.html#tabsets",
+    "title": "Talks",
+    "section": "Tabsets",
+    "text": "Tabsets\nCrea bloques con pestañas que permiten alternar entre distintos contenidos.\n\nPlotData\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nx\ny\n\n\n\n\n0\n-2.000000\n12.000000\n\n\n1\n-1.929293\n11.510050\n\n\n2\n-1.858586\n11.030099\n\n\n3\n-1.787879\n10.560147\n\n\n4\n-1.717172\n10.100194"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#gráficos-interactivos",
+    "href": "hello-quarto/presentacion_uah.html#gráficos-interactivos",
+    "title": "Talks",
+    "section": "Gráficos Interactivos",
+    "text": "Gráficos Interactivos"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#el-poder-de-las-extensiones-en-quarto",
+    "href": "hello-quarto/presentacion_uah.html#el-poder-de-las-extensiones-en-quarto",
+    "title": "Talks",
+    "section": "El poder de las extensiones en Quarto",
+    "text": "El poder de las extensiones en Quarto"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#extensiones-de-quarto",
+    "href": "hello-quarto/presentacion_uah.html#extensiones-de-quarto",
+    "title": "Talks",
+    "section": "Extensiones de Quarto",
+    "text": "Extensiones de Quarto\n\n\n\nLas extensiones de Quarto permiten añadir nuevas características y potenciar su uso.\n\n\n🔧Necesitas más poder? Usa Extensions"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#quarto-quiz",
+    "href": "hello-quarto/presentacion_uah.html#quarto-quiz",
+    "title": "Talks",
+    "section": "Quarto Quiz",
+    "text": "Quarto Quiz\n\n\n\nLa extensión Quarto Quiz permite crear preguntas directamente en tus presentaciones.\n\n\n📚 Más info: Quarto Quiz Extension"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#ejemplo",
+    "href": "hello-quarto/presentacion_uah.html#ejemplo",
+    "title": "Talks",
+    "section": "Ejemplo",
+    "text": "Ejemplo\n\n¿Cómo te ha parecido la presentación hasta ahora?\n\nMe encantó 😍\nMás o menos 🤔\n\nTal vez podría mejorar 🙂\n\nNo me gustó mucho 😕"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#quarto-webr-pyodide",
+    "href": "hello-quarto/presentacion_uah.html#quarto-webr-pyodide",
+    "title": "Talks",
+    "section": "Quarto WebR + Pyodide",
+    "text": "Quarto WebR + Pyodide\n\n\n\n\nWebR: Ejecuta código R en el navegador, sin necesidad de instalación.\n# To install WebR in your environment\nremotes::install_github(\"attiyap/WebR\")\nPyodide: Lo mismo, pero para Python.\n# To install Pyodide\npip install pyodide\n\n\n\n\n\n\nWebR and Pyodide run code directly in the browser.\nNo setup, no installs — just share and run.\nPerfect for teaching, demos, and interactive content."
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#ejemplo-1",
+    "href": "hello-quarto/presentacion_uah.html#ejemplo-1",
+    "title": "Talks",
+    "section": "Ejemplo",
+    "text": "Ejemplo\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nThis is a live R example.\nWhy run it live?\nBecause people learn better when they see and try.\nNo setup, no install — just code and results.\nThat’s the power of WebR."
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#shiny",
+    "href": "hello-quarto/presentacion_uah.html#shiny",
+    "title": "Talks",
+    "section": "Shiny",
+    "text": "Shiny\n\n\n\nShiny es un paquete de R que permite crear de manera sencilla aplicaciones interactivas usando R\n(también disponible para Python).\n\n\n📚 Más info: Shiny - Posit"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#ejemplo-2",
+    "href": "hello-quarto/presentacion_uah.html#ejemplo-2",
+    "title": "Talks",
+    "section": "Ejemplo",
+    "text": "Ejemplo\n\n\n\nShiny apps let people interact with your data.\nChange inputs — see results instantly.\nPerfect for exploring and communicating insights."
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#quarto-shinylive",
+    "href": "hello-quarto/presentacion_uah.html#quarto-shinylive",
+    "title": "Talks",
+    "section": "Quarto Shinylive",
+    "text": "Quarto Shinylive\n\n\n\n\nDespliega aplicaciones Shiny que se ejecutan 100% en el navegador — con Python y R.\n\nSin servidores. Sin configuraciones. Solo escribe código y ejecútalo.\n\n\n\n\n\n\n\n\n\nSigue en tu presentación.\nNo pierdas el ritmo 🎯"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#ejemplo-3",
+    "href": "hello-quarto/presentacion_uah.html#ejemplo-3",
+    "title": "Talks",
+    "section": "Ejemplo",
+    "text": "Ejemplo\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 800\n\nfrom shiny import App, ui, render, reactive\nimport matplotlib.pyplot as plt\nimport io\nimport base64\n\n# Function to generate the plot dynamically based on input values\ndef create_plot(yes_value, no_value):\n    categories = ['Sí', 'No']\n    values = [yes_value, no_value]\n\n    fig, ax = plt.subplots(figsize=(14, 5))\n    ax.bar(categories, values, color=['lightblue', 'salmon'])\n    ax.set_title('¿Te ha gustado la presentación?')\n\n    # Convert the image to base64 for display in Shiny\n    buf = io.BytesIO()\n    plt.savefig(buf, format=\"png\")\n    plt.close(fig)\n    buf.seek(0)\n    encoded_image = base64.b64encode(buf.getvalue()).decode()\n    return f'&lt;img src=\"data:image/png;base64,{encoded_image}\" style=\"max-width:100%;\"&gt;'\n\n# UI definition\napp_ui = ui.page_fluid(\n    ui.h2(\"Encuesta Interactiva\"),\n    \n    # Sliders to change values dynamically\n    ui.input_slider(\"yes_value\", \"Respuestas 'Sí':\", min=0, max=50, value=20),\n    ui.input_slider(\"no_value\", \"Respuestas 'No'\", min=0, max=50, value=10),\n    \n    # Output area for the plot\n    ui.output_ui(\"plot_output\")\n)\n\n# Server function\ndef server(input, output, session):\n    @output\n    @render.ui\n    def plot_output():\n        return ui.HTML(create_plot(input.yes_value(), input.no_value()))\n\n# Create the Shiny app\napp = App(app_ui, server)"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#conclusiones",
+    "href": "hello-quarto/presentacion_uah.html#conclusiones",
+    "title": "Talks",
+    "section": "Conclusiones",
+    "text": "Conclusiones\n\n\n\n\n\n\n\nCompartir: Un mismo .qmd genera HTML, PDF, slides o sitios web, pasando de lo estático a lo interactivo.\n\n\n\n\n\n\n\n\nColaborar: Con un archivo sencillo ya se puede crear y publicar material reproducible, iniciando el trabajo en equipo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnseñar: Sus features integran texto, código y visualizaciones, mejorando la enseñanza con recursos dinámicos.\n\n\n\n\n\n\n\n\nReimaginar: Tecnologías como WebR, Pyodide o Shiny abren nuevas formas de aprender e innovar en educación."
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#referencias-y-recursos",
+    "href": "hello-quarto/presentacion_uah.html#referencias-y-recursos",
+    "title": "Talks",
+    "section": "Referencias y Recursos",
+    "text": "Referencias y Recursos\n\n\n\n\n\n\n\nDocumentación oficial\n🔗 quarto.org\nGuías y ejemplos prácticos para comenzar de inmediato.\n\n\n\n\n\n\n\n\nAprendizaje en video\n🔗 Crash Course en YouTube\nIntroducción práctica a Quarto y sus distintos usos.\n\n\n\n\n\n\n\n\n\n\n\n\n\nRecursos de la comunidad\n🔗 Mine Cetinkaya-Rundel\nCursos, libros y presentaciones en Quarto en GitHub.\n\n\n\n\n\n\n\n\nAplicaciones en educación\n🔗 sethnut.com/resources\nOlimpiada Matemática, Verano Matemático, EMMA y más!"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_uah.html#gracias-por-participar",
+    "href": "hello-quarto/presentacion_uah.html#gracias-por-participar",
+    "title": "Talks",
+    "section": "🎉 ¡Gracias por Participar!",
+    "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 Disfrutar del Evento!\n\n\n\n\n\n🔗 Nuestro Sitio Web: sethnut.com/talks"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#hello-quarto-title",
+    "href": "hello-quarto/presentacion.html#hello-quarto-title",
+    "title": "Talks",
+    "section": "",
+    "text": "Hola Quarto\ncompartir • colaborar • enseñar • reimaginar\nFrancisco Alfaro Medina  Valeska Canales Pozo\nhttps://sethnut.com/talks"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#qué-es-quarto",
+    "href": "hello-quarto/presentacion.html#qué-es-quarto",
+    "title": "Talks",
+    "section": "¿Qué es Quarto ?",
+    "text": "¿Qué es Quarto ?"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#publishing-system-1",
+    "href": "hello-quarto/presentacion.html#publishing-system-1",
+    "title": "Talks",
+    "section": "",
+    "text": "Quarto es un sistema abierto de publicación científica y técnica"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#publishing-system-2",
+    "href": "hello-quarto/presentacion.html#publishing-system-2",
+    "title": "Talks",
+    "section": "",
+    "text": "Quarto es un sistema abierto de publicación científica y técnica\n\n\nel objetivo es hacer que el proceso de creación y colaboración sea drásticamente mejor"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#por-qué-quarto",
+    "href": "hello-quarto/presentacion.html#por-qué-quarto",
+    "title": "Talks",
+    "section": "¿Por qué Quarto?",
+    "text": "¿Por qué Quarto?"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#por-qué-quarto-1",
+    "href": "hello-quarto/presentacion.html#por-qué-quarto-1",
+    "title": "Talks",
+    "section": "¿Por qué Quarto?",
+    "text": "¿Por qué Quarto?\n\n\n\n\n\n\n\n Un solo documento, múltiples formatos: HTML, PDF, presentaciones o sitios web.\n\n\n\n\n\n\n\n Materiales más accesibles y fáciles de usar, con soporte para la enseñanza y la inclusión.\n\n\n\n\n\n\n\n\n\n\n\n\n Fácil de aprender: usa Markdown simple y cuenta con ayudas para empezar rápido.\n\n\n\n\n\n\n\n Flexibilidad total: integra texto, imágenes y código en R, Python, Julia u otros lenguajes."
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#ejemplos",
+    "href": "hello-quarto/presentacion.html#ejemplos",
+    "title": "Talks",
+    "section": "Ejemplos",
+    "text": "Ejemplos"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#quarto-organiza-cada-paso-del-renderizado",
+    "href": "hello-quarto/presentacion.html#quarto-organiza-cada-paso-del-renderizado",
+    "title": "Talks",
+    "section": "Quarto organizacada paso del renderizado",
+    "text": "Quarto organizacada paso del renderizado"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#quarto-facilita-el-cambio-entre-formatos",
+    "href": "hello-quarto/presentacion.html#quarto-facilita-el-cambio-entre-formatos",
+    "title": "Talks",
+    "section": "Quarto facilita el cambio entre formatos",
+    "text": "Quarto facilita el cambio entre formatos\n\n\n\nDocument\n\n lesson-1.qmd\n\ntitle: \"Lesson 1\"\nformat: html\n\n\n\nPresentation\n\n lesson-1.qmd\n\ntitle: \"Lesson 1\"\nformat: revealjs\n\n\n\nWebsite\n\n _quarto.yml\n\nproject:\n  type: website\n\nwebsite: \n  navbar: \n    left:\n      - lesson-1.qmd"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#primeros-pasos-con-quarto",
+    "href": "hello-quarto/presentacion.html#primeros-pasos-con-quarto",
+    "title": "Talks",
+    "section": "Primeros Pasos con Quarto",
+    "text": "Primeros Pasos con Quarto"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#instalar-y-configurar-quarto",
+    "href": "hello-quarto/presentacion.html#instalar-y-configurar-quarto",
+    "title": "Talks",
+    "section": "Instalar y configurar Quarto",
+    "text": "Instalar y configurar Quarto\n\n\n\n\n\n\n\n\n\nDescarga e instalación:\n\nQuarto.org (Windows, macOS y Linux)\n\nVerificación:\n\nEjecutar quarto check en la terminal\n\nEditores recomendados:\n\nRStudio , VSCode + Quarto Extension"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#instalar-y-configurar-quarto-1",
+    "href": "hello-quarto/presentacion.html#instalar-y-configurar-quarto-1",
+    "title": "Talks",
+    "section": "Instalar y configurar Quarto",
+    "text": "Instalar y configurar Quarto"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#section-1",
+    "href": "hello-quarto/presentacion.html#section-1",
+    "title": "Talks",
+    "section": "",
+    "text": "🌐 Asegúrate de tener instalado R (RStudio) y/o Python (Jupyter)"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#section-2",
+    "href": "hello-quarto/presentacion.html#section-2",
+    "title": "Talks",
+    "section": "",
+    "text": "Código: hello.qmd\n---\ntitle: \"Hello, Quarto\"\nformat: html\neditor: visual\n---\n\n## Meet Quarto\n\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see &lt;https://quarto.org&gt;.\n\n## Meet the penguins\n\n![](https://raw.githubusercontent.com/quarto-dev/quarto-web/main/docs/get-started/hello/rstudio/lter_penguins.png){style=\"float:right;\" fig-alt=\"Illustration of three species of Palmer Archipelago penguins: Chinstrap, Gentoo, and Adelie. Artwork by @allison_horst.\" width=\"401\"}\n\nThe `penguins` data from the [**palmerpenguins**](https://allisonhorst.github.io/palmerpenguins \"palmerpenguins R package\") package contains size measurements for `{r} nrow(penguins)` penguins from three species observed on three islands in the Palmer Archipelago, Antarctica.\n\nThe plot below shows the relationship between flipper and bill lengths of these penguins.\n\nHTML: hello.html"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#section-3",
+    "href": "hello-quarto/presentacion.html#section-3",
+    "title": "Talks",
+    "section": "",
+    "text": "Código: example.qmd\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat:\n  revealjs:\n    transition: fade\n    theme: black\n    toc: true\n    center: true\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n---\n\n## Going to sleep \n::: { .incremental }\n\n- Get in bed\n- Count sheep\n\n:::\n\nSlides: example.html"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#qué-podemos-hacer-con-quarto",
+    "href": "hello-quarto/presentacion.html#qué-podemos-hacer-con-quarto",
+    "title": "Talks",
+    "section": "¿ Qué podemos hacer con Quarto?",
+    "text": "¿ Qué podemos hacer con Quarto?"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#código-con-estilo",
+    "href": "hello-quarto/presentacion.html#código-con-estilo",
+    "title": "Talks",
+    "section": "Código con Estilo",
+    "text": "Código con Estilo\n\nMás de 20 temas para resaltar tu código\n\nEl tema por defecto está optimizado para accesibilidad\n\n# Define a server for the Shiny app\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot &lt;- renderPlot({\n    # Render a barplot\n  })\n}"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#código-en-movimiento",
+    "href": "hello-quarto/presentacion.html#código-en-movimiento",
+    "title": "Talks",
+    "section": "Código en Movimiento",
+    "text": "Código en Movimiento\n\nMás de 20 estilos de resaltado listos para usar\n\nTema por defecto diseñado para máxima accesibilidad\n\n# Define a server for the Shiny app\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot &lt;- renderPlot({\n    # Render a barplot\n    barplot(WorldPhones[,input$region]*1000, \n            main=input$region,\n            ylab=\"Number of Telephones\",\n            xlab=\"Year\")\n  })\n}"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#enfoque-en-líneas",
+    "href": "hello-quarto/presentacion.html#enfoque-en-líneas",
+    "title": "Talks",
+    "section": "Enfoque en Líneas",
+    "text": "Enfoque en Líneas\n\nSeñala las líneas clave para mayor claridad\n\nAgrega resaltados paso a paso\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#código-ejecutable",
+    "href": "hello-quarto/presentacion.html#código-ejecutable",
+    "title": "Talks",
+    "section": "Código Ejecutable",
+    "text": "Código Ejecutable\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\nmpg = sns.load_dataset(\"mpg\")\nsns.scatterplot(data=mpg, x=\"horsepower\", y=\"mpg\")\nplt.show()"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#ecuaciones-en-latex",
+    "href": "hello-quarto/presentacion.html#ecuaciones-en-latex",
+    "title": "Talks",
+    "section": "Ecuaciones en LaTeX",
+    "text": "Ecuaciones en LaTeX\nRenderizado de ecuaciones a HTML con MathJax.\n\n\n\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\n\n\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\n\n\\[\\begin{gather*}\na_1=b_1+c_1\\\\\na_2=b_2+c_2-d_2+e_2\n\\end{gather*}\\]\n\\[\\begin{align}\na_{11}& =b_{11}&\n  a_{12}& =b_{12}\\\\\na_{21}& =b_{21}&\n  a_{22}& =b_{22}+c_{22}\n\\end{align}\\]"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#columnas-flexibles",
+    "href": "hello-quarto/presentacion.html#columnas-flexibles",
+    "title": "Talks",
+    "section": "Columnas Flexibles",
+    "text": "Columnas Flexibles\nAcomoda texto, imágenes o código en columnas de varios tamaños.\n\n\n\nMotor Trend Car Road Tests\nThe data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\n18.000000\n8\n307.000000\n130.000000\n3504\n\n\n15.000000\n8\n350.000000\n165.000000\n3693\n\n\n18.000000\n8\n318.000000\n150.000000\n3436\n\n\n16.000000\n8\n304.000000\n150.000000\n3433\n\n\n17.000000\n8\n302.000000\n140.000000\n3449"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#tabsets",
+    "href": "hello-quarto/presentacion.html#tabsets",
+    "title": "Talks",
+    "section": "Tabsets",
+    "text": "Tabsets\nCrea bloques con pestañas que permiten alternar entre distintos contenidos.\n\nPlotData\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nx\ny\n\n\n\n\n0\n-2.000000\n12.000000\n\n\n1\n-1.929293\n11.510050\n\n\n2\n-1.858586\n11.030099\n\n\n3\n-1.787879\n10.560147\n\n\n4\n-1.717172\n10.100194"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#gráficos-interactivos",
+    "href": "hello-quarto/presentacion.html#gráficos-interactivos",
+    "title": "Talks",
+    "section": "Gráficos Interactivos",
+    "text": "Gráficos Interactivos"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#el-poder-de-las-extensiones-en-quarto",
+    "href": "hello-quarto/presentacion.html#el-poder-de-las-extensiones-en-quarto",
+    "title": "Talks",
+    "section": "El poder de las extensiones en Quarto",
+    "text": "El poder de las extensiones en Quarto"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#extensiones-de-quarto",
+    "href": "hello-quarto/presentacion.html#extensiones-de-quarto",
+    "title": "Talks",
+    "section": "Extensiones de Quarto",
+    "text": "Extensiones de Quarto\n\n\n\nLas extensiones de Quarto permiten añadir nuevas características y potenciar su uso.\n\n\n🔧Necesitas más poder? Usa Extensions"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#quarto-quiz",
+    "href": "hello-quarto/presentacion.html#quarto-quiz",
+    "title": "Talks",
+    "section": "Quarto Quiz",
+    "text": "Quarto Quiz\n\n\n\nLa extensión Quarto Quiz permite crear preguntas directamente en tus presentaciones.\n\n\n📚 Más info: Quarto Quiz Extension"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#ejemplo",
+    "href": "hello-quarto/presentacion.html#ejemplo",
+    "title": "Talks",
+    "section": "Ejemplo",
+    "text": "Ejemplo\n\n¿Cómo te ha parecido la presentación hasta ahora?\n\nMe encantó 😍\nMás o menos 🤔\n\nTal vez podría mejorar 🙂\n\nNo me gustó mucho 😕"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#quarto-webr-pyodide",
+    "href": "hello-quarto/presentacion.html#quarto-webr-pyodide",
+    "title": "Talks",
+    "section": "Quarto WebR + Pyodide",
+    "text": "Quarto WebR + Pyodide\n\n\n\n\nWebR: Ejecuta código R en el navegador, sin necesidad de instalación.\n# To install WebR in your environment\nremotes::install_github(\"attiyap/WebR\")\nPyodide: Lo mismo, pero para Python.\n# To install Pyodide\npip install pyodide\n\n\n\n\n\n\nWebR and Pyodide run code directly in the browser.\nNo setup, no installs — just share and run.\nPerfect for teaching, demos, and interactive content."
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#ejemplo-1",
+    "href": "hello-quarto/presentacion.html#ejemplo-1",
+    "title": "Talks",
+    "section": "Ejemplo",
+    "text": "Ejemplo\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nThis is a live R example.\nWhy run it live?\nBecause people learn better when they see and try.\nNo setup, no install — just code and results.\nThat’s the power of WebR."
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#shiny",
+    "href": "hello-quarto/presentacion.html#shiny",
+    "title": "Talks",
+    "section": "Shiny",
+    "text": "Shiny\n\n\n\nShiny es un paquete de R que permite crear de manera sencilla aplicaciones interactivas usando R\n(también disponible para Python).\n\n\n📚 Más info: Shiny - Posit"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#ejemplo-2",
+    "href": "hello-quarto/presentacion.html#ejemplo-2",
+    "title": "Talks",
+    "section": "Ejemplo",
+    "text": "Ejemplo\n\n\n\nShiny apps let people interact with your data.\nChange inputs — see results instantly.\nPerfect for exploring and communicating insights."
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#quarto-shinylive",
+    "href": "hello-quarto/presentacion.html#quarto-shinylive",
+    "title": "Talks",
+    "section": "Quarto Shinylive",
+    "text": "Quarto Shinylive\n\n\n\n\nDespliega aplicaciones Shiny que se ejecutan 100% en el navegador — con Python y R.\n\nSin servidores. Sin configuraciones. Solo escribe código y ejecútalo.\n\n\n\n\n\n\n\n\n\nSigue en tu presentación.\nNo pierdas el ritmo 🎯"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#ejemplo-3",
+    "href": "hello-quarto/presentacion.html#ejemplo-3",
+    "title": "Talks",
+    "section": "Ejemplo",
+    "text": "Ejemplo\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 800\n\nfrom shiny import App, ui, render, reactive\nimport matplotlib.pyplot as plt\nimport io\nimport base64\n\n# Function to generate the plot dynamically based on input values\ndef create_plot(yes_value, no_value):\n    categories = ['Sí', 'No']\n    values = [yes_value, no_value]\n\n    fig, ax = plt.subplots(figsize=(14, 5))\n    ax.bar(categories, values, color=['lightblue', 'salmon'])\n    ax.set_title('¿Te ha gustado la presentación?')\n\n    # Convert the image to base64 for display in Shiny\n    buf = io.BytesIO()\n    plt.savefig(buf, format=\"png\")\n    plt.close(fig)\n    buf.seek(0)\n    encoded_image = base64.b64encode(buf.getvalue()).decode()\n    return f'&lt;img src=\"data:image/png;base64,{encoded_image}\" style=\"max-width:100%;\"&gt;'\n\n# UI definition\napp_ui = ui.page_fluid(\n    ui.h2(\"Encuesta Interactiva\"),\n    \n    # Sliders to change values dynamically\n    ui.input_slider(\"yes_value\", \"Respuestas 'Sí':\", min=0, max=50, value=20),\n    ui.input_slider(\"no_value\", \"Respuestas 'No'\", min=0, max=50, value=10),\n    \n    # Output area for the plot\n    ui.output_ui(\"plot_output\")\n)\n\n# Server function\ndef server(input, output, session):\n    @output\n    @render.ui\n    def plot_output():\n        return ui.HTML(create_plot(input.yes_value(), input.no_value()))\n\n# Create the Shiny app\napp = App(app_ui, server)"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#conclusiones",
+    "href": "hello-quarto/presentacion.html#conclusiones",
+    "title": "Talks",
+    "section": "Conclusiones",
+    "text": "Conclusiones\n\n\n\n\n\n\n\nCompartir: Un mismo .qmd genera HTML, PDF, slides o sitios web, pasando de lo estático a lo interactivo.\n\n\n\n\n\n\n\n\nColaborar: Con un archivo sencillo ya se puede crear y publicar material reproducible, iniciando el trabajo en equipo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnseñar: Sus features integran texto, código y visualizaciones, mejorando la enseñanza con recursos dinámicos.\n\n\n\n\n\n\n\n\nReimaginar: Tecnologías como WebR, Pyodide o Shiny abren nuevas formas de aprender e innovar en educación."
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#referencias-y-recursos",
+    "href": "hello-quarto/presentacion.html#referencias-y-recursos",
+    "title": "Talks",
+    "section": "Referencias y Recursos",
+    "text": "Referencias y Recursos\n\n\n\n\n\n\n\nDocumentación oficial\n🔗 quarto.org\nGuías y ejemplos prácticos para comenzar de inmediato.\n\n\n\n\n\n\n\n\nAprendizaje en video\n🔗 Crash Course en YouTube\nIntroducción práctica a Quarto y sus distintos usos.\n\n\n\n\n\n\n\n\n\n\n\n\n\nRecursos de la comunidad\n🔗 Mine Cetinkaya-Rundel\nCursos, libros y presentaciones en Quarto en GitHub.\n\n\n\n\n\n\n\n\nAplicaciones en educación\n🔗 sethnut.com/resources\nOlimpiada Matemática, Verano Matemático, EMMA y más!"
+  },
+  {
+    "objectID": "hello-quarto/presentacion.html#gracias-por-participar",
+    "href": "hello-quarto/presentacion.html#gracias-por-participar",
+    "title": "Talks",
+    "section": "🎉 ¡Gracias por Participar!",
+    "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 Disfrutar del Evento!\n\n\n\n\n\n🔗 Nuestro Sitio Web: sethnut.com/talks"
+  },
+  {
+    "objectID": "hello-quarto/index.html#hello-quarto-title",
+    "href": "hello-quarto/index.html#hello-quarto-title",
+    "title": "Talks",
+    "section": "",
+    "text": "Hello Quarto\nshare • collaborate • teach • reimagine\nmine çetinkaya-rundel  julia stewart lowndes\nmine.quarto.pub/hello-quarto\nartwork by allison horst\n\nThank you so much, we’re excited to be here! Mine and I have been using Quarto for the last year; she has been teaching and contributing to the development of Quarto it since its earliest days and Openscapes has been the first external users of Quarto. As we’ve woven it into our work we realize we love it, and we’re thrilled to welcome you to Quarto."
+  },
+  {
+    "objectID": "hello-quarto/index.html#unifies-extends-1",
+    "href": "hello-quarto/index.html#unifies-extends-1",
+    "title": "Talks",
+    "section": "",
+    "text": "Quarto unifies and extendsthe R Markdown ecosystem\n\n\nQuarto unifies & extends the R Markdown ecosystem."
+  },
+  {
+    "objectID": "hello-quarto/index.html#unifies-extends-2",
+    "href": "hello-quarto/index.html#unifies-extends-2",
+    "title": "Talks",
+    "section": "",
+    "text": "Quarto unifies and extends the R Markdown ecosystem\n\n\n\nunifies for people who love R Markdown\n\n\n\nextends for people who don’t know R Markdown\n\n\nIt unifies it for people who love R Markdown by reducing little points of friction, so that websites, books, and slides all have a common approach.\nAnd it extends it for people who don’t know RMarkdown by being a friendly way to work reproducibly and publish documents that have text and code in the same place"
+  },
+  {
+    "objectID": "hello-quarto/index.html#publishing-system-1",
+    "href": "hello-quarto/index.html#publishing-system-1",
+    "title": "Talks",
+    "section": "",
+    "text": "Quarto is a new, open-source, scientific and technical publishing system\n\n\nQuarto is a new open-source scientific and technical publishing system."
+  },
+  {
+    "objectID": "hello-quarto/index.html#publishing-system-2",
+    "href": "hello-quarto/index.html#publishing-system-2",
+    "title": "Talks",
+    "section": "",
+    "text": "Quarto is a new, open-source, scientific and technical publishing system\n\n\nthe goal is to make the process of creating and collaborating dramatically better\n\n\n\n\n\n\n\n\n\nThe goal is to make the process of creating and collaborating dramatically better.\n–&gt; It handles inputs in multiple languages, and outputs in multiple formats, all going through the same machinery.\n–&gt; In our talk today, we’ll introduce you to Quarto with stories and demos."
+  },
+  {
+    "objectID": "hello-quarto/index.html#outline-1",
+    "href": "hello-quarto/index.html#outline-1",
+    "title": "Talks",
+    "section": "",
+    "text": "First Mine will focus on how Quarto unifies the R Markdown ecosystem through stories of sharing and teaching"
+  },
+  {
+    "objectID": "hello-quarto/index.html#outline-2",
+    "href": "hello-quarto/index.html#outline-2",
+    "title": "Talks",
+    "section": "",
+    "text": "Then I will focus on how Quarto extends the R Markdown ecosystem through collaborating and reimagining"
+  },
+  {
+    "objectID": "hello-quarto/index.html#outline-3",
+    "href": "hello-quarto/index.html#outline-3",
+    "title": "Talks",
+    "section": "",
+    "text": "Julie: We’re excited to get started!\nNEXT - So let’s let Mine kick it off to talk about sharing with Quarto."
+  },
+  {
+    "objectID": "hello-quarto/index.html#share-intro",
+    "href": "hello-quarto/index.html#share-intro",
+    "title": "Talks",
+    "section": "",
+    "text": "I work at the intersection of education, research, and development.\nThe word educator might make you think I’m in front of students lecturing 24/7 but, in reality, I spend most of my time in front of my computer authoring and creating materials to share with people in various ways. Whatever it is that I create, I share them all openly - that is, with an open license that allows for free use, reuse, and adaptation. More often than not I’m thinking “web first” for wider reach, but I also still live in the confines of traditional journal publishing and academia, which means I regularly need to create PDF versions of my work as well.\nTherefore an authoring system that allows for multiple types of outputs from a single source that contains both code and prose is not only a time saver, but it’s basically essential for me to carry on my existence. And for the last decade, that tool for me has been R Markdown.\nIn fact, I remember vividly the first time I’ve heard of knitr, now 10 years ago, at Yihui and JJ’s 2012 useR keynote, when they presented on a “new” tool for reproducible authoring. It must have been no more than 3 slides into their talk that I started to converting my teaching materials to use knitr. And by the end of that keynote I was already brainstorming ways of teaching it to my intro stats students.\nSo, I’ll call this talk a success if some of you are already firing up Quarto right now, instead of listening to me, to see what all the hype is about!"
+  },
+  {
+    "objectID": "hello-quarto/index.html#link-to-slides",
+    "href": "hello-quarto/index.html#link-to-slides",
+    "title": "Talks",
+    "section": "",
+    "text": "But I hope you’ll continue to listen with one ear and take in the beautiful illustrations by Allison Horst. And if you just want to enjoy the talk, feel free to go to this link: mine.quarto.pub/hello-quarto\nsit back,\nand I’ll advance the slides for you."
+  },
+  {
+    "objectID": "hello-quarto/index.html#the-r-markdown-ecosystem",
+    "href": "hello-quarto/index.html#the-r-markdown-ecosystem",
+    "title": "Talks",
+    "section": "The R Markdown ecosystem",
+    "text": "The R Markdown ecosystem\n\n\nJulie mentioned unifying the R Markdown ecosystem so let’s dig a bit more into what that means…\nThink of all the packages from the R Markdown universe that you’ve come to love and rely on over the years. Each package addresses a different need and offers a different output: for example, you can use blogdown or distill for creating websites and blogs, bookdown for writing a book, rticles for writing journal articles, etc."
+  },
+  {
+    "objectID": "hello-quarto/index.html#quarto-next-generation-r-markdown",
+    "href": "hello-quarto/index.html#quarto-next-generation-r-markdown",
+    "title": "Talks",
+    "section": "Quarto: Next generation R Markdown",
+    "text": "Quarto: Next generation R Markdown\n\n\nQuarto unifies the functionality from these packages,\nbuilding on Pandoc on the technical side\nand on the human side – over a decade of experience developing, maintaining, and tweaking these packages as well as community feedback R Markdown extension packages.\nSuch a unification effort presents a fantastic opportunity to identify and address gaps functionality and inefficiencies in user experience, and the process of building Quarto has been no different."
+  },
+  {
+    "objectID": "hello-quarto/index.html#quarto-highlights",
+    "href": "hello-quarto/index.html#quarto-highlights",
+    "title": "Talks",
+    "section": "Quarto highlights",
+    "text": "Quarto highlights\n\n\n\n\n\n\n Consistent implementation of attractive and handy features across outputs: tabsets, code-folding, syntax highlighting, etc.\n\n\n\n\n\n\n\n More accessible defaults as well as better support for accessibility\n\n\n\n\n\n\n\n\n\n\n\n\n Guardrails, particularly helpful for new learners: YAML completion, informative syntax errors, etc.\n\n\n\n\n\n\n\n Support for other languages like Python, Julia, Observable, and more via Jupyter engine for executable code chunks.\n\n\n\n\n\n\n\nSome highlights of these improvements include\n–&gt; consistent implementation of attractive and handy features across all outputs, like tabsets, code-folding, and syntax highlighting,\n–&gt; more accessible defaults as well as better support for creating accessible documents,\n–&gt; guardrails that are particularly helpful for new learners, like YAML completion and informative syntax errors,\n–&gt; and perhaps most excitingly for those who are not coming from the R ecosystem, Quarto offers support for other languages like Python, Julia, Observable, and more via the Jupyter engine for executable code chunks. And it’s designed to be expandable to more engines and languages, even those that might not exist today.\n[pause] So by now I’m assuming many of you have already started playing with Quarto, or you’re waiting for me to do that. So, let’s dive in and see what all the Quarto fuss is about!"
+  },
+  {
+    "objectID": "hello-quarto/index.html#demo-share",
+    "href": "hello-quarto/index.html#demo-share",
+    "title": "Talks",
+    "section": "",
+    "text": "Open hello.Rmd with source editor -&gt; knit\nChange to visual editor -&gt; knit\nClose file -&gt; change file type to .qmd -&gt; open + render\nChange output: html_document to format: html -&gt; render\nClick on Render on save\nChange to format: pdf -&gt; render -&gt; then change back\nAdd chunk option echo: false to the first chunk\nAdd execute &gt; echo: false to the yaml\nAdd alt text to figure in second code chunk -&gt; save to render\nChange to format: revealjs -&gt; save to render\nAdd H2 to break slides\nChange to format: html\nAdd index.qmd with File &gt; New Quarto Document\nAdd _quarto.yml for website\nRelaunch project\nShow new Build tab\nRender site, show _site folder\nAdd freeze to _quarto.yml\nFrom terminal: quarto publish"
+  },
+  {
+    "objectID": "hello-quarto/index.html#quarto-cli-orchestrates-each-step-of-rendering",
+    "href": "hello-quarto/index.html#quarto-cli-orchestrates-each-step-of-rendering",
+    "title": "Talks",
+    "section": "Quarto CLI orchestrateseach step of rendering",
+    "text": "Quarto CLI orchestrateseach step of rendering\n\n\n\n\n\n\n\n\nNow that you’ve all had a chance to see Quarto in action, you might be wondering, “how are R Markdown and Quarto different”?\nThe main difference is that with R Markdown, the R package rmarkdown does the heavy lifting of going from the source Rmd file to the the output, using knitr for evaluating the code chunks.\n–&gt; With Quarto, on the other hand, the Quarto command line interface, or the Quarto CLI, does the orchestration of processing executable code chunks with either knitr or jupyter and then converting the resulting markdown file to the desired output.\nWhile this is technically impressive, I’ll be honest, it’s not exactly what sparked my interest in Quarto in the first place."
+  },
+  {
+    "objectID": "hello-quarto/index.html#quarto-makes-moving-between-formats-straightforward",
+    "href": "hello-quarto/index.html#quarto-makes-moving-between-formats-straightforward",
+    "title": "Talks",
+    "section": "Quarto makes moving between formats straightforward",
+    "text": "Quarto makes moving between formats straightforward\n\n\n\nDocument\n\n lesson-1.qmd\n\ntitle: \"Lesson 1\"\nformat: html\n\n\n\nPresentation\n\n lesson-1.qmd\n\ntitle: \"Lesson 1\"\nformat: revealjs\n\n\n\nWebsite\n\n _quarto.yml\n\nproject:\n  type: website\n\nwebsite: \n  navbar: \n    left:\n      - lesson-1.qmd\n\n\n\n\nWhat did spark my interest was how how straightforward it is with Quarto to move between output formats.\nAs an educator, two things are of utmost importance to me about the tools I use to create my materials: reproducibility and ease of transition between output formats, like documents to slides to websites to books.\nOver the last year of using Quarto for pretty much everything, I’ve felt like I’ve finally found the tool that lets me go from one output type to the other with minimal, if any, futzing around with my source code beyond the yaml. For example, here are common things I produce\n–&gt; a lesson in document form  –&gt; the same content in presentation form  –&gt; the same content on a page in a website,\nand you can see that all that needed to change going between these formats is a few lines in the yaml. Nothing in the content part of my document. No slide breaks to remove, no citation style to change, no headings to re-level. This ease of transition has freed up time to focus my time on content, and that, folks, is the dream!"
+  },
+  {
+    "objectID": "hello-quarto/index.html#quarto-facilitates-open-sharing",
+    "href": "hello-quarto/index.html#quarto-facilitates-open-sharing",
+    "title": "Talks",
+    "section": "Quarto facilitates open sharing",
+    "text": "Quarto facilitates open sharing\n\n\nTooling that makes it easy to share what you do with the world on the web is incredibly useful\n\n\n\nIt’s useful not just to you, but to the world as it facilitates open sharing of knowledge for learning and for reuse\n\n\nUltimately, easily creating reproducible artifacts is great.\nBut for the sharing story to be complete, the tool also needs to support easily sharing those artifacts, like with a simple command like quarto publish, and hopefully soon a button RStudio that does the same thing.\n–&gt; I think that tooling that makes it easy to share what you do with the world on the web is incredibly useful.\n–&gt; And it’s not just useful to you, the creator, but to the world, as it facilitates open sharing of knowledge for learning and for reuse.\n[Pause]\nI’ve been talking just about me and my work so far, but I, like many of you, don’t operate in a silo disconnected from others.\n[Mine continue on next slide]"
+  },
+  {
+    "objectID": "hello-quarto/index.html#collaborate-intro",
+    "href": "hello-quarto/index.html#collaborate-intro",
+    "title": "Talks",
+    "section": "",
+    "text": "I work at the intersection of actionable environmental science, data science, and open science. What I absolutely love doing is mentoring, teaching, and empowering communities, having learned from so many of you in the R and Mozilla communities, and wanting to pay this forward and welcome others.\nI’ve made this my job through Openscapes."
+  },
+  {
+    "objectID": "hello-quarto/index.html#openscapes-intro-1",
+    "href": "hello-quarto/index.html#openscapes-intro-1",
+    "title": "Talks",
+    "section": "",
+    "text": "Openscapes is an approach and a movement that I launched in 2018 and have built together with my partner Erin Robinson.\nOur flagship activity is mentoring research teams in open science. We think of open science as a landscape full of open source software, data, and communities, and many paths forward."
+  },
+  {
+    "objectID": "hello-quarto/index.html#openscapes-intro-2",
+    "href": "hello-quarto/index.html#openscapes-intro-2",
+    "title": "Talks",
+    "section": "",
+    "text": "We help people move from the sad lonely animals like the foreground in the bottom right so that they start to explore and navigate this landscape safely, without too much trampling. Our role is to welcome them at the trail head, helping them seem themselves as a team and identify where they are all starting from\nWe work with professional research groups in government, academia, nonprofits, and we help these teams modernize their workflows and shift culture with their teams and organization through open software and practices. Adyan Rios from NOAA Fisheries and she’s described Openscapes as saying:"
+  },
+  {
+    "objectID": "hello-quarto/index.html#quote-adyan-rios",
+    "href": "hello-quarto/index.html#quote-adyan-rios",
+    "title": "Talks",
+    "section": "",
+    "text": "“As fisheries scientists, we know that when we’re in rough seas, it’s important to keep the ship afloat AND get out of the storm. Openscapes helps teams steer out of the storm of email chains with 37 versions of the same spreadsheet and to the calmer waters of open science and meaningful collaboration, using tools like R”\n\nAdyan Rios\nNOAA Southeast Fisheries Science Center\n\n\n\nAdyan Rios says “As fisheries scientists, we know that when we’re in rough seas, it’s important to keep the ship afloat AND get out of the storm. Openscapes helps teams steer out of the storm of email chains with 37 versions of the same spreadsheet and to the calmer waters of open science and meaningful collaboration, using tools like R”\nI have the best job - mentoring teams like Adyan’s who are doing really critical work and we help them do better science by connecting them to the tools and resources you all make.\nIt really blends mentoring and collabortion, and that is definitely true of our story with NASA."
+  },
+  {
+    "objectID": "hello-quarto/index.html#nasa-beach-ball",
+    "href": "hello-quarto/index.html#nasa-beach-ball",
+    "title": "Talks",
+    "section": "",
+    "text": "With NASA you probably think about outer space, but they also collects an unbelievable amount of data about Earth. Researchers use NASA Earthdata in many ways including to understand and address impacts to the heat waves and wildfires like we’re increasingly seeing in summers due to climate change.\nThese data are freely available from 12 different NASA data centers - but researchers have to download it to analyze it locally - which puts a lot of burden on research groups.\nNow, following years of the preparation, these data are migrating to the Cloud, and NASA data centers are supporting researchers who will be migrating their analytical workflows to the Cloud too."
+  },
+  {
+    "objectID": "hello-quarto/index.html#nasa-openscapes",
+    "href": "hello-quarto/index.html#nasa-openscapes",
+    "title": "Talks",
+    "section": "",
+    "text": "Develop a mentor community across NASA Earth science data centers   Co-create and teach common tutorials  to support researchers as they migrate analytical workflows to the Cloud\n\n\n\n\n\n\n\n\n\nMy partner Erin had 10 years of experience working with the NASA Earthdata community and she brought NASA and Openscapes together in a 3 year project to help this transition.\nOur focus is in developing a mentor community across those 12 data centers to co-create and teach common tutorials with NASA Earthdata Cloud.\nSo let me just stop here and say this is big project.\nAnd, it was really intimidating to me. NASA is an org I’ve looked up to my whole life, and I wasn’t familiar with the types and size of Earthdata, types of research questions, or cloud infrastructure\n&lt;&gt; And an additional intimidating thing to me -"
+  },
+  {
+    "objectID": "hello-quarto/index.html#many-use-python",
+    "href": "hello-quarto/index.html#many-use-python",
+    "title": "Talks",
+    "section": "",
+    "text": "Many Earth scientists  use Python  😬\n\nMany Earth scientists use python and jupyter notebooks. And my role leading NASA Openscapes was not to learn python from the ground-up, but I needed to be able to collaborate and support python users.\nTransition: But I also brought over 6 years of experience and confidence that I’ve developed using RMarkdown. I think of RMarkdown like a superpower"
+  },
+  {
+    "objectID": "hello-quarto/index.html#star-wars-rey-quarto",
+    "href": "hello-quarto/index.html#star-wars-rey-quarto",
+    "title": "Talks",
+    "section": "",
+    "text": "And Quarto let me bring this superpower to python.\nQuarto was emerging right when we needed it, and I asked J.J. Allaire if we could use for NASA Openscapes. This became a really exciting collaboration with the Quarto developer team and the NASA Mentors and we were able to use it basically out of the box but also we motivated certain features, particularly in the freeze feature that just Mine introduced."
+  },
+  {
+    "objectID": "hello-quarto/index.html#nasa-cloud-hackathon",
+    "href": "hello-quarto/index.html#nasa-cloud-hackathon",
+    "title": "Talks",
+    "section": "",
+    "text": "This Quarto site we made for our first teaching event.\nThis is where we really found traction in working together as a Mentor community: we were able to make a beautiful collection of tutorials that was helpful for our own development and was a friendly place for our learners.\nQuarto was also something for us all to learn together. And that was really important bc it turned out I wasn’t the only person feeling intimidated about all the moving parts. We were able to identify other skills to learn together.\nSo from this investment in our workflow and learning -"
+  },
+  {
+    "objectID": "hello-quarto/index.html#nasa-quarto-sites",
+    "href": "hello-quarto/index.html#nasa-quarto-sites",
+    "title": "Talks",
+    "section": "",
+    "text": "We were able to do with this same workflow and and extend for new audiences.\nThere’s 2 things I want to highlight here -"
+  },
+  {
+    "objectID": "hello-quarto/index.html#quarto-enables-collaborating-across-coding-languages",
+    "href": "hello-quarto/index.html#quarto-enables-collaborating-across-coding-languages",
+    "title": "Talks",
+    "section": "Quarto enables collaborating across coding languages",
+    "text": "Quarto enables collaborating across coding languages\n\n\n\n _quarto.yml\n\ncontents:\n  - section: in-development/index.qmd\n    contents:\n      - in-development/earthdata-access-demo.ipynb\n      - in-development/nsidc/icesat2-cmr-onprem-vs-cloud.ipynb\n      - in-development/lpdaac/lpdaac_ecostress_lste_kerchunk.ipynb\n      - in-development/matlab-aws.qmd\n      - in-development/earthdata-python-r-handoff.rmd  \n  - section: contributing/onboarding.qmd\n    contents: \n      - contributing/quarto-website-tutorial.md\n\nQuarto enables collaborating across coding languages. This is a simplified view of the yaml it’s collection of different file types. It’s mostly ipynbs Jupyter notebooks.\nAnd, as we work with more research teams we’ve found that there is indeed a substantial R community using NASA Earthdata Cloud data. And we’re positioned to support R users too"
+  },
+  {
+    "objectID": "hello-quarto/index.html#quarto-enables-contributing-from-our-current-tools",
+    "href": "hello-quarto/index.html#quarto-enables-contributing-from-our-current-tools",
+    "title": "Talks",
+    "section": "Quarto enables contributing from our current tools",
+    "text": "Quarto enables contributing from our current tools\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nwe’re all able to contribute from whatever tool we’re already comfortable with. In our group some use RStudio, some use JupyterLab some VS Code, some directly edit documents on GitHub.\nAnd this was important because of all the new things we were learning together, we didn’t also need people to shift their software tools.\ntranstion: Let me show you how to use Quarto with Jupyter with ipynb notebooks"
+  },
+  {
+    "objectID": "hello-quarto/index.html#demo-collaborate",
+    "href": "hello-quarto/index.html#demo-collaborate",
+    "title": "Talks",
+    "section": "",
+    "text": "Orient to JupyterLab. This is a JupyterHub managed by our collaborators at 2i2c\nOpen Mine’s example site, quarto preview\nadd .ipynb\nAdd .ipynb to _quarto.yml\nView website - new page is added to website\nAdd fig captions\nmargin plots: a style prefrred by many now in jupyter notebook"
+  },
+  {
+    "objectID": "hello-quarto/index.html#holland-stam-thesis-1",
+    "href": "hello-quarto/index.html#holland-stam-thesis-1",
+    "title": "Talks",
+    "section": "",
+    "text": "QuantifyingArt HistoricalNarratives\n\n\n\nHolland Stam\n\nArt History + Visual and Media Studies\nClass of 2022\nDuke University\n\n\n\n\n\n\n\n\n\n\nLast semester I had an art history student, Holland Stam, working on a pretty quantitative research project. Her thesis explored the representation of artists from different genders and ethinicities in foundational art history books and how this representation has changed, if at all, through editions. If you’ve ever taken an art history course you might be familiar with them: Garner’s Art Through The Ages and Janson’s History of Art. She meticulously collected data from numerous editions of each of the textbooks and measured, page by page, how much space each featured artwork was given and joined that with demographic information on the artists. When I met Holland in my regression course she had only one semester of data science as a background, where she learned R Markdown, and then she started using Quarto as part of coursework in my class. In both classes her experience with computational documents was limited to a single document per assignment, writing a bit of code to analyze data then writing some text to interpret findings. In a sense, this is exactly what her thesis entailed as well, but of course there was more. Multiple chapters, millions of citations in a very specific style that art historians use, captioned figures and tables, and not having to rerun the whole thesis code with each minor edit. With a bit of Googling and a bit of my help, she pretty quickly figured out how to bring chapters of her thesis written in Quarto together with a yaml file, and voiola! She had a thesis written in Quarto. Sure, this took a bit of trial and error and at times frustration, but the fact that she could caption her figures while creating them with code and insert citations without manual text styling, she was sold! It is always so heartwarming to see your students push what you’re teaching them and use them to solve their problems, it’s especially heartening when this happens with a new thing you’re teaching for the first time while the thing is still in active development!"
+  },
+  {
+    "objectID": "hello-quarto/index.html#holland-stam-thesis-2",
+    "href": "hello-quarto/index.html#holland-stam-thesis-2",
+    "title": "Talks",
+    "section": "",
+    "text": "QuantifyingArt HistoricalNarratives\n\n\n\nHolland Stam\n\nArt History + Visual and Media Studies\nClass of 2022\nDuke University\nwith Sara Lemus \n\n\n\n\n\n\n\n\n\n\nAnd, by the way, if you’re interested in the data, Holland and another student of my, Sara Lemus, packaged it up as “arthistory”. Sara is a stats major who had a lot more experience with R and was working with me for updating some data packages I maintain to learn about package development. She got interested in Holland’s thesis during our lab meetings and it was clear the two of them, with their newly acquired skills and enthusiasm, should team up and make the data available to more researchers, and packaged it up and even got it on CRAN!\nBut, back to Quarto… like for Holland, Quarto has provided simple but effective solutions for so many of my problems as an instructor too. Instead of telling you about them, let me show you!"
+  },
+  {
+    "objectID": "hello-quarto/index.html#demo-teach",
+    "href": "hello-quarto/index.html#demo-teach",
+    "title": "Talks",
+    "section": "",
+    "text": "For learning:\n\nRStudio comes with everything, no additional install needed\nvisual editor – Julie will say more\ncode-link\nyaml errors\n\nFor teaching:\n\nrevealjs\nShow hamburger menu outline and print to PDF\nchalkboard\nmultiplex: Slides / scroll for audience\nexecute &gt; echo: true\nAdd code line highlighting to plotting chunk\n\nFeatures that are useful for research:\n\nquarto journals"
+  },
+  {
+    "objectID": "hello-quarto/index.html#quarto-flattens-the-learning-curve",
+    "href": "hello-quarto/index.html#quarto-flattens-the-learning-curve",
+    "title": "Talks",
+    "section": "Quarto flattens the learning curve",
+    "text": "Quarto flattens the learning curve\n\n\nSo, in regards to teaching, I’ve talked about a much less steep hill students need to climb as their projects grow. I’ve also said this was a pleasant surprise as it was not something I had thought about when I started teaching with Quarto. But, in hindsight, this was no coincidence. Quarto’s features like consistent citation syntax, more intentional control over when computations should run or rerun, and a single, minimal yaml that controls inputs, layouts, theming, etc. all contribute to flattening this learning curve."
+  },
+  {
+    "objectID": "hello-quarto/index.html#quarto-can-grow-with-learners-in-a-profound-way",
+    "href": "hello-quarto/index.html#quarto-can-grow-with-learners-in-a-profound-way",
+    "title": "Talks",
+    "section": "Quarto can grow with learners in a profound way",
+    "text": "Quarto can grow with learners in a profound way\n\n\n\n\n\n\n\n\n\nAnd beyond learners growing and expanding the scope of their work easily with Quarto, Quarto can grow with them in a profound way as well.\n–&gt; The fact that Quarto is language and authoring tool independent offers an opportunity for folks to take Quarto with them on their data science journey, wherever that journey takes them. I mean.. I’m almost tempted to finally learn Python to see it in action in Quarto. But who I know is learning Python, and Julia, and other languages are my students in their Computer Science courses. To imagine that they could learn R in RStudio using Quarto in my course, and then continue to use Quarto in Jupyter in their CS courses… That sounds like such a bright future to me!\n[Pause] And a bright future includes things we can’t even imagine yet.\n[Mine continue on next slide]"
+  },
+  {
+    "objectID": "hello-quarto/index.html#nasa-blue-marble-hemi",
+    "href": "hello-quarto/index.html#nasa-blue-marble-hemi",
+    "title": "Talks",
+    "section": "",
+    "text": "To address our climate emergency, we must rapidly, radically reshape society. We need every solution and every solver.\n\nAyana Elizabeth Johnson & Katharine Wilkinson\nAll We Can Save\n\n\n\nBecause we are in a climate emergency. We must rapidly, radically reshape society. We need every solution and every solver. Hard, big. My hope lies in what we have here and what we can do with it. This is a big movement -\nLet’s think about this with 3 user groups if you will\nscientist working direct w climate - hard and stuck. Openscapes\nR/open source - stuck, Posit 100 yrs\nextensible beyond\nEvery solution, every solver. Across all facets and geographies, skills, expertise. We need more women. We need more people of color. We need more perspectives on every level. Dial up inclusion and culture change and welcome at an unprecedented level\nRequires slowing to speed up\nBut when it speeds up it’s like a flywheel\nMy colleague Ileana Fenwick is a marine ecologist who particpated in Openscapes last year and beautifully describes this"
+  },
+  {
+    "objectID": "hello-quarto/index.html#quote-ileana-fenwick",
+    "href": "hello-quarto/index.html#quote-ileana-fenwick",
+    "title": "Talks",
+    "section": "",
+    "text": "Because of Openscapes, I have renewed hope in how we can bring about a kinder future in science. I see a commitment in the open science community to bridging the gaps where we’ve left members of our community behind, and it inspires me.\n\nIleana Fenwick\nUniversity of North Carolina, Openscapes\n\n\n\nBecause of Openscapes, I have renewed hope in how we can bring about a kinder future in science. I see a commitment in the open science community to bridging the gaps where we’ve left members of our community behind, and it inspires me."
+  },
+  {
+    "objectID": "hello-quarto/index.html#culture-shifts",
+    "href": "hello-quarto/index.html#culture-shifts",
+    "title": "Talks",
+    "section": "",
+    "text": "Culture shifts:  technical + human\n\n\nWe’re talking about a profound culture shift that involves real deliberate work on the tech and human side\nLet’s focus on the human side: We can build inclusion into our daily work. Let’s think about your team and collagues because I bet they’re not different from the teams we mentor\nThis means talking and reflecting with your colleagues: how do we work? shared workflows, where is friction? who contributes, how do they contributes? Handoffs?\nThis means asking questions and really listening. might not have the language to describe where they’re stuck. Not assuming, not solutioneering. But listening for understanding to meet them where they are\nThis means being braver to say I don’t know, I need help\nA practice, not a checklist.\nA practical example -"
+  },
+  {
+    "objectID": "hello-quarto/index.html#faylab-manual-1",
+    "href": "hello-quarto/index.html#faylab-manual-1",
+    "title": "Talks",
+    "section": "",
+    "text": "Fay Lab Manual is a site created by Gavin Fay’s Group UMass D They are quant fisheries ecologists: data and code: work with managers: food systems and climate Bc formal training in data science is uncommon in env, range of skills incoming This site: lab culture, code of conduct, info about how they name files, how to learn the software they use\nIt’s a living doc online, and it’s imperfect\nIt is radical in many ways, here are 3:"
+  },
+  {
+    "objectID": "hello-quarto/index.html#faylab-manual-2",
+    "href": "hello-quarto/index.html#faylab-manual-2",
+    "title": "Talks",
+    "section": "",
+    "text": "1. Make the implicit explicit\n\n\n\n\n\n2. Onboard learners as contributors\n\n\n\n\n\n\n3. Psychological safety & growth mindset\n\n\n\n\n\nMakes the implicit explicit all be clear on how their group works together and it also puts the values forward and to welcome people who might be interested in joining the\nonboards learners as contributors As you read the manual you’re also instructed how to contribute. So it’s through learning tools like Quarto to fix a typo that empowers learners in a lasting way.\npsychological safety & growth mindset deliberately for example prioritzing time to check in during meetings and screensharing/live coding.\nReimagining within one lab and that idea is catching at bigger scales -"
+  },
+  {
+    "objectID": "hello-quarto/index.html#approach-guide",
+    "href": "hello-quarto/index.html#approach-guide",
+    "title": "Talks",
+    "section": "",
+    "text": "We forked this idea back Here are 2 more examples: our Approach Guide which is how we onboard ourselves and others to grow the movement\nAnd NOAA Fisheries is using Quarto to building open science community across their science centers\nUsing quarto for culture change"
+  },
+  {
+    "objectID": "hello-quarto/index.html#quarto-enables-collaborating-across-coding-comfort-levels",
+    "href": "hello-quarto/index.html#quarto-enables-collaborating-across-coding-comfort-levels",
+    "title": "Talks",
+    "section": "Quarto enables collaborating across coding comfort levels",
+    "text": "Quarto enables collaborating across coding comfort levels\n\n\n\n\n\n\n\n\nQuarto enables collaborating across coding comfort levels, which means it’s a friendly tool Also means we can broaden our idea of collaborators substantially and earlier.\nAnd, then RStudio IDE Visual Editor further lowers barriers\nI’ll do one final demo here - Friendly for new learners, also for experienced users.\nThink about how you might use this yourself, and teach a colleague"
+  },
+  {
+    "objectID": "hello-quarto/index.html#demo-reimagine",
+    "href": "hello-quarto/index.html#demo-reimagine",
+    "title": "Talks",
+    "section": "",
+    "text": "i can write and paste formatted text\nAdd image, caption, alt text\nsource editor\ncitations 2 ways: @ from my Zotero, forward-slash citation for doi\nAlso: Call-outs\nAdd extension:\n\ntransition: throughtout talk, focus on quarto enables teach/collab/sharing. culture. Let’s end with what we can all enable -"
+  },
+  {
+    "objectID": "hello-quarto/index.html#we-all-can-enable-reimagining",
+    "href": "hello-quarto/index.html#we-all-can-enable-reimagining",
+    "title": "Talks",
+    "section": "We all can enable reimagining",
+    "text": "We all can enable reimagining\n\n“We” speaks to the collective, to collaboration, to community, to the relational work at hand. Addressing the climate crisis…will take everyone.\nWe cannot, we must not, go it alone.\n\nAyana Elizabeth Johnson & Katharine Wilkinson\nAll We Can Save\n\n\n\nWe can all enable reimagining at levels. We can all play our part We can do this in our daily work, with teams, scale it beyond. We invite you to reimagine too -\nAnd we cannot, we must not go it alone."
+  },
+  {
+    "objectID": "hello-quarto/index.html#say-hello-to-quarto",
+    "href": "hello-quarto/index.html#say-hello-to-quarto",
+    "title": "Talks",
+    "section": "Say hello to Quarto!",
+    "text": "Say hello to Quarto!\n\nPick up where we left off: github.com/mine-cetinkaya-rundel/hello-quarto-demo\nComing up at rstudio::conf(2022) – Quarto deep dive - Potomac C - 3:20pm:\n\nTracy Teal - These are a few of my favorite things (about Quarto presentations)\nHamel Husain - Literate Programming With Jupyter Notebooks and Quarto\nDevin Pastoor - Websites & Books & Blogs, oh my! Creating Rich Content with Quarto\n\nVideo: Reproducible authoring with Quarto\nVideo: Openscapes: Hello Quarto with NASA Openscapes, RLadies Santa Barbara, and JJ Allaire\nQuarto documentation: quarto.org\nQuarto gallery: quarto.org/docs/gallery\nQuarto tip a day: rstd.io/quartotip"
+  },
+  {
+    "objectID": "hello-quarto/index.html#engage-empower-amplify-with-openscapes",
+    "href": "hello-quarto/index.html#engage-empower-amplify-with-openscapes",
+    "title": "Talks",
+    "section": "Engage, empower, amplify with Openscapes",
+    "text": "Engage, empower, amplify with Openscapes\n\nComing up at rstudio::conf(2022)\n\nIleana Fenwick - A Journey to Data Science: Tools for Equity and Diversity in STEM. 1:30pm - 1:50pm EDT\n\nOpenscapes: openscapes.org\n\nChampions Lesson Series\nApproach Guide\nQuarto Website Tutorial\n\nNASA Openscapes: nasa-openscapes.github.io\nNMFS Openscapes: nmfs-openscapes.github.io\nSupercharge your research: a ten-week plan for open data science (Lowndes et al. 2019)\nOur path to better science in less time using open data science tools (Lowndes et al. 2017)\nOpen Software Means Kinder Science"
+  },
+  {
+    "objectID": "hello-quarto/index.html#earthrise-by-amanda-gorman1",
+    "href": "hello-quarto/index.html#earthrise-by-amanda-gorman1",
+    "title": "Talks",
+    "section": "Earthrise by Amanda Gorman1",
+    "text": "Earthrise by Amanda Gorman1\n\n\nSo, earth, pale blue dot We will fail you not.\nJust as we chose to go to the moon We know it’s never too soon To choose hope. We choose to do more than cope With climate change We choose to end it— We refuse to lose. Together we do this and more Not because it’s very easy or nice But because it is necessary, Because with every dawn we carry the weight of the fate of this celestial body orbiting a star. And as heavy as that weight sounded, it doesn’t hold us down, But it keeps us grounded, steady, ready, Because an environmental movement of this size Is simply another form of an earthrise.\n\n\n\n\nNASA, Apollo 8, 1968\n\n\n\n\nFull text and video for Earthrise by Amanda Gorman"
+  },
+  {
+    "objectID": "hello-quarto/index.html#annotated-notes-share",
+    "href": "hello-quarto/index.html#annotated-notes-share",
+    "title": "Talks",
+    "section": "Annotated Notes: Share",
+    "text": "Annotated Notes: Share\nMine Çetinkaya-Rundel PhD https://mine-cr.com\n\nHex logos: https://github.com/rstudio/hex-stickers\nHow it works: https://quarto.org/docs/get-started/hello/rstudio.html#how-it-works"
+  },
+  {
+    "objectID": "hello-quarto/index.html#annotated-notes-collaborate",
+    "href": "hello-quarto/index.html#annotated-notes-collaborate",
+    "title": "Talks",
+    "section": "Annotated Notes: Collaborate",
+    "text": "Annotated Notes: Collaborate\nJulia Stewart Lowndes PhD https://jules32.github.io\nOpenscapes\nhttps://openscapes.org\nNASA Images\n\nSpinning Globe Earthdata: https://svs.gsfc.nasa.gov/30701\nNASA Hyperwall: https://eospso.nasa.gov/content/about-nasas-hyperwall\n\nNASA-Openscapes\n\nnasa-openscapes.github.io\n2021 Cloud Hackathon\n2021 Cloud Workshop at AGU\n2022 SWOT Ocean Hackathon\n\nDemo: JupyterLab JupyterHub managed by 2i2c https://2i2c.org\nOther Rey with Quarto, throwback to https://jules32.github.io/useR-2019-keynote"
+  },
+  {
+    "objectID": "hello-quarto/index.html#annotated-notes-teach",
+    "href": "hello-quarto/index.html#annotated-notes-teach",
+    "title": "Talks",
+    "section": "Annotated Notes: Teach",
+    "text": "Annotated Notes: Teach\n\nPhoto credit for Holland Stam: https://undergraduateresearch.duke.edu/news/data-scraping-art-history-survey-texts\n📦 arthistory: https://saralemus7.github.io/arthistory"
+  },
+  {
+    "objectID": "hello-quarto/index.html#annotated-notes-reimagine",
+    "href": "hello-quarto/index.html#annotated-notes-reimagine",
+    "title": "Talks",
+    "section": "Annotated Notes: Reimagine",
+    "text": "Annotated Notes: Reimagine\nAll We Can Save: https://www.allwecansave.earth\nHow to answer the Q of “What should I do to fight climate change?”  A: “What are you good at? Do that. Do that in the service of climate” - (ayanaeliza)\nFayLab Manual\n\nLearning by doing: migrating to Quarto from Bookdown\nRe: Tara Robertson on psychological safety A Chat with Tara Robertson\nRe: Gavin Fay on psychological safety: Openscapes is Awesome! Building lab resources to sustain future us with tools from open data science\n\nQuarto Mosaic\nSee also: 3 takeaways for planning for the year of open science\n\nhttps://openscapes.github.io/approach-guide\nhttps://nmfs-openscapes.github.io\n\nNASA images\n\nhttps://twitter.com/nasaearth\nhttps://twitter.com/UNOOSA/status/803692453358424064/photo/1\nhttps://www.doi.gov/blog/earth-art-stunning-landsat-images"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#hello-quarto-title",
+    "href": "hello-quarto/presentacion_pycon.html#hello-quarto-title",
+    "title": "Talks",
+    "section": "",
+    "text": "Hola Quarto\ncompartir • colaborar • enseñar • reimaginar\nFrancisco Alfaro Medina  Valeska Canales Pozo\nhttps://sethnut.com/talks"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#qué-es-quarto",
+    "href": "hello-quarto/presentacion_pycon.html#qué-es-quarto",
+    "title": "Talks",
+    "section": "¿Qué es Quarto ?",
+    "text": "¿Qué es Quarto ?"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#publishing-system-1",
+    "href": "hello-quarto/presentacion_pycon.html#publishing-system-1",
+    "title": "Talks",
+    "section": "",
+    "text": "Quarto es un sistema abierto de publicación científica y técnica"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#publishing-system-2",
+    "href": "hello-quarto/presentacion_pycon.html#publishing-system-2",
+    "title": "Talks",
+    "section": "",
+    "text": "Quarto es un sistema abierto de publicación científica y técnica\n\n\nel objetivo es hacer que el proceso de creación y colaboración sea drásticamente mejor"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#ejemplos",
+    "href": "hello-quarto/presentacion_pycon.html#ejemplos",
+    "title": "Talks",
+    "section": "Ejemplos",
+    "text": "Ejemplos"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#quarto-organiza-cada-paso-del-renderizado",
+    "href": "hello-quarto/presentacion_pycon.html#quarto-organiza-cada-paso-del-renderizado",
+    "title": "Talks",
+    "section": "Quarto organizacada paso del renderizado",
+    "text": "Quarto organizacada paso del renderizado"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#quarto-facilita-el-cambio-entre-formatos",
+    "href": "hello-quarto/presentacion_pycon.html#quarto-facilita-el-cambio-entre-formatos",
+    "title": "Talks",
+    "section": "Quarto facilita el cambio entre formatos",
+    "text": "Quarto facilita el cambio entre formatos\n\n\n\nDocument\n\n lesson-1.qmd\n\ntitle: \"Lesson 1\"\nformat: html\n\n\n\nPresentation\n\n lesson-1.qmd\n\ntitle: \"Lesson 1\"\nformat: revealjs\n\n\n\nWebsite\n\n _quarto.yml\n\nproject:\n  type: website\n\nwebsite: \n  navbar: \n    left:\n      - lesson-1.qmd"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#instalar-y-configurar-quarto",
+    "href": "hello-quarto/presentacion_pycon.html#instalar-y-configurar-quarto",
+    "title": "Talks",
+    "section": "Instalar y configurar Quarto",
+    "text": "Instalar y configurar Quarto\n\n\n\n\n\n\n\n\n\nDescarga e instalación:\n\nQuarto.org (Windows, macOS y Linux)\n\nVerificación:\n\nEjecutar quarto check en la terminal\n\nEditores recomendados:\n\nJupyter Notebook , VSCode + Quarto Extension"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#instalar-y-configurar-quarto-1",
+    "href": "hello-quarto/presentacion_pycon.html#instalar-y-configurar-quarto-1",
+    "title": "Talks",
+    "section": "Instalar y configurar Quarto",
+    "text": "Instalar y configurar Quarto"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#section-1",
+    "href": "hello-quarto/presentacion_pycon.html#section-1",
+    "title": "Talks",
+    "section": "",
+    "text": "🌐 Asegúrate de tener instalado R (RStudio) y/o Python (Jupyter)"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#section-2",
+    "href": "hello-quarto/presentacion_pycon.html#section-2",
+    "title": "Talks",
+    "section": "",
+    "text": "Código: example.qmd\n---\ntitle: \"Habits\"\nauthor: \"John Doe\"\nformat:\n  revealjs:\n    transition: fade\n    theme: black\n    toc: true\n    center: true\n---\n\n## Getting up\n\n- Turn off alarm\n- Get out of bed\n\n---\n\n## Going to sleep \n::: { .incremental }\n\n- Get in bed\n- Count sheep\n\n:::\n\nSlides: example.html"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#qué-podemos-hacer-con-quarto",
+    "href": "hello-quarto/presentacion_pycon.html#qué-podemos-hacer-con-quarto",
+    "title": "Talks",
+    "section": "¿ Qué podemos hacer con Quarto?",
+    "text": "¿ Qué podemos hacer con Quarto?"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#código-con-estilo",
+    "href": "hello-quarto/presentacion_pycon.html#código-con-estilo",
+    "title": "Talks",
+    "section": "Código con Estilo",
+    "text": "Código con Estilo\n\nMás de 20 temas para resaltar tu código\n\nEl tema por defecto está optimizado para accesibilidad\n\n# Define a server for the Shiny app\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot &lt;- renderPlot({\n    # Render a barplot\n  })\n}"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#código-en-movimiento",
+    "href": "hello-quarto/presentacion_pycon.html#código-en-movimiento",
+    "title": "Talks",
+    "section": "Código en Movimiento",
+    "text": "Código en Movimiento\n\nMás de 20 estilos de resaltado listos para usar\n\nTema por defecto diseñado para máxima accesibilidad\n\n# Define a server for the Shiny app\nfunction(input, output) {\n  \n  # Fill in the spot we created for a plot\n  output$phonePlot &lt;- renderPlot({\n    # Render a barplot\n    barplot(WorldPhones[,input$region]*1000, \n            main=input$region,\n            ylab=\"Number of Telephones\",\n            xlab=\"Year\")\n  })\n}"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#enfoque-en-líneas",
+    "href": "hello-quarto/presentacion_pycon.html#enfoque-en-líneas",
+    "title": "Talks",
+    "section": "Enfoque en Líneas",
+    "text": "Enfoque en Líneas\n\nSeñala las líneas clave para mayor claridad\n\nAgrega resaltados paso a paso\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(subplot_kw={'projection': 'polar'})\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#código-ejecutable",
+    "href": "hello-quarto/presentacion_pycon.html#código-ejecutable",
+    "title": "Talks",
+    "section": "Código Ejecutable",
+    "text": "Código Ejecutable\n\nimport seaborn as sns\nimport matplotlib.pyplot as plt\n\nmpg = sns.load_dataset(\"mpg\")\nsns.scatterplot(data=mpg, x=\"horsepower\", y=\"mpg\")\nplt.show()"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#tabsets",
+    "href": "hello-quarto/presentacion_pycon.html#tabsets",
+    "title": "Talks",
+    "section": "Tabsets",
+    "text": "Tabsets\nCrea bloques con pestañas que permiten alternar entre distintos contenidos.\n\nPlotData\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nx\ny\n\n\n\n\n0\n-2.000000\n12.000000\n\n\n1\n-1.929293\n11.510050\n\n\n2\n-1.858586\n11.030099\n\n\n3\n-1.787879\n10.560147\n\n\n4\n-1.717172\n10.100194"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#gráficos-interactivos",
+    "href": "hello-quarto/presentacion_pycon.html#gráficos-interactivos",
+    "title": "Talks",
+    "section": "Gráficos Interactivos",
+    "text": "Gráficos Interactivos"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#extensiones-de-quarto",
+    "href": "hello-quarto/presentacion_pycon.html#extensiones-de-quarto",
+    "title": "Talks",
+    "section": "Extensiones de Quarto",
+    "text": "Extensiones de Quarto\n\n\n\nLas extensiones de Quarto permiten añadir nuevas características y potenciar su uso.\n\n\n🔧 Necesitas más poder? Usa Extensions"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#quarto-quiz",
+    "href": "hello-quarto/presentacion_pycon.html#quarto-quiz",
+    "title": "Talks",
+    "section": "Quarto Quiz",
+    "text": "Quarto Quiz\n\n¿Cómo te ha parecido la presentación hasta ahora?\n\nMe encantó 😍\nMás o menos 🤔\n\nTal vez podría mejorar 🙂\n\nNo me gustó mucho 😕"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#quarto-webr-pyodide",
+    "href": "hello-quarto/presentacion_pycon.html#quarto-webr-pyodide",
+    "title": "Talks",
+    "section": "Quarto WebR + Pyodide",
+    "text": "Quarto WebR + Pyodide\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nThis is a live R example.\nWhy run it live?\nBecause people learn better when they see and try.\nNo setup, no install — just code and results.\nThat’s the power of WebR."
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#quarto-shinylive",
+    "href": "hello-quarto/presentacion_pycon.html#quarto-shinylive",
+    "title": "Talks",
+    "section": "Quarto Shinylive",
+    "text": "Quarto Shinylive\n#| '!! shinylive warning !!': |\n#|   shinylive does not work in self-contained HTML documents.\n#|   Please set `embed-resources: false` in your metadata.\n#| standalone: true\n#| viewerHeight: 800\n\nfrom shiny import App, ui, render, reactive\nimport matplotlib.pyplot as plt\nimport io\nimport base64\n\n# Function to generate the plot dynamically based on input values\ndef create_plot(yes_value, no_value):\n    categories = ['Sí', 'No']\n    values = [yes_value, no_value]\n\n    fig, ax = plt.subplots(figsize=(14, 5))\n    ax.bar(categories, values, color=['lightblue', 'salmon'])\n    ax.set_title('¿Te ha gustado la presentación?')\n\n    # Convert the image to base64 for display in Shiny\n    buf = io.BytesIO()\n    plt.savefig(buf, format=\"png\")\n    plt.close(fig)\n    buf.seek(0)\n    encoded_image = base64.b64encode(buf.getvalue()).decode()\n    return f'&lt;img src=\"data:image/png;base64,{encoded_image}\" style=\"max-width:100%;\"&gt;'\n\n# UI definition\napp_ui = ui.page_fluid(\n    ui.h2(\"Encuesta Interactiva\"),\n    \n    # Sliders to change values dynamically\n    ui.input_slider(\"yes_value\", \"Respuestas 'Sí':\", min=0, max=50, value=20),\n    ui.input_slider(\"no_value\", \"Respuestas 'No'\", min=0, max=50, value=10),\n    \n    # Output area for the plot\n    ui.output_ui(\"plot_output\")\n)\n\n# Server function\ndef server(input, output, session):\n    @output\n    @render.ui\n    def plot_output():\n        return ui.HTML(create_plot(input.yes_value(), input.no_value()))\n\n# Create the Shiny app\napp = App(app_ui, server)"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#conclusiones",
+    "href": "hello-quarto/presentacion_pycon.html#conclusiones",
+    "title": "Talks",
+    "section": "Conclusiones",
+    "text": "Conclusiones\n\n\n\n\n\n\n\nCompartir: Un mismo .qmd genera HTML, PDF, slides o sitios web, pasando de lo estático a lo interactivo.\n\n\n\n\n\n\n\n\nColaborar: Con un archivo sencillo ya se puede crear y publicar material reproducible, iniciando el trabajo en equipo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnseñar: Sus features integran texto, código y visualizaciones, mejorando la enseñanza con recursos dinámicos.\n\n\n\n\n\n\n\n\nReimaginar: Tecnologías como WebR, Pyodide o Shiny abren nuevas formas de aprender e innovar en educación."
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#referencias-y-recursos",
+    "href": "hello-quarto/presentacion_pycon.html#referencias-y-recursos",
+    "title": "Talks",
+    "section": "Referencias y Recursos",
+    "text": "Referencias y Recursos\n\n\n\n\n\n\n\nDocumentación oficial\n🔗 quarto.org\nGuías y ejemplos prácticos para comenzar de inmediato.\n\n\n\n\n\n\n\n\nAprendizaje en video\n🔗 Crash Course en YouTube\nIntroducción práctica a Quarto y sus distintos usos.\n\n\n\n\n\n\n\n\n\n\n\n\n\nRecursos de la comunidad\n🔗 Mine Cetinkaya-Rundel\nCursos, libros y presentaciones en Quarto en GitHub.\n\n\n\n\n\n\n\n\nAplicaciones en educación\n🔗 sethnut.com/resources\nOlimpiada Matemática, Verano Matemático, EMMA y más!"
+  },
+  {
+    "objectID": "hello-quarto/presentacion_pycon.html#gracias-por-participar",
+    "href": "hello-quarto/presentacion_pycon.html#gracias-por-participar",
+    "title": "Talks",
+    "section": "🎉 ¡Gracias por Participar!",
+    "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 Disfrutar del Evento!\n\n\n\n\n\n🔗 Nuestro Sitio Web: sethnut.com/talks"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "🎉 Presentaciones",
+    "section": "",
+    "text": "¡Hola! Aquí tienes una lista de nuestras presentaciones, realizadas con Quarto, una herramienta poderosa para crear documentos y presentaciones dinámicas en diferentes formatos.\n\n\n\n\nTransforma datos en historias visuales interactivas usando A.I. y herramientas dinámicas.\nPresentaciones:\nM2-Semana 01 · M2-Semana 02 ·M2-Semana 03 · M2-Semana 04\n\n\n\nAprende a crear paneles interactivos y visualizaciones narrativas con Shiny.\nPresentaciones:\nM3-Semana 01 · M3-Semana 02 ·M3-Semana 03"
+  },
+  {
+    "objectID": "index.html#diplomados",
+    "href": "index.html#diplomados",
+    "title": "🎉 Presentaciones",
+    "section": "",
+    "text": "Transforma datos en historias visuales interactivas usando A.I. y herramientas dinámicas.\nPresentaciones:\nM2-Semana 01 · M2-Semana 02 ·M2-Semana 03 · M2-Semana 04\n\n\n\nAprende a crear paneles interactivos y visualizaciones narrativas con Shiny.\nPresentaciones:\nM3-Semana 01 · M3-Semana 02 ·M3-Semana 03"
+  }
+]
