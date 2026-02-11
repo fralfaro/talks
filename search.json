@@ -1,281 +1,372 @@
 [
   {
-    "objectID": "usm_dtd/presentacion.html#a.i.-en-el-día-a-día",
-    "href": "usm_dtd/presentacion.html#a.i.-en-el-día-a-día",
-    "title": "No es Magia, es Ciencia",
-    "section": "🤖 A.I. en el día a día",
-    "text": "🤖 A.I. en el día a día"
+    "objectID": "usm_dtd/semana_01.html#revolución-de-los-datos",
+    "href": "usm_dtd/semana_01.html#revolución-de-los-datos",
+    "title": "Diplomado Transformación Digital",
+    "section": "Revolución de los Datos",
+    "text": "Revolución de los Datos\n\n\n\n\n\n\n\nHablar de los distintos tipos de Datos.\nTodo es datos, y está lleno de ellos en Internet y el mundo."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#objetivos",
-    "href": "usm_dtd/presentacion.html#objetivos",
-    "title": "No es Magia, es Ciencia",
-    "section": "🎯 Objetivos",
-    "text": "🎯 Objetivos\n\n\n\n\n\n\n\n\nComprender los LLM: Definición, funcionamiento y aplicaciones.\n\nAsistentes Virtuales: Uso, prompts y desafíos comunes.\n\nÉtica: Consideraciones y buenas prácticas."
+    "objectID": "usm_dtd/semana_01.html#nace-el-data-science-ciencia-de-datos",
+    "href": "usm_dtd/semana_01.html#nace-el-data-science-ciencia-de-datos",
+    "title": "Diplomado Transformación Digital",
+    "section": "Nace el Data Science (Ciencia de Datos)",
+    "text": "Nace el Data Science (Ciencia de Datos)\n\n\n\n\n\n\n\nExplicar las distintas etapas. Qué son cada uno de ellos.\nExplicar que no estoy de acuerdo con todas las definiciones."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#section",
-    "href": "usm_dtd/presentacion.html#section",
-    "title": "No es Magia, es Ciencia",
-    "section": "",
-    "text": "No es Magia, es Ciencia\n¿ Qué son los LLM ?"
+    "objectID": "usm_dtd/semana_01.html#cómo-aprovechar-la-información-que-tenemos",
+    "href": "usm_dtd/semana_01.html#cómo-aprovechar-la-información-que-tenemos",
+    "title": "Diplomado Transformación Digital",
+    "section": "¿Cómo aprovechar la información que tenemos?",
+    "text": "¿Cómo aprovechar la información que tenemos?\n\n\nData Mining (Minería de Datos)\n\n“The process of identifying valid, novel, potentially useful, and ultimately understandable patterns in data.” (Fayyad, Piatetsky-Shapiro & Smith 1996)\n\n\n\n\n\nMachine Learning (Aprendizaje Automático)\n\n“A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.” (Mitchell, 2006)\n\n\n\n\n\nExplicar que estos son dos tipos de Approaches con el que hoy en día se enfrentan los datos.\nEl primero más enfocado en un análisis manual.\nEl segundo en un enfoque más automático."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#large-language-model",
-    "href": "usm_dtd/presentacion.html#large-language-model",
-    "title": "No es Magia, es Ciencia",
-    "section": "📖 Large language Model",
-    "text": "📖 Large language Model\n\n\n\n\n🧠 Los LLMs generan lenguaje natural tras entrenarse con grandes volúmenes de texto.\n🤖 Se usan en chatbots, asistentes virtuales y tareas de procesamiento de lenguaje."
+    "objectID": "usm_dtd/semana_01.html#tipos-de-datos",
+    "href": "usm_dtd/semana_01.html#tipos-de-datos",
+    "title": "Diplomado Transformación Digital",
+    "section": "Tipos de Datos",
+    "text": "Tipos de Datos\n\n\n\n\nDatos Estructurados\n\n\n\n\nDatos No Estructurados"
   },
   {
-    "objectID": "usm_dtd/presentacion.html#características-llm",
-    "href": "usm_dtd/presentacion.html#características-llm",
-    "title": "No es Magia, es Ciencia",
-    "section": "📖 Características LLM",
-    "text": "📖 Características LLM\n\n\n\n\n📦 Entrenados con billones de parámetros y textos masivos\n🛠️ Adaptables a múltiples tareas (traducción, resumen, Q&A, etc.)\n🌍 Aplicables en dominios diversos: salud, educación, negocios"
+    "objectID": "usm_dtd/semana_01.html#tipos-de-datos-datos-tabulares",
+    "href": "usm_dtd/semana_01.html#tipos-de-datos-datos-tabulares",
+    "title": "Diplomado Transformación Digital",
+    "section": "Tipos de Datos: Datos Tabulares",
+    "text": "Tipos de Datos: Datos Tabulares\n\n\n\n\n\n\n\n\n\n\n\n\nFilas: Observaciones, instancias, registros. (Normalmente independientes).\nColumnas: Variables, Atributos, Features.\n\n\n\n\n\n\n\n\n\n\n\nProbablemente el tipo de datos más amigable.\nRequiere conocimiento de negocio (Domain Knowledge)\n\n\n\n\n\n\n\n\n\n\n\nEs un % bajísimo del total de datos existentes en el Mundo. También el que más disponible está en las empresas.\nDistintos data types, por lo que normalmente requiere de algún tipo de preprocesamiento."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#historia-de-los-llm",
-    "href": "usm_dtd/presentacion.html#historia-de-los-llm",
-    "title": "No es Magia, es Ciencia",
-    "section": "⏳ Historia de los LLM",
-    "text": "⏳ Historia de los LLM"
+    "objectID": "usm_dtd/semana_01.html#tipos-de-datos-series-de-tiempo",
+    "href": "usm_dtd/semana_01.html#tipos-de-datos-series-de-tiempo",
+    "title": "Diplomado Transformación Digital",
+    "section": "Tipos de Datos: Series de Tiempo",
+    "text": "Tipos de Datos: Series de Tiempo\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFilas: Instancias temporales (Normalmente interdependientes).\nColumnas: Variables, Atributos, Features (Univariada o Multivariada).\n\n\n\n\n\n\n\n\n\n\n\nEs un % bajísimo del total de datos existentes en el Mundo.\nPropiedad temporal requiere preprocesamiento y modelos especiales."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#desafío",
-    "href": "usm_dtd/presentacion.html#desafío",
-    "title": "No es Magia, es Ciencia",
-    "section": "🔥 Desafío",
-    "text": "🔥 Desafío\n\n¿Qué contiene la siguiente cadena de bits?\n00000000 00101010"
+    "objectID": "usm_dtd/semana_01.html#tipos-de-datos-imágenes",
+    "href": "usm_dtd/semana_01.html#tipos-de-datos-imágenes",
+    "title": "Diplomado Transformación Digital",
+    "section": "Tipos de Datos: Imágenes",
+    "text": "Tipos de Datos: Imágenes\n\n\n\n\n\n\n\n\n\n\n\n\n\nEste es el tipo de Datos que disparó la Inteligencia Artificial.\n¿Cuántos computadores para identificar un Gato? 16,000\n\n\n\n\n\n\n\n\n\n\n\n\nExplicar el concepto de Tensor, extensión de las matrices. Diferencia entre Grayscale y RGB."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#section-1",
-    "href": "usm_dtd/presentacion.html#section-1",
-    "title": "No es Magia, es Ciencia",
-    "section": "",
-    "text": "00000000 00101010\nPodría ser el número 42 escrito en binario…"
+    "objectID": "usm_dtd/semana_01.html#tipos-de-datos-texto-libre",
+    "href": "usm_dtd/semana_01.html#tipos-de-datos-texto-libre",
+    "title": "Diplomado Transformación Digital",
+    "section": "Tipos de Datos: Texto Libre",
+    "text": "Tipos de Datos: Texto Libre\n\n\n\n\n\n\n\n\n\n\n\n\nDatos Masivos.\nDificiles de lidiar ya que deben ser llevarse a una representación numérica.\nAlto nivel de Sesgo y Subjetividad.\n\n\n\n\n\n\n\n\n\n\n\nGracias a este tipo de datos se han producido los avances más increíbles del último tiempo: Transformers"
   },
   {
-    "objectID": "usm_dtd/presentacion.html#section-2",
-    "href": "usm_dtd/presentacion.html#section-2",
-    "title": "No es Magia, es Ciencia",
-    "section": "",
-    "text": "00000000 00101010\nPodría ser el carácter * en la convención ascii…"
+    "objectID": "usm_dtd/semana_01.html#tipos-de-datos-videos",
+    "href": "usm_dtd/semana_01.html#tipos-de-datos-videos",
+    "title": "Diplomado Transformación Digital",
+    "section": "Tipos de Datos: Videos",
+    "text": "Tipos de Datos: Videos\n\n\n\n\n\n\n\n\nLos videos no son más que arreglos de imágenes.\nSon un tipo de dato muy pesado y difícil de lidiar.\nRequiere alto poder de Procesamiento."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#section-3",
-    "href": "usm_dtd/presentacion.html#section-3",
-    "title": "No es Magia, es Ciencia",
-    "section": "",
-    "text": "00000000 00101010 00000101 00000101 00000101 00000101\nPodría ser parte de un número decimal, 0.4523 o \\(\\pi\\)…"
+    "objectID": "usm_dtd/semana_01.html#eda",
+    "href": "usm_dtd/semana_01.html#eda",
+    "title": "Diplomado Transformación Digital",
+    "section": "EDA",
+    "text": "EDA\n\nEl Analisis Exploratorio de Datos (EDA, por sus siglas en inglés) es procedimiento en el cual se analiza un dataset para explorar sus características principales.\n\n\nSu objetivo principal es poder familiarizarse con los datos además de encontrar potenciales problemas en su calidad.\nPrincipalmente hace uso de técnicas de manipulación de datos y visualizaciones.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLos hallazgos importantes dentro del proceso se les denomina insights.\n\n\n\n\n\n\n\n\n\nEl uso de visualizaciones inadecuadas podría llevar a conclusiones erróneas.\n\n\n\n\n\n\n\n\n\n\nSummary.\nVisualización."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#section-4",
-    "href": "usm_dtd/presentacion.html#section-4",
-    "title": "No es Magia, es Ciencia",
-    "section": "",
-    "text": "10000101 00100001 01000111 00001000 00101010 01000101 11111111 11001101 01000111 00000101 00000101 01110111\nPodría ser parte de un archivo multimedia (video, imagen, audio, etc.)…"
+    "objectID": "usm_dtd/semana_01.html#medidas-de-tendencia-central",
+    "href": "usm_dtd/semana_01.html#medidas-de-tendencia-central",
+    "title": "Diplomado Transformación Digital",
+    "section": "Medidas de Tendencia Central",
+    "text": "Medidas de Tendencia Central"
   },
   {
-    "objectID": "usm_dtd/presentacion.html#representación",
-    "href": "usm_dtd/presentacion.html#representación",
-    "title": "No es Magia, es Ciencia",
-    "section": "Representación",
-    "text": "Representación\n\n\n\n\nTODO en el computador son bits\nrepresentación = bits + contexto"
+    "objectID": "usm_dtd/semana_01.html#medidas-de-dispersión-y-asimetría",
+    "href": "usm_dtd/semana_01.html#medidas-de-dispersión-y-asimetría",
+    "title": "Diplomado Transformación Digital",
+    "section": "Medidas de Dispersión y Asimetría",
+    "text": "Medidas de Dispersión y Asimetría"
   },
   {
-    "objectID": "usm_dtd/presentacion.html#cómo-representar-una-palabra",
-    "href": "usm_dtd/presentacion.html#cómo-representar-una-palabra",
-    "title": "No es Magia, es Ciencia",
-    "section": "¿Cómo representar una palabra?",
-    "text": "¿Cómo representar una palabra?"
+    "objectID": "usm_dtd/semana_01.html#eda-visualización",
+    "href": "usm_dtd/semana_01.html#eda-visualización",
+    "title": "Diplomado Transformación Digital",
+    "section": "EDA: Visualización",
+    "text": "EDA: Visualización\n\nLa visualización de datos es la presentación de datos en forma gráfica. Permite simplificar conceptos más complejos en especial a altos mandos.\n\n\nGracias a la evolución del cerebro humano somos capaces de detectar patrones complejos en la naturaleza a partir de la Visión.\n\n\n\n\n\n\n\n\nPuede ser difícil de aplicar si el tamaño de los datos es grande (sea en instancias o atributos). Por ejemplo, si los datos están en 4 dimensiones.\n\n\n\n\n\n\n\n\n\n\n\n\nSe suelen resumir los datos en estadísticas simples.\nGraficar datos en 1D, 2D y 3D (evitar dentro de lo posible).\nLa visualización debe ser comprensible ojalá sin ninguna explicación.\n\n\n\n\n\n\n\n\n\n\n\n\nEn caso de datos de alta dimensionalidad puede ser una buena idea reducir dimensiones mediante técnicas como:\n\nPCA\nUMAP\netc."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#representación-textual",
-    "href": "usm_dtd/presentacion.html#representación-textual",
-    "title": "No es Magia, es Ciencia",
-    "section": "📝 Representación textual",
-    "text": "📝 Representación textual\nTranscribir texto es guardar letras como bits.\n\nASCIIUTF-8\n\n\n\n1 byte (8 bits)\n128 caracteres\nNo incluye ñ ni tildes\n\n\n\n\n1 a 4 bytes\nCompatible con ASCII\nIncluye emojis 😁"
+    "objectID": "usm_dtd/semana_01.html#caso-de-visualización",
+    "href": "usm_dtd/semana_01.html#caso-de-visualización",
+    "title": "Diplomado Transformación Digital",
+    "section": "Caso de Visualización",
+    "text": "Caso de Visualización\n\n\n\n\n\n\n\nFiguras\nEscala de Colores.\nTamaño de los puntos.\nDemasiada información en un sólo gráfico.\nNo se entiende el mensaje."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#representación-semántica",
-    "href": "usm_dtd/presentacion.html#representación-semántica",
-    "title": "No es Magia, es Ciencia",
-    "section": "🧠 Representación semántica",
-    "text": "🧠 Representación semántica\n\n\n\n\nSemántica significa el sentido o significado de las palabras.\nNecesitamos guardarla como un todo o dividirla en partes con sentido (tokens)."
+    "objectID": "usm_dtd/semana_01.html#canales-visuales",
+    "href": "usm_dtd/semana_01.html#canales-visuales",
+    "title": "Diplomado Transformación Digital",
+    "section": "Canales Visuales",
+    "text": "Canales Visuales\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSe les llama canales visuales a elementos visuales que pueden utilizarse para expresar información (Clase Visualizacion Andreas Mueller).\nLa idea es poder mapear cada uno de estos canales a valores que queremos visualizar.\n\n\n\n\n\n\n\n\n\n\n\nNo todos los canales son igual de útiles ni fáciles de entender."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#aprendizajes",
-    "href": "usm_dtd/presentacion.html#aprendizajes",
-    "title": "No es Magia, es Ciencia",
-    "section": "💡 Aprendizajes",
-    "text": "💡 Aprendizajes\n\n\nPalabra ≠ Token\nCada token tiene un ID único\n\nEn inglés, 100 tokens ≈ 75 palabras\n\nDos palabras iguales pueden tener tokens distintos, según el contexto"
+    "objectID": "usm_dtd/semana_01.html#visualizaciones-distribuciones",
+    "href": "usm_dtd/semana_01.html#visualizaciones-distribuciones",
+    "title": "Diplomado Transformación Digital",
+    "section": "Visualizaciones: Distribuciones",
+    "text": "Visualizaciones: Distribuciones\n\nHistograma\n\nEl histograma permite visualizar distribuciones univariadas acumulando los datos en rangos de igual tamaño (bins).\n\n\n\nPermite visualizar el centro, la extensión, la asimetría y outliers.\n\n\n\n\n\n\n\n\nEl histograma puede ser “engañoso” para conjuntos de datos pequeños.\nLa visualización puede resultar de manera muy distintas dependiendo del número de bins."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#diagrama-técnico-de-un-llm",
-    "href": "usm_dtd/presentacion.html#diagrama-técnico-de-un-llm",
-    "title": "No es Magia, es Ciencia",
-    "section": "⚙️ Diagrama técnico de un LLM",
-    "text": "⚙️ Diagrama técnico de un LLM\nDiagrama de funcionamiento de un LLM que se filtró de OpenAI:\n¡¡¡No difundir!!!"
+    "objectID": "usm_dtd/semana_01.html#visualizaciones-distribuciones-1",
+    "href": "usm_dtd/semana_01.html#visualizaciones-distribuciones-1",
+    "title": "Diplomado Transformación Digital",
+    "section": "Visualizaciones: Distribuciones",
+    "text": "Visualizaciones: Distribuciones\n\nKernel Density\n\nCorresponde a un suavizamiento de un Histograma en el cuál se usa un Kernel (función no negativa que suma 1 y tiene media 0) para agrupar los puntos vecinos.\n\n\n\n\nLa función estimada es:\n\\[f(x) = \\frac{1}{n} = \\sum_{i=1}^n K \\left(\\frac{x - x(i)}{h}\\right)\\]\n\n\\(K(u)\\) es el Kernel.\n\\(h\\) es el ancho de banda."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#diagrama-técnico-de-un-llm-1",
-    "href": "usm_dtd/presentacion.html#diagrama-técnico-de-un-llm-1",
-    "title": "No es Magia, es Ciencia",
-    "section": "⚙️ Diagrama técnico de un LLM",
-    "text": "⚙️ Diagrama técnico de un LLM"
+    "objectID": "usm_dtd/semana_01.html#visualizaciones-distribuciones-2",
+    "href": "usm_dtd/semana_01.html#visualizaciones-distribuciones-2",
+    "title": "Diplomado Transformación Digital",
+    "section": "Visualizaciones: Distribuciones",
+    "text": "Visualizaciones: Distribuciones\n\nBoxplot (Caja y Bigotes)\n\nEs un tipo de gráfico que muestra la distribución de manera univariada.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTiene la capacidad de mostrar varias distribuciones a la vez.\nAdemás presenta estadísticos de interés: Mediana, IQR y outliers.\nLos puntos fuera de los bigotes son considerados Outliers.\n\n\n\n\n\n\n\n\n\n\n\n\n\nLos bigotes pueden representar:\n\nMínimo y Máximo. (En este caso no hay outliers).\n\\(\\mu \\pm 3\\sigma\\)\nPercentiles 5 y 95.\nOtros valores."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#aprendizajes-1",
-    "href": "usm_dtd/presentacion.html#aprendizajes-1",
-    "title": "No es Magia, es Ciencia",
-    "section": "💡 Aprendizajes",
-    "text": "💡 Aprendizajes\n\n\nEl LLM no reflexiona, solo predice el token más probable.\n\nLa predicción es secuencial, token por token.\n\nNo tiene memoria: siempre parte desde cero."
+    "objectID": "usm_dtd/semana_01.html#visualizaciones-barras",
+    "href": "usm_dtd/semana_01.html#visualizaciones-barras",
+    "title": "Diplomado Transformación Digital",
+    "section": "Visualizaciones: Barras",
+    "text": "Visualizaciones: Barras\n\nBar Plot\n\nLa altura de la barra (normalmente Eje y) representa una agregación asociada a una categoría (normalmente Eje x).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOtras convenciones llaman a este gráfico Column Plot, mientras que el Bar Plot tiene las barras de manera horizontal."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#section-7",
-    "href": "usm_dtd/presentacion.html#section-7",
-    "title": "No es Magia, es Ciencia",
-    "section": "",
-    "text": "No es Magia, es Ciencia\n¿Qué son los Prompts?"
+    "objectID": "usm_dtd/semana_01.html#visualizaciones-puntos",
+    "href": "usm_dtd/semana_01.html#visualizaciones-puntos",
+    "title": "Diplomado Transformación Digital",
+    "section": "Visualizaciones: Puntos",
+    "text": "Visualizaciones: Puntos\n\nScatter\n\nGráfico empleado para mostrar distribución de datos bivariados\n\n\n\nMuestra la relación entre una variable independiente (Eje X) y una variable dependiente (Eje Y).\nPermite mostrar relaciones lineales o no-lineales (Correlaciones).\nOutliers.\nSimplemente ubicación de Puntos en el Espacio."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#asistentes-virtuales-inteligentes",
-    "href": "usm_dtd/presentacion.html#asistentes-virtuales-inteligentes",
-    "title": "No es Magia, es Ciencia",
-    "section": "🤖 Asistentes Virtuales Inteligentes",
-    "text": "🤖 Asistentes Virtuales Inteligentes\n\nLos asistentes virtuales impulsados por IA facilitan la comunicación, automatización y soporte en diversas industrias."
+    "objectID": "usm_dtd/semana_01.html#visualizaciones-líneas",
+    "href": "usm_dtd/semana_01.html#visualizaciones-líneas",
+    "title": "Diplomado Transformación Digital",
+    "section": "Visualizaciones: Líneas",
+    "text": "Visualizaciones: Líneas\n\nLineplot\n\nGráfico empleado para visualizar tendencias y su evolución de una medida (Eje Y) en el tiempo (Eje X).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSi bien es posible utilizarlo para gráficar dos medidas continuas, las buenas prácticas indican que el eje X siempre debería contener una componente temporal."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#asistentes-virtuales-inteligentes-1",
-    "href": "usm_dtd/presentacion.html#asistentes-virtuales-inteligentes-1",
-    "title": "No es Magia, es Ciencia",
-    "section": "🤖 Asistentes Virtuales Inteligentes",
-    "text": "🤖 Asistentes Virtuales Inteligentes\n\n\n\nAsistentes más destacados:\n\nChatGPT (OpenAI)\nGemini (Google DeepMind)\nMeta AI (Meta)\nDeepSeek (DeepSeek)"
+    "objectID": "usm_dtd/semana_01.html#estadísticos-vs-visualizaciones",
+    "href": "usm_dtd/semana_01.html#estadísticos-vs-visualizaciones",
+    "title": "Diplomado Transformación Digital",
+    "section": "Estadísticos vs Visualizaciones",
+    "text": "Estadísticos vs Visualizaciones"
   },
   {
-    "objectID": "usm_dtd/presentacion.html#qué-podemos-hacer",
-    "href": "usm_dtd/presentacion.html#qué-podemos-hacer",
-    "title": "No es Magia, es Ciencia",
-    "section": "📱¿Qué podemos hacer?",
-    "text": "📱¿Qué podemos hacer?\n\n\n\n\n\n\n\n\n🎓 Educación: Tutor virtual.\n\n🩺 Salud: Asistencia en consultas.\n\n📝 Contenido: Redacción y resumen.\n\n💻 Software: Generación/corrección código.\n\n💬 Cliente: Respuestas automáticas."
+    "objectID": "usm_dtd/semana_01.html#otras-visualizaciones",
+    "href": "usm_dtd/semana_01.html#otras-visualizaciones",
+    "title": "Diplomado Transformación Digital",
+    "section": "¿Otras Visualizaciones?",
+    "text": "¿Otras Visualizaciones?"
   },
   {
-    "objectID": "usm_dtd/presentacion.html#prompts-en-chatgpt",
-    "href": "usm_dtd/presentacion.html#prompts-en-chatgpt",
-    "title": "No es Magia, es Ciencia",
-    "section": "📝 Prompts en ChatGPT",
-    "text": "📝 Prompts en ChatGPT\nLos prompts son las instrucciones que se le dan a un modelo de lenguaje, como ChatGPT, para generar una respuesta o realizar una tarea específica. Pueden ser preguntas, frases o directrices que guían el modelo hacia el resultado deseado."
+    "objectID": "usm_dtd/semana_01.html#preguntas-para-terminar",
+    "href": "usm_dtd/semana_01.html#preguntas-para-terminar",
+    "title": "Diplomado Transformación Digital",
+    "section": "Preguntas para terminar",
+    "text": "Preguntas para terminar\n\n¿Por qué usar visualizaciones? ¿Qué son los canales visuales?\n¿Por qué es necesario el EDA?\n¿Por qué es necesario utilizar tanto Estadísticos como Visualizaciones?"
   },
   {
-    "objectID": "usm_dtd/presentacion.html#prompts-en-chatgpt-1",
-    "href": "usm_dtd/presentacion.html#prompts-en-chatgpt-1",
-    "title": "No es Magia, es Ciencia",
-    "section": "📝 Prompts en ChatGPT",
-    "text": "📝 Prompts en ChatGPT\nPregunta directa: “¿Qué es la inteligencia artificial?”\nInstrucción: “Escribe una historia corta sobre un viaje al espacio.”\nComando: “Genera un código Python para calcular el promedio de una lista.”"
+    "objectID": "usm_dtd/semana_01.html#gracias-por-participar",
+    "href": "usm_dtd/semana_01.html#gracias-por-participar",
+    "title": "Diplomado Transformación Digital",
+    "section": "🎉 ¡Gracias por Participar!",
+    "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 Disfrutar del Evento!\n\n\n\n\n🔗 Nuestro Sitio Web: sethnut.com/talks"
   },
   {
-    "objectID": "usm_dtd/presentacion.html#actividad-probemos-algunos-prompts",
-    "href": "usm_dtd/presentacion.html#actividad-probemos-algunos-prompts",
-    "title": "No es Magia, es Ciencia",
-    "section": "🎯 Actividad: ¡Probemos algunos Prompts!",
-    "text": "🎯 Actividad: ¡Probemos algunos Prompts!\n\n\n\n\n\n\n\n\n\n👩‍💻 Paso 1: Elige un asistente ( ChatGPT, Gemini, Meta AI, DeepSeek )\n📝 Paso 2: Escribe o copia un prompt\n🔍 Paso 3: Observa la respuesta\n🤔 Paso 4: Compara con otros asistentes"
+    "objectID": "usm_dtd/semana_02.html#tipos-de-aprendizaje",
+    "href": "usm_dtd/semana_02.html#tipos-de-aprendizaje",
+    "title": "Diplomado Transformación Digital",
+    "section": "Tipos de Aprendizaje",
+    "text": "Tipos de Aprendizaje"
   },
   {
-    "objectID": "usm_dtd/presentacion.html#estructura-de-un-buen-prompts",
-    "href": "usm_dtd/presentacion.html#estructura-de-un-buen-prompts",
-    "title": "No es Magia, es Ciencia",
-    "section": "Estructura de un Buen Prompts",
-    "text": "Estructura de un Buen Prompts"
+    "objectID": "usm_dtd/semana_02.html#reinforcement-learning",
+    "href": "usm_dtd/semana_02.html#reinforcement-learning",
+    "title": "Diplomado Transformación Digital",
+    "section": "Reinforcement Learning",
+    "text": "Reinforcement Learning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEn este tipo de aprendizaje se enseña por refuerzo. Es decir se da una recompensa si el sistema aprende lo que queremos.\n\n\n\n\n\n\n\n\n\n\n\nSi el premio es mayor, se pueden obtener aprendizajes mayores.\n\n\n\n\n\n\n\n\n\n\n\nUn ejemplo de esto es AlphaTensor en el cual un modelo aprendió una nueva manera de multiplicar matrices que es más eficiente.\n\n\n\n\n\n\n\n\n\n\n\nOtro ejemplo es AlphaFold donde el modelo aprendió/descubrió cómo se doblan las proteínas cuando se vuelven aminoácidos."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#estructura-de-un-buen-prompt",
-    "href": "usm_dtd/presentacion.html#estructura-de-un-buen-prompt",
-    "title": "No es Magia, es Ciencia",
-    "section": "🧠 Estructura de un Buen Prompt",
-    "text": "🧠 Estructura de un Buen Prompt\n\n❌ Prompt simple✅ Prompt estructurado✨ ¿Qué lo hace mejor?\n\n\n\nPrompt:\nHaz un código en Python para ordenar una lista.\n\n\n👎 Resultado muy genérico, sin explicación ni opciones personalizadas.\n\n\n\nPrompt:\nEres un profesor de programación enseñando a estudiantes principiantes.  \nTu tarea es crear un ejemplo en Python para ordenar una lista de números.  \nExplica paso a paso el código, usando comentarios.  \nUsa dos métodos: el método `.sort()` y el algoritmo de burbuja.  \nIncluye ejemplos de entrada y salida.  \nEl objetivo es ayudar a comprender el funcionamiento de ambos métodos.\n\n\n👍 El resultado incluye: código claro, explicaciones y enfoque didáctico.\n\n\n\n\n👨‍🏫 Rol: Define que el modelo actúe como profesor\n📌 Tarea: Especifica crear un ejemplo y explicar\n🧩 Detalles: Métodos .sort() y burbuja\n🎓 Contexto: Enseñanza a estudiantes\n📝 Extras: Comentarios y ejemplos de uso"
+    "objectID": "usm_dtd/semana_02.html#problemas-supervisados-regresión-y-clasificación",
+    "href": "usm_dtd/semana_02.html#problemas-supervisados-regresión-y-clasificación",
+    "title": "Diplomado Transformación Digital",
+    "section": "Problemas Supervisados: Regresión y Clasificación",
+    "text": "Problemas Supervisados: Regresión y Clasificación\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRegresión: Se busca estimar un valor continuo.\n\n(Estimar el valor de una casa).\n\nClasificación: Se busca encontrar una categoría o un valor discreto.\n\n(Clasificar una imagen como Perro o Gato).\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPara entrenar este tipo de modelos se necesitan etiquetas, es decir, la respuesta esperada del modelo.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAmbos ejemplos se pueden realizar utilizando Largo (Eje Y) y Peso (Eje X)."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#técnicas-para-mejorar-los-prompts",
-    "href": "usm_dtd/presentacion.html#técnicas-para-mejorar-los-prompts",
-    "title": "No es Magia, es Ciencia",
-    "section": "♟️Técnicas para Mejorar los Prompts",
-    "text": "♟️Técnicas para Mejorar los Prompts"
+    "objectID": "usm_dtd/semana_02.html#clustering",
+    "href": "usm_dtd/semana_02.html#clustering",
+    "title": "Diplomado Transformación Digital",
+    "section": "Clustering",
+    "text": "Clustering\n\n\n\n\n\n\n\n\n\n\n\n\n\nClusters: Una categoría en la que sus componentes son similares. Los clusters normalmente no tienen un nombre propio, sino que uno les asigna uno.\nTambién se les llama segmentos. No usar la palabra clase.\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo requiere de etiquetas, por lo tanto, no es posible evaluar su desempeño de manera 100% acertada."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#técnicas-para-mejorar-los-prompts-1",
-    "href": "usm_dtd/presentacion.html#técnicas-para-mejorar-los-prompts-1",
-    "title": "No es Magia, es Ciencia",
-    "section": "♟️Técnicas para Mejorar los Prompts",
-    "text": "♟️Técnicas para Mejorar los Prompts\n\nZero-shot♟️ Few-shot♟️ CoT♟️ Chaining\n\n\nDefinición: Se da un prompt sin ejemplos previos, y se espera que el modelo genere una respuesta basada en su conocimiento previo.\n\n\n✨ Ejemplo de prompt:\n\n“¿Qué es la fotosíntesis?”\n\n\n✅ Esperado:\n\n“La fotosíntesis es el proceso por el cual las plantas convierten la luz solar en energía química utilizando dióxido de carbono y agua.”\n\n\n\n\nDefinición: Se proporcionan pocos ejemplos en el prompt para ayudar al modelo a generar una respuesta más precisa.\n\n\n✨ Ejemplo de prompt:\n\n“Traduce las siguientes frases al francés:\n- Hello → Bonjour\n- Thank you → Merci\n- Good morning → ?”\n\n\n✅ Esperado:\n\n“Good morning → Bonjour”\n\n\n\n\nDefinición: Se fomenta el razonamiento paso a paso (Chain-of-Thought ) para obtener respuestas más estructuradas y detalladas.\n\n\n✨ Ejemplo de prompt:\n\n“Si un tren viaja a 80 km/h y recorre 240 km, ¿cuánto tiempo tarda en llegar? Explica tu razonamiento.”\n\n\n✅ Esperado:\n\n“El tren viaja a 80 km/h y debe recorrer 240 km. Para calcular el tiempo, usamos la fórmula:\ntiempo = distancia / velocidad\n240 km ÷ 80 km/h = 3 horas.\nPor lo tanto, el tren tarda 3 horas en llegar.”\n\n\n\n\nDefinición: Se descompone una tarea compleja en múltiples prompts encadenados, donde la salida de un prompt se usa como entrada para el siguiente.\n\n\n✨ Ejemplo de prompt:\n\nPaso 1: “Resume en 3 frases la Revolución Industrial.”\nPaso 2: (Usando la respuesta del primer prompt) “Ahora expande cada frase en un párrafo detallado.”\n\n\n✅ Esperado:\n\nPaso 1: “La Revolución Industrial marcó el inicio de la producción mecanizada, el crecimiento de las ciudades y el avance del transporte.”\nPaso 2: Se genera un desarrollo más detallado de cada punto."
+    "objectID": "usm_dtd/semana_02.html#reducción-de-dimensionalidad",
+    "href": "usm_dtd/semana_02.html#reducción-de-dimensionalidad",
+    "title": "Diplomado Transformación Digital",
+    "section": "Reducción de Dimensionalidad",
+    "text": "Reducción de Dimensionalidad\n\n\n\n\n\n\n\n\n\n\n\n\nReducción de la Dimensionalidad: Eliminar complejidad sin perder información clave para poder entender su comportamiento."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#section-8",
-    "href": "usm_dtd/presentacion.html#section-8",
-    "title": "No es Magia, es Ciencia",
-    "section": "",
-    "text": "No es Magia, es Ciencia\nUna mirada crítica a los LLMs"
+    "objectID": "usm_dtd/semana_02.html#nuestro-sistema-de-ml",
+    "href": "usm_dtd/semana_02.html#nuestro-sistema-de-ml",
+    "title": "Diplomado Transformación Digital",
+    "section": "Nuestro Sistema de ML",
+    "text": "Nuestro Sistema de ML\nCreemos un Sistema de ML que sea capaz de ver una imágen y pronunciar correctamente el uso de la letra C.\n\n\n\n\n\n\nVamos a Entrenar un Modelo."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#problemas-comunes-con-los-llm",
-    "href": "usm_dtd/presentacion.html#problemas-comunes-con-los-llm",
-    "title": "No es Magia, es Ciencia",
-    "section": "⚠️ Problemas comunes con los LLM",
-    "text": "⚠️ Problemas comunes con los LLM"
+    "objectID": "usm_dtd/semana_02.html#nuestro-sistema-de-ml-entrenamiento",
+    "href": "usm_dtd/semana_02.html#nuestro-sistema-de-ml-entrenamiento",
+    "title": "Diplomado Transformación Digital",
+    "section": "Nuestro Sistema de ML: Entrenamiento",
+    "text": "Nuestro Sistema de ML: Entrenamiento\n\n\n\n\n\n\nKasa\n\n\n\n\n\n\n\nKokodrilo\n\n\n\n\n\n\n\nKubo\n\n\n\n\n\n\n\n\n\n\n\n\n¿Qué patrones está aprendiendo el modelo?\n\n\n\n\n\nEntrenamiento\n\nEs el proceso en el cuál se permite al modelo aprender. En este proceso se le entregan ejemplos (Train Set) para que el modelo de manera autónoma pueda aprender patrones que le permitan resolver la tarea dada."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#problemas-comunes-con-los-llm-1",
-    "href": "usm_dtd/presentacion.html#problemas-comunes-con-los-llm-1",
-    "title": "No es Magia, es Ciencia",
-    "section": "⚠️ Problemas Comunes con los LLM",
-    "text": "⚠️ Problemas Comunes con los LLM\n\n\n\n\n\n\n\n\n\n🚨 Error\n💬 Prompt\n❌ Respuesta Incorrecta\n\n\n\n\nInformación Incorrecta\n¿Cuántos continentes hay?\nHay 4 continentes.\n\n\nDatos Obsoletos\n¿Quién es el presidente de Argentina?\nMauricio Macri.\n\n\nRespuesta Ambigua\n¿País más grande?\nPodría ser China o EE.UU.\n\n\nSesgo o Estereotipo\n¿Quién programa mejor?\nLos hombres, por su lógica natural."
+    "objectID": "usm_dtd/semana_02.html#nuestro-sistema-de-ml-inferencia",
+    "href": "usm_dtd/semana_02.html#nuestro-sistema-de-ml-inferencia",
+    "title": "Diplomado Transformación Digital",
+    "section": "Nuestro Sistema de ML: Inferencia",
+    "text": "Nuestro Sistema de ML: Inferencia\n\nInferencia/Predicción\n\nSe refiere al proceso en el que el modelo tiene que demostrar cuál sería su decisión de acuerdo a los patrones aprendidos en el proceso de entrenamiento. Los ejemplos en los que se prueba se le denomina Test Set.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKollar\n\n\nKonejo\n\n\nKukillo\n\n\nBikikleta\n\n\n\n\n\nGeneralización\n\nSe le llama generalización a la capacidad del modelo de aplicar lo aprendido de manera correcta en ejemplos no vistos."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#ética-en-el-uso-de-la-a.i.",
-    "href": "usm_dtd/presentacion.html#ética-en-el-uso-de-la-a.i.",
-    "title": "No es Magia, es Ciencia",
-    "section": "⚖️ Ética en el Uso de la A.I.",
-    "text": "⚖️ Ética en el Uso de la A.I."
+    "objectID": "usm_dtd/semana_02.html#nuestro-sistema-de-ml-nuevas-instancias-de-entrenamiento",
+    "href": "usm_dtd/semana_02.html#nuestro-sistema-de-ml-nuevas-instancias-de-entrenamiento",
+    "title": "Diplomado Transformación Digital",
+    "section": "Nuestro Sistema de ML: Nuevas instancias de Entrenamiento",
+    "text": "Nuestro Sistema de ML: Nuevas instancias de Entrenamiento\n\n\n\n\n\n\n\nKuchillo\n\n\n\n\n\n\n\n\nChokolate\n\n\n\n\n\n\n\nSinsel\n\n\n\n\n\n\n\n\n\n\n\n\nNo es bueno entrenar con las mismas instancias de de Test, es decir, con las cuales se evalúa el modelo. ¿Por qué?\n\n\n\n\n\nMencionar el caso de error de ImageNet."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#ejemplos",
-    "href": "usm_dtd/presentacion.html#ejemplos",
-    "title": "No es Magia, es Ciencia",
-    "section": "⚖️ Ejemplos",
-    "text": "⚖️ Ejemplos\n\n⚠️ Credenciales🔒 Privacidad📐 Tareas\n\n\nDefinición: Se debe evitar compartir información sensible como contraseñas, tokens de acceso o datos privados en prompts de IA.\n\n\n❌ Mal prompt:\n\n“Mi API key es 1234-5678, y mi contraseña es mypassword123. ¿Puedes conectarte por mí?”\n\n\n✅ Buen prompt:\n\n“¿Cómo guardar credenciales en un archivo .env y cargarlas de forma segura en Python?”\n\n\n\n\nDefinición: Los prompts no deben solicitar ni exponer datos personales. Es esencial proteger la identidad y privacidad de las personas al interactuar con modelos de lenguaje.\n\n\n❌ Prompt inadecuado:\n\n“Tengo el RUT y dirección de una persona. ¿Puedes decirme su número de teléfono o redes sociales?”\n\n\n✅ Prompt recomendado:\n\n“Explícame cómo anonimizar datos sensibles correctamente.”\n\n\n\n\nDefinición: Los prompts deben promover el razonamiento y aprendizaje, evitando solicitudes que generen respuestas incorrectas o superficiales.\n\n\n❌ Prompt inadecuado:\n\nPaso 1: “Resuelve esta ecuación sin explicaciones: $x^2 + 5x + 6 = 0$.”\nPaso 2: “Solo quiero la respuesta final.”\n\n\n✅ Prompt recomendado:\n\nPaso 1: “Resuelve paso a paso la ecuación $x^2 + 5x + 6 = 0$ usando factorización.”\nPaso 2: “Explica por qué se eligen esos factores y sugiere otro método de resolución.”"
+    "objectID": "usm_dtd/semana_02.html#nuestro-sistema-de-ml-reevaluemos-nuestro-modelo",
+    "href": "usm_dtd/semana_02.html#nuestro-sistema-de-ml-reevaluemos-nuestro-modelo",
+    "title": "Diplomado Transformación Digital",
+    "section": "Nuestro Sistema de ML: Reevaluemos nuestro Modelo",
+    "text": "Nuestro Sistema de ML: Reevaluemos nuestro Modelo\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKollar\n\n\nKonejo\n\n\nKuchillo\n\n\nBisikleta\n\n\n\n\n\nEvaluación\n\nUtilizar una métrica que permita ponerle nota al modelo.\n\n\n\n\n\n1er Modelo: 2 correctas de 4, es decir 50%.\n\n\n\n\n2do Modelo: 4 correctas de 4, es decir 100%."
   },
   {
-    "objectID": "usm_dtd/presentacion.html#section-9",
-    "href": "usm_dtd/presentacion.html#section-9",
-    "title": "No es Magia, es Ciencia",
-    "section": "",
-    "text": "No es Magia, es Ciencia\nActividad"
+    "objectID": "usm_dtd/semana_02.html#problemas-del-aprendizaje",
+    "href": "usm_dtd/semana_02.html#problemas-del-aprendizaje",
+    "title": "Diplomado Transformación Digital",
+    "section": "Problemas del Aprendizaje",
+    "text": "Problemas del Aprendizaje\n\nSupongamos que queremos utilizar nuestro modelo para pronunciar palabras en otro idioma (otro Test Set).\n¿Qué problemas podemos encontrar?\n\n\n\n\nStomach \\(\\rightarrow\\) Stomak\nArcher \\(\\rightarrow\\) Archer\nChurch \\(\\rightarrow\\) Churk\n\nChurch.\n\nArcheology \\(\\rightarrow\\) Archeology\n\nArkeology.\n\nChicago \\(\\rightarrow\\) Chicago\n\nShicago.\n\nMuscle \\(\\rightarrow\\) Muskle\n\nMus_le.\n\nIch mag Schweinefleisch \\(\\rightarrow\\) Ich mag Schweinefleisk.\n\nIj mag Shvaineflaish.\n\n\n\n\n\n\n\n\n\n\nClaramente tenemos un problema. ¿A qué se debe esto?"
   },
   {
-    "objectID": "usm_dtd/presentacion.html#actividad-crea-tu-chatbot",
-    "href": "usm_dtd/presentacion.html#actividad-crea-tu-chatbot",
-    "title": "No es Magia, es Ciencia",
-    "section": "🤖 Actividad: ¡Crea tu chatbot!",
-    "text": "🤖 Actividad: ¡Crea tu chatbot!\n\n🎯 ¿Qué haremos?🛠️ Pasos📦 Entrega🏆 Evaluación\n\n\n\nVamos a crear un chatbot divertido en NUT-AI que responda preguntas sobre un tema.\nEjemplos:\n\n🧙 Un mago que enseña matemáticas\n🧑‍🍳 Un chef que habla como robot\n🦸 Un superhéroe que da consejos de salud\n\n\n\n\n\nJúntate en grupo (2 a 4 personas)\nElige un tema\nEscribe cómo debe hablar el bot\nPrueba hacerle preguntas\nMuestra tu bot a los demás 🎉\n\n\n\n\n\nEl texto que le da personalidad\n5 preguntas + respuestas\nUna imagen del bot funcionando\nUna idea o reflexión (opcional)\n\n\n\n\n\n\n\n✅ Qué se evalúa\nPuntos\n\n\n\n\nCreatividad 🎨\n20\n\n\nClaridad 🧠\n20\n\n\nFunciona bien ⚙️\n20\n\n\nBuenas respuestas 💬\n20\n\n\nPresentación 🎤\n20\n\n\nTotal\n100"
+    "objectID": "usm_dtd/semana_02.html#problemas-del-aprendizaje-definiciones",
+    "href": "usm_dtd/semana_02.html#problemas-del-aprendizaje-definiciones",
+    "title": "Diplomado Transformación Digital",
+    "section": "Problemas del Aprendizaje: Definiciones",
+    "text": "Problemas del Aprendizaje: Definiciones\n\nOverfitting (Sobreajuste)\n\nSe refiere a cuando un modelo no es capaz de generalizar de manera correcta, porque se ajusta demasiado bien (llegando a memorizar) a los datos de entrenamiento. ¿Cómo se puede mitigar este problema?\n\n\n\n\n\n\n\n\n\nSe le tiende a llamar sobreentrenamiento, pero no es del todo correcto para el caso de modelos de Machine Learning. Lo más correcto es que el sobreentrenamiento provoca overfitting.\n\n\n\n\n\nMostrar ejemplos en Pizarra de manera gráfica. Ejemplos típicos de Excel.\n\n\n\nUnderfitting (Subajuste)\n\nSe refiere a cuando un modelo no es capaz de generalizar de manera correcta, pero a diferencia del overfitting no se ha ajustado correctamente a los datos. ¿Cómo se vería el underfitting en nuestro ejemplo?"
   },
   {
-    "objectID": "usm_dtd/presentacion.html#section-10",
-    "href": "usm_dtd/presentacion.html#section-10",
-    "title": "No es Magia, es Ciencia",
-    "section": "",
-    "text": "No es Magia, es Ciencia\nConclusiones"
+    "objectID": "usm_dtd/semana_02.html#etapas-del-modelamiento-crisp-dm",
+    "href": "usm_dtd/semana_02.html#etapas-del-modelamiento-crisp-dm",
+    "title": "Diplomado Transformación Digital",
+    "section": "Etapas del Modelamiento: Crisp-DM",
+    "text": "Etapas del Modelamiento: Crisp-DM"
   },
   {
-    "objectID": "usm_dtd/presentacion.html#conclusiones",
-    "href": "usm_dtd/presentacion.html#conclusiones",
-    "title": "No es Magia, es Ciencia",
-    "section": "💡Conclusiones",
-    "text": "💡Conclusiones\n\n\n🤔 Entender la importancia de los prompts: Un buen diseño de prompts es clave para obtener respuestas más precisas y útiles al interactuar con modelos de lenguaje como ChatGPT.\n🌱 Aplicaciones y uso responsable: Los modelos de lenguaje tienen un gran potencial, pero es crucial utilizarlos de manera ética y responsable.\n🚀 Evolución y futuro de los LLM: La IA conversacional sigue mejorando, y los avances esperados tendrán un gran impacto en cómo interactuamos con la tecnología en el futuro."
+    "objectID": "usm_dtd/semana_02.html#etapas-del-modelamiento-kdd",
+    "href": "usm_dtd/semana_02.html#etapas-del-modelamiento-kdd",
+    "title": "Diplomado Transformación Digital",
+    "section": "Etapas del Modelamiento: KDD",
+    "text": "Etapas del Modelamiento: KDD"
   },
   {
-    "objectID": "usm_dtd/presentacion.html#gracias-por-participar",
-    "href": "usm_dtd/presentacion.html#gracias-por-participar",
-    "title": "No es Magia, es Ciencia",
+    "objectID": "usm_dtd/semana_02.html#etapas-del-modelamiento-semma",
+    "href": "usm_dtd/semana_02.html#etapas-del-modelamiento-semma",
+    "title": "Diplomado Transformación Digital",
+    "section": "Etapas del Modelamiento: Semma",
+    "text": "Etapas del Modelamiento: Semma"
+  },
+  {
+    "objectID": "usm_dtd/semana_02.html#etapas-del-modelamiento-metodología-propia",
+    "href": "usm_dtd/semana_02.html#etapas-del-modelamiento-metodología-propia",
+    "title": "Diplomado Transformación Digital",
+    "section": "Etapas del Modelamiento: Metodología Propia",
+    "text": "Etapas del Modelamiento: Metodología Propia"
+  },
+  {
+    "objectID": "usm_dtd/semana_02.html#preguntas-para-terminar",
+    "href": "usm_dtd/semana_02.html#preguntas-para-terminar",
+    "title": "Diplomado Transformación Digital",
+    "section": "Preguntas para terminar",
+    "text": "Preguntas para terminar\n\n¿Qué tipo de modelo debo implementar si quiero estimar la temperatura del día de mañana?\n¿Qué tipo de modelo debo implementar si es que quiero detectar barrios de acuerdo a su condición socio-economica?\nSi mi modelo aprende a resolver ejercicios de matemática.\n\n¿Cómo se vería el overfitting?\n¿Cómo se vería el underfitting?"
+  },
+  {
+    "objectID": "usm_dtd/semana_02.html#qué-es-scikit-learn",
+    "href": "usm_dtd/semana_02.html#qué-es-scikit-learn",
+    "title": "Diplomado Transformación Digital",
+    "section": "¿Qué es Scikit-Learn?",
+    "text": "¿Qué es Scikit-Learn?\n\n\n\n\n\nScikit-Learn (sklearn para los amigos) es una librería creada por David Cournapeau, como un Google Summer Code Project y luego Matthieu Brucher en su tesis.\nEn 2010 queda a cargo de INRIA y tiene un ciclo de actualización de 3 meses.\nEs la librería más famosa y poderosa para hacer Machine Learning hoy en día.\nSu API es tan famosa, que hoy se sabe que una librería es de calidad si sigue los estándares implementados por Scikit-Learn.\nPara que un algoritmo sea parte de Scikit-Learn debe poseer 3 años desde su publicación y 200+ citaciones mostrando su utilidad y amplio uso (ver acá).\nAdemás es una librería que obliga a que sus algoritmos tengan la capacidad de generalizar."
+  },
+  {
+    "objectID": "usm_dtd/semana_02.html#diseño",
+    "href": "usm_dtd/semana_02.html#diseño",
+    "title": "Diplomado Transformación Digital",
+    "section": "Diseño",
+    "text": "Diseño\n\nScikit-Learn sigue un patrón de Programación Orientada a Objetos (POO) basado en clases.\n\n\n\n\n\n\n\n\nEn programación, una clase es un objeto que internamente contiene estados que pueden ir cambiando en el tiempo.\n\nUna clase posee:\n\nMétodos: Funciones que cambian el comportamiento de la clase.\nAtributos: Datos propios de la clase.\n\n\n\n\n\n\n\nScikit-Learn sigue el siguiente estándar:\n\nTodas las Clases se escriben en CamelCase: Ej: KMeans,LogisticRegression, StandardScaler.\nLas clases en Scikit-Learn pueden representar algoritmos, o etapas de un preprocesamiento.\n\nLos algoritmos se denominan Estimators.\nLos preprocesamientos se denominan Transformers.\n\nLas funciones se escriben como snake_case y permiten realizar algunas operaciones básicas en el proceso de modelamiento. Ej: train_test_split(), cross_val_score().\nNormalmente se utilizan letras mayúsculas para denotar Matrices o DataFrames, mientras que las letras minúsculas denotan Vectores o Series."
+  },
+  {
+    "objectID": "usm_dtd/semana_02.html#estimadores-no-supervisados",
+    "href": "usm_dtd/semana_02.html#estimadores-no-supervisados",
+    "title": "Diplomado Transformación Digital",
+    "section": "Estimadores No supervisados",
+    "text": "Estimadores No supervisados\nfrom sklearn.sub_modulo import Estimator \nmodel = Estimator(hp1=v1, hp2=v2,...) \nmodel.fit(X) \n\ny_pred = model.predict(X) \n\n## Opcionalmente se puede entrenar y predecir a la vez.\nmodel.fit_predict(X) \n\n\nL1. Importar la clase a utilizar.\nL2. Instanciar el modelo y sus hiperparámetros.\nL3. Entrenar o ajustar el modelo (Requiere sólo de X).\nL5. Predecir. Los modelos de clasificación tienen la capacidad de generar probabilidades.\nL7-8. Este tipo de modelos permite entrenar y predecir en un sólo paso."
+  },
+  {
+    "objectID": "usm_dtd/semana_02.html#estimadores-predictivos",
+    "href": "usm_dtd/semana_02.html#estimadores-predictivos",
+    "title": "Diplomado Transformación Digital",
+    "section": "Estimadores Predictivos",
+    "text": "Estimadores Predictivos\nfrom sklearn.sub_modulo import Estimator \nmodel = Estimator(hp1=v1, hp2=v2,...) \nmodel.fit(X_train, y_train) \n\ny_pred = model.predict(X_test) \ny_pred_proba = model.predict_proba(X_test)\n\nmodel.score(X_test,y_test) \n\n\nL1. Importar la clase a utilizar.\nL2. Instanciar el modelo y sus hiperparámetros.\nL3. Entrenar o ajustar el modelo (Ojo, requiere de X e y).\nL5–6. Predecir en datos nuevos. (Algunos modelos pueden predecir probabilidades).\nL8. Evaluar el modelo en los datos nuevos."
+  },
+  {
+    "objectID": "usm_dtd/semana_02.html#output-de-un-modelo",
+    "href": "usm_dtd/semana_02.html#output-de-un-modelo",
+    "title": "Diplomado Transformación Digital",
+    "section": "Output de un Modelo",
+    "text": "Output de un Modelo\n\nLos modelos no entregan directamente un output sino que los dejan almacenados en su interior como un estado.\nLos Estimators tienen dos estados:\n\nNot Fitted: Modelo antes de ser entrenado\nFitted: Una vez que el modelo ya está entrenado. (Después de aplicar .fit())\n\n\n\n\n\n\n\n\n\nMuchos modelos pueden entregar información sólo luego de ser entrenados (su atributo termina con un _).\nEj: model.coef_, model.intercept_.\n\n\n\n\n\n\n\n\n\n\n\nEl modelo es una herramienta a la cual le entregamos datos (Input), y nos devuelve datos (Predicciones)."
+  },
+  {
+    "objectID": "usm_dtd/semana_02.html#transformers",
+    "href": "usm_dtd/semana_02.html#transformers",
+    "title": "Diplomado Transformación Digital",
+    "section": "Transformers",
+    "text": "Transformers\n\n\n\n\n\n\n\n\nA diferencia de los Estimators, los Transformers no son modelos.\nSu input y su output son datos.\nAlgunos Transformers permiten escalar los datos, transformar categorías en números, rellenar valores faltantes. (Veremos más acerca de esto en los Preprocesamiento).\n\n\n\n\n\n\nfrom sklearn.preprocessing import Transformer \ntr = Transformer(hp1=v1, hp2=v2,...) \ntr.fit(X) \n\nX_new = tr.transform(X) \n\n## Opcionalmente\nX_new = tr.fit_transform(X) \n\nL1. Importar la clase a utilizar (en este caso del submodulo preprocessing, aunque pueden haber otros como impute).\nL2. Instanciar el Transformer y sus hiperparámetros.\nL3. Entrenar o ajustar el Transformer.\nL5. Transformar los datos.\nL7-8. Adicionalmente se puede entrenar y transformar los datos en un sólo paso."
+  },
+  {
+    "objectID": "usm_dtd/semana_02.html#pipelines",
+    "href": "usm_dtd/semana_02.html#pipelines",
+    "title": "Diplomado Transformación Digital",
+    "section": "Pipelines",
+    "text": "Pipelines\n\nEn ocasiones un Dataset requiere más de un preprocesamiento.\nEstas Transformaciones normalmente se hacen en serie de manera consecutiva.\n\n\n\n\n\n\n\n\n\n\n\n\n\nEl Estimator es opcional, es decir, el Pipeline puede ser para combinar sólo Transformers o Transformers + un Estimator.\n\n\n\n\n\n\n\n\n\n\nUn Pipeline puede tener sólo un Estimator."
+  },
+  {
+    "objectID": "usm_dtd/semana_02.html#pipelines-código",
+    "href": "usm_dtd/semana_02.html#pipelines-código",
+    "title": "Diplomado Transformación Digital",
+    "section": "Pipelines: Código",
+    "text": "Pipelines: Código\nfrom sklearn.tree import DecisionTreeClassifier \nfrom sklearn.preprocessing import StandardScaler, OneHotEncoder \nfrom sklearn.pipeline import Pipeline \n\npipe = Pipeline(steps=[ \n    (\"ohe\", OneHotEncoder()),\n    (\"sc\", StandardScaler()),\n    (\"model\", DecisionTreeClassifier())\n])\n\npipe.fit(X_train, y_train) \ny_pred = pipe.predict(X_test) \n\npipe.score(X_test, y_test) \n\nL1-2. Importo mi modelo y mis preprocesamientos\nL3. Importo el Pipeline.\nL5-9. Instancio un Pipeline.\nL11. Entreno el Pipeline.\nL12. Predigo utilizando el Pipeline entrenado.\nL14. Evalúo el modelo en datos no vistos."
+  },
+  {
+    "objectID": "usm_dtd/semana_02.html#documentación",
+    "href": "usm_dtd/semana_02.html#documentación",
+    "title": "Diplomado Transformación Digital",
+    "section": "Documentación",
+    "text": "Documentación\n\nProbablemente Scikit-Learn tenga una de las mejores documentaciones existentes.\n\n\nVeamos el caso de la Documentación del One Hot Encoder"
+  },
+  {
+    "objectID": "usm_dtd/semana_02.html#preguntas-para-terminar-1",
+    "href": "usm_dtd/semana_02.html#preguntas-para-terminar-1",
+    "title": "Diplomado Transformación Digital",
+    "section": "Preguntas para terminar",
+    "text": "Preguntas para terminar\n\n¿Cómo se importan las clases en Scikit-Learn?\n¿Cuál es la diferencia entre un Transformer y un Estimator?\n¿Cuándo es buena idea usar un Pipeline?"
+  },
+  {
+    "objectID": "usm_dtd/semana_02.html#gracias-por-participar",
+    "href": "usm_dtd/semana_02.html#gracias-por-participar",
+    "title": "Diplomado Transformación Digital",
     "section": "🎉 ¡Gracias por Participar!",
     "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 Disfrutar del Evento!\n\n\n\n\n🔗 Nuestro Sitio Web: sethnut.com/talks"
   },
@@ -1340,6 +1431,286 @@
     "objectID": "hello-quarto/presentacion_pycon.html#gracias-por-participar",
     "href": "hello-quarto/presentacion_pycon.html#gracias-por-participar",
     "title": "Talks",
+    "section": "🎉 ¡Gracias por Participar!",
+    "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 Disfrutar del Evento!\n\n\n\n\n🔗 Nuestro Sitio Web: sethnut.com/talks"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#a.i.-en-el-día-a-día",
+    "href": "usm_dtd/semana_03.html#a.i.-en-el-día-a-día",
+    "title": "Diplomado Transformación Digital",
+    "section": "🤖 A.I. en el día a día",
+    "text": "🤖 A.I. en el día a día"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#objetivos",
+    "href": "usm_dtd/semana_03.html#objetivos",
+    "title": "Diplomado Transformación Digital",
+    "section": "🎯 Objetivos",
+    "text": "🎯 Objetivos\n\n\n\n\n\n\n\n\nComprender los LLM: Definición, funcionamiento y aplicaciones.\n\nAsistentes Virtuales: Uso, prompts y desafíos comunes.\n\nÉtica: Consideraciones y buenas prácticas."
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#section",
+    "href": "usm_dtd/semana_03.html#section",
+    "title": "Diplomado Transformación Digital",
+    "section": "",
+    "text": "No es Magia, es Ciencia\n¿ Qué son los LLM ?"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#large-language-model",
+    "href": "usm_dtd/semana_03.html#large-language-model",
+    "title": "Diplomado Transformación Digital",
+    "section": "📖 Large language Model",
+    "text": "📖 Large language Model\n\n\n\n\n🧠 Los LLMs generan lenguaje natural tras entrenarse con grandes volúmenes de texto.\n🤖 Se usan en chatbots, asistentes virtuales y tareas de procesamiento de lenguaje."
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#características-llm",
+    "href": "usm_dtd/semana_03.html#características-llm",
+    "title": "Diplomado Transformación Digital",
+    "section": "📖 Características LLM",
+    "text": "📖 Características LLM\n\n\n\n\n📦 Entrenados con billones de parámetros y textos masivos\n🛠️ Adaptables a múltiples tareas (traducción, resumen, Q&A, etc.)\n🌍 Aplicables en dominios diversos: salud, educación, negocios"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#historia-de-los-llm",
+    "href": "usm_dtd/semana_03.html#historia-de-los-llm",
+    "title": "Diplomado Transformación Digital",
+    "section": "⏳ Historia de los LLM",
+    "text": "⏳ Historia de los LLM"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#desafío",
+    "href": "usm_dtd/semana_03.html#desafío",
+    "title": "Diplomado Transformación Digital",
+    "section": "🔥 Desafío",
+    "text": "🔥 Desafío\n\n¿Qué contiene la siguiente cadena de bits?\n00000000 00101010"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#section-1",
+    "href": "usm_dtd/semana_03.html#section-1",
+    "title": "Diplomado Transformación Digital",
+    "section": "",
+    "text": "00000000 00101010\nPodría ser el número 42 escrito en binario…"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#section-2",
+    "href": "usm_dtd/semana_03.html#section-2",
+    "title": "Diplomado Transformación Digital",
+    "section": "",
+    "text": "00000000 00101010\nPodría ser el carácter * en la convención ascii…"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#section-3",
+    "href": "usm_dtd/semana_03.html#section-3",
+    "title": "Diplomado Transformación Digital",
+    "section": "",
+    "text": "00000000 00101010 00000101 00000101 00000101 00000101\nPodría ser parte de un número decimal, 0.4523 o \\(\\pi\\)…"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#section-4",
+    "href": "usm_dtd/semana_03.html#section-4",
+    "title": "Diplomado Transformación Digital",
+    "section": "",
+    "text": "10000101 00100001 01000111 00001000 00101010 01000101 11111111 11001101 01000111 00000101 00000101 01110111\nPodría ser parte de un archivo multimedia (video, imagen, audio, etc.)…"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#representación",
+    "href": "usm_dtd/semana_03.html#representación",
+    "title": "Diplomado Transformación Digital",
+    "section": "Representación",
+    "text": "Representación\n\n\n\n\nTODO en el computador son bits\nrepresentación = bits + contexto"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#cómo-representar-una-palabra",
+    "href": "usm_dtd/semana_03.html#cómo-representar-una-palabra",
+    "title": "Diplomado Transformación Digital",
+    "section": "¿Cómo representar una palabra?",
+    "text": "¿Cómo representar una palabra?"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#representación-textual",
+    "href": "usm_dtd/semana_03.html#representación-textual",
+    "title": "Diplomado Transformación Digital",
+    "section": "📝 Representación textual",
+    "text": "📝 Representación textual\nTranscribir texto es guardar letras como bits.\n\nASCIIUTF-8\n\n\n\n1 byte (8 bits)\n128 caracteres\nNo incluye ñ ni tildes\n\n\n\n\n1 a 4 bytes\nCompatible con ASCII\nIncluye emojis 😁"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#representación-semántica",
+    "href": "usm_dtd/semana_03.html#representación-semántica",
+    "title": "Diplomado Transformación Digital",
+    "section": "🧠 Representación semántica",
+    "text": "🧠 Representación semántica\n\n\n\n\nSemántica significa el sentido o significado de las palabras.\nNecesitamos guardarla como un todo o dividirla en partes con sentido (tokens)."
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#aprendizajes",
+    "href": "usm_dtd/semana_03.html#aprendizajes",
+    "title": "Diplomado Transformación Digital",
+    "section": "💡 Aprendizajes",
+    "text": "💡 Aprendizajes\n\n\nPalabra ≠ Token\nCada token tiene un ID único\n\nEn inglés, 100 tokens ≈ 75 palabras\n\nDos palabras iguales pueden tener tokens distintos, según el contexto"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#diagrama-técnico-de-un-llm",
+    "href": "usm_dtd/semana_03.html#diagrama-técnico-de-un-llm",
+    "title": "Diplomado Transformación Digital",
+    "section": "⚙️ Diagrama técnico de un LLM",
+    "text": "⚙️ Diagrama técnico de un LLM\nDiagrama de funcionamiento de un LLM que se filtró de OpenAI:\n¡¡¡No difundir!!!"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#diagrama-técnico-de-un-llm-1",
+    "href": "usm_dtd/semana_03.html#diagrama-técnico-de-un-llm-1",
+    "title": "Diplomado Transformación Digital",
+    "section": "⚙️ Diagrama técnico de un LLM",
+    "text": "⚙️ Diagrama técnico de un LLM"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#aprendizajes-1",
+    "href": "usm_dtd/semana_03.html#aprendizajes-1",
+    "title": "Diplomado Transformación Digital",
+    "section": "💡 Aprendizajes",
+    "text": "💡 Aprendizajes\n\n\nEl LLM no reflexiona, solo predice el token más probable.\n\nLa predicción es secuencial, token por token.\n\nNo tiene memoria: siempre parte desde cero."
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#section-7",
+    "href": "usm_dtd/semana_03.html#section-7",
+    "title": "Diplomado Transformación Digital",
+    "section": "",
+    "text": "No es Magia, es Ciencia\n¿Qué son los Prompts?"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#asistentes-virtuales-inteligentes",
+    "href": "usm_dtd/semana_03.html#asistentes-virtuales-inteligentes",
+    "title": "Diplomado Transformación Digital",
+    "section": "🤖 Asistentes Virtuales Inteligentes",
+    "text": "🤖 Asistentes Virtuales Inteligentes\n\nLos asistentes virtuales impulsados por IA facilitan la comunicación, automatización y soporte en diversas industrias."
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#asistentes-virtuales-inteligentes-1",
+    "href": "usm_dtd/semana_03.html#asistentes-virtuales-inteligentes-1",
+    "title": "Diplomado Transformación Digital",
+    "section": "🤖 Asistentes Virtuales Inteligentes",
+    "text": "🤖 Asistentes Virtuales Inteligentes\n\n\n\nAsistentes más destacados:\n\nChatGPT (OpenAI)\nGemini (Google DeepMind)\nMeta AI (Meta)\nDeepSeek (DeepSeek)"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#qué-podemos-hacer",
+    "href": "usm_dtd/semana_03.html#qué-podemos-hacer",
+    "title": "Diplomado Transformación Digital",
+    "section": "📱¿Qué podemos hacer?",
+    "text": "📱¿Qué podemos hacer?\n\n\n\n\n\n\n\n\n🎓 Educación: Tutor virtual.\n\n🩺 Salud: Asistencia en consultas.\n\n📝 Contenido: Redacción y resumen.\n\n💻 Software: Generación/corrección código.\n\n💬 Cliente: Respuestas automáticas."
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#prompts-en-chatgpt",
+    "href": "usm_dtd/semana_03.html#prompts-en-chatgpt",
+    "title": "Diplomado Transformación Digital",
+    "section": "📝 Prompts en ChatGPT",
+    "text": "📝 Prompts en ChatGPT\nLos prompts son las instrucciones que se le dan a un modelo de lenguaje, como ChatGPT, para generar una respuesta o realizar una tarea específica. Pueden ser preguntas, frases o directrices que guían el modelo hacia el resultado deseado."
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#prompts-en-chatgpt-1",
+    "href": "usm_dtd/semana_03.html#prompts-en-chatgpt-1",
+    "title": "Diplomado Transformación Digital",
+    "section": "📝 Prompts en ChatGPT",
+    "text": "📝 Prompts en ChatGPT\nPregunta directa: “¿Qué es la inteligencia artificial?”\nInstrucción: “Escribe una historia corta sobre un viaje al espacio.”\nComando: “Genera un código Python para calcular el promedio de una lista.”"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#actividad-probemos-algunos-prompts",
+    "href": "usm_dtd/semana_03.html#actividad-probemos-algunos-prompts",
+    "title": "Diplomado Transformación Digital",
+    "section": "🎯 Actividad: ¡Probemos algunos Prompts!",
+    "text": "🎯 Actividad: ¡Probemos algunos Prompts!\n\n\n\n\n\n\n\n\n\n👩‍💻 Paso 1: Elige un asistente ( ChatGPT, Gemini, Meta AI, DeepSeek )\n📝 Paso 2: Escribe o copia un prompt\n🔍 Paso 3: Observa la respuesta\n🤔 Paso 4: Compara con otros asistentes"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#estructura-de-un-buen-prompts",
+    "href": "usm_dtd/semana_03.html#estructura-de-un-buen-prompts",
+    "title": "Diplomado Transformación Digital",
+    "section": "Estructura de un Buen Prompts",
+    "text": "Estructura de un Buen Prompts"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#estructura-de-un-buen-prompt",
+    "href": "usm_dtd/semana_03.html#estructura-de-un-buen-prompt",
+    "title": "Diplomado Transformación Digital",
+    "section": "🧠 Estructura de un Buen Prompt",
+    "text": "🧠 Estructura de un Buen Prompt\n\n❌ Prompt simple✅ Prompt estructurado✨ ¿Qué lo hace mejor?\n\n\n\nPrompt:\nHaz un código en Python para ordenar una lista.\n\n\n👎 Resultado muy genérico, sin explicación ni opciones personalizadas.\n\n\n\nPrompt:\nEres un profesor de programación enseñando a estudiantes principiantes.  \nTu tarea es crear un ejemplo en Python para ordenar una lista de números.  \nExplica paso a paso el código, usando comentarios.  \nUsa dos métodos: el método `.sort()` y el algoritmo de burbuja.  \nIncluye ejemplos de entrada y salida.  \nEl objetivo es ayudar a comprender el funcionamiento de ambos métodos.\n\n\n👍 El resultado incluye: código claro, explicaciones y enfoque didáctico.\n\n\n\n\n👨‍🏫 Rol: Define que el modelo actúe como profesor\n📌 Tarea: Especifica crear un ejemplo y explicar\n🧩 Detalles: Métodos .sort() y burbuja\n🎓 Contexto: Enseñanza a estudiantes\n📝 Extras: Comentarios y ejemplos de uso"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#técnicas-para-mejorar-los-prompts",
+    "href": "usm_dtd/semana_03.html#técnicas-para-mejorar-los-prompts",
+    "title": "Diplomado Transformación Digital",
+    "section": "♟️Técnicas para Mejorar los Prompts",
+    "text": "♟️Técnicas para Mejorar los Prompts"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#técnicas-para-mejorar-los-prompts-1",
+    "href": "usm_dtd/semana_03.html#técnicas-para-mejorar-los-prompts-1",
+    "title": "Diplomado Transformación Digital",
+    "section": "♟️Técnicas para Mejorar los Prompts",
+    "text": "♟️Técnicas para Mejorar los Prompts\n\nZero-shot♟️ Few-shot♟️ CoT♟️ Chaining\n\n\nDefinición: Se da un prompt sin ejemplos previos, y se espera que el modelo genere una respuesta basada en su conocimiento previo.\n\n\n✨ Ejemplo de prompt:\n\n“¿Qué es la fotosíntesis?”\n\n\n✅ Esperado:\n\n“La fotosíntesis es el proceso por el cual las plantas convierten la luz solar en energía química utilizando dióxido de carbono y agua.”\n\n\n\n\nDefinición: Se proporcionan pocos ejemplos en el prompt para ayudar al modelo a generar una respuesta más precisa.\n\n\n✨ Ejemplo de prompt:\n\n“Traduce las siguientes frases al francés:\n- Hello → Bonjour\n- Thank you → Merci\n- Good morning → ?”\n\n\n✅ Esperado:\n\n“Good morning → Bonjour”\n\n\n\n\nDefinición: Se fomenta el razonamiento paso a paso (Chain-of-Thought ) para obtener respuestas más estructuradas y detalladas.\n\n\n✨ Ejemplo de prompt:\n\n“Si un tren viaja a 80 km/h y recorre 240 km, ¿cuánto tiempo tarda en llegar? Explica tu razonamiento.”\n\n\n✅ Esperado:\n\n“El tren viaja a 80 km/h y debe recorrer 240 km. Para calcular el tiempo, usamos la fórmula:\ntiempo = distancia / velocidad\n240 km ÷ 80 km/h = 3 horas.\nPor lo tanto, el tren tarda 3 horas en llegar.”\n\n\n\n\nDefinición: Se descompone una tarea compleja en múltiples prompts encadenados, donde la salida de un prompt se usa como entrada para el siguiente.\n\n\n✨ Ejemplo de prompt:\n\nPaso 1: “Resume en 3 frases la Revolución Industrial.”\nPaso 2: (Usando la respuesta del primer prompt) “Ahora expande cada frase en un párrafo detallado.”\n\n\n✅ Esperado:\n\nPaso 1: “La Revolución Industrial marcó el inicio de la producción mecanizada, el crecimiento de las ciudades y el avance del transporte.”\nPaso 2: Se genera un desarrollo más detallado de cada punto."
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#section-8",
+    "href": "usm_dtd/semana_03.html#section-8",
+    "title": "Diplomado Transformación Digital",
+    "section": "",
+    "text": "No es Magia, es Ciencia\nUna mirada crítica a los LLMs"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#problemas-comunes-con-los-llm",
+    "href": "usm_dtd/semana_03.html#problemas-comunes-con-los-llm",
+    "title": "Diplomado Transformación Digital",
+    "section": "⚠️ Problemas comunes con los LLM",
+    "text": "⚠️ Problemas comunes con los LLM"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#problemas-comunes-con-los-llm-1",
+    "href": "usm_dtd/semana_03.html#problemas-comunes-con-los-llm-1",
+    "title": "Diplomado Transformación Digital",
+    "section": "⚠️ Problemas Comunes con los LLM",
+    "text": "⚠️ Problemas Comunes con los LLM\n\n\n\n\n\n\n\n\n\n🚨 Error\n💬 Prompt\n❌ Respuesta Incorrecta\n\n\n\n\nInformación Incorrecta\n¿Cuántos continentes hay?\nHay 4 continentes.\n\n\nDatos Obsoletos\n¿Quién es el presidente de Argentina?\nMauricio Macri.\n\n\nRespuesta Ambigua\n¿País más grande?\nPodría ser China o EE.UU.\n\n\nSesgo o Estereotipo\n¿Quién programa mejor?\nLos hombres, por su lógica natural."
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#ética-en-el-uso-de-la-a.i.",
+    "href": "usm_dtd/semana_03.html#ética-en-el-uso-de-la-a.i.",
+    "title": "Diplomado Transformación Digital",
+    "section": "⚖️ Ética en el Uso de la A.I.",
+    "text": "⚖️ Ética en el Uso de la A.I."
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#ejemplos",
+    "href": "usm_dtd/semana_03.html#ejemplos",
+    "title": "Diplomado Transformación Digital",
+    "section": "⚖️ Ejemplos",
+    "text": "⚖️ Ejemplos\n\n⚠️ Credenciales🔒 Privacidad📐 Tareas\n\n\nDefinición: Se debe evitar compartir información sensible como contraseñas, tokens de acceso o datos privados en prompts de IA.\n\n\n❌ Mal prompt:\n\n“Mi API key es 1234-5678, y mi contraseña es mypassword123. ¿Puedes conectarte por mí?”\n\n\n✅ Buen prompt:\n\n“¿Cómo guardar credenciales en un archivo .env y cargarlas de forma segura en Python?”\n\n\n\n\nDefinición: Los prompts no deben solicitar ni exponer datos personales. Es esencial proteger la identidad y privacidad de las personas al interactuar con modelos de lenguaje.\n\n\n❌ Prompt inadecuado:\n\n“Tengo el RUT y dirección de una persona. ¿Puedes decirme su número de teléfono o redes sociales?”\n\n\n✅ Prompt recomendado:\n\n“Explícame cómo anonimizar datos sensibles correctamente.”\n\n\n\n\nDefinición: Los prompts deben promover el razonamiento y aprendizaje, evitando solicitudes que generen respuestas incorrectas o superficiales.\n\n\n❌ Prompt inadecuado:\n\nPaso 1: “Resuelve esta ecuación sin explicaciones: $x^2 + 5x + 6 = 0$.”\nPaso 2: “Solo quiero la respuesta final.”\n\n\n✅ Prompt recomendado:\n\nPaso 1: “Resuelve paso a paso la ecuación $x^2 + 5x + 6 = 0$ usando factorización.”\nPaso 2: “Explica por qué se eligen esos factores y sugiere otro método de resolución.”"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#section-9",
+    "href": "usm_dtd/semana_03.html#section-9",
+    "title": "Diplomado Transformación Digital",
+    "section": "",
+    "text": "No es Magia, es Ciencia\nActividad"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#actividad-crea-tu-chatbot",
+    "href": "usm_dtd/semana_03.html#actividad-crea-tu-chatbot",
+    "title": "Diplomado Transformación Digital",
+    "section": "🤖 Actividad: ¡Crea tu chatbot!",
+    "text": "🤖 Actividad: ¡Crea tu chatbot!\n\n🎯 ¿Qué haremos?🛠️ Pasos📦 Entrega🏆 Evaluación\n\n\n\nVamos a crear un chatbot divertido en NUT-AI que responda preguntas sobre un tema.\nEjemplos:\n\n🧙 Un mago que enseña matemáticas\n🧑‍🍳 Un chef que habla como robot\n🦸 Un superhéroe que da consejos de salud\n\n\n\n\n\nJúntate en grupo (2 a 4 personas)\nElige un tema\nEscribe cómo debe hablar el bot\nPrueba hacerle preguntas\nMuestra tu bot a los demás 🎉\n\n\n\n\n\nEl texto que le da personalidad\n5 preguntas + respuestas\nUna imagen del bot funcionando\nUna idea o reflexión (opcional)\n\n\n\n\n\n\n\n✅ Qué se evalúa\nPuntos\n\n\n\n\nCreatividad 🎨\n20\n\n\nClaridad 🧠\n20\n\n\nFunciona bien ⚙️\n20\n\n\nBuenas respuestas 💬\n20\n\n\nPresentación 🎤\n20\n\n\nTotal\n100"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#section-10",
+    "href": "usm_dtd/semana_03.html#section-10",
+    "title": "Diplomado Transformación Digital",
+    "section": "",
+    "text": "No es Magia, es Ciencia\nConclusiones"
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#conclusiones",
+    "href": "usm_dtd/semana_03.html#conclusiones",
+    "title": "Diplomado Transformación Digital",
+    "section": "💡Conclusiones",
+    "text": "💡Conclusiones\n\n\n🤔 Entender la importancia de los prompts: Un buen diseño de prompts es clave para obtener respuestas más precisas y útiles al interactuar con modelos de lenguaje como ChatGPT.\n🌱 Aplicaciones y uso responsable: Los modelos de lenguaje tienen un gran potencial, pero es crucial utilizarlos de manera ética y responsable.\n🚀 Evolución y futuro de los LLM: La IA conversacional sigue mejorando, y los avances esperados tendrán un gran impacto en cómo interactuamos con la tecnología en el futuro."
+  },
+  {
+    "objectID": "usm_dtd/semana_03.html#gracias-por-participar",
+    "href": "usm_dtd/semana_03.html#gracias-por-participar",
+    "title": "Diplomado Transformación Digital",
     "section": "🎉 ¡Gracias por Participar!",
     "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 Disfrutar del Evento!\n\n\n\n\n🔗 Nuestro Sitio Web: sethnut.com/talks"
   }

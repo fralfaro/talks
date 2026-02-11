@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://falfaro.xyz/talks/usm_dtd/presentacion.html</loc>
-    <lastmod>2026-02-11T00:49:47.864Z</lastmod>
+    <loc>https://falfaro.xyz/talks/usm_dtd/semana_01.html</loc>
+    <lastmod>2026-02-11T14:52:13.094Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/usm_dtd/semana_02.html</loc>
+    <lastmod>2026-02-11T14:52:13.094Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/hello-quarto/presentacion_uah.html</loc>
-    <lastmod>2026-02-11T00:49:47.831Z</lastmod>
+    <lastmod>2026-02-11T14:52:13.021Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/hello-quarto/presentacion.html</loc>
-    <lastmod>2026-02-11T00:49:47.831Z</lastmod>
+    <lastmod>2026-02-11T14:52:13.021Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/index.html</loc>
-    <lastmod>2026-02-11T00:49:47.832Z</lastmod>
+    <lastmod>2026-02-11T14:52:13.022Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/hello-quarto/index.html</loc>
-    <lastmod>2026-02-11T00:49:47.831Z</lastmod>
+    <lastmod>2026-02-11T14:52:13.020Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/hello-quarto/presentacion_pycon.html</loc>
-    <lastmod>2026-02-11T00:49:47.831Z</lastmod>
+    <lastmod>2026-02-11T14:52:13.021Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/usm_dtd/semana_03.html</loc>
+    <lastmod>2026-02-11T14:52:13.094Z</lastmod>
   </url>
 </urlset>
