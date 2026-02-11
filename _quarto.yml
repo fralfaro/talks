@@ -1,0 +1,57 @@
+project:
+  type: website
+
+website:
+  title: "Talks"
+  site-url: https://falfaro.xyz/talks/"
+  favicon: 'images/logo_fam.png'
+  image: 'images/book.png'
+  page-footer:
+    left: "Website creado con [Quarto](https://quarto.org/) por Francisco Alfaro. Licencia: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
+    right:
+      - icon: github
+        href: https://github.com/Seth-Nut
+      - icon: linkedin
+        href: https://www.linkedin.com/company/Seth-Nut/
+      - icon: globe
+        href: https://seth-nut.github.io/website/
+
+  navbar:
+    logo: /images/doberman.png
+    right:
+      - icon: github
+        href: https://github.com/fralfaro/
+      - icon: linkedin
+        href: https://www.linkedin.com/in/faam/
+      - icon: globe
+        href: https://falfaro.xyz/portfolio/
+
+
+lang: es
+
+format:
+  html:
+    smooth-scroll: true
+    theme:
+      - pulse
+      - custom.scss
+    link-external-icon: false
+    link-external-newwindow: true
+    citations-hover: true
+    footnotes-hover: true
+    toc: true
+    code-link: true
+
+
+editor: visual
+
+comments:
+  giscus:
+    repo: Seth-Nut/talks
+
+execute:
+  freeze: true
+
+filters:
+  - webr
+  - pyodide

@@ -1,0 +1,31 @@
+---
+title: "🎉 Presentaciones"
+format:
+  html:
+    toc: false
+---
+
+# Lista de Presentaciones
+
+¡Hola! Aquí tienes una lista de nuestras presentaciones, realizadas con [Quarto](https://quarto.org/), una herramienta poderosa para crear documentos y presentaciones dinámicas en diferentes formatos.
+
+## Diplomados
+
+::: card
+### Diplomado en la Toma de Decisiones Estratégicas (PUCV)
+
+Transforma datos en historias visuales interactivas usando A.I. y herramientas dinámicas.\
+**Presentaciones:**\
+[M2-Semana 01](hello-quarto/presentacion.html) · [M2-Semana 02](hello-quarto/presentacion.html) ·[M2-Semana 03](hello-quarto/presentacion.html) · [M2-Semana 04](hello-quarto/presentacion.html) 
+:::
+
+::: card 
+### Diplomado en Estrategias de Transformación Digital (USM)
+
+Aprende a crear paneles interactivos y visualizaciones narrativas con Shiny.\
+**Presentaciones:**\
+[M3-Semana 01](hello-quarto/presentacion.html) · [M3-Semana 02](hello-quarto/presentacion.html) ·[M3-Semana 03](hello-quarto/presentacion.html)
+:::
+
+
+
