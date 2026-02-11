@@ -1,10 +1,283 @@
 [
   {
-    "objectID": "WebscrappingFrancais.html",
-    "href": "WebscrappingFrancais.html",
-    "title": "Talks",
+    "objectID": "usm_dtd/presentacion.html#a.i.-en-el-día-a-día",
+    "href": "usm_dtd/presentacion.html#a.i.-en-el-día-a-día",
+    "title": "No es Magia, es Ciencia",
+    "section": "🤖 A.I. en el día a día",
+    "text": "🤖 A.I. en el día a día"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#objetivos",
+    "href": "usm_dtd/presentacion.html#objetivos",
+    "title": "No es Magia, es Ciencia",
+    "section": "🎯 Objetivos",
+    "text": "🎯 Objetivos\n\n\n\n\n\n\n\n\nComprender los LLM: Definición, funcionamiento y aplicaciones.\n\nAsistentes Virtuales: Uso, prompts y desafíos comunes.\n\nÉtica: Consideraciones y buenas prácticas."
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#section",
+    "href": "usm_dtd/presentacion.html#section",
+    "title": "No es Magia, es Ciencia",
     "section": "",
-    "text": "import pandas as pd\nfrom time import sleep\nfrom selenium import webdriver\nfrom selenium.webdriver.common.by import By\nfrom selenium.webdriver.common.keys import Keys\nfrom selenium.webdriver import ActionChains\nfrom selenium.webdriver.chrome.service import Service\n\ndef iniciar_chromedriver():\n    service = Service()\n    options = webdriver.ChromeOptions()\n    options.add_argument('start-maximized')\n    options.add_argument(\"--safebrowsing-disable-download-protection\")\n    return webdriver.Chrome(service=service, options=options)\n\ndf_path = \"C:/Users/jmetc/OneDrive/Documents/Prueba/prueba_robot.xlsx\"\n\n# Se ingresa a https://www.immo-data.fr/explorateur/transaction/recherche\nurl = \"https://www.immo-data.fr/explorateur/transaction/recherche\"\ndriver = iniciar_chromedriver()\ndriver.get(url)\nsleep(10)\n\n# Iteramos por todos los valores posibles que encontramos\nindice = 0\ndireccion_list = []\ntipo_edificio_list = []\nprecio_venta_list = []\nprecio_metro_cuadrado_list = []\nnumero_piezas_list = []\nsuperficie_list = []\nsuperficie_terreno_list = []\nfecha_venta_list = []\n\nindice = 0\nquedan_propiedades = True\nwhile indice &lt; 101:\n    indice = indice + 1\n    print(indice)\n\n    base_xpath = f\"/html/body/div[1]/div[1]/div/div[2]/div[2]/div[2]/div[{indice}]\"\n\n    direccion_xpath = base_xpath + \"/div/div[2]/div[1]/div[1]/div/p\"\n    tipo_edificio_xpath = base_xpath + \"/div/div[2]/div[1]/div[1]/p\"\n    precio_venta_xpath = base_xpath + \"/div/div[2]/div[1]/div[2]/p[1]/span\"\n    precio_metro_cuadrado_xpath = base_xpath + \"/div/div[2]/div[1]/div[2]/p[2]/span\"\n    numero_piezas_xpath = base_xpath + \"/div/div[2]/div[2]/div[1]/div/span[1]\"\n    superficie_xpath = base_xpath + \"/div/div[2]/div[2]/div[2]/div/span[1]\"\n    superficie_terreno_xpath = base_xpath + \"/div/div[2]/div[2]/div[3]/div/span[1]\"\n    fecha_venta_xpath = base_xpath + \"/div/div[2]/div[2]/div[4]/div/span[1]/time\"\n\n    try:\n        direccion_list.append(driver.find_element(By.XPATH, direccion_xpath).text)\n    except:\n        direccion_list.append(\"No se encontro la direccion para esta vivienda\")\n\n    try:\n        tipo_edificio_list.append(driver.find_element(By.XPATH, precio_venta_xpath).text)\n    except:\n        tipo_edificio_list.append(\"No se encontro el tipo de vivienda para esta vivienda\")\n\n    try:\n        precio_venta_list.append(driver.find_element(By.XPATH, precio_venta_xpath).text)\n    except:\n        precio_venta_list.append(\"No se encontro el precio de venta para esta vivienda\")\n\n    try:\n        precio_metro_cuadrado_list.append(driver.find_element(By.XPATH, precio_metro_cuadrado_xpath).text)\n    except:\n        precio_metro_cuadrado_list.append(\"No se encontro el precio por metro cuadrado para esta vivienda\")\n\n    try:\n        superficie_list.append(driver.find_element(By.XPATH, superficie_xpath).text)\n    except:\n        superficie_list.append(\"No se encontro la superficie en metros cuadrados para esta vivienda\")\n\n    try:\n        numero_piezas_list.append(driver.find_element(By.XPATH, numero_piezas_xpath).text)\n    except:\n        numero_piezas_list.append(\"No se encontro el numero de piezas para esta vivienda\")\n\n    try:\n        superficie_terreno_list.append(driver.find_element(By.XPATH, superficie_terreno_xpath).text)\n    except:\n        superficie_terreno_list.append(\"No se encontro la superficie del terreno en metros cuadrados para esta vivienda\")\n\n    try:\n        fecha_venta_list.append(driver.find_element(By.XPATH, fecha_venta_xpath).text)\n    except:\n        fecha_venta_list.append(\"No se encontro la fecha de venta para esta vivienda\")\n\n# No quedan mas viviendas en venta en el panel derecho\ncolumns = ['direccion', 'tipo_edificio', 'precio_de_venta', 'precio_metro_cuadrado', 'numero_de_piezas', 'superficie_en_m2', 'superficie_terreno_en_m2', 'fecha_de_venta']\ndf = pd.DataFrame(columns=columns)\n\ndf['direccion'] = direccion_list\ndf['tipo_edificio'] = tipo_edificio_list\ndf['precio_de_venta'] = precio_venta_list\ndf['precio_metro_cuadrado'] = precio_metro_cuadrado_list\ndf['numero_de_piezas'] = numero_piezas_list\ndf['superficie_en_m2'] = superficie_list\ndf['superficie_terreno_en_m2'] = superficie_terreno_list\ndf['fecha_de_venta'] = fecha_venta_list\n\ndf.to_excel(df_path, index=False)\n\nHola"
+    "text": "No es Magia, es Ciencia\n¿ Qué son los LLM ?"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#large-language-model",
+    "href": "usm_dtd/presentacion.html#large-language-model",
+    "title": "No es Magia, es Ciencia",
+    "section": "📖 Large language Model",
+    "text": "📖 Large language Model\n\n\n\n\n🧠 Los LLMs generan lenguaje natural tras entrenarse con grandes volúmenes de texto.\n🤖 Se usan en chatbots, asistentes virtuales y tareas de procesamiento de lenguaje."
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#características-llm",
+    "href": "usm_dtd/presentacion.html#características-llm",
+    "title": "No es Magia, es Ciencia",
+    "section": "📖 Características LLM",
+    "text": "📖 Características LLM\n\n\n\n\n📦 Entrenados con billones de parámetros y textos masivos\n🛠️ Adaptables a múltiples tareas (traducción, resumen, Q&A, etc.)\n🌍 Aplicables en dominios diversos: salud, educación, negocios"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#historia-de-los-llm",
+    "href": "usm_dtd/presentacion.html#historia-de-los-llm",
+    "title": "No es Magia, es Ciencia",
+    "section": "⏳ Historia de los LLM",
+    "text": "⏳ Historia de los LLM"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#desafío",
+    "href": "usm_dtd/presentacion.html#desafío",
+    "title": "No es Magia, es Ciencia",
+    "section": "🔥 Desafío",
+    "text": "🔥 Desafío\n\n¿Qué contiene la siguiente cadena de bits?\n00000000 00101010"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#section-1",
+    "href": "usm_dtd/presentacion.html#section-1",
+    "title": "No es Magia, es Ciencia",
+    "section": "",
+    "text": "00000000 00101010\nPodría ser el número 42 escrito en binario…"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#section-2",
+    "href": "usm_dtd/presentacion.html#section-2",
+    "title": "No es Magia, es Ciencia",
+    "section": "",
+    "text": "00000000 00101010\nPodría ser el carácter * en la convención ascii…"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#section-3",
+    "href": "usm_dtd/presentacion.html#section-3",
+    "title": "No es Magia, es Ciencia",
+    "section": "",
+    "text": "00000000 00101010 00000101 00000101 00000101 00000101\nPodría ser parte de un número decimal, 0.4523 o \\(\\pi\\)…"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#section-4",
+    "href": "usm_dtd/presentacion.html#section-4",
+    "title": "No es Magia, es Ciencia",
+    "section": "",
+    "text": "10000101 00100001 01000111 00001000 00101010 01000101 11111111 11001101 01000111 00000101 00000101 01110111\nPodría ser parte de un archivo multimedia (video, imagen, audio, etc.)…"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#representación",
+    "href": "usm_dtd/presentacion.html#representación",
+    "title": "No es Magia, es Ciencia",
+    "section": "Representación",
+    "text": "Representación\n\n\n\n\nTODO en el computador son bits\nrepresentación = bits + contexto"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#cómo-representar-una-palabra",
+    "href": "usm_dtd/presentacion.html#cómo-representar-una-palabra",
+    "title": "No es Magia, es Ciencia",
+    "section": "¿Cómo representar una palabra?",
+    "text": "¿Cómo representar una palabra?"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#representación-textual",
+    "href": "usm_dtd/presentacion.html#representación-textual",
+    "title": "No es Magia, es Ciencia",
+    "section": "📝 Representación textual",
+    "text": "📝 Representación textual\nTranscribir texto es guardar letras como bits.\n\nASCIIUTF-8\n\n\n\n1 byte (8 bits)\n128 caracteres\nNo incluye ñ ni tildes\n\n\n\n\n1 a 4 bytes\nCompatible con ASCII\nIncluye emojis 😁"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#representación-semántica",
+    "href": "usm_dtd/presentacion.html#representación-semántica",
+    "title": "No es Magia, es Ciencia",
+    "section": "🧠 Representación semántica",
+    "text": "🧠 Representación semántica\n\n\n\n\nSemántica significa el sentido o significado de las palabras.\nNecesitamos guardarla como un todo o dividirla en partes con sentido (tokens)."
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#aprendizajes",
+    "href": "usm_dtd/presentacion.html#aprendizajes",
+    "title": "No es Magia, es Ciencia",
+    "section": "💡 Aprendizajes",
+    "text": "💡 Aprendizajes\n\n\nPalabra ≠ Token\nCada token tiene un ID único\n\nEn inglés, 100 tokens ≈ 75 palabras\n\nDos palabras iguales pueden tener tokens distintos, según el contexto"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#diagrama-técnico-de-un-llm",
+    "href": "usm_dtd/presentacion.html#diagrama-técnico-de-un-llm",
+    "title": "No es Magia, es Ciencia",
+    "section": "⚙️ Diagrama técnico de un LLM",
+    "text": "⚙️ Diagrama técnico de un LLM\nDiagrama de funcionamiento de un LLM que se filtró de OpenAI:\n¡¡¡No difundir!!!"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#diagrama-técnico-de-un-llm-1",
+    "href": "usm_dtd/presentacion.html#diagrama-técnico-de-un-llm-1",
+    "title": "No es Magia, es Ciencia",
+    "section": "⚙️ Diagrama técnico de un LLM",
+    "text": "⚙️ Diagrama técnico de un LLM"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#aprendizajes-1",
+    "href": "usm_dtd/presentacion.html#aprendizajes-1",
+    "title": "No es Magia, es Ciencia",
+    "section": "💡 Aprendizajes",
+    "text": "💡 Aprendizajes\n\n\nEl LLM no reflexiona, solo predice el token más probable.\n\nLa predicción es secuencial, token por token.\n\nNo tiene memoria: siempre parte desde cero."
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#section-7",
+    "href": "usm_dtd/presentacion.html#section-7",
+    "title": "No es Magia, es Ciencia",
+    "section": "",
+    "text": "No es Magia, es Ciencia\n¿Qué son los Prompts?"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#asistentes-virtuales-inteligentes",
+    "href": "usm_dtd/presentacion.html#asistentes-virtuales-inteligentes",
+    "title": "No es Magia, es Ciencia",
+    "section": "🤖 Asistentes Virtuales Inteligentes",
+    "text": "🤖 Asistentes Virtuales Inteligentes\n\nLos asistentes virtuales impulsados por IA facilitan la comunicación, automatización y soporte en diversas industrias."
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#asistentes-virtuales-inteligentes-1",
+    "href": "usm_dtd/presentacion.html#asistentes-virtuales-inteligentes-1",
+    "title": "No es Magia, es Ciencia",
+    "section": "🤖 Asistentes Virtuales Inteligentes",
+    "text": "🤖 Asistentes Virtuales Inteligentes\n\n\n\nAsistentes más destacados:\n\nChatGPT (OpenAI)\nGemini (Google DeepMind)\nMeta AI (Meta)\nDeepSeek (DeepSeek)"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#qué-podemos-hacer",
+    "href": "usm_dtd/presentacion.html#qué-podemos-hacer",
+    "title": "No es Magia, es Ciencia",
+    "section": "📱¿Qué podemos hacer?",
+    "text": "📱¿Qué podemos hacer?\n\n\n\n\n\n\n\n\n🎓 Educación: Tutor virtual.\n\n🩺 Salud: Asistencia en consultas.\n\n📝 Contenido: Redacción y resumen.\n\n💻 Software: Generación/corrección código.\n\n💬 Cliente: Respuestas automáticas."
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#prompts-en-chatgpt",
+    "href": "usm_dtd/presentacion.html#prompts-en-chatgpt",
+    "title": "No es Magia, es Ciencia",
+    "section": "📝 Prompts en ChatGPT",
+    "text": "📝 Prompts en ChatGPT\nLos prompts son las instrucciones que se le dan a un modelo de lenguaje, como ChatGPT, para generar una respuesta o realizar una tarea específica. Pueden ser preguntas, frases o directrices que guían el modelo hacia el resultado deseado."
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#prompts-en-chatgpt-1",
+    "href": "usm_dtd/presentacion.html#prompts-en-chatgpt-1",
+    "title": "No es Magia, es Ciencia",
+    "section": "📝 Prompts en ChatGPT",
+    "text": "📝 Prompts en ChatGPT\nPregunta directa: “¿Qué es la inteligencia artificial?”\nInstrucción: “Escribe una historia corta sobre un viaje al espacio.”\nComando: “Genera un código Python para calcular el promedio de una lista.”"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#actividad-probemos-algunos-prompts",
+    "href": "usm_dtd/presentacion.html#actividad-probemos-algunos-prompts",
+    "title": "No es Magia, es Ciencia",
+    "section": "🎯 Actividad: ¡Probemos algunos Prompts!",
+    "text": "🎯 Actividad: ¡Probemos algunos Prompts!\n\n\n\n\n\n\n\n\n\n👩‍💻 Paso 1: Elige un asistente ( ChatGPT, Gemini, Meta AI, DeepSeek )\n📝 Paso 2: Escribe o copia un prompt\n🔍 Paso 3: Observa la respuesta\n🤔 Paso 4: Compara con otros asistentes"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#estructura-de-un-buen-prompts",
+    "href": "usm_dtd/presentacion.html#estructura-de-un-buen-prompts",
+    "title": "No es Magia, es Ciencia",
+    "section": "Estructura de un Buen Prompts",
+    "text": "Estructura de un Buen Prompts"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#estructura-de-un-buen-prompt",
+    "href": "usm_dtd/presentacion.html#estructura-de-un-buen-prompt",
+    "title": "No es Magia, es Ciencia",
+    "section": "🧠 Estructura de un Buen Prompt",
+    "text": "🧠 Estructura de un Buen Prompt\n\n❌ Prompt simple✅ Prompt estructurado✨ ¿Qué lo hace mejor?\n\n\n\nPrompt:\nHaz un código en Python para ordenar una lista.\n\n\n👎 Resultado muy genérico, sin explicación ni opciones personalizadas.\n\n\n\nPrompt:\nEres un profesor de programación enseñando a estudiantes principiantes.  \nTu tarea es crear un ejemplo en Python para ordenar una lista de números.  \nExplica paso a paso el código, usando comentarios.  \nUsa dos métodos: el método `.sort()` y el algoritmo de burbuja.  \nIncluye ejemplos de entrada y salida.  \nEl objetivo es ayudar a comprender el funcionamiento de ambos métodos.\n\n\n👍 El resultado incluye: código claro, explicaciones y enfoque didáctico.\n\n\n\n\n👨‍🏫 Rol: Define que el modelo actúe como profesor\n📌 Tarea: Especifica crear un ejemplo y explicar\n🧩 Detalles: Métodos .sort() y burbuja\n🎓 Contexto: Enseñanza a estudiantes\n📝 Extras: Comentarios y ejemplos de uso"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#técnicas-para-mejorar-los-prompts",
+    "href": "usm_dtd/presentacion.html#técnicas-para-mejorar-los-prompts",
+    "title": "No es Magia, es Ciencia",
+    "section": "♟️Técnicas para Mejorar los Prompts",
+    "text": "♟️Técnicas para Mejorar los Prompts"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#técnicas-para-mejorar-los-prompts-1",
+    "href": "usm_dtd/presentacion.html#técnicas-para-mejorar-los-prompts-1",
+    "title": "No es Magia, es Ciencia",
+    "section": "♟️Técnicas para Mejorar los Prompts",
+    "text": "♟️Técnicas para Mejorar los Prompts\n\nZero-shot♟️ Few-shot♟️ CoT♟️ Chaining\n\n\nDefinición: Se da un prompt sin ejemplos previos, y se espera que el modelo genere una respuesta basada en su conocimiento previo.\n\n\n✨ Ejemplo de prompt:\n\n“¿Qué es la fotosíntesis?”\n\n\n✅ Esperado:\n\n“La fotosíntesis es el proceso por el cual las plantas convierten la luz solar en energía química utilizando dióxido de carbono y agua.”\n\n\n\n\nDefinición: Se proporcionan pocos ejemplos en el prompt para ayudar al modelo a generar una respuesta más precisa.\n\n\n✨ Ejemplo de prompt:\n\n“Traduce las siguientes frases al francés:\n- Hello → Bonjour\n- Thank you → Merci\n- Good morning → ?”\n\n\n✅ Esperado:\n\n“Good morning → Bonjour”\n\n\n\n\nDefinición: Se fomenta el razonamiento paso a paso (Chain-of-Thought ) para obtener respuestas más estructuradas y detalladas.\n\n\n✨ Ejemplo de prompt:\n\n“Si un tren viaja a 80 km/h y recorre 240 km, ¿cuánto tiempo tarda en llegar? Explica tu razonamiento.”\n\n\n✅ Esperado:\n\n“El tren viaja a 80 km/h y debe recorrer 240 km. Para calcular el tiempo, usamos la fórmula:\ntiempo = distancia / velocidad\n240 km ÷ 80 km/h = 3 horas.\nPor lo tanto, el tren tarda 3 horas en llegar.”\n\n\n\n\nDefinición: Se descompone una tarea compleja en múltiples prompts encadenados, donde la salida de un prompt se usa como entrada para el siguiente.\n\n\n✨ Ejemplo de prompt:\n\nPaso 1: “Resume en 3 frases la Revolución Industrial.”\nPaso 2: (Usando la respuesta del primer prompt) “Ahora expande cada frase en un párrafo detallado.”\n\n\n✅ Esperado:\n\nPaso 1: “La Revolución Industrial marcó el inicio de la producción mecanizada, el crecimiento de las ciudades y el avance del transporte.”\nPaso 2: Se genera un desarrollo más detallado de cada punto."
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#section-8",
+    "href": "usm_dtd/presentacion.html#section-8",
+    "title": "No es Magia, es Ciencia",
+    "section": "",
+    "text": "No es Magia, es Ciencia\nUna mirada crítica a los LLMs"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#problemas-comunes-con-los-llm",
+    "href": "usm_dtd/presentacion.html#problemas-comunes-con-los-llm",
+    "title": "No es Magia, es Ciencia",
+    "section": "⚠️ Problemas comunes con los LLM",
+    "text": "⚠️ Problemas comunes con los LLM"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#problemas-comunes-con-los-llm-1",
+    "href": "usm_dtd/presentacion.html#problemas-comunes-con-los-llm-1",
+    "title": "No es Magia, es Ciencia",
+    "section": "⚠️ Problemas Comunes con los LLM",
+    "text": "⚠️ Problemas Comunes con los LLM\n\n\n\n\n\n\n\n\n\n🚨 Error\n💬 Prompt\n❌ Respuesta Incorrecta\n\n\n\n\nInformación Incorrecta\n¿Cuántos continentes hay?\nHay 4 continentes.\n\n\nDatos Obsoletos\n¿Quién es el presidente de Argentina?\nMauricio Macri.\n\n\nRespuesta Ambigua\n¿País más grande?\nPodría ser China o EE.UU.\n\n\nSesgo o Estereotipo\n¿Quién programa mejor?\nLos hombres, por su lógica natural."
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#ética-en-el-uso-de-la-a.i.",
+    "href": "usm_dtd/presentacion.html#ética-en-el-uso-de-la-a.i.",
+    "title": "No es Magia, es Ciencia",
+    "section": "⚖️ Ética en el Uso de la A.I.",
+    "text": "⚖️ Ética en el Uso de la A.I."
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#ejemplos",
+    "href": "usm_dtd/presentacion.html#ejemplos",
+    "title": "No es Magia, es Ciencia",
+    "section": "⚖️ Ejemplos",
+    "text": "⚖️ Ejemplos\n\n⚠️ Credenciales🔒 Privacidad📐 Tareas\n\n\nDefinición: Se debe evitar compartir información sensible como contraseñas, tokens de acceso o datos privados en prompts de IA.\n\n\n❌ Mal prompt:\n\n“Mi API key es 1234-5678, y mi contraseña es mypassword123. ¿Puedes conectarte por mí?”\n\n\n✅ Buen prompt:\n\n“¿Cómo guardar credenciales en un archivo .env y cargarlas de forma segura en Python?”\n\n\n\n\nDefinición: Los prompts no deben solicitar ni exponer datos personales. Es esencial proteger la identidad y privacidad de las personas al interactuar con modelos de lenguaje.\n\n\n❌ Prompt inadecuado:\n\n“Tengo el RUT y dirección de una persona. ¿Puedes decirme su número de teléfono o redes sociales?”\n\n\n✅ Prompt recomendado:\n\n“Explícame cómo anonimizar datos sensibles correctamente.”\n\n\n\n\nDefinición: Los prompts deben promover el razonamiento y aprendizaje, evitando solicitudes que generen respuestas incorrectas o superficiales.\n\n\n❌ Prompt inadecuado:\n\nPaso 1: “Resuelve esta ecuación sin explicaciones: $x^2 + 5x + 6 = 0$.”\nPaso 2: “Solo quiero la respuesta final.”\n\n\n✅ Prompt recomendado:\n\nPaso 1: “Resuelve paso a paso la ecuación $x^2 + 5x + 6 = 0$ usando factorización.”\nPaso 2: “Explica por qué se eligen esos factores y sugiere otro método de resolución.”"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#section-9",
+    "href": "usm_dtd/presentacion.html#section-9",
+    "title": "No es Magia, es Ciencia",
+    "section": "",
+    "text": "No es Magia, es Ciencia\nActividad"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#actividad-crea-tu-chatbot",
+    "href": "usm_dtd/presentacion.html#actividad-crea-tu-chatbot",
+    "title": "No es Magia, es Ciencia",
+    "section": "🤖 Actividad: ¡Crea tu chatbot!",
+    "text": "🤖 Actividad: ¡Crea tu chatbot!\n\n🎯 ¿Qué haremos?🛠️ Pasos📦 Entrega🏆 Evaluación\n\n\n\nVamos a crear un chatbot divertido en NUT-AI que responda preguntas sobre un tema.\nEjemplos:\n\n🧙 Un mago que enseña matemáticas\n🧑‍🍳 Un chef que habla como robot\n🦸 Un superhéroe que da consejos de salud\n\n\n\n\n\nJúntate en grupo (2 a 4 personas)\nElige un tema\nEscribe cómo debe hablar el bot\nPrueba hacerle preguntas\nMuestra tu bot a los demás 🎉\n\n\n\n\n\nEl texto que le da personalidad\n5 preguntas + respuestas\nUna imagen del bot funcionando\nUna idea o reflexión (opcional)\n\n\n\n\n\n\n\n✅ Qué se evalúa\nPuntos\n\n\n\n\nCreatividad 🎨\n20\n\n\nClaridad 🧠\n20\n\n\nFunciona bien ⚙️\n20\n\n\nBuenas respuestas 💬\n20\n\n\nPresentación 🎤\n20\n\n\nTotal\n100"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#section-10",
+    "href": "usm_dtd/presentacion.html#section-10",
+    "title": "No es Magia, es Ciencia",
+    "section": "",
+    "text": "No es Magia, es Ciencia\nConclusiones"
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#conclusiones",
+    "href": "usm_dtd/presentacion.html#conclusiones",
+    "title": "No es Magia, es Ciencia",
+    "section": "💡Conclusiones",
+    "text": "💡Conclusiones\n\n\n🤔 Entender la importancia de los prompts: Un buen diseño de prompts es clave para obtener respuestas más precisas y útiles al interactuar con modelos de lenguaje como ChatGPT.\n🌱 Aplicaciones y uso responsable: Los modelos de lenguaje tienen un gran potencial, pero es crucial utilizarlos de manera ética y responsable.\n🚀 Evolución y futuro de los LLM: La IA conversacional sigue mejorando, y los avances esperados tendrán un gran impacto en cómo interactuamos con la tecnología en el futuro."
+  },
+  {
+    "objectID": "usm_dtd/presentacion.html#gracias-por-participar",
+    "href": "usm_dtd/presentacion.html#gracias-por-participar",
+    "title": "No es Magia, es Ciencia",
+    "section": "🎉 ¡Gracias por Participar!",
+    "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 Disfrutar del Evento!\n\n\n\n\n🔗 Nuestro Sitio Web: sethnut.com/talks"
   },
   {
     "objectID": "hello-quarto/presentacion_uah.html#hello-quarto-title",
@@ -46,7 +319,7 @@
     "href": "hello-quarto/presentacion_uah.html#por-qué-quarto-1",
     "title": "Talks",
     "section": "¿Por qué Quarto?",
-    "text": "¿Por qué Quarto?\n\n\n\n\n\n\n\n Un solo documento, múltiples formatos: HTML, PDF, presentaciones o sitios web.\n\n\n\n\n\n\n\n Materiales más accesibles y fáciles de usar, con soporte para la enseñanza y la inclusión.\n\n\n\n\n\n\n\n\n\n\n\n\n Fácil de aprender: usa Markdown simple y cuenta con ayudas para empezar rápido.\n\n\n\n\n\n\n\n Flexibilidad total: integra texto, imágenes y código en R, Python, Julia u otros lenguajes."
+    "text": "¿Por qué Quarto?\n\n\n\n\n\n\n\n Un solo documento, múltiples formatos: HTML, PDF, presentaciones o sitios web.\n\n\n\n\n\n\n\n Materiales más accesibles y fáciles de usar, con soporte para la enseñanza y la inclusión.\n\n\n\n\n\n\n\n\n\n\n\n Fácil de aprender: usa Markdown simple y cuenta con ayudas para empezar rápido.\n\n\n\n\n\n\n\n Flexibilidad total: integra texto, imágenes y código en R, Python, Julia u otros lenguajes."
   },
   {
     "objectID": "hello-quarto/presentacion_uah.html#ejemplos",
@@ -158,14 +431,14 @@
     "href": "hello-quarto/presentacion_uah.html#columnas-flexibles",
     "title": "Talks",
     "section": "Columnas Flexibles",
-    "text": "Columnas Flexibles\nAcomoda texto, imágenes o código en columnas de varios tamaños.\n\n\n\nMotor Trend Car Road Tests\nThe data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\n18.000000\n8\n307.000000\n130.000000\n3504\n\n\n15.000000\n8\n350.000000\n165.000000\n3693\n\n\n18.000000\n8\n318.000000\n150.000000\n3436\n\n\n16.000000\n8\n304.000000\n150.000000\n3433\n\n\n17.000000\n8\n302.000000\n140.000000\n3449"
+    "text": "Columnas Flexibles\nAcomoda texto, imágenes o código en columnas de varios tamaños.\n\n\n\nMotor Trend Car Road Tests\nThe data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\n18.000000\n8\n307.000000\n130.000000\n3504\n\n\n15.000000\n8\n350.000000\n165.000000\n3693\n\n\n18.000000\n8\n318.000000\n150.000000\n3436\n\n\n16.000000\n8\n304.000000\n150.000000\n3433\n\n\n17.000000\n8\n302.000000\n140.000000\n3449"
   },
   {
     "objectID": "hello-quarto/presentacion_uah.html#tabsets",
     "href": "hello-quarto/presentacion_uah.html#tabsets",
     "title": "Talks",
     "section": "Tabsets",
-    "text": "Tabsets\nCrea bloques con pestañas que permiten alternar entre distintos contenidos.\n\nPlotData\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nx\ny\n\n\n\n\n0\n-2.000000\n12.000000\n\n\n1\n-1.929293\n11.510050\n\n\n2\n-1.858586\n11.030099\n\n\n3\n-1.787879\n10.560147\n\n\n4\n-1.717172\n10.100194"
+    "text": "Tabsets\nCrea bloques con pestañas que permiten alternar entre distintos contenidos.\n\nPlotData\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nx\ny\n\n\n\n\n0\n-2.000000\n12.000000\n\n\n1\n-1.929293\n11.510050\n\n\n2\n-1.858586\n11.030099\n\n\n3\n-1.787879\n10.560147\n\n\n4\n-1.717172\n10.100194"
   },
   {
     "objectID": "hello-quarto/presentacion_uah.html#gráficos-interactivos",
@@ -207,7 +480,7 @@
     "href": "hello-quarto/presentacion_uah.html#quarto-webr-pyodide",
     "title": "Talks",
     "section": "Quarto WebR + Pyodide",
-    "text": "Quarto WebR + Pyodide\n\n\n\n\nWebR: Ejecuta código R en el navegador, sin necesidad de instalación.\n# To install WebR in your environment\nremotes::install_github(\"attiyap/WebR\")\nPyodide: Lo mismo, pero para Python.\n# To install Pyodide\npip install pyodide\n\n\n\n\n\n\nWebR and Pyodide run code directly in the browser.\nNo setup, no installs — just share and run.\nPerfect for teaching, demos, and interactive content."
+    "text": "Quarto WebR + Pyodide\n\n\n\n\nWebR: Ejecuta código R en el navegador, sin necesidad de instalación.\n# To install WebR in your environment\nremotes::install_github(\"attiyap/WebR\")\nPyodide: Lo mismo, pero para Python.\n# To install Pyodide\npip install pyodide\n\n\n\n\n\nWebR and Pyodide run code directly in the browser.\nNo setup, no installs — just share and run.\nPerfect for teaching, demos, and interactive content."
   },
   {
     "objectID": "hello-quarto/presentacion_uah.html#ejemplo-1",
@@ -235,7 +508,7 @@
     "href": "hello-quarto/presentacion_uah.html#quarto-shinylive",
     "title": "Talks",
     "section": "Quarto Shinylive",
-    "text": "Quarto Shinylive\n\n\n\n\nDespliega aplicaciones Shiny que se ejecutan 100% en el navegador — con Python y R.\n\nSin servidores. Sin configuraciones. Solo escribe código y ejecútalo.\n\n\n\n\n\n\n\n\n\nSigue en tu presentación.\nNo pierdas el ritmo 🎯"
+    "text": "Quarto Shinylive\n\n\n\n\nDespliega aplicaciones Shiny que se ejecutan 100% en el navegador — con Python y R.\n\nSin servidores. Sin configuraciones. Solo escribe código y ejecútalo.\n\n\n\n\n\n\n\n\nSigue en tu presentación.\nNo pierdas el ritmo 🎯"
   },
   {
     "objectID": "hello-quarto/presentacion_uah.html#ejemplo-3",
@@ -249,21 +522,21 @@
     "href": "hello-quarto/presentacion_uah.html#conclusiones",
     "title": "Talks",
     "section": "Conclusiones",
-    "text": "Conclusiones\n\n\n\n\n\n\n\nCompartir: Un mismo .qmd genera HTML, PDF, slides o sitios web, pasando de lo estático a lo interactivo.\n\n\n\n\n\n\n\n\nColaborar: Con un archivo sencillo ya se puede crear y publicar material reproducible, iniciando el trabajo en equipo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnseñar: Sus features integran texto, código y visualizaciones, mejorando la enseñanza con recursos dinámicos.\n\n\n\n\n\n\n\n\nReimaginar: Tecnologías como WebR, Pyodide o Shiny abren nuevas formas de aprender e innovar en educación."
+    "text": "Conclusiones\n\n\n\n\n\n\n\nCompartir: Un mismo .qmd genera HTML, PDF, slides o sitios web, pasando de lo estático a lo interactivo.\n\n\n\n\n\n\n\n\nColaborar: Con un archivo sencillo ya se puede crear y publicar material reproducible, iniciando el trabajo en equipo.\n\n\n\n\n\n\n\n\n\n\n\n\nEnseñar: Sus features integran texto, código y visualizaciones, mejorando la enseñanza con recursos dinámicos.\n\n\n\n\n\n\n\n\nReimaginar: Tecnologías como WebR, Pyodide o Shiny abren nuevas formas de aprender e innovar en educación."
   },
   {
     "objectID": "hello-quarto/presentacion_uah.html#referencias-y-recursos",
     "href": "hello-quarto/presentacion_uah.html#referencias-y-recursos",
     "title": "Talks",
     "section": "Referencias y Recursos",
-    "text": "Referencias y Recursos\n\n\n\n\n\n\n\nDocumentación oficial\n🔗 quarto.org\nGuías y ejemplos prácticos para comenzar de inmediato.\n\n\n\n\n\n\n\n\nAprendizaje en video\n🔗 Crash Course en YouTube\nIntroducción práctica a Quarto y sus distintos usos.\n\n\n\n\n\n\n\n\n\n\n\n\n\nRecursos de la comunidad\n🔗 Mine Cetinkaya-Rundel\nCursos, libros y presentaciones en Quarto en GitHub.\n\n\n\n\n\n\n\n\nAplicaciones en educación\n🔗 sethnut.com/resources\nOlimpiada Matemática, Verano Matemático, EMMA y más!"
+    "text": "Referencias y Recursos\n\n\n\n\n\n\n\nDocumentación oficial\n🔗 quarto.org\nGuías y ejemplos prácticos para comenzar de inmediato.\n\n\n\n\n\n\n\n\nAprendizaje en video\n🔗 Crash Course en YouTube\nIntroducción práctica a Quarto y sus distintos usos.\n\n\n\n\n\n\n\n\n\n\n\n\nRecursos de la comunidad\n🔗 Mine Cetinkaya-Rundel\nCursos, libros y presentaciones en Quarto en GitHub.\n\n\n\n\n\n\n\n\nAplicaciones en educación\n🔗 sethnut.com/resources\nOlimpiada Matemática, Verano Matemático, EMMA y más!"
   },
   {
     "objectID": "hello-quarto/presentacion_uah.html#gracias-por-participar",
     "href": "hello-quarto/presentacion_uah.html#gracias-por-participar",
     "title": "Talks",
     "section": "🎉 ¡Gracias por Participar!",
-    "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 Disfrutar del Evento!\n\n\n\n\n\n🔗 Nuestro Sitio Web: sethnut.com/talks"
+    "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 Disfrutar del Evento!\n\n\n\n\n🔗 Nuestro Sitio Web: sethnut.com/talks"
   },
   {
     "objectID": "hello-quarto/presentacion.html#hello-quarto-title",
@@ -305,7 +578,7 @@
     "href": "hello-quarto/presentacion.html#por-qué-quarto-1",
     "title": "Talks",
     "section": "¿Por qué Quarto?",
-    "text": "¿Por qué Quarto?\n\n\n\n\n\n\n\n Un solo documento, múltiples formatos: HTML, PDF, presentaciones o sitios web.\n\n\n\n\n\n\n\n Materiales más accesibles y fáciles de usar, con soporte para la enseñanza y la inclusión.\n\n\n\n\n\n\n\n\n\n\n\n\n Fácil de aprender: usa Markdown simple y cuenta con ayudas para empezar rápido.\n\n\n\n\n\n\n\n Flexibilidad total: integra texto, imágenes y código en R, Python, Julia u otros lenguajes."
+    "text": "¿Por qué Quarto?\n\n\n\n\n\n\n\n Un solo documento, múltiples formatos: HTML, PDF, presentaciones o sitios web.\n\n\n\n\n\n\n\n Materiales más accesibles y fáciles de usar, con soporte para la enseñanza y la inclusión.\n\n\n\n\n\n\n\n\n\n\n\n Fácil de aprender: usa Markdown simple y cuenta con ayudas para empezar rápido.\n\n\n\n\n\n\n\n Flexibilidad total: integra texto, imágenes y código en R, Python, Julia u otros lenguajes."
   },
   {
     "objectID": "hello-quarto/presentacion.html#ejemplos",
@@ -417,14 +690,14 @@
     "href": "hello-quarto/presentacion.html#columnas-flexibles",
     "title": "Talks",
     "section": "Columnas Flexibles",
-    "text": "Columnas Flexibles\nAcomoda texto, imágenes o código en columnas de varios tamaños.\n\n\n\nMotor Trend Car Road Tests\nThe data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.\n\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\n18.000000\n8\n307.000000\n130.000000\n3504\n\n\n15.000000\n8\n350.000000\n165.000000\n3693\n\n\n18.000000\n8\n318.000000\n150.000000\n3436\n\n\n16.000000\n8\n304.000000\n150.000000\n3433\n\n\n17.000000\n8\n302.000000\n140.000000\n3449"
+    "text": "Columnas Flexibles\nAcomoda texto, imágenes o código en columnas de varios tamaños.\n\n\n\nMotor Trend Car Road Tests\nThe data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles.\n\n\n\n\n\n\n\n\n\n\nmpg\ncyl\ndisp\nhp\nwt\n\n\n\n\n18.000000\n8\n307.000000\n130.000000\n3504\n\n\n15.000000\n8\n350.000000\n165.000000\n3693\n\n\n18.000000\n8\n318.000000\n150.000000\n3436\n\n\n16.000000\n8\n304.000000\n150.000000\n3433\n\n\n17.000000\n8\n302.000000\n140.000000\n3449"
   },
   {
     "objectID": "hello-quarto/presentacion.html#tabsets",
     "href": "hello-quarto/presentacion.html#tabsets",
     "title": "Talks",
     "section": "Tabsets",
-    "text": "Tabsets\nCrea bloques con pestañas que permiten alternar entre distintos contenidos.\n\nPlotData\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nx\ny\n\n\n\n\n0\n-2.000000\n12.000000\n\n\n1\n-1.929293\n11.510050\n\n\n2\n-1.858586\n11.030099\n\n\n3\n-1.787879\n10.560147\n\n\n4\n-1.717172\n10.100194"
+    "text": "Tabsets\nCrea bloques con pestañas que permiten alternar entre distintos contenidos.\n\nPlotData\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nx\ny\n\n\n\n\n0\n-2.000000\n12.000000\n\n\n1\n-1.929293\n11.510050\n\n\n2\n-1.858586\n11.030099\n\n\n3\n-1.787879\n10.560147\n\n\n4\n-1.717172\n10.100194"
   },
   {
     "objectID": "hello-quarto/presentacion.html#gráficos-interactivos",
@@ -466,7 +739,7 @@
     "href": "hello-quarto/presentacion.html#quarto-webr-pyodide",
     "title": "Talks",
     "section": "Quarto WebR + Pyodide",
-    "text": "Quarto WebR + Pyodide\n\n\n\n\nWebR: Ejecuta código R en el navegador, sin necesidad de instalación.\n# To install WebR in your environment\nremotes::install_github(\"attiyap/WebR\")\nPyodide: Lo mismo, pero para Python.\n# To install Pyodide\npip install pyodide\n\n\n\n\n\n\nWebR and Pyodide run code directly in the browser.\nNo setup, no installs — just share and run.\nPerfect for teaching, demos, and interactive content."
+    "text": "Quarto WebR + Pyodide\n\n\n\n\nWebR: Ejecuta código R en el navegador, sin necesidad de instalación.\n# To install WebR in your environment\nremotes::install_github(\"attiyap/WebR\")\nPyodide: Lo mismo, pero para Python.\n# To install Pyodide\npip install pyodide\n\n\n\n\n\nWebR and Pyodide run code directly in the browser.\nNo setup, no installs — just share and run.\nPerfect for teaching, demos, and interactive content."
   },
   {
     "objectID": "hello-quarto/presentacion.html#ejemplo-1",
@@ -494,7 +767,7 @@
     "href": "hello-quarto/presentacion.html#quarto-shinylive",
     "title": "Talks",
     "section": "Quarto Shinylive",
-    "text": "Quarto Shinylive\n\n\n\n\nDespliega aplicaciones Shiny que se ejecutan 100% en el navegador — con Python y R.\n\nSin servidores. Sin configuraciones. Solo escribe código y ejecútalo.\n\n\n\n\n\n\n\n\n\nSigue en tu presentación.\nNo pierdas el ritmo 🎯"
+    "text": "Quarto Shinylive\n\n\n\n\nDespliega aplicaciones Shiny que se ejecutan 100% en el navegador — con Python y R.\n\nSin servidores. Sin configuraciones. Solo escribe código y ejecútalo.\n\n\n\n\n\n\n\n\nSigue en tu presentación.\nNo pierdas el ritmo 🎯"
   },
   {
     "objectID": "hello-quarto/presentacion.html#ejemplo-3",
@@ -508,21 +781,35 @@
     "href": "hello-quarto/presentacion.html#conclusiones",
     "title": "Talks",
     "section": "Conclusiones",
-    "text": "Conclusiones\n\n\n\n\n\n\n\nCompartir: Un mismo .qmd genera HTML, PDF, slides o sitios web, pasando de lo estático a lo interactivo.\n\n\n\n\n\n\n\n\nColaborar: Con un archivo sencillo ya se puede crear y publicar material reproducible, iniciando el trabajo en equipo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnseñar: Sus features integran texto, código y visualizaciones, mejorando la enseñanza con recursos dinámicos.\n\n\n\n\n\n\n\n\nReimaginar: Tecnologías como WebR, Pyodide o Shiny abren nuevas formas de aprender e innovar en educación."
+    "text": "Conclusiones\n\n\n\n\n\n\n\nCompartir: Un mismo .qmd genera HTML, PDF, slides o sitios web, pasando de lo estático a lo interactivo.\n\n\n\n\n\n\n\n\nColaborar: Con un archivo sencillo ya se puede crear y publicar material reproducible, iniciando el trabajo en equipo.\n\n\n\n\n\n\n\n\n\n\n\n\nEnseñar: Sus features integran texto, código y visualizaciones, mejorando la enseñanza con recursos dinámicos.\n\n\n\n\n\n\n\n\nReimaginar: Tecnologías como WebR, Pyodide o Shiny abren nuevas formas de aprender e innovar en educación."
   },
   {
     "objectID": "hello-quarto/presentacion.html#referencias-y-recursos",
     "href": "hello-quarto/presentacion.html#referencias-y-recursos",
     "title": "Talks",
     "section": "Referencias y Recursos",
-    "text": "Referencias y Recursos\n\n\n\n\n\n\n\nDocumentación oficial\n🔗 quarto.org\nGuías y ejemplos prácticos para comenzar de inmediato.\n\n\n\n\n\n\n\n\nAprendizaje en video\n🔗 Crash Course en YouTube\nIntroducción práctica a Quarto y sus distintos usos.\n\n\n\n\n\n\n\n\n\n\n\n\n\nRecursos de la comunidad\n🔗 Mine Cetinkaya-Rundel\nCursos, libros y presentaciones en Quarto en GitHub.\n\n\n\n\n\n\n\n\nAplicaciones en educación\n🔗 sethnut.com/resources\nOlimpiada Matemática, Verano Matemático, EMMA y más!"
+    "text": "Referencias y Recursos\n\n\n\n\n\n\n\nDocumentación oficial\n🔗 quarto.org\nGuías y ejemplos prácticos para comenzar de inmediato.\n\n\n\n\n\n\n\n\nAprendizaje en video\n🔗 Crash Course en YouTube\nIntroducción práctica a Quarto y sus distintos usos.\n\n\n\n\n\n\n\n\n\n\n\n\nRecursos de la comunidad\n🔗 Mine Cetinkaya-Rundel\nCursos, libros y presentaciones en Quarto en GitHub.\n\n\n\n\n\n\n\n\nAplicaciones en educación\n🔗 sethnut.com/resources\nOlimpiada Matemática, Verano Matemático, EMMA y más!"
   },
   {
     "objectID": "hello-quarto/presentacion.html#gracias-por-participar",
     "href": "hello-quarto/presentacion.html#gracias-por-participar",
     "title": "Talks",
     "section": "🎉 ¡Gracias por Participar!",
-    "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 Disfrutar del Evento!\n\n\n\n\n\n🔗 Nuestro Sitio Web: sethnut.com/talks"
+    "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 Disfrutar del Evento!\n\n\n\n\n🔗 Nuestro Sitio Web: sethnut.com/talks"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "🎉 Presentaciones",
+    "section": "",
+    "text": "¡Hola! Aquí tienes una lista de nuestras presentaciones, realizadas con Quarto, una herramienta poderosa para crear documentos y presentaciones dinámicas en diferentes formatos.\n\n\n\n\nTransforma datos en historias visuales interactivas usando A.I. y herramientas dinámicas.\nPresentaciones:\nM2-Semana 01 · M2-Semana 02 ·M2-Semana 03 · M2-Semana 04\n\n\n\nAprende a crear paneles interactivos y visualizaciones narrativas con Shiny.\nPresentaciones:\nM3-Semana 01 · M3-Semana 02 ·M3-Semana 03"
+  },
+  {
+    "objectID": "index.html#diplomados",
+    "href": "index.html#diplomados",
+    "title": "🎉 Presentaciones",
+    "section": "",
+    "text": "Transforma datos en historias visuales interactivas usando A.I. y herramientas dinámicas.\nPresentaciones:\nM2-Semana 01 · M2-Semana 02 ·M2-Semana 03 · M2-Semana 04\n\n\n\nAprende a crear paneles interactivos y visualizaciones narrativas con Shiny.\nPresentaciones:\nM3-Semana 01 · M3-Semana 02 ·M3-Semana 03"
   },
   {
     "objectID": "hello-quarto/index.html#hello-quarto-title",
@@ -613,7 +900,7 @@
     "href": "hello-quarto/index.html#quarto-highlights",
     "title": "Talks",
     "section": "Quarto highlights",
-    "text": "Quarto highlights\n\n\n\n\n\n\n Consistent implementation of attractive and handy features across outputs: tabsets, code-folding, syntax highlighting, etc.\n\n\n\n\n\n\n\n More accessible defaults as well as better support for accessibility\n\n\n\n\n\n\n\n\n\n\n\n\n Guardrails, particularly helpful for new learners: YAML completion, informative syntax errors, etc.\n\n\n\n\n\n\n\n Support for other languages like Python, Julia, Observable, and more via Jupyter engine for executable code chunks.\n\n\n\n\n\n\n\nSome highlights of these improvements include\n–&gt; consistent implementation of attractive and handy features across all outputs, like tabsets, code-folding, and syntax highlighting,\n–&gt; more accessible defaults as well as better support for creating accessible documents,\n–&gt; guardrails that are particularly helpful for new learners, like YAML completion and informative syntax errors,\n–&gt; and perhaps most excitingly for those who are not coming from the R ecosystem, Quarto offers support for other languages like Python, Julia, Observable, and more via the Jupyter engine for executable code chunks. And it’s designed to be expandable to more engines and languages, even those that might not exist today.\n[pause] So by now I’m assuming many of you have already started playing with Quarto, or you’re waiting for me to do that. So, let’s dive in and see what all the Quarto fuss is about!"
+    "text": "Quarto highlights\n\n\n\n\n\n\n Consistent implementation of attractive and handy features across outputs: tabsets, code-folding, syntax highlighting, etc.\n\n\n\n\n\n\n\n More accessible defaults as well as better support for accessibility\n\n\n\n\n\n\n\n\n\n\n\n Guardrails, particularly helpful for new learners: YAML completion, informative syntax errors, etc.\n\n\n\n\n\n\n\n Support for other languages like Python, Julia, Observable, and more via Jupyter engine for executable code chunks.\n\n\n\n\n\n\nSome highlights of these improvements include\n–&gt; consistent implementation of attractive and handy features across all outputs, like tabsets, code-folding, and syntax highlighting,\n–&gt; more accessible defaults as well as better support for creating accessible documents,\n–&gt; guardrails that are particularly helpful for new learners, like YAML completion and informative syntax errors,\n–&gt; and perhaps most excitingly for those who are not coming from the R ecosystem, Quarto offers support for other languages like Python, Julia, Observable, and more via the Jupyter engine for executable code chunks. And it’s designed to be expandable to more engines and languages, even those that might not exist today.\n[pause] So by now I’m assuming many of you have already started playing with Quarto, or you’re waiting for me to do that. So, let’s dive in and see what all the Quarto fuss is about!"
   },
   {
     "objectID": "hello-quarto/index.html#demo-share",
@@ -634,7 +921,7 @@
     "href": "hello-quarto/index.html#quarto-makes-moving-between-formats-straightforward",
     "title": "Talks",
     "section": "Quarto makes moving between formats straightforward",
-    "text": "Quarto makes moving between formats straightforward\n\n\n\nDocument\n\n lesson-1.qmd\n\ntitle: \"Lesson 1\"\nformat: html\n\n\n\nPresentation\n\n lesson-1.qmd\n\ntitle: \"Lesson 1\"\nformat: revealjs\n\n\n\nWebsite\n\n _quarto.yml\n\nproject:\n  type: website\n\nwebsite: \n  navbar: \n    left:\n      - lesson-1.qmd\n\n\n\n\nWhat did spark my interest was how how straightforward it is with Quarto to move between output formats.\nAs an educator, two things are of utmost importance to me about the tools I use to create my materials: reproducibility and ease of transition between output formats, like documents to slides to websites to books.\nOver the last year of using Quarto for pretty much everything, I’ve felt like I’ve finally found the tool that lets me go from one output type to the other with minimal, if any, futzing around with my source code beyond the yaml. For example, here are common things I produce\n–&gt; a lesson in document form  –&gt; the same content in presentation form  –&gt; the same content on a page in a website,\nand you can see that all that needed to change going between these formats is a few lines in the yaml. Nothing in the content part of my document. No slide breaks to remove, no citation style to change, no headings to re-level. This ease of transition has freed up time to focus my time on content, and that, folks, is the dream!"
+    "text": "Quarto makes moving between formats straightforward\n\n\n\nDocument\n\n lesson-1.qmd\n\ntitle: \"Lesson 1\"\nformat: html\n\n\n\nPresentation\n\n lesson-1.qmd\n\ntitle: \"Lesson 1\"\nformat: revealjs\n\n\n\nWebsite\n\n _quarto.yml\n\nproject:\n  type: website\n\nwebsite: \n  navbar: \n    left:\n      - lesson-1.qmd\n\n\n\nWhat did spark my interest was how how straightforward it is with Quarto to move between output formats.\nAs an educator, two things are of utmost importance to me about the tools I use to create my materials: reproducibility and ease of transition between output formats, like documents to slides to websites to books.\nOver the last year of using Quarto for pretty much everything, I’ve felt like I’ve finally found the tool that lets me go from one output type to the other with minimal, if any, futzing around with my source code beyond the yaml. For example, here are common things I produce\n–&gt; a lesson in document form  –&gt; the same content in presentation form  –&gt; the same content on a page in a website,\nand you can see that all that needed to change going between these formats is a few lines in the yaml. Nothing in the content part of my document. No slide breaks to remove, no citation style to change, no headings to re-level. This ease of transition has freed up time to focus my time on content, and that, folks, is the dream!"
   },
   {
     "objectID": "hello-quarto/index.html#quarto-facilitates-open-sharing",
@@ -683,7 +970,7 @@
     "href": "hello-quarto/index.html#nasa-openscapes",
     "title": "Talks",
     "section": "",
-    "text": "Develop a mentor community across NASA Earth science data centers   Co-create and teach common tutorials  to support researchers as they migrate analytical workflows to the Cloud\n\n\n\n\n\n\n\n\n\nMy partner Erin had 10 years of experience working with the NASA Earthdata community and she brought NASA and Openscapes together in a 3 year project to help this transition.\nOur focus is in developing a mentor community across those 12 data centers to co-create and teach common tutorials with NASA Earthdata Cloud.\nSo let me just stop here and say this is big project.\nAnd, it was really intimidating to me. NASA is an org I’ve looked up to my whole life, and I wasn’t familiar with the types and size of Earthdata, types of research questions, or cloud infrastructure\n&lt;&gt; And an additional intimidating thing to me -"
+    "text": "Develop a mentor community across NASA Earth science data centers   Co-create and teach common tutorials  to support researchers as they migrate analytical workflows to the Cloud\n\n\n\n\n\n\n\n\nMy partner Erin had 10 years of experience working with the NASA Earthdata community and she brought NASA and Openscapes together in a 3 year project to help this transition.\nOur focus is in developing a mentor community across those 12 data centers to co-create and teach common tutorials with NASA Earthdata Cloud.\nSo let me just stop here and say this is big project.\nAnd, it was really intimidating to me. NASA is an org I’ve looked up to my whole life, and I wasn’t familiar with the types and size of Earthdata, types of research questions, or cloud infrastructure\n&lt;&gt; And an additional intimidating thing to me -"
   },
   {
     "objectID": "hello-quarto/index.html#many-use-python",
@@ -725,7 +1012,7 @@
     "href": "hello-quarto/index.html#quarto-enables-contributing-from-our-current-tools",
     "title": "Talks",
     "section": "Quarto enables contributing from our current tools",
-    "text": "Quarto enables contributing from our current tools\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nwe’re all able to contribute from whatever tool we’re already comfortable with. In our group some use RStudio, some use JupyterLab some VS Code, some directly edit documents on GitHub.\nAnd this was important because of all the new things we were learning together, we didn’t also need people to shift their software tools.\ntranstion: Let me show you how to use Quarto with Jupyter with ipynb notebooks"
+    "text": "Quarto enables contributing from our current tools\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nwe’re all able to contribute from whatever tool we’re already comfortable with. In our group some use RStudio, some use JupyterLab some VS Code, some directly edit documents on GitHub.\nAnd this was important because of all the new things we were learning together, we didn’t also need people to shift their software tools.\ntranstion: Let me show you how to use Quarto with Jupyter with ipynb notebooks"
   },
   {
     "objectID": "hello-quarto/index.html#demo-collaborate",
@@ -739,14 +1026,14 @@
     "href": "hello-quarto/index.html#holland-stam-thesis-1",
     "title": "Talks",
     "section": "",
-    "text": "QuantifyingArt HistoricalNarratives\n\n\n\nHolland Stam\n\nArt History + Visual and Media Studies\nClass of 2022\nDuke University\n\n\n\n\n\n\n\n\n\n\nLast semester I had an art history student, Holland Stam, working on a pretty quantitative research project. Her thesis explored the representation of artists from different genders and ethinicities in foundational art history books and how this representation has changed, if at all, through editions. If you’ve ever taken an art history course you might be familiar with them: Garner’s Art Through The Ages and Janson’s History of Art. She meticulously collected data from numerous editions of each of the textbooks and measured, page by page, how much space each featured artwork was given and joined that with demographic information on the artists. When I met Holland in my regression course she had only one semester of data science as a background, where she learned R Markdown, and then she started using Quarto as part of coursework in my class. In both classes her experience with computational documents was limited to a single document per assignment, writing a bit of code to analyze data then writing some text to interpret findings. In a sense, this is exactly what her thesis entailed as well, but of course there was more. Multiple chapters, millions of citations in a very specific style that art historians use, captioned figures and tables, and not having to rerun the whole thesis code with each minor edit. With a bit of Googling and a bit of my help, she pretty quickly figured out how to bring chapters of her thesis written in Quarto together with a yaml file, and voiola! She had a thesis written in Quarto. Sure, this took a bit of trial and error and at times frustration, but the fact that she could caption her figures while creating them with code and insert citations without manual text styling, she was sold! It is always so heartwarming to see your students push what you’re teaching them and use them to solve their problems, it’s especially heartening when this happens with a new thing you’re teaching for the first time while the thing is still in active development!"
+    "text": "QuantifyingArt HistoricalNarratives\n\n\n\nHolland Stam\n\nArt History + Visual and Media Studies\nClass of 2022\nDuke University\n\n\n\n\n\n\n\n\n\nLast semester I had an art history student, Holland Stam, working on a pretty quantitative research project. Her thesis explored the representation of artists from different genders and ethinicities in foundational art history books and how this representation has changed, if at all, through editions. If you’ve ever taken an art history course you might be familiar with them: Garner’s Art Through The Ages and Janson’s History of Art. She meticulously collected data from numerous editions of each of the textbooks and measured, page by page, how much space each featured artwork was given and joined that with demographic information on the artists. When I met Holland in my regression course she had only one semester of data science as a background, where she learned R Markdown, and then she started using Quarto as part of coursework in my class. In both classes her experience with computational documents was limited to a single document per assignment, writing a bit of code to analyze data then writing some text to interpret findings. In a sense, this is exactly what her thesis entailed as well, but of course there was more. Multiple chapters, millions of citations in a very specific style that art historians use, captioned figures and tables, and not having to rerun the whole thesis code with each minor edit. With a bit of Googling and a bit of my help, she pretty quickly figured out how to bring chapters of her thesis written in Quarto together with a yaml file, and voiola! She had a thesis written in Quarto. Sure, this took a bit of trial and error and at times frustration, but the fact that she could caption her figures while creating them with code and insert citations without manual text styling, she was sold! It is always so heartwarming to see your students push what you’re teaching them and use them to solve their problems, it’s especially heartening when this happens with a new thing you’re teaching for the first time while the thing is still in active development!"
   },
   {
     "objectID": "hello-quarto/index.html#holland-stam-thesis-2",
     "href": "hello-quarto/index.html#holland-stam-thesis-2",
     "title": "Talks",
     "section": "",
-    "text": "QuantifyingArt HistoricalNarratives\n\n\n\nHolland Stam\n\nArt History + Visual and Media Studies\nClass of 2022\nDuke University\nwith Sara Lemus \n\n\n\n\n\n\n\n\n\n\nAnd, by the way, if you’re interested in the data, Holland and another student of my, Sara Lemus, packaged it up as “arthistory”. Sara is a stats major who had a lot more experience with R and was working with me for updating some data packages I maintain to learn about package development. She got interested in Holland’s thesis during our lab meetings and it was clear the two of them, with their newly acquired skills and enthusiasm, should team up and make the data available to more researchers, and packaged it up and even got it on CRAN!\nBut, back to Quarto… like for Holland, Quarto has provided simple but effective solutions for so many of my problems as an instructor too. Instead of telling you about them, let me show you!"
+    "text": "QuantifyingArt HistoricalNarratives\n\n\n\nHolland Stam\n\nArt History + Visual and Media Studies\nClass of 2022\nDuke University\nwith Sara Lemus \n\n\n\n\n\n\n\n\n\nAnd, by the way, if you’re interested in the data, Holland and another student of my, Sara Lemus, packaged it up as “arthistory”. Sara is a stats major who had a lot more experience with R and was working with me for updating some data packages I maintain to learn about package development. She got interested in Holland’s thesis during our lab meetings and it was clear the two of them, with their newly acquired skills and enthusiasm, should team up and make the data available to more researchers, and packaged it up and even got it on CRAN!\nBut, back to Quarto… like for Holland, Quarto has provided simple but effective solutions for so many of my problems as an instructor too. Instead of telling you about them, let me show you!"
   },
   {
     "objectID": "hello-quarto/index.html#demo-teach",
@@ -802,7 +1089,7 @@
     "href": "hello-quarto/index.html#faylab-manual-2",
     "title": "Talks",
     "section": "",
-    "text": "1. Make the implicit explicit\n\n\n\n\n\n2. Onboard learners as contributors\n\n\n\n\n\n\n3. Psychological safety & growth mindset\n\n\n\n\n\nMakes the implicit explicit all be clear on how their group works together and it also puts the values forward and to welcome people who might be interested in joining the\nonboards learners as contributors As you read the manual you’re also instructed how to contribute. So it’s through learning tools like Quarto to fix a typo that empowers learners in a lasting way.\npsychological safety & growth mindset deliberately for example prioritzing time to check in during meetings and screensharing/live coding.\nReimagining within one lab and that idea is catching at bigger scales -"
+    "text": "1. Make the implicit explicit\n\n\n\n\n\n2. Onboard learners as contributors\n\n\n\n\n\n\n3. Psychological safety & growth mindset\n\n\n\n\nMakes the implicit explicit all be clear on how their group works together and it also puts the values forward and to welcome people who might be interested in joining the\nonboards learners as contributors As you read the manual you’re also instructed how to contribute. So it’s through learning tools like Quarto to fix a typo that empowers learners in a lasting way.\npsychological safety & growth mindset deliberately for example prioritzing time to check in during meetings and screensharing/live coding.\nReimagining within one lab and that idea is catching at bigger scales -"
   },
   {
     "objectID": "hello-quarto/index.html#approach-guide",
@@ -851,7 +1138,7 @@
     "href": "hello-quarto/index.html#earthrise-by-amanda-gorman1",
     "title": "Talks",
     "section": "Earthrise by Amanda Gorman1",
-    "text": "Earthrise by Amanda Gorman1\n\n\nSo, earth, pale blue dot We will fail you not.\nJust as we chose to go to the moon We know it’s never too soon To choose hope. We choose to do more than cope With climate change We choose to end it— We refuse to lose. Together we do this and more Not because it’s very easy or nice But because it is necessary, Because with every dawn we carry the weight of the fate of this celestial body orbiting a star. And as heavy as that weight sounded, it doesn’t hold us down, But it keeps us grounded, steady, ready, Because an environmental movement of this size Is simply another form of an earthrise.\n\n\n\n\nNASA, Apollo 8, 1968\n\n\n\n\nFull text and video for Earthrise by Amanda Gorman"
+    "text": "Earthrise by Amanda Gorman1\n\n\nSo, earth, pale blue dot We will fail you not.\nJust as we chose to go to the moon We know it’s never too soon To choose hope. We choose to do more than cope With climate change We choose to end it— We refuse to lose. Together we do this and more Not because it’s very easy or nice But because it is necessary, Because with every dawn we carry the weight of the fate of this celestial body orbiting a star. And as heavy as that weight sounded, it doesn’t hold us down, But it keeps us grounded, steady, ready, Because an environmental movement of this size Is simply another form of an earthrise.\n\n\n\n\nNASA, Apollo 8, 1968\n\n\n\nFull text and video for Earthrise by Amanda Gorman"
   },
   {
     "objectID": "hello-quarto/index.html#annotated-notes-share",
@@ -998,7 +1285,7 @@
     "href": "hello-quarto/presentacion_pycon.html#tabsets",
     "title": "Talks",
     "section": "Tabsets",
-    "text": "Tabsets\nCrea bloques con pestañas que permiten alternar entre distintos contenidos.\n\nPlotData\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nx\ny\n\n\n\n\n0\n-2.000000\n12.000000\n\n\n1\n-1.929293\n11.510050\n\n\n2\n-1.858586\n11.030099\n\n\n3\n-1.787879\n10.560147\n\n\n4\n-1.717172\n10.100194"
+    "text": "Tabsets\nCrea bloques con pestañas que permiten alternar entre distintos contenidos.\n\nPlotData\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nx\ny\n\n\n\n\n0\n-2.000000\n12.000000\n\n\n1\n-1.929293\n11.510050\n\n\n2\n-1.858586\n11.030099\n\n\n3\n-1.787879\n10.560147\n\n\n4\n-1.717172\n10.100194"
   },
   {
     "objectID": "hello-quarto/presentacion_pycon.html#gráficos-interactivos",
@@ -1040,34 +1327,20 @@
     "href": "hello-quarto/presentacion_pycon.html#conclusiones",
     "title": "Talks",
     "section": "Conclusiones",
-    "text": "Conclusiones\n\n\n\n\n\n\n\nCompartir: Un mismo .qmd genera HTML, PDF, slides o sitios web, pasando de lo estático a lo interactivo.\n\n\n\n\n\n\n\n\nColaborar: Con un archivo sencillo ya se puede crear y publicar material reproducible, iniciando el trabajo en equipo.\n\n\n\n\n\n\n\n\n\n\n\n\n\nEnseñar: Sus features integran texto, código y visualizaciones, mejorando la enseñanza con recursos dinámicos.\n\n\n\n\n\n\n\n\nReimaginar: Tecnologías como WebR, Pyodide o Shiny abren nuevas formas de aprender e innovar en educación."
+    "text": "Conclusiones\n\n\n\n\n\n\n\nCompartir: Un mismo .qmd genera HTML, PDF, slides o sitios web, pasando de lo estático a lo interactivo.\n\n\n\n\n\n\n\n\nColaborar: Con un archivo sencillo ya se puede crear y publicar material reproducible, iniciando el trabajo en equipo.\n\n\n\n\n\n\n\n\n\n\n\n\nEnseñar: Sus features integran texto, código y visualizaciones, mejorando la enseñanza con recursos dinámicos.\n\n\n\n\n\n\n\n\nReimaginar: Tecnologías como WebR, Pyodide o Shiny abren nuevas formas de aprender e innovar en educación."
   },
   {
     "objectID": "hello-quarto/presentacion_pycon.html#referencias-y-recursos",
     "href": "hello-quarto/presentacion_pycon.html#referencias-y-recursos",
     "title": "Talks",
     "section": "Referencias y Recursos",
-    "text": "Referencias y Recursos\n\n\n\n\n\n\n\nDocumentación oficial\n🔗 quarto.org\nGuías y ejemplos prácticos para comenzar de inmediato.\n\n\n\n\n\n\n\n\nAprendizaje en video\n🔗 Crash Course en YouTube\nIntroducción práctica a Quarto y sus distintos usos.\n\n\n\n\n\n\n\n\n\n\n\n\n\nRecursos de la comunidad\n🔗 Mine Cetinkaya-Rundel\nCursos, libros y presentaciones en Quarto en GitHub.\n\n\n\n\n\n\n\n\nAplicaciones en educación\n🔗 sethnut.com/resources\nOlimpiada Matemática, Verano Matemático, EMMA y más!"
+    "text": "Referencias y Recursos\n\n\n\n\n\n\n\nDocumentación oficial\n🔗 quarto.org\nGuías y ejemplos prácticos para comenzar de inmediato.\n\n\n\n\n\n\n\n\nAprendizaje en video\n🔗 Crash Course en YouTube\nIntroducción práctica a Quarto y sus distintos usos.\n\n\n\n\n\n\n\n\n\n\n\n\nRecursos de la comunidad\n🔗 Mine Cetinkaya-Rundel\nCursos, libros y presentaciones en Quarto en GitHub.\n\n\n\n\n\n\n\n\nAplicaciones en educación\n🔗 sethnut.com/resources\nOlimpiada Matemática, Verano Matemático, EMMA y más!"
   },
   {
     "objectID": "hello-quarto/presentacion_pycon.html#gracias-por-participar",
     "href": "hello-quarto/presentacion_pycon.html#gracias-por-participar",
     "title": "Talks",
     "section": "🎉 ¡Gracias por Participar!",
-    "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 Disfrutar del Evento!\n\n\n\n\n\n🔗 Nuestro Sitio Web: sethnut.com/talks"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "🎉 Presentaciones",
-    "section": "",
-    "text": "¡Hola! Aquí tienes una lista de nuestras presentaciones, realizadas con Quarto, una herramienta poderosa para crear documentos y presentaciones dinámicas en diferentes formatos.\n\n\n\n\nTransforma datos en historias visuales interactivas usando A.I. y herramientas dinámicas.\nPresentaciones:\nM2-Semana 01 · M2-Semana 02 ·M2-Semana 03 · M2-Semana 04\n\n\n\nAprende a crear paneles interactivos y visualizaciones narrativas con Shiny.\nPresentaciones:\nM3-Semana 01 · M3-Semana 02 ·M3-Semana 03"
-  },
-  {
-    "objectID": "index.html#diplomados",
-    "href": "index.html#diplomados",
-    "title": "🎉 Presentaciones",
-    "section": "",
-    "text": "Transforma datos en historias visuales interactivas usando A.I. y herramientas dinámicas.\nPresentaciones:\nM2-Semana 01 · M2-Semana 02 ·M2-Semana 03 · M2-Semana 04\n\n\n\nAprende a crear paneles interactivos y visualizaciones narrativas con Shiny.\nPresentaciones:\nM3-Semana 01 · M3-Semana 02 ·M3-Semana 03"
+    "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 Disfrutar del Evento!\n\n\n\n\n🔗 Nuestro Sitio Web: sethnut.com/talks"
   }
 ]
