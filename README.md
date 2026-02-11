@@ -1,9 +1,11 @@
+# Talks — Charlas Personales
 
-# ¡Bienvenido a Seth&Nut!
+Este repositorio contiene materiales y recursos relacionados con mis charlas personales: presentaciones, ejemplos, imágenes y contenido asociado a cada exposición.
 
-[![example workflow](https://github.com/Seth-Nut/website/actions/workflows/documentation.yml/badge.svg)](https://github.com/Seth-Nut/talks/actions)
-[![documentation](https://img.shields.io/badge/🌐-website-blue)](https://seth-nut.github.io/talks/)
+### Contenido
 
-
-**Seth&Nut** es una organización dedicada a democratizar la educación en programación y matemáticas. A través de programas educativos, recursos didácticos, mentorías personalizadas y una activa participación en comunidades, nos comprometemos a ofrecer educación accesible y de calidad a personas de todos los niveles.
+- Presentaciones y diapositivas
+- Recursos multimedia usados en charlas
+- Materiales de apoyo para exposiciones y sesiones
+- Ejemplos o demos asociadas a cada presentación
 

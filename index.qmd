@@ -16,15 +16,16 @@ format:
 
 Transforma datos en historias visuales interactivas usando A.I. y herramientas dinámicas.\
 **Presentaciones:**\
-[M2-Semana 01](hello-quarto/presentacion.html) · [M2-Semana 02](hello-quarto/presentacion.html) ·[M2-Semana 03](hello-quarto/presentacion.html) · [M2-Semana 04](hello-quarto/presentacion.html) 
+[M2-Semana 01](usm_dtd/presentacion.html) · [M2-Semana 02](usm_dtd/presentacion.html) ·[M2-Semana 03](usm_dtd/presentacion.html) · [M2-Semana 04](usm_dtd/presentacion.html) 
 :::
+
 
 ::: card 
 ### Diplomado en Estrategias de Transformación Digital (USM)
 
 Aprende a crear paneles interactivos y visualizaciones narrativas con Shiny.\
 **Presentaciones:**\
-[M3-Semana 01](hello-quarto/presentacion.html) · [M3-Semana 02](hello-quarto/presentacion.html) ·[M3-Semana 03](hello-quarto/presentacion.html)
+[M3-Semana 01](usm_dtd/presentacion.html) · [M3-Semana 02](usm_dtd/presentacion.html) ·[M3-Semana 03](usm_dtd/presentacion.html)
 :::
 
 

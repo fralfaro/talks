@@ -3,18 +3,18 @@ project:
 
 website:
   title: "Talks"
-  site-url: https://falfaro.xyz/talks/"
+  site-url: https://falfaro.xyz/talks/
   favicon: 'images/logo_fam.png'
-  image: 'images/book.png'
+  image: 'images/doberman.png'
   page-footer:
     left: "Website creado con [Quarto](https://quarto.org/) por Francisco Alfaro. Licencia: [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)."
     right:
       - icon: github
-        href: https://github.com/Seth-Nut
+        href: https://github.com/fralfaro/
       - icon: linkedin
-        href: https://www.linkedin.com/company/Seth-Nut/
+        href: https://www.linkedin.com/in/faam/
       - icon: globe
-        href: https://seth-nut.github.io/website/
+        href: https://falfaro.xyz/portfolio/
 
   navbar:
     logo: /images/doberman.png
