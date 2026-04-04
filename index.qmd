@@ -5,9 +5,7 @@ format:
     toc: false
 ---
 
-# Lista de Presentaciones
-
-¡Hola! Aquí tienes una lista de nuestras presentaciones, realizadas con [Quarto](https://quarto.org/), una herramienta poderosa para crear documentos y presentaciones dinámicas en diferentes formatos.
+¡Bienvenido! A continuación encontrarás una selección de mis presentaciones, desarrolladas con [Quarto](https://quarto.org/), una herramienta versátil que permite crear documentos y presentaciones dinámicas en múltiples formatos.
 
 ## Diplomados
 
@@ -16,11 +14,10 @@ format:
 
 Transforma datos en historias visuales interactivas usando A.I. y herramientas dinámicas.\
 **Presentaciones:**\
-[M2-Semana 01]() · [M2-Semana 02]() ·[M2-Semana 03]() · [M2-Semana 04]() 
+[M2-Semana 01]() · [M2-Semana 02]() ·[M2-Semana 03]() · [M2-Semana 04]()
 :::
 
-
-::: card 
+::: card
 ### Diplomado en Estrategias de Transformación Digital (USM)
 
 Aprende a crear paneles interactivos y visualizaciones narrativas con Shiny.\
@@ -28,5 +25,12 @@ Aprende a crear paneles interactivos y visualizaciones narrativas con Shiny.\
 [M3-Semana 01](usm_dtd/semana_01.html) · [M3-Semana 02](usm_dtd/semana_02.html) ·[M3-Semana 03](usm_dtd/semana_03.html)
 :::
 
+## Cursos
 
+::: card
+### Seminario Avanzado De TIC - IPD446 (USM)
 
+Curso en focado en temas de aprendizaje por refuerzo.\
+**Presentaciones:**\
+[Charla Capítulo 13](ipd446/talk1.html) · [Avance del Tema](ipd446/talk2.html) ·[Presentación Final](ipd446/talk3.html)
+:::

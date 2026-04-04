@@ -1,0 +1,655 @@
+---
+title: "Más allá de los valores"
+subtitle: "Policy Gradient Methods · Capítulo 13 · Sutton & Barto"
+author: "Francisco Alfaro"
+institute: "Doctorado en Ingeniería Electrónica · UTFSM"
+date: today
+date-format: "MMMM YYYY"
+
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    progress: true
+    history: false
+    transition: fade
+    transition-speed: fast
+    incremental: false
+    fig-align: center
+    highlight-style: github
+    code-block-bg: true
+    center: false
+    width: 1280
+    height: 720
+    margin: 0.08
+    footer: "Seminario Avanzado TIC · Aprendizaje por Refuerzo · 2026"
+    logo: "images/usm.png"
+
+execute:
+  echo: false
+  warning: false
+
+bibliography: []
+---
+
+##  {.title-slide background-color="#0F2044"}
+
+::: title-block
+**Más allá de los valores**
+
+Aprender directamente la política
+:::
+
+::: subtitle-block
+Capítulo 13 — *Policy Gradient Methods*\
+Sutton & Barto · Reinforcement Learning: An Introduction (2nd ed.)
+:::
+
+::: author-block
+Francisco Alfaro\
+Doctorado en Ingeniería Electrónica · UTFSM\
+Seminario Avanzado TIC · 2026
+:::
+
+------------------------------------------------------------------------
+
+## ¿Dónde estamos en el libro?
+
+::: columns
+::: {.column width="60%"}
+**Hoja de ruta: S&B capítulos 2 → 13**
+
+| Capítulos | Enfoque             | Política      |
+|-----------|---------------------|---------------|
+| 2–4       | Bandits, MDP        | implícita     |
+| 5–7       | MC, TD, Q-learning  | implícita     |
+| 8–12      | Aprox. de función   | implícita     |
+| **13**    | **Policy Gradient** | **explícita** |
+:::
+
+::: {.column width="40%"}
+::: {.callout-note icon="false"}
+## La pregunta clave
+
+En los capítulos anteriores, aprendemos $Q(s,a)$ y la política *emerge*.
+
+¿Qué pasa si aprendemos $\pi$ **directamente**?
+:::
+:::
+:::
+
+::: fragment
+> **Única excepción anterior:** *gradient bandit algorithms* (Sec. 2.8) — el caso de un solo estado. El Cap. 13 es su generalización completa.
+:::
+
+------------------------------------------------------------------------
+
+## La idea central
+
+::: columns
+::: {.column width="55%"}
+**Política parametrizada:**
+
+$$\pi(a \mid s, \theta) = \Pr\{A_t = a \mid S_t = s, \theta_t = \theta\}$$
+
+**Objetivo: maximizar** $J(\theta)$ via ascenso de gradiente:
+
+$$\theta_{t+1} = \theta_t + \alpha \widehat{\nabla J(\theta_t)}$$
+:::
+
+::: {.column width="45%"}
+::: {.callout-tip icon="false"}
+## Analogía con Deep Learning
+
+| DL                 | Policy Gradient         |
+|--------------------|-------------------------|
+| pesos $w$          | parámetros $\theta$     |
+| loss $\mathcal{L}$ | $-J(\theta)$            |
+| backprop           | policy gradient theorem |
+:::
+:::
+:::
+
+::: fragment
+::: {.callout-important icon="false"}
+## Dos familias de métodos
+
+-   **Solo política** (*policy-only*): $\theta$ es lo único que se aprende
+-   **Actor–Crítico**: aprende $\theta$ (política) **y** $w$ (función de valor)
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Parametrización: softmax en preferencias
+
+::: columns
+::: {.column width="55%"}
+Para espacios de acción **discretos**:
+
+$$\pi(a \mid s, \theta) \doteq \frac{e^{h(s,a,\theta)}}{\sum_b e^{h(s,b,\theta)}}$$
+
+donde $h(s,a,\theta)$ son **preferencias**, no valores.
+
+Las preferencias pueden ser:
+
+-   Lineales: $h(s,a,\theta) = \theta^\top \mathbf{x}(s,a)$
+-   Red neuronal profunda (ej. AlphaGo)
+:::
+
+::: {.column width="45%"}
+**Comparación crítica:**
+
+|                    | $\varepsilon$-greedy | Softmax pref.            |
+|--------------------|----------------------|--------------------------|
+| Política límite    | siempre estocástica  | puede ser determinista   |
+| Óptimo estocástico | ✗ difícil            | ✓ natural                |
+| Tipo               | implícita            | explícita, diferenciable |
+:::
+:::
+
+------------------------------------------------------------------------
+
+## ⚠️ ¿Por qué no softmax sobre $Q$?
+
+::: columns
+::: {.column width="50%"}
+**Intuición tentadora:** tomar softmax sobre $\hat{Q}(s,a)$
+
+**Problema concreto:**
+
+Supón $Q(s,a_1) = 10$, $Q(s,a_2) = 9$
+
+$$\text{softmax} \Rightarrow \pi(a_1) \approx 0.73, \; \pi(a_2) \approx 0.27$$
+
+Las probabilidades **nunca llegan a 0 o 1**.
+:::
+
+::: {.column width="50%"}
+**Con preferencias** $h(s,a,\theta)$:
+
+-   No representan valores absolutos
+-   Libres de crecer sin ancla
+-   Si el óptimo es determinista → $h^* \to +\infty$
+-   Si el óptimo es estocástico → converge a las proporciones correctas
+
+::: {.callout-note icon="false"}
+## Clave
+
+Las preferencias son **libres de crecer** — los valores no.
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Ejemplo 13.1: El corredor corto
+
+::: columns
+::: {.column width="45%"}
+**El entorno:**
+
+-   3 estados no terminales + 1 terminal
+-   Acciones: `right` / `left`
+-   En $s_2$: las acciones están **invertidas**
+-   Todos los estados parecen **idénticos** bajo $\mathbf{x}(s)$
+
+**Conexión con el curso:**\
+Es un POMDP de facto — la representación colapsa estados distintos.
+:::
+
+::: {.column width="55%"}
+**Resultados:**
+
+| Método                          | Valor en $s_0$  |
+|---------------------------------|-----------------|
+| $\varepsilon$-greedy left       | $\approx -82$   |
+| $\varepsilon$-greedy right      | $\approx -44$   |
+| **Política estocástica óptima** | $\approx -11.6$ |
+
+**Probabilidad óptima de `right`:** $\approx 0.59$
+
+::: {.callout-important icon="false"}
+## Moraleja
+
+$\varepsilon$-greedy **no puede** encontrar la política óptima cuando esta es estocástica y la representación es limitada.
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+## El Teorema del Gradiente de la Política
+
+::: columns
+::: {.column width="60%"}
+**El problema:** $J(\theta)$ depende de la distribución de estados $\mu(s)$, que cambia con $\theta$ — y esta dependencia es **desconocida**.
+
+**La solución (episódico):**
+
+$$\boxed{\nabla J(\theta) \propto \sum_s \mu(s) \sum_a q_\pi(s,a) \nabla\pi(a|s,\theta)}$$
+:::
+
+::: {.column width="40%"}
+**Anatomía del teorema:**
+
+$$\underbrace{\mu(s)}_{\text{tiempo en } s} \cdot \underbrace{q_\pi(s,a)}_{\text{valor de la acción}} \cdot \underbrace{\nabla\pi}_{\text{dirección de mejora}}$$
+:::
+:::
+
+::: fragment
+::: {.callout-important icon="false"}
+## Lo no obvio — y lo más importante
+
+$\nabla J(\theta)$ **no involucra** $\nabla\mu(s)$.\
+Podemos estimar el gradiente sin conocer cómo cambia la distribución de estados con $\theta$.
+:::
+:::
+
+------------------------------------------------------------------------
+
+## ⚠️ Estructura de la prueba
+
+La prueba usa **solo cálculo elemental + re-arranging**:
+
+::: columns
+::: {.column width="55%"}
+```         
+∇v_π(s)
+  ↓  regla del producto
+∇π · q_π  +  π · ∇q_π
+  ↓  Bellman sobre q_π
+∇π · q_π  +  π · Σ p(s'|s,a) · ∇v_π(s')
+  ↓  unrolling recursivo
+Σ_x Pr(s→x, k, π) · Σ_a ∇π · q_π
+  ↓  normalizar por Ση(s')
+∝  Σ_s µ(s) Σ_a ∇π · q_π  ✓
+```
+:::
+
+::: {.column width="45%"}
+::: {.callout-tip icon="false"}
+## Intuición del unrolling
+
+Es la misma idea de la ecuación de Bellman — recursión que "desenrolla" el futuro — pero aplicada al **gradiente**, no al valor.
+
+Si entiendes la prueba de Bellman, la estructura aquí es familiar.
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+## REINFORCE: el algoritmo
+
+**Derivación:** convertir el teorema en una muestra sin sesgo
+
+$$\nabla J(\theta) \propto \mathbb{E}_\pi\!\left[G_t \frac{\nabla\pi(A_t|S_t,\theta)}{\pi(A_t|S_t,\theta)}\right] = \mathbb{E}_\pi\!\left[G_t \nabla\ln\pi(A_t|S_t,\theta)\right]$$
+
+::: columns
+::: {.column width="55%"}
+**Regla de actualización:**
+
+$$\boxed{\theta_{t+1} \doteq \theta_t + \alpha \, G_t \, \nabla\ln\pi(A_t|S_t,\theta_t)}$$
+
+**Analogía con SGD:**
+
+```         
+θ ← θ + α · ∇loss        (deep learning)
+θ ← θ + α · Gt · ∇ln π  (REINFORCE)
+```
+:::
+
+::: {.column width="45%"}
+**Intuición de cada componente:**
+
+-   $G_t$: favorece acciones de alta recompensa
+-   $\nabla\ln\pi$: dirección para aumentar la prob. de $A_t$
+-   División por $\pi$: corrección de frecuencia
+:::
+:::
+
+------------------------------------------------------------------------
+
+## ⚠️ ¿Por qué aparece el logaritmo?
+
+::: columns
+::: {.column width="50%"}
+**La identidad matemática:**
+
+$$\nabla \ln x = \frac{\nabla x}{x} \quad \Rightarrow \quad \frac{\nabla\pi}{\pi} = \nabla\ln\pi$$
+
+**El vector** $\nabla\ln\pi$ se llama ***eligibility vector***.
+
+Es lo **único** que depende de la parametrización específica.
+:::
+
+::: {.column width="50%"}
+**Ejemplo concreto (softmax lineal):**
+
+$$\nabla\ln\pi(a|s,\theta) = \mathbf{x}(s,a) - \sum_b \pi(b|s,\theta)\mathbf{x}(s,b)$$
+
+> Feature de la acción tomada **menos** el promedio ponderado de features.
+
+::: {.callout-tip icon="false"}
+## Modularidad
+
+Si cambias la red neuronal, solo cambia el *eligibility vector*. El resto del algoritmo es idéntico.
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+## REINFORCE: propiedades y limitaciones
+
+::: columns
+::: {.column width="55%"}
+**Ventajas teóricas:**
+
+-   [x] **Sin sesgo**: la actualización esperada es proporcional al gradiente
+-   [x] **Convergencia** a óptimo local (con $\alpha$ decreciente apropiado)
+-   [x] Implementable con **cualquier** política diferenciable
+
+**Limitación principal:**
+
+-   ✗ Método Monte Carlo → requiere **episodios completos**
+-   ✗ **Alta varianza** en $G_t$ → aprendizaje lento
+:::
+
+::: {.column width="45%"}
+::: {.callout-note icon="false"}
+## Tensión fundamental
+
+La misma tensión MC vs TD que vimos en capítulos anteriores **reaparece aquí** — ahora a nivel de política.
+
+REINFORCE converge, pero lento.
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+## REINFORCE con Baseline
+
+**Generalización del teorema:**
+
+$$\nabla J(\theta) \propto \sum_s \mu(s) \sum_a \big(q_\pi(s,a) - b(s)\big) \nabla\pi(a|s,\theta)$$
+
+para cualquier $b(s)$ que **no dependa de** $a$ — el término con $b(s)$ suma cero al promediar sobre acciones.
+
+::: columns
+::: {.column width="55%"}
+**Actualización:**
+
+$$\theta_{t+1} \doteq \theta_t + \alpha \big(G_t - b(S_t)\big) \nabla\ln\pi(A_t|S_t,\theta_t)$$
+
+**Elección natural:** $b(S_t) = \hat{v}(S_t, w)$
+
+-   Si $G_t > b$ → acción mejor de lo esperado → reforzar
+-   Si $G_t < b$ → peor de lo esperado → debilitar
+:::
+
+::: {.column width="45%"}
+::: {.callout-important icon="false"}
+## Resultado empírico
+
+La baseline **no introduce sesgo** pero reduce varianza significativamente.
+
+Misma garantía teórica — muy distinta práctica.
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Actor–Crítico: la distinción conceptual
+
+::: columns
+::: {.column width="50%"}
+```         
+Estado S
+    ↓
+[ACTOR: π_θ] ──→ Acción A ──→ Entorno
+      ↑                          ↓
+      │                    R,  S'
+      │
+   δt = R + γv̂(S',w) - v̂(S,w)
+      │
+[CRÍTICO: v̂_w]
+```
+
+**El crítico** evalúa — **el actor** actúa.
+
+El **error TD** $\delta_t$ es la señal de aprendizaje.
+:::
+
+::: {.column width="50%"}
+|          | REINFORCE + baseline   | Actor–Crítico           |
+|----------|------------------------|-------------------------|
+| Baseline | antes de la transición | después (bootstrapping) |
+| Retorno  | $G_t$ (MC)             | $G_{t:t+1}$ (TD)        |
+| Sesgo    | sin sesgo              | con sesgo               |
+| Varianza | alta                   | baja                    |
+
+::: {.callout-note icon="false"}
+## Analogía directa
+
+MC vs TD en funciones de valor\
+= REINFORCE vs Actor–Crítico en política
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Las tres variantes Actor–Crítico
+
+| Variante               | Señal $\delta$                           | Online? | Sesgo |
+|----------------|-------------------------------|-------------|-------------|
+| One-step               | $R + \gamma\hat{v}(S') - \hat{v}(S)$     | ✓       | bajo  |
+| Con trazas (episódico) | $\lambda$-return                         | ✓       | medio |
+| Continuo               | $R - \bar{R} + \hat{v}(S') - \hat{v}(S)$ | ✓       | bajo  |
+
+::: fragment
+::: {.callout-tip icon="false"}
+## Principio unificador
+
+En los tres casos la **estructura Actor–Crítico es idéntica** — solo cambia qué se usa como señal $\delta$.
+
+El one-step es el caso más simple: fully online, incremental, sin trazas.
+:::
+:::
+
+------------------------------------------------------------------------
+
+## ⚠️ Caso continuo vs episódico
+
+::: columns
+::: {.column width="50%"}
+**Caso episódico:** $$J(\theta) \doteq v_{\pi_\theta}(s_0)$$
+
+**Caso continuo:** $$J(\theta) \doteq r(\pi) = \lim_{t\to\infty} \mathbb{E}[R_t \mid A_{0:t} \sim \pi]$$
+
+**El retorno diferencial:** $$G_t \doteq \sum_{k=1}^{\infty}(R_{t+k} - r(\pi))$$
+:::
+
+::: {.column width="50%"}
+::: {.callout-important icon="false"}
+## La intuición clave
+
+No descuentas el **tiempo** — descuentas la **tasa promedio**.
+
+Son las desviaciones sobre y bajo $r(\pi)$ las que guían el aprendizaje.
+:::
+
+**Resultado notable:**
+
+El Policy Gradient Theorem tiene la **misma forma** en ambos casos.
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Políticas para acciones continuas
+
+::: columns
+::: {.column width="55%"}
+En lugar de probabilidades discretas, aprender una **distribución Gaussiana**:
+
+$$\pi(a|s,\theta) \doteq \frac{1}{\sigma(s,\theta)\sqrt{2\pi}} \exp\!\left(-\frac{(a-\mu(s,\theta))^2}{2\sigma(s,\theta)^2}\right)$$
+
+**Lo que se aprende:** $\mu$ y $\sigma$ — parámetros de la distribución.
+
+$$\mu(s,\theta) = \theta_\mu^\top \mathbf{x}^\mu(s), \quad \sigma(s,\theta) = \exp\!\left(\theta_\sigma^\top \mathbf{x}^\sigma(s)\right)$$
+:::
+
+::: {.column width="45%"}
+::: {.callout-tip icon="false"}
+## ¿Por qué $\exp$ para $\sigma$?
+
+Garantiza positividad **sin restricciones** en la optimización.
+
+Un detalle de implementación que sale mal si no se entiende.
+:::
+
+**Conexión con el estado del arte:**
+
+SAC, PPO, DDPG usan exactamente esta estructura.
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Mapa del capítulo
+
+```         
+Policy Gradient Theorem
+        │
+        ├─── REINFORCE ──────────────────────────────── alta varianza, sin sesgo
+        │         │
+        │         └─── + Baseline ──────────────────── menor varianza, sin sesgo adicional
+        │                   │
+        │                   └─── Baseline = v̂(s) ──── Actor–Crítico
+        │                               ├── One-step (TD error)
+        │                               ├── n-step / λ-return
+        │                               └── Continuo (tasa promedio)
+        │
+        └─── Acciones continuas: distribución Gaussiana parametrizada
+```
+
+::: {.callout-note icon="false"}
+## El hilo conductor
+
+Siempre **ascenso de gradiente en** $J(\theta)$ — con distintos estimadores de la señal.
+:::
+
+------------------------------------------------------------------------
+
+## Comparación: Value-based vs Policy Gradient
+
+| Dimensión           | Action-value                   | Policy Gradient                     |
+|--------------------|-----------------------|-----------------------------|
+| Política            | implícita, derivada            | explícita, primer objeto            |
+| Óptimo estocástico  | difícil de capturar            | natural                             |
+| Espacios continuos  | problemático ($\max_a$)        | directo                             |
+| Convergencia        | menos garantías                | garantías más sólidas               |
+| Varianza            | menor (bootstrapping)          | mayor (Monte Carlo)                 |
+| Sesgo               | posible                        | sin sesgo (REINFORCE)               |
+| **¿Cuándo elegir?** | espacios discretos, $Q$ simple | política simple, acciones continuas |
+
+::: fragment
+> *"Today they are less well understood in some respects, but a subject of excitement and ongoing research."* — Sutton & Barto, Cap. 13
+:::
+
+------------------------------------------------------------------------
+
+## Conexión con el estado del arte
+
+| Algoritmo          | Qué usa de Cap. 13                              |
+|--------------------|-------------------------------------------------|
+| **A3C / A2C**      | Actor–Crítico one-step, múltiples agentes       |
+| **PPO**            | REINFORCE con baseline + restricción en el paso |
+| **SAC**            | Actor–Crítico continuo + entropía como baseline |
+| **TRPO**           | Gradiente natural de política                   |
+| **RLHF** (ChatGPT) | Política = LLM, reward model = crítico          |
+
+::: fragment
+::: {.callout-important icon="false"}
+## El eligibility vector $\nabla\ln\pi(a|s,\theta)$
+
+Aparece en el **corazón** de todos estos algoritmos.
+
+No es historia — es la base técnica de los sistemas más relevantes de 2024–2026.
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Tres resultados para llevarse
+
+::: columns
+::: {.column width="33%"}
+::: result-box
+**1. Policy Gradient Theorem**
+
+Resuelve el problema de la dependencia desconocida en $\mu(s)$.
+
+Sin él, el ascenso de gradiente no es viable.
+:::
+:::
+
+::: {.column width="33%"}
+::: result-box
+**2. REINFORCE**
+
+El método canónico: simple, sin sesgo, pero con alta varianza.
+
+Base de todos los algoritmos modernos de policy gradient.
+:::
+:::
+
+::: {.column width="33%"}
+::: result-box
+**3. Actor–Crítico**
+
+Cierra la brecha con TD: sesgo controlado a cambio de varianza reducida.
+
+El framework dominante en Deep RL actual.
+:::
+:::
+:::
+
+::: fragment
+::: {.callout-note icon="false"}
+## La pregunta para tu proyecto
+
+¿Cuándo en **tu problema** tiene más sentido aprender $\pi$ directamente que aprender $Q$ primero?
+:::
+:::
+
+------------------------------------------------------------------------
+
+##  {.final-slide background-color="#0F2044"}
+
+::: center-content
+**¿Preguntas?**
+
+------------------------------------------------------------------------
+
+Francisco Alfaro\
+`fralfaro@usm.cl`\
+Doctorado en Ingeniería Electrónica · UTFSM
+
+*Seminario Avanzado TIC · Aprendizaje por Refuerzo · 2026*
+:::
+
+```{=html}
+<style>
+
+
+.reveal .slide-logo {
+   max-height: 2em !important;
+}
+</style>
+```

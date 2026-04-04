@@ -23,6 +23,12 @@ format:
     logo: images/usm.png
 ---
 
+## Hola mario
+
+::: {=html}
+<iframe src="demo.html" width="100%" height="768px"></iframe>
+:::
+
 ## Revolución de los Datos
 
 ![](images/clase-0/internet_2023.png){.lightbox fig-align="center" width="50%"}

@@ -23,14 +23,13 @@ format:
     logo: images/usm.png
 ---
 
-
 ## Tipos de Aprendizaje
 
 ![](images/clase-0/ML_types.png){.lightbox}
 
 ## demo
 
-```html
+``` html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -682,7 +681,6 @@ Otro ejemplo es **AlphaFold** donde el modelo `aprendió/descubrió` cómo se do
 -   **Reducción de la Dimensionalidad**: Eliminar complejidad sin perder información clave para poder entender su comportamiento.
 :::
 
-
 ## Nuestro Sistema de ML {.smaller}
 
 Creemos un Sistema de ML que sea capaz de ver una imágen y pronunciar correctamente el uso de la letra `C`.
@@ -904,7 +902,6 @@ Underfitting (Subajuste)
     -   ¿Cómo se vería el overfitting?
     -   ¿Cómo se vería el underfitting?
 
-
 ------------------------------------------------------------------------
 
 ## ¿Qué es Scikit-Learn? {.smaller}
@@ -913,7 +910,6 @@ Underfitting (Subajuste)
 ::: {.column width="30%"}
 ![](images/lab-0/sklearn.jpg)
 :::
-
 
 ::: {.column width="70%"}
 -   `Scikit-Learn` (`sklearn` para los amigos) es una librería creada por David Cournapeau, como un Google Summer Code Project y luego Matthieu Brucher en su tesis.
@@ -1112,7 +1108,6 @@ L14. Evalúo el modelo en datos no vistos.
 -   ¿Cómo se importan las clases en Scikit-Learn?
 -   ¿Cuál es la diferencia entre un Transformer y un Estimator?
 -   ¿Cuándo es buena idea usar un Pipeline?
-
 
 ------------------------------------------------------------------------
 
