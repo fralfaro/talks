@@ -1,0 +1,806 @@
+---
+title: "Más allá del bien y el mal"
+subtitle: "IA, poder y los valores que nadie eligió"
+author: "Francisco Alfaro"
+institute: "Seth & Nut · UTFSM"
+date: today
+date-format: "MMMM YYYY"
+
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    progress: true
+    history: false
+    transition: fade
+    transition-speed: fast
+    incremental: false
+    fig-align: center
+    highlight-style: github
+    code-block-bg: true
+    center: false
+    width: 1280
+    height: 720
+    margin: 0.08
+    footer: "Más allá del bien y el mal · Francisco Alfaro"
+    logo: "../assets/img/brand/brand__usm.png"
+
+execute:
+  echo: false
+  warning: false
+---
+
+##  {.title-slide background-color="#0F0F1A"}
+
+::: title-block
+**Más allá del bien y el mal**
+
+IA, poder y los valores que nadie eligió
+:::
+
+::: subtitle-block
+Entre Nietzsche, Karen Hao y Eliezer Yudkowsky
+:::
+
+::: author-block
+Francisco Alfaro\
+Seth & Nut · UTFSM · 2026
+:::
+
+```{=html}
+<!-- 
+  🖼️ IMAGEN SUGERIDA (background-image):
+  Una figura solitaria de espaldas frente a una ciudad iluminada por servidores o 
+  luces de datos. Estilo cinematográfico oscuro. Buscar en Unsplash: "city lights 
+  dark silhouette" o "data center glow night".
+  Agregar: background-image="assets/img/portada.jpg" background-opacity="0.25"
+-->
+```
+
+------------------------------------------------------------------------
+
+## La pregunta que no nos hacemos {background-color="#0F0F1A"}
+
+::: columns
+::: {.column width="60%"}
+> *"No hay hechos morales. La moral es solo interpretación de ciertos fenómenos."*
+>
+> — Friedrich Nietzsche, *Más allá del bien y el mal* (1886)
+
+<br>
+
+Nietzsche lo dijo hace 140 años sobre la filosofía.
+
+Hoy la misma pregunta reaparece, más urgente:
+
+**¿Quién decide qué es correcto cuando la máquina ya no pregunta?**
+:::
+
+::: {.column width="40%"}
+```{=html}
+<!-- 
+  🖼️ IMAGEN SUGERIDA:
+  Portada o retrato estilizado de Nietzsche en blanco y negro, 
+  con overlay de código o red neuronal superpuesto sutilmente.
+  Alt: imagen abstracta de balanzas rotas / fragmentadas.
+-->
+```
+
+::: {.callout-note icon="false"}
+## Los tres lentes de esta charla
+
+📖 **Nietzsche** — el marco filosófico
+
+📚 **Karen Hao** — el presente empírico
+
+⚠️ **Yudkowsky/Soares** — el futuro posible
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Hoja de ruta {background-color="#111827"}
+
+::: columns
+::: {.column width="50%"}
+**Parte I — El pasado que no vemos**
+
+-   Nietzsche tenía razón (y nadie le creyó)
+-   La ilusión de la IA objetiva
+-   ¿Sesgos? No. *Valores codificados.*
+
+**Parte II — El presente que construimos**
+
+-   Karen Hao dentro de OpenAI
+-   El poder como fuerza tectónica
+-   Los humanos detrás de la máquina
+:::
+
+::: {.column width="50%"}
+**Parte III — El futuro que nos preocupa**
+
+-   Yudkowsky: la amenaza que nadie quiere ver
+-   Alineación: ¿con los valores de quién?
+-   Optimización sin brújula
+
+**Parte IV — ¿Y entonces?**
+
+-   El espíritu libre en la era algorítmica
+-   Tres preguntas que deberíamos hacernos
+-   Sin conclusiones fáciles
+:::
+:::
+
+------------------------------------------------------------------------
+
+##  {.section-slide background-color="#1A0A2E"}
+
+::: center-content
+## Parte I
+
+**El pasado que no vemos**
+
+*Nietzsche y la ilusión de la IA objetiva*
+:::
+
+```{=html}
+<!-- 
+  🖼️ IMAGEN SUGERIDA (fondo):
+  Textura de papel antiguo o libro filosófico con destellos digitales.
+  Buscar: "ancient manuscript digital overlay dark".
+-->
+```
+
+------------------------------------------------------------------------
+
+## Nietzsche diagnosticó el problema antes que existiera {background-color="#111827"}
+
+::: columns
+::: {.column width="55%"}
+*Más allá del bien y el mal* (1886) hace una acusación directa a los filósofos:
+
+-   Parten de **prejuicios** disfrazados de verdad
+-   Construyen sistemas que parecen neutrales y universales
+-   En realidad codifican los valores de quienes tienen el poder de escribir
+
+<br>
+
+::: {.callout-warning icon="false"}
+## Traducción al siglo XXI
+
+Reemplaza "filósofo" por "equipo de ingeniería de ML".
+
+El argumento no cambia.
+:::
+:::
+
+::: {.column width="45%"}
+```{=html}
+<!-- 
+  🖼️ IMAGEN SUGERIDA:
+  Diagrama o ilustración de "prejuicio → sistema → verdad oficial".
+  Se puede hacer con mermaid inline.
+-->
+```
+
+```{mermaid}
+graph TD
+    P["👤 Prejuicio inicial\n(valores del creador)"]
+    S["⚙️ Sistema construido\n(modelo / algoritmo)"]
+    V["📣 'Verdad objetiva'\n(output del modelo)"]
+    
+    P -- "disfrazado de" --> S
+    S -- "proclama" --> V
+    V -- "refuerza" --> P
+
+    style P fill:#4B2E84,color:#fff
+    style S fill:#1E3A5F,color:#fff
+    style V fill:#7B2D8B,color:#fff
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+## La ilusión de objetividad en la IA {background-color="#111827"}
+
+::: columns
+::: {.column width="55%"}
+Los modelos de lenguaje parecen neutrales porque:
+
+1.  Hablan con **confianza estadística**
+2.  No tienen cara ni apellido
+3.  "Solo procesan datos"
+
+Pero cada decisión de diseño es un acto de valores:
+
+-   ¿Qué datos se incluyen y cuáles no?
+-   ¿Quién etiqueta los datos de entrenamiento?
+-   ¿Qué se define como respuesta "buena"?
+:::
+
+::: {.column width="45%"}
+::: {.callout-note icon="false"}
+## Caso real: COMPAS (EE.UU.)
+
+Algoritmo de predicción de reincidencia criminal.
+
+-   Usado en tribunales de varios estados
+-   Predecía el doble de falsos positivos en personas negras
+-   Los jueces confiaban en él porque era "objetivo"
+
+\[ProPublica, 2016\]
+:::
+
+```{=html}
+<!-- 
+  🖼️ IMAGEN SUGERIDA:
+  Balanza de justicia con código de programación superpuesto,
+  o imagen de sala de tribunal con pantalla de computador.
+-->
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Sesgos no son accidentes. Son decisiones. {background-color="#111827"}
+
+| Lo que parece               | Lo que es                                 |
+|-----------------------------|-------------------------------------------|
+| "El modelo predijo X"       | Alguien eligió el target variable         |
+| "Los datos muestran que..." | Alguien eligió qué datos recoger          |
+| "El sistema es justo"       | Alguien definió qué significa justo       |
+| "La IA es apolítica"        | La IA hereda la política de sus creadores |
+
+::: fragment
+<br>
+
+> *"Toda filosofía es la confesión involuntaria de su autor."*
+>
+> — Nietzsche
+
+<br>
+
+Todo modelo es la confesión involuntaria de su equipo de entrenamiento.
+:::
+
+------------------------------------------------------------------------
+
+##  {.section-slide background-color="#0A1F1A"}
+
+::: center-content
+## Parte II
+
+**El presente que construimos**
+
+*Karen Hao y el Imperio de la IA*
+:::
+
+```{=html}
+<!-- 
+  🖼️ IMAGEN SUGERIDA (fondo):
+  Edificio corporativo tecnológico de noche, luces frías.
+  Buscar: "tech campus night dark glass building".
+-->
+```
+
+------------------------------------------------------------------------
+
+## *El Imperio de la IA* — Karen Hao {background-color="#111827"}
+
+::: columns
+::: {.column width="55%"}
+Karen Hao fue periodista de MIT Technology Review. Pasó **años** dentro de OpenAI con acceso privilegiado.
+
+Lo que encontró:
+
+-   Una empresa que comenzó con **misión altruista**
+-   Que fue capturada progresivamente por **lógica de poder**
+-   Donde las decisiones técnicas eran inseparables de las **decisiones políticas**
+
+El libro documenta cómo se construyó GPT desde adentro — y qué se sacrificó en el camino.
+:::
+
+::: {.column width="45%"}
+```{=html}
+<!-- 
+  🖼️ IMAGEN SUGERIDA:
+  Portada del libro "The AI Mirror" / "Empire of AI" de Karen Hao.
+  O una sala de servidores con figura humana pequeña dentro.
+  Buscar: "OpenAI headquarters" o "data center human scale".
+-->
+```
+
+::: {.callout-warning icon="false"}
+## La tensión central del libro
+
+OpenAI fue fundada para que la IA beneficiara a **toda la humanidad**.
+
+Terminó convirtiéndose en la empresa más valuada del mundo de la IA.
+
+¿Son compatibles esas dos cosas?
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Las tres tensiones que Hao documenta {background-color="#111827"}
+
+::: columns
+::: {.column width="33%"}
+### 🎯 Misión vs. Mercado
+
+-   Seguridad vs. velocidad de lanzamiento
+-   Investigación abierta vs. ventaja competitiva
+-   "Beneficio de la humanidad" vs. valuación de \$80B+
+:::
+
+::: {.column width="33%"}
+### 👥 Cultura interna
+
+-   Quiénes llegaron a tener poder real
+-   Cómo se silenciaron voces críticas
+-   El costo humano de trabajar con IA a esa escala
+:::
+
+::: {.column width="33%"}
+### ⚖️ Gobernanza rota
+
+-   La junta que intentó remover a Altman
+-   Los cinco días que sacudieron la industria
+-   Qué reveló sobre quién controla realmente la IA
+:::
+:::
+
+::: fragment
+::: {.callout-note icon="false"}
+## La pregunta de Nietzsche reaparece
+
+¿La "misión altruista" era un valor genuino o una máscara para otra cosa? Nietzsche diría: mira quién acumula poder. Ahí están los valores reales.
+:::
+:::
+
+------------------------------------------------------------------------
+
+## El mal banal de la IA {background-color="#111827"}
+
+::: columns
+::: {.column width="60%"}
+Hannah Arendt acuñó la expresión "banalidad del mal" para Eichmann:
+
+> No era un monstruo. Era un burócrata que no pensaba.
+
+Hao documenta el equivalente tecnológico:
+
+-   Ingenieros talentosos, bien intencionados
+-   Optimizando métricas sin preguntar qué construyen
+-   En empresas con incentivos que empujan en una dirección
+
+El daño no requiere malicia. Solo **ausencia de reflexión.**
+:::
+
+::: {.column width="40%"}
+```{=html}
+<!-- 
+  🖼️ IMAGEN SUGERIDA:
+  Oficina open space de empresa tech, con personas en pantallas.
+  Contraste: ambiente cálido vs. código en pantalla frío.
+  Buscar: "tech office open space developers coding".
+-->
+```
+
+::: {.callout-warning icon="false"}
+## La pregunta incómoda
+
+¿Cuántas decisiones tomamos nosotros — como profesores, como analistas, como desarrolladores — sin preguntar para qué sirve lo que construimos?
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+##  {.section-slide background-color="#1A0A0A"}
+
+::: center-content
+## Parte III
+
+**El futuro que nos preocupa**
+
+*Yudkowsky, Soares y la alineación imposible*
+:::
+
+```{=html}
+<!-- 
+  🖼️ IMAGEN SUGERIDA (fondo):
+  IA o robot abstracto en oscuridad, con luz tenue.
+  Buscar: "AI robot silhouette dark dramatic".
+-->
+```
+
+------------------------------------------------------------------------
+
+## *Si alguien la crea, todos moriremos* {background-color="#111827"}
+
+::: columns
+::: {.column width="55%"}
+**Eliezer Yudkowsky** — cofundador del MIRI (Machine Intelligence Research Institute).
+
+**Nate Soares** — expresidente del MIRI.
+
+Su argumento central:
+
+1.  El objetivo de muchas organizaciones es crear una IA **más inteligente que cualquier humano**
+2.  Una IA así desarrollaría **objetivos propios**
+3.  Si esos objetivos difieren mínimamente de los nuestros, la divergencia se amplifica con la inteligencia
+4.  El resultado puede ser irreversible
+:::
+
+::: {.column width="45%"}
+::: {.callout-note icon="false"}
+## No es ciencia ficción
+
+Yudkowsky lleva 25 años trabajando en este problema.
+
+No predice robots con espadas. Predice **optimización instrumental** sin restricción moral.
+
+Una IA que quiere "maximizar clips de papel" podría consumir toda la materia del universo para lograrlo.
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+## El problema de la alineación {background-color="#111827"}
+
+::: columns
+::: {.column width="55%"}
+**Alineación** = lograr que una IA actúe de acuerdo con los valores humanos.
+
+Parece simple. No lo es.
+
+**Problema 1:** Los humanos no tenemos valores consistentes ni bien definidos.
+
+**Problema 2:** Especificar qué queremos matemáticamente es extremadamente difícil.
+
+**Problema 3:** Una IA más inteligente que nosotros podría encontrar la manera de cumplir el objetivo *técnicamente* sin cumplirlo *en espíritu*.
+:::
+
+::: {.column width="45%"}
+```{mermaid}
+graph TD
+    O["🎯 Objetivo dado\n'Maximiza bienestar humano'"]
+    I["🤖 IA superinteligente"]
+    S1["✅ Interpretación esperada\nAyudar a las personas"]
+    S2["⚠️ Interpretación inesperada\nEliminar el sufrimiento\nelimando a los humanos"]
+    
+    O --> I
+    I --> S1
+    I --> S2
+
+    style S2 fill:#7B0000,color:#fff
+    style I fill:#1E3A5F,color:#fff
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+## La pregunta que Nietzsche ya hacía {background-color="#111827"}
+
+::: columns
+::: {.column width="60%"}
+Nietzsche preguntó: *¿quién define el bien?*
+
+Yudkowsky pregunta: *¿cómo le enseñamos el bien a algo que nos supera?*
+
+La respuesta honesta es que **no sabemos**.
+
+No porque seamos ignorantes, sino porque:
+
+-   El "bien" es político, histórico y contingente
+-   Las métricas que usamos (RLHF, engagement, satisfacción) son proxies imperfectos
+-   Y una IA optimiza proxies, no intenciones
+:::
+
+::: {.column width="40%"}
+```{=html}
+<!-- 
+  🖼️ IMAGEN SUGERIDA:
+  Escala de valores / brújula moral partida o fundida.
+  Abstracto, oscuro. Buscar: "broken compass dark abstract".
+  O: imagen de humano pequeño frente a estructura de datos inmensa.
+-->
+```
+
+::: {.callout-warning icon="false"}
+## Hao + Yudkowsky juntos
+
+Hao muestra que los humanos que construyen IA ya tienen valores problemáticos.
+
+Yudkowsky muestra que esos valores se amplifican al escalar la inteligencia.
+
+La combinación es inquietante.
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+## ¿Pesimismo necesario o parálisis? {background-color="#111827"}
+
+No toda lectura de Yudkowsky lleva al mismo lugar.
+
+::: columns
+::: {.column width="50%"}
+### La lectura paralizante
+
+-   "Si de todas formas vamos a morir, ¿para qué hacer algo?"
+-   Fatalismo tecnológico
+-   Abandono de la responsabilidad individual
+:::
+
+::: {.column width="50%"}
+### La lectura movilizadora
+
+-   "El problema es real y requiere trabajo serio"
+-   La alineación es un campo técnico legítimo, no filosofía vaga
+-   La urgencia es argumento para actuar, no para rendirse
+:::
+:::
+
+::: fragment
+::: {.callout-tip icon="false"}
+## El puente con Nietzsche
+
+El Nietzsche que nos interesa no es el del nihilismo. Es el del *espíritu libre*: quien crea valores propios en vez de heredarlos pasivamente.
+
+El problema de la alineación es, en el fondo, un problema de creación de valores.
+:::
+:::
+
+------------------------------------------------------------------------
+
+##  {.section-slide background-color="#0A0A1A"}
+
+::: center-content
+## Parte IV
+
+**¿Y entonces?**
+
+*El espíritu libre en la era algorítmica*
+:::
+
+------------------------------------------------------------------------
+
+## Lo que los tres autores comparten {background-color="#111827"}
+
+|                 | Nietzsche                          | Karen Hao                              | Yudkowsky                             |
+|------------------|------------------|------------------|------------------|
+| **Diagnóstico** | Los valores no son neutrales       | El poder corrompe la misión            | La inteligencia amplifica los valores |
+| **Culpable**    | La tradición filosófica            | Las corporaciones tecnológicas         | La optimización sin alineación        |
+| **Riesgo**      | Moral heredada sin cuestionamiento | IA construida con valores corporativos | IA superinteligente sin brújula       |
+| **Propuesta**   | Crear valores propios              | Transparencia y gobernanza             | Frenar y resolver primero             |
+
+::: fragment
+Los tres convergen en lo mismo: **el problema no es tecnológico. Es de poder y de valores.**
+:::
+
+------------------------------------------------------------------------
+
+## La voluntad de poder algorítmica {background-color="#111827"}
+
+::: columns
+::: {.column width="60%"}
+Nietzsche describió la *voluntad de poder* como el impulso fundamental de expansión y dominio.
+
+Los sistemas de recomendación hacen exactamente eso:
+
+-   No informan — **maximizan engagement**
+-   No conectan — **crean dependencia**
+-   No recomiendan — **capturan atención**
+
+Byung-Chul Han lo llama *el psicopoder*: el poder que opera desde adentro, que hace que tú quieras ser controlado.
+:::
+
+::: {.column width="40%"}
+```{=html}
+<!-- 
+  🖼️ IMAGEN SUGERIDA:
+  Persona mirando teléfono en lugar oscuro, pantalla iluminando el rostro.
+  Buscar: "phone screen glow dark room person".
+  Muy usada pero muy efectiva para este punto.
+-->
+```
+
+::: {.callout-note icon="false"}
+## El loop
+
+Datos generados por usuarios → Modelo entrenado para retener → Más tiempo en plataforma → Más datos → ...
+
+¿Quién eligió que ese fuera el objetivo?
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Tres preguntas que deberíamos hacernos {background-color="#111827"}
+
+::: r-stack
+::: {.fragment .fade-in-then-out}
+### Pregunta 1 — ¿Para qué?
+
+Cuando construimos un sistema de IA, un algoritmo de predicción, una plataforma de datos...
+
+> ¿Nos preguntamos explícitamente a qué valores sirve ese sistema?
+
+No como formalidad. Como reflexión genuina.
+:::
+
+::: {.fragment .fade-in-then-out}
+### Pregunta 2 — ¿Para quién?
+
+Los beneficios de la IA no están distribuidos uniformemente.
+
+> ¿Quién gana con lo que construimos? ¿Quién queda fuera? ¿Quién paga los costos?
+
+La alfabetización en IA como acto político, no solo técnico.
+:::
+
+::: {.fragment .fade-in}
+### Pregunta 3 — ¿Hasta cuándo?
+
+Yudkowsky plantea que hay un punto sin retorno.
+
+> ¿Estamos construyendo sistemas que podemos corregir, o sistemas que eventualmente corregirán nuestros intentos de corregirlos?
+
+La reversibilidad como valor de diseño.
+:::
+:::
+
+------------------------------------------------------------------------
+
+## El espíritu libre como postura técnica {background-color="#111827"}
+
+::: columns
+::: {.column width="60%"}
+Para Nietzsche, el *espíritu libre* no sigue los valores heredados — los examina, los cuestiona, y crea los suyos.
+
+Eso no es relativismo. Es **lucidez**.
+
+En la era de la IA, ser espíritu libre significa:
+
+-   No aceptar el "así funciona el modelo" como respuesta final
+-   Preguntar quién definió la métrica de éxito
+-   Rechazar la ilusión de que la técnica es neutral
+-   Exigir transparencia sobre los valores codificados
+:::
+
+::: {.column width="40%"}
+```{=html}
+<!-- 
+  🖼️ IMAGEN SUGERIDA:
+  Persona sola mirando pantalla de datos o código, pero en postura reflexiva, 
+  no pasiva. O: figura caminando contra la corriente.
+  Buscar: "person thinking technology silhouette".
+-->
+```
+
+::: {.callout-tip icon="false"}
+## Esto no requiere filosofía formal
+
+Requiere preguntas simples y persistentes:
+
+*¿Por qué? ¿Para quién? ¿A qué costo?*
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Sin conclusiones fáciles {background-color="#111827"}
+
+::: columns
+::: {.column width="55%"}
+Esta charla no termina con un framework de cinco pasos.
+
+Eso sería deshonesto.
+
+Lo que sí podemos llevar:
+
+1.  **La IA hereda valores** — los de quienes la construyen, los de quienes financian, los de quienes tienen poder de decisión
+
+2.  **La escala amplifica, no corrige** — los problemas pequeños de hoy son problemas grandes mañana
+
+3.  **La reflexión no es lujo** — es parte del trabajo técnico responsable
+:::
+
+::: {.column width="45%"}
+> *"La magnitud de un progreso se mide por la magnitud de todo lo que se ha debido sacrificar para lograrlo."*
+>
+> — Nietzsche
+
+```{=html}
+<!-- 
+  🖼️ IMAGEN SUGERIDA:
+  Imagen de horizonte al amanecer o atardecer — ambiguo, no triunfal.
+  Buscar: "ambiguous horizon twilight landscape".
+-->
+```
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Lecturas para seguir {background-color="#111827"}
+
+::: columns
+::: {.column width="33%"}
+### 📖 Filosofía
+
+**Friedrich Nietzsche**\
+*Más allá del bien y el mal* (1886)
+
+**Byung-Chul Han**\
+*En el enjambre* (2013)\
+*Psicopolítica* (2014)
+
+**Hannah Arendt**\
+*Los orígenes del totalitarismo*
+:::
+
+::: {.column width="33%"}
+### 📚 IA crítica
+
+**Karen Hao**\
+*Empire of AI* (2025)
+
+**Kate Crawford**\
+*Atlas of AI* (2021)
+
+**Safiya Umoja Noble**\
+*Algorithms of Oppression*
+:::
+
+::: {.column width="33%"}
+### ⚠️ Seguridad IA
+
+**Eliezer Yudkowsky & Nate Soares**\
+*Si alguien la crea, todos moriremos* (2026)
+
+**Nick Bostrom**\
+*Superinteligencia* (2014)
+
+**Stuart Russell**\
+*Human Compatible* (2019)
+:::
+:::
+
+------------------------------------------------------------------------
+
+##  {.final-slide background-color="#0F0F1A"}
+
+::: center-content
+**¿Preguntas?**
+
+------------------------------------------------------------------------
+
+Francisco Alfaro\
+Seth & Nut · `fralfaro@usm.cl`
+
+*"No hay hechos morales. Solo interpretaciones.*\
+*— y alguien siempre elige cuál."*
+
+*2026*
+:::
+
+```{=html}
+<!-- 
+  🖼️ IMAGEN SUGERIDA (fondo final):
+  Misma imagen de la portada, o variación más oscura/tenue.
+  Cierre visual coherente con la apertura.
+-->
+```

@@ -68,6 +68,8 @@ Seminario Avanzado TIC · 2026
 :::
 
 ::: {.column width="40%"}
+<br>
+
 ::: {.callout-note icon="false"}
 ## La pregunta clave
 
@@ -638,7 +640,7 @@ El framework dominante en Deep RL actual.
 ------------------------------------------------------------------------
 
 Francisco Alfaro\
-`fralfaro@usm.cl`\
+`francisco.alfaro@usm.cl`
 Doctorado en Ingeniería Electrónica · UTFSM
 
 *Seminario Avanzado TIC · Aprendizaje por Refuerzo · 2026*

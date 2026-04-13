@@ -34,3 +34,21 @@ Curso en focado en temas de aprendizaje por refuerzo.\
 **Presentaciones:**\
 [Charla Capítulo 13](ipd446/talk1.html) · [Avance del Tema](ipd446/talk2.html) ·[Presentación Final](ipd446/talk3.html)
 :::
+
+## Charlas
+
+::: card
+### Más allá del bien y el mal (Seth & Nut)
+
+IA, poder y los valores que nadie eligió — Nietzsche, Karen Hao y Eliezer Yudkowsky.\
+**Presentaciones:** [Más allá del bien y el mal](ai/mas_alla_bien_mal.html)
+:::
+
+::: card
+### Límites y proyecciones de la IA generativa (Seth & Nut)
+
+Prompts, RAG, agentes, vibe coding y seguridad — para audiencias no técnicas.\
+**Presentaciones:** [Límites y proyecciones de la IA](ai/limites_proyecciones_ia.html)
+:::
+
+
