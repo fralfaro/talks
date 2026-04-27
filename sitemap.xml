@@ -1,35 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://falfaro.xyz/talks/usm_dtd/semana_01.html</loc>
-    <lastmod>2026-02-11T14:52:13.094Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/usm_dtd/semana_02.html</loc>
-    <lastmod>2026-02-11T14:52:13.094Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion_uah.html</loc>
-    <lastmod>2026-02-11T14:52:13.021Z</lastmod>
+    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion_pycon.html</loc>
+    <lastmod>2026-04-27T12:17:44.428Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/hello-quarto/presentacion.html</loc>
-    <lastmod>2026-02-11T14:52:13.021Z</lastmod>
+    <lastmod>2026-04-27T12:17:44.428Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/index.html</loc>
-    <lastmod>2026-02-11T14:52:13.022Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/hello-quarto/index.html</loc>
-    <lastmod>2026-02-11T14:52:13.020Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion_pycon.html</loc>
-    <lastmod>2026-02-11T14:52:13.021Z</lastmod>
+    <lastmod>2026-04-27T12:17:44.429Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/usm_dtd/semana_03.html</loc>
-    <lastmod>2026-02-11T14:52:13.094Z</lastmod>
+    <lastmod>2026-04-27T12:17:44.581Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ai/limites_proyecciones_ia.html</loc>
+    <lastmod>2026-04-27T12:17:43.942Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ipd446/talk2.html</loc>
+    <lastmod>2026-04-27T12:17:44.508Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ipd446/talk1-glosario.html</loc>
+    <lastmod>2026-04-27T12:17:44.508Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ipd446/talk1-speech.html</loc>
+    <lastmod>2026-04-27T12:17:44.508Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ipd446/talk1.html</loc>
+    <lastmod>2026-04-27T12:17:44.508Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ipd446/talk3.html</loc>
+    <lastmod>2026-04-27T12:17:44.509Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ai/mas_alla_bien_mal.html</loc>
+    <lastmod>2026-04-27T12:17:43.942Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/usm_dtd/semana_01.html</loc>
+    <lastmod>2026-04-27T12:17:44.581Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/usm_dtd/semana_02.html</loc>
+    <lastmod>2026-04-27T12:17:44.581Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion_uah.html</loc>
+    <lastmod>2026-04-27T12:17:44.428Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/hello-quarto/index.html</loc>
+    <lastmod>2026-04-27T12:17:44.427Z</lastmod>
   </url>
 </urlset>
