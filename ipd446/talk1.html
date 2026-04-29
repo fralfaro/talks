@@ -765,6 +765,7 @@ Loop (cada episodio):
 <li>✗ <strong>Alta varianza</strong> en <span class="math inline">\(G_t\)</span> → aprendizaje lento</li>
 </ul>
 </div><div class="column" style="width:52%;">
+<p><br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/fig_131_reinforce_convergence_crop.png"></p>
@@ -773,7 +774,7 @@ Loop (cada episodio):
 </div>
 </div></div>
 </section>
-<section id="reinforce-con-baseline" class="slide level2 scrollable">
+<section id="reinforce-con-baseline" class="slide level2">
 <h2>REINFORCE con Baseline</h2>
 <p><strong>Generalización del teorema</strong> — para cualquier <span class="math inline">\(b(s)\)</span> independiente de <span class="math inline">\(a\)</span>:</p>
 <p><span class="math display">\[\nabla J(\theta) \propto \sum_s \mu(s) \sum_a \big(q_\pi(s,a) - b(s)\big) \nabla\pi(a|s,\theta)\]</span></p>
@@ -792,7 +793,7 @@ Loop (cada episodio):
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/fig_132_baseline_comparison_crop.png"></p>
-<figcaption>Fig. 13.2: La baseline reduce varianza significativamente — convergencia mucho más rápida. El baseline no introduce sesgo pero cambia la <strong>tasa</strong> de aprendizaje. <em>(S&amp;B)</em></figcaption>
+<figcaption>Fig. 13.2: La baseline reduce varianza significativamente — convergencia mucho más rápida. El baseline no introduce sesgo pero cambia la <strong>tasa</strong> de aprendizaje.</figcaption>
 </figure>
 </div>
 </div></div>
@@ -950,31 +951,66 @@ Loop (cada episodio):
 <section id="políticas-para-acciones-continuas" class="slide level2">
 <h2>Políticas para acciones continuas</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p>En lugar de probabilidades discretas, aprender una <strong>distribución Gaussiana</strong>:</p>
-<p><span class="math display">\[\pi(a|s,\theta) \doteq \frac{1}{\sigma(s,\theta)\sqrt{2\pi}} \exp\!\left(-\frac{(a-\mu(s,\theta))^2}{2\sigma(s,\theta)^2}\right)\]</span></p>
-<p><strong>Lo que se aprende:</strong> estadísticos de la distribución, no probabilidades directas.</p>
-<p><span class="math display">\[\mu(s,\theta) = \theta_\mu^\top \mathbf{x}^\mu(s), \quad \sigma(s,\theta) = \exp\!\left(\theta_\sigma^\top \mathbf{x}^\sigma(s)\right)\]</span></p>
+<div class="column" style="width:25%;">
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>🎯 Idea central</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>No aprender acciones</strong> directamente, sino <strong>una distribución</strong> sobre ellas:</p>
+<p><span class="math display">\[\pi(a \mid s, \boldsymbol{\theta}) = \mathcal{N}\!\left(\mu,\, \sigma^2\right)\]</span></p>
+<p><span class="math display">\[\mu = \boldsymbol{\theta}_\mu^\top \mathbf{x}^\mu(s)\]</span> <span class="math display">\[\sigma = \exp\!\left(\boldsymbol{\theta}_\sigma^\top \mathbf{x}^\sigma(s)\right)\]</span></p>
+<blockquote>
+<p><strong>¿Por qué <span class="math inline">\(\exp\)</span>?</strong> Garantiza <span class="math inline">\(\sigma &gt; 0\)</span> sin restricciones sobre <span class="math inline">\(\boldsymbol{\theta}_\sigma\)</span>.</p>
+</blockquote>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:25%;">
 <div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>¿Por qué <span class="math inline">\(\exp\)</span> para <span class="math inline">\(\sigma\)</span>?</strong></p>
+<p><strong>📐 Eligibility vector</strong></p>
 </div>
 <div class="callout-content">
-<p>Garantiza positividad <strong>sin restricciones</strong> en la optimización. Se puede optimizar <span class="math inline">\(\theta_\sigma\)</span> libremente en <span class="math inline">\(\mathbb{R}^d\)</span>.</p>
+<p><span class="math inline">\(\nabla\ln\pi\)</span> en <strong>dos componentes</strong>:</p>
+<p><strong>Media</strong> <span class="math inline">\(\boldsymbol{\theta}_\mu\)</span>: <span class="math display">\[\nabla\ln\pi_\mu = \frac{a - \mu}{\sigma^2}\,\mathbf{x}^\mu(s)\]</span></p>
+<p><strong>Escala</strong> <span class="math inline">\(\boldsymbol{\theta}_\sigma\)</span>: <span class="math display">\[\nabla\ln\pi_\sigma = \!\left(\frac{(a-\mu)^2}{\sigma^2} - 1\right)\mathbf{x}^\sigma(s)\]</span></p>
+<p><br></p>
 </div>
 </div>
 </div>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/fig_gaussian_actions_crop.png"></p>
-<figcaption>Distintas Gaussianas con parámetros <span class="math inline">\(\mu\)</span> y <span class="math inline">\(\sigma\)</span>. Se aprende la <strong>distribución</strong>, no la acción directamente. <em>(S&amp;B, Sec. 13.7)</em></figcaption>
-</figure>
+</div><div class="column" style="width:25%;">
+<div class="callout callout-warning no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>🧮 Demostración (resumen)</strong></p>
 </div>
-<p><strong>Eligibility vector Gaussiano</strong> (dos partes):</p>
-<p><span class="math display">\[\nabla\ln\pi(a|s,\theta_\mu) = \frac{a - \mu(s,\theta)}{\sigma(s,\theta)^2}\,\mathbf{x}^\mu(s)\]</span></p>
-<p><span class="math display">\[\nabla\ln\pi(a|s,\theta_\sigma) = \left(\frac{(a-\mu)^2}{\sigma^2} - 1\right)\mathbf{x}^\sigma(s)\]</span></p>
+<div class="callout-content">
+<p>Partiendo de <span class="math inline">\(\nabla v_\pi(s)\)</span> por Bellman y promediando sobre <span class="math inline">\(s \sim \mu(s)\)</span>:</p>
+<p><span class="math display">\[\nabla J = \sum_s \mu(s)\sum_a \nabla\pi(a|s)\,q_\pi(s,a)\]</span></p>
+<p>Aplicando <span class="math inline">\(\nabla\pi = \pi \cdot \nabla\ln\pi\)</span>:</p>
+<p><span class="math display">\[\nabla J = \mathbb{E}_\pi\!\left[\nabla\ln\pi(a|s)\,q_\pi(s,a)\right]\]</span></p>
+<p><br><br><br></p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:25%;">
+<div class="callout callout-important no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>✅ Resultado</strong></p>
+</div>
+<div class="callout-content">
+<p>El teorema PG es <strong>idéntico</strong> al caso episódico:</p>
+<p><span class="math display">\[\boxed{\nabla J(\boldsymbol{\theta}) = \mathbb{E}_\pi\!\left[G_t\,\nabla\ln\pi(a|s,\boldsymbol{\theta})\right]}\]</span></p>
+<p>Solo cambia cómo se calcula <span class="math inline">\(\nabla\ln\pi\)</span>.</p>
+<p><strong>REINFORCE no cambia.</strong> La política Gaussiana es un <em>plug-in</em>.</p>
+<p><br><br><br></p>
+</div>
+</div>
+</div>
 </div></div>
 </section>
 <section id="tabla-de-analogías-bandit-policy-gradient" class="slide level2">
@@ -1212,13 +1248,25 @@ Loop (cada episodio):
 </div>
 </div></div>
 <div class="fragment">
-<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
-<p><strong>La pregunta para tu proyecto</strong></p>
+<p><strong>📝 Preguntas</strong></p>
 </div>
 <div class="callout-content">
-<p>¿Cuándo en <strong>tu problema</strong> tiene más sentido aprender <span class="math inline">\(\pi\)</span> directamente que aprender <span class="math inline">\(Q\)</span> primero? ¿El óptimo podría ser estocástico? ¿El espacio de acciones es continuo?</p>
+<p>¿En <strong>tu problema</strong>: espacio continuo, óptimo estocástico, o política directa más natural que <span class="math inline">\(Q\)</span>?</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fragment">
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>🔗 Recursos</strong></p>
+</div>
+<div class="callout-content">
+<p><a href="https://colab.research.google.com/drive/1FJ6C7CyK7dLkocyJR_hrMPhMxnilhfpR?usp=sharing">💻 Google Colab — Notebook</a> · <a href="https://notebooklm.google.com/notebook/eead14c2-204e-4bb6-bc95-8d11c00df412">🎧 NotebookLM — Capítulo 13</a></p>
 </div>
 </div>
 </div>
