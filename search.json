@@ -1416,189 +1416,322 @@
   {
     "objectID": "ai/datasaturday_2026.html#section",
     "href": "ai/datasaturday_2026.html#section",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "",
-    "text": "Lo que nadie te dice sobre la IA generativa\nLímites, técnicas y lo que viene\n\n\nLLMs · Prompt Engineering · RAG · Agentes · Seguridad · Python\nPyCon Chile 2026\n\n\nFrancisco Alfaro Medina\nDirección de Transformación Digital · UTFSM\nfralfaro.github.io/portfolio"
+    "text": "Datos, Storytelling e IA\nEl nuevo arte de contar con datos\n\n\nNarrativa · Visualización · IA Generativa · Python · Quarto\nData Saturday Santiago · 6 Junio 2026\n\n\nFrancisco Alfaro Medina\nUniversidad Técnica Federico Santa María\nDirección de Transformación Digital · 2026"
   },
   {
     "objectID": "ai/datasaturday_2026.html#sobre-nosotros",
     "href": "ai/datasaturday_2026.html#sobre-nosotros",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "Sobre Nosotros",
     "text": "Sobre Nosotros\n\n\n\n\n  \n    \n      FA\n      Francisco Alfaro\n      Líder de Análisis y Modelación Avanzada\n    \n    \n    \n      Especialista en inteligencia artificial, estadística y educación.\n      🌐 Portfolio\n    \n  \n  \n    \n      VC\n      Valeska Canales\n      Científica de Datos\n    \n    \n    \n      Especialista en visualización, storytelling y comunicación de datos.\n      🌐 Portfolio\n    \n  \n  \n    \n      AR\n      Aníbal Romo\n      Gestión del Cambio Organizacional\n    \n    \n    \n      Profesional en transformación digital e innovación institucional.\n      💼 LinkedIn"
   },
   {
     "objectID": "ai/datasaturday_2026.html#agenda",
     "href": "ai/datasaturday_2026.html#agenda",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "Agenda",
     "text": "Agenda\n\n\n\n\nNo\nNope\nNo chance"
   },
   {
     "objectID": "ai/datasaturday_2026.html#section-1",
     "href": "ai/datasaturday_2026.html#section-1",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "",
     "text": "Storytelling principle #1\n\n\nNunca revelar el final antes de tiempo.\nSiempre eleva la tensión y el drama"
   },
   {
     "objectID": "ai/datasaturday_2026.html#agenda-v2",
     "href": "ai/datasaturday_2026.html#agenda-v2",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "Agenda (v2)",
-    "text": "Agenda (v2)\n\nNunca reveles el final\n\nLos detalles son importantes, pero no todos los detalles.\n\nExplicar menos, Mostrar más\nTu primera versión será horrible."
+    "text": "Agenda (v2)\n\nLa IA ya no es una herramienta — es un copiloto narrativo.\nVisualizar más rápido no siempre es mejor.\nEl juicio humano es tu ventaja competitiva.\nTu primera versión seguirá siendo horrible."
   },
   {
     "objectID": "ai/datasaturday_2026.html#qué-es-storytelling",
     "href": "ai/datasaturday_2026.html#qué-es-storytelling",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "Qué es Storytelling?",
     "text": "Qué es Storytelling?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n🔥 Las historias son la primera tecnología humana.\n\n\nStories are how humans share knowledge.\nIt’s our oldest learning tool — built for memory, connection, and meaning.\nUse it well."
   },
   {
     "objectID": "ai/datasaturday_2026.html#qué-es-data-storytelling",
     "href": "ai/datasaturday_2026.html#qué-es-data-storytelling",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "Qué es Data Storytelling?",
     "text": "Qué es Data Storytelling?\n\n\n\n\n\n\n\n\n\n\n\n📊 Data Storytelling es una forma de comunicar con datos."
   },
   {
     "objectID": "ai/datasaturday_2026.html#ohh-nuestros-cerebros-son-hackables",
     "href": "ai/datasaturday_2026.html#ohh-nuestros-cerebros-son-hackables",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "Ohh, nuestros cerebros son hackables…",
     "text": "Ohh, nuestros cerebros son hackables…"
   },
   {
     "objectID": "ai/datasaturday_2026.html#atención-y-memoria",
     "href": "ai/datasaturday_2026.html#atención-y-memoria",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "Atención y memoria",
     "text": "Atención y memoria"
   },
   {
     "objectID": "ai/datasaturday_2026.html#narrativa",
     "href": "ai/datasaturday_2026.html#narrativa",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "Narrativa",
     "text": "Narrativa\n\n\n\nUsa trucos de Storytelling (narrativa) para crear presentaciones que serán recordadas y que causarán impacto\n\n\n\n\n\n\n\n\n\n🎭 Emociones inspiran acción\n\n\nGreat ideas need great communication.\nStorytelling is your toolkit to move people.\nFacts inform — emotions inspire action."
   },
   {
     "objectID": "ai/datasaturday_2026.html#más-que-gráficos-bonitos",
     "href": "ai/datasaturday_2026.html#más-que-gráficos-bonitos",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "Más que gráficos bonitos",
     "text": "Más que gráficos bonitos\n\n\n 🔢 No compartas números\n\n 🪶Comparte una historia\n\n\n (C) Storytelling with Data, por Cole Nussbaumer Knaflic."
   },
   {
     "objectID": "ai/datasaturday_2026.html#section-2",
     "href": "ai/datasaturday_2026.html#section-2",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "",
     "text": "Storytelling principle #2\n\n\nLos detalles son importantes, pero no todos los detalles son importantes.\n\n\n\n\n\nDetails guide attention.\nShow less — but better.\nFocus only on what moves the story forward."
   },
   {
     "objectID": "ai/datasaturday_2026.html#ejemplo-spotify-wrapped",
     "href": "ai/datasaturday_2026.html#ejemplo-spotify-wrapped",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "Ejemplo: Spotify Wrapped",
     "text": "Ejemplo: Spotify Wrapped\n\n\n\n\n\n\n\n\n\nCómo hacer millones de personas  compartir estadísticas en redes sociales?"
   },
   {
     "objectID": "ai/datasaturday_2026.html#visualización-1",
     "href": "ai/datasaturday_2026.html#visualización-1",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "Visualización …",
     "text": "Visualización …\n\n\n\n\nGráficos claros y comprensibles\nElección correcta del gráfico\nPatrones y anomalías visibles\nDatos complejos → ideas simples\n\n\n\n\n\n\n\n\n\n\n⌛ Si no se entiende en 5-7 segundos, simplifica o cambia el título."
   },
   {
     "objectID": "ai/datasaturday_2026.html#section-3",
     "href": "ai/datasaturday_2026.html#section-3",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "",
     "text": "Más fácil de distinguir ⟵────────────────────────────⟶ Más difícil de distinguir"
   },
   {
     "objectID": "ai/datasaturday_2026.html#ejemplos",
     "href": "ai/datasaturday_2026.html#ejemplos",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "Ejemplos",
     "text": "Ejemplos\n\n\n\n\n\n\n\n\n ❌ Chartjunk\n\n\n\n\n\n\n✅ Good Chart"
   },
   {
     "objectID": "ai/datasaturday_2026.html#section-4",
     "href": "ai/datasaturday_2026.html#section-4",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "",
     "text": "Storytelling principle #3\n\n\nExplicar Menos, Mostrar Más"
   },
   {
     "objectID": "ai/datasaturday_2026.html#mejores-gráficos-para-tus-datos",
     "href": "ai/datasaturday_2026.html#mejores-gráficos-para-tus-datos",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "Mejores Gráficos para tus Datos",
     "text": "Mejores Gráficos para tus Datos\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n(C) Essential chart types for data visualization, by Atlassian.\n\nYou don’t need fancy charts.\nBar, scatter, box, heatmap, big text — that’s 90% of data storytelling.\nSimple wins."
   },
   {
     "objectID": "ai/datasaturday_2026.html#pilares-visualización---noah-iliinsky",
     "href": "ai/datasaturday_2026.html#pilares-visualización---noah-iliinsky",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "4 Pilares Visualización - Noah Iliinsky",
     "text": "4 Pilares Visualización - Noah Iliinsky\n\n\n\n\nPropósito: Define la meta.\nContenido: Datos relevantes.\nEstructura: Organización clara.\nFormato: Gráfico adecuado.\n\n\n\n\n\n\n\n\n\n(C) Noah Iliinsky: “Four Pillars of Visualization” - YouTube."
   },
   {
     "objectID": "ai/datasaturday_2026.html#herramientas",
     "href": "ai/datasaturday_2026.html#herramientas",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "Herramientas",
     "text": "Herramientas"
   },
   {
     "objectID": "ai/datasaturday_2026.html#section-5",
     "href": "ai/datasaturday_2026.html#section-5",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "",
     "text": "🥱 1° versión \\(&lt;\\) … \\(&lt;\\) 😊 última versión\n\n\nFirst versions are never perfect.\nDraft → feedback → improve.\nIn 2026, AI compresses this cycle dramatically.\nWhat took days now takes hours."
   },
   {
     "objectID": "ai/datasaturday_2026.html#section-6",
     "href": "ai/datasaturday_2026.html#section-6",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "",
     "text": "Storytelling principle #4\n\n\nTu primera versión será siempre horrible.\n\n…y hoy la IA te ayuda a llegar más rápido a la buena.\n\n\n\n\n\n\n\nBad first drafts are normal — always were.\nWhat changes in 2026 is the speed of iteration.\nThe principle stays. The tools change."
   },
   {
+    "objectID": "ai/datasaturday_2026.html#la-ecuación-está-cambiando",
+    "href": "ai/datasaturday_2026.html#la-ecuación-está-cambiando",
+    "title": "Datos, Storytelling e IA",
+    "section": "La ecuación está cambiando",
+    "text": "La ecuación está cambiando\n\n\n\n\n“Contar historias con datos siempre ha sido un desafío. Transformar números en narrativas que informen, persuadan y movilicen requiere claridad visual, estructura narrativa y criterio comunicacional.”\n\n\n\nDurante años, ese trabajo dependía casi completamente del analista:\n\n✍️ Elegir el gráfico correcto\n🧵 Encontrar el hilo conductor\n🎯 Adaptar el mensaje a la audiencia\n\n\n\n\n\n  🤖\n  Hoy, la IA\n  está cambiando esa ecuaciónde formas que reciénempezamos a entender.\n\n\n\nSet the stage. The problem hasn’t changed — telling stories with data is still hard.\nWhat changed is who does the heavy lifting on the first draft."
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#tres-dimensiones-del-cambio",
+    "href": "ai/datasaturday_2026.html#tres-dimensiones-del-cambio",
+    "title": "Datos, Storytelling e IA",
+    "section": "Tres dimensiones del cambio",
+    "text": "Tres dimensiones del cambio\n\n\n\n\n  \n    01\n    De la herramientaal copiloto narrativo\n    La IA ya no solo limpia datos o sugiere gráficos. Hoy propone estructuras narrativas completas y adapta el tono según la audiencia.\n  \n  \n    02\n    Visualización generativa:más rápido, pero no siempre mejor\n    Pasar de datos crudos a visualizaciones en segundos es una ventaja real — y también una trampa cuando se usa sin criterio.\n  \n  \n    03\n    El juicio humanocomo ventaja competitiva\n    La IA sabe generar, no decidir. Saber qué historia importa, para quién y por qué ahora sigue siendo territorio humano.\n  \n\n\nThree dimensions — one talk.\nEach dimension has a tension: the old way vs. the new way.\nWe’ll walk through each with real examples."
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#dimensión-1-de-la-herramienta-al-copiloto",
+    "href": "ai/datasaturday_2026.html#dimensión-1-de-la-herramienta-al-copiloto",
+    "title": "Datos, Storytelling e IA",
+    "section": "Dimensión 1 · De la Herramienta al Copiloto",
+    "text": "Dimensión 1 · De la Herramienta al Copiloto\n\n\nLa pregunta ya no es cómo construir el primer borrador.\n\n\nLa pregunta ahora es: ¿cómo evaluarlo, refinarlo y hacerlo propio?\n\n\nThis is the core shift of dimension 1.\nThe bottleneck moved from generation to curation."
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#cómo-evolucionó-el-rol-de-la-ia",
+    "href": "ai/datasaturday_2026.html#cómo-evolucionó-el-rol-de-la-ia",
+    "title": "Datos, Storytelling e IA",
+    "section": "Cómo evolucionó el rol de la IA",
+    "text": "Cómo evolucionó el rol de la IA\n\n\n\n\n  \n    2020 – 2022\n    \n    \n      🔧 Herramienta de soporte\n      Autocompletar código, sugerir tipos de gráficos, limpiar datasets con pandas. El analista diseña todo, la IA ejecuta tareas puntuales.\n    \n  \n  \n    2023 – 2024\n    \n    \n      ✍️ Asistente de contenido\n      Genera código Python completo, escribe descripciones de gráficos, resume hallazgos. El analista aún define la estructura narrativa.\n    \n  \n  \n    2025 – 2026\n    \n    \n      🧭 Copiloto narrativo\n      Propone estructuras narrativas completas, genera versiones alternativas de una historia, adapta el tono según audiencia (directivo vs. técnico), identifica la tensión en los datos.\n    \n  \n\n\nThis timeline is not about model versions — it’s about the analytic workflow.\nThe shift: from “AI does tasks” to “AI proposes the whole arc.”"
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#antes-vs.-ahora",
+    "href": "ai/datasaturday_2026.html#antes-vs.-ahora",
+    "title": "Datos, Storytelling e IA",
+    "section": "Antes vs. Ahora",
+    "text": "Antes vs. Ahora\n\n\n\n\n  \n    Antes\n    📄Página en blanco: el analista construye la narrativa desde cero\n    🔁Iteración manual: una versión a la vez, días de trabajo\n    🎯El analista es escritor, editor y diseñador al mismo tiempo\n    ⏱️El primer borrador consume la mayor parte del tiempo disponible\n  \n  →\n  \n    Ahora\n    🤖La IA propone una estructura narrativa completa como punto de partida\n    ⚡Múltiples versiones en paralelo: ¿tono ejecutivo? ¿técnico? ¿divulgativo?\n    🧑‍⚖️El analista se convierte en curador y editor, no en escritor\n    ✅El tiempo se invierte en refinar, validar y hacer propia la historia\n  \n\n\nThe blank page problem is largely solved.\nThe new problem: discernment. Not all AI-generated narratives are correct or appropriate.\nThe analyst’s critical thinking is more valuable than ever."
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#qué-puede-hacer-la-ia-hoy",
+    "href": "ai/datasaturday_2026.html#qué-puede-hacer-la-ia-hoy",
+    "title": "Datos, Storytelling e IA",
+    "section": "Qué puede hacer la IA hoy",
+    "text": "Qué puede hacer la IA hoy\n\n\n\nNarrativa\n\nProponer estructuras narrativas (problema → tensión → resolución)\nGenerar versiones por audiencia: directivo, técnico, prensa\nEscribir resúmenes ejecutivos desde un dataset\nIdentificar el insight principal entre cientos de métricas\n\n\nVisualización\n\nSugerir el tipo de gráfico más adecuado para cada mensaje\nDescribir en lenguaje natural qué muestra un gráfico\nGenerar código completo (Python/R/Vega-Lite) desde una descripción\nProponer paletas y jerarquía visual según la historia\n\n\n\n\n\nEl trabajo no desaparece — el punto de partida cambia.\n\n\nKey insight: AI is a starting-point machine, not a finishing-point machine.\nEvery one of these capabilities requires human review, context, and judgment to be useful."
+  },
+  {
     "objectID": "ai/datasaturday_2026.html#el-nuevo-stack-de-data-storytelling",
     "href": "ai/datasaturday_2026.html#el-nuevo-stack-de-data-storytelling",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "El nuevo stack de Data Storytelling",
     "text": "El nuevo stack de Data Storytelling\n\n\nGenerar narrativa\n\nChatGPT o1 / Claude 3.5 → guión, insights, resumen ejecutivo\nGemini 2.0 → análisis multimodal (sube el gráfico, pide la historia)\nNotebookLM → convierte tu dataset en podcast o briefing\n\nCrear visualizaciones\n\nNapkin AI → texto → diagrama en segundos\nGamma → datos → presentación completa\nJulius AI → chat con tu CSV, genera gráficos automáticamente\n\n\nEjecutar y desplegar\n\nStreamlit + Claude API → apps de datos con lenguaje natural\nEvidence.dev → reportes en Markdown con SQL en vivo\nObservable Framework → dashboards estáticos de alto rendimiento\n\nModelos locales (sin mandar datos a la nube)\n\nOllama + LLaMA 3 / Mistral → corre modelos en tu laptop\nLM Studio → interfaz visual para modelos locales\nAnything LLM → RAG local sobre tus propios documentos\n\n\n\nThe stack has exploded since 2023.\nKey shift: you can now run serious models locally — no data leaves your machine.\nFor institutional data (UTFSM, health, finance) this is critical."
   },
   {
-    "objectID": "ai/datasaturday_2026.html#agentes-de-ia-para-datos",
-    "href": "ai/datasaturday_2026.html#agentes-de-ia-para-datos",
-    "title": "Lo que nadie te dice sobre la IA generativa",
-    "section": "Agentes de IA para datos",
-    "text": "Agentes de IA para datos\n\n\n\nUn agente no solo responde — planifica, ejecuta pasos y usa herramientas.\n\n\n\n\nFrameworks en 2026\n\n\n\nHerramienta\nPara qué\n\n\n\n\nClaude Code\nAgente de código en terminal\n\n\nLangGraph\nFlujos multi-agente complejos\n\n\nCrewAI\nEquipos de agentes especializados\n\n\nn8n\nAutomatización sin código\n\n\nCopilot Studio\nAgentes empresariales (Microsoft)\n\n\n\n\n\nAgents are the big shift in 2026.\nYou stop prompting and start delegating.\nFor data storytelling: the agent does the EDA, you review the story."
+    "objectID": "ai/datasaturday_2026.html#dimensión-2-visualización-generativa",
+    "href": "ai/datasaturday_2026.html#dimensión-2-visualización-generativa",
+    "title": "Datos, Storytelling e IA",
+    "section": "Dimensión 2 · Visualización Generativa",
+    "text": "Dimensión 2 · Visualización Generativa\n\n\nMás rápido, pero no siempre mejor.\n\n\nLa velocidad puede producir ruido visual disfrazado de insight.\n\n\nThis is the central tension of dimension 2.\nSpeed is a real advantage. But speed without judgment is a trap."
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#la-promesa-datos-visualización-en-segundos",
+    "href": "ai/datasaturday_2026.html#la-promesa-datos-visualización-en-segundos",
+    "title": "Datos, Storytelling e IA",
+    "section": "La promesa: datos → visualización en segundos",
+    "text": "La promesa: datos → visualización en segundos\n\n\n\nHerramientas como Napkin AI, Copilot en Power BI y los modelos multimodales permiten pasar de datos crudos a visualizaciones en segundos.\n\n\nEso es una ventaja real:\n\n⚡ Explorar decenas de opciones visuales en minutos\n🔄 Iterar el mismo gráfico para distintas audiencias\n💡 Descubrir patrones que no habrías buscado\n🧪 Probar hipótesis visuales sin escribir código\n\n\n\n\n  Flujo tradicional\n  📂 Cargar datos (10 min)\n  🧹 Limpiar y explorar (45 min)\n  📊 Elegir y construir gráfico (30 min)\n  ✍️ Escribir narrativa (60 min)\n  \n  Flujo con IA\n  📂 Cargar datos (10 min)\n  🤖 IA: explorar + visualizar (5 min)\n  🧑‍⚖️ Analista: curar + validar (45 min)\n\n\n\nThe time savings are real but the breakdown changes.\nMore time on judgment, less on mechanics. This is a good trade — if you know the craft."
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#la-trampa-velocidad-sin-criterio",
+    "href": "ai/datasaturday_2026.html#la-trampa-velocidad-sin-criterio",
+    "title": "Datos, Storytelling e IA",
+    "section": "La trampa: velocidad sin criterio",
+    "text": "La trampa: velocidad sin criterio\n\n\n\n\n  ⚠️ Caso real: el gráfico que confunde\n  La IA genera un gráfico de barras apiladas con 12 categorías, 3 años de datos, doble eje Y y un degradado de colores para \"diferenciar mejor\".\n  El resultado se ve profesional. Los colores son consistentes. El título tiene keywords del negocio.\n  Pero nadie puede leerlo en 7 segundos. Y el insight que importa está enterrado en la cuarta barra del segundo año.\n\n\n\nPor qué ocurre:\n\nLa IA optimiza para completitud, no para claridad\nNo sabe cuál es el insight que importa\nEl gráfico “bonito” genera confianza falsa\nLa velocidad reduce el tiempo de reflexión crítica\n\n\n\n\nEl gráfico perfecto para la historia incorrecta sigue siendo un error.\n\n\n\n\nThe trap is subtle: a beautiful chart that misleads is worse than a plain chart that clarifies.\nAI optimizes for visual completeness, not communicative clarity. Those are different objectives."
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#cuándo-la-ia-ayuda-vs.-cuándo-confunde",
+    "href": "ai/datasaturday_2026.html#cuándo-la-ia-ayuda-vs.-cuándo-confunde",
+    "title": "Datos, Storytelling e IA",
+    "section": "Cuándo la IA ayuda vs. cuándo confunde",
+    "text": "Cuándo la IA ayuda vs. cuándo confunde\n\n\n\n\n  \n    ✅ La IA ayuda cuando...\n    \n      📈Necesitas explorar rápidamente qué tipo de gráfico comunica mejor una tendencia\n      🔁Quieres generar 5 versiones del mismo gráfico para audiencias distintas en minutos\n      🔍Buscas patrones que no anticipabas en un dataset grande y complejo\n      📝Necesitas un primer borrador de narrativa para revisarlo y refinarlo con criterio propio\n    \n  \n  \n    ❌ La IA confunde cuando...\n    \n      🎨Se acepta el primer gráfico generado sin verificar si comunica el mensaje correcto\n      📊Se prioriza la riqueza visual (más colores, más métricas) sobre la claridad del mensaje\n      🏃La velocidad de generación reduce el tiempo dedicado a validar el insight detrás del dato\n      🔒Se confunde \"la IA lo generó\" con \"la historia es correcta y relevante para esta audiencia\"\n    \n  \n\n\nThe key criterion: does the visualization communicate the ONE thing that matters?\nIf you can’t answer that in 5 seconds, the chart isn’t done yet."
   },
   {
     "objectID": "ai/datasaturday_2026.html#ia-visualización-el-estado-del-arte",
     "href": "ai/datasaturday_2026.html#ia-visualización-el-estado-del-arte",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "IA + Visualización: el estado del arte",
     "text": "IA + Visualización: el estado del arte\n\n\n\n\n\nGamma: de bullet points a presentación completa\n\n\n\n\n\n\n\nJulius AI: chat con tu CSV\n\n\n\n\n\n\n\nNapkin AI: texto → diagrama\n\n\n\n\n\n\n\nNotebookLM: tu dataset como fuente\n\n\n\n\n\nReplace these GIFs with screen recordings if you have them.\nGamma: https://gamma.app — best for fast deck generation.\nJulius: https://julius.ai — best for CSV chat.\nNapkin: https://napkin.one — best for diagrams from text.\nNotebookLM: https://notebooklm.google.com — best for document Q&A."
   },
   {
-    "objectID": "ai/datasaturday_2026.html#agenda-v2-1",
-    "href": "ai/datasaturday_2026.html#agenda-v2-1",
-    "title": "Lo que nadie te dice sobre la IA generativa",
-    "section": "Agenda (v2)",
-    "text": "Agenda (v2)\n\nNunca reveles el final\n\nLos detalles son importantes, pero no todos los detalles\n\nExplica menos, muestra más\n\nTu primer borrador será horrible\n\n\n\nA mysterious agenda — like a good story.\nNow you’ve seen how each point connects.\nSimple rules to tell better stories with data."
+    "objectID": "ai/datasaturday_2026.html#agentes-de-ia-para-datos",
+    "href": "ai/datasaturday_2026.html#agentes-de-ia-para-datos",
+    "title": "Datos, Storytelling e IA",
+    "section": "Agentes de IA para datos",
+    "text": "Agentes de IA para datos\n\n\n\nUn agente no solo responde — planifica, ejecuta pasos y usa herramientas.\n\n\nEn data storytelling:\n\n🔍 El agente hace el EDA y describe los patrones\n📊 Elige y genera la visualización adecuada\n📝 Propone una narrativa por audiencia\n🔁 El analista revisa la historia, no el código\n\n\n\nFrameworks en 2026\n\n\n\nHerramienta\nPara qué\n\n\n\n\nClaude Code\nAgente de código en terminal\n\n\nLangGraph\nFlujos multi-agente complejos\n\n\nCrewAI\nEquipos de agentes especializados\n\n\nn8n\nAutomatización sin código\n\n\nCopilot Studio\nAgentes empresariales (Microsoft)\n\n\n\n\n\nAgents are the big shift in 2026.\nYou stop prompting and start delegating.\nFor data storytelling: the agent does the EDA, you review the story."
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#dimensión-3-el-juicio-humano",
+    "href": "ai/datasaturday_2026.html#dimensión-3-el-juicio-humano",
+    "title": "Datos, Storytelling e IA",
+    "section": "Dimensión 3 · El Juicio Humano",
+    "text": "Dimensión 3 · El Juicio Humano\n\n\nLa IA sabe generar. No sabe decidir.\n\n\nSaber qué historia importa, para quién y por qué ahorasigue siendo territorio humano.\n\n\nThis is the most important dimension.\nAI fluency is becoming a commodity — judgment is the differentiator."
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#lo-que-la-ia-no-sabe",
+    "href": "ai/datasaturday_2026.html#lo-que-la-ia-no-sabe",
+    "title": "Datos, Storytelling e IA",
+    "section": "Lo que la IA no sabe",
+    "text": "Lo que la IA no sabe\n\n\n\n\n  \n    🎯\n    Qué historia importa\n    La IA puede encontrar patrones en los datos. No puede saber cuál de esos patrones es estratégicamente relevante para tu organización hoy.\n    Las ventas bajaron en zona norte Y en zona sur. ¿Cuál cuenta la historia que el directorio necesita escuchar?\n  \n  \n    👥\n    Para quién\n    La IA puede cambiar el tono si se lo pides. No conoce a las personas en la sala, su historia con el tema, sus sesgos y sus preocupaciones.\n    El CFO y el equipo de producto ven los mismos datos. La historia que mueve a cada uno es completamente distinta.\n  \n  \n    ⏰\n    Por qué ahora\n    La IA no tiene contexto organizacional ni temporal. No sabe que hay una fusión en curso, un presupuesto a decidir o una crisis que gestionar.\n    El mismo dato de rotación de personal tiene significados completamente distintos en enero que en octubre de un año electoral.\n  \n\n\nThese three questions are the foundation of human judgment in data storytelling.\nAI can generate an answer to each — but cannot know the answer. There’s a difference."
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#el-framework-ia-criterio-humano",
+    "href": "ai/datasaturday_2026.html#el-framework-ia-criterio-humano",
+    "title": "Datos, Storytelling e IA",
+    "section": "El framework: IA + criterio humano",
+    "text": "El framework: IA + criterio humano\n\n\n\n\n  \n    \n      🎯\n      Propósito\n      ¿Qué debe cambiar en quien escucha? ¿Qué acción o decisión se busca?\n    \n    \n      IA puedeGenerar hipótesis de insights posibles desde los datos\n      Humano decideCuál de esos insights importa dado el contexto estratégico real\n    \n  \n  \n    \n      👥\n      Audiencia\n      ¿Quién escucha? ¿Qué saben, qué les preocupa, qué los mueve?\n    \n    \n      IA puedeAdaptar vocabulario y tono si defines el perfil de audiencia\n      Humano decideQué sabe esa audiencia específica y cómo está emocionalmente situada\n    \n  \n  \n    \n      ⚡\n      Tensión\n      ¿Cuál es el conflicto o problema que la historia resuelve?\n    \n    \n      IA puedeIdentificar anomalías, brechas y tendencias en los datos\n      Humano decideCuál de esas tensiones es la que moviliza a esta audiencia ahora\n    \n  \n  \n    \n      ✅\n      Resolución\n      ¿Qué hace el oyente después de escuchar la historia?\n    \n    \n      IA puedeProponer recomendaciones y cierres narrativos posibles\n      Humano decideSi esa resolución es viable, oportuna y éticamente responsable\n    \n  \n\n\nThis framework is the practical output of the talk.\nIt’s not a checklist — it’s a thinking structure.\nAI amplifies each step. Humans own the decisions at each step."
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#aplicando-el-framework-un-ejemplo-real",
+    "href": "ai/datasaturday_2026.html#aplicando-el-framework-un-ejemplo-real",
+    "title": "Datos, Storytelling e IA",
+    "section": "Aplicando el framework: un ejemplo real",
+    "text": "Aplicando el framework: un ejemplo real\n\n\nEl dato: La tasa de deserción estudiantil en primer año aumentó un 18% en el último semestre.\n\n\nSin framework (lo que haría la IA sola):\n\n“Las métricas de retención estudiantil muestran una variación negativa de 18 puntos porcentuales en el período analizado. Se recomienda revisar los factores asociados.”\n\n🔴 Correcto. Inútil.\n\n\nCon framework (analista + IA):\n\n🎯 Propósito: Que el Comité Académico apruebe una intervención de acompañamiento temprano antes de julio.\n👥 Audiencia: Directivos con presión por rankings, pero sin datos históricos de cohortes anteriores.\n⚡ Tensión: El 18% no es nuevo — es el mismo patrón de hace 3 años, cuando no se actuó. Eso es la historia.\n✅ Resolución: “Tenemos la misma señal de alarma que en 2022. En 2022 no actuamos. Esta vez, tenemos 6 semanas para hacer la diferencia.”\n\n\n\nSame data. Completely different outcome depending on whether you apply the framework.\nThe AI could have written the first version in 3 seconds. The second version required a human who knows the organization."
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#demo-en-vivo",
+    "href": "ai/datasaturday_2026.html#demo-en-vivo",
+    "title": "Datos, Storytelling e IA",
+    "section": "Demo en vivo",
+    "text": "Demo en vivo\n\n\nPython · Quarto · IA Generativa\n\n\nFlujos de trabajo reales donde la IA amplifica el criterio del analista sin reemplazarlo.\n\n\nLive demo section. Three workflows to show:\n1. Claude API: send a dataframe summary, get a narrative structure back\n2. Quarto + Python: parameterized report generation with AI-written summaries\n3. Julius AI or Napkin: quick visual generation from description"
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#demo-1-copiloto-narrativo-con-claude-api",
+    "href": "ai/datasaturday_2026.html#demo-1-copiloto-narrativo-con-claude-api",
+    "title": "Datos, Storytelling e IA",
+    "section": "Demo 1 · Copiloto narrativo con Claude API",
+    "text": "Demo 1 · Copiloto narrativo con Claude API\n\nimport anthropic\nimport pandas as pd\n\nclient = anthropic.Anthropic()\ndf = pd.read_csv(\"ventas_regiones.csv\")\n\n# El analista define el contexto — la IA genera el borrador narrativo\nresumen = df.describe().to_string()\naudiencia = \"directorio ejecutivo, reunión de presupuesto Q3\"\nproposito = \"aprobar inversión en zona norte\"\n\nprompt = f\"\"\"\nEres un analista de datos senior. Tienes este resumen estadístico:\n{resumen}\n\nLa audiencia es: {audiencia}\nEl propósito de la presentación es: {proposito}\n\nPropón una estructura narrativa de 3 puntos con el insight principal,\nla tensión en los datos y la resolución recomendada.\nSé específico. Usa los números del resumen.\n\"\"\"\n\nmensaje = client.messages.create(\n    model=\"claude-opus-4-7\",\n    max_tokens=1024,\n    messages=[{\"role\": \"user\", \"content\": prompt}]\n)\n\nprint(mensaje.content[0].text)\n\n\nKey points to highlight:\n1. The analyst defines PURPOSE and AUDIENCE — the AI doesn’t invent them\n2. The AI draft is a starting point — not a final product\n3. The loop: generate → review → refine → own it"
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#demo-2-reporte-parametrizado-con-quarto",
+    "href": "ai/datasaturday_2026.html#demo-2-reporte-parametrizado-con-quarto",
+    "title": "Datos, Storytelling e IA",
+    "section": "Demo 2 · Reporte parametrizado con Quarto",
+    "text": "Demo 2 · Reporte parametrizado con Quarto\n\n# En _quarto.yml o en el header del .qmd:\n# params:\n#   region: \"Norte\"\n\nimport anthropic\nimport pandas as pd\n\nregion = \"Norte\"  # params[\"region\"] en producción\ndf = pd.read_csv(f\"datos_{region.lower()}.csv\")\nkpis = df.agg({\"ventas\": \"sum\", \"desercion\": \"mean\", \"nps\": \"mean\"})\n\n# Narrativa generada automáticamente para cada región\nclient = anthropic.Anthropic()\nresponse = client.messages.create(\n    model=\"claude-opus-4-7\",\n    max_tokens=512,\n    messages=[{\n        \"role\": \"user\",\n        \"content\": f\"Resume en 2 oraciones los KPIs para la región {region}: \"\n                   f\"Ventas={kpis['ventas']:,.0f}, \"\n                   f\"Deserción={kpis['desercion']:.1%}, \"\n                   f\"NPS={kpis['nps']:.1f}. \"\n                   f\"Tono ejecutivo. Señala la tensión principal.\"\n    }]\n)\n\n# El texto generado se inserta directamente en el reporte Quarto\nnarrativa = response.content[0].text\n\n\nThis pattern scales: run quarto render --execute-params params.yml to generate reports for all 15 regions.\nEach report gets an AI-generated narrative tailored to that region’s numbers.\nThe analyst reviews the outliers — not every single report."
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#demo-3-del-insight-al-visual-en-segundos",
+    "href": "ai/datasaturday_2026.html#demo-3-del-insight-al-visual-en-segundos",
+    "title": "Datos, Storytelling e IA",
+    "section": "Demo 3 · Del insight al visual en segundos",
+    "text": "Demo 3 · Del insight al visual en segundos\n\nimport anthropic\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport matplotlib.ticker as mticker\n\nclient = anthropic.Anthropic()\ndf = pd.read_csv(\"ventas_mensuales.csv\")\nresumen_csv = df.head(12).to_csv(index=False)\n\n# Paso 1: pedirle a la IA el tipo de gráfico y el título\nresponse = client.messages.create(\n    model=\"claude-opus-4-7\",\n    max_tokens=256,\n    messages=[{\n        \"role\": \"user\",\n        \"content\": f\"\"\"Datos de ventas mensuales:\n{resumen_csv}\n\nResponde en JSON con:\n- tipo_grafico: el tipo más adecuado (bar, line, scatter, etc.)\n- titulo: título conciso que comunique el insight principal\n- eje_x: nombre del eje X\n- eje_y: nombre del eje Y\n- color_destacado: mes o categoría a destacar si existe uno\nSolo JSON, sin explicación.\"\"\"\n    }]\n)\n\nimport json\nconfig = json.loads(response.content[0].text)\n\n# Paso 2: el analista genera el gráfico con los parámetros sugeridos\nfig, ax = plt.subplots(figsize=(10, 5))\nax.set_title(config[\"titulo\"], fontsize=14, fontweight=\"bold\")\n# ... construcción del gráfico con pandas/matplotlib ...\n\n\nThe AI chooses the chart type and writes the title — both of which require understanding the MESSAGE.\nThe analyst keeps full control of the visual output — but starts from a much better place."
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#lo-que-te-llevas-hoy",
+    "href": "ai/datasaturday_2026.html#lo-que-te-llevas-hoy",
+    "title": "Datos, Storytelling e IA",
+    "section": "Lo que te llevas hoy",
+    "text": "Lo que te llevas hoy\n\n\n\n\n  \n    🔄\n    El punto de partida cambió\n    \n      La IA genera el primer borrador. Tú lo evalúas y lo haces tuyo.\n      Tu valor está en el criterio, no en la velocidad de ejecución.\n      Aprende a promtear con propósito y audiencia definidos.\n    \n  \n  \n    ⚡\n    Velocidad ≠ claridad\n    \n      Valida siempre: ¿comunica lo que importa en 7 segundos?\n      El gráfico generado por IA es un borrador, no una entrega.\n      Más rápido es mejor solo si el criterio de calidad no baja.\n    \n  \n  \n    🧭\n    Usa el framework\n    \n      Define Propósito + Audiencia antes de hablarle a la IA.\n      Deja que la IA encuentre la Tensión en los datos.\n      Tú decides la Resolución que es viable y oportuna.\n    \n  \n\n\nThese are the three things they should be able to do Monday morning.\nPractical, actionable, no new tools required beyond what they already have."
+  },
+  {
+    "objectID": "ai/datasaturday_2026.html#agenda-v2-revisitada",
+    "href": "ai/datasaturday_2026.html#agenda-v2-revisitada",
+    "title": "Datos, Storytelling e IA",
+    "section": "Agenda (v2) — revisitada",
+    "text": "Agenda (v2) — revisitada\n\nLa IA ya no es una herramienta — es un copiloto narrativo.\nVisualizar más rápido no siempre es mejor.\nEl juicio humano es tu ventaja competitiva.\nTu primera versión seguirá siendo horrible — pero la buena llega más rápido.\n\n\nFull circle. The agenda items were always the conclusions.\nWe just needed to live through the story first."
   },
   {
     "objectID": "ai/datasaturday_2026.html#gracias-por-participar",
     "href": "ai/datasaturday_2026.html#gracias-por-participar",
-    "title": "Lo que nadie te dice sobre la IA generativa",
+    "title": "Datos, Storytelling e IA",
     "section": "🎉 ¡Gracias por Participar!",
     "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓ ¿Preguntas?\n👏 Responder encuesta\n🥳 Disfrutar del Evento!"
   },
