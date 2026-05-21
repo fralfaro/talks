@@ -7,17 +7,11 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/quarto-contrib/videojs/video.min.js"></script>
-<link href="../site_libs/quarto-contrib/videojs/video-js.css" rel="stylesheet">
-<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
-  <meta name="author" content="Francisco Alfaro">
-  <meta name="dcterms.date" content="2026-05-21">
-  <title>Talks – Diplomado Transformación Digital</title>
+  <meta name="author" content="Francisco Alfaro Medina">
+  <title>Talks – Toma de Decisiones Basadas en Datos e IA</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -39,12 +33,10 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-8f256d708726d40fbff7d707db68e007.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-e892a8df7267c7fe476b0a79cf24fc03.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -138,864 +130,1076 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="images/background.jpg" class="quarto-title-block center">
-  <h1 class="title">Diplomado Transformación Digital</h1>
-  <p class="subtitle">M3 - Semana 01</p>
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Toma de Decisiones Basadas en Datos e IA</h1>
+  <p class="subtitle">Módulo 3 · Clase 1: Introducción</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Francisco Alfaro 
+Francisco Alfaro Medina 
 </div>
-</div>
+        <p class="quarto-title-affiliation">
+            Dirección de Transformación Digital · UTFSM
+          </p>
+    </div>
 </div>
 
-  <p class="date">2026-05-21</p>
+  <p class="date">mayo 2026</p>
 </section>
-<section id="hola-mario" class="slide level2">
-<h2>Hola mario</h2>
-<div class="{=html}">
-<iframe src="demo.html" width="100%" height="768px">
-</iframe>
+<section id="section" class="slide level2 title-slide center" data-background-color="#0F2044">
+<h2></h2>
+<div class="title-block">
+<p><strong>Toma de Decisiones Basadas en Datos e IA</strong></p>
+<p>Módulo 3 · Clase 1: Introducción al ecosistema de datos</p>
+</div>
+<div class="subtitle-block">
+<p>Datos · EDA · Visualización · Decisiones estratégicas<br>
+Diplomado Transformación Digital · DGEC UTFSM · 2026</p>
+</div>
+<div class="author-block">
+<p>Francisco Alfaro Medina<br>
+Universidad Técnica Federico Santa María<br>
+Dirección de Transformación Digital · 2026</p>
 </div>
 </section>
-<section id="revolución-de-los-datos" class="slide level2">
-<h2>Revolución de los Datos</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-0/internet_2023.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img data-src="images/clase-0/internet_2023.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></a></p>
-</figure>
+<section id="sobre-el-docente" class="slide level2" data-background-color="#f8f9fa">
+<h2>Sobre el docente</h2>
+<p><br></p>
+<style>
+.team-grid-1 { display: grid; grid-template-columns: 1fr 2fr; gap: 24px; padding: 1rem 0; max-width: 900px; margin: 0 auto; }
+.card { background: #0F2044; border-radius: 12px; overflow: hidden; border: 0.5px solid rgba(255,255,255,0.1); }
+.card-top { background: #0F2044; padding: 1.5rem 1rem 0; text-align: center; }
+.avatar { width: 80px; height: 80px; border-radius: 50%; border: 2.5px solid #C9A84C; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 500; color: #C9A84C; margin: 0 auto 0.75rem; background: #0a1a38; }
+.card-name { font-size: 16px; font-weight: 500; color: #ffffff; margin: 0 0 0.25rem; }
+.card-role { font-size: 12px; color: #8FA8C8; margin: 0 0 1rem; line-height: 1.4; }
+.card-wave { height: 32px; background: #ffffff; border-radius: 50% 50% 0 0 / 100% 100% 0 0; }
+.card-bottom { background: #ffffff; padding: 0.75rem 1rem 1rem; }
+.card-bio { font-size: 12px; color: #555; line-height: 1.6; margin: 0 0 0.875rem; }
+.btn-link { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: #185FA5; border: 0.5px solid #378ADD; border-radius: 8px; padding: 5px 12px; text-decoration: none; background: #E6F1FB; margin-right: 6px; }
+.info-card { background: #0F2044; border-radius: 12px; padding: 1.5rem; color: white; }
+.info-title { color: #C9A84C; font-size: 0.9em; font-weight: 700; margin-bottom: 1rem; }
+.info-item { display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.7rem; font-size: 0.78em; color: #d0dce8; line-height: 1.5; }
+</style>
+
+<div class="team-grid-1">
+  <div class="card">
+    <div class="card-top">
+      <div class="avatar">FA</div>
+      <p class="card-name">Francisco Alfaro</p>
+      <p class="card-role">Líder de Análisis y Modelación Avanzada · DTD UTFSM</p>
+    </div>
+    <div class="card-wave"></div>
+    <div class="card-bottom">
+      <p class="card-bio">Ingeniero matemático especializado en estadística, ciencia de datos e inteligencia artificial. Docente e investigador doctoral en Ingeniería Electrónica, UTFSM.</p>
+      <a class="btn-link" href="https://fralfaro.github.io/portfolio/">🌐 Portfolio</a>
+      <a class="btn-link" href="https://www.linkedin.com/in/faam/">💼 LinkedIn</a>
+    </div>
+  </div>
+  <div class="info-card">
+    <div class="info-title">📋 Sobre este módulo</div>
+    <div class="info-item">📅 <span><strong>3 sesiones</strong> sincrónicas de 3h + actividades asíncronas</span></div>
+    <div class="info-item">🎯 <span>Clase 1: Ecosistema de datos, EDA y visualización</span></div>
+    <div class="info-item">🎯 <span>Clase 2: Modelos predictivos y analítica avanzada</span></div>
+    <div class="info-item">🎯 <span>Clase 3: Inteligencia Artificial en gestión organizacional</span></div>
+    <div class="info-item">📊 <span>Evaluación: Presentación aplicada (60%) + Ensayo breve (40%)</span></div>
+    <div class="info-item">🔗 <span>Metodología: casos reales, simulaciones y herramientas digitales</span></div>
+  </div>
 </div>
-<aside class="notes">
+</section>
+<section id="qué-aprenderemos-en-este-módulo" class="slide level2">
+<h2>¿Qué aprenderemos en este módulo?</h2>
+<p><br></p>
+<style>
+.comp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; font-size: 0.80em; }
+.comp-card { background: #0F2044; border-radius: 10px; padding: 1.4rem; color: white; border-left: 4px solid #C9A84C; }
+.comp-label { color: #C9A84C; font-size: 0.8em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+.comp-title { color: white; font-size: 1em; font-weight: 600; margin-bottom: 0.7rem; }
+.comp-items { color: #8FA8C8; line-height: 1.8; }
+</style>
+
+<div class="comp-grid">
+  <div class="comp-card">
+    <div class="comp-label">CE1 — Competencia</div>
+    <div class="comp-title">Decisiones estratégicas basadas en evidencia</div>
+    <div class="comp-items">
+      Fortalecer la capacidad de tomar decisiones fundadas en análisis cuantitativo y el uso ético de herramientas digitales.<br><br>
+      <strong style="color:#4A9FD4;">RA3.1</strong> — Implementar metodologías analíticas para sustentar decisiones alineadas a objetivos organizacionales.
+    </div>
+  </div>
+  <div class="comp-card">
+    <div class="comp-label">CE2 — Competencia</div>
+    <div class="comp-title">Pensamiento analítico e IA aplicada</div>
+    <div class="comp-items">
+      Desarrollar habilidades en interpretación de datos y aprovechamiento de IA para procesos complejos en contextos organizacionales.<br><br>
+      <strong style="color:#4A9FD4;">RA3.2</strong> — Evaluar modelos de IA considerando beneficios, limitaciones y aplicaciones responsables.
+    </div>
+  </div>
+</div>
+<p><br></p>
+<div style="text-align: center; background: rgba(74,159,212,0.1); border-left: 4px solid #4A9FD4; padding: 0.75rem 1.5rem; border-radius: 4px; font-size: 0.9rem;">
+<p>El objetivo no es hacer de ustedes científicos de datos — es que <strong>tomen mejores decisiones</strong> usando datos e IA.</p>
+</div>
+</section>
+<section id="section-1" class="slide level2" data-background-color="#0F2044">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 1em; color: #4A9FD4;">Parte 1</span></p>
+<p><span style="font-size: 2em; font-weight: bold;">La revolución de los datos</span></p>
+<p><span style="font-size: 1em; color: #6B7A8D; font-style: italic;">¿Por qué los datos cambiaron todo?</span></p>
+</div>
+</section>
+<section id="la-revolución-de-los-datos" class="slide level2">
+<h2>La revolución de los datos</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><br></p>
 <ul>
-<li>Hablar de los distintos tipos de Datos.</li>
-<li>Todo es datos, y está lleno de ellos en Internet y el mundo.</li>
+<li>Cada minuto se generan más datos que toda la información escrita en la historia humana hasta 1995.</li>
+<li>El volumen no es el problema — <strong>la capacidad de extraer valor</strong> sí lo es.</li>
+<li>Las organizaciones que toman decisiones basadas en datos tienen <strong>5x más probabilidad</strong> de ser más rentables que sus competidores.</li>
 </ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="nace-el-data-science-ciencia-de-datos" class="slide level2">
-<h2>Nace el Data Science (Ciencia de Datos)</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-0/data_science.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="images/clase-0/data_science.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></a></p>
-</figure>
-</div>
-<aside class="notes">
-<ul>
-<li>Explicar las distintas etapas. Qué son cada uno de ellos.</li>
-<li>Explicar que no estoy de acuerdo con todas las definiciones.</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="cómo-aprovechar-la-información-que-tenemos" class="slide level2">
-<h2>¿Cómo aprovechar la información que tenemos?</h2>
-<div class="fragment">
-<dl>
-<dt>Data Mining (Minería de Datos)</dt>
-<dd>
-“The process of identifying valid, novel, potentially useful, and ultimately understandable patterns in data.” <strong>(Fayyad, Piatetsky-Shapiro &amp; Smith 1996)</strong>
-</dd>
-</dl>
-</div>
-<div class="fragment">
-<dl>
-<dt>Machine Learning (Aprendizaje Automático)</dt>
-<dd>
-“A computer program is said to learn from experience <code>E</code> with respect to some class of tasks <code>T</code> and performance measure <code>P</code>, if its performance at tasks in <code>T</code>, as measured by <code>P</code>, improves with experience <code>E</code>.” <strong>(Mitchell, 2006)</strong>
-</dd>
-</dl>
-</div>
-<aside class="notes">
-<ul>
-<li>Explicar que estos son dos tipos de Approaches con el que hoy en día se enfrentan los datos.</li>
-<li>El primero más enfocado en un análisis manual.</li>
-<li>El segundo en un enfoque más automático.</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="tipos-de-datos" class="slide level2">
-<h2>Tipos de Datos</h2>
-<div class="quarto-layout-panel" data-layout="[ 40, 60 ]">
-<div class="quarto-layout-row">
-<div id="first-column" class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
-<div class="fragment" data-fragment-index="1">
-<h3 id="datos-estructurados">Datos Estructurados</h3>
-</div>
-</div>
-<div id="second-column" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
-<div class="fragment" data-fragment-index="5">
-<h3 id="datos-no-estructurados">Datos No Estructurados</h3>
-</div>
-</div>
-</div>
-</div>
-<div class="quarto-layout-panel" data-layout-ncol="6">
-<div class="quarto-layout-row">
-<div class="fragment quarto-layout-cell" data-fragment-index="2" style="flex-basis: 16.7%;justify-content: center;">
-<p><img data-src="images/clase-0/table.png"></p>
-</div>
-<div class="fragment quarto-layout-cell" data-fragment-index="3" style="flex-basis: 16.7%;justify-content: center;">
-<p><img data-src="images/clase-0/ts.png"></p>
-</div>
-<div class="fragment quarto-layout-cell" data-fragment-index="6" style="flex-basis: 16.7%;justify-content: center;">
-<p><img data-src="images/clase-0/image.png"></p>
-</div>
-<div class="fragment quarto-layout-cell" data-fragment-index="7" style="flex-basis: 16.7%;justify-content: center;">
-<p><img data-src="images/clase-0/text.png"></p>
-</div>
-<div class="fragment quarto-layout-cell" data-fragment-index="8" style="flex-basis: 16.7%;justify-content: center;">
-<p><img data-src="images/clase-0/video.png"></p>
-</div>
-<div class="fragment quarto-layout-cell" data-fragment-index="9" style="flex-basis: 16.7%;justify-content: center;">
-<p><img data-src="images/clase-0/graph.png"></p>
-</div>
-</div>
-</div>
-<div class="quarto-layout-panel" data-layout="[ 40, 60 ]">
-<div class="quarto-layout-row">
-<div id="first-column" class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: flex-start;">
-<div class="fragment" data-fragment-index="4">
-<div class="quarto-figure quarto-figure-left">
-<figure>
-<p><img data-src="images/clase-0/ml.jpg" class="quarto-figure quarto-figure-left" style="width:80.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-<div id="second-column" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: flex-start;">
-<div class="fragment" data-fragment-index="10">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/clase-0/dl.png" class="quarto-figure quarto-figure-center" style="width:30.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="tipos-de-datos-datos-tabulares" class="slide level2 smaller">
-<h2>Tipos de Datos: Datos Tabulares</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-0/tab_data.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img data-src="images/clase-0/tab_data.png" class="quarto-figure quarto-figure-center"></a></p>
-</figure>
-</div>
-<div class="callout callout-tip callout-style-simple">
+<div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
+<p><strong>El cambio real</strong></p>
+</div>
 <div class="callout-content">
+<p>La transformación digital no es sobre tecnología. Es sobre <strong>cómo se toman las decisiones</strong> dentro de una organización.</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<div style="text-align: center;">
+<p><img src="images/clase-0/internet_2023.png" style="width: 90%; border-radius: 10px;"></p>
+</div>
+</div></div>
+</section>
+<section id="nace-la-ciencia-de-datos" class="slide level2">
+<h2>Nace la Ciencia de Datos</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><br></p>
+<p>La <strong>Ciencia de Datos</strong> es el campo interdisciplinario que combina:</p>
 <ul>
-<li>Filas: Observaciones, instancias, registros. (Normalmente independientes).</li>
-<li>Columnas: Variables, Atributos, Features.</li>
+<li>Estadística y matemáticas</li>
+<li>Programación e ingeniería</li>
+<li>Conocimiento del dominio (negocio)</li>
 </ul>
-</div>
-</div>
-</div>
-<div class="callout callout-note callout-style-simple">
+<p>Para extraer <strong>conocimiento accionable</strong> desde datos.</p>
+<div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-content">
-<ul>
-<li>Probablemente el tipo de datos más amigable.</li>
-<li>Requiere conocimiento de negocio (<strong>Domain Knowledge</strong>)</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="callout callout-warning callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p><strong>Para directivos y gestores</strong></p>
 </div>
 <div class="callout-content">
-<ul>
-<li>Es un % bajísimo del total de datos existentes en el Mundo. También el que más disponible está en las empresas.</li>
-<li>Distintos <code>data types</code>, por lo que normalmente requiere de algún tipo de <strong>preprocesamiento</strong>.</li>
-</ul>
+<p>No necesitan programar — necesitan saber <strong>qué preguntar</strong>, <strong>cómo interpretar</strong> y <strong>cuándo confiar</strong> en un análisis.</p>
 </div>
 </div>
+</div>
+</div><div class="column" style="width:45%;">
+<div style="text-align: center;">
+<p><img src="images/clase-0/data_science.png" style="width: 90%; border-radius: 10px;"></p>
+</div>
+</div></div>
+</section>
+<section id="del-dato-a-la-decisión" class="slide level2">
+<h2>Del dato a la decisión</h2>
+<div style="display:flex; align-items:center; justify-content:center; gap:0; margin-top:1rem; font-size:0.78em;">
+
+  <div style="background:#0F2044; border-radius:10px; padding:1.2rem 1.4rem; color:white; text-align:center; min-width:140px;">
+    <div style="font-size:1.8rem; margin-bottom:0.4rem;">📥</div>
+    <div style="color:#4A9FD4; font-weight:700; margin-bottom:0.3rem;">Datos</div>
+    <div style="color:#8FA8C8; font-size:0.9em;">Registros, sensores, formularios, sistemas</div>
+  </div>
+
+  <div style="color:#4A9FD4; font-size:1.5rem; padding:0 0.5rem;">→</div>
+
+  <div style="background:#0F2044; border-radius:10px; padding:1.2rem 1.4rem; color:white; text-align:center; min-width:140px;">
+    <div style="font-size:1.8rem; margin-bottom:0.4rem;">🔍</div>
+    <div style="color:#4A9FD4; font-weight:700; margin-bottom:0.3rem;">Análisis</div>
+    <div style="color:#8FA8C8; font-size:0.9em;">EDA, estadísticas, visualizaciones</div>
+  </div>
+
+  <div style="color:#4A9FD4; font-size:1.5rem; padding:0 0.5rem;">→</div>
+
+  <div style="background:#0F2044; border-radius:10px; padding:1.2rem 1.4rem; color:white; text-align:center; min-width:140px;">
+    <div style="font-size:1.8rem; margin-bottom:0.4rem;">💡</div>
+    <div style="color:#4A9FD4; font-weight:700; margin-bottom:0.3rem;">Insights</div>
+    <div style="color:#8FA8C8; font-size:0.9em;">Patrones, anomalías, relaciones</div>
+  </div>
+
+  <div style="color:#4A9FD4; font-size:1.5rem; padding:0 0.5rem;">→</div>
+
+  <div style="background:#0F2044; border-radius:10px; padding:1.2rem 1.4rem; color:white; text-align:center; min-width:140px;">
+    <div style="font-size:1.8rem; margin-bottom:0.4rem;">📊</div>
+    <div style="color:#4A9FD4; font-weight:700; margin-bottom:0.3rem;">Modelos</div>
+    <div style="color:#8FA8C8; font-size:0.9em;">Predicción, clasificación, clustering</div>
+  </div>
+
+  <div style="color:#4A9FD4; font-size:1.5rem; padding:0 0.5rem;">→</div>
+
+  <div style="background:#1A3A6B; border-radius:10px; padding:1.2rem 1.4rem; color:white; text-align:center; min-width:140px; border:2px solid #C9A84C;">
+    <div style="font-size:1.8rem; margin-bottom:0.4rem;">🎯</div>
+    <div style="color:#C9A84C; font-weight:700; margin-bottom:0.3rem;">Decisión</div>
+    <div style="color:#8FA8C8; font-size:0.9em;">Estratégica, fundada en evidencia</div>
+  </div>
+
+</div>
+
+<div style="text-align:center; margin-top:1.2rem; color:#6B7A8D; font-size:0.78em; font-style:italic;">
+  En este módulo recorremos todo este pipeline — con foco en lo que hace diferente a un decisor analítico.
 </div>
 </section>
-<section id="tipos-de-datos-series-de-tiempo" class="slide level2 smaller">
-<h2>Tipos de Datos: Series de Tiempo</h2>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 41.2%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-0/ts_data.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img data-src="images/clase-0/ts_data.png" class="quarto-figure quarto-figure-center"></a></p>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell" style="flex-basis: 58.8%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-0/ts_plot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img data-src="images/clase-0/ts_plot.png" class="quarto-figure quarto-figure-center"></a></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<div class="callout callout-tip callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<ul>
-<li>Filas: Instancias temporales (Normalmente interdependientes).</li>
-<li>Columnas: Variables, Atributos, Features (Univariada o Multivariada).</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="callout callout-warning callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<ul>
-<li>Es un % bajísimo del total de datos existentes en el Mundo.</li>
-<li>Propiedad temporal requiere <strong>preprocesamiento</strong> y modelos especiales.</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="tipos-de-datos-imágenes" class="slide level2 smaller">
-<h2>Tipos de Datos: Imágenes</h2>
+<section id="dos-enfoques-para-aprovechar-los-datos" class="slide level2">
+<h2>Dos enfoques para aprovechar los datos</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="fragment" data-fragment-index="1">
-<p><a href="images/clase-0/image_tensor.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img data-src="images/clase-0/image_tensor.png"></a></p>
-</div>
-<div class="fragment" data-fragment-index="3">
-<div class="callout callout-tip callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<ul>
-<li>Este es el tipo de Datos que disparó la Inteligencia Artificial.</li>
-<li><a href="https://www.nytimes.com/2012/06/26/technology/in-a-big-network-of-computers-evidence-of-machine-learning.html">¿Cuántos computadores para identificar un Gato? 16,000</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="fragment" data-fragment-index="2">
-<p><a href="images/clase-0/tensor_rgb.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img data-src="images/clase-0/tensor_rgb.jpg"></a></p>
-</div>
-</div></div>
-<aside class="notes">
-<ul>
-<li>Explicar el concepto de Tensor, extensión de las matrices. Diferencia entre Grayscale y RGB.</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="tipos-de-datos-texto-libre" class="slide level2 smaller">
-<h2>Tipos de Datos: Texto Libre</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-0/free_text.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img data-src="images/clase-0/free_text.jpg" class="quarto-figure quarto-figure-center"></a></p>
-</figure>
-</div>
-<div class="callout callout-caution callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<ul>
-<li>Datos Masivos.</li>
-<li>Dificiles de lidiar ya que deben ser llevarse a una representación numérica.</li>
-<li>Alto nivel de Sesgo y Subjetividad.</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="callout callout-tip callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<ul>
-<li>Gracias a este tipo de datos se han producido los avances más increíbles del último tiempo: <a href="https://arxiv.org/abs/1706.03762">Transformers</a></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="tipos-de-datos-videos" class="slide level2 smaller">
-<h2>Tipos de Datos: Videos</h2>
-<video id="video_shortcode_videojs_video1" width="800" class="video-js vjs-default-skin vjs-big-play-centered " controls="" preload="auto" data-setup="{}" title=""><source src="https://www.neuralframes.com/videos/new_landingpage_video_squirrel.webm"></video>
-<div class="callout callout-note callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<ul>
-<li>Los videos no son más que arreglos de imágenes.</li>
-<li>Son un tipo de dato muy pesado y difícil de lidiar.</li>
-<li>Requiere alto poder de Procesamiento.</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<section id="eda" class="slide level2 smaller">
-<h2>EDA</h2>
+<p><strong>Data Mining</strong> <em>(Minería de Datos)</em></p>
 <blockquote>
-<p>El <code>Analisis Exploratorio de Datos</code> (EDA, por sus siglas en inglés) es procedimiento en el cual se analiza un dataset para explorar sus características principales.</p>
+<p><em>“El proceso de identificar patrones válidos, novedosos, potencialmente útiles y comprensibles en los datos.”</em> — Fayyad, Piatetsky-Shapiro &amp; Smith (1996)</p>
 </blockquote>
 <ul>
-<li>Su objetivo principal es poder familiarizarse con los datos además de encontrar potenciales problemas en su calidad.</li>
-<li>Principalmente hace uso de técnicas de manipulación de datos y visualizaciones.</li>
+<li>Foco en <strong>descubrimiento</strong> de patrones</li>
+<li>El analista guía la exploración</li>
+<li>Resultado: hipóteses e insights</li>
+<li>Más orientado a la <strong>descripción</strong></li>
 </ul>
-<div class="columns">
-<div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/eda_obj.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img data-src="images/clase-2/eda_obj.png" class="quarto-figure quarto-figure-center" style="width:90.0%"></a></p>
-</figure>
-</div>
-</div><div class="column fragment">
-<div class="callout callout-note callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>Los hallazgos importantes dentro del proceso se les denomina <code>insights</code>.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-important callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>El uso de visualizaciones inadecuadas podría llevar a <strong>conclusiones erróneas</strong>.</p>
-</div>
-</div>
-</div>
-<div class="callout callout-tip callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
+</div><div class="column" style="width:50%;">
+<p><strong>Machine Learning</strong> <em>(Aprendizaje Automático)</em></p>
+<blockquote>
+<p><em>“Un programa aprende de la experiencia E respecto a tareas T, si su rendimiento mejora con experiencia.”</em> — Mitchell (2006)</p>
+</blockquote>
 <ul>
-<li>Summary.</li>
-<li>Visualización.</li>
+<li>Foco en <strong>predicción</strong> automática</li>
+<li>El modelo aprende de ejemplos</li>
+<li>Resultado: función predictiva</li>
+<li>Más orientado a la <strong>prescripción</strong></li>
 </ul>
+</div></div>
+<div class="fragment">
+<div style="text-align: center; background: rgba(201,168,76,0.1); border-left: 4px solid #C9A84C; padding: 0.75rem 1.5rem; border-radius: 4px; font-size: 0.9rem; margin-top: 0.5rem;">
+<p>Ambos enfoques son complementarios. En este módulo aprenderemos cuándo usar cada uno.</p>
+</div>
+</div>
+</section>
+<section id="section-2" class="slide level2" data-background-color="#0F2044">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 1em; color: #4A9FD4;">Parte 2</span></p>
+<p><span style="font-size: 2em; font-weight: bold;">Tipos de datos que existen</span></p>
+<p><span style="font-size: 1em; color: #6B7A8D; font-style: italic;">No todos los datos se analizan igual</span></p>
+</div>
+</section>
+<section id="el-universo-de-los-datos" class="slide level2">
+<h2>El universo de los datos</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br></p>
+<h3 id="datos-estructurados">Datos Estructurados</h3>
+<ul>
+<li>Organizados en filas y columnas</li>
+<li>Fáciles de consultar con SQL</li>
+<li>Listos para modelos estadísticos clásicos</li>
+<li><strong>Ejemplos:</strong> planillas, bases de datos transaccionales, encuestas</li>
+</ul>
+<p><br></p>
+<h3 id="datos-semi-estructurados">Datos Semi-estructurados</h3>
+<ul>
+<li>Tienen estructura pero no tabular</li>
+<li><strong>Ejemplos:</strong> JSON, XML, logs de sistemas</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><br></p>
+<h3 id="datos-no-estructurados">Datos No Estructurados</h3>
+<ul>
+<li>Sin esquema predefinido</li>
+<li>Requieren procesamiento especial</li>
+<li>Representan <strong>~80% de los datos</strong> del mundo</li>
+<li><strong>Ejemplos:</strong> imágenes, texto libre, audio, video, redes sociales</li>
+</ul>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Dato clave para directivos</strong></p>
+</div>
+<div class="callout-content">
+<p>La mayoría de los datos de su organización son no estructurados (emails, documentos, registros de voz). El valor está en aprender a procesarlos.</p>
 </div>
 </div>
 </div>
 </div></div>
+</section>
+<section id="datos-tabulares" class="slide level2 smaller">
+<h2>Datos Tabulares</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><br></p>
+<p><img src="images/clase-0/tab_data.png" style="width: 95%; border-radius: 8px;"></p>
+</div><div class="column" style="width:45%;">
+<p><br></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Estructura básica:</strong> - <strong>Filas</strong> → Observaciones, instancias, registros (normalmente independientes) - <strong>Columnas</strong> → Variables, atributos, features</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>¿Por qué importan?</strong> Son el tipo de dato más disponible en empresas y el más amigable para tomar decisiones. Toda planilla de Excel es un dato tabular.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Advertencia</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Cuidado:</strong> Requieren <strong>conocimiento del negocio</strong> (domain knowledge). Un número sin contexto no dice nada.</p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="datos-de-series-de-tiempo" class="slide level2 smaller">
+<h2>Datos de Series de Tiempo</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img src="images/clase-0/ts_data.png" style="width: 75%; border-radius: 8px;"></p>
+</div><div class="column" style="width:50%;">
+<p><img src="images/clase-0/ts_plot.png" style="width: 95%; border-radius: 8px;"></p>
+</div></div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Características:</strong> Las instancias son temporales y <strong>no son independientes</strong> — lo que pasó ayer afecta lo que pasa hoy.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Ejemplos organizacionales:</strong> ventas mensuales, ausentismo laboral, consumo de recursos, indicadores de productividad trimestral, matrícula universitaria por cohorte.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="imágenes-texto-y-video" class="slide level2 smaller">
+<h2>Imágenes, Texto y Video</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<p><strong>🖼️ Imágenes</strong></p>
+<p><img src="images/clase-0/image_tensor.png" style="width: 90%; border-radius: 8px;"></p>
+<p>Representadas como tensores numéricos (matrices 3D). Este tipo de dato <strong>disparó la IA moderna</strong> — antes de 2012, identificar un gato requería 16.000 computadores.</p>
+</div><div class="column" style="width:33%;">
+<p><strong>📝 Texto Libre</strong></p>
+<p><img src="images/clase-0/free_text.jpg" style="width: 90%; border-radius: 8px;"></p>
+<p>El tipo de dato más abundante en cualquier organización. Emails, actas, informes, reclamos. Gracias al texto surge la IA generativa actual.</p>
+</div><div class="column" style="width:33%;">
+<p><strong>🎥 Video</strong></p>
+<div style="font-size: 0.78em;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>Los videos son <strong>secuencias de imágenes</strong>. Requieren alto poder computacional. Casos de uso: seguridad, manufactura, análisis de comportamiento.</p>
+</div>
+</div>
+</div>
+</div>
+<div style="font-size: 0.78em;">
+<div class="callout callout-caution callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Precaución</strong></p>
+</div>
+<div class="callout-content">
+<p>Son el tipo de dato con mayor crecimiento en volumen. Aprovecharlos bien requiere IA especializada.</p>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="section-3" class="slide level2" data-background-color="#0F2044">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 1em; color: #4A9FD4;">Parte 3</span></p>
+<p><span style="font-size: 2em; font-weight: bold;">Análisis Exploratorio de Datos (EDA)</span></p>
+<p><span style="font-size: 1em; color: #6B7A8D; font-style: italic;">Antes de decidir, hay que entender</span></p>
+</div>
+</section>
+<section id="qué-es-el-eda" class="slide level2">
+<h2>¿Qué es el EDA?</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><br></p>
+<blockquote>
+<p>El <strong>Análisis Exploratorio de Datos (EDA)</strong> es el proceso de examinar un dataset para entender sus características principales, descubrir patrones, detectar anomalías y formular hipótesis.</p>
+</blockquote>
+<p><strong>Objetivos del EDA:</strong></p>
+<ul>
+<li>Familiarizarse con los datos disponibles</li>
+<li>Detectar problemas de calidad (valores faltantes, outliers, errores)</li>
+<li>Identificar relaciones entre variables</li>
+<li>Generar preguntas que guíen el análisis posterior</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<p><img src="images/clase-2/eda_obj.png" style="width: 90%; border-radius: 8px;"></p>
+<div style="font-size: 0.78em;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>Los hallazgos importantes dentro del EDA se llaman <strong>insights</strong> — observaciones que tienen implicancias para la decisión.</p>
+</div>
+</div>
+</div>
+</div>
+<div style="font-size: 0.78em;">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p>Visualizaciones inadecuadas pueden llevar a <strong>conclusiones erróneas</strong> aunque los datos estén bien.</p>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="eda-el-papel-del-decisor" class="slide level2">
+<h2>EDA: el papel del decisor</h2>
+<p><br></p>
+<div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.2rem; font-size:0.78em;">
+
+  <div style="background:#0F2044; border-radius:10px; padding:1.2rem; color:white;">
+    <div style="color:#4A9FD4; font-size:1.2em; margin-bottom:0.5rem;">🔢 Summary estadístico</div>
+    <div style="color:#8FA8C8; line-height:1.7;">
+      Media, mediana, desviación estándar, percentiles.<br>
+      <strong style="color:white;">Para el decisor:</strong> ¿Los números que veo son normales para este negocio o algo está fuera de rango?
+    </div>
+  </div>
+
+  <div style="background:#0F2044; border-radius:10px; padding:1.2rem; color:white;">
+    <div style="color:#4A9FD4; font-size:1.2em; margin-bottom:0.5rem;">📊 Visualización</div>
+    <div style="color:#8FA8C8; line-height:1.7;">
+      Histogramas, scatter plots, series de tiempo.<br>
+      <strong style="color:white;">Para el decisor:</strong> ¿Qué patrón me muestra el gráfico y qué acción implica?
+    </div>
+  </div>
+
+  <div style="background:#0F2044; border-radius:10px; padding:1.2rem; color:white;">
+    <div style="color:#4A9FD4; font-size:1.2em; margin-bottom:0.5rem;">🔍 Detección de problemas</div>
+    <div style="color:#8FA8C8; line-height:1.7;">
+      Outliers, valores faltantes, inconsistencias.<br>
+      <strong style="color:white;">Para el decisor:</strong> ¿Mis datos son confiables para tomar esta decisión?
+    </div>
+  </div>
+
+</div>
+<p><br></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Regla práctica</strong></p>
+</div>
+<div class="callout-content">
+<p>Antes de confiar en cualquier análisis o dashboard, pregunta: <strong>¿Alguien hizo un EDA de estos datos?</strong> Si la respuesta es no, los números pueden estar mintiendo.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="medidas-de-tendencia-central" class="slide level2">
 <h2>Medidas de Tendencia Central</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/central_tend.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img data-src="images/clase-2/central_tend.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></a></p>
-</figure>
-</div>
-</section>
-<section id="medidas-de-dispersión-y-asimetría" class="slide level2">
-<h2>Medidas de Dispersión y Asimetría</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/spread_meas.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img data-src="images/clase-2/spread_meas.png" class="quarto-figure quarto-figure-center" style="width:40.0%"></a></p>
-</figure>
-</div>
 <div class="columns">
-<div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/rangos.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img data-src="images/clase-2/rangos.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></a></p>
-</figure>
+<div class="column" style="width:55%;">
+<p><br> <img src="images/clase-2/central_tend.png" style="width: 90%; border-radius: 8px;"></p>
+</div><div class="column" style="width:45%;">
+<p><br></p>
+<p><strong>¿Por qué importan para decisiones?</strong></p>
+<ul>
+<li>La <strong>media</strong> es sensible a valores extremos. Una sola operación atípica puede distorsionar el promedio de ventas.</li>
+<li>La <strong>mediana</strong> es más robusta. Cuando hablamos de ingresos o tiempos, la mediana suele ser más representativa.</li>
+<li>La <strong>moda</strong> dice cuál es el valor más frecuente — útil para patrones de comportamiento.</li>
+</ul>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-</div><div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/skewness.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img data-src="images/clase-2/skewness.png" class="quarto-figure quarto-figure-center" style="width:90.0%"></a></p>
-</figure>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Ejemplo:</strong> El sueldo promedio en Chile incluye a los ultramillonarios. La mediana da una imagen mucho más real de lo que gana “la mayoría”.</p>
+</div>
+</div>
 </div>
 </div></div>
 </section>
-<section id="eda-visualización" class="slide level2 smaller">
-<h2>EDA: Visualización</h2>
-<blockquote>
-<p>La visualización de datos es la presentación de datos en forma gráfica. Permite simplificar conceptos más complejos en especial a altos mandos.</p>
-</blockquote>
-<blockquote>
-<p>Gracias a la evolución del cerebro humano somos capaces de detectar patrones complejos en la naturaleza a partir de la <code>Visión</code>.</p>
-</blockquote>
-<div class="fragment">
-<div class="callout callout-important callout-style-simple">
+<section id="medidas-de-dispersión-y-asimetría" class="slide level2 smaller">
+<h2>Medidas de Dispersión y Asimetría</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img src="images/clase-2/spread_meas.png" style="width: 45%; border-radius: 8px;"></p>
+<p><img src="images/clase-2/rangos.png" style="width: 55%; border-radius: 8px;"></p>
+</div><div class="column" style="width:50%;">
+<p><img src="images/clase-2/skewness.png" style="width: 90%; border-radius: 8px;"></p>
+<div style="font-size: 0.78em;">
+<div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-content">
-<p>Puede ser difícil de aplicar si el tamaño de los datos es grande (sea en instancias o atributos). Por ejemplo, si los datos están en 4 dimensiones.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="fragment">
-<div class="callout callout-note callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<ul>
-<li>Se suelen resumir los datos en <code>estadísticas simples</code>.</li>
-<li>Graficar datos en 1D, 2D y 3D (evitar dentro de lo posible).</li>
-<li>La visualización debe ser comprensible ojalá sin ninguna explicación.</li>
-</ul>
+<p><strong>Varianza y desviación estándar</strong> miden cuánto se “separan” los datos de su media. Alta dispersión = alta incertidumbre en la decisión.</p>
+<p><strong>Asimetría (skewness)</strong> indica si los datos están sesgados hacia valores bajos o altos. Clásico en ingresos, tiempos de respuesta, reclamos.</p>
 </div>
 </div>
 </div>
 </div>
-<div class="fragment">
-<div class="callout callout-tip callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<p>En caso de datos de alta dimensionalidad puede ser una buena idea reducir dimensiones mediante técnicas como:</p>
-<ul>
-<li>PCA</li>
-<li>UMAP</li>
-<li>etc.</li>
-</ul>
-</div>
-</div>
-</div>
+</div></div>
+</section>
+<section id="section-4" class="slide level2" data-background-color="#0F2044">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 1em; color: #4A9FD4;">Parte 4</span></p>
+<p><span style="font-size: 2em; font-weight: bold;">Visualización de Datos</span></p>
+<p><span style="font-size: 1em; color: #6B7A8D; font-style: italic;">Un buen gráfico vale más que mil números</span></p>
 </div>
 </section>
-<section id="caso-de-visualización" class="slide level2">
-<h2>Caso de Visualización</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/visual_problem.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img data-src="images/clase-2/visual_problem.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></a></p>
-</figure>
+<section id="por-qué-visualizar" class="slide level2">
+<h2>¿Por qué visualizar?</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><br></p>
+<blockquote>
+<p>La <strong>visualización de datos</strong> es la presentación de datos en forma gráfica para simplificar conceptos complejos y facilitar la detección de patrones.</p>
+</blockquote>
+<p>Gracias a la evolución del cerebro humano, somos capaces de detectar patrones complejos a través de la <strong>visión</strong> en milisegundos — algo que tomaría minutos leyendo una tabla.</p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<aside class="notes">
-<ul>
-<li>Figuras</li>
-<li>Escala de Colores.</li>
-<li>Tamaño de los puntos.</li>
-<li>Demasiada información en un sólo gráfico.</li>
-<li>No se entiende el mensaje.</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<p><strong>La regla de los 7 segundos</strong></p>
+</div>
+<div class="callout-content">
+<p>Si un gráfico no comunica su mensaje principal en menos de 7 segundos, simplifica o cambia el título. Un gráfico que requiere explicación es un gráfico mal hecho.</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<p><img src="images/viz/ojo.png" style="width: 85%; border-radius: 8px;"></p>
+</div></div>
 </section>
 <section id="canales-visuales" class="slide level2">
 <h2>Canales Visuales</h2>
 <div class="columns">
-<div class="column">
+<div class="column" style="width:55%;">
 <div class="r-stack">
 <div class="fragment fade-out" data-fragment-index="2">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/visual_channels.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img data-src="images/clase-2/visual_channels.png" class="fragment quarto-figure quarto-figure-center" style="width:90.0%" data-fragment-index="1"></a></p>
-</figure>
+<p><img src="images/clase-2/visual_channels.png" style="width: 88%; border-radius: 8px;"></p>
 </div>
+<p><img src="images/clase-2/best_channels.png" style="width: 68%; border-radius: 8px;" class="fragment" data-fragment-index="2"></p>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/best_channels.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img data-src="images/clase-2/best_channels.png" class="fragment quarto-figure quarto-figure-center" style="width:70.0%" data-fragment-index="2"></a></p>
-</figure>
-</div>
-</div>
-</div><div class="column fragment" data-fragment-index="1">
-<div class="callout callout-note callout-style-simple">
+</div><div class="column" style="width:45%;">
+<p><br></p>
+<div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
+<p><strong>Nota</strong></p>
+</div>
 <div class="callout-content">
-<ul>
-<li>Se les llama canales visuales a elementos visuales que pueden utilizarse para expresar información <strong>(Clase Visualizacion Andreas Mueller)</strong>.</li>
-<li>La idea es poder mapear cada uno de estos canales a valores que queremos visualizar.</li>
-</ul>
+<p>Los <strong>canales visuales</strong> son los elementos gráficos (posición, color, tamaño, forma, etc.) que usamos para codificar información. Cada canal tiene diferente capacidad para transmitir con precisión.</p>
 </div>
 </div>
 </div>
-<div class="callout callout-caution callout-style-simple">
+<div class="callout callout-caution callout-titled callout-style-default">
 <div class="callout-body">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
+<p><strong>Precaución</strong></p>
+</div>
 <div class="callout-content">
-<ul>
-<li>No todos los canales son igual de útiles ni fáciles de entender.</li>
-</ul>
+<p>No todos los canales son igual de efectivos. La <strong>posición</strong> (eje X/Y) es el canal más preciso. El <strong>color</strong> es potente para categorías pero problemático para valores continuos.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Para decisiones:</strong> privilegia posición y longitud. Evita gráficos de donut, 3D y mapas de calor complejos cuando puedas usar barras o líneas.</p>
 </div>
 </div>
 </div>
 </div></div>
 </section>
-<section id="visualizaciones-distribuciones" class="slide level2 smaller">
-<h2>Visualizaciones: Distribuciones</h2>
-<dl>
-<dt>Histograma</dt>
-<dd>
-<p>El histograma permite visualizar distribuciones univariadas acumulando los datos en rangos de igual tamaño (<code>bins</code>).</p>
-</dd>
-</dl>
-<ul>
-<li>Permite visualizar el <code>centro</code>, la <code>extensión</code>, la <code>asimetría</code> y <code>outliers</code>.</li>
-</ul>
-<div class="callout callout-important callout-style-simple">
+<section id="ejemplo-la-trampa-del-gráfico-bonito" class="slide level2" data-background-image="images/slide-normal.jpg">
+<h2>Ejemplo: la trampa del gráfico “bonito”</h2>
+<div class="columns">
+<div class="column" style="text-align: center;">
+<p><img src="images/viz/monster.jpg" style="width: 80%; border-radius: 8px;"></p>
+<p><em>❌ Chartjunk — información enterrada en decoración visual</em></p>
+</div><div class="column" style="text-align: center;">
+<div class="fragment">
+<p><img src="images/viz/viz_03.png" style="width: 95%; border-radius: 8px;"></p>
+<p><em>✅ Gráfico efectivo — mensaje claro en 3 segundos</em></p>
+</div>
+</div></div>
+</section>
+<section id="los-tipos-de-gráficos-que-más-necesitas" class="slide level2">
+<h2>Los tipos de gráficos que más necesitas</h2>
+<p><br></p>
+<div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; font-size:0.75em;">
+
+  <div style="background:#0F2044; border-radius:10px; padding:1rem; color:white; text-align:center;">
+    <div style="font-size:1.4rem; margin-bottom:0.4rem;">📊</div>
+    <div style="color:#4A9FD4; font-weight:700; margin-bottom:0.4rem;">Barras</div>
+    <div style="color:#8FA8C8; line-height:1.5;">Comparar categorías. El más versátil y confiable. Fácil de leer, fácil de mentir mal.</div>
+  </div>
+
+  <div style="background:#0F2044; border-radius:10px; padding:1rem; color:white; text-align:center;">
+    <div style="font-size:1.4rem; margin-bottom:0.4rem;">📈</div>
+    <div style="color:#4A9FD4; font-weight:700; margin-bottom:0.4rem;">Líneas</div>
+    <div style="color:#8FA8C8; line-height:1.5;">Tendencias en el tiempo. Siempre con eje X temporal. Ideal para series de KPIs.</div>
+  </div>
+
+  <div style="background:#0F2044; border-radius:10px; padding:1rem; color:white; text-align:center;">
+    <div style="font-size:1.4rem; margin-bottom:0.4rem;">🔵</div>
+    <div style="color:#4A9FD4; font-weight:700; margin-bottom:0.4rem;">Scatter</div>
+    <div style="color:#8FA8C8; line-height:1.5;">Relación entre dos variables continuas. Muestra correlaciones y outliers.</div>
+  </div>
+
+  <div style="background:#0F2044; border-radius:10px; padding:1rem; color:white; text-align:center;">
+    <div style="font-size:1.4rem; margin-bottom:0.4rem;">📦</div>
+    <div style="color:#4A9FD4; font-weight:700; margin-bottom:0.4rem;">Boxplot</div>
+    <div style="color:#8FA8C8; line-height:1.5;">Distribuciones y outliers. Comparar grupos. Esencial en análisis de calidad.</div>
+  </div>
+
+</div>
+<p><br></p>
+<div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
+<p><strong>El 90% del data storytelling usa solo estos 4 tipos</strong></p>
+</div>
 <div class="callout-content">
-<ul>
-<li>El histograma puede ser “engañoso” para conjuntos de datos pequeños.</li>
-<li>La visualización puede resultar de manera muy distintas dependiendo del número de <code>bins</code>.</li>
-</ul>
+<p>Bar → comparar. Line → tiempo. Scatter → relación. Box → distribución. Antes de buscar un gráfico más “sofisticado”, pregúntate si uno de estos cuatro no hace el trabajo.</p>
 </div>
 </div>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/hist.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img data-src="images/clase-2/hist.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></a></p>
-</figure>
 </div>
 </section>
-<section id="visualizaciones-distribuciones-1" class="slide level2 smaller">
-<h2>Visualizaciones: Distribuciones</h2>
-<dl>
-<dt>Kernel Density</dt>
-<dd>
-<p>Corresponde a un suavizamiento de un Histograma en el cuál se usa un <code>Kernel</code> <strong>(función no negativa que suma 1 y tiene media 0)</strong> para agrupar los puntos vecinos.</p>
-</dd>
-</dl>
+<section id="visualizaciones-distribuciones-histograma" class="slide level2 smaller">
+<h2>Visualizaciones: Distribuciones (Histograma)</h2>
+<p><strong>Histograma:</strong> acumula datos en rangos de igual tamaño (<em>bins</em>) para visualizar su distribución.</p>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><img src="images/clase-2/hist.png" style="width: 85%; border-radius: 8px;"></p>
+</div><div class="column" style="width:45%;">
+<p><br></p>
+<ul>
+<li>Muestra el <strong>centro</strong>, la <strong>extensión</strong>, la <strong>asimetría</strong> y los <strong>outliers</strong>.</li>
+</ul>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p>El histograma puede ser engañoso con pocos datos. El número de <em>bins</em> cambia drásticamente la forma — siempre muestra más de una configuración antes de concluir.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Uso organizacional:</strong> distribución de tiempos de respuesta, distribución de montos de contratos, distribución de notas o evaluaciones.</p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="visualizaciones-boxplot" class="slide level2 smaller">
+<h2>Visualizaciones: Boxplot</h2>
+<div class="columns">
+<div class="column" style="width:45%;">
+<p><img src="images/clase-2/box_def.png" style="width: 55%; border-radius: 8px;"></p>
+<div style="font-size: 70%;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>Muestra: Mediana, IQR (rango intercuartílico) y outliers en un solo gráfico. Puede comparar múltiples grupos a la vez.</p>
+</div>
+</div>
+</div>
+</div>
+<div style="font-size: 70%;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Los puntos fuera de los bigotes son <strong>outliers</strong> — casos atípicos que merecen atención especial. Pueden ser errores de datos o casos genuinamente excepcionales.</p>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:55%;">
+<p><img src="images/clase-2/boxplot.png" style="width: 90%; border-radius: 8px;"></p>
+</div></div>
+</section>
+<section id="visualizaciones-scatter-y-barras" class="slide level2 smaller">
+<h2>Visualizaciones: Scatter y Barras</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>La función estimada es:</p>
-<p><span class="math display">\[f(x) = \frac{1}{n} = \sum_{i=1}^n K \left(\frac{x - x(i)}{h}\right)\]</span></p>
-<ul>
-<li><span class="math inline">\(K(u)\)</span> es el Kernel.</li>
-<li><span class="math inline">\(h\)</span> es el ancho de banda.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/kernel_type.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img data-src="images/clase-2/kernel_type.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></a></p>
-</figure>
-</div>
+<p><strong>Scatter Plot</strong> — relación entre dos variables</p>
+<p><img src="images/clase-2/scatter.png" style="width: 55%; border-radius: 8px;"></p>
+<p>Muestra relaciones lineales/no-lineales (correlaciones) y outliers. Útil para: ¿están relacionados los presupuestos y los resultados? ¿el ausentismo afecta la productividad?</p>
 </div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/kernel.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img data-src="images/clase-2/kernel.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></a></p>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/kernel_07.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img data-src="images/clase-2/kernel_07.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></a></p>
-</figure>
-</div>
+<p><strong>Bar Plot</strong> — comparación entre categorías</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img src="images/clase-2/bar_plot1.png" style="width: 100%; border-radius: 8px;"></p>
+</div><div class="column" style="width:50%;">
+<p><img src="images/clase-2/bar_plot2.png" style="width: 100%; border-radius: 8px;"></p>
+</div></div>
+<p>Compara valores entre categorías. El gráfico más usado (y más fácil de manipular) en reportes corporativos.</p>
 </div></div>
 </section>
-<section id="visualizaciones-distribuciones-2" class="slide level2 smaller">
-<h2>Visualizaciones: Distribuciones</h2>
-<dl>
-<dt>Boxplot (Caja y Bigotes)</dt>
-<dd>
-<p>Es un tipo de gráfico que muestra la distribución de manera univariada.</p>
-</dd>
-</dl>
+<section id="el-cuarteto-de-anscombe-estadísticos-no-son-suficientes" class="slide level2">
+<h2>El cuarteto de Anscombe: estadísticos no son suficientes</h2>
 <div class="columns">
-<div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/box_def.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img data-src="images/clase-2/box_def.png" class="quarto-figure quarto-figure-center" style="width:50.0%"></a></p>
-</figure>
-</div>
-<div style="font-size: 70%;">
-<div class="callout callout-note callout-style-simple">
+<div class="column" style="width:55%;">
+<p><img src="images/clase-2/cuarteto_anscombe.png" style="width: 90%; border-radius: 8px;"></p>
+</div><div class="column" style="width:45%;">
+<p><br> <img src="images/clase-2/anscombe_data.png" style="width: 85%; border-radius: 8px;"></p>
+<div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
+<div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-content">
-<ul>
-<li>Tiene la capacidad de mostrar varias distribuciones a la vez.</li>
-<li>Además presenta estadísticos de interés: Mediana, IQR y outliers.</li>
-<li>Los puntos fuera de los bigotes son considerados Outliers.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div style="font-size: 70%;">
-<div class="callout callout-tip callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p><strong>La lección más importante del EDA</strong></p>
 </div>
 <div class="callout-content">
-<ul>
-<li>Los bigotes pueden representar:
-<ul>
-<li>Mínimo y Máximo. (En este caso no hay outliers).</li>
-<li><span class="math inline">\(\mu \pm 3\sigma\)</span></li>
-<li>Percentiles 5 y 95.</li>
-<li>Otros valores.</li>
-</ul></li>
-</ul>
+<p>Estos 4 datasets tienen exactamente la <strong>misma media, varianza, correlación y ecuación de regresión</strong> — pero son completamente distintos. Nunca confíes solo en los estadísticos sin ver los datos.</p>
 </div>
 </div>
-</div>
-</div>
-</div><div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/boxplot.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img data-src="images/clase-2/boxplot.png" class="quarto-figure quarto-figure-center"></a></p>
-</figure>
 </div>
 </div></div>
 </section>
-<section id="visualizaciones-barras" class="slide level2 smaller">
-<h2>Visualizaciones: Barras</h2>
-<dl>
-<dt>Bar Plot</dt>
-<dd>
-<p>La altura de la barra (normalmente Eje y) representa una agregación asociada a una categoría (normalmente Eje x).</p>
-</dd>
-</dl>
+<section id="los-4-pilares-de-la-visualización-efectiva" class="slide level2">
+<h2>Los 4 pilares de la visualización efectiva</h2>
 <div class="columns">
-<div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/bar_plot1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img data-src="images/clase-2/bar_plot1.png" class="quarto-figure quarto-figure-center" style="width:65.0%"></a></p>
-</figure>
-</div>
-</div><div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/bar_plot2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img data-src="images/clase-2/bar_plot2.png" class="quarto-figure quarto-figure-center" style="width:65.0%"></a></p>
-</figure>
-</div>
-</div></div>
-<div class="fragment">
-<div class="callout callout-warning callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<ul>
-<li>Otras convenciones llaman a este gráfico <code>Column Plot</code>, mientras que el <code>Bar Plot</code> tiene las barras de manera horizontal.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="visualizaciones-puntos" class="slide level2 smaller">
-<h2>Visualizaciones: Puntos</h2>
-<dl>
-<dt>Scatter</dt>
-<dd>
-<p>Gráfico empleado para mostrar distribución de datos bivariados</p>
-</dd>
-</dl>
-<ul>
-<li>Muestra la relación entre una variable independiente (Eje X) y una variable dependiente (Eje Y).</li>
-<li>Permite mostrar relaciones lineales o no-lineales (Correlaciones).</li>
-<li>Outliers.</li>
-<li>Simplemente ubicación de Puntos en el Espacio.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/scatter.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img data-src="images/clase-2/scatter.png" class="quarto-figure quarto-figure-center" style="width:30.0%"></a></p>
-</figure>
-</div>
-</section>
-<section id="visualizaciones-líneas" class="slide level2 smaller">
-<h2>Visualizaciones: Líneas</h2>
-<dl>
-<dt>Lineplot</dt>
-<dd>
-<p>Gráfico empleado para visualizar tendencias y su evolución de una medida (Eje Y) en el tiempo (Eje X).</p>
-</dd>
-</dl>
-<div class="columns">
-<div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/line.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img data-src="images/clase-2/line.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></a></p>
-</figure>
-</div>
-</div><div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/line_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img data-src="images/clase-2/line_2.png" class="quarto-figure quarto-figure-center" style="width:70.0%"></a></p>
-</figure>
-</div>
-</div></div>
-<div class="fragment">
-<div class="callout callout-important callout-style-simple">
-<div class="callout-body">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-content">
-<ul>
-<li>Si bien es posible utilizarlo para gráficar dos medidas continuas, las buenas prácticas indican que el eje X siempre debería contener una componente temporal.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="estadísticos-vs-visualizaciones" class="slide level2">
-<h2>Estadísticos vs Visualizaciones</h2>
-<div class="columns">
-<div class="column">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/cuarteto_anscombe.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img data-src="images/clase-2/cuarteto_anscombe.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></a></p>
-</figure>
-</div>
-</div><div class="column">
+<div class="column" style="width:55%;">
 <p><br></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/anscombe_data.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img data-src="images/clase-2/anscombe_data.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></a></p>
-</figure>
+<p>Según <strong>Noah Iliinsky</strong>, toda visualización debe responder estas 4 preguntas antes de diseñarse:</p>
+<ol type="1">
+<li><strong>Propósito</strong> → ¿Qué decisión o comprensión busco generar?</li>
+<li><strong>Contenido</strong> → ¿Qué datos son realmente necesarios para eso?</li>
+<li><strong>Estructura</strong> → ¿Cómo organizo la información para que fluya?</li>
+<li><strong>Formato</strong> → ¿Qué tipo de gráfico sirve mejor?</li>
+</ol>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>El error más común: empezar por el formato (“quiero un pie chart”) en lugar del propósito (“quiero que entiendan que una categoría domina el 70%”).</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<p><img src="images/viz/pilar2.png" style="width: 90%; border-radius: 8px;"></p>
+</div></div>
+</section>
+<section id="section-5" class="slide level2" data-background-color="#0F2044">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 1em; color: #4A9FD4;">Parte 5</span></p>
+<p><span style="font-size: 2em; font-weight: bold;">Conectando con la decisión estratégica</span></p>
+<p><span style="font-size: 1em; color: #6B7A8D; font-style: italic;">Del análisis a la acción</span></p>
+</div>
+</section>
+<section id="de-los-datos-a-las-decisiones-tipos-de-analítica" class="slide level2">
+<h2>De los datos a las decisiones: tipos de analítica</h2>
+<p><br></p>
+<div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; font-size:0.75em; margin-top:0.5rem;">
+
+  <div style="background:#0F2044; border-radius:10px; overflow:hidden;">
+    <div style="background:#1A3A6B; padding:0.6rem 1rem;">
+      <div style="color:#4A9FD4; font-weight:700; font-size:1em;">Descriptiva</div>
+      <div style="color:#8FA8C8; font-size:0.85em;">¿Qué pasó?</div>
+    </div>
+    <div style="padding:1rem; color:#d0dce8; line-height:1.6;">
+      Reportes, dashboards, KPIs históricos.<br><br>
+      <em style="color:#8FA8C8;">Ejemplo: ventas del mes pasado por región.</em>
+    </div>
+  </div>
+
+  <div style="background:#0F2044; border-radius:10px; overflow:hidden;">
+    <div style="background:#1A3A6B; padding:0.6rem 1rem;">
+      <div style="color:#4A9FD4; font-weight:700; font-size:1em;">Diagnóstica</div>
+      <div style="color:#8FA8C8; font-size:0.85em;">¿Por qué pasó?</div>
+    </div>
+    <div style="padding:1rem; color:#d0dce8; line-height:1.6;">
+      Análisis de causa raíz, correlaciones, drill-down.<br><br>
+      <em style="color:#8FA8C8;">Ejemplo: ¿por qué bajaron las ventas en zona norte?</em>
+    </div>
+  </div>
+
+  <div style="background:#0F2044; border-radius:10px; overflow:hidden;">
+    <div style="background:#1A3A6B; padding:0.6rem 1rem;">
+      <div style="color:#4A9FD4; font-weight:700; font-size:1em;">Predictiva</div>
+      <div style="color:#8FA8C8; font-size:0.85em;">¿Qué pasará?</div>
+    </div>
+    <div style="padding:1rem; color:#d0dce8; line-height:1.6;">
+      Modelos ML, series de tiempo, probabilidades.<br><br>
+      <em style="color:#8FA8C8;">Ejemplo: estimación de deserción para el próximo semestre.</em>
+    </div>
+  </div>
+
+  <div style="background:#0F2044; border-radius:10px; overflow:hidden; border:2px solid #C9A84C;">
+    <div style="background:#C9A84C; padding:0.6rem 1rem;">
+      <div style="color:#0F2044; font-weight:700; font-size:1em;">Prescriptiva</div>
+      <div style="color:#0F2044; font-size:0.85em; opacity:0.8;">¿Qué hacer?</div>
+    </div>
+    <div style="padding:1rem; color:#d0dce8; line-height:1.6;">
+      Recomendaciones, optimización, IA generativa.<br><br>
+      <em style="color:#8FA8C8;">Ejemplo: acciones concretas para reducir deserción.</em>
+    </div>
+  </div>
+
+</div>
+
+<div style="text-align:center; margin-top:1rem; font-size:0.78em; color:#6B7A8D; font-style:italic;">
+  La mayoría de las organizaciones está en analítica descriptiva. La ventaja competitiva está en avanzar hacia prescriptiva.
+</div>
+</section>
+<section id="cuándo-confiar-en-un-análisis" class="slide level2">
+<h2>¿Cuándo confiar en un análisis?</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Señales de alerta en un reporte o dashboard:</strong></p>
+<ul>
+<li>📛 Solo muestra lo que “salió bien”</li>
+<li>📛 No tiene fecha de actualización de los datos</li>
+<li>📛 Los números no tienen contexto (¿vs qué período? ¿vs qué benchmark?)</li>
+<li>📛 No muestra incertidumbre ni márgenes de error</li>
+<li>📛 El gráfico empieza el eje Y en un número distinto de 0</li>
+<li>📛 No hay fuente ni metodología documentada</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Preguntas que todo decisor debe hacer:</strong></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<ol type="1">
+<li>¿De dónde vienen estos datos?</li>
+<li>¿Cuándo fue la última actualización?</li>
+<li>¿Qué casos/personas NO están incluidos?</li>
+<li>¿Qué significa este número en contexto?</li>
+<li>¿Cuál es la incertidumbre de esta estimación?</li>
+<li>¿Qué acción concreta recomiendan estos datos?</li>
+</ol>
+</div>
+</div>
 </div>
 </div></div>
 </section>
-<section id="otras-visualizaciones" class="slide level2">
-<h2>¿Otras Visualizaciones?</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><a href="images/clase-2/charts.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img data-src="images/clase-2/charts.png" class="quarto-figure quarto-figure-center" style="width:60.0%"></a></p>
-</figure>
+<section id="preguntas-de-cierre-clase-1" class="slide level2">
+<h2>Preguntas de cierre — Clase 1</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Para reflexionar esta semana:</strong></p>
+<ol type="1">
+<li><p>¿Qué tipos de datos existen en tu organización? ¿Cuáles se aprovechan y cuáles no?</p></li>
+<li><p>¿La última decisión importante que tomaste tuvo un análisis de datos detrás? ¿Cómo fue ese proceso?</p></li>
+<li><p>¿Qué tan confiables son los dashboards que usas cotidianamente? ¿Sabes de dónde vienen los datos?</p></li>
+<li><p>¿Qué gráfico de tu trabajo cotidiano podría mejorarse aplicando los 4 pilares de Iliinsky?</p></li>
+</ol>
+</div><div class="column" style="width:50%;">
+<p><strong>Para la próxima clase:</strong></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Clase 2:</strong> Modelos predictivos y analítica avanzada - ¿Qué es un modelo y para qué sirve? - Regresión, clasificación, clustering - Cómo evaluar si un modelo es bueno - Casos aplicados en gestión organizacional</p>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Lectura recomendada:</strong> Revisa el capítulo de analítica descriptiva del material del curso. Identifica un dataset real de tu organización que puedas traer a la Clase 2.</p>
+</div>
+</div>
+</div>
+</div></div>
 </section>
-<section id="preguntas-para-terminar" class="slide level2">
-<h2>Preguntas para terminar</h2>
-<ul>
-<li>¿Por qué usar visualizaciones? ¿Qué son los canales visuales?</li>
-<li>¿Por qué es necesario el EDA?</li>
-<li>¿Por qué es necesario utilizar tanto Estadísticos como Visualizaciones?</li>
-</ul>
-</section>
-<section id="gracias-por-participar" class="slide level2" data-background-image="images/background.jpg" data-background-opacity="0.25">
+<section id="gracias-por-participar" class="slide level2">
 <h2>🎉 ¡Gracias por Participar!</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><br></p>
-<p>❓¿Preguntas?</p>
+<p>❓ ¿Preguntas?</p>
 <p>👏 Responder <a href="https://docs.google.com/forms/d/e/1FAIpQLSd2CseqhHUjdmvr46ZDb_Aa2iUYEjLAIE4MwLztled5ytRJvg/viewform?usp=dialog">encuesta</a></p>
-<p>🥳 Disfrutar del Evento!</p>
+<p>🥳 ¡Hasta la próxima clase!</p>
+<p><br></p>
+<p><strong>Contacto:</strong></p>
+<ul>
+<li>🌐 <a href="https://fralfaro.github.io/portfolio/">fralfaro.github.io/portfolio</a></li>
+<li>💼 <a href="https://www.linkedin.com/in/faam/">linkedin.com/in/faam</a></li>
+<li>📧 francisco.alfaro@usm.cl</li>
+</ul>
 </div><div class="column" data-align="center" style="width:50%;">
-<p><img data-src="images/qr_citt2.png" width="400"></p>
+<p><img data-src="images/qr_citt2.png" width="380"></p>
+<div style="font-size: 0.75em; color: #6B7A8D; margin-top: 0.5rem;">
+<p>🔗 <a href="https://sethnut.com/talks/">sethnut.com/talks</a></p>
+</div>
 </div></div>
-<blockquote>
-<p>🔗 Nuestro Sitio Web: <a href="https://sethnut.com/talks/">sethnut.com/talks</a></p>
-</blockquote>
 <style>
-/* Ajusta el tamaño del título y subtítulo */
 .reveal .slides h1 {
-  font-size: 2em; /* Tamaño más pequeño para el título */
+  font-size: 2em;
 }
-
 .reveal .slides h2 {
-  font-size: 1.5em; /* Tamaño más pequeño para el subtítulo */
+  font-size: 1.5em;
 }
-
-/* Ajusta el tamaño del texto en los párrafos */
 .reveal .slides p {
-  font-size: 0.8em; /* Texto más pequeño */
+  font-size: 0.8em;
 }
-
-/* Ajusta el tamaño de las tablas */
 .reveal .slides table {
-  font-size: 0.8em; /* Tamaño de fuente más pequeño en las tablas */
-  width: 90%; /* Ajusta el ancho de la tabla */
-  margin: 0 auto; /* Centra la tabla */
+  font-size: 0.8em;
+  width: 90%;
+  margin: 0 auto;
 }
-
-/* Ajusta el tamaño de los bullets */
 .reveal .slides ul {
-  font-size: 0.8em; /* Tamaño de fuente más pequeño en los bullets */
+  font-size: 1em;
 }
-
 .reveal .slide-logo {
-   max-height: 2em !important;
+   max-height: 3em !important;
 }
 </style>
 
@@ -1016,7 +1220,6 @@ Francisco Alfaro
   <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
   <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -1031,19 +1234,18 @@ Francisco Alfaro
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-'controlsAuto': false,
+'controlsAuto': true,
 'previewLinksAuto': false,
 'pdfSeparateFragments': false,
 'autoAnimateEasing': "ease",
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'jumpToSlide': true,
-'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"8\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'chalkboard': {"buttons":true},
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
 'smaller': false,
  
         // Display controls in the bottom right corner
-        controls: true,
+        controls: false,
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
@@ -1076,7 +1278,7 @@ Francisco Alfaro
         respondToHashChanges: true,
 
         // Push each slide change to the browser history
-        history: true,
+        history: false,
 
         // Enable keyboard shortcuts for navigation
         keyboard: true,
@@ -1165,10 +1367,10 @@ Francisco Alfaro
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'slide',
+        transition: 'fade',
 
         // Transition speed (default/fast/slow)
-        transitionSpeed: 'default',
+        transitionSpeed: 'fast',
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
@@ -1185,9 +1387,9 @@ Francisco Alfaro
         // The "normal" size of the presentation, aspect ratio will be preserved
         // when the presentation is scaled to fit different resolutions. Can be
         // specified using percentage units.
-        width: 1366,
+        width: 1600,
 
-        height: 768,
+        height: 800,
 
         // Factor of the display size that should remain empty around the content
         margin: 0.1,
@@ -1210,7 +1412,7 @@ Francisco Alfaro
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
           RevealNotes,
@@ -1416,39 +1618,6 @@ Francisco Alfaro
       }
       loadGiscus();
     </script>
-    <script>videojs(video_shortcode_videojs_video1);</script>
-    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-    (function() {
-      let previousOnload = window.onload;
-      window.onload = () => {
-        if (previousOnload) {
-          previousOnload();
-        }
-        lightboxQuarto.on('slide_before_load', (data) => {
-          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-          const href = trigger.getAttribute('href');
-          if (href !== null) {
-            const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-            if (imgEl !== null) {
-              const srcAttr = imgEl.getAttribute("src");
-              if (srcAttr && srcAttr.startsWith("data:")) {
-                slideConfig.href = srcAttr;
-              }
-            }
-          } 
-        });
-      
-        lightboxQuarto.on('slide_after_load', (data) => {
-          const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-          if (window.Quarto?.typesetMath) {
-            window.Quarto.typesetMath(slideNode);
-          }
-        });
-      
-      };
-      
-    })();
-              </script>
     
 
 </body></html>

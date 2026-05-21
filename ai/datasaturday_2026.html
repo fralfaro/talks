@@ -330,6 +330,50 @@ Dirección de Transformación Digital · 2026</p>
 <li class="fragment">Tu primera versión <span style="background-color:black;">seguirá siendo horrible.</span></li>
 </ol>
 </section>
+<section id="por-qué-esta-charla-ahora" class="slide level2" data-background-image="images/slide-normal.jpg">
+<h2>¿Por qué esta charla ahora?</h2>
+<p><br></p>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; font-size:0.80em;">
+
+  <div style="background:#0F2044; border-radius:10px; padding:1.4rem; color:white;">
+    <div style="color:#C9A84C; font-size:1em; margin-bottom:0.8rem; font-weight:700;">📈 El contexto ha cambiado</div>
+    <div style="display:flex; flex-direction:column; gap:0.5rem; color:#8FA8C8; line-height:1.6;">
+      <div>• GPT-4 era un prototipo hace 3 años. Hoy es la baseline.</div>
+      <div>• Los analistas de datos compiten con herramientas que producen dashboards en segundos.</div>
+      <div>• La presión por "resultados rápidos con IA" llega desde arriba y desde abajo.</div>
+    </div>
+  </div>
+
+  <div style="background:#0F2044; border-radius:10px; padding:1.4rem; color:white;">
+    <div style="color:#C9A84C; font-size:1em; margin-bottom:0.8rem; font-weight:700;">🎯 Lo que no cambió</div>
+    <div style="display:flex; flex-direction:column; gap:0.5rem; color:#8FA8C8; line-height:1.6;">
+      <div>• Los datos por sí solos nunca convencieron a nadie.</div>
+      <div>• Una decisión mala tomada más rápido sigue siendo una mala decisión.</div>
+      <div>• El criterio sobre qué historia contar sigue siendo territorio humano.</div>
+    </div>
+  </div>
+
+</div>
+<div class="fragment">
+<div style="text-align: center; background: rgba(201,168,76,0.1); border-left: 4px solid #C9A84C; padding: 0.75rem 1.5rem; border-radius: 4px; font-size: 0.95rem; margin-top:1rem;">
+<p>La pregunta no es si usar IA para tus datos. Es <strong>cómo usarla sin perder el juicio</strong>.</p>
+</div>
+<aside class="notes">
+<p>This is the “why now” framing. The landscape shifted fast.<br>
+The analytic craft still matters — but the tools have fundamentally changed the starting point.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section>
 <section>
 <section id="storytelling" class="title-slide slide level1 title-middle-dark center" data-background-image="images/horst_quarto_penguins_share.png" data-state="no-logo">
 <h1>Storytelling</h1>
@@ -1565,7 +1609,7 @@ The AI could have written the first version in 3 seconds. The second version req
 </section>
 <section id="demo-1-copiloto-narrativo-con-claude-api" class="slide level2" data-background-image="images/slide-normal.jpg">
 <h2>Demo 1 · Copiloto narrativo con Claude API</h2>
-<div id="c733a4db" class="cell" data-execution_count="1">
+<div id="b629c8cb" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|1-5|7-18|20-28"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> anthropic</span>
 <span id="cb1-2"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a></a></span>
@@ -1616,7 +1660,7 @@ The AI could have written the first version in 3 seconds. The second version req
 </section>
 <section id="demo-2-reporte-parametrizado-con-quarto" class="slide level2" data-background-image="images/slide-normal.jpg">
 <h2>Demo 2 · Reporte parametrizado con Quarto</h2>
-<div id="a1dc56a1" class="cell" data-execution_count="2">
+<div id="a8f7c563" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" data-code-line-numbers="|1-3|5-14|16-25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="co"># En _quarto.yml o en el header del .qmd:</span></span>
 <span id="cb2-2"><a></a><span class="co"># params:</span></span>
 <span id="cb2-3"><a></a><span class="co">#   region: "Norte"</span></span>
@@ -1664,7 +1708,7 @@ The analyst reviews the outliers — not every single report.</p>
 </section>
 <section id="demo-3-del-insight-al-visual-en-segundos" class="slide level2" data-background-image="images/slide-normal.jpg">
 <h2>Demo 3 · Del insight al visual en segundos</h2>
-<div id="84703da0" class="cell" data-execution_count="3">
+<div id="ee61bba1" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" data-code-line-numbers="|1-10|12-28|30-38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">import</span> anthropic</span>
 <span id="cb3-2"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb3-3"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -1704,6 +1748,79 @@ The analyst reviews the outliers — not every single report.</p>
 <aside class="notes">
 <p>The AI chooses the chart type and writes the title — both of which require understanding the MESSAGE.<br>
 The analyst keeps full control of the visual output — but starts from a much better place.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+</section>
+<section id="demo-4-checklist-del-analista-evaluar-el-output-de-la-ia" class="slide level2" data-background-image="images/slide-normal.jpg">
+<h2>Demo 4 · Checklist del analista: evaluar el output de la IA</h2>
+<div id="bb4b1c19" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" data-code-line-numbers="|1-12|14-36|38-50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">import</span> anthropic</span>
+<span id="cb4-2"><a></a><span class="im">import</span> json</span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a>client <span class="op">=</span> anthropic.Anthropic()</span>
+<span id="cb4-5"><a></a></span>
+<span id="cb4-6"><a></a><span class="kw">def</span> evaluar_narrativa_ia(narrativa: <span class="bu">str</span>, proposito: <span class="bu">str</span>, audiencia: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">dict</span>:</span>
+<span id="cb4-7"><a></a>    <span class="co">"""</span></span>
+<span id="cb4-8"><a></a><span class="co">    Usa la IA para autoevaluar su propio output narrativo contra</span></span>
+<span id="cb4-9"><a></a><span class="co">    los criterios del framework Propósito-Audiencia-Tensión-Resolución.</span></span>
+<span id="cb4-10"><a></a><span class="co">    El analista usa este score como punto de partida para la revisión.</span></span>
+<span id="cb4-11"><a></a><span class="co">    """</span></span>
+<span id="cb4-12"><a></a>    </span>
+<span id="cb4-13"><a></a>    prompt <span class="op">=</span> <span class="ss">f"""Eres un editor senior de comunicación de datos.</span></span>
+<span id="cb4-14"><a></a><span class="ss">Evalúa esta narrativa generada por IA según 4 criterios.</span></span>
+<span id="cb4-15"><a></a><span class="ss">Responde SOLO en JSON, sin explicación adicional.</span></span>
+<span id="cb4-16"><a></a></span>
+<span id="cb4-17"><a></a><span class="ss">NARRATIVA: </span><span class="sc">{</span>narrativa<span class="sc">}</span></span>
+<span id="cb4-18"><a></a><span class="ss">PROPÓSITO DECLARADO: </span><span class="sc">{</span>proposito<span class="sc">}</span></span>
+<span id="cb4-19"><a></a><span class="ss">AUDIENCIA: </span><span class="sc">{</span>audiencia<span class="sc">}</span></span>
+<span id="cb4-20"><a></a></span>
+<span id="cb4-21"><a></a><span class="ss">Evalúa cada criterio con score 1-5 y una observación concisa:</span></span>
+<span id="cb4-22"><a></a><span class="ch">{{</span></span>
+<span id="cb4-23"><a></a><span class="ss">  "proposito": </span><span class="ch">{{</span><span class="ss">"score": int, "obs": "str"</span><span class="ch">}}</span><span class="ss">,</span></span>
+<span id="cb4-24"><a></a><span class="ss">  "audiencia": </span><span class="ch">{{</span><span class="ss">"score": int, "obs": "str"</span><span class="ch">}}</span><span class="ss">,</span></span>
+<span id="cb4-25"><a></a><span class="ss">  "tension": </span><span class="ch">{{</span><span class="ss">"score": int, "obs": "str"</span><span class="ch">}}</span><span class="ss">,</span></span>
+<span id="cb4-26"><a></a><span class="ss">  "resolucion": </span><span class="ch">{{</span><span class="ss">"score": int, "obs": "str"</span><span class="ch">}}</span><span class="ss">,</span></span>
+<span id="cb4-27"><a></a><span class="ss">  "score_total": int,</span></span>
+<span id="cb4-28"><a></a><span class="ss">  "accion_recomendada": "str"</span></span>
+<span id="cb4-29"><a></a><span class="ch">}}</span><span class="ss">"""</span></span>
+<span id="cb4-30"><a></a></span>
+<span id="cb4-31"><a></a>    response <span class="op">=</span> client.messages.create(</span>
+<span id="cb4-32"><a></a>        model<span class="op">=</span><span class="st">"claude-sonnet-4-5"</span>,</span>
+<span id="cb4-33"><a></a>        max_tokens<span class="op">=</span><span class="dv">512</span>,</span>
+<span id="cb4-34"><a></a>        messages<span class="op">=</span>[{<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: prompt}]</span>
+<span id="cb4-35"><a></a>    )</span>
+<span id="cb4-36"><a></a>    </span>
+<span id="cb4-37"><a></a>    <span class="cf">return</span> json.loads(response.content[<span class="dv">0</span>].text)</span>
+<span id="cb4-38"><a></a></span>
+<span id="cb4-39"><a></a><span class="co"># Uso real:</span></span>
+<span id="cb4-40"><a></a>narrativa_generada <span class="op">=</span> <span class="st">"""El análisis de los datos del último trimestre revela</span></span>
+<span id="cb4-41"><a></a><span class="st">una tendencia negativa en la zona norte con un 18</span><span class="sc">% d</span><span class="st">e variación..."""</span></span>
+<span id="cb4-42"><a></a></span>
+<span id="cb4-43"><a></a>resultado <span class="op">=</span> evaluar_narrativa_ia(</span>
+<span id="cb4-44"><a></a>    narrativa<span class="op">=</span>narrativa_generada,</span>
+<span id="cb4-45"><a></a>    proposito<span class="op">=</span><span class="st">"aprobar inversión en zona norte antes de julio"</span>,</span>
+<span id="cb4-46"><a></a>    audiencia<span class="op">=</span><span class="st">"directorio ejecutivo con presión presupuestaria"</span></span>
+<span id="cb4-47"><a></a>)</span>
+<span id="cb4-48"><a></a></span>
+<span id="cb4-49"><a></a><span class="bu">print</span>(<span class="ss">f"Score total: </span><span class="sc">{</span>resultado[<span class="st">'score_total'</span>]<span class="sc">}</span><span class="ss">/20"</span>)</span>
+<span id="cb4-50"><a></a><span class="bu">print</span>(<span class="ss">f"Acción: </span><span class="sc">{</span>resultado[<span class="st">'accion_recomendada'</span>]<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<aside class="notes">
+<p>This is the meta-demo: using AI to evaluate AI output.<br>
+The analyst uses this as a structured checklist, not as a final verdict.<br>
+The key insight: making the evaluation criteria explicit forces you to think about them before generating.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1778,6 +1895,51 @@ Practical, actionable, no new tools required beyond what they already have.</p>
 </section>
 <section class="slide level2">
 
+</section>
+<section id="el-checklist-del-lunes-por-la-mañana" class="slide level2" data-background-image="images/slide-normal.jpg">
+<h2>El checklist del lunes por la mañana</h2>
+<p><br></p>
+<style>
+.checklist-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; font-size: 0.80em; }
+.cl-col { background: #0F2044; border-radius: 10px; padding: 1.4rem; color: white; }
+.cl-title { color: #C9A84C; font-weight: 700; font-size: 1em; margin-bottom: 0.8rem; }
+.cl-item { display: flex; align-items: flex-start; gap: 0.6rem; margin-bottom: 0.6rem; color: #d0dce8; line-height: 1.5; }
+.cl-check { color: #6fcf6f; flex-shrink: 0; }
+.cl-warn { color: #F39C12; flex-shrink: 0; }
+</style>
+
+<div class="checklist-grid">
+  <div class="cl-col">
+    <div class="cl-title">✅ Antes de generar con IA</div>
+    <div class="cl-item"><span class="cl-check">□</span><span>¿Tengo claro el propósito de esta historia?</span></div>
+    <div class="cl-item"><span class="cl-check">□</span><span>¿Sé quién es la audiencia específica (no genérica)?</span></div>
+    <div class="cl-item"><span class="cl-check">□</span><span>¿Conozco el contexto organizacional que el modelo no sabe?</span></div>
+    <div class="cl-item"><span class="cl-check">□</span><span>¿Qué acción concreta quiero provocar?</span></div>
+  </div>
+  <div class="cl-col">
+    <div class="cl-title">⚠️ Antes de entregar el output</div>
+    <div class="cl-item"><span class="cl-warn">□</span><span>¿El gráfico se entiende en menos de 7 segundos?</span></div>
+    <div class="cl-item"><span class="cl-warn">□</span><span>¿La narrativa refleja la tensión real, no solo los datos?</span></div>
+    <div class="cl-item"><span class="cl-warn">□</span><span>¿Verifiqué los números citados por la IA?</span></div>
+    <div class="cl-item"><span class="cl-warn">□</span><span>¿La resolución propuesta es realmente viable hoy?</span></div>
+    <div class="cl-item"><span class="cl-warn">□</span><span>¿Hice este output mío, o solo lo pasé?</span></div>
+  </div>
+</div>
+<aside class="notes">
+<p>Give this to them as a take-home artifact.<br>
+The key message: the checklist forces you to think BEFORE and AFTER the AI step.<br>
+That’s where the human judgment lives.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
 <section>
 <section id="conclusiones" class="title-slide slide level1 title-top-dark center" data-background-image="images/horst_quarto_penguins_thankyou.png" data-state="no-logo">
