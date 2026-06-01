@@ -235,12 +235,14 @@ Supervisor: Dr.&nbsp;Mauricio Araya · 2026</p>
 <div class="column" style="width:50%;">
 <p><br></p>
 <div style="font-size: 0.88em; line-height: 2em;">
-<p><strong>1.</strong> 🎯 La Problemática</p>
-<p><strong>2.</strong> 📚 Lo que se ha hecho: Optimización Clásica</p>
-<p><strong>3.</strong> 🤖 Lo nuevo: Aprendizaje por Refuerzo y MDP</p>
-<p><strong>4.</strong> 🔬 Los dos papers clave</p>
-<p><strong>5.</strong> 📊 Mis datos: Cohorte UTFSM 2010–2018</p>
-<p><strong>6.</strong> 🚀 Qué haré y qué se puede obtener</p>
+<p><strong>1.</strong> 🎯 La Problemática: deserción, reprobación y financiamiento</p>
+<p><strong>2.</strong> 💸 Becas y beneficios: el costo real de atrasarse</p>
+<p><strong>3.</strong> 🧭 El jefe de carrera: de la intuición a la evidencia</p>
+<p><strong>4.</strong> 📚 Lo que se ha hecho: Optimización Clásica</p>
+<p><strong>5.</strong> 🤖 Lo nuevo: Aprendizaje por Refuerzo y MDP</p>
+<p><strong>6.</strong> 🔬 Los dos papers clave</p>
+<p><strong>7.</strong> 📊 Mis datos: Cohorte UTFSM 2010–2018</p>
+<p><strong>8.</strong> 🚀 Qué haré y qué se puede obtener</p>
 </div>
 </div><div class="column" style="width:50%;">
 <div style="text-align: center; margin-top: 2em;">
@@ -256,7 +258,7 @@ Supervisor: Dr.&nbsp;Mauricio Araya · 2026</p>
 <div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
 <p><span style="font-size: 1.5em; color: #4A9FD4;">Parte 1</span></p>
 <p><span style="font-size: 2.5em; color: white; font-weight: bold;">La Problemática</span></p>
-<p><span style="font-size: 1.2em; color: #A8C4E0; font-style: italic;">¿Por qué esto importa?</span></p>
+<p><span style="font-size: 1.2em; color: #A8C4E0; font-style: italic;">Deserción, financiamiento y consejería académica</span></p>
 </div>
 </section>
 <section id="el-problema-en-números-reales" class="slide level2">
@@ -293,6 +295,137 @@ Nivel máximo observado: 16 semestres
 → Hasta 6 semestres sin financiamiento
 → Costo estimado: ~$1.5M CLP/semestre</code></pre>
 <p><strong>Nadie ha modelado esto en la función de recompensa de un MDP.</strong></p>
+</div>
+</div></div>
+</section>
+<section id="el-sistema-de-apoyo-financiero-más-que-la-gratuidad" class="slide level2">
+<h2>El sistema de apoyo financiero: más que la Gratuidad</h2>
+<div class="columns">
+<div class="column" style="width:52%;">
+<p><strong>El financiamiento no es binario — es un ecosistema complejo</strong></p>
+<div style="font-size: 0.8em; line-height: 1.7em;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 36%">
+<col style="width: 28%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Beneficio</th>
+<th>Cobertura</th>
+<th>Condición de mantención</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Gratuidad</strong></td>
+<td>Arancel + matrícula</td>
+<td>Avance ≥ 70% por año</td>
+</tr>
+<tr class="even">
+<td><strong>Beca Bicentenario</strong></td>
+<td>Arancel parcial</td>
+<td>Rendimiento mínimo anual</td>
+</tr>
+<tr class="odd">
+<td><strong>Beca J. Gómez Millas</strong></td>
+<td>Arancel parcial</td>
+<td>PSU + NEM alto ingreso</td>
+</tr>
+<tr class="even">
+<td><strong>Beca Excelencia Acad.</strong></td>
+<td>Matrícula</td>
+<td>1° quintil + NEM ≥ 5.5</td>
+</tr>
+<tr class="odd">
+<td><strong>FSCU / CAE</strong></td>
+<td>Crédito arancel</td>
+<td>Sin condición académica</td>
+</tr>
+<tr class="even">
+<td><strong>Becas UTFSM internas</strong></td>
+<td>Parcial o total</td>
+<td>Rendimiento semestral</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br></p>
+<div style="background: #fde8e8; border-left: 4px solid #c0392b; border-radius: 6px; padding: 0.6em 1em; font-size: 0.8em;">
+<p>🔴 <strong>La mayoría de los beneficios se pierden o reducen si el estudiante reprueba o se atrasa.</strong> La trayectoria académica no es solo un tema de graduación — es un tema de sostenibilidad financiera.</p>
+</div>
+</div><div class="column" style="width:48%;">
+<div style="background: linear-gradient(135deg, #0F2044, #1A3A6B); border-radius: 10px; padding: 1.1em; color: white; font-size: 0.8em;">
+<p><strong>En la cohorte UTFSM ICC 2010–2018:</strong></p>
+<pre><code>Estudiantes con beca:       ~60-70% de la cohorte
+Beneficio gratuidad:        variable por cohorte
+                            (Ley 2016 →cohortes 2017+)
+
+Consecuencia de reprobación:
+  → Pérdida de beca si nota &lt; 4.0 o
+    avance &lt; 70% de créditos del año
+  → El estudiante paga de su bolsillo
+    o abandona la carrera
+
+Costo sin financiamiento:
+  ~$1.5–2M CLP por semestre
+  × hasta 6 semestres de atraso
+  = $9–12M CLP de deuda potencial</code></pre>
+</div>
+<div style="background: #EBF4FB; border-left: 4px solid #4A9FD4; border-radius: 6px; padding: 0.5em 0.8em; font-size: 0.78em; margin-top: 0.6em;">
+<p>💡 Un modelo que optimiza trayectorias debería <strong>preservar el beneficio activo del estudiante</strong>, no solo maximizar créditos aprobados.</p>
+</div>
+</div></div>
+</section>
+<section id="el-jefe-de-carrera-como-agente-de-decisión-el-problema-hoy" class="slide level2">
+<h2>El jefe de carrera como agente de decisión: el problema hoy</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>¿Cómo decide hoy un jefe de carrera?</strong></p>
+<div style="font-size: 0.82em; line-height: 1.9em;">
+<div style="display: flex; flex-direction: column; gap: 0.5em;">
+<div style="background: #fde8e8; border-left: 3px solid #e74c3c; border-radius: 5px; padding: 0.5em 0.8em;">
+<p>❌ <strong>Intuición y experiencia personal</strong> — no replicable ni escalable</p>
+</div>
+<div style="background: #fde8e8; border-left: 3px solid #e74c3c; border-radius: 5px; padding: 0.5em 0.8em;">
+<p>❌ <strong>Malla nominal</strong> como única referencia — no considera el historial real del estudiante</p>
+</div>
+<div style="background: #fde8e8; border-left: 3px solid #e74c3c; border-radius: 5px; padding: 0.5em 0.8em;">
+<p>❌ <strong>Sin información de riesgo estructural</strong> — no sabe qué cursos bloquean más trayectorias</p>
+</div>
+<div style="background: #fff3cd; border-left: 3px solid #e6a817; border-radius: 5px; padding: 0.5em 0.8em;">
+<p>⚠️ <strong>Consejería reactiva</strong> — actúa cuando el estudiante ya está en riesgo, no antes</p>
+</div>
+<div style="background: #fff3cd; border-left: 3px solid #e6a817; border-radius: 5px; padding: 0.5em 0.8em;">
+<p>⚠️ <strong>Sin evidencia de trayectorias similares</strong> — no puede decir “estudiantes como tú tomaron X y les fue mejor”</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p><strong>¿Qué debería poder hacer con evidencia estadística?</strong></p>
+<div style="font-size: 0.82em; line-height: 1.9em;">
+<div style="display: flex; flex-direction: column; gap: 0.5em;">
+<div style="background: #eafaf1; border-left: 3px solid #27ae60; border-radius: 5px; padding: 0.5em 0.8em;">
+<p>✅ <strong>Identificar el cubo de riesgo del estudiante</strong> desde NEM, PSU y avance actual</p>
+</div>
+<div style="background: #eafaf1; border-left: 3px solid #27ae60; border-radius: 5px; padding: 0.5em 0.8em;">
+<p>✅ <strong>Recomendar carga semestral óptima</strong> según el perfil y los cursos disponibles</p>
+</div>
+<div style="background: #eafaf1; border-left: 3px solid #27ae60; border-radius: 5px; padding: 0.5em 0.8em;">
+<p>✅ <strong>Alertar sobre cursos de alto riesgo estructural</strong> antes de la matrícula</p>
+</div>
+<div style="background: #eafaf1; border-left: 3px solid #27ae60; border-radius: 5px; padding: 0.5em 0.8em;">
+<p>✅ <strong>Mostrar trayectorias de estudiantes similares</strong> que se graduaron oportunamente</p>
+</div>
+<div style="background: #eafaf1; border-left: 3px solid #27ae60; border-radius: 5px; padding: 0.5em 0.8em;">
+<p>✅ <strong>Priorizar estudiantes en riesgo de perder su beca</strong> antes del corte semestral</p>
+</div>
+</div>
+</div>
+<p>. . .</p>
+<div style="background: linear-gradient(90deg, #e8f0fe, #f8f9ff); border-left: 4px solid #0F2044; border-radius: 6px; padding: 0.6em 1em; font-size: 0.8em; margin-top: 0.3em;">
+<p>🎯 <strong>Esta tesis propone el marco técnico</strong> (MDP + evidencia histórica) que hace posible ese cambio de consejería reactiva a consejería predictiva basada en datos.</p>
 </div>
 </div></div>
 </section>
@@ -832,12 +965,12 @@ También disponible en R (CRAN) y Python (UCSD port)</p>
 <div class="columns">
 <div class="column" style="width:55%;">
 <p><strong><code>00_malla.csv</code></strong> — 57 cursos, 10 niveles</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>sigla     nombre              creditos  nivel  aprobacion  nivel_dependencia</span>
-<span id="cb6-2"><a></a>MAT<span class="op">-</span><span class="dv">113</span>   Algebra             <span class="dv">6</span>         <span class="dv">1</span>      <span class="fl">81.70</span>       <span class="dv">8</span></span>
-<span id="cb6-3"><a></a>MAT<span class="op">-</span><span class="dv">123</span>   Calculo             <span class="dv">6</span>         <span class="dv">1</span>      <span class="fl">61.76</span>       <span class="dv">8</span></span>
-<span id="cb6-4"><a></a>ICC<span class="op">-</span><span class="dv">153</span>   Quimica Materiales  <span class="dv">3</span>         <span class="dv">2</span>      <span class="fl">47.72</span>       <span class="dv">7</span></span>
-<span id="cb6-5"><a></a>FIS<span class="op">-</span><span class="dv">131</span>   Fisica Mecanica <span class="dv">1</span>   <span class="dv">4</span>         <span class="dv">2</span>      <span class="fl">53.36</span>       <span class="dv">7</span></span>
-<span id="cb6-6"><a></a>MAT<span class="op">-</span><span class="dv">213</span>   Algebra Lineal      <span class="dv">4</span>         <span class="dv">2</span>      <span class="fl">52.08</span>       <span class="dv">6</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>sigla     nombre              creditos  nivel  aprobacion  nivel_dependencia</span>
+<span id="cb7-2"><a></a>MAT<span class="op">-</span><span class="dv">113</span>   Algebra             <span class="dv">6</span>         <span class="dv">1</span>      <span class="fl">81.70</span>       <span class="dv">8</span></span>
+<span id="cb7-3"><a></a>MAT<span class="op">-</span><span class="dv">123</span>   Calculo             <span class="dv">6</span>         <span class="dv">1</span>      <span class="fl">61.76</span>       <span class="dv">8</span></span>
+<span id="cb7-4"><a></a>ICC<span class="op">-</span><span class="dv">153</span>   Quimica Materiales  <span class="dv">3</span>         <span class="dv">2</span>      <span class="fl">47.72</span>       <span class="dv">7</span></span>
+<span id="cb7-5"><a></a>FIS<span class="op">-</span><span class="dv">131</span>   Fisica Mecanica <span class="dv">1</span>   <span class="dv">4</span>         <span class="dv">2</span>      <span class="fl">53.36</span>       <span class="dv">7</span></span>
+<span id="cb7-6"><a></a>MAT<span class="op">-</span><span class="dv">213</span>   Algebra Lineal      <span class="dv">4</span>         <span class="dv">2</span>      <span class="fl">52.08</span>       <span class="dv">6</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Columnas clave para el MDP:</strong></p>
 <ul>
 <li><code>aprobacion</code> → <strong>P(aprobar | curso)</strong> de la función de transición</li>
@@ -861,11 +994,11 @@ También disponible en R (CRAN) y Python (UCSD port)</p>
 <div class="columns">
 <div class="column" style="width:55%;">
 <p><strong><code>01_demografico.csv</code></strong> — 657 estudiantes</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>rut  nem   psu    region        tipo_colegio      cohorte  beca  beneficio_gratuidad</span>
-<span id="cb7-2"><a></a><span class="dv">539</span>  <span class="fl">5.6</span>   <span class="dv">607</span>    DEL BIOBIO    Municipal         <span class="dv">2011</span>     <span class="dv">100</span>   <span class="dv">0</span></span>
-<span id="cb7-3"><a></a> <span class="dv">46</span>  <span class="fl">6.2</span>   <span class="dv">593</span>    VALPARAISO    Municipal         <span class="dv">2013</span>      <span class="dv">64</span>   <span class="dv">0</span></span>
-<span id="cb7-4"><a></a><span class="dv">438</span>  <span class="fl">5.5</span>   <span class="dv">658</span>    METROPOLITANA Part.Subv.        <span class="dv">2012</span>       <span class="dv">0</span>   <span class="dv">0</span></span>
-<span id="cb7-5"><a></a><span class="dv">170</span>  <span class="fl">5.9</span>   <span class="dv">604</span>    METROPOLITANA Part.Subv.        <span class="dv">2010</span>     <span class="dv">100</span>   <span class="dv">0</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>rut  nem   psu    region        tipo_colegio      cohorte  beca  beneficio_gratuidad</span>
+<span id="cb8-2"><a></a><span class="dv">539</span>  <span class="fl">5.6</span>   <span class="dv">607</span>    DEL BIOBIO    Municipal         <span class="dv">2011</span>     <span class="dv">100</span>   <span class="dv">0</span></span>
+<span id="cb8-3"><a></a> <span class="dv">46</span>  <span class="fl">6.2</span>   <span class="dv">593</span>    VALPARAISO    Municipal         <span class="dv">2013</span>      <span class="dv">64</span>   <span class="dv">0</span></span>
+<span id="cb8-4"><a></a><span class="dv">438</span>  <span class="fl">5.5</span>   <span class="dv">658</span>    METROPOLITANA Part.Subv.        <span class="dv">2012</span>       <span class="dv">0</span>   <span class="dv">0</span></span>
+<span id="cb8-5"><a></a><span class="dv">170</span>  <span class="fl">5.9</span>   <span class="dv">604</span>    METROPOLITANA Part.Subv.        <span class="dv">2010</span>     <span class="dv">100</span>   <span class="dv">0</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Columnas clave para el MDP:</strong></p>
 <ul>
 <li><code>nem</code> + <code>psu_matematica</code> → <strong>cubo de riesgo</strong> del estudiante</li>
@@ -888,11 +1021,11 @@ También disponible en R (CRAN) y Python (UCSD port)</p>
 <div class="columns">
 <div class="column" style="width:55%;">
 <p><strong><code>02_avance_curricular.csv</code></strong> — 17.228 registros</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>rut  cohorte  estado    creditos  nivel_original  oportunidad  nota  estado_aprobacion</span>
-<span id="cb8-2"><a></a><span class="dv">197</span>  <span class="dv">2016</span>     Desertor  <span class="dv">6</span>         <span class="dv">1</span>               <span class="dv">1</span>            <span class="fl">6.5</span>   A</span>
-<span id="cb8-3"><a></a><span class="dv">197</span>  <span class="dv">2016</span>     Desertor  <span class="dv">4</span>         <span class="dv">2</span>               <span class="dv">1</span>            <span class="fl">6.9</span>   A</span>
-<span id="cb8-4"><a></a><span class="dv">197</span>  <span class="dv">2016</span>     Desertor  <span class="dv">4</span>         <span class="dv">2</span>               <span class="dv">1</span>            <span class="fl">6.6</span>   A</span>
-<span id="cb8-5"><a></a><span class="dv">197</span>  <span class="dv">2016</span>     Desertor  <span class="dv">4</span>         <span class="dv">3</span>               <span class="dv">2</span>            <span class="fl">6.7</span>   A</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>rut  cohorte  estado    creditos  nivel_original  oportunidad  nota  estado_aprobacion</span>
+<span id="cb9-2"><a></a><span class="dv">197</span>  <span class="dv">2016</span>     Desertor  <span class="dv">6</span>         <span class="dv">1</span>               <span class="dv">1</span>            <span class="fl">6.5</span>   A</span>
+<span id="cb9-3"><a></a><span class="dv">197</span>  <span class="dv">2016</span>     Desertor  <span class="dv">4</span>         <span class="dv">2</span>               <span class="dv">1</span>            <span class="fl">6.9</span>   A</span>
+<span id="cb9-4"><a></a><span class="dv">197</span>  <span class="dv">2016</span>     Desertor  <span class="dv">4</span>         <span class="dv">2</span>               <span class="dv">1</span>            <span class="fl">6.6</span>   A</span>
+<span id="cb9-5"><a></a><span class="dv">197</span>  <span class="dv">2016</span>     Desertor  <span class="dv">4</span>         <span class="dv">3</span>               <span class="dv">2</span>            <span class="fl">6.7</span>   A</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Columnas clave para el MDP:</strong></p>
 <ul>
 <li><code>estado_aprobacion</code> (A/R) → <strong>función de transición</strong> empírica</li>
@@ -968,31 +1101,31 @@ RECOMPENSA R(s, a, s')
 <div class="column" style="width:55%;">
 <p><strong>Fase 1 — Replicar el paper (1–2 días)</strong></p>
 <div style="font-size: 0.8em; line-height: 1.7em;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="co"># 1. Construir el grafo de la malla UTFSM</span></span>
-<span id="cb10-2"><a></a><span class="im">import</span> networkx <span class="im">as</span> nx</span>
-<span id="cb10-3"><a></a>G <span class="op">=</span> nx.DiGraph()</span>
-<span id="cb10-4"><a></a><span class="co"># nodos = cursos, aristas = prerrequisitos</span></span>
-<span id="cb10-5"><a></a><span class="co"># atributos = créditos, BF, aprobación</span></span>
-<span id="cb10-6"><a></a></span>
-<span id="cb10-7"><a></a><span class="co"># 2. Calcular métricas de Heileman</span></span>
-<span id="cb10-8"><a></a>BF[curso] <span class="op">=</span> <span class="bu">len</span>(descendientes(G, curso))</span>
-<span id="cb10-9"><a></a>DF[curso] <span class="op">=</span> camino_más_largo(G, curso)</span>
-<span id="cb10-10"><a></a>complejidad[curso] <span class="op">=</span> BF <span class="op">+</span> DF</span>
-<span id="cb10-11"><a></a></span>
-<span id="cb10-12"><a></a><span class="co"># 3. Calibrar P(aprobar | curso, riesgo)</span></span>
-<span id="cb10-13"><a></a><span class="co">#    desde 02_avance_curricular.csv</span></span>
-<span id="cb10-14"><a></a></span>
-<span id="cb10-15"><a></a><span class="co"># 4. Simulación Monte Carlo</span></span>
-<span id="cb10-16"><a></a><span class="cf">for</span> estudiante <span class="kw">in</span> <span class="bu">range</span>(N<span class="op">=</span><span class="dv">1000</span>):</span>
-<span id="cb10-17"><a></a>    simular_trayectoria(politica, P_aprobacion)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="co"># 1. Construir el grafo de la malla UTFSM</span></span>
+<span id="cb11-2"><a></a><span class="im">import</span> networkx <span class="im">as</span> nx</span>
+<span id="cb11-3"><a></a>G <span class="op">=</span> nx.DiGraph()</span>
+<span id="cb11-4"><a></a><span class="co"># nodos = cursos, aristas = prerrequisitos</span></span>
+<span id="cb11-5"><a></a><span class="co"># atributos = créditos, BF, aprobación</span></span>
+<span id="cb11-6"><a></a></span>
+<span id="cb11-7"><a></a><span class="co"># 2. Calcular métricas de Heileman</span></span>
+<span id="cb11-8"><a></a>BF[curso] <span class="op">=</span> <span class="bu">len</span>(descendientes(G, curso))</span>
+<span id="cb11-9"><a></a>DF[curso] <span class="op">=</span> camino_más_largo(G, curso)</span>
+<span id="cb11-10"><a></a>complejidad[curso] <span class="op">=</span> BF <span class="op">+</span> DF</span>
+<span id="cb11-11"><a></a></span>
+<span id="cb11-12"><a></a><span class="co"># 3. Calibrar P(aprobar | curso, riesgo)</span></span>
+<span id="cb11-13"><a></a><span class="co">#    desde 02_avance_curricular.csv</span></span>
+<span id="cb11-14"><a></a></span>
+<span id="cb11-15"><a></a><span class="co"># 4. Simulación Monte Carlo</span></span>
+<span id="cb11-16"><a></a><span class="cf">for</span> estudiante <span class="kw">in</span> <span class="bu">range</span>(N<span class="op">=</span><span class="dv">1000</span>):</span>
+<span id="cb11-17"><a></a>    simular_trayectoria(politica, P_aprobacion)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>Fase 2 — Agregar la novedad (2–3 días)</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="co"># Función de recompensa con Gratuidad</span></span>
-<span id="cb11-2"><a></a><span class="kw">def</span> recompensa(semestre, creditos_aprobados):</span>
-<span id="cb11-3"><a></a>    R <span class="op">=</span> creditos_aprobados</span>
-<span id="cb11-4"><a></a>    <span class="cf">if</span> semestre <span class="op">&gt;</span> <span class="dv">10</span>:</span>
-<span id="cb11-5"><a></a>        R <span class="op">-=</span> <span class="dv">10</span>  <span class="co"># penalización Gratuidad</span></span>
-<span id="cb11-6"><a></a>    <span class="cf">return</span> R</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="co"># Función de recompensa con Gratuidad</span></span>
+<span id="cb12-2"><a></a><span class="kw">def</span> recompensa(semestre, creditos_aprobados):</span>
+<span id="cb12-3"><a></a>    R <span class="op">=</span> creditos_aprobados</span>
+<span id="cb12-4"><a></a>    <span class="cf">if</span> semestre <span class="op">&gt;</span> <span class="dv">10</span>:</span>
+<span id="cb12-5"><a></a>        R <span class="op">-=</span> <span class="dv">10</span>  <span class="co"># penalización Gratuidad</span></span>
+<span id="cb12-6"><a></a>    <span class="cf">return</span> R</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:45%;">
 <p><strong>Fase 3 — Comparación (1–2 semanas)</strong></p>
 <div style="font-size: 0.78em; line-height: 1.7em;">
