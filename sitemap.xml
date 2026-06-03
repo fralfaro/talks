@@ -2,110 +2,114 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://falfaro.xyz/talks/usm_dtd/semana_03.html</loc>
-    <lastmod>2026-06-03T14:26:46.150Z</lastmod>
+    <lastmod>2026-06-03T17:35:59.781Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/usm_dtd/geo.html</loc>
-    <lastmod>2026-06-03T14:26:46.105Z</lastmod>
+    <lastmod>2026-06-03T17:35:59.726Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/tools/github/presentacion.html</loc>
-    <lastmod>2026-06-03T14:26:45.756Z</lastmod>
+    <lastmod>2026-06-03T17:35:59.328Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/tools/quarto/presentacion.html</loc>
-    <lastmod>2026-06-03T14:26:46.103Z</lastmod>
+    <lastmod>2026-06-03T17:35:59.725Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/tools/eds_presentation.html</loc>
-    <lastmod>2026-06-03T14:26:45.411Z</lastmod>
+    <lastmod>2026-06-03T17:35:58.926Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/datacuber/clase-0.html</loc>
-    <lastmod>2026-06-03T14:26:45.044Z</lastmod>
+    <lastmod>2026-06-03T17:35:58.500Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/index.html</loc>
-    <lastmod>2026-06-03T14:26:45.360Z</lastmod>
+    <lastmod>2026-06-03T17:35:58.867Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/ai/datasaturday_2026.html</loc>
-    <lastmod>2026-06-03T14:26:44.551Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ai/presentacion_datasaturday.html</loc>
-    <lastmod>2026-06-03T14:26:45.017Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/hello-quarto/index.html</loc>
-    <lastmod>2026-06-03T14:26:45.359Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion_uah.html</loc>
-    <lastmod>2026-06-03T14:26:45.359Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ipd446/talk2.html</loc>
-    <lastmod>2026-06-03T14:26:45.398Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ipd446/talk1-glosario.html</loc>
-    <lastmod>2026-06-03T14:26:45.398Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ipd446/talk3.html</loc>
-    <lastmod>2026-06-03T14:26:45.398Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ipd446/talk22.html</loc>
-    <lastmod>2026-06-03T14:26:45.398Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ipd446/talk1.html</loc>
-    <lastmod>2026-06-03T14:26:45.398Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ipd446/talk1-speech.html</loc>
-    <lastmod>2026-06-03T14:26:45.398Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion_pycon.html</loc>
-    <lastmod>2026-06-03T14:26:45.359Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion.html</loc>
-    <lastmod>2026-06-03T14:26:45.359Z</lastmod>
+    <lastmod>2026-06-03T17:35:57.929Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/ai/datafrontiers_2026.html</loc>
-    <lastmod>2026-06-03T14:26:44.551Z</lastmod>
+    <lastmod>2026-06-03T17:35:57.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion.html</loc>
+    <lastmod>2026-06-03T17:35:58.866Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion_pycon.html</loc>
+    <lastmod>2026-06-03T17:35:58.866Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ipd446/talk1-speech.html</loc>
+    <lastmod>2026-06-03T17:35:58.911Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ipd446/talk1.html</loc>
+    <lastmod>2026-06-03T17:35:58.911Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ipd446/talk22.html</loc>
+    <lastmod>2026-06-03T17:35:58.912Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ipd446/talk3.html</loc>
+    <lastmod>2026-06-03T17:35:58.912Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ipd446/talk1-glosario.html</loc>
+    <lastmod>2026-06-03T17:35:58.911Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ipd446/talk2.html</loc>
+    <lastmod>2026-06-03T17:35:58.912Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion_uah.html</loc>
+    <lastmod>2026-06-03T17:35:58.866Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/hello-quarto/index.html</loc>
+    <lastmod>2026-06-03T17:35:58.866Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ai/presentacion_datasaturday.html</loc>
+    <lastmod>2026-06-03T17:35:58.468Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ai/pyday_2026_v2.html</loc>
+    <lastmod>2026-06-03T17:35:58.468Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/ai/pyday_2026.html</loc>
-    <lastmod>2026-06-03T14:26:45.017Z</lastmod>
+    <lastmod>2026-06-03T17:35:58.468Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/datacuber/clase-2.html</loc>
-    <lastmod>2026-06-03T14:26:45.045Z</lastmod>
+    <lastmod>2026-06-03T17:35:58.501Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/datacuber/lab-0.html</loc>
-    <lastmod>2026-06-03T14:26:45.070Z</lastmod>
+    <lastmod>2026-06-03T17:35:58.531Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/tools/latex/presentacion.html</loc>
-    <lastmod>2026-06-03T14:26:45.768Z</lastmod>
+    <lastmod>2026-06-03T17:35:59.341Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/tools/colab/presentacion.html</loc>
-    <lastmod>2026-06-03T14:26:45.411Z</lastmod>
+    <lastmod>2026-06-03T17:35:58.926Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/usm_dtd/semana_02.html</loc>
-    <lastmod>2026-06-03T14:26:46.150Z</lastmod>
+    <lastmod>2026-06-03T17:35:59.781Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/usm_dtd/semana_01.html</loc>
-    <lastmod>2026-06-03T14:26:46.150Z</lastmod>
+    <lastmod>2026-06-03T17:35:59.781Z</lastmod>
   </url>
 </urlset>
