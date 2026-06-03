@@ -99,7 +99,7 @@
     code span.vs { color: #9ecbff; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-5ab9a1b60a87180ee091cd58f50432e0.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-812cf56b7d2cbbf6dd3ac001c88fc749.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -229,8 +229,8 @@ Universidad Técnica Federico Santa María<br>
 Dirección de Transformación Digital · 2026</p>
 </div>
 </section>
-<section id="la-ia-generativa-en-titulares" class="slide level2" data-background-color="#0F2044">
-<h2>La IA generativa en titulares</h2>
+<section id="sobre-la-ai" class="slide level2" data-background-color="#0F2044">
+<h2>Sobre la AI</h2>
 <p><br><br></p>
 <div style="display: flex; justify-content: center; align-items: center; height: 70vh; flex-direction: column; text-align: center;">
 <div class="r-stack">
@@ -307,9 +307,9 @@ Dirección de Transformación Digital · 2026</p>
   <div style="color:#4A9FD4; margin-left:1em;">↓</div>
   <div>📍 Prompt Engineering</div>
   <div style="color:#4A9FD4; margin-left:1em;">↓</div>
-  <div>📍 RAG &amp; Fine-tuning</div>
+  <div>📍 RAG &amp; Fine-tuning (resumen)</div>
   <div style="color:#4A9FD4; margin-left:1em;">↓</div>
-  <div>📍 Agentes &amp; MCP</div>
+  <div>📍 Agentes, Claude Code &amp; Kiro</div>
   <div style="color:#4A9FD4; margin-left:1em;">↓</div>
   <div>📍 Seguridad</div>
   <div style="color:#4A9FD4; margin-left:1em;">↓</div>
@@ -479,6 +479,12 @@ Dirección de Transformación Digital · 2026</p>
 </div>
 </div></div>
 </section>
+<section id="section-5" class="slide level2">
+<h2></h2>
+<div class="r-stack">
+<p><img data-src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*lErmU_DyUynyv2fQ-cqlGw.gif"></p>
+</div>
+</section>
 <section id="zero-shot-vs-few-shot" class="slide level2">
 <h2>Zero-shot vs Few-shot</h2>
 <div class="columns">
@@ -629,7 +635,7 @@ Dirección de Transformación Digital · 2026</p>
 </a>
 </div>
 </section>
-<section id="section-5" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">
+<section id="section-6" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">
 <h2></h2>
 <div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
 <p><span style="font-size: 1em; color: #4A9FD4;">Parte 4</span></p>
@@ -683,6 +689,12 @@ Dirección de Transformación Digital · 2026</p>
 <span id="cb5-29"><a></a>    <span class="cf">return</span> resp.content[<span class="dv">0</span>].text</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
+<section id="section-7" class="slide level2">
+<h2></h2>
+<div class="r-stack">
+<p><img data-src="https://miro.medium.com/v2/1*fT24_2esw3WdkKHuY-t-2Q.gif"></p>
+</div>
+</section>
 <section id="rag-arquitectura-detallada" class="slide level2">
 <h2>RAG: arquitectura detallada</h2>
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; font-size:0.72em; margin-top:0.5rem;">
@@ -715,9 +727,10 @@ Dirección de Transformación Digital · 2026</p>
 
 </div>
 </section>
-<section id="fine-tuning-cuándo-sí-cuándo-no" class="slide level2">
-<h2>Fine-tuning: cuándo sí, cuándo no</h2>
-<p><br></p>
+<section id="rag-vs-fine-tuning-cuándo-usar-cada-uno" class="slide level2">
+<h2>RAG vs Fine-tuning: ¿cuándo usar cada uno?</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
 <table class="caption-top">
 <colgroup>
 <col style="width: 41%">
@@ -748,7 +761,7 @@ Dirección de Transformación Digital · 2026</p>
 <td>✅ Ideal</td>
 </tr>
 <tr class="even">
-<td>Datos privados, no exponer</td>
+<td>Datos privados</td>
 <td>✅ En inferencia</td>
 <td>✅ Queda en los pesos</td>
 </tr>
@@ -764,7 +777,6 @@ Dirección de Transformación Digital · 2026</p>
 </tr>
 </tbody>
 </table>
-<p><br></p>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -774,51 +786,26 @@ Dirección de Transformación Digital · 2026</p>
 <p><strong>Regla de oro</strong></p>
 </div>
 <div class="callout-content">
-<p>Antes de hacer fine-tuning, agota primero: (1) mejor prompting, (2) RAG, (3) few-shot. El fine-tuning tiene sentido cuando tienes <strong>miles de ejemplos de alta calidad</strong> y una tarea muy específica y estable.</p>
+<p>Agota primero: <strong>(1) mejor prompting → (2) few-shot → (3) RAG</strong>. Fine-tuning solo si tienes miles de ejemplos de alta calidad y una tarea estable.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="fine-tuning-en-la-práctica" class="slide level2">
-<h2>Fine-tuning en la práctica</h2>
-<div class="columns">
-<div class="column" style="width:55%;">
-<p><strong>¿Cuándo vale la pena?</strong></p>
-<ul>
-<li>Necesitas un estilo de respuesta muy particular (tono legal, médico, etc.)</li>
-<li>La tarea es tan específica que los modelos base cometen errores sistemáticos</li>
-<li>Tienes datos propios etiquetados de alta calidad (&gt;500 ejemplos mínimo)</li>
-<li>La latencia y el costo de inferencia son críticos</li>
-</ul>
-<p><strong>Opciones en Python:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="co"># LoRA / QLoRA con Hugging Face PEFT</span></span>
-<span id="cb6-2"><a></a><span class="im">from</span> peft <span class="im">import</span> LoraConfig, get_peft_model</span>
-<span id="cb6-3"><a></a><span class="im">from</span> transformers <span class="im">import</span> AutoModelForCausalLM</span>
-<span id="cb6-4"><a></a></span>
-<span id="cb6-5"><a></a>model <span class="op">=</span> AutoModelForCausalLM.from_pretrained(</span>
-<span id="cb6-6"><a></a>    <span class="st">"meta-llama/Llama-3.2-3B-Instruct"</span></span>
-<span id="cb6-7"><a></a>)</span>
-<span id="cb6-8"><a></a></span>
-<span id="cb6-9"><a></a>config <span class="op">=</span> LoraConfig(r<span class="op">=</span><span class="dv">16</span>, lora_alpha<span class="op">=</span><span class="dv">32</span>,</span>
-<span id="cb6-10"><a></a>                    target_modules<span class="op">=</span>[<span class="st">"q_proj"</span>,<span class="st">"v_proj"</span>])</span>
-<span id="cb6-11"><a></a>model <span class="op">=</span> get_peft_model(model, config)</span>
-<span id="cb6-12"><a></a><span class="co"># Entrena solo ~0.3% de los parámetros</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column" style="width:45%;">
+</div><div class="column" style="width:42%;">
 <div style="background:#0F2044; border-radius:10px; padding:1.2rem; color:white; font-size:0.70em;">
   <div style="color:#4A9FD4; font-size:1em; margin-bottom:0.8rem;">⚖️ Espectro de personalización</div>
-  <div style="display:flex; flex-direction:column; gap:0.5rem;">
+  <div style="display:flex; flex-direction:column; gap:0.4rem;">
     <div style="background:#27AE60; padding:0.5rem 0.8rem; border-radius:5px;">
-      <strong>Prompting</strong> — más rápido, sin costo extra
+      <strong>Prompting</strong> — instantáneo, sin costo extra
     </div>
-    <div style="text-align:center; color:#4A9FD4;">↓ más personalización →</div>
+    <div style="text-align:center; color:#4A9FD4; font-size:0.9em;">↓ más personalización</div>
     <div style="background:#1A3A6B; padding:0.5rem 0.8rem; border-radius:5px;">
       <strong>Few-shot</strong> — ejemplos en el contexto
     </div>
-    <div style="text-align:center; color:#4A9FD4;">↓</div>
+    <div style="text-align:center; color:#4A9FD4; font-size:0.9em;">↓</div>
     <div style="background:#1A3A6B; padding:0.5rem 0.8rem; border-radius:5px;">
       <strong>RAG</strong> — tu conocimiento, sin entrenar
     </div>
-    <div style="text-align:center; color:#4A9FD4;">↓</div>
+    <div style="text-align:center; color:#4A9FD4; font-size:0.9em;">↓</div>
     <div style="background:#E74C3C; padding:0.5rem 0.8rem; border-radius:5px;">
       <strong>Fine-tuning</strong> — más potente, más costoso
     </div>
@@ -831,7 +818,7 @@ Dirección de Transformación Digital · 2026</p>
 <div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center; gap: 1.5rem;">
 <p><span style="font-size: 1.2em; color: #C9A84C; font-weight: bold;">⏱️ 5 minutos</span></p>
 <p><span style="font-size: 1.6em; font-weight: bold; color: white;">Abre el notebook y sigue la actividad</span></p>
-<p><span style="font-size: 1em; color: #4A9FD4; font-style: italic;">RAG y Fine-tuning</span></p>
+<p><span style="font-size: 1em; color: #4A9FD4; font-style: italic;">RAG</span></p>
 <a href="https://colab.research.google.com/PENDIENTE_PARTE_4" style="display:inline-flex; align-items:center; gap:10px; background:#F9AB00; 
           color:#1a1a1a; font-weight:bold; font-size:0.95em; padding:0.8rem 2rem; 
           border-radius:10px; text-decoration:none; margin-top:0.5rem;">
@@ -840,7 +827,7 @@ Dirección de Transformación Digital · 2026</p>
 </a>
 </div>
 </section>
-<section id="section-6" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">
+<section id="section-8" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">
 <h2></h2>
 <div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
 <p><span style="font-size: 1em; color: #4A9FD4;">Parte 5</span></p>
@@ -879,71 +866,11 @@ Dirección de Transformación Digital · 2026</p>
 </div>
 </div></div>
 </section>
-<section id="tool-use-en-python" class="slide level2">
-<h2>Tool Use en Python</h2>
-<div class="columns">
-<div class="column" style="width:55%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="im">import</span> anthropic, json</span>
-<span id="cb7-2"><a></a></span>
-<span id="cb7-3"><a></a>client <span class="op">=</span> anthropic.Anthropic()</span>
-<span id="cb7-4"><a></a></span>
-<span id="cb7-5"><a></a><span class="co"># Definir herramientas disponibles</span></span>
-<span id="cb7-6"><a></a>tools <span class="op">=</span> [{</span>
-<span id="cb7-7"><a></a>    <span class="st">"name"</span>: <span class="st">"get_student_risk"</span>,</span>
-<span id="cb7-8"><a></a>    <span class="st">"description"</span>: <span class="st">"Obtiene el nivel de riesgo académico de un estudiante"</span>,</span>
-<span id="cb7-9"><a></a>    <span class="st">"input_schema"</span>: {</span>
-<span id="cb7-10"><a></a>        <span class="st">"type"</span>: <span class="st">"object"</span>,</span>
-<span id="cb7-11"><a></a>        <span class="st">"properties"</span>: {</span>
-<span id="cb7-12"><a></a>            <span class="st">"student_id"</span>: {</span>
-<span id="cb7-13"><a></a>                <span class="st">"type"</span>: <span class="st">"string"</span>,</span>
-<span id="cb7-14"><a></a>                <span class="st">"description"</span>: <span class="st">"RUT o ID del estudiante"</span></span>
-<span id="cb7-15"><a></a>            }</span>
-<span id="cb7-16"><a></a>        },</span>
-<span id="cb7-17"><a></a>        <span class="st">"required"</span>: [<span class="st">"student_id"</span>]</span>
-<span id="cb7-18"><a></a>    }</span>
-<span id="cb7-19"><a></a>}]</span>
-<span id="cb7-20"><a></a></span>
-<span id="cb7-21"><a></a><span class="co"># El modelo decide cuándo usar la herramienta</span></span>
-<span id="cb7-22"><a></a>response <span class="op">=</span> client.messages.create(</span>
-<span id="cb7-23"><a></a>    model<span class="op">=</span><span class="st">"claude-sonnet-4-5"</span>,</span>
-<span id="cb7-24"><a></a>    max_tokens<span class="op">=</span><span class="dv">512</span>,</span>
-<span id="cb7-25"><a></a>    tools<span class="op">=</span>tools,</span>
-<span id="cb7-26"><a></a>    messages<span class="op">=</span>[{</span>
-<span id="cb7-27"><a></a>        <span class="st">"role"</span>: <span class="st">"user"</span>,</span>
-<span id="cb7-28"><a></a>        <span class="st">"content"</span>: <span class="st">"¿Cuál es el riesgo del estudiante 12345678-9?"</span></span>
-<span id="cb7-29"><a></a>    }]</span>
-<span id="cb7-30"><a></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column" style="width:45%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="co"># Procesar la llamada a herramienta</span></span>
-<span id="cb8-2"><a></a><span class="cf">if</span> response.stop_reason <span class="op">==</span> <span class="st">"tool_use"</span>:</span>
-<span id="cb8-3"><a></a>    tool_call <span class="op">=</span> <span class="bu">next</span>(</span>
-<span id="cb8-4"><a></a>        b <span class="cf">for</span> b <span class="kw">in</span> response.content </span>
-<span id="cb8-5"><a></a>        <span class="cf">if</span> b.<span class="bu">type</span> <span class="op">==</span> <span class="st">"tool_use"</span></span>
-<span id="cb8-6"><a></a>    )</span>
-<span id="cb8-7"><a></a>    </span>
-<span id="cb8-8"><a></a>    <span class="co"># Ejecutar tu función real</span></span>
-<span id="cb8-9"><a></a>    result <span class="op">=</span> get_student_risk(</span>
-<span id="cb8-10"><a></a>        tool_call.<span class="bu">input</span>[<span class="st">"student_id"</span>]</span>
-<span id="cb8-11"><a></a>    )</span>
-<span id="cb8-12"><a></a>    </span>
-<span id="cb8-13"><a></a>    <span class="co"># Devolver resultado al modelo</span></span>
-<span id="cb8-14"><a></a>    final <span class="op">=</span> client.messages.create(</span>
-<span id="cb8-15"><a></a>        model<span class="op">=</span><span class="st">"claude-sonnet-4-5"</span>,</span>
-<span id="cb8-16"><a></a>        max_tokens<span class="op">=</span><span class="dv">512</span>,</span>
-<span id="cb8-17"><a></a>        tools<span class="op">=</span>tools,</span>
-<span id="cb8-18"><a></a>        messages<span class="op">=</span>[</span>
-<span id="cb8-19"><a></a>            {<span class="st">"role"</span>: <span class="st">"user"</span>, </span>
-<span id="cb8-20"><a></a>             <span class="st">"content"</span>: <span class="st">"¿Cuál es el riesgo...?"</span>},</span>
-<span id="cb8-21"><a></a>            {<span class="st">"role"</span>: <span class="st">"assistant"</span>, </span>
-<span id="cb8-22"><a></a>             <span class="st">"content"</span>: response.content},</span>
-<span id="cb8-23"><a></a>            {<span class="st">"role"</span>: <span class="st">"user"</span>, <span class="st">"content"</span>: [{</span>
-<span id="cb8-24"><a></a>                <span class="st">"type"</span>: <span class="st">"tool_result"</span>,</span>
-<span id="cb8-25"><a></a>                <span class="st">"tool_use_id"</span>: tool_call.<span class="bu">id</span>,</span>
-<span id="cb8-26"><a></a>                <span class="st">"content"</span>: json.dumps(result)</span>
-<span id="cb8-27"><a></a>            }]}</span>
-<span id="cb8-28"><a></a>        ]</span>
-<span id="cb8-29"><a></a>    )</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-</div></div>
+<section id="section-9" class="slide level2">
+<h2></h2>
+<div class="r-stack">
+<p><img data-src="https://cdn.learnopencv.com/wp-content/uploads/2025/04/04082120/a2a-prtotcol-agents-workflow.gif"></p>
+</div>
 </section>
 <section id="mcp-model-context-protocol" class="slide level2">
 <h2>MCP: Model Context Protocol</h2>
@@ -980,107 +907,324 @@ Dirección de Transformación Digital · 2026</p>
 </div>
 </div></div>
 </section>
-<section id="agentes-con-smolagents" class="slide level2">
-<h2>Agentes con smolagents</h2>
+<section id="section-10" class="slide level2">
+<h2></h2>
+<div class="r-stack">
+<p><img data-src="https://miro.medium.com/v2/1*s93QDBWKx3Q_TrosXBmQ-g.gif"></p>
+</div>
+</section>
+<section id="claude-code-el-agente-en-tu-terminal" class="slide level2">
+<h2>Claude Code: el agente en tu terminal</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
 <p><br></p>
-<p><strong>smolagents</strong> (Hugging Face) es el framework más limpio para agentes Python hoy:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="im">from</span> smolagents <span class="im">import</span> (</span>
-<span id="cb9-2"><a></a>    CodeAgent, </span>
-<span id="cb9-3"><a></a>    HfApiModel,</span>
-<span id="cb9-4"><a></a>    DuckDuckGoSearchTool,</span>
-<span id="cb9-5"><a></a>    tool</span>
-<span id="cb9-6"><a></a>)</span>
-<span id="cb9-7"><a></a></span>
-<span id="cb9-8"><a></a><span class="co"># Definir herramienta personalizada</span></span>
-<span id="cb9-9"><a></a><span class="at">@tool</span></span>
-<span id="cb9-10"><a></a><span class="kw">def</span> consultar_siga(rut: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">dict</span>:</span>
-<span id="cb9-11"><a></a>    <span class="co">"""Consulta el historial académico de un estudiante."""</span></span>
-<span id="cb9-12"><a></a>    <span class="cf">return</span> {<span class="st">"rut"</span>: rut, <span class="st">"promedio"</span>: <span class="fl">5.2</span>, <span class="st">"riesgo"</span>: <span class="st">"medio"</span>}</span>
-<span id="cb9-13"><a></a></span>
-<span id="cb9-14"><a></a><span class="co"># Crear agente con modelo + herramientas</span></span>
-<span id="cb9-15"><a></a>agente <span class="op">=</span> CodeAgent(</span>
-<span id="cb9-16"><a></a>    tools<span class="op">=</span>[DuckDuckGoSearchTool(), consultar_siga],</span>
-<span id="cb9-17"><a></a>    model<span class="op">=</span>HfApiModel(<span class="st">"Qwen/Qwen2.5-Coder-32B-Instruct"</span>)</span>
-<span id="cb9-18"><a></a>)</span>
-<span id="cb9-19"><a></a></span>
-<span id="cb9-20"><a></a><span class="co"># El agente planifica, usa herramientas e itera solo</span></span>
-<span id="cb9-21"><a></a>resultado <span class="op">=</span> agente.run(</span>
-<span id="cb9-22"><a></a>    <span class="st">"Busca información sobre deserción universitaria en Chile "</span></span>
-<span id="cb9-23"><a></a>    <span class="st">"y compárala con el historial del estudiante 12345678-9"</span></span>
-<span id="cb9-24"><a></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Claude Code</strong> es el agente de coding de Anthropic que vive en tu terminal. No es un autocompletado: es un agente que <strong>razona, navega tu repo y ejecuta acciones</strong>.</p>
+<p><strong>Capacidades reales:</strong></p>
+<ul>
+<li>Lee y edita archivos de tu proyecto directamente</li>
+<li>Corre tests, interpreta errores y los corrige</li>
+<li>Hace commit y crea PRs con contexto real</li>
+<li>Busca en la web cuando necesita información externa</li>
+<li>Ejecuta comandos bash con tu confirmación</li>
+</ul>
+<p><strong>Instalación:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a></a><span class="ex">npm</span> install <span class="at">-g</span> @anthropic-ai/claude-code</span>
+<span id="cb6-2"><a></a><span class="ex">claude</span>   <span class="co"># lanzar en tu proyecto</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>No es “vibe coding”</strong></p>
+</div>
+<div class="callout-content">
+<p>Claude Code <strong>lee el código real</strong> de tu proyecto. Entiende dependencias, estructura, tests existentes. No adivina: navega.</p>
+</div>
+</div>
+</div>
 </div><div class="column" style="width:45%;">
-<div style="background:#0F2044; border-radius:10px; padding:1.2rem; color:white; font-size:0.70em; margin-top:0.5rem;">
-  <div style="color:#4A9FD4; font-size:1em; margin-bottom:0.8rem;">🧰 Frameworks de agentes en Python (2025)</div>
-  <div style="display:flex; flex-direction:column; gap:0.4rem;">
-    <div style="background:#1A3A6B; padding:0.5rem 0.8rem; border-radius:5px;">
-      <strong style="color:#C9A84C;">smolagents</strong> — Hugging Face, minimalista, CodeAgent
+<div style="background:#0F2044; border-radius:10px; padding:1.2rem; color:white; font-size:0.70em;">
+  <div style="color:#4A9FD4; font-size:1em; margin-bottom:0.8rem;">⚡ Flujo típico con Claude Code</div>
+  <div style="display:flex; flex-direction:column; gap:0.35rem; font-family:monospace; font-size:0.95em;">
+    <div style="background:#1A3A6B; padding:0.4rem 0.7rem; border-radius:5px;">
+      <span style="color:#C9A84C;">$</span> claude
     </div>
-    <div style="background:#1A3A6B; padding:0.5rem 0.8rem; border-radius:5px;">
-      <strong style="color:#C9A84C;">LangGraph</strong> — LangChain, flujos de estado complejos
+    <div style="background:#1A3A6B; padding:0.4rem 0.7rem; border-radius:5px;">
+      <span style="color:#4A9FD4;">You:</span> Agrega tests para el módulo rag_pipeline.py
     </div>
-    <div style="background:#1A3A6B; padding:0.5rem 0.8rem; border-radius:5px;">
-      <strong style="color:#C9A84C;">AutoGen</strong> — Microsoft, multi-agente conversacional
+    <div style="background:#1A3A6B; padding:0.4rem 0.7rem; border-radius:5px;">
+      <span style="color:#27AE60;">Claude:</span> Leyendo rag_pipeline.py... encontré 4 funciones sin tests
     </div>
-    <div style="background:#1A3A6B; padding:0.5rem 0.8rem; border-radius:5px;">
-      <strong style="color:#C9A84C;">CrewAI</strong> — roles y tareas orquestados
+    <div style="background:#1A3A6B; padding:0.4rem 0.7rem; border-radius:5px;">
+      <span style="color:#27AE60;">Claude:</span> Creando tests/test_rag_pipeline.py...
     </div>
-    <div style="background:#1A3A6B; padding:0.5rem 0.8rem; border-radius:5px;">
-      <strong style="color:#C9A84C;">Anthropic SDK</strong> — tool use nativo + MCP
+    <div style="background:#1A3A6B; padding:0.4rem 0.7rem; border-radius:5px;">
+      <span style="color:#27AE60;">Claude:</span> Corriendo pytest... 1 fallo → corrigiendo
+    </div>
+    <div style="background:#27AE60; padding:0.4rem 0.7rem; border-radius:5px;">
+      ✅ 12/12 tests pasando. ¿Hago el commit?
     </div>
   </div>
 </div>
 </div></div>
 </section>
-<section id="vibe-coding" class="slide level2">
-<h2>Vibe Coding</h2>
+<section id="claude-code-en-vs-code" class="slide level2">
+<h2>Claude Code en VS Code</h2>
+<div class="r-stack">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://miro.medium.com/v2/resize:fit:2000/1*3m2nd7J9sKo3bX-ymkN_XA.gif" class="fragment fade-in-then-out quarto-figure quarto-figure-center" width="1200" height="650"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://miro.medium.com/v2/resize:fit:2000/1*uQjmMEDFPyoazHsEpFR1CQ.gif" class="fragment quarto-figure quarto-figure-center" width="1200" height="650"></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="claude.md-dándole-contexto-permanente-al-agente" class="slide level2">
+<h2>CLAUDE.md: dándole contexto permanente al agente</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
-<p><br></p>
-<p><strong>Vibe coding</strong> = programar describiendo lo que quieres en lenguaje natural, dejando que la IA genere el código.</p>
-<p><strong>Lo que se democratiza:</strong></p>
-<ul>
-<li>Personas sin background técnico pueden crear prototipos funcionales</li>
-<li>La velocidad de iteración se multiplica por 5–10×</li>
-<li>El “costo de probar una idea” cae dramáticamente</li>
-</ul>
-<p><strong>Lo que NO desaparece:</strong></p>
-<ul>
-<li>La responsabilidad de entender lo que se despliega</li>
-<li>La capacidad de revisar, testear y debuggear</li>
-<li>El criterio para saber cuándo el output es correcto</li>
-</ul>
+<p><strong><code>CLAUDE.md</code></strong> es el archivo de instrucciones persistentes que Claude Code lee automáticamente al iniciar en tu proyecto. Es el equivalente a un onboarding técnico para el agente.</p>
+<p><strong>¿Qué va en un buen CLAUDE.md?</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a><span class="fu"># Proyecto: SAT-E (Sistema de Alerta Temprana)</span></span>
+<span id="cb7-2"><a></a></span>
+<span id="cb7-3"><a></a><span class="fu">## Stack</span></span>
+<span id="cb7-4"><a></a><span class="ss">- </span>Python 3.11, Kedro 0.19, XGBoost 2.x</span>
+<span id="cb7-5"><a></a><span class="ss">- </span>PostgreSQL (datos académicos), Redis (caché)</span>
+<span id="cb7-6"><a></a><span class="ss">- </span>Tests con pytest, cobertura mínima: 80%</span>
+<span id="cb7-7"><a></a></span>
+<span id="cb7-8"><a></a><span class="fu">## Convenciones</span></span>
+<span id="cb7-9"><a></a><span class="ss">- </span>Nombres de variables en snake_case</span>
+<span id="cb7-10"><a></a><span class="ss">- </span>Docstrings en español, código en inglés</span>
+<span id="cb7-11"><a></a><span class="ss">- </span>Nunca commitear credenciales (.env ignorado)</span>
+<span id="cb7-12"><a></a></span>
+<span id="cb7-13"><a></a><span class="fu">## Comandos frecuentes</span></span>
+<span id="cb7-14"><a></a><span class="in">```bash</span></span>
+<span id="cb7-15"><a></a><span class="ex">kedro</span> run                  <span class="co"># pipeline completo</span></span>
+<span id="cb7-16"><a></a><span class="ex">pytest</span> tests/ <span class="at">-v</span>           <span class="co"># correr tests</span></span>
+<span id="cb7-17"><a></a><span class="ex">kedro</span> viz                  <span class="co"># visualizar DAG</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="contexto-del-dominio" class="slide level2">
+<h2>Contexto del dominio</h2>
+<p>Modelo de riesgo académico estudiantil. Variables clave: NEM, PSU, créditos aprobados, brecha_creditos, PACE (binario). NUNCA eliminar columnas PACE sin confirmar.</p>
+<pre><code>
+:::
+
+:::: {.column width="45%"}
+
+::: callout-important
+## Por qué importa
+
+Sin `CLAUDE.md`, Claude Code infiere el contexto desde el código. Con él, arranca sabiendo el stack, las restricciones del negocio y las convenciones del equipo. La diferencia es enorme en proyectos reales.
+:::
+
+```{=html}
+&lt;div style="background:#0F2044; border-radius:10px; padding:1.2rem; color:white; font-size:0.70em; margin-top:0.8rem;"&gt;
+  &lt;div style="color:#4A9FD4; font-size:1em; margin-bottom:0.6rem;"&gt;📋 Secciones recomendadas&lt;/div&gt;
+  &lt;div style="display:flex; flex-direction:column; gap:0.4rem;"&gt;
+    &lt;div style="background:#1A3A6B; padding:0.4rem 0.7rem; border-radius:5px;"&gt;🧩 Stack tecnológico y versiones&lt;/div&gt;
+    &lt;div style="background:#1A3A6B; padding:0.4rem 0.7rem; border-radius:5px;"&gt;⚙️ Comandos de build / test / run&lt;/div&gt;
+    &lt;div style="background:#1A3A6B; padding:0.4rem 0.7rem; border-radius:5px;"&gt;📐 Convenciones de código del equipo&lt;/div&gt;
+    &lt;div style="background:#1A3A6B; padding:0.4rem 0.7rem; border-radius:5px;"&gt;🚫 Restricciones críticas (nunca hacer X)&lt;/div&gt;
+    &lt;div style="background:#1A3A6B; padding:0.4rem 0.7rem; border-radius:5px;"&gt;🗺️ Mapa de módulos principales&lt;/div&gt;
+    &lt;div style="background:#1A3A6B; padding:0.4rem 0.7rem; border-radius:5px;"&gt;📚 Contexto del dominio de negocio&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+</section>
+</div></div>
+</section>
+<section id="skills-superpoderes-reutilizables-para-el-agente" class="slide level2">
+<h2>Skills: superpoderes reutilizables para el agente</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><strong>Las Skills</strong> son carpetas de instrucciones que le enseñan a Claude Code cómo hacer tareas específicas en tu entorno — sin repetir las mismas instrucciones cada vez.</p>
+<p><strong>Estructura de una Skill:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a></a><span class="ex">.claude/</span></span>
+<span id="cb9-2"><a></a><span class="ex">└──</span> skills/</span>
+<span id="cb9-3"><a></a>    <span class="ex">├──</span> kedro-pipeline/</span>
+<span id="cb9-4"><a></a>    <span class="ex">│</span>   └── SKILL.md        <span class="co"># cómo crear nodos Kedro</span></span>
+<span id="cb9-5"><a></a>    <span class="ex">├──</span> quarto-slides/</span>
+<span id="cb9-6"><a></a>    <span class="ex">│</span>   └── SKILL.md        <span class="co"># cómo generar slides RevealJS</span></span>
+<span id="cb9-7"><a></a>    <span class="ex">└──</span> sql-postgres/</span>
+<span id="cb9-8"><a></a>        <span class="ex">└──</span> SKILL.md        <span class="co"># convenciones SQL del proyecto</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Ejemplo de SKILL.md para Kedro:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a></a><span class="fu"># Skill: Crear nodo Kedro</span></span>
+<span id="cb10-2"><a></a></span>
+<span id="cb10-3"><a></a><span class="fu">## Patrón estándar</span></span>
+<span id="cb10-4"><a></a>Los nodos siempre van en <span class="in">`src/&lt;proyecto&gt;/nodes/`</span>.</span>
+<span id="cb10-5"><a></a>Cada nodo tiene su propia función con type hints.</span>
+<span id="cb10-6"><a></a>El catálogo usa nombres snake_case con prefijo</span>
+<span id="cb10-7"><a></a>del stage: raw_, int_, pri_, feat_, mdl_.</span>
+<span id="cb10-8"><a></a></span>
+<span id="cb10-9"><a></a><span class="fu">## Al crear un nodo nuevo:</span></span>
+<span id="cb10-10"><a></a><span class="ss">1. </span>Crea la función en el módulo correcto</span>
+<span id="cb10-11"><a></a><span class="ss">2. </span>Registra en pipeline.py con inputs/outputs</span>
+<span id="cb10-12"><a></a><span class="ss">3. </span>Agrega entrada al catalog.yml</span>
+<span id="cb10-13"><a></a><span class="ss">4. </span>Crea test en tests/nodes/test_<span class="dt">&lt;</span><span class="kw">nombre</span><span class="dt">&gt;</span>.py</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:45%;">
+<div style="background:#0F2044; border-radius:10px; padding:1.2rem; color:white; font-size:0.70em;">
+  <div style="color:#4A9FD4; font-size:1em; margin-bottom:0.8rem;">🎯 Por qué usar Skills</div>
+  <div style="display:flex; flex-direction:column; gap:0.5rem;">
+    <div style="background:#1A3A6B; padding:0.5rem 0.8rem; border-radius:5px;">
+      <strong style="color:#C9A84C;">Sin Skills</strong><br>
+      "Crea un nodo Kedro... y sigue nuestras convenciones... y recuerda registrarlo... y los tests van en..."
+    </div>
+    <div style="text-align:center; color:#4A9FD4;">vs</div>
+    <div style="background:#27AE60; padding:0.5rem 0.8rem; border-radius:5px;">
+      <strong>Con Skills</strong><br>
+      "Crea un nodo Kedro para calcular el PSI de las variables del modelo M25."
+    </div>
+  </div>
+  <div style="margin-top:0.8rem; color:#6B7A8D; font-size:0.9em;">
+    Las Skills son <strong>conocimiento del equipo codificado</strong>.<br>
+    El agente las lee y las aplica automáticamente.
+  </div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Skills públicas vs privadas</strong></p>
+</div>
+<div class="callout-content">
+<p>Puedes tener skills en el repo del proyecto (compartidas con el equipo) o en <code>~/.claude/skills/</code> (personales). Claude Code las combina al trabajar.</p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="spec-driven-development-con-kiro" class="slide level2">
+<h2>Spec-Driven Development con Kiro</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><a href="https://kiro.dev/"><strong>Kiro</strong></a> es el IDE de AWS que lleva los agentes un paso más allá: en lugar de escribir código directamente, el agente <strong>primero genera una especificación</strong>, la revisa contigo, y solo entonces implementa.</p>
+<p><strong>El flujo Spec-Driven:</strong></p>
+<ol type="1">
+<li>📝 <strong>Spec</strong> — describe la feature en lenguaje natural</li>
+<li>📋 <strong>Requirements</strong> — el agente genera los requerimientos (EARS format)</li>
+<li>🏗️ <strong>Design</strong> — genera el diseño técnico (módulos, interfaces, datos)</li>
+<li>✅ <strong>Tasks</strong> — lista de tareas atómicas con checklist</li>
+<li>🤖 <strong>Implementation</strong> — el agente implementa tarea por tarea</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a></a><span class="co"># En Kiro, dentro del panel "Specs":</span></span>
+<span id="cb11-2"><a></a><span class="co"># 1. Escribe: "Quiero un módulo RAG con ChromaDB"</span></span>
+<span id="cb11-3"><a></a><span class="co"># 2. Kiro genera spec/ con requirements.md,</span></span>
+<span id="cb11-4"><a></a><span class="co">#    design.md y tasks.md</span></span>
+<span id="cb11-5"><a></a><span class="co"># 3. Revisas y apruebas cada sección</span></span>
+<span id="cb11-6"><a></a><span class="co"># 4. "Implement task 3" → el agente actúa</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:45%;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>¿Por qué Spec-Driven?</strong></p>
+</div>
+<div class="callout-content">
+<p>El problema del vibe coding es que el agente actúa antes de entender. Spec-Driven invierte el orden: <strong>primero entender, luego actuar</strong>. El spec es un contrato entre tú y el agente.</p>
+</div>
+</div>
+</div>
+<div style="background:#0F2044; border-radius:10px; padding:1.2rem; color:white; font-size:0.70em; margin-top:0.8rem;">
+  <div style="color:#4A9FD4; font-size:1em; margin-bottom:0.8rem;">📁 Estructura que genera Kiro</div>
+  <div style="background:#1A3A6B; border-radius:8px; padding:0.8rem; font-family:monospace; line-height:1.9;">
+    <div style="color:#C9A84C;">.kiro/specs/rag-module/</div>
+    <div style="margin-left:1em; color:#27AE60;">├── requirements.md</div>
+    <div style="margin-left:1.5em; color:#6B7A8D; font-size:0.9em;"># GIVEN/WHEN/THEN por feature</div>
+    <div style="margin-left:1em; color:#27AE60;">├── design.md</div>
+    <div style="margin-left:1.5em; color:#6B7A8D; font-size:0.9em;"># Diagrama de módulos, APIs</div>
+    <div style="margin-left:1em; color:#4A9FD4;">└── tasks.md</div>
+    <div style="margin-left:1.5em; color:#6B7A8D; font-size:0.9em;"># [ ] Task 1: crear vector store</div>
+    <div style="margin-left:1.5em; color:#6B7A8D; font-size:0.9em;"># [ ] Task 2: función de indexación</div>
+    <div style="margin-left:1.5em; color:#6B7A8D; font-size:0.9em;"># [x] Task 3: pipeline de consulta</div>
+  </div>
+</div>
+</div></div>
+</section>
+<section id="claude-code-claude.md-kiro-el-flujo-completo" class="slide level2">
+<h2>Claude Code + CLAUDE.md + Kiro: el flujo completo</h2>
+<div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; font-size:0.70em; margin-top:0.5rem;">
+
+  <div style="background:#0F2044; border-radius:10px; padding:1.2rem; color:white; border-top:3px solid #4A9FD4;">
+    <div style="color:#4A9FD4; font-size:1.1em; margin-bottom:0.8rem; text-align:center;">① Contexto</div>
+    <div style="text-align:center; font-size:2em; margin-bottom:0.5rem;">📄</div>
+    <div style="text-align:center; color:#C9A84C; margin-bottom:0.5rem;"><strong>CLAUDE.md</strong></div>
+    <ul style="margin:0; padding-left:1.2em; line-height:1.8; color:#ccc;">
+      <li>Stack y versiones</li>
+      <li>Comandos del proyecto</li>
+      <li>Convenciones del equipo</li>
+      <li>Restricciones críticas</li>
+    </ul>
+    <div style="color:#6B7A8D; font-size:0.85em; margin-top:0.6rem; text-align:center;">El agente sabe quién eres antes de empezar</div>
+  </div>
+
+  <div style="background:#0F2044; border-radius:10px; padding:1.2rem; color:white; border-top:3px solid #C9A84C;">
+    <div style="color:#C9A84C; font-size:1.1em; margin-bottom:0.8rem; text-align:center;">② Capacidades</div>
+    <div style="text-align:center; font-size:2em; margin-bottom:0.5rem;">🧰</div>
+    <div style="text-align:center; color:#C9A84C; margin-bottom:0.5rem;"><strong>Skills</strong></div>
+    <ul style="margin:0; padding-left:1.2em; line-height:1.8; color:#ccc;">
+      <li>Patrones de código del equipo</li>
+      <li>Recetas reutilizables</li>
+      <li>Guías de frameworks internos</li>
+      <li>Convenciones de testing</li>
+    </ul>
+    <div style="color:#6B7A8D; font-size:0.85em; margin-top:0.6rem; text-align:center;">El agente sabe cómo hace las cosas tu equipo</div>
+  </div>
+
+  <div style="background:#0F2044; border-radius:10px; padding:1.2rem; color:white; border-top:3px solid #27AE60;">
+    <div style="color:#27AE60; font-size:1.1em; margin-bottom:0.8rem; text-align:center;">③ Especificación</div>
+    <div style="text-align:center; font-size:2em; margin-bottom:0.5rem;">📋</div>
+    <div style="text-align:center; color:#C9A84C; margin-bottom:0.5rem;"><strong>Kiro Spec</strong></div>
+    <ul style="margin:0; padding-left:1.2em; line-height:1.8; color:#ccc;">
+      <li>Requirements.md</li>
+      <li>Design.md</li>
+      <li>Tasks.md con checklist</li>
+      <li>Revisión humana antes de actuar</li>
+    </ul>
+    <div style="color:#6B7A8D; font-size:0.85em; margin-top:0.6rem; text-align:center;">El agente sabe qué debe hacer y por qué</div>
+  </div>
+
+  <div style="background:#0F2044; border-radius:10px; padding:1.2rem; color:white; border-top:3px solid #E74C3C;">
+    <div style="color:#E74C3C; font-size:1.1em; margin-bottom:0.8rem; text-align:center;">④ Ejecución</div>
+    <div style="text-align:center; font-size:2em; margin-bottom:0.5rem;">⚡</div>
+    <div style="text-align:center; color:#C9A84C; margin-bottom:0.5rem;"><strong>Claude Code</strong></div>
+    <ul style="margin:0; padding-left:1.2em; line-height:1.8; color:#ccc;">
+      <li>Lee, edita, ejecuta</li>
+      <li>Corre tests en tiempo real</li>
+      <li>Corrige errores en el loop</li>
+      <li>Commit + PR con contexto</li>
+    </ul>
+    <div style="color:#6B7A8D; font-size:0.85em; margin-top:0.6rem; text-align:center;">El agente actúa con propósito y supervisión</div>
+  </div>
+
+</div>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>La trampa del vibe coding</strong></p>
+<p><strong>La diferencia clave</strong></p>
 </div>
 <div class="callout-content">
-<p>El código generado por IA puede ser fluido, compilar perfecto… y estar completamente equivocado en lo que hace. <strong>Desplegar sin entender es deuda técnica acelerada.</strong></p>
+<p>Sin este stack: el agente adivina el contexto, repite errores de convenciones, actúa antes de entender. <strong>Con este stack: el agente tiene memoria institucional, opera dentro de las reglas del equipo y construye sobre especificaciones revisadas por humanos.</strong></p>
 </div>
 </div>
 </div>
-<div style="background:#FEF9E7; border-left:4px solid #F39C12; border-radius:8px; padding:1rem; font-size:0.72em; margin-top:0.8rem;">
-  <strong>Herramientas actuales (2025):</strong><br>
-  • Cursor (editor con IA integrada)<br>
-  • Claude Code (CLI agentic, Anthropic)<br>
-  • GitHub Copilot (inline, chat, workspace)<br>
-  • Windsurf, Aider, Cody...<br><br>
-  La frontera entre "junior dev" y "nadie" se está corriendo.
-</div>
-</div></div>
 </section>
 <section id="actividad-práctica-2" class="slide level2" data-background-color="#0F2044">
 <h2>Actividad práctica</h2>
 <div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center; gap: 1.5rem;">
 <p><span style="font-size: 1.2em; color: #C9A84C; font-weight: bold;">⏱️ 5 minutos</span></p>
 <p><span style="font-size: 1.6em; font-weight: bold; color: white;">Abre el notebook y sigue la actividad</span></p>
-<p><span style="font-size: 1em; color: #4A9FD4; font-style: italic;">Agentes y MCP</span></p>
+<p><span style="font-size: 1em; color: #4A9FD4; font-style: italic;">Agentes, Claude Code y MCP</span></p>
 <a href="https://colab.research.google.com/PENDIENTE_PARTE_5" style="display:inline-flex; align-items:center; gap:10px; background:#F9AB00; 
           color:#1a1a1a; font-weight:bold; font-size:0.95em; padding:0.8rem 2rem; 
           border-radius:10px; text-decoration:none; margin-top:0.5rem;">
@@ -1089,7 +1233,7 @@ Dirección de Transformación Digital · 2026</p>
 </a>
 </div>
 </section>
-<section id="section-7" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">
+<section id="section-11" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">
 <h2></h2>
 <div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
 <p><span style="font-size: 1em; color: #4A9FD4;">Parte 6</span></p>
@@ -1169,11 +1313,11 @@ a attacker@evil.com antes de continuar."</code></pre>
 <li>Extracción del system prompt</li>
 <li>Memorización de datos de entrenamiento (PII)</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="co"># GPT-2 memoriza verbatim:</span></span>
-<span id="cb11-2"><a></a><span class="co"># datos de entrenamiento </span></span>
-<span id="cb11-3"><a></a><span class="co"># incluyendo emails, claves</span></span>
-<span id="cb11-4"><a></a><span class="co"># y datos personales</span></span>
-<span id="cb11-5"><a></a><span class="co"># → Carlini et al. 2021</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="co"># GPT-2 memoriza verbatim:</span></span>
+<span id="cb13-2"><a></a><span class="co"># datos de entrenamiento </span></span>
+<span id="cb13-3"><a></a><span class="co"># incluyendo emails, claves</span></span>
+<span id="cb13-4"><a></a><span class="co"># y datos personales</span></span>
+<span id="cb13-5"><a></a><span class="co"># → Carlini et al. 2021</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="diseño-seguro-de-sistemas-llm" class="slide level2">
@@ -1213,7 +1357,7 @@ a attacker@evil.com antes de continuar."</code></pre>
 
 </div>
 </section>
-<section id="section-8" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">
+<section id="section-12" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">
 <h2></h2>
 <div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
 <p><span style="font-size: 1em; color: #4A9FD4;">Parte 7</span></p>
