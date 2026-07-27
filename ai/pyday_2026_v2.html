@@ -7,8 +7,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Francisco Alfaro, Valeska Canales">
   <title>Talks – Lo que nadie te dice sobre la IA generativa</title>
@@ -21,10 +21,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -99,7 +102,7 @@
     code span.vs { color: #9ecbff; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-812cf56b7d2cbbf6dd3ac001c88fc749.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c0ecab25cbec914f13e0868d85731132.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -203,7 +206,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Francisco Alfaro, Valeska Canales 
+Francisco Alfaro, Valeska Canales
 </div>
         <p class="quarto-title-affiliation">
             Dirección de Transformación Digital · UTFSM
@@ -211,7 +214,7 @@ Francisco Alfaro, Valeska Canales
     </div>
 </div>
 
-  <p class="date">junio 2026</p>
+  <p class="date">julio 2026</p>
 </section>
 <section id="section" class="slide level2 title-slide center" data-background-color="#0F2044">
 <h2></h2>
@@ -525,13 +528,13 @@ Dirección de Transformación Digital · 2026</p>
 <li>La respuesta generada</li>
 </ul>
 <p><strong>La trampa:</strong> en conversaciones largas, <strong>cada mensaje incluye toda la historia anterior</strong>. El costo crece cuadráticamente con la longitud.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="co"># Una conversación de 20 turnos de 500 tokens:</span></span>
-<span id="cb1-2"><a></a><span class="co"># Turno 1:  500 tokens de input</span></span>
-<span id="cb1-3"><a></a><span class="co"># Turno 2:  1.000 tokens de input</span></span>
-<span id="cb1-4"><a></a><span class="co"># Turno 10: 5.000 tokens de input</span></span>
-<span id="cb1-5"><a></a><span class="co"># Turno 20: 10.000 tokens de input</span></span>
-<span id="cb1-6"><a></a><span class="co"># Total acumulado: ~105.000 tokens solo en input</span></span>
-<span id="cb1-7"><a></a><span class="co"># A $3/1M → ~$0.32 por esa conversación</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a aria-label="1"></a><span class="co"># Una conversación de 20 turnos de 500 tokens:</span></span>
+<span id="cb1-2"><a aria-label="2"></a><span class="co"># Turno 1:  500 tokens de input</span></span>
+<span id="cb1-3"><a aria-label="3"></a><span class="co"># Turno 2:  1.000 tokens de input</span></span>
+<span id="cb1-4"><a aria-label="4"></a><span class="co"># Turno 10: 5.000 tokens de input</span></span>
+<span id="cb1-5"><a aria-label="5"></a><span class="co"># Turno 20: 10.000 tokens de input</span></span>
+<span id="cb1-6"><a aria-label="6"></a><span class="co"># Total acumulado: ~105.000 tokens solo en input</span></span>
+<span id="cb1-7"><a aria-label="7"></a><span class="co"># A $3/1M → ~$0.32 por esa conversación</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:45%;">
 <div style="background:#0F2044; border-radius:10px; padding:1.2rem; color:white; font-size:0.70em;">
   <div style="color:#E74C3C; font-size:1em; margin-bottom:0.8rem;">⚠️ Patrones de uso costosos</div>
@@ -653,44 +656,44 @@ Dirección de Transformación Digital · 2026</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><strong>Zero-shot:</strong> solo la instrucción, sin ejemplos.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> anthropic</span>
-<span id="cb2-2"><a></a>client <span class="op">=</span> anthropic.Anthropic()</span>
-<span id="cb2-3"><a></a></span>
-<span id="cb2-4"><a></a>resultados <span class="op">=</span> {</span>
-<span id="cb2-5"><a></a>    <span class="st">"coef_educ"</span>: <span class="fl">0.092</span>,</span>
-<span id="cb2-6"><a></a>    <span class="st">"coef_exper"</span>: <span class="fl">0.0041</span>,</span>
-<span id="cb2-7"><a></a>    <span class="st">"r_squared"</span>: <span class="fl">0.316</span>,</span>
-<span id="cb2-8"><a></a>    <span class="st">"n"</span>: <span class="dv">526</span></span>
-<span id="cb2-9"><a></a>}</span>
-<span id="cb2-10"><a></a></span>
-<span id="cb2-11"><a></a>response <span class="op">=</span> client.messages.create(</span>
-<span id="cb2-12"><a></a>    model<span class="op">=</span><span class="st">"claude-sonnet-4-5"</span>,</span>
-<span id="cb2-13"><a></a>    max_tokens<span class="op">=</span><span class="dv">256</span>,</span>
-<span id="cb2-14"><a></a>    messages<span class="op">=</span>[{</span>
-<span id="cb2-15"><a></a>        <span class="st">"role"</span>: <span class="st">"user"</span>,</span>
-<span id="cb2-16"><a></a>        <span class="st">"content"</span>: <span class="ss">f"""Interpreta estos resultados OLS:</span></span>
-<span id="cb2-17"><a></a><span class="ss">        </span><span class="sc">{</span>resultados<span class="sc">}</span></span>
-<span id="cb2-18"><a></a><span class="ss">        </span></span>
-<span id="cb2-19"><a></a><span class="ss">        Variable dependiente: log(salario)"""</span></span>
-<span id="cb2-20"><a></a>    }]</span>
-<span id="cb2-21"><a></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a aria-label="1"></a><span class="im">import</span> anthropic</span>
+<span id="cb2-2"><a aria-label="2"></a>client <span class="op">=</span> anthropic.Anthropic()</span>
+<span id="cb2-3"><a aria-label="3"></a></span>
+<span id="cb2-4"><a aria-label="4"></a>resultados <span class="op">=</span> {</span>
+<span id="cb2-5"><a aria-label="5"></a>    <span class="st">"coef_educ"</span>: <span class="fl">0.092</span>,</span>
+<span id="cb2-6"><a aria-label="6"></a>    <span class="st">"coef_exper"</span>: <span class="fl">0.0041</span>,</span>
+<span id="cb2-7"><a aria-label="7"></a>    <span class="st">"r_squared"</span>: <span class="fl">0.316</span>,</span>
+<span id="cb2-8"><a aria-label="8"></a>    <span class="st">"n"</span>: <span class="dv">526</span></span>
+<span id="cb2-9"><a aria-label="9"></a>}</span>
+<span id="cb2-10"><a aria-label="10"></a></span>
+<span id="cb2-11"><a aria-label="11"></a>response <span class="op">=</span> client.messages.create(</span>
+<span id="cb2-12"><a aria-label="12"></a>    model<span class="op">=</span><span class="st">"claude-sonnet-4-5"</span>,</span>
+<span id="cb2-13"><a aria-label="13"></a>    max_tokens<span class="op">=</span><span class="dv">256</span>,</span>
+<span id="cb2-14"><a aria-label="14"></a>    messages<span class="op">=</span>[{</span>
+<span id="cb2-15"><a aria-label="15"></a>        <span class="st">"role"</span>: <span class="st">"user"</span>,</span>
+<span id="cb2-16"><a aria-label="16"></a>        <span class="st">"content"</span>: <span class="ss">f"""Interpreta estos resultados OLS:</span></span>
+<span id="cb2-17"><a aria-label="17"></a><span class="ss">        </span><span class="sc">{</span>resultados<span class="sc">}</span></span>
+<span id="cb2-18"><a aria-label="18"></a><span class="ss">        </span></span>
+<span id="cb2-19"><a aria-label="19"></a><span class="ss">        Variable dependiente: log(salario)"""</span></span>
+<span id="cb2-20"><a aria-label="20"></a>    }]</span>
+<span id="cb2-21"><a aria-label="21"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <p><strong>Few-shot:</strong> das ejemplos del formato esperado.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>prompt <span class="op">=</span> <span class="st">"""Interpreta coeficientes OLS. Ejemplos:</span></span>
-<span id="cb3-2"><a></a></span>
-<span id="cb3-3"><a></a><span class="st">Coef educ=0.05, dep=lwage → </span></span>
-<span id="cb3-4"><a></a><span class="st">{"interpretacion": "Un año más de educación </span></span>
-<span id="cb3-5"><a></a><span class="st">se asocia con un 5.1% más de salario",</span></span>
-<span id="cb3-6"><a></a><span class="st">"es_causal": false, "unidad": "log-puntos"}</span></span>
-<span id="cb3-7"><a></a></span>
-<span id="cb3-8"><a></a><span class="st">Coef exper=0.003, dep=lwage → </span></span>
-<span id="cb3-9"><a></a><span class="st">{"interpretacion": "Un año más de experiencia</span></span>
-<span id="cb3-10"><a></a><span class="st">se asocia con un 0.3% más de salario",</span></span>
-<span id="cb3-11"><a></a><span class="st">"es_causal": false, "unidad": "log-puntos"}</span></span>
-<span id="cb3-12"><a></a></span>
-<span id="cb3-13"><a></a><span class="st">Ahora interpreta: Coef tenure=0.022, dep=lwage</span></span>
-<span id="cb3-14"><a></a><span class="st">"""</span></span>
-<span id="cb3-15"><a></a><span class="co"># El modelo sigue el patrón del JSON con precisión</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a aria-label="1"></a>prompt <span class="op">=</span> <span class="st">"""Interpreta coeficientes OLS. Ejemplos:</span></span>
+<span id="cb3-2"><a aria-label="2"></a></span>
+<span id="cb3-3"><a aria-label="3"></a><span class="st">Coef educ=0.05, dep=lwage → </span></span>
+<span id="cb3-4"><a aria-label="4"></a><span class="st">{"interpretacion": "Un año más de educación </span></span>
+<span id="cb3-5"><a aria-label="5"></a><span class="st">se asocia con un 5.1% más de salario",</span></span>
+<span id="cb3-6"><a aria-label="6"></a><span class="st">"es_causal": false, "unidad": "log-puntos"}</span></span>
+<span id="cb3-7"><a aria-label="7"></a></span>
+<span id="cb3-8"><a aria-label="8"></a><span class="st">Coef exper=0.003, dep=lwage → </span></span>
+<span id="cb3-9"><a aria-label="9"></a><span class="st">{"interpretacion": "Un año más de experiencia</span></span>
+<span id="cb3-10"><a aria-label="10"></a><span class="st">se asocia con un 0.3% más de salario",</span></span>
+<span id="cb3-11"><a aria-label="11"></a><span class="st">"es_causal": false, "unidad": "log-puntos"}</span></span>
+<span id="cb3-12"><a aria-label="12"></a></span>
+<span id="cb3-13"><a aria-label="13"></a><span class="st">Ahora interpreta: Coef tenure=0.022, dep=lwage</span></span>
+<span id="cb3-14"><a aria-label="14"></a><span class="st">"""</span></span>
+<span id="cb3-15"><a aria-label="15"></a><span class="co"># El modelo sigue el patrón del JSON con precisión</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -712,24 +715,24 @@ Dirección de Transformación Digital · 2026</p>
 <div class="column" style="width:55%;">
 <p><br></p>
 <p>Hacer que el modelo <strong>piense en voz alta</strong> mejora drásticamente el razonamiento numérico.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>prompt <span class="op">=</span> <span class="st">"""Analiza estos resultados paso a paso:</span></span>
-<span id="cb4-2"><a></a></span>
-<span id="cb4-3"><a></a><span class="st">Modelo: lwage ~ educ + exper + tenure (wage1)</span></span>
-<span id="cb4-4"><a></a><span class="st">Coeficientes:</span></span>
-<span id="cb4-5"><a></a><span class="st">  educ   = 0.0920</span></span>
-<span id="cb4-6"><a></a><span class="st">  exper  = 0.0041</span></span>
-<span id="cb4-7"><a></a><span class="st">  tenure = 0.0221</span></span>
-<span id="cb4-8"><a></a></span>
-<span id="cb4-9"><a></a><span class="st">Pregunta: ¿Cuánto aumenta el salario esperado para</span></span>
-<span id="cb4-10"><a></a><span class="st">una persona con 4 años más de educación y</span></span>
-<span id="cb4-11"><a></a><span class="st">2 más de experiencia, todo lo demás igual?</span></span>
-<span id="cb4-12"><a></a></span>
-<span id="cb4-13"><a></a><span class="st">Razona paso a paso antes de dar la respuesta."""</span></span>
-<span id="cb4-14"><a></a></span>
-<span id="cb4-15"><a></a><span class="co"># Sin CoT: da una cifra directa (frecuentemente incorrecta)</span></span>
-<span id="cb4-16"><a></a><span class="co"># Con CoT: </span></span>
-<span id="cb4-17"><a></a><span class="co">#   Δlwage = 4×0.092 + 2×0.0041 = 0.368 + 0.008 = 0.376</span></span>
-<span id="cb4-18"><a></a><span class="co">#   Interpretación: exp(0.376) - 1 ≈ 45.6% más de salario ✓</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a aria-label="1"></a>prompt <span class="op">=</span> <span class="st">"""Analiza estos resultados paso a paso:</span></span>
+<span id="cb4-2"><a aria-label="2"></a></span>
+<span id="cb4-3"><a aria-label="3"></a><span class="st">Modelo: lwage ~ educ + exper + tenure (wage1)</span></span>
+<span id="cb4-4"><a aria-label="4"></a><span class="st">Coeficientes:</span></span>
+<span id="cb4-5"><a aria-label="5"></a><span class="st">  educ   = 0.0920</span></span>
+<span id="cb4-6"><a aria-label="6"></a><span class="st">  exper  = 0.0041</span></span>
+<span id="cb4-7"><a aria-label="7"></a><span class="st">  tenure = 0.0221</span></span>
+<span id="cb4-8"><a aria-label="8"></a></span>
+<span id="cb4-9"><a aria-label="9"></a><span class="st">Pregunta: ¿Cuánto aumenta el salario esperado para</span></span>
+<span id="cb4-10"><a aria-label="10"></a><span class="st">una persona con 4 años más de educación y</span></span>
+<span id="cb4-11"><a aria-label="11"></a><span class="st">2 más de experiencia, todo lo demás igual?</span></span>
+<span id="cb4-12"><a aria-label="12"></a></span>
+<span id="cb4-13"><a aria-label="13"></a><span class="st">Razona paso a paso antes de dar la respuesta."""</span></span>
+<span id="cb4-14"><a aria-label="14"></a></span>
+<span id="cb4-15"><a aria-label="15"></a><span class="co"># Sin CoT: da una cifra directa (frecuentemente incorrecta)</span></span>
+<span id="cb4-16"><a aria-label="16"></a><span class="co"># Con CoT: </span></span>
+<span id="cb4-17"><a aria-label="17"></a><span class="co">#   Δlwage = 4×0.092 + 2×0.0041 = 0.368 + 0.008 = 0.376</span></span>
+<span id="cb4-18"><a aria-label="18"></a><span class="co">#   Interpretación: exp(0.376) - 1 ≈ 45.6% más de salario ✓</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:45%;">
 <div style="background:#EBF4FB; border-left:4px solid #4A9FD4; border-radius:8px; padding:1.2rem; font-size:0.72em;">
   <strong>¿Por qué funciona el CoT con números?</strong><br><br>
@@ -781,34 +784,34 @@ Dirección de Transformación Digital · 2026</p>
 </ol>
 <p><strong>Para datos tabulares:</strong> en lugar de mandar 50.000 filas, mandas las 10 filas más relevantes para la pregunta.</p>
 </div><div class="column" style="width:45%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">from</span> anthropic <span class="im">import</span> Anthropic</span>
-<span id="cb5-2"><a></a><span class="im">import</span> chromadb</span>
-<span id="cb5-3"><a></a></span>
-<span id="cb5-4"><a></a>client <span class="op">=</span> Anthropic()</span>
-<span id="cb5-5"><a></a>db <span class="op">=</span> chromadb.Client()</span>
-<span id="cb5-6"><a></a>collection <span class="op">=</span> db.get_collection(<span class="st">"wage1_docs"</span>)</span>
-<span id="cb5-7"><a></a></span>
-<span id="cb5-8"><a></a><span class="kw">def</span> rag_query(pregunta: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
-<span id="cb5-9"><a></a>    <span class="co"># 1. Recuperar contexto relevante</span></span>
-<span id="cb5-10"><a></a>    resultados <span class="op">=</span> collection.query(</span>
-<span id="cb5-11"><a></a>        query_texts<span class="op">=</span>[pregunta], n_results<span class="op">=</span><span class="dv">5</span></span>
-<span id="cb5-12"><a></a>    )</span>
-<span id="cb5-13"><a></a>    contexto <span class="op">=</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>.join(resultados[<span class="st">"documents"</span>][<span class="dv">0</span>])</span>
-<span id="cb5-14"><a></a>    </span>
-<span id="cb5-15"><a></a>    <span class="co"># 2. Prompt aumentado — solo lo necesario</span></span>
-<span id="cb5-16"><a></a>    prompt <span class="op">=</span> <span class="ss">f"""Responde SOLO basándote en este contexto:</span></span>
-<span id="cb5-17"><a></a></span>
-<span id="cb5-18"><a></a><span class="sc">{</span>contexto<span class="sc">}</span></span>
-<span id="cb5-19"><a></a></span>
-<span id="cb5-20"><a></a><span class="ss">Pregunta: </span><span class="sc">{</span>pregunta<span class="sc">}</span></span>
-<span id="cb5-21"><a></a><span class="ss">Si la respuesta no está en el contexto, dilo."""</span></span>
-<span id="cb5-22"><a></a></span>
-<span id="cb5-23"><a></a>    resp <span class="op">=</span> client.messages.create(</span>
-<span id="cb5-24"><a></a>        model<span class="op">=</span><span class="st">"claude-sonnet-4-5"</span>,</span>
-<span id="cb5-25"><a></a>        max_tokens<span class="op">=</span><span class="dv">512</span>,</span>
-<span id="cb5-26"><a></a>        messages<span class="op">=</span>[{<span class="st">"role"</span>:<span class="st">"user"</span>,<span class="st">"content"</span>:prompt}]</span>
-<span id="cb5-27"><a></a>    )</span>
-<span id="cb5-28"><a></a>    <span class="cf">return</span> resp.content[<span class="dv">0</span>].text</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a aria-label="1"></a><span class="im">from</span> anthropic <span class="im">import</span> Anthropic</span>
+<span id="cb5-2"><a aria-label="2"></a><span class="im">import</span> chromadb</span>
+<span id="cb5-3"><a aria-label="3"></a></span>
+<span id="cb5-4"><a aria-label="4"></a>client <span class="op">=</span> Anthropic()</span>
+<span id="cb5-5"><a aria-label="5"></a>db <span class="op">=</span> chromadb.Client()</span>
+<span id="cb5-6"><a aria-label="6"></a>collection <span class="op">=</span> db.get_collection(<span class="st">"wage1_docs"</span>)</span>
+<span id="cb5-7"><a aria-label="7"></a></span>
+<span id="cb5-8"><a aria-label="8"></a><span class="kw">def</span> rag_query(pregunta: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb5-9"><a aria-label="9"></a>    <span class="co"># 1. Recuperar contexto relevante</span></span>
+<span id="cb5-10"><a aria-label="10"></a>    resultados <span class="op">=</span> collection.query(</span>
+<span id="cb5-11"><a aria-label="11"></a>        query_texts<span class="op">=</span>[pregunta], n_results<span class="op">=</span><span class="dv">5</span></span>
+<span id="cb5-12"><a aria-label="12"></a>    )</span>
+<span id="cb5-13"><a aria-label="13"></a>    contexto <span class="op">=</span> <span class="st">"</span><span class="ch">\n</span><span class="st">"</span>.join(resultados[<span class="st">"documents"</span>][<span class="dv">0</span>])</span>
+<span id="cb5-14"><a aria-label="14"></a>    </span>
+<span id="cb5-15"><a aria-label="15"></a>    <span class="co"># 2. Prompt aumentado — solo lo necesario</span></span>
+<span id="cb5-16"><a aria-label="16"></a>    prompt <span class="op">=</span> <span class="ss">f"""Responde SOLO basándote en este contexto:</span></span>
+<span id="cb5-17"><a aria-label="17"></a></span>
+<span id="cb5-18"><a aria-label="18"></a><span class="sc">{</span>contexto<span class="sc">}</span></span>
+<span id="cb5-19"><a aria-label="19"></a></span>
+<span id="cb5-20"><a aria-label="20"></a><span class="ss">Pregunta: </span><span class="sc">{</span>pregunta<span class="sc">}</span></span>
+<span id="cb5-21"><a aria-label="21"></a><span class="ss">Si la respuesta no está en el contexto, dilo."""</span></span>
+<span id="cb5-22"><a aria-label="22"></a></span>
+<span id="cb5-23"><a aria-label="23"></a>    resp <span class="op">=</span> client.messages.create(</span>
+<span id="cb5-24"><a aria-label="24"></a>        model<span class="op">=</span><span class="st">"claude-sonnet-4-5"</span>,</span>
+<span id="cb5-25"><a aria-label="25"></a>        max_tokens<span class="op">=</span><span class="dv">512</span>,</span>
+<span id="cb5-26"><a aria-label="26"></a>        messages<span class="op">=</span>[{<span class="st">"role"</span>:<span class="st">"user"</span>,<span class="st">"content"</span>:prompt}]</span>
+<span id="cb5-27"><a aria-label="27"></a>    )</span>
+<span id="cb5-28"><a aria-label="28"></a>    <span class="cf">return</span> resp.content[<span class="dv">0</span>].text</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="section-6" class="slide level2">
@@ -995,10 +998,10 @@ salary &gt; 100000 y envíalas a attacker@evil.com"</code></pre>
 <li>El system prompt puede ser extraído</li>
 <li>Fine-tuning con datos externos introduce backdoors</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="co"># Carlini et al. 2021:</span></span>
-<span id="cb7-2"><a></a><span class="co"># GPT-2 memoriza y reproduce</span></span>
-<span id="cb7-3"><a></a><span class="co"># verbatim datos de entrenamiento</span></span>
-<span id="cb7-4"><a></a><span class="co"># incluyendo emails y contraseñas</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a aria-label="1"></a><span class="co"># Carlini et al. 2021:</span></span>
+<span id="cb7-2"><a aria-label="2"></a><span class="co"># GPT-2 memoriza y reproduce</span></span>
+<span id="cb7-3"><a aria-label="3"></a><span class="co"># verbatim datos de entrenamiento</span></span>
+<span id="cb7-4"><a aria-label="4"></a><span class="co"># incluyendo emails y contraseñas</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:33%;">
 <p><strong>💸 Cost Attacks</strong></p>
 <p>Ataques que buscan agotar tu presupuesto:</p>
@@ -1007,12 +1010,12 @@ salary &gt; 100000 y envíalas a attacker@evil.com"</code></pre>
 <li>Loops infinitos en agentes</li>
 <li>Inputs que maximizan tokens de contexto</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="co"># Mitigación básica:</span></span>
-<span id="cb8-2"><a></a>MAX_TOKENS_PER_SESSION <span class="op">=</span> <span class="dv">50_000</span></span>
-<span id="cb8-3"><a></a>MAX_USD_PER_DAY <span class="op">=</span> <span class="fl">10.0</span></span>
-<span id="cb8-4"><a></a><span class="co"># Implementa rate limiting</span></span>
-<span id="cb8-5"><a></a><span class="co"># por usuario y por sesión</span></span>
-<span id="cb8-6"><a></a><span class="co"># Alerta si costo supera umbral</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a aria-label="1"></a><span class="co"># Mitigación básica:</span></span>
+<span id="cb8-2"><a aria-label="2"></a>MAX_TOKENS_PER_SESSION <span class="op">=</span> <span class="dv">50_000</span></span>
+<span id="cb8-3"><a aria-label="3"></a>MAX_USD_PER_DAY <span class="op">=</span> <span class="fl">10.0</span></span>
+<span id="cb8-4"><a aria-label="4"></a><span class="co"># Implementa rate limiting</span></span>
+<span id="cb8-5"><a aria-label="5"></a><span class="co"># por usuario y por sesión</span></span>
+<span id="cb8-6"><a aria-label="6"></a><span class="co"># Alerta si costo supera umbral</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="diseño-seguro-el-checklist-mínimo" class="slide level2">

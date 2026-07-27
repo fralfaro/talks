@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>talk1-glosario – Talks</title>
+<title>programa_talleres_ia_generativa_utfsm – Talks</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -76,35 +76,6 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -160,7 +131,22 @@ window.Quarto = {
     <h2 id="toc-title">En esta página</h2>
    
   <ul>
-  <li><a href="#glosario-de-nomenclatura-capítulo-13" id="toc-glosario-de-nomenclatura-capítulo-13" class="nav-link active" data-scroll-target="#glosario-de-nomenclatura-capítulo-13">Glosario de nomenclatura — Capítulo 13</a></li>
+  <li><a href="#programa-de-talleres-de-inteligencia-artificial-generativa" id="toc-programa-de-talleres-de-inteligencia-artificial-generativa" class="nav-link active" data-scroll-target="#programa-de-talleres-de-inteligencia-artificial-generativa">Programa de Talleres de Inteligencia Artificial Generativa</a>
+  <ul class="collapse">
+  <li><a href="#objetivo-general-del-programa" id="toc-objetivo-general-del-programa" class="nav-link" data-scroll-target="#objetivo-general-del-programa">Objetivo General del Programa</a></li>
+  <li><a href="#taller-1-fundamentos-de-ia-generativa-y-su-aplicación-a-la-docencia" id="toc-taller-1-fundamentos-de-ia-generativa-y-su-aplicación-a-la-docencia" class="nav-link" data-scroll-target="#taller-1-fundamentos-de-ia-generativa-y-su-aplicación-a-la-docencia">Taller 1: Fundamentos de IA Generativa y su Aplicación a la Docencia</a>
+  <ul class="collapse">
+  <li><a href="#objetivo-del-taller" id="toc-objetivo-del-taller" class="nav-link" data-scroll-target="#objetivo-del-taller">Objetivo del taller</a></li>
+  <li><a href="#contenidos" id="toc-contenidos" class="nav-link" data-scroll-target="#contenidos">Contenidos</a></li>
+  <li><a href="#aprendizaje-esperado" id="toc-aprendizaje-esperado" class="nav-link" data-scroll-target="#aprendizaje-esperado">Aprendizaje esperado</a></li>
+  </ul></li>
+  <li><a href="#taller-2-ia-generativa-aplicada-a-la-investigación-y-la-productividad" id="toc-taller-2-ia-generativa-aplicada-a-la-investigación-y-la-productividad" class="nav-link" data-scroll-target="#taller-2-ia-generativa-aplicada-a-la-investigación-y-la-productividad">Taller 2: IA Generativa Aplicada a la Investigación y la Productividad</a>
+  <ul class="collapse">
+  <li><a href="#objetivo-del-taller-1" id="toc-objetivo-del-taller-1" class="nav-link" data-scroll-target="#objetivo-del-taller-1">Objetivo del taller</a></li>
+  <li><a href="#contenidos-1" id="toc-contenidos-1" class="nav-link" data-scroll-target="#contenidos-1">Contenidos</a></li>
+  <li><a href="#aprendizaje-esperado-1" id="toc-aprendizaje-esperado-1" class="nav-link" data-scroll-target="#aprendizaje-esperado-1">Aprendizaje esperado</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -170,70 +156,65 @@ window.Quarto = {
 
 
 
-<section id="glosario-de-nomenclatura-capítulo-13" class="level2">
-<h2 class="anchored" data-anchor-id="glosario-de-nomenclatura-capítulo-13">Glosario de nomenclatura — Capítulo 13</h2>
-<p><strong>Agente, entorno y tiempo</strong></p>
-<p><span class="math inline">\(t\)</span> es el índice de tiempo discreto. En cada paso el agente observa un estado <span class="math inline">\(S_t\)</span>, elige una acción <span class="math inline">\(A_t\)</span>, recibe una recompensa <span class="math inline">\(R_{t+1}\)</span> y llega al estado <span class="math inline">\(S_{t+1}\)</span>.</p>
-<p><span class="math inline">\(T\)</span> es el paso final de un episodio. Un episodio es una secuencia que termina en un estado terminal (como llegar a la meta en el corredor corto).</p>
+<section id="programa-de-talleres-de-inteligencia-artificial-generativa" class="level1">
+<h1>Programa de Talleres de Inteligencia Artificial Generativa</h1>
+<p><strong>Dirigido a:</strong> docentes, académicos y funcionarios de la Universidad Técnica Federico Santa María</p>
+<section id="objetivo-general-del-programa" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-general-del-programa">Objetivo General del Programa</h2>
+<p>Fortalecer en la comunidad académica de la UTFSM el uso efectivo y responsable de herramientas de inteligencia artificial generativa (ChatGPT y Claude), desarrollando competencias de prompting, análisis y automatización aplicables a la docencia, la investigación y la productividad diaria, en un marco alineado con los Lineamientos para el Uso Responsable de la Inteligencia Artificial de la Universidad.</p>
+<blockquote class="blockquote">
+<p><strong>Nota:</strong> el presente programa se enmarca en los Lineamientos para el Uso Responsable de la Inteligencia Artificial de la USM. Todos los contenidos, herramientas y actividades de los talleres se ajustan a los principios, usos permitidos y buenas prácticas definidos en dicho documento.</p>
+</blockquote>
 <hr>
-<p><strong>Estados, acciones y política</strong></p>
-<p><span class="math inline">\(s \in \mathcal{S}\)</span> es un estado del entorno. <span class="math inline">\(\mathcal{S}\)</span> es el conjunto de todos los estados posibles.</p>
-<p><span class="math inline">\(a \in \mathcal{A}(s)\)</span> es una acción disponible en el estado <span class="math inline">\(s\)</span>. <span class="math inline">\(\mathcal{A}\)</span> es el conjunto de todas las acciones posibles.</p>
-<p><span class="math inline">\(\pi(a \mid s)\)</span> es la <strong>política</strong>: la probabilidad de elegir la acción <span class="math inline">\(a\)</span> estando en el estado <span class="math inline">\(s\)</span>. Una política estocástica asigna probabilidades a las acciones; una política determinista asigna probabilidad 1 a una sola acción.</p>
-<p><span class="math inline">\(\pi_\theta\)</span> o <span class="math inline">\(\pi(a \mid s, \theta)\)</span> es una <strong>política parametrizada</strong>: la política está definida por un vector de parámetros <span class="math inline">\(\theta\)</span> que se puede optimizar.</p>
-<p><span class="math inline">\(\pi^*\)</span> es la <strong>política óptima</strong>: aquella que maximiza el retorno esperado desde cualquier estado.</p>
+</section>
+<section id="taller-1-fundamentos-de-ia-generativa-y-su-aplicación-a-la-docencia" class="level2">
+<h2 class="anchored" data-anchor-id="taller-1-fundamentos-de-ia-generativa-y-su-aplicación-a-la-docencia">Taller 1: Fundamentos de IA Generativa y su Aplicación a la Docencia</h2>
+<p><strong>Fecha:</strong> Martes 25 de agosto — 14:30 a 16:30 (duración de 2 horas)</p>
+<section id="objetivo-del-taller" class="level3">
+<h3 class="anchored" data-anchor-id="objetivo-del-taller">Objetivo del taller</h3>
+<p>Comprender los fundamentos del funcionamiento de los modelos de lenguaje (ChatGPT y Claude) y desarrollar habilidades de prompting efectivo, aplicándolas al diseño instruccional, la definición de metas de aprendizaje, la evaluación para el aprendizaje y la retroalimentación a estudiantes, bajo los principios de uso responsable definidos por la Universidad.</p>
+</section>
+<section id="contenidos" class="level3">
+<h3 class="anchored" data-anchor-id="contenidos">Contenidos</h3>
+<ul>
+<li>¿Qué es la IA generativa y cómo funcionan los modelos de lenguaje?</li>
+<li>ChatGPT y Claude: fortalezas y usos recomendados de cada herramienta</li>
+<li>Anatomía de un buen prompt: contexto, rol, tarea y formato</li>
+<li>Diseño instruccional con apoyo de IA: de las metas de aprendizaje a la experiencia de aprendizaje</li>
+<li>Evaluación para el aprendizaje: apoyo de IA en el diseño de instrumentos de evaluación y rúbricas</li>
+<li>Retroalimentación del aprendizaje: uso de IA para comentarios y correcciones a estudiantes</li>
+</ul>
+</section>
+<section id="aprendizaje-esperado" class="level3">
+<h3 class="anchored" data-anchor-id="aprendizaje-esperado">Aprendizaje esperado</h3>
+<p>Al finalizar el taller, los participantes serán capaces de construir prompts efectivos, incorporar IA generativa en el diseño instruccional y la definición de metas de aprendizaje, y apoyar el diseño de instrumentos de evaluación y retroalimentación.</p>
 <hr>
-<p><strong>Recompensas y retornos</strong></p>
-<p><span class="math inline">\(R_t\)</span> es la <strong>recompensa</strong> recibida en el paso <span class="math inline">\(t\)</span>. Es un escalar que indica qué tan buena fue la transición inmediata.</p>
-<p><span class="math inline">\(G_t\)</span> es el <strong>retorno</strong> desde el paso <span class="math inline">\(t\)</span>: la suma descontada de todas las recompensas futuras a partir de <span class="math inline">\(t\)</span>: <span class="math display">\[G_t = R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + \cdots = \sum_{k=0}^{\infty} \gamma^k R_{t+k+1}\]</span> Es la cantidad que el agente quiere maximizar en expectativa. En el caso episódico con <span class="math inline">\(\gamma = 1\)</span>, es simplemente la suma de todas las recompensas hasta el final del episodio.</p>
-<p><span class="math inline">\(\gamma \in [0,1]\)</span> es el <strong>factor de descuento</strong>. Con <span class="math inline">\(\gamma = 0\)</span> el agente solo le importa la recompensa inmediata; con <span class="math inline">\(\gamma = 1\)</span> considera todo el futuro con igual peso. En el Cap. 13 se usa <span class="math inline">\(\gamma = 1\)</span> para simplificar.</p>
-<p><span class="math inline">\(r(\pi)\)</span> es la <strong>tasa promedio de recompensa</strong> en el caso continuo (sin episodios): <span class="math display">\[r(\pi) = \lim_{t \to \infty} \mathbb{E}[R_t \mid A_{0:t} \sim \pi]\]</span> Reemplaza a <span class="math inline">\(J(\theta) = v_\pi(s_0)\)</span> cuando no hay estados terminales.</p>
-<hr>
-<p><strong>Funciones de valor</strong></p>
-<p><span class="math inline">\(v_\pi(s)\)</span> es la <strong>función de valor de estado</strong> bajo la política <span class="math inline">\(\pi\)</span>: el retorno esperado al estar en el estado <span class="math inline">\(s\)</span> y seguir <span class="math inline">\(\pi\)</span> desde ahí: <span class="math display">\[v_\pi(s) = \mathbb{E}_\pi[G_t \mid S_t = s]\]</span></p>
-<p><span class="math inline">\(v^*(s)\)</span> es el <strong>valor óptimo de estado</strong>: el mayor retorno esperado posible desde <span class="math inline">\(s\)</span> bajo cualquier política. <span class="math inline">\(v^*(s) = \max_\pi v_\pi(s)\)</span>.</p>
-<p><span class="math inline">\(q_\pi(s, a)\)</span> es la <strong>función de valor acción</strong> (<em>action-value function</em>) bajo la política <span class="math inline">\(\pi\)</span>: el retorno esperado al estar en <span class="math inline">\(s\)</span>, tomar la acción <span class="math inline">\(a\)</span>, y luego seguir <span class="math inline">\(\pi\)</span>: <span class="math display">\[q_\pi(s,a) = \mathbb{E}_\pi[G_t \mid S_t = s, A_t = a]\]</span></p>
-<p><span class="math inline">\(q^*(s,a)\)</span> es la <strong>función de valor acción óptima</strong>: <span class="math inline">\(q^*(s,a) = \max_\pi q_\pi(s,a)\)</span>. También se escribe <span class="math inline">\(Q^*\)</span> en la literatura de Deep RL.</p>
-<p><span class="math inline">\(\hat{v}(s, w)\)</span> es la <strong>aproximación aprendida</strong> de <span class="math inline">\(v_\pi(s)\)</span>, parametrizada por un vector de pesos <span class="math inline">\(w\)</span>. El critic en Actor–Crítico aprende esta función.</p>
-<hr>
-<p><strong>Parámetros y gradientes</strong></p>
-<p><span class="math inline">\(\theta \in \mathbb{R}^{d'}\)</span> es el <strong>vector de parámetros de la política</strong>. Es lo que REINFORCE y Actor–Crítico actualizan. En una red neuronal puede tener millones de componentes.</p>
-<p><span class="math inline">\(w \in \mathbb{R}^d\)</span> es el <strong>vector de pesos de la función de valor</strong> (el critic en Actor–Crítico). Se aprende por separado de <span class="math inline">\(\theta\)</span>.</p>
-<p><span class="math inline">\(\nabla_\theta f(\theta)\)</span> es el <strong>gradiente</strong> de <span class="math inline">\(f\)</span> respecto a <span class="math inline">\(\theta\)</span>: el vector de derivadas parciales <span class="math inline">\((\partial f/\partial \theta_1, \ldots, \partial f/\partial \theta_{d'})^\top\)</span>. Apunta en la dirección de mayor crecimiento de <span class="math inline">\(f\)</span>.</p>
-<p><span class="math inline">\(\alpha\)</span> es el <strong>tamaño de paso</strong> (<em>step size</em> o <em>learning rate</em>): controla cuánto se mueven los parámetros en cada actualización. Su elección es crítica — un <span class="math inline">\(\alpha\)</span> demasiado grande diverge, demasiado pequeño converge muy lento.</p>
-<p><span class="math inline">\(\alpha_\theta\)</span>, <span class="math inline">\(\alpha_w\)</span> son los step sizes para el actor y el critic respectivamente en Actor–Crítico (pueden ser distintos).</p>
-<hr>
-<p><strong>Medidas de desempeño</strong></p>
-<p><span class="math inline">\(J(\theta)\)</span> es la <strong>medida de desempeño</strong> que se quiere maximizar. En el caso episódico es <span class="math inline">\(J(\theta) = v_{\pi_\theta}(s_0)\)</span>: el valor del estado inicial bajo la política <span class="math inline">\(\pi_\theta\)</span>. En el caso continuo es <span class="math inline">\(J(\theta) = r(\pi)\)</span>.</p>
-<hr>
-<p><strong>Distribuciones de estados</strong></p>
-<p><span class="math inline">\(\mu(s)\)</span> es la <strong>distribución on-policy</strong>: la fracción del tiempo que el agente pasa en el estado <span class="math inline">\(s\)</span> siguiendo la política <span class="math inline">\(\pi\)</span>. En el caso episódico es proporcional al número de visitas esperadas a <span class="math inline">\(s\)</span> desde <span class="math inline">\(s_0\)</span>. Aparece en el Policy Gradient Theorem como el peso de cada estado.</p>
-<p><span class="math inline">\(p(s', r \mid s, a)\)</span> es la <strong>dinámica del entorno</strong>: la probabilidad de llegar al estado <span class="math inline">\(s'\)</span> con recompensa <span class="math inline">\(r\)</span> al tomar la acción <span class="math inline">\(a\)</span> en el estado <span class="math inline">\(s\)</span>. En RL model-free esta función es <strong>desconocida</strong> — y el Policy Gradient Theorem es notable precisamente porque <span class="math inline">\(\nabla J\)</span> no la requiere.</p>
-<hr>
-<p><strong>Nomenclatura de la política softmax</strong></p>
-<p><span class="math inline">\(h(s, a, \theta)\)</span> es la <strong>preferencia</strong> de la acción <span class="math inline">\(a\)</span> en el estado <span class="math inline">\(s\)</span>: un número real sin unidades que no representa un valor, sino una “puntuación” relativa. Las preferencias pueden crecer arbitrariamente, lo que permite que la política se vuelva determinista.</p>
-<p>La <strong>política softmax</strong> convierte preferencias en probabilidades: <span class="math display">\[\pi(a \mid s, \theta) = \frac{e^{h(s,a,\theta)}}{\sum_b e^{h(s,b,\theta)}}\]</span></p>
-<p><span class="math inline">\(H_t(a)\)</span> es la notación del Bandit (Cap. 2.8) para la preferencia de la acción <span class="math inline">\(a\)</span> en el paso <span class="math inline">\(t\)</span>. Es el análogo escalar de <span class="math inline">\(h(s,a,\theta)\)</span> cuando solo hay un estado.</p>
-<hr>
-<p><strong>El eligibility vector y el truco del logaritmo</strong></p>
-<p><span class="math inline">\(\nabla_\theta \ln \pi(a \mid s, \theta)\)</span> es el <strong>eligibility vector</strong> (vector de elegibilidad): la dirección en el espacio de parámetros que más aumenta la probabilidad de elegir la acción <span class="math inline">\(a\)</span> en el estado <span class="math inline">\(s\)</span>. Es matemáticamente igual a <span class="math inline">\(\nabla_\theta \pi / \pi\)</span> por la identidad <span class="math inline">\(\nabla \ln x = \nabla x / x\)</span>. Es el único lugar donde aparece la parametrización específica de la política en el algoritmo REINFORCE.</p>
-<hr>
-<p><strong>Error TD y baseline</strong></p>
-<p><span class="math inline">\(\delta_t\)</span> es el <strong>error TD</strong> (<em>temporal difference error</em>) en Actor–Crítico: <span class="math display">\[\delta_t = R_{t+1} + \gamma \hat{v}(S_{t+1}, w) - \hat{v}(S_t, w)\]</span> Mide cuánto mejor o peor fue la transición de lo que el critic esperaba. Si <span class="math inline">\(\delta_t &gt; 0\)</span>, la acción fue mejor de lo previsto y se refuerza; si <span class="math inline">\(\delta_t &lt; 0\)</span>, se debilita.</p>
-<p><span class="math inline">\(b(s)\)</span> es el <strong>baseline</strong>: cualquier función del estado (no de la acción) que se resta a <span class="math inline">\(G_t\)</span> para reducir la varianza sin introducir sesgo. La elección más natural es <span class="math inline">\(\hat{v}(S_t, w)\)</span>.</p>
-<p><span class="math inline">\(\bar{R}_t\)</span> es el baseline del Bandit (Cap. 2.8): el promedio de todas las recompensas recibidas hasta <span class="math inline">\(t\)</span>. Es el análogo escalar del baseline <span class="math inline">\(\hat{v}(S_t, w)\)</span>.</p>
-<hr>
-<p><strong><span class="math inline">\(\varepsilon\)</span>-greedy</strong></p>
-<p><span class="math inline">\(\varepsilon\)</span>-greedy es una <strong>estrategia de exploración</strong> para políticas basadas en valores: con probabilidad <span class="math inline">\(1 - \varepsilon\)</span> elige la acción con mayor valor estimado (greedy), y con probabilidad <span class="math inline">\(\varepsilon\)</span> elige una acción aleatoria uniforme. Su limitación fundamental es que solo puede asignar dos niveles de probabilidad a las acciones — <span class="math inline">\(1 - \varepsilon/|\mathcal{A}|\)</span> a la mejor y <span class="math inline">\(\varepsilon/|\mathcal{A}|\)</span> a las demás — lo que le impide representar políticas óptimas estocásticas en el interior del simplex.</p>
-<hr>
-<p><strong>Actor y Critic</strong></p>
-<p>El <strong>actor</strong> es la política <span class="math inline">\(\pi_\theta\)</span>: decide qué acciones tomar. Se actualiza usando el eligibility vector escalado por la señal del critic.</p>
-<p>El <strong>critic</strong> es la función de valor <span class="math inline">\(\hat{v}(s, w)\)</span>: evalúa qué tan buenas son las situaciones en las que el actor se encuentra. Proporciona la señal <span class="math inline">\(\delta_t\)</span> que guía al actor sin necesitar el retorno completo <span class="math inline">\(G_t\)</span>.</p>
-<hr>
-<p><strong>Trazas de elegibilidad</strong></p>
-<p><span class="math inline">\(z_\theta\)</span> y <span class="math inline">\(z_w\)</span> son los <strong>vectores de trazas de elegibilidad</strong> para el actor y el critic respectivamente. Acumulan los gradientes de pasos anteriores con decaimiento exponencial controlado por <span class="math inline">\(\lambda\)</span>, lo que permite propagar señales de error hacia atrás en el tiempo de forma eficiente. Son la implementación online del <span class="math inline">\(\lambda\)</span>-return.</p>
+</section>
+</section>
+<section id="taller-2-ia-generativa-aplicada-a-la-investigación-y-la-productividad" class="level2">
+<h2 class="anchored" data-anchor-id="taller-2-ia-generativa-aplicada-a-la-investigación-y-la-productividad">Taller 2: IA Generativa Aplicada a la Investigación y la Productividad</h2>
+<p><strong>Fecha:</strong> Jueves 27 de agosto — 14:30 a 16:30 (duración de 2 horas)</p>
+<section id="objetivo-del-taller-1" class="level3">
+<h3 class="anchored" data-anchor-id="objetivo-del-taller-1">Objetivo del taller</h3>
+<p>Desarrollar competencias para utilizar IA generativa como apoyo en el proceso investigativo y en la automatización de tareas administrativas y académicas repetitivas, resguardando la integridad académica, la propiedad intelectual y la protección de la información institucional.</p>
+</section>
+<section id="contenidos-1" class="level3">
+<h3 class="anchored" data-anchor-id="contenidos-1">Contenidos</h3>
+<ul>
+<li>Búsqueda, síntesis y organización de literatura científica con apoyo de IA</li>
+<li>Apoyo en el análisis exploratorio de datos y su interpretación</li>
+<li>Redacción académica: estructuración de papers, resúmenes y abstracts</li>
+<li>Automatización de correos, informes y documentos recurrentes</li>
+<li>Creación de plantillas y prompts reutilizables para tareas frecuentes</li>
+</ul>
+</section>
+<section id="aprendizaje-esperado-1" class="level3">
+<h3 class="anchored" data-anchor-id="aprendizaje-esperado-1">Aprendizaje esperado</h3>
+<p>Al finalizar el taller, los participantes serán capaces de integrar IA generativa en su flujo de trabajo investigativo y administrativo de manera rigurosa, optimizando tiempo y calidad en sus tareas académicas.</p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

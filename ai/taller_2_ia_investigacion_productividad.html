@@ -1,0 +1,2244 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<link href="../images/logo_fam.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
+
+  <meta name="author" content="Universidad Técnica Federico Santa María">
+  <meta name="dcterms.date" content="2026-08-27">
+  <title>Talks – Taller 2: IA Generativa Aplicada a la Investigación y la Productividad</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #e1e4e8; background-color: #24292e; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #e1e4e8; } /* Normal */
+    code span.al { color: #ff5555; font-weight: bold; } /* Alert */
+    code span.an { color: #6a737d; } /* Annotation */
+    code span.at { color: #f97583; } /* Attribute */
+    code span.bn { color: #79b8ff; } /* BaseN */
+    code span.bu { color: #f97583; } /* BuiltIn */
+    code span.cf { color: #f97583; } /* ControlFlow */
+    code span.ch { color: #9ecbff; } /* Char */
+    code span.cn { color: #79b8ff; } /* Constant */
+    code span.co { color: #6a737d; } /* Comment */
+    code span.cv { color: #6a737d; } /* CommentVar */
+    code span.do { color: #6a737d; } /* Documentation */
+    code span.dt { color: #f97583; } /* DataType */
+    code span.dv { color: #79b8ff; } /* DecVal */
+    code span.er { color: #ff5555; text-decoration: underline; } /* Error */
+    code span.ex { color: #f97583; font-weight: bold; } /* Extension */
+    code span.fl { color: #79b8ff; } /* Float */
+    code span.fu { color: #b392f0; } /* Function */
+    code span.im { color: #9ecbff; } /* Import */
+    code span.in { color: #6a737d; } /* Information */
+    code span.kw { color: #f97583; } /* Keyword */
+    code span.op { color: #e1e4e8; } /* Operator */
+    code span.ot { color: #b392f0; } /* Other */
+    code span.pp { color: #f97583; } /* Preprocessor */
+    code span.re { color: #6a737d; } /* RegionMarker */
+    code span.sc { color: #79b8ff; } /* SpecialChar */
+    code span.ss { color: #9ecbff; } /* SpecialString */
+    code span.st { color: #9ecbff; } /* String */
+    code span.va { color: #ffab70; } /* Variable */
+    code span.vs { color: #9ecbff; } /* VerbatimString */
+    code span.wa { color: #ff5555; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c0ecab25cbec914f13e0868d85731132.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Taller 2: IA Generativa Aplicada a la Investigación y la Productividad</h1>
+  <p class="subtitle">Programa de Talleres de Inteligencia Artificial Generativa</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Universidad Técnica Federico Santa María
+</div>
+</div>
+</div>
+
+  <p class="date">2026-08-27</p>
+</section>
+<section id="section" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 70vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 0.9em; color: #4A9FD4; text-transform: uppercase;">Programa de Talleres de Inteligencia Artificial Generativa</span></p>
+<p><span style="font-size: 2.1em; font-weight: bold; color: white; line-height: 1.15; max-width: 1200px;">IA Generativa Aplicada a la Investigación y la Productividad</span></p>
+<p><span style="font-size: 0.95em; color: #C9A84C; margin-top: 1em;">Literatura científica · Datos · Redacción académica · Automatización · Plantillas reutilizables</span></p>
+<p><span style="font-size: 0.8em; color: #D9E2EC; margin-top: 1.4em;">Jueves 27 de agosto · 14:30 a 16:30</span></p>
+</div>
+</section>
+<section id="dónde-quedamos-y-hacia-dónde-vamos" class="slide level2">
+<h2>Dónde quedamos y hacia dónde vamos</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="taller-1-docencia">Taller 1 · Docencia</h3>
+<p>Aprendimos a construir prompts con <strong>rol, contexto, tarea, criterios y formato</strong>, y los aplicamos al diseño instruccional, la evaluación y la retroalimentación.</p>
+<p>Si tiene su <strong>prompt maestro</strong> del taller anterior, téngalo abierto: hoy lo vamos a especializar.</p>
+</div><div class="column" style="width:50%;">
+<h3 id="taller-2-investigación-y-gestión">Taller 2 · Investigación y gestión</h3>
+<p>Hoy el prompt deja de ser un ejercicio y pasa a ser <strong>infraestructura de trabajo</strong>: plantillas que usted va a reutilizar cada semana.</p>
+<p>Cambia también el nivel de exigencia: aquí las fuentes, los datos y la autoría <strong>se verifican siempre</strong>.</p>
+</div></div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>Si no participó en el Taller 1, no hay problema: cada plantilla de hoy es autocontenida y viene explicada pieza por pieza.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="con-qué-se-va-a-ir-de-aquí" class="slide level2">
+<h2>Con qué se va a ir de aquí</h2>
+<p><br></p>
+<div style="display:grid; grid-template-columns:repeat(5,1fr); gap:0.8rem; margin-top:0.6rem;">
+  <div class="kit-card"><span class="kit-num">1</span><strong>Matriz de literatura</strong>Comparación verificable de 2 o 3 textos reales de su área.</div>
+  <div class="kit-card"><span class="kit-num">2</span><strong>Plan de análisis</strong>Preguntas exploratorias, visualizaciones y cautelas de interpretación.</div>
+  <div class="kit-card"><span class="kit-num">3</span><strong>Abstract + checklist</strong>Un resumen de 150–250 palabras con su lista de verificación previa al envío.</div>
+  <div class="kit-card"><span class="kit-num">4</span><strong>Plantilla reutilizable</strong>Un prompt maestro para una tarea que usted repite cada semana.</div>
+  <div class="kit-card kit-card--grupo"><span class="kit-num">5</span><strong>Plantilla v2</strong>Construida en grupo y corregida por otro grupo que intentó romperla.</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Traiga material real: dos o tres abstracts de su área, una descripción de variables de algún dato con el que trabaje, y un correo o informe que redacte con frecuencia.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="ruta-de-dos-horas" class="slide level2">
+<h2>Ruta de dos horas</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Hora</th>
+<th>Bloque</th>
+<th>Qué hacemos</th>
+<th>Producto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>14:30 · 10 min</td>
+<td><strong>0 · Encuadre</strong></td>
+<td>Resguardos: integridad, fuentes, datos, autoría</td>
+<td>Criterios mínimos</td>
+</tr>
+<tr class="even">
+<td>14:40 · 20 min</td>
+<td><strong>1 · Literatura</strong></td>
+<td>Buscar, sintetizar y organizar + <strong>Actividad 1</strong></td>
+<td>Matriz de literatura</td>
+</tr>
+<tr class="odd">
+<td>15:00 · 20 min</td>
+<td><strong>2 · Datos</strong></td>
+<td>Análisis exploratorio e interpretación + <strong>Actividad 2</strong></td>
+<td>Plan de análisis</td>
+</tr>
+<tr class="even">
+<td>15:20 · 5 min</td>
+<td><em>Pausa</em></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>15:25 · 20 min</td>
+<td><strong>3 · Redacción</strong></td>
+<td>Papers, resúmenes y abstracts + <strong>Actividad 3</strong></td>
+<td>Abstract + checklist</td>
+</tr>
+<tr class="even">
+<td>15:45 · 20 min</td>
+<td><strong>4 · Automatización</strong></td>
+<td>Correos, informes y plantillas + <strong>Actividad 4</strong></td>
+<td>Plantilla reutilizable</td>
+</tr>
+<tr class="odd">
+<td>16:05 · 20 min</td>
+<td><strong>5 · Taller en grupo</strong></td>
+<td><strong>Actividad colectiva</strong>: prueba cruzada de plantillas</td>
+<td>Plantilla v2</td>
+</tr>
+<tr class="even">
+<td>16:25 · 5 min</td>
+<td><strong>Cierre</strong></td>
+<td>Repositorio personal y siguientes pasos</td>
+<td>Los 5 productos</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Al final hay un <strong>anexo</strong> con material de profundización: verificación de referencias, declaración de uso de IA, clasificación de datos y prompts adicionales. Queda para consultar después.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-1" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<h2></h2>
+<div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
+<p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 0 · 10 minutos</span></p>
+<p><span style="font-size:2.2em; font-weight:bold; color:white; margin-top:0.4em;">Encuadre y resguardos</span></p>
+<p><span style="font-size:0.95em; color:#C9A84C; margin-top:1.2em;">Integridad académica, fuentes, datos y autoría</span></p>
+</div>
+</section>
+<section id="objetivo-del-taller" class="slide level2">
+<h2>Objetivo del taller</h2>
+<div class="columns">
+<div class="column" style="width:58%;">
+<p><br></p>
+<p>Desarrollar competencias para utilizar IA generativa como apoyo en el <strong>proceso investigativo</strong> y en la <strong>automatización de tareas administrativas y académicas repetitivas</strong>.</p>
+<p>El uso debe resguardar:</p>
+<ul>
+<li>integridad académica;</li>
+<li>propiedad intelectual;</li>
+<li>protección de información institucional;</li>
+<li>trazabilidad de fuentes y decisiones;</li>
+<li>criterio profesional en la revisión de resultados.</li>
+</ul>
+</div><div class="column" style="width:42%;">
+<p><br></p>
+<div style="background:#0F2044; border-radius:10px; padding:1.4rem; color:white; font-size:0.78em;">
+  <div style="color:#C9A84C; font-size:1.1em; margin-bottom:1rem; text-align:center;">Flujo del taller</div>
+  <div style="background:#1A3A6B; padding:0.65rem; border-radius:6px; margin-bottom:0.55rem;">Explorar literatura</div>
+  <div style="background:#1A3A6B; padding:0.65rem; border-radius:6px; margin-bottom:0.55rem;">Analizar información</div>
+  <div style="background:#1A3A6B; padding:0.65rem; border-radius:6px; margin-bottom:0.55rem;">Redactar y revisar</div>
+  <div style="background:#274C77; padding:0.65rem; border-radius:6px; color:#C9A84C;">Automatizar con responsabilidad</div>
+</div>
+</div></div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>La IA puede acelerar partes del flujo de trabajo, pero no reemplaza la responsabilidad académica sobre el método, las fuentes, los datos ni las conclusiones.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="acuerdo-de-trabajo" class="slide level2">
+<h2>Acuerdo de trabajo</h2>
+<p><br></p>
+<p>Durante el taller vamos a usar IA como <strong>asistente de proceso</strong>, no como fuente incuestionable.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="sí">Sí</h3>
+<ul>
+<li>Usar IA para ordenar ideas y borradores.</li>
+<li>Pedir matrices comparativas de literatura.</li>
+<li>Revisar claridad de argumentos.</li>
+<li>Generar plantillas para tareas repetitivas.</li>
+<li>Pedir chequeos de consistencia y posibles sesgos.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="cuidado">Cuidado</h3>
+<ul>
+<li>Inventar citas o referencias.</li>
+<li>Subir datos sensibles o identificables.</li>
+<li>Delegar análisis metodológico crítico.</li>
+<li>Usar texto generado sin revisión ni atribución.</li>
+<li>Confundir síntesis automática con revisión sistemática.</li>
+</ul>
+</div></div>
+</section>
+<section id="ia-en-el-flujo-investigativo" class="slide level2">
+<h2>IA en el flujo investigativo</h2>
+<p><br></p>
+<p>La IA puede apoyar distintas etapas, pero cada una exige controles distintos.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Etapa</th>
+<th>Apoyo posible</th>
+<th>Control humano</th>
+<th>Riesgo si se omite</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Exploración</td>
+<td>Mapear temas, conceptos y palabras clave</td>
+<td>Verificar fuentes y alcance</td>
+<td>Sesgo de cobertura</td>
+</tr>
+<tr class="even">
+<td>Lectura</td>
+<td>Resumir artículos y extraer argumentos</td>
+<td>Revisar fidelidad al texto</td>
+<td>Atribución incorrecta</td>
+</tr>
+<tr class="odd">
+<td>Organización</td>
+<td>Crear matrices y mapas conceptuales</td>
+<td>Ajustar categorías teóricas</td>
+<td>Categorías vacías</td>
+</tr>
+<tr class="even">
+<td>Análisis</td>
+<td>Formular hipótesis y contrastes</td>
+<td>Validar método y evidencia</td>
+<td>Conclusiones infundadas</td>
+</tr>
+<tr class="odd">
+<td>Escritura</td>
+<td>Estructurar secciones y mejorar claridad</td>
+<td>Cuidar autoría, citas y tono</td>
+<td>Problemas de integridad</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="antes-de-escribir-el-primer-prompt" class="slide level2">
+<h2>Antes de escribir el primer prompt</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:25%;">
+<h3 id="integridad">Integridad</h3>
+<p>¿Estoy declarando uso de IA cuando corresponde?</p>
+</div><div class="column" style="width:25%;">
+<h3 id="fuentes">Fuentes</h3>
+<p>¿Cada cita, DOI o dato fue verificado en el original?</p>
+</div><div class="column" style="width:25%;">
+<h3 id="información">Información</h3>
+<p>¿Evité subir datos personales, sensibles o institucionales?</p>
+</div><div class="column" style="width:25%;">
+<h3 id="autoría">Autoría</h3>
+<p>¿El argumento y las decisiones académicas siguen siendo humanas?</p>
+</div></div>
+<p><br></p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p>Regla operativa para hoy: si un dato permitiría identificar a una persona, o si el documento es confidencial de la Universidad, <strong>no entra a la herramienta</strong>. Use un extracto anonimizado o un caso equivalente.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="qué-se-puede-subir-y-qué-no" class="slide level2">
+<h2>Qué se puede subir y qué no</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo de información</th>
+<th>Ejemplos</th>
+<th>Regla práctica</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Pública</strong></td>
+<td>Papers publicados, normativa pública, sus propias presentaciones</td>
+<td>Sin restricción</td>
+</tr>
+<tr class="even">
+<td><strong>Propia no publicada</strong></td>
+<td>Borradores, notas, código propio, ideas de proyecto</td>
+<td>Permitido; revise la política de privacidad de la herramienta</td>
+</tr>
+<tr class="odd">
+<td><strong>De terceros con licencia</strong></td>
+<td>PDFs de revistas suscritas</td>
+<td>Uso personal de lectura; no redistribuya el texto generado como si fuera el original</td>
+</tr>
+<tr class="even">
+<td><strong>Institucional interna</strong></td>
+<td>Actas, presupuestos, informes de gestión</td>
+<td>Solo con autorización; preferir versiones resumidas y anonimizadas</td>
+</tr>
+<tr class="odd">
+<td><strong>Personal o sensible</strong></td>
+<td>Nombres, RUT, notas, correos, datos de salud</td>
+<td><strong>No se sube.</strong> Sin excepciones prácticas</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Si duda, aplique la prueba del titular: <em>¿me incomodaría que este contenido apareciera mañana asociado a mi nombre?</em> Si la respuesta es sí, no lo suba.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="discusión-inicial-3-minutos" class="slide level2">
+<h2>Discusión inicial · 3 minutos</h2>
+<p><br></p>
+<p>Converse con quien tenga al lado:</p>
+<ol type="1">
+<li>¿Cuál es la tarea de investigación o gestión que más tiempo le consume cada semana?</li>
+<li>¿Cuánto de esa tarea es <strong>criterio profesional</strong> y cuánto es <strong>trabajo mecánico</strong>?</li>
+<li>Si pudiera automatizar solo una cosa este semestre, ¿cuál sería?</li>
+</ol>
+<p><br></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>La respuesta a la pregunta 3 es, muy probablemente, su Producto 4 del día, y el insumo de su grupo en la actividad colectiva. Anótela.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="section-2" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<h2></h2>
+<div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
+<p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 1 · 20 minutos</span></p>
+<p><span style="font-size:2.2em; font-weight:bold; color:white; margin-top:0.4em;">Literatura científica</span></p>
+<p><span style="font-size:0.95em; color:#C9A84C; margin-top:1.2em;">Buscar, sintetizar y organizar antecedentes</span></p>
+</div>
+</section>
+<section id="de-tengo-muchos-textos-a-entiendo-el-mapa" class="slide level2">
+<h2>De “tengo muchos textos” a “entiendo el mapa”</h2>
+<div class="columns">
+<div class="column" style="width:52%;">
+<p><br></p>
+<p>La IA es útil para ordenar lo que ya leyó o ya descargó. Puede ayudar a:</p>
+<ul>
+<li>proponer términos y sinónimos de búsqueda;</li>
+<li>resumir artículos <strong>cargados por usted</strong>;</li>
+<li>comparar enfoques metodológicos;</li>
+<li>extraer conceptos, preguntas y vacíos;</li>
+<li>organizar antecedentes en matrices;</li>
+<li>transformar notas dispersas en síntesis.</li>
+</ul>
+</div><div class="column" style="width:48%;">
+<p><br></p>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Advertencia</strong></p>
+</div>
+<div class="callout-content">
+<p>No use IA como única fuente bibliográfica. Los modelos pueden producir referencias falsas, mezclar autores o atribuir ideas de forma incorrecta.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Trabaje con PDFs, DOIs, citas reales o fragmentos verificables. Pida siempre separar <strong>lo que el texto dice</strong> de <strong>lo que la IA infiere</strong>.</p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="dos-formas-de-usar-ia-con-literatura" class="slide level2">
+<h2>Dos formas de usar IA con literatura</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="background:#FDEDEC; border-left:4px solid #E74C3C; border-radius:6px; padding:1rem 1.2rem; font-size:0.78em;">
+  <div style="color:#0F2044; font-weight:bold; margin-bottom:0.5rem;">Modo riesgoso · "Dime qué se ha publicado sobre X"</div>
+  El modelo responde de memoria. Puede inventar títulos, años, autores y DOIs que parecen correctos.
+  <br><br>
+  Resultado: bibliografía imposible de verificar.
+</div>
+</div><div class="column" style="width:50%;">
+<div style="background:#EAFAF1; border-left:4px solid #27AE60; border-radius:6px; padding:1rem 1.2rem; font-size:0.78em;">
+  <div style="color:#0F2044; font-weight:bold; margin-bottom:0.5rem;">Modo seguro · "Aquí están los textos: organízalos"</div>
+  Usted aporta PDFs, abstracts o fragmentos. El modelo compara, categoriza y sintetiza sobre material real.
+  <br><br>
+  Resultado: síntesis trazable a la fuente.
+</div>
+</div></div>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:20%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_openai.png" class="quarto-figure quarto-figure-center" style="width:34.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:20%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/logo_claude.png" class="quarto-figure quarto-figure-center" style="width:34.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:20%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/logo_notebooklm.png" class="quarto-figure quarto-figure-center" style="width:34.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:40%;">
+<p><span style="font-size:0.62em; color:#6B7A8D;">Para trabajo con documentos propios, las tres funcionan cargando archivos. La diferencia relevante no es el modelo: es si el material lo aporta usted o lo inventa la herramienta.</span></p>
+</div></div>
+<!-- Imagen sugerida (por crear): captura anonimizada de una sesión con 3 PDFs cargados
+     y la respuesta citando página/sección de cada uno → images/ia/literatura_pdfs.png -->
+</section>
+<section id="lo-que-la-ia-no-es" class="slide level2">
+<h2>Lo que la IA no es</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="una-búsqueda-bibliográfica">Una búsqueda bibliográfica</h3>
+<p>Un chat no reemplaza a Scopus, Web of Science o el catálogo institucional. No tiene cobertura sistemática, no documenta su estrategia de búsqueda y no es reproducible.</p>
+<p><strong>Sí sirve</strong> para preparar la búsqueda: sinónimos, términos en inglés, operadores, conceptos límite.</p>
+</div><div class="column" style="width:50%;">
+<h3 id="una-revisión-sistemática">Una revisión sistemática</h3>
+<p>Una revisión sistemática exige protocolo, criterios de inclusión y exclusión, cribado documentado y, muchas veces, doble revisor.</p>
+<p><strong>Sí sirve</strong> dentro del protocolo: extraer datos de artículos ya seleccionados a una matriz común.</p>
+</div></div>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p>La distinción práctica: la IA puede ayudar a <strong>procesar</strong> lo que usted encontró; no a <strong>encontrarlo</strong> ni a certificar que la cobertura fue completa.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="prompt-reutilizable-matriz-de-literatura" class="slide level2 prompt-slide">
+<h2>Prompt reutilizable · matriz de literatura</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a aria-label="1"></a>Actúa como asistente de investigación metodológicamente riguroso.</span>
+<span id="cb1-2"><a aria-label="2"></a></span>
+<span id="cb1-3"><a aria-label="3"></a>Contexto:</span>
+<span id="cb1-4"><a aria-label="4"></a>Estoy revisando literatura sobre [tema] en [disciplina].</span>
+<span id="cb1-5"><a aria-label="5"></a>Te entregaré resúmenes o fragmentos de artículos. Mi proyecto busca [objetivo].</span>
+<span id="cb1-6"><a aria-label="6"></a></span>
+<span id="cb1-7"><a aria-label="7"></a>Tarea:</span>
+<span id="cb1-8"><a aria-label="8"></a>Construye una matriz de síntesis para comparar los textos.</span>
+<span id="cb1-9"><a aria-label="9"></a></span>
+<span id="cb1-10"><a aria-label="10"></a>Criterios (no negociables):</span>
+<span id="cb1-11"><a aria-label="11"></a>- No inventes información que no esté en los fragmentos.</span>
+<span id="cb1-12"><a aria-label="12"></a>- Distingue explícitamente hallazgos reportados, metodología, limitaciones e inferencias tuyas.</span>
+<span id="cb1-13"><a aria-label="13"></a>- Marca "no indicado" cuando falte información: nunca completes por plausibilidad.</span>
+<span id="cb1-14"><a aria-label="14"></a>- Cita para cada celda la frase o sección del fragmento que la respalda.</span>
+<span id="cb1-15"><a aria-label="15"></a></span>
+<span id="cb1-16"><a aria-label="16"></a>Formato:</span>
+<span id="cb1-17"><a aria-label="17"></a>Tabla con columnas: autor/año · objetivo · método · muestra o datos ·</span>
+<span id="cb1-18"><a aria-label="18"></a>hallazgos · limitaciones · relación con mi proyecto · evidencia textual.</span>
+<span id="cb1-19"><a aria-label="19"></a></span>
+<span id="cb1-20"><a aria-label="20"></a>Al cerrar, agrega tres listas breves:</span>
+<span id="cb1-21"><a aria-label="21"></a>1. Coincidencias entre los textos.</span>
+<span id="cb1-22"><a aria-label="22"></a>2. Contradicciones o tensiones.</span>
+<span id="cb1-23"><a aria-label="23"></a>3. Vacíos que ninguno cubre y que mi proyecto podría abordar.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="actividad-1-su-matriz-de-literatura" class="slide level2">
+<h2>Actividad 1 · su matriz de literatura</h2>
+<div class="columns">
+<div class="column" style="width:62%;">
+<p><span class="tiempo"><strong>10 minutos</strong> · con material real de su área</span></p>
+<ol type="1">
+<li>Elija <strong>dos o tres</strong> abstracts, fragmentos o notas bibliográficas. <em>(1 min)</em></li>
+<li>Ejecute el prompt anterior en ChatGPT o Claude. <em>(3 min)</em></li>
+<li>Pida que identifique similitudes, diferencias y vacíos. <em>(1 min)</em></li>
+<li><strong>Audite</strong>: revise si cada afirmación está respaldada por el texto. Marque las que no. <em>(4 min)</em></li>
+<li>Ajuste la matriz para que sea útil en su proyecto real. <em>(1 min)</em></li>
+</ol>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>Una buena matriz no reemplaza la lectura. La hace más visible, ordenada y discutible.</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:38%;">
+<div class="producto-box">
+  <div class="producto-titulo">Producto 1</div>
+  <p><strong>Matriz de literatura verificada</strong></p>
+  <p>Con al menos una celda corregida por usted tras revisar la fuente original.</p>
+  <hr>
+  <div class="producto-titulo">Dato para discutir</div>
+  <p>¿Cuántas afirmaciones tuvo que corregir? Ese número es su tasa personal de verificación necesaria.</p>
+</div>
+</div></div>
+</section>
+<section id="section-3" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<h2></h2>
+<div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
+<p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 2 · 20 minutos</span></p>
+<p><span style="font-size:2.2em; font-weight:bold; color:white; margin-top:0.4em;">Análisis exploratorio de datos</span></p>
+<p><span style="font-size:0.95em; color:#C9A84C; margin-top:1.2em;">Mejores preguntas, no respuestas automáticas</span></p>
+</div>
+</section>
+<section id="por-qué-el-resumen-no-basta" class="slide level2">
+<h2>Por qué el resumen no basta</h2>
+<div class="columns">
+<div class="column" style="width:52%;">
+<p><br></p>
+<p>Los cuatro conjuntos del <strong>cuarteto de Anscombe</strong> tienen la misma media, la misma varianza, la misma correlación y la misma recta de regresión.</p>
+<p>Son radicalmente distintos.</p>
+<p>Una IA que solo recibe estadísticos descriptivos los describiría igual. Una que recibe el gráfico, o una persona que lo mira, no.</p>
+</div><div class="column" style="width:48%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/viz/canscombe_02.png" class="quarto-figure quarto-figure-center" style="width:94.0%"></p>
+</figure>
+</div>
+</div></div>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p>La IA apoya la <strong>interpretación</strong>; no reemplaza mirar los datos ni validar el método.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="dónde-ayuda-con-datos" class="slide level2">
+<h2>Dónde ayuda con datos</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="sí-ayuda">Sí ayuda</h3>
+<ul>
+<li>Sugerir variables y cruces a revisar.</li>
+<li>Proponer visualizaciones adecuadas.</li>
+<li>Escribir o depurar código de análisis.</li>
+<li>Detectar posibles inconsistencias.</li>
+<li>Redactar conclusiones cautelosas.</li>
+<li>Explicar resultados a audiencias no técnicas.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="no-conviene">No conviene</h3>
+<ul>
+<li>Subir bases con datos personales o institucionales.</li>
+<li>Aceptar interpretaciones causales sin diseño que las sustente.</li>
+<li>Delegar la elección del método.</li>
+<li>Reportar cifras que no volvió a calcular usted.</li>
+</ul>
+</div></div>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p>No suba bases con datos personales, sensibles o institucionales sin autorización y resguardos adecuados. En la mayoría de los casos basta con <strong>describir las variables</strong>, no con entregar los datos.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="pida-el-código-no-el-resultado" class="slide level2">
+<h2>Pida el código, no el resultado</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><br></p>
+<p>La forma más segura y más reproducible de usar IA con datos: <strong>no le entregue los datos, pídale el código</strong> que usted ejecuta localmente.</p>
+<p>Ventajas:</p>
+<ul>
+<li>los datos nunca salen de su equipo;</li>
+<li>el análisis queda documentado y repetible;</li>
+<li>usted ve exactamente qué se calculó;</li>
+<li>el error, si aparece, es inspeccionable.</li>
+</ul>
+</div><div class="column" style="width:52%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a aria-label="1"></a>Actúa como analista de datos. Escribe código en</span>
+<span id="cb2-2"><a aria-label="2"></a>[Python con pandas / R con tidyverse] que yo</span>
+<span id="cb2-3"><a aria-label="3"></a>ejecutaré localmente. No necesitas ver los datos.</span>
+<span id="cb2-4"><a aria-label="4"></a></span>
+<span id="cb2-5"><a aria-label="5"></a>Estructura del archivo:</span>
+<span id="cb2-6"><a aria-label="6"></a>- [columna]: [tipo y descripción]</span>
+<span id="cb2-7"><a aria-label="7"></a>- [columna]: [tipo y descripción]</span>
+<span id="cb2-8"><a aria-label="8"></a></span>
+<span id="cb2-9"><a aria-label="9"></a>Tarea:</span>
+<span id="cb2-10"><a aria-label="10"></a>Genera un análisis exploratorio que incluya:</span>
+<span id="cb2-11"><a aria-label="11"></a>1. revisión de valores faltantes y fuera de rango;</span>
+<span id="cb2-12"><a aria-label="12"></a>2. estadísticos descriptivos por grupo;</span>
+<span id="cb2-13"><a aria-label="13"></a>3. tres gráficos pertinentes, con el motivo de cada uno.</span>
+<span id="cb2-14"><a aria-label="14"></a></span>
+<span id="cb2-15"><a aria-label="15"></a>Condiciones:</span>
+<span id="cb2-16"><a aria-label="16"></a>- Comenta cada bloque explicando qué revisar en la salida.</span>
+<span id="cb2-17"><a aria-label="17"></a>- Advierte qué supuestos estás haciendo sobre los datos.</span>
+<span id="cb2-18"><a aria-label="18"></a>- No uses librerías que requieran instalación adicional.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div></div>
+</section>
+<section id="prompt-reutilizable-plan-de-análisis-exploratorio" class="slide level2 prompt-slide">
+<h2>Prompt reutilizable · plan de análisis exploratorio</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a aria-label="1"></a>Actúa como analista de datos académico, cauteloso con la inferencia.</span>
+<span id="cb3-2"><a aria-label="2"></a></span>
+<span id="cb3-3"><a aria-label="3"></a>Contexto:</span>
+<span id="cb3-4"><a aria-label="4"></a>Tengo una base de datos sobre [tema]. NO te entrego los datos, solo su estructura.</span>
+<span id="cb3-5"><a aria-label="5"></a>- Unidad de observación: [ ] · N aproximado: [ ] · Período: [ ]</span>
+<span id="cb3-6"><a aria-label="6"></a>- [variable 1]: [tipo, escala, descripción]</span>
+<span id="cb3-7"><a aria-label="7"></a>- [variable 2]: [tipo, escala, descripción]</span>
+<span id="cb3-8"><a aria-label="8"></a>- [variable 3]: [tipo, escala, descripción]</span>
+<span id="cb3-9"><a aria-label="9"></a>Mi pregunta de investigación es: [ ]</span>
+<span id="cb3-10"><a aria-label="10"></a></span>
+<span id="cb3-11"><a aria-label="11"></a>Tarea:</span>
+<span id="cb3-12"><a aria-label="12"></a>Propón un plan de análisis exploratorio inicial.</span>
+<span id="cb3-13"><a aria-label="13"></a></span>
+<span id="cb3-14"><a aria-label="14"></a>Condiciones:</span>
+<span id="cb3-15"><a aria-label="15"></a>- No asumas causalidad; señala cuándo una lectura causal sería tentadora pero indebida.</span>
+<span id="cb3-16"><a aria-label="16"></a>- Indica la visualización recomendada para cada pregunta y por qué esa y no otra.</span>
+<span id="cb3-17"><a aria-label="17"></a>- Señala posibles problemas de calidad de datos y cómo detectarlos.</span>
+<span id="cb3-18"><a aria-label="18"></a>- Sugiere preguntas interpretativas para discutir con el equipo.</span>
+<span id="cb3-19"><a aria-label="19"></a></span>
+<span id="cb3-20"><a aria-label="20"></a>Formato:</span>
+<span id="cb3-21"><a aria-label="21"></a>Tabla con: pregunta · variables · gráfico sugerido · qué observar · cautela interpretativa.</span>
+<span id="cb3-22"><a aria-label="22"></a></span>
+<span id="cb3-23"><a aria-label="23"></a>Al final, lista los tres supuestos que estás haciendo sobre mis datos</span>
+<span id="cb3-24"><a aria-label="24"></a>y que yo debería confirmar antes de usar este plan.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="actividad-2-preguntas-para-sus-datos" class="slide level2">
+<h2>Actividad 2 · preguntas para sus datos</h2>
+<div class="columns">
+<div class="column" style="width:62%;">
+<p><span class="tiempo"><strong>10 minutos</strong> · con datos reales anonimizados o un caso propio</span></p>
+<p>Con apoyo de IA:</p>
+<ol type="1">
+<li>genere <strong>cinco preguntas exploratorias</strong>; <em>(2 min)</em></li>
+<li>pida la <strong>visualización</strong> adecuada para cada una; <em>(2 min)</em></li>
+<li>solicite los <strong>riesgos de interpretación</strong> de cada gráfico; <em>(2 min)</em></li>
+<li>identifique qué <strong>información adicional</strong> sería necesaria; <em>(2 min)</em></li>
+<li>redacte una <strong>conclusión preliminar prudente</strong>. <em>(2 min)</em></li>
+</ol>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Prueba de estrés: pida a la IA que argumente la interpretación <strong>contraria</strong> a la que le propuso. Si ambas suenan igual de convincentes, todavía no tiene evidencia suficiente.</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:38%;">
+<div class="producto-box">
+  <div class="producto-titulo">Producto 2</div>
+  <p><strong>Plan de análisis exploratorio</strong></p>
+  <p>Cinco preguntas, sus gráficos y una cautela interpretativa por cada una.</p>
+  <hr>
+  <div class="producto-titulo">Nota</div>
+  <p>Este plan se discute con el equipo antes de ejecutarse. Ese es exactamente su valor.</p>
+</div>
+</div></div>
+</section>
+<section id="section-4" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<h2></h2>
+<div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
+<p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Pausa · 5 minutos</span></p>
+<p><span style="font-size:3.2em; font-weight:bold; color:white; margin-top:0.3em;">15:20</span></p>
+<p><span style="font-size:0.9em; color:#C9A84C; margin-top:1.2em;">Al volver: de los datos al texto.</span></p>
+</div>
+</section>
+<section id="section-5" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<h2></h2>
+<div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
+<p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 3 · 20 minutos</span></p>
+<p><span style="font-size:2.2em; font-weight:bold; color:white; margin-top:0.4em;">Redacción académica</span></p>
+<p><span style="font-size:0.95em; color:#C9A84C; margin-top:1.2em;">Estructurar papers, resúmenes y abstracts</span></p>
+</div>
+</section>
+<section id="escribir-con-ia-sin-dejar-de-ser-el-autor" class="slide level2">
+<h2>Escribir con IA sin dejar de ser el autor</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><br></p>
+<p>La IA mejora el proceso de escritura cuando se usa para <strong>estructurar, revisar y clarificar</strong>:</p>
+<ul>
+<li>convertir notas en esquema;</li>
+<li>revisar coherencia entre secciones;</li>
+<li>proponer títulos y subtítulos;</li>
+<li>ajustar tono académico;</li>
+<li>acortar resúmenes;</li>
+<li>traducir ideas manteniendo el sentido;</li>
+<li>detectar saltos argumentales.</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<div style="background:#0F2044; border-radius:10px; padding:1.3rem; color:white; font-size:0.76em;">
+  <div style="color:#C9A84C; text-align:center; margin-bottom:0.9rem;">Dónde está la línea</div>
+  <div style="background:#1A3A6B; padding:0.7rem; border-radius:6px; margin-bottom:0.5rem;">El <strong>argumento</strong> es suyo.</div>
+  <div style="background:#1A3A6B; padding:0.7rem; border-radius:6px; margin-bottom:0.5rem;">Las <strong>decisiones teóricas</strong> son suyas.</div>
+  <div style="background:#1A3A6B; padding:0.7rem; border-radius:6px; margin-bottom:0.5rem;">Las <strong>conclusiones</strong> son suyas.</div>
+  <div style="background:#274C77; padding:0.7rem; border-radius:6px; color:#C9A84C;">La <strong>forma</strong> se puede trabajar con apoyo.</div>
+</div>
+</div></div>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Advertencia</strong></p>
+</div>
+<div class="callout-content">
+<p>No delegue la autoría intelectual. Revise además la política de uso de IA de la revista, congreso o fondo al que vaya a postular: varía y suele exigir declaración explícita.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="dónde-ayuda-sección-por-sección" class="slide level2">
+<h2>Dónde ayuda, sección por sección</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Sección</th>
+<th>Apoyo que sí conviene</th>
+<th>Lo que debe seguir siendo suyo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Introducción</strong></td>
+<td>Ordenar el embudo: campo, brecha, pregunta</td>
+<td>La brecha que usted afirma que existe</td>
+</tr>
+<tr class="even">
+<td><strong>Marco teórico</strong></td>
+<td>Agrupar autores por enfoque, detectar repeticiones</td>
+<td>La posición teórica adoptada</td>
+</tr>
+<tr class="odd">
+<td><strong>Método</strong></td>
+<td>Redactar con precisión lo que ya decidió</td>
+<td>Todas las decisiones metodológicas</td>
+</tr>
+<tr class="even">
+<td><strong>Resultados</strong></td>
+<td>Convertir tablas en prosa, revisar consistencia numérica</td>
+<td>Las cifras, verificadas por usted</td>
+</tr>
+<tr class="odd">
+<td><strong>Discusión</strong></td>
+<td>Contrastar sus hallazgos con la literatura que le entregó</td>
+<td>La interpretación y sus límites</td>
+</tr>
+<tr class="even">
+<td><strong>Conclusión</strong></td>
+<td>Acortar, eliminar redundancia</td>
+<td>Qué se concluye y qué no</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>La regla se sostiene sola: la IA ayuda con <strong>lo que ya decidió</strong>; nunca con lo que aún falta decidir.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="prompt-reutilizable-abstract" class="slide level2 prompt-slide">
+<h2>Prompt reutilizable · abstract</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a aria-label="1"></a>Actúa como editor académico exigente de una revista indexada de [disciplina].</span>
+<span id="cb4-2"><a aria-label="2"></a></span>
+<span id="cb4-3"><a aria-label="3"></a>Contexto:</span>
+<span id="cb4-4"><a aria-label="4"></a>Estoy preparando un abstract para [artículo / ponencia / postulación a fondo].</span>
+<span id="cb4-5"><a aria-label="5"></a>Revista o congreso de destino: [ ] · Límite de palabras: [ ]</span>
+<span id="cb4-6"><a aria-label="6"></a></span>
+<span id="cb4-7"><a aria-label="7"></a>Información base (usa SOLO esto):</span>
+<span id="cb4-8"><a aria-label="8"></a>- Problema:</span>
+<span id="cb4-9"><a aria-label="9"></a>- Objetivo:</span>
+<span id="cb4-10"><a aria-label="10"></a>- Método:</span>
+<span id="cb4-11"><a aria-label="11"></a>- Datos o muestra:</span>
+<span id="cb4-12"><a aria-label="12"></a>- Resultados principales:</span>
+<span id="cb4-13"><a aria-label="13"></a>- Contribución:</span>
+<span id="cb4-14"><a aria-label="14"></a></span>
+<span id="cb4-15"><a aria-label="15"></a>Tarea:</span>
+<span id="cb4-16"><a aria-label="16"></a>Redacta un abstract de máximo [250] palabras.</span>
+<span id="cb4-17"><a aria-label="17"></a></span>
+<span id="cb4-18"><a aria-label="18"></a>Condiciones:</span>
+<span id="cb4-19"><a aria-label="19"></a>- Tono académico claro; una idea por oración.</span>
+<span id="cb4-20"><a aria-label="20"></a>- No agregues resultados, cifras ni implicancias que no estén en la información base.</span>
+<span id="cb4-21"><a aria-label="21"></a>- Entrega además una versión de 150 palabras.</span>
+<span id="cb4-22"><a aria-label="22"></a>- Propón tres títulos alternativos: uno descriptivo, uno con el hallazgo, uno con la contribución.</span>
+<span id="cb4-23"><a aria-label="23"></a></span>
+<span id="cb4-24"><a aria-label="24"></a>Control de calidad (inclúyelo al final):</span>
+<span id="cb4-25"><a aria-label="25"></a>1. Tres puntos que debería verificar antes de enviar.</span>
+<span id="cb4-26"><a aria-label="26"></a>2. Qué información falta en mi insumo y debilita el abstract.</span>
+<span id="cb4-27"><a aria-label="27"></a>3. La pregunta más incómoda que haría un revisor al leerlo.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="actividad-3-resumen-o-abstract" class="slide level2">
+<h2>Actividad 3 · resumen o abstract</h2>
+<div class="columns">
+<div class="column" style="width:62%;">
+<p><span class="tiempo"><strong>10 minutos</strong> · con un trabajo propio, aunque esté en curso</span></p>
+<p>Sobre una idea de artículo, proyecto, informe o ponencia, produzca:</p>
+<ol type="1">
+<li>un <strong>esquema de secciones</strong>; <em>(2 min)</em></li>
+<li>un <strong>resumen</strong> de 150 a 250 palabras; <em>(3 min)</em></li>
+<li><strong>tres títulos</strong> posibles; <em>(1 min)</em></li>
+<li>una lista de <strong>elementos faltantes</strong>; <em>(2 min)</em></li>
+<li>una <strong>revisión de coherencia</strong> entre objetivo, método y resultado. <em>(2 min)</em></li>
+</ol>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>Lea el abstract en voz alta. Si hay una frase que usted no defendería frente a un comité, reescríbala a mano antes de guardarla.</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:38%;">
+<div class="producto-box">
+  <div class="producto-titulo">Producto 3</div>
+  <p><strong>Abstract + checklist de verificación</strong></p>
+  <p>Dos versiones, tres títulos y su lista de tres cosas por verificar antes de enviar.</p>
+  <hr>
+  <div class="producto-titulo">Advertencia</div>
+  <p>Un abstract que suena bien y no dice qué se hizo es el error más frecuente al escribir con IA.</p>
+</div>
+</div></div>
+</section>
+<section id="section-6" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<h2></h2>
+<div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
+<p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 4 · 20 minutos</span></p>
+<p><span style="font-size:2.2em; font-weight:bold; color:white; margin-top:0.4em;">Automatización de tareas recurrentes</span></p>
+<p><span style="font-size:0.95em; color:#C9A84C; margin-top:1.2em;">Correos, informes y documentos de cada semana</span></p>
+</div>
+</section>
+<section id="de-tarea-repetida-a-plantilla-revisable" class="slide level2">
+<h2>De tarea repetida a plantilla revisable</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><br></p>
+<p>Muchas tareas académicas no son difíciles, pero consumen atención:</p>
+<ul>
+<li>correos recurrentes;</li>
+<li>minutas y actas;</li>
+<li>informes breves;</li>
+<li>respuestas a solicitudes;</li>
+<li>pautas de reunión;</li>
+<li>cronogramas;</li>
+<li>documentos con estructura estable.</li>
+</ul>
+<p>La clave es convertir la tarea repetida en una <strong>plantilla revisable</strong>, no escribir el mismo prompt otra vez.</p>
+</div><div class="column" style="width:45%;">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/proceso.png" class="quarto-figure quarto-figure-center" style="width:55.0%"></p>
+</figure>
+</div>
+<p><span style="font-size:0.62em; color:#6B7A8D; display:block; text-align:center;">Escribir el prompt una vez · reutilizarlo siempre · mejorarlo cuando falla</span></p>
+</div></div>
+</section>
+<section id="cuándo-vale-la-pena-automatizar" class="slide level2">
+<h2>Cuándo vale la pena automatizar</h2>
+<p><br></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Frecuencia</th>
+<th>Estructura</th>
+<th>¿Plantilla?</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Semanal o más</td>
+<td>Estable</td>
+<td><strong>Sí, prioritario</strong></td>
+<td>Correo de coordinación, minuta de reunión</td>
+</tr>
+<tr class="even">
+<td>Mensual</td>
+<td>Estable</td>
+<td>Sí</td>
+<td>Informe de avance, reporte a comité</td>
+</tr>
+<tr class="odd">
+<td>Ocasional</td>
+<td>Estable</td>
+<td>Conviene</td>
+<td>Carta de recomendación, respuesta a solicitud</td>
+</tr>
+<tr class="even">
+<td>Frecuente</td>
+<td>Muy variable</td>
+<td>Plantilla parcial</td>
+<td>Respuestas a estudiantes</td>
+</tr>
+<tr class="odd">
+<td>Única</td>
+<td>Variable</td>
+<td>No</td>
+<td>Documento excepcional</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Criterio simple: si en los últimos dos meses escribió <strong>tres veces</strong> algo parecido, es candidato a plantilla.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="anatomía-de-un-prompt-reutilizable" class="slide level2">
+<h2>Anatomía de un prompt reutilizable</h2>
+<p><br></p>
+<p>Un prompt reutilizable debe funcionar más de una vez sin depender de memoria o improvisación.</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Elemento</th>
+<th>Pregunta que responde</th>
+<th>Señal de que falta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Propósito</td>
+<td>¿Para qué tarea recurrente sirve?</td>
+<td>Lo usa una vez y lo olvida</td>
+</tr>
+<tr class="even">
+<td>Insumos</td>
+<td>¿Qué información debo completar siempre?</td>
+<td>Cada vez improvisa el contexto</td>
+</tr>
+<tr class="odd">
+<td>Criterios</td>
+<td>¿Qué reglas no debe romper?</td>
+<td>La respuesta inventa o se desvía</td>
+</tr>
+<tr class="even">
+<td>Salida</td>
+<td>¿En qué formato necesito el resultado?</td>
+<td>Reformatea a mano cada vez</td>
+</tr>
+<tr class="odd">
+<td>Revisión</td>
+<td>¿Qué debe preguntarme o advertirme antes de cerrar?</td>
+<td>Descubre los errores al final</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="prompt-reutilizable-correo-o-informe" class="slide level2 prompt-slide">
+<h2>Prompt reutilizable · correo o informe</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a aria-label="1"></a>Actúa como asistente administrativo académico.</span>
+<span id="cb5-2"><a aria-label="2"></a></span>
+<span id="cb5-3"><a aria-label="3"></a>Contexto:</span>
+<span id="cb5-4"><a aria-label="4"></a>Necesito redactar [correo / informe breve / minuta] para [destinatario y su rol]</span>
+<span id="cb5-5"><a aria-label="5"></a>sobre [tema]. Relación previa: [formal / cercana]. Urgencia: [ ].</span>
+<span id="cb5-6"><a aria-label="6"></a></span>
+<span id="cb5-7"><a aria-label="7"></a>Información obligatoria (si falta alguna, pregúntame antes de redactar):</span>
+<span id="cb5-8"><a aria-label="8"></a>- Propósito:</span>
+<span id="cb5-9"><a aria-label="9"></a>- Fecha límite:</span>
+<span id="cb5-10"><a aria-label="10"></a>- Documentos adjuntos:</span>
+<span id="cb5-11"><a aria-label="11"></a>- Acción esperada del destinatario:</span>
+<span id="cb5-12"><a aria-label="12"></a>- Tono:</span>
+<span id="cb5-13"><a aria-label="13"></a></span>
+<span id="cb5-14"><a aria-label="14"></a>Tarea:</span>
+<span id="cb5-15"><a aria-label="15"></a>Redacta el texto de forma clara, breve y formal.</span>
+<span id="cb5-16"><a aria-label="16"></a></span>
+<span id="cb5-17"><a aria-label="17"></a>Condiciones:</span>
+<span id="cb5-18"><a aria-label="18"></a>- No inventes datos, fechas, cargos ni compromisos.</span>
+<span id="cb5-19"><a aria-label="19"></a>- Incluye asunto y una versión más breve (máximo 5 líneas).</span>
+<span id="cb5-20"><a aria-label="20"></a>- Deja entre [corchetes] cualquier dato que yo deba completar.</span>
+<span id="cb5-21"><a aria-label="21"></a>- Señala si falta información crítica antes de enviarlo.</span>
+<span id="cb5-22"><a aria-label="22"></a>- Si el mensaje comunica una negativa o un plazo incómodo, dilo con claridad</span>
+<span id="cb5-23"><a aria-label="23"></a>  en las primeras dos líneas: no lo entierres al final.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="actividad-4-su-plantilla-de-productividad" class="slide level2">
+<h2>Actividad 4 · su plantilla de productividad</h2>
+<div class="columns">
+<div class="column" style="width:62%;">
+<p><span class="tiempo"><strong>10 minutos</strong> · sobre la tarea que anotó al inicio</span></p>
+<ol type="1">
+<li>Tome la tarea que identificó en la discusión inicial. <em>(1 min)</em></li>
+<li>Escriba la plantilla con la estructura de cinco elementos. <em>(3 min)</em></li>
+<li><strong>Pruébela</strong> con un caso real o simulado. <em>(2 min)</em></li>
+<li>Anote qué falló y <strong>corrija la plantilla</strong>, no la respuesta. <em>(3 min)</em></li>
+<li>Guárdela con un nombre que le permita encontrarla en tres meses. <em>(1 min)</em></li>
+</ol>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p>El paso 4 es el que la mayoría se salta y el que convierte un prompt en herramienta. Corregir la respuesta ahorra cinco minutos; corregir la plantilla ahorra cinco horas.</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:38%;">
+<div class="producto-box">
+  <div class="producto-titulo">Producto 4</div>
+  <p><strong>Plantilla reutilizable probada</strong></p>
+  <p>Con al menos una iteración de corrección después de probarla.</p>
+  <hr>
+  <div class="producto-titulo">Meta realista</div>
+  <p>Tres plantillas bien hechas cubren buena parte del trabajo administrativo de un semestre.</p>
+</div>
+</div></div>
+</section>
+<section id="section-7" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<h2></h2>
+<div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
+<p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 5 · 20 minutos</span></p>
+<p><span style="font-size:2.2em; font-weight:bold; color:white; margin-top:0.4em;">Prueba cruzada de plantillas</span></p>
+<p><span style="font-size:0.95em; color:#C9A84C; margin-top:1.2em;">Actividad colectiva · grupos de 4 o 5 personas</span></p>
+<p><span style="font-size:0.8em; color:#D9E2EC; margin-top:0.8em;">Una plantilla sirve cuando funciona en manos de otro.</span></p>
+</div>
+</section>
+<section id="actividad-colectiva-en-qué-consiste" class="slide level2">
+<h2>Actividad colectiva · en qué consiste</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p><span class="tiempo"><strong>20 minutos</strong> · grupos de 4 o 5, de preferencia por unidad o afinidad de tarea</span></p>
+<p>Cada grupo construye una plantilla para una tarea recurrente compartida. Luego la <strong>intercambia</strong> con otro grupo, que la ejecuta con un caso propio e intenta hacerla fallar.</p>
+<p><strong>Fases</strong></p>
+<ul>
+<li><strong>7 min</strong> · <strong>Construir.</strong> El grupo redacta la plantilla con los cinco elementos.</li>
+<li><strong>7 min</strong> · <strong>Romper.</strong> Intercambio: cada grupo ejecuta la plantilla ajena con un caso distinto y anota dónde falla.</li>
+<li><strong>6 min</strong> · <strong>Devolver y cerrar.</strong> Cada grupo recibe su plantilla con dos mejoras concretas y produce la versión 2.</li>
+</ul>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p>No se trata de criticar la redacción. Se trata de encontrar <strong>el caso que la plantilla no previó</strong>: el dato que faltaba, el formato que no sirve, la invención que nadie pidió.</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="producto-box">
+  <div class="producto-titulo">Producto 5 · grupal</div>
+  <p><strong>Plantilla v2</strong></p>
+  <p>Una plantilla compartida, probada por gente que no la escribió y corregida con esa evidencia.</p>
+  <hr>
+  <div class="producto-titulo">Por qué cruzada</div>
+  <p>Quien escribe una plantilla conoce el contexto que omitió. Quien la recibe, no: por eso encuentra en dos minutos lo que el autor no vería en un mes.</p>
+</div>
+</div></div>
+</section>
+<section id="roles-dentro-del-grupo" class="slide level2">
+<h2>Roles dentro del grupo</h2>
+<p><br></p>
+<div style="display:grid; grid-template-columns:repeat(4,1fr); gap:1rem;">
+  <div class="kit-card"><span class="kit-num">A</span><strong>Redactor</strong>Escribe la plantilla con los cinco elementos y la deja legible para otro grupo.</div>
+  <div class="kit-card"><span class="kit-num">B</span><strong>Ejecutor</strong>En la fase de ruptura, corre la plantilla ajena con un caso real del propio grupo.</div>
+  <div class="kit-card"><span class="kit-num">C</span><strong>Auditor de riesgos</strong>Revisa datos sensibles, invenciones y afirmaciones sin respaldo. Tiene derecho a veto.</div>
+  <div class="kit-card"><span class="kit-num">D</span><strong>Vocero</strong>Reporta en 60 segundos: qué falló en la plantilla ajena y qué mejora propone.</div>
+</div>
+<p><br></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Con cinco integrantes, el quinto rol es el más divertido: <strong>usuario apurado</strong>. Ejecuta la plantilla sin leerla completa, tal como se usará un martes a las 8 de la mañana. Si sobrevive a eso, sirve.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="fase-1-qué-debe-contener-la-plantilla" class="slide level2">
+<h2>Fase 1 · qué debe contener la plantilla</h2>
+<p><br></p>
+<table class="caption-top" style="width:100%; font-size:0.72em; border-collapse:collapse;">
+<tbody>
+<tr class="odd" style="background:#0F2044; color:white;">
+<th data-quarto-table-cell-role="th" style="text-align: left; padding: 0.5rem; width: 18%;">Elemento</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; padding: 0.5rem; width: 46%;">Qué escribir</th>
+<th data-quarto-table-cell-role="th" style="text-align: left; padding: 0.5rem; width: 36%;">Error típico</th>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding: 0.45rem; border-bottom: 1px solid #D5DCE4;"><strong>Propósito</strong></td>
+<td style="text-align: left; padding: 0.45rem; border-bottom: 1px solid #D5DCE4;">La tarea recurrente, en una línea, con su frecuencia.</td>
+<td style="text-align: left; padding: 0.45rem; border-bottom: 1px solid #D5DCE4;">Tan amplio que sirve para todo y para nada.</td>
+</tr>
+<tr class="odd" style="background:#F0F4F8;">
+<td style="text-align: left; padding: 0.45rem; border-bottom: 1px solid #D5DCE4;"><strong>Insumos</strong></td>
+<td style="text-align: left; padding: 0.45rem; border-bottom: 1px solid #D5DCE4;">Los campos que siempre hay que completar, con ejemplo.</td>
+<td style="text-align: left; padding: 0.45rem; border-bottom: 1px solid #D5DCE4;">Faltan los que el autor completa "de memoria".</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding: 0.45rem; border-bottom: 1px solid #D5DCE4;"><strong>Criterios</strong></td>
+<td style="text-align: left; padding: 0.45rem; border-bottom: 1px solid #D5DCE4;">Las reglas que no puede romper, incluida la de no inventar.</td>
+<td style="text-align: left; padding: 0.45rem; border-bottom: 1px solid #D5DCE4;">Se asume el tono institucional sin declararlo.</td>
+</tr>
+<tr class="odd" style="background:#F0F4F8;">
+<td style="text-align: left; padding: 0.45rem; border-bottom: 1px solid #D5DCE4;"><strong>Salida</strong></td>
+<td style="text-align: left; padding: 0.45rem; border-bottom: 1px solid #D5DCE4;">Formato exacto, extensión y secciones.</td>
+<td style="text-align: left; padding: 0.45rem; border-bottom: 1px solid #D5DCE4;">"Que quede bien redactado".</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding: 0.45rem;"><strong>Revisión</strong></td>
+<td style="text-align: left; padding: 0.45rem;">Qué debe preguntar o advertir antes de cerrar.</td>
+<td style="text-align: left; padding: 0.45rem;">No se pide nada: los vacíos se rellenan solos.</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>Tareas candidatas: minuta de reunión de unidad · informe de avance de proyecto · respuesta a solicitud de estudiantes · convocatoria y acta de comité · resumen ejecutivo para autoridades · reporte mensual de indicadores.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="fase-2-cómo-romper-una-plantilla-ajena" class="slide level2">
+<h2>Fase 2 · cómo romper una plantilla ajena</h2>
+<p><br></p>
+<p>Ejecútela con un caso <strong>suyo</strong>, no con el que imaginó el autor. Busque estos cinco puntos de quiebre:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>1 · El insumo que no existe</strong> Un campo obligatorio que en su realidad nadie tiene a mano.</p>
+<p><strong>2 · El supuesto oculto</strong> Contexto que el autor daba por evidente y usted no comparte.</p>
+<p><strong>3 · La invención</strong> Cualquier dato, fecha o compromiso que el modelo agregó por su cuenta.</p>
+</div><div class="column" style="width:50%;">
+<p><strong>4 · El formato que no sirve</strong> La salida es correcta pero hay que reformatearla igual antes de usarla.</p>
+<p><strong>5 · El riesgo no advertido</strong> La plantilla induce a pegar información sensible sin decir nada al respecto.</p>
+</div></div>
+<p><br></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Anote los hallazgos como <strong>frases que faltaban en la plantilla</strong>, no como críticas. La devolución debe poder pegarse directamente en el prompt.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="fase-3-devolución-y-versión-2" class="slide level2">
+<h2>Fase 3 · devolución y versión 2</h2>
+<p><br></p>
+<p>Cada grupo recibe su plantilla de vuelta y, en voz alta, el vocero del otro grupo entrega:</p>
+<div class="columns">
+<div class="column" style="width:33%;">
+<h3 id="dónde-falló">1 · Dónde falló</h3>
+<p>El caso concreto que la plantilla no resistió, sin rodeos.</p>
+</div><div class="column" style="width:33%;">
+<h3 id="qué-línea-agregar">2 · Qué línea agregar</h3>
+<p>Una frase exacta, lista para pegar en el prompt.</p>
+</div><div class="column" style="width:33%;">
+<h3 id="qué-conservar">3 · Qué conservar</h3>
+<p>Lo que funcionó bien y no debería tocarse en la versión 2.</p>
+</div></div>
+<p><br></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>Con eso, cada grupo escribe la <strong>versión 2</strong> y la guarda. Es el único producto del taller que fue probado por alguien distinto de quien lo escribió, y por eso es el más sólido.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="prompt-maestro-reutilizable" class="slide level2 prompt-slide">
+<h2>Prompt maestro reutilizable</h2>
+<p>Base para la fase 1. Complételo con el contexto del grupo.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a aria-label="1"></a>Actúa como [rol experto].</span>
+<span id="cb6-2"><a aria-label="2"></a></span>
+<span id="cb6-3"><a aria-label="3"></a>Voy a usar este prompt de forma recurrente para [tarea], con frecuencia [ ].</span>
+<span id="cb6-4"><a aria-label="4"></a></span>
+<span id="cb6-5"><a aria-label="5"></a>Insumos que entregaré:</span>
+<span id="cb6-6"><a aria-label="6"></a>- [insumo 1]</span>
+<span id="cb6-7"><a aria-label="7"></a>- [insumo 2]</span>
+<span id="cb6-8"><a aria-label="8"></a>- [insumo 3]</span>
+<span id="cb6-9"><a aria-label="9"></a></span>
+<span id="cb6-10"><a aria-label="10"></a>Tu tarea:</span>
+<span id="cb6-11"><a aria-label="11"></a>[acción concreta].</span>
+<span id="cb6-12"><a aria-label="12"></a></span>
+<span id="cb6-13"><a aria-label="13"></a>Reglas:</span>
+<span id="cb6-14"><a aria-label="14"></a>- No inventes información.</span>
+<span id="cb6-15"><a aria-label="15"></a>- Si falta un dato esencial, pregunta antes de responder.</span>
+<span id="cb6-16"><a aria-label="16"></a>- Separa hechos, inferencias y recomendaciones.</span>
+<span id="cb6-17"><a aria-label="17"></a>- Mantén confidencialidad: no solicites datos personales innecesarios.</span>
+<span id="cb6-18"><a aria-label="18"></a>- Deja entre [corchetes] todo lo que yo deba completar o verificar.</span>
+<span id="cb6-19"><a aria-label="19"></a></span>
+<span id="cb6-20"><a aria-label="20"></a>Formato:</span>
+<span id="cb6-21"><a aria-label="21"></a>[tabla / correo / informe / lista / plantilla], con [secciones y extensión].</span>
+<span id="cb6-22"><a aria-label="22"></a></span>
+<span id="cb6-23"><a aria-label="23"></a>Control de calidad:</span>
+<span id="cb6-24"><a aria-label="24"></a>Al final incluye una lista breve de aspectos que debo revisar manualmente</span>
+<span id="cb6-25"><a aria-label="25"></a>antes de usar este resultado.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="section-8" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<h2></h2>
+<div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
+<p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Cierre · 5 minutos</span></p>
+<p><span style="font-size:2.2em; font-weight:bold; color:white; margin-top:0.4em;">Su repositorio de prompts</span></p>
+<p><span style="font-size:0.95em; color:#C9A84C; margin-top:1.2em;">Cómo convertir cinco productos en un sistema de trabajo</span></p>
+</div>
+</section>
+<section id="cómo-organizarlo-para-que-sobreviva-al-semestre" class="slide level2">
+<h2>Cómo organizarlo para que sobreviva al semestre</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br></p>
+<p><strong>Un solo documento</strong>, con una sección por tarea:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a aria-label="1"></a>01_literatura_matriz</span>
+<span id="cb7-2"><a aria-label="2"></a>02_analisis_exploratorio</span>
+<span id="cb7-3"><a aria-label="3"></a>03_abstract</span>
+<span id="cb7-4"><a aria-label="4"></a>04_correo_coordinacion</span>
+<span id="cb7-5"><a aria-label="5"></a>05_informe_avance</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Para cada uno anote tres cosas:</p>
+<ul>
+<li><strong>cuándo</strong> lo usa;</li>
+<li><strong>qué falló</strong> la última vez;</li>
+<li><strong>qué versión</strong> es la buena.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><br></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Regla de mantención: cada vez que tenga que corregir mucho una respuesta, vuelva a la plantilla y agregue una línea de criterio. En dos o tres iteraciones el prompt deja de fallar en ese punto.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>Si su equipo o unidad repite las mismas tareas, compartir el repositorio multiplica el efecto y homogeniza la calidad de lo que se produce. La actividad de hoy fue exactamente el ensayo de eso.</p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="reflexión-final-3-minutos" class="slide level2">
+<h2>Reflexión final · 3 minutos</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>Discutan brevemente:</p>
+<ol type="1">
+<li>¿Qué tarea de su semana quedó realmente resuelta con lo de hoy?</li>
+<li>¿Dónde decidió <strong>no</strong> usar IA, y por qué esa decisión también es un resultado?</li>
+<li>¿Qué necesitaría su unidad para que esto sea práctica compartida y no esfuerzo individual?</li>
+</ol>
+<p><br></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>El objetivo no es usar IA para todo. Es diseñar flujos donde la IA aporte velocidad, estructura y claridad sin sacrificar rigor.</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/ai/choice.jpeg" class="quarto-figure quarto-figure-center" style="width:82.0%"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section id="cierre-el-kit-del-taller" class="slide level2">
+<h2>Cierre · el kit del taller</h2>
+<p><br></p>
+<div style="display:grid; grid-template-columns:repeat(5,1fr); gap:0.8rem;">
+  <div class="kit-card"><span class="kit-num">1</span><strong>Matriz de literatura</strong>Verificada contra las fuentes originales.</div>
+  <div class="kit-card"><span class="kit-num">2</span><strong>Plan de análisis</strong>Preguntas, gráficos y cautelas interpretativas.</div>
+  <div class="kit-card"><span class="kit-num">3</span><strong>Abstract + checklist</strong>Dos versiones y su lista previa al envío.</div>
+  <div class="kit-card"><span class="kit-num">4</span><strong>Plantilla reutilizable</strong>Probada y corregida al menos una vez.</div>
+  <div class="kit-card kit-card--grupo"><span class="kit-num">5</span><strong>Plantilla v2</strong>Rota y reparada por otro grupo.</div>
+</div>
+<p><br></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Súmelos al documento del Taller 1: junto con el prompt maestro, la meta observable, la rúbrica, la retroalimentación y el lienzo de alineación, ya tiene <strong>diez piezas</strong> de un flujo de trabajo propio.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="aprendizaje-esperado" class="slide level2">
+<h2>Aprendizaje esperado</h2>
+<p><br></p>
+<p>Al finalizar este taller, los participantes serán capaces de:</p>
+<ul>
+<li>integrar IA generativa en su flujo de trabajo investigativo;</li>
+<li>organizar literatura científica mediante matrices verificables;</li>
+<li>apoyar análisis exploratorio de datos sin perder cautela metodológica;</li>
+<li>estructurar papers, resúmenes y abstracts;</li>
+<li>automatizar correos, informes y documentos recurrentes;</li>
+<li>crear plantillas y prompts reutilizables para tareas frecuentes;</li>
+<li>optimizar tiempo y calidad con criterios de uso responsable.</li>
+</ul>
+</section>
+<section id="section-9" class="slide level2" data-background-color="#1A3A6B" data-state="no-logo">
+<h2></h2>
+<div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
+<p><span style="font-size:0.9em; color:#C9A84C; text-transform:uppercase; letter-spacing:0.15em;">Anexo</span></p>
+<p><span style="font-size:2.2em; font-weight:bold; color:white; margin-top:0.4em;">Material de profundización</span></p>
+<p><span style="font-size:0.9em; color:#D9E2EC; margin-top:1.2em;">Verificación de fuentes · declaración de uso · prompts adicionales</span></p>
+</div>
+</section>
+<section id="anexo-verificar-una-referencia-en-60-segundos" class="slide level2">
+<h2>Anexo · verificar una referencia en 60 segundos</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p>Cuatro pasos, en este orden. Si falla el primero, no siga: la referencia no existe.</p>
+<ol type="1">
+<li><strong>Título entre comillas</strong> en el buscador académico. Si no aparece exacto, sospeche.</li>
+<li><strong>DOI</strong> en <code>doi.org</code>. Un DOI inventado no resuelve o lleva a otro artículo.</li>
+<li><strong>Revista y año</strong>: verifique que el volumen y número existan y correspondan.</li>
+<li><strong>Contenido</strong>: abra el artículo y confirme que dice lo que la IA afirmó que dice.</li>
+</ol>
+</div><div class="column" style="width:45%;">
+<p><br></p>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Advertencia</strong></p>
+</div>
+<div class="callout-content">
+<p>El error más costoso no es la referencia inventada: es la <strong>referencia real que no dice lo que se le atribuye</strong>. Pasa los tres primeros filtros y solo se detecta leyendo.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Gestione todo en su gestor bibliográfico. Si una referencia no puede importarse desde la fuente, todavía no está verificada.</p>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="anexo-declaración-de-uso-de-ia" class="slide level2 prompt-slide">
+<h2>Anexo · declaración de uso de IA</h2>
+<p>Formulaciones para adaptar según lo que exija la revista, el congreso o el fondo.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a aria-label="1"></a>USO ACOTADO A LA FORMA</span>
+<span id="cb8-2"><a aria-label="2"></a>"Durante la preparación de este trabajo se utilizó [herramienta] para</span>
+<span id="cb8-3"><a aria-label="3"></a>apoyar la edición de estilo y la revisión de redacción. Los autores</span>
+<span id="cb8-4"><a aria-label="4"></a>revisaron y editaron el contenido y asumen plena responsabilidad por</span>
+<span id="cb8-5"><a aria-label="5"></a>el contenido de la publicación."</span>
+<span id="cb8-6"><a aria-label="6"></a></span>
+<span id="cb8-7"><a aria-label="7"></a>USO EN ORGANIZACIÓN DE MATERIAL</span>
+<span id="cb8-8"><a aria-label="8"></a>"Se utilizó [herramienta] para apoyar la organización y síntesis de la</span>
+<span id="cb8-9"><a aria-label="9"></a>literatura previamente seleccionada por los autores. Todas las fuentes</span>
+<span id="cb8-10"><a aria-label="10"></a>citadas fueron verificadas en su versión original. El análisis, la</span>
+<span id="cb8-11"><a aria-label="11"></a>interpretación y las conclusiones son responsabilidad de los autores."</span>
+<span id="cb8-12"><a aria-label="12"></a></span>
+<span id="cb8-13"><a aria-label="13"></a>USO EN CÓDIGO O ANÁLISIS</span>
+<span id="cb8-14"><a aria-label="14"></a>"Se utilizó [herramienta] como apoyo en la escritura y depuración del</span>
+<span id="cb8-15"><a aria-label="15"></a>código de análisis. Los resultados fueron reproducidos y validados por</span>
+<span id="cb8-16"><a aria-label="16"></a>los autores. Los datos no fueron compartidos con la herramienta."</span>
+<span id="cb8-17"><a aria-label="17"></a></span>
+<span id="cb8-18"><a aria-label="18"></a>NOTA</span>
+<span id="cb8-19"><a aria-label="19"></a>La IA generativa no puede figurar como autora: no puede asumir</span>
+<span id="cb8-20"><a aria-label="20"></a>responsabilidad sobre el contenido ni aprobar la versión final.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="anexo-errores-frecuentes-en-investigación" class="slide level2">
+<h2>Anexo · errores frecuentes en investigación</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>1 · Pedir bibliografía en vez de aportarla</strong> Es la vía más rápida a una referencia inventada.</p>
+<p><strong>2 · Confundir resumen con lectura</strong> El resumen es un mapa. Las decisiones metodológicas se toman leyendo.</p>
+<p><strong>3 · Subir la base “solo para probar”</strong> Una vez subida, no se puede deshacer.</p>
+</div><div class="column" style="width:50%;">
+<p><strong>4 · Aceptar el lenguaje causal</strong> “Se asocia con” y “produce” no son lo mismo, y el modelo desliza el segundo con facilidad.</p>
+<p><strong>5 · No declarar cuando correspondía</strong> Es más fácil declarar de más que explicar después por qué no se declaró.</p>
+</div></div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>El error transversal: usar IA para producir más texto, cuando el problema real casi siempre es tener más claro el argumento.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="anexo-tres-prompts-adicionales" class="slide level2">
+<h2>Anexo · tres prompts adicionales</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<h3 id="revisor-adversarial">Revisor adversarial</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a aria-label="1"></a>Actúa como revisor par escéptico</span>
+<span id="cb9-2"><a aria-label="2"></a>de [revista/disciplina].</span>
+<span id="cb9-3"><a aria-label="3"></a></span>
+<span id="cb9-4"><a aria-label="4"></a>Lee este texto y escribe las 5</span>
+<span id="cb9-5"><a aria-label="5"></a>objeciones más fuertes que harías,</span>
+<span id="cb9-6"><a aria-label="6"></a>ordenadas por gravedad.</span>
+<span id="cb9-7"><a aria-label="7"></a></span>
+<span id="cb9-8"><a aria-label="8"></a>Para cada una indica qué evidencia</span>
+<span id="cb9-9"><a aria-label="9"></a>adicional la desactivaría.</span>
+<span id="cb9-10"><a aria-label="10"></a></span>
+<span id="cb9-11"><a aria-label="11"></a>No hagas elogios.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:33%;">
+<h3 id="resumen-para-no-expertos">Resumen para no expertos</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a aria-label="1"></a>Explica este resultado a</span>
+<span id="cb10-2"><a aria-label="2"></a>[autoridad / estudiante / prensa].</span>
+<span id="cb10-3"><a aria-label="3"></a></span>
+<span id="cb10-4"><a aria-label="4"></a>Condiciones:</span>
+<span id="cb10-5"><a aria-label="5"></a>- máximo 150 palabras;</span>
+<span id="cb10-6"><a aria-label="6"></a>- sin tecnicismos sin definir;</span>
+<span id="cb10-7"><a aria-label="7"></a>- una analogía concreta;</span>
+<span id="cb10-8"><a aria-label="8"></a>- señala explícitamente qué NO</span>
+<span id="cb10-9"><a aria-label="9"></a>  se puede concluir.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:33%;">
+<h3 id="minuta-de-reunión">Minuta de reunión</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a aria-label="1"></a>Convierte estas notas en minuta:</span>
+<span id="cb11-2"><a aria-label="2"></a></span>
+<span id="cb11-3"><a aria-label="3"></a>[pegar notas]</span>
+<span id="cb11-4"><a aria-label="4"></a></span>
+<span id="cb11-5"><a aria-label="5"></a>Formato:</span>
+<span id="cb11-6"><a aria-label="6"></a>- acuerdos (con responsable y plazo);</span>
+<span id="cb11-7"><a aria-label="7"></a>- temas pendientes;</span>
+<span id="cb11-8"><a aria-label="8"></a>- decisiones que requieren</span>
+<span id="cb11-9"><a aria-label="9"></a>  aprobación superior.</span>
+<span id="cb11-10"><a aria-label="10"></a></span>
+<span id="cb11-11"><a aria-label="11"></a>Marca [!] donde falte responsable</span>
+<span id="cb11-12"><a aria-label="12"></a>o plazo. No inventes ninguno.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div></div>
+</section>
+<section id="section-10" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<h2></h2>
+<div style="display:flex; justify-content:center; align-items:center; height:72vh; flex-direction:column; text-align:center;">
+<p><span style="font-size:0.85em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Programa de Talleres de Inteligencia Artificial Generativa</span></p>
+<p><span style="font-size:2.6em; font-weight:bold; color:white; margin-top:0.4em;">Gracias</span></p>
+<p><span style="font-size:0.85em; color:#D9E2EC; margin-top:1.4em; max-width:1000px;">El siguiente paso no es aprender más herramientas. Es usar tres plantillas durante un mes y corregirlas cuando fallen.</span></p>
+<p><span style="font-size:0.75em; color:#C9A84C; margin-top:1.8em;">Universidad Técnica Federico Santa María · Agosto 2026</span></p>
+</div>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="images/usm.png" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 800,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copiado");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copiado");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/falfaro\.xyz\/talks\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <input type="hidden" id="giscus-base-theme" value="light">
+    <input type="hidden" id="giscus-alt-theme" value="dark">
+    <script>
+      function loadGiscus() {
+        // Function to get the theme based on body class
+        const getTheme = () => {
+          let baseTheme = document.getElementById('giscus-base-theme').value;
+          let altTheme = document.getElementById('giscus-alt-theme').value;
+          return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+        };
+        const script = document.createElement("script");
+        script.src = "https://giscus.app/client.js";
+        script.async = true;
+        script.dataset.repo = "Seth-Nut/talks";
+        script.dataset.repoId = "R_kgDOM_kl2g";
+        script.dataset.category = "General";
+        script.dataset.categoryId = "DIC_kwDOM_kl2s4CjYAh";
+        script.dataset.mapping = "title";
+        script.dataset.reactionsEnabled = "1";
+        script.dataset.emitMetadata = "0";
+        script.dataset.inputPosition = "top";
+        script.dataset.theme = getTheme();
+        script.dataset.lang = "en";
+        script.crossOrigin = "anonymous";
+        // Append the script to the desired div instead of at the end of the body
+        document.getElementById("quarto-content").appendChild(script);
+      }
+      loadGiscus();
+    </script>
+    
+
+</body></html>

@@ -7,8 +7,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Francisco Alfaro Medina">
   <title>Talks – Herramientas Digitales para la Docencia</title>
@@ -21,10 +21,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -203,7 +206,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Francisco Alfaro Medina 
+Francisco Alfaro Medina
 </div>
         <p class="quarto-title-affiliation">
             Dirección de Transformación Digital · UTFSM
@@ -211,7 +214,7 @@ Francisco Alfaro Medina
     </div>
 </div>
 
-  <p class="date">junio 2026</p>
+  <p class="date">julio 2026</p>
 </section>
 <section id="section" class="slide level2 title-slide center" data-background-color="#0F2044">
 <h2></h2>
@@ -544,10 +547,10 @@ Unidad de Educación a Distancia · 2026</p>
 <p><strong>Un <code>.qmd</code> → múltiples formatos</strong></p>
 </div>
 <div class="callout-content">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span><span class="co">        # sitio web</span></span>
-<span id="cb1-2"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> revealjs</span><span class="co">    # presentación</span></span>
-<span id="cb1-3"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> pdf</span><span class="co">         # documento</span></span>
-<span id="cb1-4"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> docx</span><span class="co">        # Word</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a aria-label="1"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span><span class="co">        # sitio web</span></span>
+<span id="cb1-2"><a aria-label="2"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> revealjs</span><span class="co">    # presentación</span></span>
+<span id="cb1-3"><a aria-label="3"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> pdf</span><span class="co">         # documento</span></span>
+<span id="cb1-4"><a aria-label="4"></a><span class="fu">format</span><span class="kw">:</span><span class="at"> docx</span><span class="co">        # Word</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>El mismo archivo, cuatro salidas distintas.</p>
 </div>
 </div>
