@@ -28,6 +28,14 @@ Aprende a crear paneles interactivos y visualizaciones narrativas con Shiny.\
 ## Cursos
 
 ::: card
+### Talleres de Inteligencia Artificial Generativa (UTFSM)
+
+Programa dirigido a docentes, académicos y funcionarios para usar ChatGPT y Claude de forma efectiva y responsable en docencia, investigación y productividad diaria.\
+**Presentaciones:**\
+[Taller 1: Fundamentos de IA Generativa y su Aplicación a la Docencia](ai/taller_1_ia_docencia.html) · [Taller 2: IA Generativa Aplicada a la Investigación y la Productividad](ai/taller_2_ia_investigacion_productividad.html)
+:::
+
+::: card
 ### Herramientas Digitales para la Docencia (USM)
 
 MOOC propedéutico para modernizar la práctica académica: GitHub, Google Colab, LaTeX/Overleaf, Quarto e IA — todo desde el navegador, sin instalar nada.\

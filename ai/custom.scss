@@ -250,3 +250,107 @@ $presentation-h3-font-size: 1.1em;
 .no-logo .reveal .slide-logo {
   display: none !important;
 }
+
+// === TALLERES IA · COMPONENTES ===
+
+// Callout de advertencia (faltaba en la paleta base)
+.reveal .callout-warning {
+  background-color: #FDEDEC;
+  border-left-color: #E74C3C;
+}
+
+// Tarjetas del "kit del taller"
+.reveal .kit-card {
+  background-color: #F5F7FA;
+  border: 1px solid #D5DCE4;
+  border-top: 4px solid $accent;
+  border-radius: 6px;
+  padding: 0.9em 0.9em 0.8em;
+  font-size: 0.6em;
+  line-height: 1.35;
+  color: $body-color;
+  position: relative;
+}
+
+.reveal .kit-card strong {
+  display: block;
+  color: $primary;
+  font-size: 1.15em;
+  margin-bottom: 0.35em;
+}
+
+// Tarjeta de producto grupal: se distingue del trabajo individual
+.reveal .kit-card--grupo {
+  background-color: #F7F3E8;
+  border-color: #E0D4B0;
+  border-top-color: #C9A84C;
+}
+
+.reveal .kit-card--grupo .kit-num {
+  background-color: #C9A84C;
+  color: #0F2044;
+}
+
+.reveal .kit-num {
+  display: inline-block;
+  background-color: $primary;
+  color: $white;
+  width: 1.7em;
+  height: 1.7em;
+  line-height: 1.7em;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 0.95em;
+  margin-bottom: 0.5em;
+}
+
+// Caja de producto en las actividades
+.reveal .producto-box {
+  background-color: #0F2044;
+  color: #E6EDF5;
+  border-radius: 8px;
+  padding: 1em 1.1em;
+  font-size: 0.62em;
+  line-height: 1.4;
+}
+
+.reveal .producto-box p {
+  margin: 0 0 0.6em 0;
+}
+
+.reveal .producto-box strong {
+  color: $white;
+}
+
+.reveal .producto-box hr {
+  border: none;
+  border-top: 1px solid #2A5080;
+  margin: 0.9em 0;
+}
+
+.reveal .producto-titulo {
+  color: #C9A84C;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85em;
+  margin-bottom: 0.5em;
+}
+
+// Slides con prompts largos: el bloque de código completo debe caber sin scroll
+.reveal .prompt-slide pre {
+  font-size: 0.52em;
+  line-height: 1.4;
+  padding: 0.7em 1em;
+}
+
+// Badge de tiempo en las actividades
+.reveal .tiempo {
+  display: inline-block;
+  background-color: #EBF4FB;
+  border: 1px solid #A8C4E0;
+  border-radius: 999px;
+  padding: 0.2em 0.9em;
+  font-size: 0.72em;
+  color: $primary;
+  margin-bottom: 0.6em;
+}
