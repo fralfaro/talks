@@ -1,0 +1,2109 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<link href="../images/logo_fam.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-38902dcd73e7f8352ecceb5e549548c1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
+
+  <meta name="author" content="Francisco Alfaro Medina">
+  <title>Talks – Git y GitLab sin miedo</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #d8dee9; background-color: #2e3440; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #d8dee9; } /* Normal */
+    code span.al { color: #bf616a; background-color: #3b4252; font-weight: bold; } /* Alert */
+    code span.an { color: #d08770; } /* Annotation */
+    code span.at { color: #8fbcbb; } /* Attribute */
+    code span.bn { color: #b48ead; } /* BaseN */
+    code span.bu { color: #88c0d0; font-style: italic; } /* BuiltIn */
+    code span.cf { color: #81a1c1; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #ebcb8b; } /* Char */
+    code span.cn { color: #eceff4; font-weight: bold; } /* Constant */
+    code span.co { color: #616e88; } /* Comment */
+    code span.cv { color: #e5e9f0; } /* CommentVar */
+    code span.do { color: #5e81ac; } /* Documentation */
+    code span.dt { color: #81a1c1; } /* DataType */
+    code span.dv { color: #b48ead; } /* DecVal */
+    code span.er { color: #bf616a; text-decoration: underline; } /* Error */
+    code span.ex { color: #8fbcbb; font-weight: bold; } /* Extension */
+    code span.fl { color: #b48ead; } /* Float */
+    code span.fu { color: #88c0d0; } /* Function */
+    code span.im { color: #a3be8c; } /* Import */
+    code span.in { color: #ebcb8b; } /* Information */
+    code span.kw { color: #81a1c1; font-weight: bold; } /* Keyword */
+    code span.op { color: #81a1c1; } /* Operator */
+    code span.ot { color: #8fbcbb; } /* Other */
+    code span.pp { color: #5e81ac; } /* Preprocessor */
+    code span.re { color: #88c0d0; background-color: #3b4252; } /* RegionMarker */
+    code span.sc { color: #ebcb8b; } /* SpecialChar */
+    code span.ss { color: #d08770; } /* SpecialString */
+    code span.st { color: #a3be8c; } /* String */
+    code span.va { color: #5e81ac; } /* Variable */
+    code span.vs { color: #a3be8c; } /* VerbatimString */
+    code span.wa { color: #bf616a; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-5e2eac6f862afff12d8aa0b55071a979.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Git y GitLab sin miedo</h1>
+  <p class="subtitle">El flujo mínimo para trabajar en equipo — en 60 minutos</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Francisco Alfaro Medina
+</div>
+        <p class="quarto-title-affiliation">
+            Análisis y Diseño de Software · UTFSM
+          </p>
+    </div>
+</div>
+
+  <p class="date">agosto 2026</p>
+</section>
+<section id="section" class="slide level2 title-slide center" data-background-color="#0F2044">
+<h2></h2>
+<div class="title-block">
+<p><strong>Git y GitLab sin miedo</strong></p>
+<p>El flujo mínimo para trabajar en equipo</p>
+</div>
+<div class="subtitle-block">
+<p>Clonar · Commit · Push · Pull · Ramas · Issues · Merge Requests<br>
+Análisis y Diseño de Software — 2026</p>
+</div>
+<div class="author-block">
+<p>Francisco Alfaro Medina<br>
+Departamento de Informática · UTFSM</p>
+</div>
+</section>
+<section id="te-ha-pasado-esto" class="slide level2">
+<h2>¿Te ha pasado esto?</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a aria-label="1"></a>📁 Descargas/</span>
+<span id="cb1-2"><a aria-label="2"></a>├── proyecto-final.zip</span>
+<span id="cb1-3"><a aria-label="3"></a>├── proyecto-final-v2.zip</span>
+<span id="cb1-4"><a aria-label="4"></a>├── proyecto-final-v2-ahora-si.zip</span>
+<span id="cb1-5"><a aria-label="5"></a>├── proyecto-final-BUENO.zip</span>
+<span id="cb1-6"><a aria-label="6"></a>├── proyecto-final-ESTE-NO-BORRAR.zip</span>
+<span id="cb1-7"><a aria-label="7"></a>└── proyecto-final-v2-ahora-si (1).zip</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:45%;">
+<p><br></p>
+<ul>
+<li class="fragment">¿Cuál era el que funcionaba?</li>
+<li class="fragment">¿Qué cambió entre uno y otro?</li>
+<li class="fragment">¿Y si dos personas editan a la vez?</li>
+</ul>
+</div></div>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>😅 Todos hemos estado ahí. Hoy vemos cómo no volver.</p>
+</blockquote>
+</div>
+</section>
+<section id="trabajar-sin-control-de-versiones-duele" class="slide level2">
+<h2>Trabajar sin control de versiones duele</h2>
+<p><br></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">😩 Lo que pasa</th>
+<th style="text-align: left;">😰 Por qué duele</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Copias con nombres inventados</td>
+<td style="text-align: left;">Nadie sabe cuál es la versión buena</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">“Se me borró lo de ayer”</td>
+<td style="text-align: left;">No hay forma de volver atrás</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Dos personas editan el mismo archivo</td>
+<td style="text-align: left;">Alguien pierde su trabajo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Se juntan los avances por WhatsApp</td>
+<td style="text-align: left;">Copiar y pegar a mano, con errores</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">“¿Quién cambió esto y por qué?”</td>
+<td style="text-align: left;">Nadie se acuerda</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>💡 No es falta de orden. Es que <strong>el problema necesita una herramienta</strong>.</p>
+</blockquote>
+</div>
+</section>
+<section id="git-es-el-historial-ordenado-de-tu-proyecto" class="slide level2">
+<h2>Git es el historial ordenado de tu proyecto</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:45%;">
+<section id="sin-git" style="background:#f5f7fa; border-radius:10px; padding:1em; border-left:5px solid #6B7A8D; height:270px;">
+<h3>📁 Sin Git</h3>
+<p>Guardas <strong>copias del proyecto</strong>.</p>
+<p>Cada copia es un archivo distinto.</p>
+<p>El “por qué” de cada cambio se pierde.</p>
+</section>
+</div><div class="column" style="width:55%;">
+<section id="con-git" style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-radius:10px; padding:1em; border-left:5px solid #0F2044; height:270px;">
+<h3>🌿 Con Git</h3>
+<p>Guardas <strong>un solo proyecto</strong> con toda su historia.</p>
+<p>Cada cambio queda registrado: qué, quién, cuándo y <strong>por qué</strong>.</p>
+<p>Puedes volver a cualquier punto.</p>
+</section>
+</div></div>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>🎮 Como los <em>save points</em> de un videojuego: avanzas tranquilo porque siempre puedes volver.</p>
+</blockquote>
+</div>
+</section>
+<section id="objetivo-y-resultados-de-aprendizaje" class="slide level2">
+<h2>Objetivo y resultados de aprendizaje</h2>
+<p><br></p>
+<div style="text-align:center; background:linear-gradient(160deg,#0F2044,#2a5298); color:white; border-radius:12px; padding:1.1em; width:88%; margin:0 auto;">
+<p><span style="font-size:1.05em"><strong>Objetivo:</strong> que entiendas el flujo mínimo de trabajo con Git y GitLab<br>
+y lo puedas usar en tu proyecto desde esta semana.</span></p>
+</div>
+<p><br></p>
+<div style="font-size:0.88em;">
+<p><strong>Al terminar esta hora vas a ser capaz de:</strong></p>
+<ol type="1">
+<li class="fragment"><strong>Clonar</strong> el repositorio de tu equipo desde el GitLab del Departamento.</li>
+<li class="fragment"><strong>Revisar</strong> qué cambiaste con <code>git status</code>.</li>
+<li class="fragment"><strong>Crear commits</strong> con mensajes claros.</li>
+<li class="fragment"><strong>Subir y actualizar</strong> tu trabajo con <code>push</code> y <code>pull</code>.</li>
+<li class="fragment"><strong>Crear una rama</strong> para trabajar sin romper nada.</li>
+<li class="fragment"><strong>Crear un Issue</strong> y <strong>abrir un Merge Request</strong> simple en GitLab.</li>
+</ol>
+</div>
+</section>
+<section id="programa-de-la-hora" class="slide level2">
+<h2>Programa de la hora</h2>
+<p><br></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Bloque</th>
+<th style="text-align: right;">Tiempo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">¿Por qué necesitamos Git?</td>
+<td style="text-align: right;">5 min</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><strong>Git básico</strong>: conceptos y comandos mínimos</td>
+<td style="text-align: right;">15 min</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;"><strong>Flujo básico individual</strong></td>
+<td style="text-align: right;">10 min</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;"><strong>GitLab básico</strong>: Issues y Merge Requests</td>
+<td style="text-align: right;">15 min</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">🔨 <strong>Mini actividad práctica</strong></td>
+<td style="text-align: right;">10 min</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">Uso responsable de IA</td>
+<td style="text-align: right;">5 min</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><strong>Total</strong></td>
+<td style="text-align: right;"><strong>60 min</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>⚠️ Es un taller: ten la terminal abierta. Vamos a escribir comandos de verdad.</p>
+</blockquote>
+</div>
+</section>
+<section id="section-1" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 2em">Bloque 2</span></p>
+<p><span style="font-size: 2.5em">Git básico</span></p>
+</div>
+</section>
+<section id="qué-es-git" class="slide level2">
+<h2>¿Qué es Git?</h2>
+<p><br></p>
+<div style="text-align:center; background:linear-gradient(160deg,#0F2044,#2a5298); color:white; border-radius:14px; padding:1.4em; width:82%; margin:0 auto;">
+<p><span style="font-size:1.3em">Un programa que <strong>guarda la historia de tu proyecto</strong></span></p>
+<p><br></p>
+<p><span style="font-size:1.05em">y te deja volver a cualquier punto de esa historia.</span></p>
+</div>
+<div class="fragment">
+<p><br></p>
+<div style="font-size:0.9em;">
+<ul>
+<li class="fragment">Se instala <strong>en tu computador</strong> y funciona sin internet.</li>
+<li class="fragment">No sirve solo para código: sirve para cualquier archivo de texto.</li>
+<li class="fragment">Es la herramienta estándar de la industria — la vas a usar toda tu carrera.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="las-ocho-palabras-que-hay-que-conocer" class="slide level2">
+<h2>Las ocho palabras que hay que conocer</h2>
+<p><br></p>
+<div style="font-size:0.88em;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Palabra</th>
+<th style="text-align: left;">En simple</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Repositorio</strong></td>
+<td style="text-align: left;">Tu proyecto <strong>+ toda su historia</strong>. Es una carpeta con un <code>.git</code> adentro.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Working directory</strong></td>
+<td style="text-align: left;">Los archivos que ves y editas ahora mismo.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Staging area</strong></td>
+<td style="text-align: left;">La “bandeja” donde pones los cambios que quieres guardar.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Commit</strong></td>
+<td style="text-align: left;">Un punto guardado en la historia, con un mensaje que explica qué hiciste.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Branch</strong> (rama)</td>
+<td style="text-align: left;">Una línea de trabajo paralela, para no romper lo que ya funciona.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Remote</strong></td>
+<td style="text-align: left;">La copia del repositorio que vive en GitLab, compartida con tu equipo.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Push</strong></td>
+<td style="text-align: left;">Subir tus commits al remote.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Pull</strong></td>
+<td style="text-align: left;">Bajar los commits que subieron los demás.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fragment">
+<blockquote>
+<p>🧭 Son ocho palabras, no ochenta. Vuelve a esta tabla cada vez que te pierdas.</p>
+</blockquote>
+</div>
+</section>
+<section id="cómo-se-mueven-tus-cambios" class="slide level2">
+<h2>Cómo se mueven tus cambios</h2>
+<p><br></p>
+<div class="cell" data-reveal="true" data-fig-width="12" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {'flowchart': {'padding': 26, 'nodeSpacing': 45, 'rankSpacing': 60}}}%%
+flowchart LR
+    A["💻 Working&lt;br/&gt;Directory"] --&gt;|git add| B["📋 Staging&lt;br/&gt;Area"]
+    B --&gt;|git commit| C["📦 Repositorio&lt;br/&gt;local"]
+    C --&gt;|git push| D["☁️ GitLab&lt;br/&gt;&lt;i&gt;remote&lt;/i&gt;"]
+    D --&gt;|git pull| A
+
+    style A fill:#e8f0fe,stroke:#0F2044,stroke-width:2px
+    style B fill:#dbe7fb,stroke:#2a5298,stroke-width:2px
+    style C fill:#c9dcf8,stroke:#3a6bc4,stroke-width:2px
+    style D fill:#FEE9D9,stroke:#FC6D26,stroke-width:2px
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>🔑 Si entiendes este dibujo, ya entendiste lo esencial de Git.</p>
+</blockquote>
+</div>
+</section>
+<section id="los-7-comandos-que-necesitas" class="slide level2">
+<h2>Los 7 comandos que necesitas</h2>
+<p><br></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a aria-label="1"></a><span class="fu">git</span> clone URL_DEL_REPOSITORIO     <span class="co"># 1. traer el repositorio</span></span>
+<span id="cb2-2"><a aria-label="2"></a><span class="fu">git</span> status                        <span class="co"># 2. ¿qué cambié?</span></span>
+<span id="cb2-3"><a aria-label="3"></a><span class="fu">git</span> add .                         <span class="co"># 3. preparar los cambios</span></span>
+<span id="cb2-4"><a aria-label="4"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"mensaje claro"</span>     <span class="co"># 4. guardar el punto de control</span></span>
+<span id="cb2-5"><a aria-label="5"></a><span class="fu">git</span> pull                          <span class="co"># 5. bajar lo del equipo</span></span>
+<span id="cb2-6"><a aria-label="6"></a><span class="fu">git</span> push                          <span class="co"># 6. subir lo tuyo</span></span>
+<span id="cb2-7"><a aria-label="7"></a><span class="fu">git</span> switch <span class="at">-c</span> nombre-rama         <span class="co"># 7. crear una rama</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="fragment">
+<p><br></p>
+<div style="background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #0F2044; border-radius: 8px; padding: 0.8em 1.2em;">
+<p>👉 Ahora los vemos <strong>uno por uno</strong>: qué hace, cuándo se usa, un ejemplo y el error típico.</p>
+</div>
+</div>
+</section>
+<section id="git-clone" class="slide level2">
+<h2>1️⃣ <code>git clone</code></h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:54%;">
+<div style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-left:5px solid #0F2044; border-radius:10px; padding:0.8em 1.1em; margin-bottom:0.7em;">
+<p><strong>🔧 Qué hace</strong></p>
+<p>Copia el repositorio completo desde GitLab a tu computador, con toda su historia.</p>
+</div>
+<div style="background:linear-gradient(160deg,#FFF4E5,#FFFBF5); border-left:5px solid #FC6D26; border-radius:10px; padding:0.8em 1.1em;">
+<p><strong>⏰ Cuándo se usa</strong></p>
+<p><strong>Una sola vez</strong> por proyecto, al principio.</p>
+</div>
+</div><div class="column" style="width:46%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a aria-label="1"></a><span class="fu">git</span> clone URL_DEL_REPOSITORIO</span>
+<span id="cb3-2"><a aria-label="2"></a><span class="bu">cd</span> proyecto-ads</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div></div>
+<div class="fragment">
+<div style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;">
+<p>❌ <strong>Error común:</strong> clonar <strong>dentro</strong> de otro repositorio, o clonarlo de nuevo cada vez que quieres actualizar.<br>
+✅ Para actualizar no se clona: se usa <code>git pull</code>.</p>
+</div>
+</div>
+</section>
+<section id="git-status" class="slide level2">
+<h2>2️⃣ <code>git status</code></h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:54%;">
+<div style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-left:5px solid #0F2044; border-radius:10px; padding:0.8em 1.1em; margin-bottom:0.7em;">
+<p><strong>🔧 Qué hace</strong></p>
+<p>Te dice en qué rama estás, qué archivos cambiaste y qué está listo para guardar.</p>
+</div>
+<div style="background:linear-gradient(160deg,#FFF4E5,#FFFBF5); border-left:5px solid #FC6D26; border-radius:10px; padding:0.8em 1.1em;">
+<p><strong>⏰ Cuándo se usa</strong></p>
+<p><strong>Todo el tiempo.</strong> Antes y después de cada comando. Es gratis.</p>
+</div>
+</div><div class="column" style="width:46%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a aria-label="1"></a>$ git status</span>
+<span id="cb4-2"><a aria-label="2"></a>On branch pantalla-login</span>
+<span id="cb4-3"><a aria-label="3"></a>Changes not staged for commit:</span>
+<span id="cb4-4"><a aria-label="4"></a>     modified:  src/login.py</span>
+<span id="cb4-5"><a aria-label="5"></a>Untracked files:</span>
+<span id="cb4-6"><a aria-label="6"></a>     nuevo_archivo.py</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div></div>
+<div class="fragment">
+<div style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;">
+<p>❌ <strong>Error común:</strong> no usarlo nunca y trabajar a ciegas.<br>
+✅ Si algo raro pasa, <code>git status</code> casi siempre te dice qué es <strong>y qué hacer</strong>.</p>
+</div>
+</div>
+</section>
+<section id="git-add" class="slide level2">
+<h2>3️⃣ <code>git add</code></h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:54%;">
+<div style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-left:5px solid #0F2044; border-radius:10px; padding:0.8em 1.1em; margin-bottom:0.7em;">
+<p><strong>🔧 Qué hace</strong></p>
+<p>Pone tus cambios en la “bandeja” (<em>staging area</em>) para el próximo commit.</p>
+</div>
+<div style="background:linear-gradient(160deg,#FFF4E5,#FFFBF5); border-left:5px solid #FC6D26; border-radius:10px; padding:0.8em 1.1em;">
+<p><strong>⏰ Cuándo se usa</strong></p>
+<p>Justo antes de hacer un commit.</p>
+</div>
+</div><div class="column" style="width:46%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a aria-label="1"></a><span class="fu">git</span> add .              <span class="co"># todo</span></span>
+<span id="cb5-2"><a aria-label="2"></a><span class="fu">git</span> add src/login.py   <span class="co"># un archivo</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div></div>
+<div class="fragment">
+<div style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;">
+<p>❌ <strong>Error común:</strong> hacer <code>git add .</code> sin mirar y subir cosas que no correspondían (archivos gigantes, contraseñas, carpetas del entorno).<br>
+✅ Corre <code>git status</code> antes. Si agregaste algo por error: <code>git restore --staged archivo</code>.</p>
+</div>
+</div>
+</section>
+<section id="git-commit" class="slide level2">
+<h2>4️⃣ <code>git commit</code></h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:54%;">
+<div style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-left:5px solid #0F2044; border-radius:10px; padding:0.8em 1.1em; margin-bottom:0.7em;">
+<p><strong>🔧 Qué hace</strong></p>
+<p>Guarda un punto de control en la historia, con tu mensaje, tu nombre y la fecha.</p>
+</div>
+<div style="background:linear-gradient(160deg,#FFF4E5,#FFFBF5); border-left:5px solid #FC6D26; border-radius:10px; padding:0.8em 1.1em;">
+<p><strong>⏰ Cuándo se usa</strong></p>
+<p>Cada vez que terminas algo que funciona. Mejor <strong>seguido y pequeño</strong>.</p>
+</div>
+</div><div class="column" style="width:46%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a aria-label="1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Agrega validación</span></span>
+<span id="cb6-2"><a aria-label="2"></a><span class="st">   del formulario"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div></div>
+<div class="fragment">
+<div style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;">
+<p>❌ <strong>Error común:</strong> un solo commit gigante al final llamado <code>"cambios"</code>.<br>
+✅ El commit vive en <strong>tu computador</strong> hasta que hagas <code>push</code>. Commitear no comparte nada todavía.</p>
+</div>
+</div>
+</section>
+<section id="un-buen-mensaje-de-commit" class="slide level2">
+<h2>Un buen mensaje de commit</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="no-ayudan">❌ No ayudan</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a aria-label="1"></a>"cambios"</span>
+<span id="cb7-2"><a aria-label="2"></a>"asdasd"</span>
+<span id="cb7-3"><a aria-label="3"></a>"arreglo"</span>
+<span id="cb7-4"><a aria-label="4"></a>"ahora si"</span>
+<span id="cb7-5"><a aria-label="5"></a>"commit final"</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Dentro de dos semanas, ni tú vas a saber qué hiciste.</p>
+</div><div class="column fragment" style="width:50%;">
+<h3 id="ayudan">✅ Ayudan</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a aria-label="1"></a>"Agrega pantalla de login"</span>
+<span id="cb8-2"><a aria-label="2"></a>"Corrige error al dividir por cero"</span>
+<span id="cb8-3"><a aria-label="3"></a>"Actualiza el README"</span>
+<span id="cb8-4"><a aria-label="4"></a>"Agrega validación del formulario"</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Se entienden sin abrir el código.</p>
+</div></div>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>📏 Regla simple: <strong>escribe qué hiciste, en pocas palabras.</strong> Si necesitas escribir “y”, probablemente son dos commits.</p>
+</blockquote>
+</div>
+</section>
+<section id="git-pull" class="slide level2">
+<h2>5️⃣ <code>git pull</code></h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:54%;">
+<div style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-left:5px solid #0F2044; border-radius:10px; padding:0.8em 1.1em; margin-bottom:0.7em;">
+<p><strong>🔧 Qué hace</strong></p>
+<p>Baja a tu computador los commits que tus compañeros subieron a GitLab.</p>
+</div>
+<div style="background:linear-gradient(160deg,#FFF4E5,#FFFBF5); border-left:5px solid #FC6D26; border-radius:10px; padding:0.8em 1.1em;">
+<p><strong>⏰ Cuándo se usa</strong></p>
+<p><strong>Siempre antes de empezar a trabajar.</strong> Y antes de hacer <code>push</code>.</p>
+</div>
+</div><div class="column" style="width:46%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a aria-label="1"></a><span class="fu">git</span> pull</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div></div>
+<div class="fragment">
+<div style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;">
+<p>❌ <strong>Error común:</strong> trabajar toda la tarde sin hacer <code>pull</code> y después chocar con los cambios de todos.<br>
+✅ Si aparece un <strong>conflicto</strong>, no es un error: Git te está pidiendo que elijas. Lo vemos en el bloque 3.</p>
+</div>
+</div>
+</section>
+<section id="git-push" class="slide level2">
+<h2>6️⃣ <code>git push</code></h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:54%;">
+<div style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-left:5px solid #0F2044; border-radius:10px; padding:0.8em 1.1em; margin-bottom:0.7em;">
+<p><strong>🔧 Qué hace</strong></p>
+<p>Sube tus commits a GitLab para que el equipo los tenga.</p>
+</div>
+<div style="background:linear-gradient(160deg,#FFF4E5,#FFFBF5); border-left:5px solid #FC6D26; border-radius:10px; padding:0.8em 1.1em;">
+<p><strong>⏰ Cuándo se usa</strong></p>
+<p>Cuando terminaste algo y quieres compartirlo.</p>
+</div>
+</div><div class="column" style="width:46%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a aria-label="1"></a><span class="fu">git</span> push          <span class="co"># rama ya existente</span></span>
+<span id="cb10-2"><a aria-label="2"></a></span>
+<span id="cb10-3"><a aria-label="3"></a><span class="co"># primera vez que subes la rama:</span></span>
+<span id="cb10-4"><a aria-label="4"></a><span class="fu">git</span> push <span class="at">-u</span> origin nombre-rama</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div></div>
+<div class="fragment">
+<div style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;">
+<p>❌ <strong>Error común:</strong> <code>! [rejected] ... fetch first</code>. Significa que hay cambios en GitLab que tú no tienes.<br>
+✅ La solución es siempre la misma: <strong><code>git pull</code> y después <code>git push</code></strong>.</p>
+</div>
+</div>
+</section>
+<section id="git-switch--c" class="slide level2">
+<h2>7️⃣ <code>git switch -c</code></h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:54%;">
+<div style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-left:5px solid #0F2044; border-radius:10px; padding:0.8em 1.1em; margin-bottom:0.7em;">
+<p><strong>🔧 Qué hace</strong></p>
+<p>Crea una rama nueva y te cambia a ella. Una rama es una línea de trabajo paralela.</p>
+</div>
+<div style="background:linear-gradient(160deg,#FFF4E5,#FFFBF5); border-left:5px solid #FC6D26; border-radius:10px; padding:0.8em 1.1em;">
+<p><strong>⏰ Cuándo se usa</strong></p>
+<p>Al empezar cualquier tarea nueva. <strong>Nunca trabajes directo en <code>main</code>.</strong></p>
+</div>
+</div><div class="column" style="width:46%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a aria-label="1"></a><span class="fu">git</span> switch <span class="at">-c</span> pantalla-login</span>
+<span id="cb11-2"><a aria-label="2"></a><span class="fu">git</span> switch main</span>
+<span id="cb11-3"><a aria-label="3"></a><span class="fu">git</span> branch</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div></div>
+<div class="fragment">
+<div style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;">
+<p>❌ <strong>Error común:</strong> hacer commits en <code>main</code> sin darse cuenta, o crear la rama <strong>después</strong> de trabajar.<br>
+✅ Antes de escribir código: <code>git status</code> para confirmar en qué rama estás.</p>
+</div>
+</div>
+</section>
+<section id="para-qué-sirven-las-ramas" class="slide level2">
+<h2>¿Para qué sirven las ramas?</h2>
+<p><br></p>
+<p><code>main</code> es la versión <strong>que siempre funciona</strong>. Cada persona trabaja en <strong>su propia rama</strong> y, cuando algo está listo, se integra a <code>main</code>. Así nadie pisa el trabajo de nadie.</p>
+<div class="cell" data-reveal="true" data-fig-width="12" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {'theme':'base','themeVariables':{
+  'git0':'#0F2044','git1':'#FC6D26',
+  'gitBranchLabel0':'#ffffff','gitBranchLabel1':'#ffffff',
+  'commitLabelColor':'#2C3E50','commitLabelBackground':'#F5F7FA','commitLabelFontSize':'13px'
+}}}%%
+gitGraph
+    commit id: "proyecto base"
+    commit id: "modelo de datos"
+    branch mi-rama
+    checkout mi-rama
+    commit id: "pantalla login"
+    commit id: "validación"
+    checkout main
+    merge mi-rama
+    commit id: "seguimos"
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<blockquote>
+<p>🌿 Nombres claros: <code>pantalla-login</code>, <code>arregla-promedio</code>, <code>documentacion</code>.</p>
+</blockquote>
+</div>
+</section>
+<section id="section-2" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 2em">Bloque 3</span></p>
+<p><span style="font-size: 2.5em">Flujo básico individual</span></p>
+</div>
+</section>
+<section id="el-flujo-completo-de-principio-a-fin" class="slide level2">
+<h2>El flujo completo, de principio a fin</h2>
+<p><br></p>
+<div class="cell" data-reveal="true" data-fig-width="13" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {'flowchart': {'padding': 26, 'nodeSpacing': 45, 'rankSpacing': 55}}}%%
+flowchart LR
+    A["✏️ Modificar&lt;br/&gt;archivos"] --&gt; B["git status"]
+    B --&gt; C["git add"]
+    C --&gt; D["git commit"]
+    D --&gt; E["git push"]
+    E --&gt; F["☁️ GitLab"]
+    F --&gt; G["git pull"]
+    G --&gt; A
+
+    style A fill:#fff,stroke:#6B7A8D,stroke-dasharray: 4 3
+    style F fill:#FEE9D9,stroke:#FC6D26,stroke-width:2px
+    style E fill:#e8f0fe,stroke:#0F2044,stroke-width:2px
+    style G fill:#e8f0fe,stroke:#0F2044,stroke-width:2px
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>🔁 Este ciclo lo vas a repetir cientos de veces. Que se te haga automático.</p>
+</blockquote>
+</div>
+</section>
+<section id="los-pasos-con-los-comandos-exactos" class="slide level2">
+<h2>Los pasos, con los comandos exactos</h2>
+<p><br></p>
+<div style="font-size:0.86em;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a aria-label="1"></a><span class="co"># 0. Una sola vez: traer el repositorio</span></span>
+<span id="cb12-2"><a aria-label="2"></a><span class="fu">git</span> clone https://gitlab.usm.cl/grupo-07/proyecto-ads.git</span>
+<span id="cb12-3"><a aria-label="3"></a><span class="bu">cd</span> proyecto-ads</span>
+<span id="cb12-4"><a aria-label="4"></a></span>
+<span id="cb12-5"><a aria-label="5"></a><span class="co"># 1. Antes de empezar: traer lo que hicieron los demás</span></span>
+<span id="cb12-6"><a aria-label="6"></a><span class="fu">git</span> pull</span>
+<span id="cb12-7"><a aria-label="7"></a></span>
+<span id="cb12-8"><a aria-label="8"></a><span class="co"># 2. Crear tu rama para la tarea</span></span>
+<span id="cb12-9"><a aria-label="9"></a><span class="fu">git</span> switch <span class="at">-c</span> pantalla-login</span>
+<span id="cb12-10"><a aria-label="10"></a></span>
+<span id="cb12-11"><a aria-label="11"></a><span class="co"># 3. ... programar ...</span></span>
+<span id="cb12-12"><a aria-label="12"></a></span>
+<span id="cb12-13"><a aria-label="13"></a><span class="co"># 4. Revisar qué cambiaste</span></span>
+<span id="cb12-14"><a aria-label="14"></a><span class="fu">git</span> status</span>
+<span id="cb12-15"><a aria-label="15"></a></span>
+<span id="cb12-16"><a aria-label="16"></a><span class="co"># 5. Preparar y guardar</span></span>
+<span id="cb12-17"><a aria-label="17"></a><span class="fu">git</span> add .</span>
+<span id="cb12-18"><a aria-label="18"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Agrega pantalla de login"</span></span>
+<span id="cb12-19"><a aria-label="19"></a></span>
+<span id="cb12-20"><a aria-label="20"></a><span class="co"># 6. Subir tu trabajo</span></span>
+<span id="cb12-21"><a aria-label="21"></a><span class="fu">git</span> push <span class="at">-u</span> origin pantalla-login</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="dos-costumbres-que-evitan-el-90-de-los-problemas" class="slide level2">
+<h2>Dos costumbres que evitan el 90 % de los problemas</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<section id="git-pull-antes-de-empezar" style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-radius:12px; padding:1.2em; height:270px; border-left:5px solid #0F2044;">
+<h3>1️⃣ <code>git pull</code> antes de empezar</h3>
+<p>Siempre. Antes de escribir la primera línea.</p>
+<p>Así trabajas sobre la versión más nueva y evitas choques con tus compañeros.</p>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="commits-pequeños-y-seguidos" style="background:linear-gradient(160deg,#FFF4E5,#FFFBF5); border-radius:12px; padding:1.2em; height:270px; border-left:5px solid #FC6D26;">
+<h3>2️⃣ Commits pequeños y seguidos</h3>
+<p>No esperes a “terminar todo” para guardar.</p>
+<p>Un commit por cada cosa que funciona. Es más fácil volver atrás.</p>
+</section>
+</div></div>
+</section>
+<section id="si-aparece-un-conflicto-no-es-un-error" class="slide level2">
+<h2>Si aparece un conflicto, no es un error</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:52%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a aria-label="1"></a><span class="kw">def</span> promedio(notas):</span>
+<span id="cb13-2"><a aria-label="2"></a><span class="op">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD</span>
+<span id="cb13-3"><a aria-label="3"></a>    <span class="cf">return</span> <span class="bu">sum</span>(notas) <span class="op">/</span> <span class="bu">len</span>(notas)</span>
+<span id="cb13-4"><a aria-label="4"></a><span class="op">=======</span></span>
+<span id="cb13-5"><a aria-label="5"></a>    <span class="cf">if</span> <span class="kw">not</span> notas:</span>
+<span id="cb13-6"><a aria-label="6"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb13-7"><a aria-label="7"></a>    <span class="cf">return</span> <span class="bu">sum</span>(notas) <span class="op">/</span> <span class="bu">len</span>(notas)</span>
+<span id="cb13-8"><a aria-label="8"></a><span class="op">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> mi<span class="op">-</span>rama</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:48%;">
+<p><br></p>
+<p>Pasa cuando <strong>dos personas editaron la misma línea</strong>.</p>
+<p>Git no puede adivinar cuál está bien, así que <strong>te pregunta a ti</strong>.</p>
+<p><br></p>
+<p><strong>Qué haces:</strong> eliges qué código queda, borras las tres marcas, y haces <code>git add</code> + <code>git commit</code>.</p>
+</div></div>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>💬 Si tienes dudas, habla con quien escribió la otra versión. Es una conversación, no una pelea.</p>
+</blockquote>
+</div>
+</section>
+<section id="section-3" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 2em">Bloque 4</span></p>
+<p><span style="font-size: 2.5em">GitLab básico</span></p>
+</div>
+</section>
+<section id="git-no-es-gitlab" class="slide level2">
+<h2>Git no es GitLab</h2>
+<p><br></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: left;">🌿 <strong>Git</strong></th>
+<th style="text-align: left;">🦊 <strong>GitLab</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Qué es</strong></td>
+<td style="text-align: left;">Un programa</td>
+<td style="text-align: left;">Un sitio web</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Dónde está</strong></td>
+<td style="text-align: left;">En tu computador</td>
+<td style="text-align: left;">En el servidor del Departamento</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Para qué sirve</strong></td>
+<td style="text-align: left;">Guardar la historia del proyecto</td>
+<td style="text-align: left;">Compartir y coordinarse con el equipo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Se usa desde</strong></td>
+<td style="text-align: left;">La terminal</td>
+<td style="text-align: left;">El navegador</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Sin internet</strong></td>
+<td style="text-align: left;">✅ Funciona</td>
+<td style="text-align: left;">❌ No funciona</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>🚗 Git es el <strong>motor</strong>. GitLab es el <strong>auto completo</strong>: motor, tablero y copiloto.</p>
+</blockquote>
+</div>
+</section>
+<section id="qué-nos-da-gitlab" class="slide level2">
+<h2>¿Qué nos da GitLab?</h2>
+<p><br></p>
+<div style="font-size:0.88em;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Herramienta</th>
+<th style="text-align: left;">Para qué sirve en tu equipo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Repositorio remoto</strong></td>
+<td style="text-align: left;">La versión oficial del proyecto. Todos clonan y suben ahí.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Issues</strong></td>
+<td style="text-align: left;">La lista de tareas: qué hay que hacer y quién lo hace.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Ramas</strong></td>
+<td style="text-align: left;">Se ven todas las ramas del equipo y en qué van.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Merge Requests</strong></td>
+<td style="text-align: left;">Proponer que tu trabajo entre a <code>main</code>.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Revisión de código</strong></td>
+<td style="text-align: left;">Comentar el código de un compañero, línea por línea.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Tablero (Board)</strong></td>
+<td style="text-align: left;">Ver de un vistazo qué está <em>por hacer</em>, <em>en curso</em> y <em>listo</em>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>🏛️ En este curso usamos el <strong>GitLab del Departamento</strong>, con tu cuenta institucional.</p>
+</blockquote>
+</div>
+</section>
+<section id="el-repositorio-en-gitlab" class="slide level2">
+<h2>El repositorio en GitLab</h2>
+<p><br></p>
+<div style="text-align:center; border:2px dashed #6B7A8D; border-radius:12px; padding:2.2em; background:#f8f9ff; width:78%; margin:0 auto;">
+<p><span style="font-size:1.05em; color:#0F2044;"><strong>[Imagen sugerida: vista de repositorio en GitLab]</strong></span></p>
+<p><br></p>
+<p><span style="font-size:0.8em; color:#6B7A8D;">Pantalla principal del proyecto: archivos, botón <strong>Code</strong> con la URL para clonar,<br>
+y el menú lateral con Issues y Merge requests.</span></p>
+</div>
+<div class="fragment">
+<p><br></p>
+<div style="font-size:0.85em;">
+<p><strong>Para clonarlo:</strong> botón azul <strong>Code</strong> → copia la URL <strong>HTTPS</strong> → en tu terminal <code>git clone &lt;url&gt;</code>.</p>
+</div>
+<blockquote>
+<p>💡 Empieza con <strong>HTTPS</strong>: te pide usuario y contraseña institucional y listo. SSH lo configuras después.</p>
+</blockquote>
+</div>
+</section>
+<section id="issues-la-lista-de-tareas-del-equipo" class="slide level2">
+<h2>Issues: la lista de tareas del equipo</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p>Un <strong>Issue</strong> es una tarea, un error o una idea.</p>
+<p><br></p>
+<p><strong>Responde tres preguntas:</strong></p>
+<ul>
+<li class="fragment">¿Qué hay que hacer?</li>
+<li class="fragment">¿Quién lo está haciendo?</li>
+<li class="fragment">¿Ya está listo?</li>
+</ul>
+<p><br></p>
+<p><strong>Se crea en:</strong> <em>Issues → New issue</em></p>
+</div><div class="column" style="width:52%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a aria-label="1"></a>Título:</span>
+<span id="cb14-2"><a aria-label="2"></a>  Agregar validación al formulario</span>
+<span id="cb14-3"><a aria-label="3"></a></span>
+<span id="cb14-4"><a aria-label="4"></a>Descripción:</span>
+<span id="cb14-5"><a aria-label="5"></a>  El formulario acepta campos vacíos.</span>
+<span id="cb14-6"><a aria-label="6"></a>  Hay que mostrar un mensaje de error.</span>
+<span id="cb14-7"><a aria-label="7"></a></span>
+<span id="cb14-8"><a aria-label="8"></a>  - [ ] Validar campos obligatorios</span>
+<span id="cb14-9"><a aria-label="9"></a>  - [ ] Mostrar mensaje al usuario</span>
+<span id="cb14-10"><a aria-label="10"></a></span>
+<span id="cb14-11"><a aria-label="11"></a>Assignee:  @ana</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div></div>
+<div class="fragment">
+<blockquote>
+<p>🎯 Un buen Issue se entiende <strong>sin tener que preguntarte nada</strong>.</p>
+</blockquote>
+</div>
+</section>
+<section id="los-issues-en-gitlab" class="slide level2">
+<h2>Los Issues en GitLab</h2>
+<p><br></p>
+<div style="text-align:center; border:2px dashed #6B7A8D; border-radius:12px; padding:2.2em; background:#f8f9ff; width:78%; margin:0 auto;">
+<p><span style="font-size:1.05em; color:#0F2044;"><strong>[Imagen sugerida: vista de Issues en GitLab]</strong></span></p>
+<p><br></p>
+<p><span style="font-size:0.8em; color:#6B7A8D;">Listado de Issues del proyecto con títulos, responsables asignados<br>
+y etiquetas; y el botón <strong>New issue</strong>.</span></p>
+</div>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>🗂️ Con los Issues bien puestos, el tablero del equipo se arma solo.</p>
+</blockquote>
+</div>
+</section>
+<section id="merge-request-revisen-esto-antes-de-integrarlo" class="slide level2">
+<h2>Merge Request: “revisen esto antes de integrarlo”</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:52%;">
+<p>Un <strong>Merge Request</strong> dice:</p>
+<blockquote>
+<p><em>“Trabajé en mi rama. Quiero que esto entre a <code>main</code>. ¿Lo revisan?”</em></p>
+</blockquote>
+<p><br></p>
+<p><strong>Sirve para:</strong></p>
+<ul>
+<li class="fragment">Ver exactamente qué cambió.</li>
+<li class="fragment">Comentar y sugerir mejoras.</li>
+<li class="fragment">Dejar registro de por qué se integró.</li>
+<li class="fragment">Que <code>main</code> no se rompa.</li>
+</ul>
+</div><div class="column" style="width:48%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a aria-label="1"></a>!7  Agrega validación del formulario</span>
+<span id="cb15-2"><a aria-label="2"></a>──────────────────────────────────────</span>
+<span id="cb15-3"><a aria-label="3"></a>De:    pantalla-login</span>
+<span id="cb15-4"><a aria-label="4"></a>Hacia: main</span>
+<span id="cb15-5"><a aria-label="5"></a></span>
+<span id="cb15-6"><a aria-label="6"></a>Autor:    @ana</span>
+<span id="cb15-7"><a aria-label="7"></a>Revisor:  @juan</span>
+<span id="cb15-8"><a aria-label="8"></a></span>
+<span id="cb15-9"><a aria-label="9"></a>💬 2 comentarios</span>
+<span id="cb15-10"><a aria-label="10"></a>✅ Aprobado</span>
+<span id="cb15-11"><a aria-label="11"></a></span>
+<span id="cb15-12"><a aria-label="12"></a>      [ Merge ]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div></div>
+<div class="fragment">
+<blockquote>
+<p>📌 En GitLab <strong>no se dice “Pull Request”</strong> (eso es GitHub). Aquí es <strong>Merge Request</strong>.</p>
+</blockquote>
+</div>
+</section>
+<section id="los-merge-requests-en-gitlab" class="slide level2">
+<h2>Los Merge Requests en GitLab</h2>
+<p><br></p>
+<div style="text-align:center; border:2px dashed #6B7A8D; border-radius:12px; padding:2.2em; background:#f8f9ff; width:78%; margin:0 auto;">
+<p><span style="font-size:1.05em; color:#0F2044;"><strong>[Imagen sugerida: vista de Merge Request en GitLab]</strong></span></p>
+<p><br></p>
+<p><span style="font-size:0.8em; color:#6B7A8D;">Un MR abierto mostrando la pestaña <strong>Changes</strong> con el diff línea a línea,<br>
+un comentario de revisión y el botón <strong>Merge</strong>.</span></p>
+</div>
+</section>
+<section id="revisar-el-código-de-un-compañero" class="slide level2">
+<h2>Revisar el código de un compañero</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="qué-mirar">🔍 Qué mirar</h3>
+<ul>
+<li>¿Entiendo qué hace?</li>
+<li>¿Hace lo que dice el Issue?</li>
+<li>¿Se le quedó algo a medias?</li>
+<li>¿Los nombres se entienden?</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="cómo-comentar">💬 Cómo comentar</h3>
+<p>Haz clic en el número de línea y escribe.</p>
+<p>❌ <em>“esto está malo”</em></p>
+<p>✅ <em>“¿qué pasa si la lista viene vacía? creo que falla acá”</em></p>
+</div></div>
+<div class="fragment">
+<p><br></p>
+<div style="background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #0F2044; border-radius: 8px; padding: 0.8em 1.2em;">
+<p>🤝 Se revisa <strong>el código</strong>, no a la persona. Y revisar es la forma más rápida de aprender de tus compañeros.</p>
+</div>
+</div>
+</section>
+<section id="un-tablero-simple-para-el-equipo" class="slide level2">
+<h2>Un tablero simple para el equipo</h2>
+<p><br></p>
+<div style="font-size:0.9em;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Columna</th>
+<th style="text-align: left;">Qué hay ahí</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">📋 <strong>Por hacer</strong></td>
+<td style="text-align: left;">Issues creados que nadie tomó todavía</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">🔨 <strong>En curso</strong></td>
+<td style="text-align: left;">Alguien lo está trabajando en su rama</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">👀 <strong>En revisión</strong></td>
+<td style="text-align: left;">Ya hay un Merge Request esperando revisión</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">✅ <strong>Listo</strong></td>
+<td style="text-align: left;">Mergeado a <code>main</code>, Issue cerrado</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fragment">
+<p><br></p>
+<div style="background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #0F2044; border-radius: 8px; padding: 0.8em 1.2em;">
+<p>🗂️ En GitLab está en <strong>Issues → Boards</strong>. Arrastras la tarjeta de una columna a otra y el Issue se actualiza solo.</p>
+</div>
+</div>
+</section>
+<section id="el-flujo-recomendado-para-tu-equipo" class="slide level2">
+<h2>El flujo recomendado para tu equipo</h2>
+<p><br></p>
+<div class="cell" data-reveal="true" data-fig-width="14" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class=""><p></p>
+<div>
+<pre class="mermaid mermaid-js">%%{init: {'flowchart': {'padding': 26, 'nodeSpacing': 40, 'rankSpacing': 50}}}%%
+flowchart LR
+    A["📋 Issue"] --&gt; B["🌿 Crear rama"]
+    B --&gt; C["💻 Trabajar&lt;br/&gt;localmente"]
+    C --&gt; D["📌 Commit"]
+    D --&gt; E["⬆️ Push"]
+    E --&gt; F["🔀 Merge&lt;br/&gt;Request"]
+    F --&gt; G["👀 Revisión"]
+    G --&gt; H{"¿Aprobado?"}
+    H --&gt;|No| C
+    H --&gt;|Sí| I["✅ Merge&lt;br/&gt;a main"]
+
+    style A fill:#f5f7fa,stroke:#6B7A8D,stroke-width:2px
+    style F fill:#FEE9D9,stroke:#FC6D26,stroke-width:2px
+    style H fill:#FFF4E5,stroke:#FC6D26,stroke-width:2px
+    style I fill:#E8F6EF,stroke:#27AE60,stroke-width:2px
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>🔁 Una vuelta por cada tarea. Así se trabaja en la industria y así trabajaremos este semestre.</p>
+</blockquote>
+</div>
+</section>
+<section id="section-4" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 2em">Bloque 5</span></p>
+<p><span style="font-size: 2.5em">Mini actividad práctica</span></p>
+</div>
+</section>
+<section id="actividad-tu-archivo-en-el-repositorio-del-curso" class="slide level2">
+<h2>Actividad — Tu archivo en el repositorio del curso</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:32%;">
+<div style="text-align: center;">
+<p><img src="images/ejercicio.png" alt="Actividad" style="width: 88%; border-radius: 10px;"></p>
+</div>
+</div><div class="column" style="width:68%;">
+<p><strong>Meta:</strong> crear <code>integrantes/nombre-apellido.md</code> y hacer la vuelta completa.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a aria-label="1"></a><span class="fu">git</span> clone URL_DEL_REPOSITORIO</span>
+<span id="cb16-2"><a aria-label="2"></a><span class="bu">cd</span> proyecto-ads</span>
+<span id="cb16-3"><a aria-label="3"></a><span class="fu">git</span> switch <span class="at">-c</span> ana-perez</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Crea el archivo <code>integrantes/ana-perez.md</code> con tu nombre, tu carrera y una línea sobre ti.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a aria-label="1"></a><span class="fu">git</span> status</span>
+<span id="cb17-2"><a aria-label="2"></a><span class="fu">git</span> add .</span>
+<span id="cb17-3"><a aria-label="3"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Agrega ficha de Ana Pérez"</span></span>
+<span id="cb17-4"><a aria-label="4"></a><span class="fu">git</span> push <span class="at">-u</span> origin ana-perez</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Luego, en GitLab: <strong>abre un Merge Request</strong> y pídele a un compañero que lo revise.</p>
+</div></div>
+<div class="fragment">
+<blockquote>
+<p>⏱️ <strong>10 minutos.</strong> Levanta la mano apenas algo no funcione — para eso estamos.</p>
+</blockquote>
+</div>
+</section>
+<section id="no-tienes-git-instalado-hazlo-desde-la-web" class="slide level2">
+<h2>¿No tienes Git instalado? Hazlo desde la web</h2>
+<p><br></p>
+<div style="font-size:0.92em;">
+<p>Todo lo anterior se puede hacer <strong>sin instalar nada</strong>, desde el navegador:</p>
+<ol type="1">
+<li class="fragment">Entra al proyecto en GitLab y abre la carpeta <code>integrantes/</code>.</li>
+<li class="fragment">Botón <strong>+</strong> → <strong>New file</strong>. Nómbralo <code>nombre-apellido.md</code>.</li>
+<li class="fragment">Escribe tu contenido en el editor web.</li>
+<li class="fragment">Abajo, en <strong>Commit message</strong>, escribe un mensaje claro.</li>
+<li class="fragment">Elige <strong>“Create a new branch”</strong> y ponle tu nombre.</li>
+<li class="fragment">Marca ✅ <strong>“Start a new merge request with these changes”</strong>.</li>
+<li class="fragment">Botón <strong>Commit changes</strong> → se abre el Merge Request solo.</li>
+</ol>
+</div>
+<div class="fragment">
+<p><br></p>
+<div style="background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #0F2044; border-radius: 8px; padding: 0.8em 1.2em;">
+<p>💡 Es exactamente el mismo flujo: rama → commit → Merge Request. Solo cambia dónde lo escribes.</p>
+</div>
+</div>
+</section>
+<section id="section-5" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 2em">Bloque 6</span></p>
+<p><span style="font-size: 2.5em">Uso responsable de IA</span></p>
+</div>
+</section>
+<section id="la-ia-te-puede-ayudar-mucho-con-git" class="slide level2">
+<h2>La IA te puede ayudar mucho con Git</h2>
+<p><br></p>
+<div style="font-size:0.9em;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Para qué</th>
+<th style="text-align: left;">Ejemplo de lo que le puedes pedir</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Entender un error</strong></td>
+<td style="text-align: left;"><em>“¿Qué significa este error de Git? ¿Cómo lo soluciono?”</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Redactar un commit</strong></td>
+<td style="text-align: left;"><em>“Escribe un mensaje de commit corto y claro para estos cambios”</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Mejorar un Issue</strong></td>
+<td style="text-align: left;"><em>“Reescribe este Issue para que quede claro qué hay que hacer”</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Resumir un MR</strong></td>
+<td style="text-align: left;"><em>“Resume qué cambia este Merge Request y qué debería revisar”</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Entender un conflicto</strong></td>
+<td style="text-align: left;"><em>“Explícame qué hacía cada versión de este conflicto”</em></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Entender un comando</strong></td>
+<td style="text-align: left;"><em>“¿Qué hace exactamente este comando? ¿Qué riesgo tiene?”</em></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>💡 Especialmente útil al principio: <strong>pídele que te explique el error antes de ejecutar nada.</strong></p>
+</blockquote>
+</div>
+</section>
+<section id="cuatro-advertencias" class="slide level2">
+<h2>Cuatro advertencias</h2>
+<p><br></p>
+<div style="display: flex; flex-direction: column; gap: 0.7em; font-size: 0.95em;">
+<div style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1em;">
+<p>🔓 <strong>Nunca</strong> pegues contraseñas, tokens ni credenciales en una herramienta de IA.</p>
+</div>
+<div style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #0F2044; border-radius: 8px; padding: 0.7em 1em;">
+<p>🧠 <strong>No entregues código que no entiendes.</strong> Si no lo puedes explicar, no lo subas.</p>
+</div>
+<div style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #2a5298; border-radius: 8px; padding: 0.7em 1em;">
+<p>🔍 <strong>Verifica siempre.</strong> La IA inventa comandos que no existen, con total seguridad.</p>
+</div>
+<div style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#FFF4E5,#FFFBF5); border-left: 4px solid #FC6D26; border-radius: 8px; padding: 0.7em 1em;">
+<p>⚖️ <strong>La responsabilidad final es tuya</strong>, no de la herramienta.</p>
+</div>
+</div>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>✅ Usar IA no está penalizado. Entregar algo que no entiendes, sí.</p>
+</blockquote>
+</div>
+</section>
+<section id="section-6" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 2em">Cierre</span></p>
+<p><span style="font-size: 2.5em">Para llevarte</span></p>
+</div>
+</section>
+<section id="lo-más-importante-de-todo" class="slide level2">
+<h2>Lo más importante de todo</h2>
+<p><br></p>
+<div style="text-align:center; background:linear-gradient(160deg,#0F2044,#2a5298); color:white; border-radius:14px; padding:1.6em; width:85%; margin:0 auto;">
+<p><span style="font-size:1.5em"><strong>En Git casi nada se pierde.</strong></span></p>
+<p><br></p>
+<p><span style="font-size:1em">Si hiciste un commit, tu trabajo está a salvo.<br>
+Siempre hay forma de volver.</span></p>
+</div>
+<div class="fragment">
+<p><br></p>
+<div style="font-size:0.9em;">
+<ul>
+<li class="fragment">El miedo típico es <em>“voy a romper el repositorio”</em>. Es muy difícil romperlo de verdad.</li>
+<li class="fragment">Lo peor que suele pasar es que quede desordenado — y eso se arregla.</li>
+<li class="fragment"><strong>Ante la duda: pregunta antes de ejecutar.</strong> No hay preguntas tontas con Git.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="errores-típicos-y-qué-hacer" class="slide level2">
+<h2>Errores típicos y qué hacer</h2>
+<p><br></p>
+<div style="font-size:0.87em;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">😬 Te pasó esto</th>
+<th style="text-align: left;">🛠️ Haz esto</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cambiaste un archivo y quieres dejarlo como estaba</td>
+<td style="text-align: left;"><code>git restore archivo.py</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Hiciste <code>git add</code> de algo que no querías</td>
+<td style="text-align: left;"><code>git restore --staged archivo.py</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">El mensaje del commit quedó malo <em>(y aún no hiciste push)</em></td>
+<td style="text-align: left;"><code>git commit --amend -m "mensaje nuevo"</code></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>git push</code> rechazado: <em>“updates were rejected”</em></td>
+<td style="text-align: left;">Primero <code>git pull</code>, después <code>git push</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Apareció un <strong>conflicto</strong></td>
+<td style="text-align: left;">Elige qué versión queda, borra las marcas, y haz commit</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Crees que perdiste commits</td>
+<td style="text-align: left;"><code>git reflog</code> — casi siempre están ahí</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="fragment">
+<p><br></p>
+<div style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em;">
+<p>🚨 Los únicos dos comandos que sí pueden borrar trabajo: <code>git reset --hard</code> y <code>git push --force</code>. <strong>No los uses sin preguntar.</strong></p>
+</div>
+</div>
+</section>
+<section id="checklist-estoy-listo-para-el-proyecto" class="slide level2">
+<h2>Checklist: ¿estoy listo para el proyecto?</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="en-mi-computador">💻 En mi computador</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Git instalado (<code>git --version</code>)</label></li>
+<li><label><input type="checkbox">Mi nombre y correo configurados</label></li>
+<li><label><input type="checkbox">Repositorio del equipo clonado</label></li>
+<li><label><input type="checkbox">Sé en qué rama estoy (<code>git status</code>)</label></li>
+<li><label><input type="checkbox">Hice al menos <strong>un commit propio</strong></label></li>
+<li><label><input type="checkbox">Hice al menos <strong>un push</strong></label></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="en-gitlab">🦊 En GitLab</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Entro con mi cuenta institucional</label></li>
+<li><label><input type="checkbox">Veo el proyecto de mi equipo</label></li>
+<li><label><input type="checkbox">Creé o me asignaron <strong>un Issue</strong></label></li>
+<li><label><input type="checkbox">Abrí <strong>un Merge Request</strong></label></li>
+<li><label><input type="checkbox">Revisé el MR de un compañero</label></li>
+<li><label><input type="checkbox">Mi Merge Request quedó mergeado</label></li>
+</ul>
+</div></div>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>✅ Si marcas todo, ya sabes lo suficiente para trabajar todo el semestre.</p>
+</blockquote>
+</div>
+</section>
+<section id="mini-glosario" class="slide level2">
+<h2>Mini glosario</h2>
+<p><br></p>
+<div style="font-size:0.82em;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Término</th>
+<th style="text-align: left;">Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Repositorio (repo)</strong></td>
+<td style="text-align: left;">El proyecto más toda su historia de cambios.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Clonar</strong></td>
+<td style="text-align: left;">Copiar un repositorio de GitLab a tu computador.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Working directory</strong></td>
+<td style="text-align: left;">Los archivos tal como están ahora en tu carpeta.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Staging area</strong></td>
+<td style="text-align: left;">La bandeja con los cambios que entrarán al próximo commit.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Commit</strong></td>
+<td style="text-align: left;">Un punto guardado en la historia, con mensaje y autor.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Branch (rama)</strong></td>
+<td style="text-align: left;">Una línea de trabajo paralela a <code>main</code>.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong><code>main</code></strong></td>
+<td style="text-align: left;">La rama principal: la versión que siempre debe funcionar.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Remote</strong></td>
+<td style="text-align: left;">El repositorio en GitLab, compartido con el equipo.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Push / Pull</strong></td>
+<td style="text-align: left;">Subir tus commits / bajar los de los demás.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Issue</strong></td>
+<td style="text-align: left;">Una tarea, error o idea registrada en GitLab.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Merge Request (MR)</strong></td>
+<td style="text-align: left;">Propuesta de integrar los cambios de tu rama a <code>main</code>.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Merge</strong></td>
+<td style="text-align: left;">Integrar efectivamente una rama en otra.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Conflicto</strong></td>
+<td style="text-align: left;">Dos versiones distintas de la misma línea; tú decides cuál queda.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="chuleta-todo-en-una-diapositiva" class="slide level2">
+<h2>Chuleta: todo en una diapositiva</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size:0.8em;">
+<p><strong>Empezar</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a aria-label="1"></a><span class="fu">git</span> clone URL          <span class="co"># traer el repo</span></span>
+<span id="cb18-2"><a aria-label="2"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"..."</span></span>
+<span id="cb18-3"><a aria-label="3"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"..."</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Todos los días</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a aria-label="1"></a><span class="fu">git</span> pull               <span class="co"># antes de empezar</span></span>
+<span id="cb19-2"><a aria-label="2"></a><span class="fu">git</span> status             <span class="co"># ¿qué cambié?</span></span>
+<span id="cb19-3"><a aria-label="3"></a><span class="fu">git</span> add .              <span class="co"># preparar</span></span>
+<span id="cb19-4"><a aria-label="4"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"..."</span>    <span class="co"># guardar</span></span>
+<span id="cb19-5"><a aria-label="5"></a><span class="fu">git</span> push               <span class="co"># compartir</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div style="font-size:0.8em;">
+<p><strong>Ramas</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a aria-label="1"></a><span class="fu">git</span> switch <span class="at">-c</span> mi-rama          <span class="co"># crear</span></span>
+<span id="cb20-2"><a aria-label="2"></a><span class="fu">git</span> switch main                <span class="co"># cambiar</span></span>
+<span id="cb20-3"><a aria-label="3"></a><span class="fu">git</span> branch                     <span class="co"># listar</span></span>
+<span id="cb20-4"><a aria-label="4"></a><span class="fu">git</span> push <span class="at">-u</span> origin mi-rama     <span class="co"># subir</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Si algo sale mal</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a aria-label="1"></a><span class="fu">git</span> restore archivo            <span class="co"># descartar cambios</span></span>
+<span id="cb21-2"><a aria-label="2"></a><span class="fu">git</span> restore <span class="at">--staged</span> archivo   <span class="co"># sacar del staging</span></span>
+<span id="cb21-3"><a aria-label="3"></a><span class="fu">git</span> log <span class="at">--oneline</span>              <span class="co"># ver la historia</span></span>
+<span id="cb21-4"><a aria-label="4"></a><span class="fu">git</span> reflog                     <span class="co"># recuperar</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div></div>
+</section>
+<section id="para-practicar-por-tu-cuenta" class="slide level2">
+<h2>Para practicar por tu cuenta</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="lo-más-útil">🎮 Lo más útil</h3>
+<ul>
+<li><p><a href="https://learngitbranching.js.org/?locale=es_ES"><strong>Learn Git Branching</strong></a><br>
+Ramas de forma visual, en español. 30 minutos aquí valen más que un manual completo.</p></li>
+<li><p><a href="https://ohshitgit.com/es/"><strong>Oh Shit, Git!?!</strong></a><br>
+Cómo salir de los errores más comunes.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="para-consultar">📚 Para consultar</h3>
+<ul>
+<li><p><a href="https://git-scm.com/book/es/v2"><strong>Pro Git</strong></a> — el libro oficial, gratis y en español.</p></li>
+<li><p><a href="https://docs.gitlab.com/"><strong>GitLab Docs</strong></a> — documentación de la plataforma.</p></li>
+<li><p><a href="https://gitexplorer.com/"><strong>Git Explorer</strong></a> — “quiero hacer X, ¿qué comando uso?”</p></li>
+</ul>
+</div></div>
+</section>
+<section id="lo-que-hay-que-recordar" class="slide level2">
+<h2>Lo que hay que recordar</h2>
+<p><br></p>
+<div class="fragment">
+<div style="display: flex; flex-direction: column; gap: 0.7em; font-size: 0.93em;">
+<div style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #0F2044; border-radius: 8px; padding: 0.6em 1em;">
+<p>✅ <strong>Git</strong> guarda la historia de tu proyecto. <strong>GitLab</strong> es donde la comparten.</p>
+</div>
+<div style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #2a5298; border-radius: 8px; padding: 0.6em 1em;">
+<p>✅ El ciclo diario: <strong><code>pull</code> → programar → <code>status</code> → <code>add</code> → <code>commit</code> → <code>push</code></strong>.</p>
+</div>
+<div style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #3a6bc4; border-radius: 8px; padding: 0.6em 1em;">
+<p>✅ Trabaja en <strong>tu rama</strong>; integra a <code>main</code> con un <strong>Merge Request</strong> revisado.</p>
+</div>
+<div style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#FFF4E5,#FFFBF5); border-left: 4px solid #FC6D26; border-radius: 8px; padding: 0.6em 1em;">
+<p>✅ Commits <strong>pequeños y seguidos</strong>, con mensajes que se entiendan.</p>
+</div>
+<div style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#E8F6EF,#F5FBF8); border-left: 4px solid #27AE60; border-radius: 8px; padding: 0.6em 1em;">
+<p>✅ <strong>No tengas miedo</strong>: si hiciste commit, tu trabajo está a salvo.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="gracias" class="slide level2">
+<h2>🎉 ¡Gracias!</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p><br></p>
+<p>❓ <strong>¿Preguntas?</strong></p>
+<p><br></p>
+<p>🔨 <strong>Para esta semana:</strong> que todo el equipo tenga el repositorio clonado, su archivo en <code>integrantes/</code> y al menos un Merge Request mergeado.</p>
+<p><br></p>
+<p>🌿 Nos vemos en el proyecto.</p>
+</div><div class="column" style="width:45%;">
+<p><br></p>
+<div style="background: linear-gradient(160deg,#0F2044,#2a5298); color:white; border-radius:12px; padding:1.5em; text-align:center;">
+<p><span style="font-size:1.15em"><strong>Git y GitLab sin miedo</strong></span></p>
+<p><br></p>
+<p><span style="font-size:0.75em">Análisis y Diseño de Software<br>
+Departamento de Informática<br>
+UTFSM</span></p>
+<p><br></p>
+<p><span style="font-size:0.8em">Francisco Alfaro Medina</span></p>
+</div>
+</div></div>
+<style>
+.reveal .slides h1 {
+  font-size: 2em;
+}
+.reveal .slides h2 {
+  font-size: 1.5em;
+}
+.reveal .slides p {
+  font-size: 0.8em;
+}
+.reveal .slides table {
+  font-size: 0.75em;
+  width: 95%;
+  margin: 0 auto;
+}
+.reveal .slides ul {
+  font-size: 0.8em;
+}
+.reveal .slides ol {
+  font-size: 0.8em;
+}
+.reveal .slides pre code {
+  font-size: 0.95em;
+  line-height: 1.3;
+}
+.reveal .slide-logo {
+   max-height: 2.5em !important;
+}
+.reveal blockquote {
+  font-size: 0.82em;
+  width: 92%;
+}
+/* Los diagramas Mermaid nunca deben desbordar la diapositiva */
+.reveal .slides pre.mermaid-js,
+.reveal .slides .cell-output-display {
+  text-align: center;
+}
+.reveal .slides pre.mermaid-js svg {
+  max-width: 100% !important;
+  max-height: 62vh !important;
+  height: auto !important;
+  margin: 0 auto;
+}
+/* Mermaid calcula las cajas midiendo el texto con su fuente sans-serif.
+   Quarto pinta las etiquetas con var(--mermaid-font-family); si esa
+   variable no está definida, heredan la Georgia del tema y el texto se
+   desborda de las cajas. La definimos aquí. */
+:root,
+.reveal {
+  --mermaid-font-family: "trebuchet ms", verdana, arial, sans-serif;
+}
+.reveal .slides pre.mermaid-js svg text,
+.reveal .slides pre.mermaid-js svg .nodeLabel,
+.reveal .slides pre.mermaid-js svg .edgeLabel,
+.reveal .slides pre.mermaid-js svg foreignObject * {
+  font-family: "trebuchet ms", verdana, arial, sans-serif !important;
+}
+</style>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="images/usm.png" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 800,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copiado");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copiado");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/falfaro\.xyz\/talks\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <input type="hidden" id="giscus-base-theme" value="light">
+    <input type="hidden" id="giscus-alt-theme" value="dark">
+    <script>
+      function loadGiscus() {
+        // Function to get the theme based on body class
+        const getTheme = () => {
+          let baseTheme = document.getElementById('giscus-base-theme').value;
+          let altTheme = document.getElementById('giscus-alt-theme').value;
+          return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+        };
+        const script = document.createElement("script");
+        script.src = "https://giscus.app/client.js";
+        script.async = true;
+        script.dataset.repo = "Seth-Nut/talks";
+        script.dataset.repoId = "R_kgDOM_kl2g";
+        script.dataset.category = "General";
+        script.dataset.categoryId = "DIC_kwDOM_kl2s4CjYAh";
+        script.dataset.mapping = "title";
+        script.dataset.reactionsEnabled = "1";
+        script.dataset.emitMetadata = "0";
+        script.dataset.inputPosition = "top";
+        script.dataset.theme = getTheme();
+        script.dataset.lang = "en";
+        script.crossOrigin = "anonymous";
+        // Append the script to the desired div instead of at the end of the body
+        document.getElementById("quarto-content").appendChild(script);
+      }
+      loadGiscus();
+    </script>
+    
+
+</body></html>

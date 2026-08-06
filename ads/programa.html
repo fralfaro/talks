@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Francisco Alfaro Medina">
+
+<title>Propuesta formativa — Git y GitLab – Talks</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/logo_fam.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6fe166fdc662589bf33422d780bb9bf9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/doberman.png" alt="" class="navbar-logo light-content">
+    <img src="../images/doberman.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Talks</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fralfaro/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/faam/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://falfaro.xyz/portfolio/"> <i class="bi bi-globe" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul class="collapse">
+  <li><a href="#objetivo-general" id="toc-objetivo-general" class="nav-link active" data-scroll-target="#objetivo-general">1. Objetivo general</a></li>
+  <li><a href="#objetivos-específicos" id="toc-objetivos-específicos" class="nav-link" data-scroll-target="#objetivos-específicos">2. Objetivos específicos</a></li>
+  <li><a href="#audiencia" id="toc-audiencia" class="nav-link" data-scroll-target="#audiencia">3. Audiencia</a></li>
+  <li><a href="#duración-sugerida" id="toc-duración-sugerida" class="nav-link" data-scroll-target="#duración-sugerida">4. Duración sugerida</a></li>
+  <li><a href="#estructura-de-la-charla" id="toc-estructura-de-la-charla" class="nav-link" data-scroll-target="#estructura-de-la-charla">5. Estructura de la charla</a></li>
+  <li><a href="#parte-i-git" id="toc-parte-i-git" class="nav-link" data-scroll-target="#parte-i-git">Parte I: Git</a>
+  <ul class="collapse">
+  <li><a href="#qué-es-git" id="toc-qué-es-git" class="nav-link" data-scroll-target="#qué-es-git">5.1 Qué es Git</a></li>
+  <li><a href="#por-qué-usar-git" id="toc-por-qué-usar-git" class="nav-link" data-scroll-target="#por-qué-usar-git">5.2 Por qué usar Git</a></li>
+  <li><a href="#modelo-mental-de-git" id="toc-modelo-mental-de-git" class="nav-link" data-scroll-target="#modelo-mental-de-git">5.3 Modelo mental de Git</a></li>
+  <li><a href="#ciclo-básico-de-trabajo" id="toc-ciclo-básico-de-trabajo" class="nav-link" data-scroll-target="#ciclo-básico-de-trabajo">5.4 Ciclo básico de trabajo</a></li>
+  <li><a href="#ramas-y-estrategia-de-branching" id="toc-ramas-y-estrategia-de-branching" class="nav-link" data-scroll-target="#ramas-y-estrategia-de-branching">5.5 Ramas y estrategia de branching</a></li>
+  <li><a href="#conflictos" id="toc-conflictos" class="nav-link" data-scroll-target="#conflictos">5.6 Conflictos</a></li>
+  </ul></li>
+  <li><a href="#parte-ii-gitlab" id="toc-parte-ii-gitlab" class="nav-link" data-scroll-target="#parte-ii-gitlab">Parte II: GitLab</a>
+  <ul class="collapse">
+  <li><a href="#qué-es-gitlab-y-en-qué-se-diferencia-de-git" id="toc-qué-es-gitlab-y-en-qué-se-diferencia-de-git" class="nav-link" data-scroll-target="#qué-es-gitlab-y-en-qué-se-diferencia-de-git">5.7 Qué es GitLab y en qué se diferencia de Git</a></li>
+  <li><a href="#equivalencias-github-gitlab" id="toc-equivalencias-github-gitlab" class="nav-link" data-scroll-target="#equivalencias-github-gitlab">5.8 Equivalencias GitHub → GitLab</a></li>
+  <li><a href="#contenidos-gitlab" id="toc-contenidos-gitlab" class="nav-link" data-scroll-target="#contenidos-gitlab">5.9 Contenidos GitLab</a></li>
+  </ul></li>
+  <li><a href="#parte-iii-ia-responsable-en-flujos-git-y-gitlab" id="toc-parte-iii-ia-responsable-en-flujos-git-y-gitlab" class="nav-link" data-scroll-target="#parte-iii-ia-responsable-en-flujos-git-y-gitlab">Parte III: IA responsable en flujos Git y GitLab</a>
+  <ul class="collapse">
+  <li><a href="#dónde-ayuda" id="toc-dónde-ayuda" class="nav-link" data-scroll-target="#dónde-ayuda">5.10 Dónde ayuda</a></li>
+  <li><a href="#riesgos-y-reglas-del-curso" id="toc-riesgos-y-reglas-del-curso" class="nav-link" data-scroll-target="#riesgos-y-reglas-del-curso">5.11 Riesgos y reglas del curso</a></li>
+  <li><a href="#cierre" id="toc-cierre" class="nav-link" data-scroll-target="#cierre">5.12 Cierre</a></li>
+  <li><a href="#evaluación-sugerida-opcional" id="toc-evaluación-sugerida-opcional" class="nav-link" data-scroll-target="#evaluación-sugerida-opcional">6. Evaluación sugerida (opcional)</a></li>
+  <li><a href="#materiales-y-logística" id="toc-materiales-y-logística" class="nav-link" data-scroll-target="#materiales-y-logística">7. Materiales y logística</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Propuesta formativa — Git y GitLab</h1>
+<p class="subtitle lead">Taller de control de versiones y trabajo colaborativo</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-contents">
+             <p>Francisco Alfaro Medina </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Curso</strong></td>
+<td style="text-align: left;">Análisis y Diseño de Software</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Modalidad</strong></td>
+<td style="text-align: left;">Taller práctico (presentación + laboratorio en equipo)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Momento sugerido</strong></td>
+<td style="text-align: left;">Semanas 1–3 del semestre (agosto)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Plataforma</strong></td>
+<td style="text-align: left;">GitLab institucional del Departamento</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Relator</strong></td>
+<td style="text-align: left;">Francisco Alfaro Medina</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Presentación</strong></td>
+<td style="text-align: left;"><a href="git_gitlab.html"><code>git_gitlab.qmd</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<section id="objetivo-general" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-general">1. Objetivo general</h2>
+<blockquote class="blockquote">
+<p>Que las y los estudiantes sean capaces de <strong>organizar el trabajo de su equipo de desarrollo usando control de versiones con Git y la plataforma GitLab del Departamento</strong>, aplicando un flujo de trabajo colaborativo —ramas, commits, Merge Requests, Issues y revisión de código— que les permita construir el proyecto del semestre de forma trazable, coordinada y verificable, incorporando además criterios de uso responsable de herramientas de inteligencia artificial.</p>
+</blockquote>
+<p>En lenguaje directo para el estudiante:</p>
+<p><em>“Al terminar este taller vas a saber trabajar en un proyecto de software con otras personas sin pisarte el trabajo, sin perder cambios y sin mandar archivos por WhatsApp. Vas a tener un repositorio en el GitLab del Departamento, con tareas repartidas, ramas por funcionalidad y un historial que muestra quién hizo qué y por qué.”</em></p>
+<hr>
+</section>
+<section id="objetivos-específicos" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos-específicos">2. Objetivos específicos</h2>
+<p>Al finalizar el taller, la o el estudiante será capaz de:</p>
+<section id="bloque-a-git-fundamentos" class="level3">
+<h3 class="anchored" data-anchor-id="bloque-a-git-fundamentos">Bloque A — Git (fundamentos)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 53%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Objetivo específico</th>
+<th>Nivel (Bloom)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A1</td>
+<td><strong>Explicar qué problema resuelve Git</strong> y por qué versionar no es lo mismo que guardar copias de archivos.</td>
+<td>Comprender</td>
+</tr>
+<tr class="even">
+<td>A2</td>
+<td><strong>Diferenciar Git de GitLab</strong>, identificando qué ocurre en la máquina local y qué en la plataforma remota.</td>
+<td>Comprender</td>
+</tr>
+<tr class="odd">
+<td>A3</td>
+<td><strong>Aplicar el ciclo básico de trabajo</strong>: <code>clone</code>, <code>status</code>, <code>add</code>, <code>commit</code>, <code>push</code>, <code>pull</code>.</td>
+<td>Aplicar</td>
+</tr>
+<tr class="even">
+<td>A4</td>
+<td><strong>Explicar el modelo mental de Git</strong>: working directory, staging area, repositorio local y repositorio remoto.</td>
+<td>Comprender</td>
+</tr>
+<tr class="odd">
+<td>A5</td>
+<td><strong>Crear y manejar ramas</strong>, aplicando una estrategia básica de branching adecuada a un proyecto de curso.</td>
+<td>Aplicar</td>
+</tr>
+<tr class="even">
+<td>A6</td>
+<td><strong>Resolver conflictos simples</strong> de merge, entendiendo por qué se producen.</td>
+<td>Aplicar</td>
+</tr>
+<tr class="odd">
+<td>A7</td>
+<td><strong>Aplicar buenas prácticas</strong> de commits (atómicos, mensajes descriptivos), nombres de ramas y uso de <code>.gitignore</code>.</td>
+<td>Aplicar</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="bloque-b-gitlab-colaboración" class="level3">
+<h3 class="anchored" data-anchor-id="bloque-b-gitlab-colaboración">Bloque B — GitLab (colaboración)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 53%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Objetivo específico</th>
+<th>Nivel (Bloom)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>B1</td>
+<td><strong>Navegar el GitLab institucional</strong>: grupos, proyectos, roles y permisos.</td>
+<td>Comprender</td>
+</tr>
+<tr class="even">
+<td>B2</td>
+<td><strong>Crear y gestionar Issues</strong> con descripción, etiquetas, responsable y estimación.</td>
+<td>Aplicar</td>
+</tr>
+<tr class="odd">
+<td>B3</td>
+<td><strong>Crear Merge Requests</strong>, vincularlos a Issues y describir el cambio para quien revisa.</td>
+<td>Aplicar</td>
+</tr>
+<tr class="even">
+<td>B4</td>
+<td><strong>Revisar código</strong> de un par: comentar líneas, proponer cambios (<em>suggestions</em>), aprobar o pedir ajustes.</td>
+<td>Analizar</td>
+</tr>
+<tr class="odd">
+<td>B5</td>
+<td><strong>Organizar entregas</strong> con Milestones y Boards (tablero de tareas del equipo).</td>
+<td>Aplicar</td>
+</tr>
+<tr class="even">
+<td>B6</td>
+<td><strong>Reconocer el rol de los Pipelines CI/CD</strong> como verificación automática antes de integrar cambios.</td>
+<td>Comprender</td>
+</tr>
+<tr class="odd">
+<td>B7</td>
+<td><strong>Definir el flujo de trabajo del equipo</strong> y dejarlo documentado en el repositorio (<code>CONTRIBUTING.md</code>).</td>
+<td>Crear</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="bloque-c-ia-responsable-en-flujos-gitgitlab" class="level3">
+<h3 class="anchored" data-anchor-id="bloque-c-ia-responsable-en-flujos-gitgitlab">Bloque C — IA responsable en flujos Git/GitLab</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 53%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#</th>
+<th>Objetivo específico</th>
+<th>Nivel (Bloom)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>C1</td>
+<td><strong>Identificar dónde la IA aporta valor real</strong> en el flujo: mensajes de commit, descripciones de MR, revisión previa, tests, CI.</td>
+<td>Comprender</td>
+</tr>
+<tr class="even">
+<td>C2</td>
+<td><strong>Usar IA como asistente de revisión</strong>, no como autor sin supervisión.</td>
+<td>Aplicar</td>
+</tr>
+<tr class="odd">
+<td>C3</td>
+<td><strong>Reconocer los riesgos</strong>: filtración de credenciales y código privado, alucinaciones, dependencia y pérdida de aprendizaje.</td>
+<td>Comprender</td>
+</tr>
+<tr class="even">
+<td>C4</td>
+<td><strong>Aplicar la política de uso y atribución de IA</strong> del curso al declarar el aporte de la herramienta en el Merge Request.</td>
+<td>Aplicar</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="audiencia" class="level2">
+<h2 class="anchored" data-anchor-id="audiencia">3. Audiencia</h2>
+<p><strong>Perfil esperado</strong></p>
+<ul>
+<li>Estudiantes de <strong>pregrado</strong> de Ingeniería (Informática / Civil Informática / afines).</li>
+<li>Cursando <strong>Análisis y Diseño de Software</strong>, típicamente en años intermedios de la carrera.</li>
+<li>Con <strong>conocimientos básicos de programación</strong> (al menos un lenguaje: Python, Java, JavaScript, C++), manejo de archivos y terminal a nivel elemental.</li>
+<li><strong>Poca o nula experiencia previa con Git/GitLab</strong>. Es habitual que hayan visto Git de pasada, que sepan hacer <code>git clone</code> y poco más, o que solo hayan usado la interfaz web para descargar un ZIP.</li>
+<li>Trabajarán en <strong>equipos de 3 a 5 personas</strong> durante todo el semestre sobre un proyecto común.</li>
+</ul>
+<p><strong>Supuestos y necesidades</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 35%">
+<col style="width: 49%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspecto</th>
+<th>Situación esperada</th>
+<th>Implicancia para el diseño</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Terminal</td>
+<td>Uso básico e inseguro</td>
+<td>Mostrar cada comando en pantalla, sin asumir fluidez</td>
+</tr>
+<tr class="even">
+<td>Cuentas</td>
+<td>Cuenta institucional activa</td>
+<td>Verificar acceso al GitLab del Departamento <strong>antes</strong> de la sesión</td>
+</tr>
+<tr class="odd">
+<td>Equipos</td>
+<td>Ya conformados o en formación</td>
+<td>Las actividades se hacen en equipo real, no simulado</td>
+</tr>
+<tr class="even">
+<td>Miedo típico</td>
+<td>“Si me equivoco, rompo el repositorio”</td>
+<td>Dedicar un bloque explícito a “cómo deshacer”</td>
+</tr>
+<tr class="odd">
+<td>Heterogeneidad</td>
+<td>1–2 personas por equipo con experiencia</td>
+<td>Usarlas como apoyo entre pares durante el laboratorio</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Requisitos previos a la sesión</strong> (enviar por correo con 48 h de anticipación):</p>
+<ol type="1">
+<li>Git instalado y verificado con <code>git --version</code>.</li>
+<li>Acceso confirmado al GitLab del Departamento (login institucional).</li>
+<li>Editor de código instalado (VS Code recomendado).</li>
+<li>Equipo de proyecto definido, con un integrante designado como <em>Maintainer</em>.</li>
+</ol>
+<hr>
+</section>
+<section id="duración-sugerida" class="level2">
+<h2 class="anchored" data-anchor-id="duración-sugerida">4. Duración sugerida</h2>
+<p>Se propone una <strong>sesión de 3 horas (180 min)</strong> en formato taller, con laboratorio integrado. Es la duración que permite cubrir Git + GitLab <strong>y</strong> dejar el repositorio del equipo efectivamente configurado antes de salir de la sala — que es el resultado que realmente importa en las primeras semanas.</p>
+<section id="versión-recomendada-taller-de-3-horas" class="level3">
+<h3 class="anchored" data-anchor-id="versión-recomendada-taller-de-3-horas">Versión recomendada — Taller de 3 horas</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 21%">
+<col style="width: 28%">
+<col style="width: 21%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Bloque</th>
+<th>Contenido</th>
+<th>Tiempo</th>
+<th>Modalidad</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Apertura, diagnóstico rápido y objetivos</td>
+<td>10 min</td>
+<td>Expositivo</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td><strong>Git</strong>: qué es, qué problema resuelve, versionar ≠ guardar</td>
+<td>15 min</td>
+<td>Expositivo</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td><strong>Modelo mental</strong>: working directory → staging → local → remoto</td>
+<td>15 min</td>
+<td>Expositivo + demo</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td><strong>Ciclo básico</strong>: <code>clone</code>, <code>status</code>, <code>add</code>, <code>commit</code>, <code>push</code>, <code>pull</code></td>
+<td>20 min</td>
+<td>Demo en vivo</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>🔨 <strong>Laboratorio 1</strong> — primer commit y push al repo del equipo</td>
+<td>20 min</td>
+<td>Práctica en equipo</td>
+</tr>
+<tr class="even">
+<td>—</td>
+<td>☕ <em>Pausa</em></td>
+<td>10 min</td>
+<td>—</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><strong>Ramas y estrategias de branching</strong>; merge y conflictos</td>
+<td>25 min</td>
+<td>Expositivo + demo</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><strong>GitLab</strong>: grupos, proyectos, roles; Issues y Milestones</td>
+<td>20 min</td>
+<td>Expositivo + demo</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><strong>Merge Requests y revisión de código</strong>; Boards; CI/CD</td>
+<td>20 min</td>
+<td>Expositivo + demo</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>🔨 <strong>Laboratorio 2</strong> — Issue → rama → MR → revisión cruzada</td>
+<td>25 min</td>
+<td>Práctica en equipo</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td><strong>IA responsable</strong> en flujos Git/GitLab: usos, riesgos y política</td>
+<td>15 min</td>
+<td>Expositivo + demo</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Cómo deshacer errores, chuleta de comandos y cierre</td>
+<td>10 min</td>
+<td>Expositivo</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><strong>Total</strong></td>
+<td><strong>180 min</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="versión-reducida-charla-de-90-minutos" class="level3">
+<h3 class="anchored" data-anchor-id="versión-reducida-charla-de-90-minutos">Versión reducida — Charla de 90 minutos</h3>
+<p>Cuando no hay bloque de laboratorio disponible, se recomienda <strong>charla de 90 min + tarea guiada</strong> (el laboratorio se hace en ayudantía o de forma asíncrona).</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Bloque</th>
+<th>Contenido</th>
+<th>Tiempo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>Apertura y objetivos</td>
+<td>5 min</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>Git: qué es y por qué (modelo mental incluido)</td>
+<td>20 min</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>Ciclo básico + demo en vivo</td>
+<td>15 min</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>Ramas, merge y conflictos</td>
+<td>15 min</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>GitLab: Issues, Merge Requests, revisión de código</td>
+<td>20 min</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>Boards, Milestones y CI/CD (panorámica)</td>
+<td>5 min</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>IA responsable en el flujo</td>
+<td>5 min</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Cierre, chuleta y tarea guiada</td>
+<td>5 min</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td><strong>Total</strong></td>
+<td><strong>90 min</strong></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="versión-intermedia-2-horas" class="level3">
+<h3 class="anchored" data-anchor-id="versión-intermedia-2-horas">Versión intermedia — 2 horas</h3>
+<p>Estructura de 3 h <strong>eliminando el Laboratorio 1</strong> (se reemplaza por demo guiada de 5 min) y <strong>acortando el Laboratorio 2 a 15 min</strong>. Total: 120 min.</p>
+<blockquote class="blockquote">
+<p><strong>Recomendación:</strong> si existe la opción, 3 horas. Git se aprende con las manos, no mirando diapositivas; los laboratorios son el bloque que no conviene sacrificar.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="estructura-de-la-charla" class="level2">
+<h2 class="anchored" data-anchor-id="estructura-de-la-charla">5. Estructura de la charla</h2>
+<p>La presentación se organiza en tres partes: <strong>Git</strong> (la herramienta), <strong>GitLab</strong> (la plataforma) y <strong>IA responsable</strong> (el complemento transversal).</p>
+<hr>
+</section>
+<section id="parte-i-git" class="level1">
+<h1>Parte I: Git</h1>
+<section id="qué-es-git" class="level2">
+<h2 class="anchored" data-anchor-id="qué-es-git">5.1 Qué es Git</h2>
+<p><strong>Ideas centrales a transmitir</strong></p>
+<ul>
+<li><p><strong>Control de versiones</strong>: un sistema que registra los cambios de un conjunto de archivos a lo largo del tiempo, permitiendo recuperar cualquier estado anterior.</p></li>
+<li><p><strong>Historial del proyecto</strong>: Git no guarda solo el estado actual, guarda <em>la secuencia de decisiones</em> que llevaron hasta él. El historial es documentación.</p></li>
+<li><p><strong>Guardar archivos ≠ versionar software</strong>:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Guardar archivos</th>
+<th>Versionar software</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Copias con nombres distintos</td>
+<td>Un solo archivo, muchas versiones</td>
+</tr>
+<tr class="even">
+<td>“¿Cuál era la buena?”</td>
+<td>Historial lineal y explícito</td>
+</tr>
+<tr class="odd">
+<td>Sin razón del cambio</td>
+<td>Cada cambio con mensaje y autor</td>
+</tr>
+<tr class="even">
+<td>No se puede fusionar</td>
+<td>Trabajo paralelo integrable</td>
+</tr>
+<tr class="odd">
+<td>Sin trazabilidad</td>
+<td><code>git blame</code>, <code>git log</code>, <code>git diff</code></td>
+</tr>
+</tbody>
+</table></li>
+<li><p><strong>Repositorio local</strong>: la carpeta <code>.git</code> dentro del proyecto contiene <em>todo</em> el historial. Git funciona sin conexión — no se necesita servidor para versionar.</p></li>
+<li><p><strong>Commits como puntos de control</strong>: una foto del proyecto en un instante, con autor, fecha, mensaje e identificador único (hash). Se puede volver a cualquiera.</p></li>
+<li><p><strong>Ramas como líneas alternativas de trabajo</strong>: permiten desarrollar una funcionalidad sin tocar la versión estable, y luego integrarla.</p></li>
+</ul>
+<p><strong>Analogía sugerida para clase:</strong> un videojuego. El commit es el <em>save point</em>; la rama es una partida paralela para probar otra estrategia; el merge es traer a la partida principal lo que resultó bien.</p>
+</section>
+<section id="por-qué-usar-git" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-usar-git">5.2 Por qué usar Git</h2>
+<p>Partir del dolor conocido — es el gancho más efectivo con estudiantes:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 48%">
+<col style="width: 51%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Problema típico</th>
+<th>Qué resuelve Git</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>informe_final_final_v2_ahora_si.py</code></td>
+<td>Un archivo, historial completo de versiones</td>
+</tr>
+<tr class="even">
+<td>“Se me borró el avance de ayer”</td>
+<td>Todo commit es recuperable (<code>git reflog</code>)</td>
+</tr>
+<tr class="odd">
+<td>Dos personas editando el mismo archivo</td>
+<td>Ramas + merge con detección de conflictos</td>
+</tr>
+<tr class="even">
+<td>“¿Quién cambió esto y por qué?”</td>
+<td><code>git blame</code> y <code>git log</code></td>
+</tr>
+<tr class="odd">
+<td>“Funcionaba el martes y ahora no”</td>
+<td><code>git diff</code>, <code>git revert</code>, <code>git bisect</code></td>
+</tr>
+<tr class="even">
+<td>Enviar el proyecto por correo/WhatsApp</td>
+<td>Un repositorio remoto como fuente única de verdad</td>
+</tr>
+<tr class="odd">
+<td>“No sé qué está haciendo mi compañero”</td>
+<td>Ramas visibles, Issues y Merge Requests</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="modelo-mental-de-git" class="level2">
+<h2 class="anchored" data-anchor-id="modelo-mental-de-git">5.3 Modelo mental de Git</h2>
+<p>Es el concepto que más cuesta y el que más rinde. Cuatro zonas:</p>
+<ol type="1">
+<li><strong>Working Directory</strong> — los archivos que ves y editas.</li>
+<li><strong>Staging Area (index)</strong> — la antesala: lo que seleccionaste para el próximo commit.</li>
+<li><strong>Local Repository</strong> — el historial confirmado en tu máquina (<code>.git</code>).</li>
+<li><strong>Remote Repository</strong> — el repositorio en el GitLab del Departamento, compartido con el equipo.</li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Working Directory] --&gt;|git add| B[Staging Area]
+    B --&gt;|git commit| C[Local Repository]
+    C --&gt;|git push| D[Remote Repository]
+    D --&gt;|git pull| A
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><strong>Por qué existe el staging area</strong> (pregunta frecuente): permite construir commits <em>atómicos</em>. Si tocaste tres cosas distintas, puedes hacer tres commits separados y coherentes en lugar de uno gigante llamado “cambios varios”.</p>
+</section>
+<section id="ciclo-básico-de-trabajo" class="level2">
+<h2 class="anchored" data-anchor-id="ciclo-básico-de-trabajo">5.4 Ciclo básico de trabajo</h2>
+<p><code>clone</code> → <code>status</code> → <code>add</code> → <code>commit</code> → <code>pull</code> → <code>push</code>, con demostración en vivo sobre un repositorio real del curso.</p>
+</section>
+<section id="ramas-y-estrategia-de-branching" class="level2">
+<h2 class="anchored" data-anchor-id="ramas-y-estrategia-de-branching">5.5 Ramas y estrategia de branching</h2>
+<ul>
+<li>Qué es una rama y por qué es barata en Git.</li>
+<li>Convención de nombres: <code>feature/</code>, <code>fix/</code>, <code>docs/</code>.</li>
+<li>Estrategia recomendada para el curso: <strong>rama <code>main</code> protegida + una rama por Issue + integración vía Merge Request</strong>.</li>
+<li><code>merge</code> vs <code>rebase</code>: cuándo cada uno (y la regla de oro: no reescribir historia compartida).</li>
+</ul>
+</section>
+<section id="conflictos" class="level2">
+<h2 class="anchored" data-anchor-id="conflictos">5.6 Conflictos</h2>
+<p>Por qué ocurren, cómo se ven los marcadores <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>, y cómo resolverlos paso a paso. Incluye el mensaje clave: <strong>un conflicto no es un error, es Git pidiendo una decisión humana.</strong></p>
+<hr>
+</section>
+</section>
+<section id="parte-ii-gitlab" class="level1">
+<h1>Parte II: GitLab</h1>
+<section id="qué-es-gitlab-y-en-qué-se-diferencia-de-git" class="level2">
+<h2 class="anchored" data-anchor-id="qué-es-gitlab-y-en-qué-se-diferencia-de-git">5.7 Qué es GitLab y en qué se diferencia de Git</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 37%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>Git</strong></th>
+<th><strong>GitLab</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Qué es</td>
+<td>Programa de control de versiones</td>
+<td>Plataforma web de colaboración</td>
+</tr>
+<tr class="even">
+<td>Dónde vive</td>
+<td>Tu computador</td>
+<td>Servidor del Departamento</td>
+</tr>
+<tr class="odd">
+<td>Sirve para</td>
+<td>Versionar código</td>
+<td>Coordinar al equipo</td>
+</tr>
+<tr class="even">
+<td>Se usa con</td>
+<td>Terminal / editor</td>
+<td>Navegador</td>
+</tr>
+<tr class="odd">
+<td>Sin internet</td>
+<td>Funciona</td>
+<td>No funciona</td>
+</tr>
+</tbody>
+</table>
+<p>Analogía: Git es el motor; GitLab es el auto completo (motor + tablero + espejos + copiloto).</p>
+</section>
+<section id="equivalencias-github-gitlab" class="level2">
+<h2 class="anchored" data-anchor-id="equivalencias-github-gitlab">5.8 Equivalencias GitHub → GitLab</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>GitHub</th>
+<th>GitLab</th>
+<th>Para qué sirve</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Repository</td>
+<td><strong>Repository / Project</strong></td>
+<td>El proyecto y su código</td>
+</tr>
+<tr class="even">
+<td>Pull Request</td>
+<td><strong>Merge Request (MR)</strong></td>
+<td>Proponer integrar cambios</td>
+</tr>
+<tr class="odd">
+<td>Issues</td>
+<td><strong>Issues</strong></td>
+<td>Tareas, bugs, preguntas</td>
+</tr>
+<tr class="even">
+<td>Projects</td>
+<td><strong>Boards</strong></td>
+<td>Tablero kanban del equipo</td>
+</tr>
+<tr class="odd">
+<td>Milestones</td>
+<td><strong>Milestones</strong></td>
+<td>Hitos y entregas</td>
+</tr>
+<tr class="even">
+<td>Actions</td>
+<td><strong>CI/CD Pipelines</strong></td>
+<td>Automatización y verificación</td>
+</tr>
+<tr class="odd">
+<td>Organizations</td>
+<td><strong>Groups</strong></td>
+<td>Agrupación de proyectos</td>
+</tr>
+<tr class="even">
+<td>Wiki / Discussions</td>
+<td><strong>Wiki / Threads</strong></td>
+<td>Documentación y conversación</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="contenidos-gitlab" class="level2">
+<h2 class="anchored" data-anchor-id="contenidos-gitlab">5.9 Contenidos GitLab</h2>
+<ul>
+<li><strong>Estructura y roles</strong>: Groups → Projects; Guest / Reporter / Developer / Maintainer / Owner.</li>
+<li><strong>Repository</strong>: archivos, ramas, tags, <em>protected branches</em>.</li>
+<li><strong>Issues</strong>: anatomía de un buen Issue, labels, assignee, due date, checklists.</li>
+<li><strong>Milestones</strong>: mapear las entregas del semestre.</li>
+<li><strong>Boards</strong>: To Do → Doing → Review → Done; el tablero como estado del equipo.</li>
+<li><strong>Merge Requests</strong>: creación, descripción, <code>Closes #12</code>, <em>Draft</em>, approvals, <em>squash</em>.</li>
+<li><strong>Revisión de código</strong>: comentarios en línea, <em>suggestions</em>, threads resueltos, qué mirar al revisar.</li>
+<li><strong>CI/CD Pipelines</strong>: <code>.gitlab-ci.yml</code>, ejemplo mínimo (lint + tests), semáforo verde/rojo en el MR.</li>
+<li><strong>Flujo completo del equipo</strong>: Issue → rama → commits → MR → pipeline → revisión → merge → cierre del Issue.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="parte-iii-ia-responsable-en-flujos-git-y-gitlab" class="level1">
+<h1>Parte III: IA responsable en flujos Git y GitLab</h1>
+<section id="dónde-ayuda" class="level2">
+<h2 class="anchored" data-anchor-id="dónde-ayuda">5.10 Dónde ayuda</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 44%">
+<col style="width: 36%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tarea</th>
+<th>Aporte de la IA</th>
+<th>Quién decide</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mensaje de commit</td>
+<td>Redactar desde el <code>diff</code></td>
+<td>Tú</td>
+</tr>
+<tr class="even">
+<td>Descripción de MR</td>
+<td>Resumir el cambio y su motivación</td>
+<td>Tú</td>
+</tr>
+<tr class="odd">
+<td>Revisión previa</td>
+<td>Detectar errores antes de pedir revisión humana</td>
+<td>Tú</td>
+</tr>
+<tr class="even">
+<td>Conflictos</td>
+<td>Explicar qué cambió cada lado</td>
+<td>Tú</td>
+</tr>
+<tr class="odd">
+<td><code>.gitlab-ci.yml</code></td>
+<td>Generar un pipeline base</td>
+<td>Tú</td>
+</tr>
+<tr class="even">
+<td>Tests</td>
+<td>Proponer casos de prueba</td>
+<td>Tú</td>
+</tr>
+<tr class="odd">
+<td>Comandos Git</td>
+<td>Explicar qué hace un comando antes de ejecutarlo</td>
+<td>Tú</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="riesgos-y-reglas-del-curso" class="level2">
+<h2 class="anchored" data-anchor-id="riesgos-y-reglas-del-curso">5.11 Riesgos y reglas del curso</h2>
+<ol type="1">
+<li><strong>Nunca pegar credenciales, tokens ni <code>.env</code></strong> en un chat de IA.</li>
+<li><strong>Nunca hacer merge de código que no entiendes</strong>, venga de donde venga.</li>
+<li><strong>La IA no reemplaza la revisión humana</strong> — el MR sigue necesitando aprobación de un par.</li>
+<li><strong>Declarar el uso de IA</strong> en la descripción del Merge Request (sección “Uso de IA”).</li>
+<li><strong>La responsabilidad del código es del equipo</strong>, no de la herramienta.</li>
+</ol>
+</section>
+<section id="cierre" class="level2">
+<h2 class="anchored" data-anchor-id="cierre">5.12 Cierre</h2>
+<ul>
+<li>Cómo deshacer errores comunes: <code>restore</code>, <code>reset</code>, <code>revert</code>, <code>stash</code>, <code>reflog</code>.</li>
+<li>Chuleta de comandos imprimible.</li>
+<li>Checklist de configuración del repositorio del equipo.</li>
+<li>Recursos para seguir aprendiendo.</li>
+</ul>
+<hr>
+</section>
+<section id="evaluación-sugerida-opcional" class="level2">
+<h2 class="anchored" data-anchor-id="evaluación-sugerida-opcional">6. Evaluación sugerida (opcional)</h2>
+<p>Si el taller se evalúa, se propone una <strong>rúbrica de proceso</strong> aplicada al repositorio del equipo al final de la semana 3:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 25%">
+<col style="width: 22%">
+<col style="width: 15%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Criterio</th>
+<th>Insuficiente (1)</th>
+<th>Suficiente (2)</th>
+<th>Bueno (3)</th>
+<th>Destacado (4)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Uso de commits</td>
+<td>Menos de 3 commits, mensajes vacíos</td>
+<td>Commits regulares, mensajes básicos</td>
+<td>Commits atómicos con mensajes claros</td>
+<td>Convención consistente (ej. Conventional Commits)</td>
+</tr>
+<tr class="even">
+<td>Ramas</td>
+<td>Todo en <code>main</code></td>
+<td>Alguna rama creada</td>
+<td>Una rama por funcionalidad</td>
+<td>Convención de nombres + <code>main</code> protegida</td>
+</tr>
+<tr class="odd">
+<td>Issues</td>
+<td>Sin Issues</td>
+<td>Issues creados sin detalle</td>
+<td>Issues descritos y asignados</td>
+<td>Issues con labels, milestone y criterios de aceptación</td>
+</tr>
+<tr class="even">
+<td>Merge Requests</td>
+<td>Sin MR</td>
+<td>MR sin descripción</td>
+<td>MR descritos y vinculados a Issues</td>
+<td>MR revisados por pares con comentarios sustantivos</td>
+</tr>
+<tr class="odd">
+<td>Participación</td>
+<td>1 persona commitea</td>
+<td>2 personas</td>
+<td>Todo el equipo contribuye</td>
+<td>Contribución equilibrada y revisión cruzada</td>
+</tr>
+<tr class="even">
+<td>Uso de IA</td>
+<td>No declarado / código no comprendido</td>
+<td>Declarado parcialmente</td>
+<td>Declarado y comprendido</td>
+<td>Declarado, comprendido y críticamente evaluado</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Entregable de la semana 3:</strong> enlace al proyecto en el GitLab del Departamento con:</p>
+<ul class="task-list">
+<li><label><input type="checkbox"><code>README.md</code> con nombre del proyecto, equipo y cómo ejecutarlo</label></li>
+<li><label><input type="checkbox"><code>.gitignore</code> apropiado al lenguaje</label></li>
+<li><label><input type="checkbox"><code>CONTRIBUTING.md</code> con el flujo de trabajo acordado por el equipo</label></li>
+<li><label><input type="checkbox">Rama <code>main</code> protegida</label></li>
+<li><label><input type="checkbox">Al menos 5 Issues creados y asignados</label></li>
+<li><label><input type="checkbox">Al menos 1 Milestone con fecha de entrega</label></li>
+<li><label><input type="checkbox">Un Board configurado</label></li>
+<li><label><input type="checkbox">Al menos 1 Merge Request mergeado tras revisión de un par</label></li>
+</ul>
+<hr>
+</section>
+<section id="materiales-y-logística" class="level2">
+<h2 class="anchored" data-anchor-id="materiales-y-logística">7. Materiales y logística</h2>
+<p><strong>Para el relator</strong></p>
+<ul>
+<li>Presentación: <a href="../ads/git_gitlab.html"><code>git_gitlab.qmd</code></a> (Quarto + reveal.js)</li>
+<li>Repositorio de demostración en el GitLab del Departamento, preparado con conflicto sembrado para el bloque 5</li>
+<li>Terminal con fuente grande (≥ 18 pt) y prompt simplificado</li>
+<li>Plan B: si el GitLab institucional falla, tener la demo grabada o capturas de respaldo</li>
+</ul>
+<p><strong>Para estudiantes</strong></p>
+<ul>
+<li>Git instalado, acceso a GitLab verificado, editor instalado</li>
+<li>Chuleta de comandos (última sección de la presentación, exportable a PDF)</li>
+</ul>
+<p><strong>Ambiente</strong></p>
+<ul>
+<li>Sala con computadores o política BYOD</li>
+<li>Conectividad a la red institucional (el GitLab del Departamento puede requerir VPN fuera del campus — <strong>verificar antes</strong>)</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/falfaro\.xyz\/talks\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "Seth-Nut/talks";
+    script.dataset.repoId = "R_kgDOM_kl2g";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOM_kl2s4CjYAh";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Website creado con <a href="https://quarto.org/">Quarto</a> por Francisco Alfaro. Licencia: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fralfaro/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/faam/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://falfaro.xyz/portfolio/">
+      <i class="bi bi-globe" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

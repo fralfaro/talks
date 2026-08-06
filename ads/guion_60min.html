@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Francisco Alfaro Medina">
+
+<title>Guion del expositor — Git y GitLab sin miedo – Talks</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/logo_fam.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6fe166fdc662589bf33422d780bb9bf9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/doberman.png" alt="" class="navbar-logo light-content">
+    <img src="../images/doberman.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Talks</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Buscar"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Navegación de palanca" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fralfaro/"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/faam/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://falfaro.xyz/portfolio/"> <i class="bi bi-globe" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#objetivo-general" id="toc-objetivo-general" class="nav-link active" data-scroll-target="#objetivo-general">Objetivo general</a></li>
+  <li><a href="#resultados-de-aprendizaje" id="toc-resultados-de-aprendizaje" class="nav-link" data-scroll-target="#resultados-de-aprendizaje">Resultados de aprendizaje</a></li>
+  <li><a href="#programa-minuto-a-minuto" id="toc-programa-minuto-a-minuto" class="nav-link" data-scroll-target="#programa-minuto-a-minuto">Programa minuto a minuto</a></li>
+  <li><a href="#guion-breve-para-el-expositor" id="toc-guion-breve-para-el-expositor" class="nav-link" data-scroll-target="#guion-breve-para-el-expositor">Guion breve para el expositor</a>
+  <ul class="collapse">
+  <li><a href="#bloque-1-introducción-0005" id="toc-bloque-1-introducción-0005" class="nav-link" data-scroll-target="#bloque-1-introducción-0005">Bloque 1 — Introducción (00–05)</a></li>
+  <li><a href="#bloque-2-git-básico-0520" id="toc-bloque-2-git-básico-0520" class="nav-link" data-scroll-target="#bloque-2-git-básico-0520">Bloque 2 — Git básico (05–20)</a></li>
+  <li><a href="#bloque-3-flujo-individual-2030" id="toc-bloque-3-flujo-individual-2030" class="nav-link" data-scroll-target="#bloque-3-flujo-individual-2030">Bloque 3 — Flujo individual (20–30)</a></li>
+  <li><a href="#bloque-4-gitlab-básico-3045" id="toc-bloque-4-gitlab-básico-3045" class="nav-link" data-scroll-target="#bloque-4-gitlab-básico-3045">Bloque 4 — GitLab básico (30–45)</a></li>
+  <li><a href="#bloque-5-actividad-práctica-4555" id="toc-bloque-5-actividad-práctica-4555" class="nav-link" data-scroll-target="#bloque-5-actividad-práctica-4555">Bloque 5 — Actividad práctica (45–55)</a></li>
+  <li><a href="#bloque-6-ia-responsable-5560" id="toc-bloque-6-ia-responsable-5560" class="nav-link" data-scroll-target="#bloque-6-ia-responsable-5560">Bloque 6 — IA responsable (55–60)</a></li>
+  </ul></li>
+  <li><a href="#actividad-práctica-en-detalle" id="toc-actividad-práctica-en-detalle" class="nav-link" data-scroll-target="#actividad-práctica-en-detalle">Actividad práctica en detalle</a>
+  <ul class="collapse">
+  <li><a href="#preparación-previa-del-expositor" id="toc-preparación-previa-del-expositor" class="nav-link" data-scroll-target="#preparación-previa-del-expositor">Preparación previa (del expositor)</a></li>
+  <li><a href="#instrucciones-para-estudiantes-con-git-instalado" id="toc-instrucciones-para-estudiantes-con-git-instalado" class="nav-link" data-scroll-target="#instrucciones-para-estudiantes-con-git-instalado">Instrucciones para estudiantes — con Git instalado</a></li>
+  <li><a href="#alternativa-sin-git-instalado-todo-desde-la-web" id="toc-alternativa-sin-git-instalado-todo-desde-la-web" class="nav-link" data-scroll-target="#alternativa-sin-git-instalado-todo-desde-la-web">Alternativa sin Git instalado — todo desde la web</a></li>
+  <li><a href="#criterio-de-logro" id="toc-criterio-de-logro" class="nav-link" data-scroll-target="#criterio-de-logro">Criterio de logro</a></li>
+  </ul></li>
+  <li><a href="#checklist-final-para-estudiantes" id="toc-checklist-final-para-estudiantes" class="nav-link" data-scroll-target="#checklist-final-para-estudiantes">Checklist final para estudiantes</a></li>
+  <li><a href="#mini-glosario" id="toc-mini-glosario" class="nav-link" data-scroll-target="#mini-glosario">Mini glosario</a></li>
+  <li><a href="#diagramas-de-referencia" id="toc-diagramas-de-referencia" class="nav-link" data-scroll-target="#diagramas-de-referencia">Diagramas de referencia</a>
+  <ul class="collapse">
+  <li><a href="#flujo-básico-individual" id="toc-flujo-básico-individual" class="nav-link" data-scroll-target="#flujo-básico-individual">Flujo básico individual</a></li>
+  <li><a href="#flujo-de-trabajo-con-gitlab" id="toc-flujo-de-trabajo-con-gitlab" class="nav-link" data-scroll-target="#flujo-de-trabajo-con-gitlab">Flujo de trabajo con GitLab</a></li>
+  </ul></li>
+  <li><a href="#imágenes-por-capturar" id="toc-imágenes-por-capturar" class="nav-link" data-scroll-target="#imágenes-por-capturar">Imágenes por capturar</a></li>
+  <li><a href="#notas-de-logística" id="toc-notas-de-logística" class="nav-link" data-scroll-target="#notas-de-logística">Notas de logística</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Guion del expositor — Git y GitLab sin miedo</h1>
+<p class="subtitle lead">Charla-taller de 60 minutos · Análisis y Diseño de Software</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor/a</div>
+    <div class="quarto-title-meta-contents">
+             <p>Francisco Alfaro Medina </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Charla</strong></td>
+<td style="text-align: left;">Git y GitLab sin miedo — el flujo mínimo para trabajar en equipo</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Curso</strong></td>
+<td style="text-align: left;">Análisis y Diseño de Software</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Duración</strong></td>
+<td style="text-align: left;">60 minutos</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Modalidad</strong></td>
+<td style="text-align: left;">Charla-taller (expositivo + práctica en vivo)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Plataforma</strong></td>
+<td style="text-align: left;">GitLab institucional del Departamento</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Presentación</strong></td>
+<td style="text-align: left;"><a href="git_gitlab_60min.html"><code>git_gitlab_60min.qmd</code></a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<section id="objetivo-general" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-general">Objetivo general</h2>
+<p>Que las y los estudiantes entiendan y puedan ejecutar el <strong>flujo mínimo de trabajo con Git y GitLab</strong> —clonar, revisar cambios, hacer commits, subir y actualizar, usar ramas básicas, crear Issues y abrir Merge Requests simples— y que salgan de la sesión <strong>sin miedo a equivocarse</strong>.</p>
+</section>
+<section id="resultados-de-aprendizaje" class="level2">
+<h2 class="anchored" data-anchor-id="resultados-de-aprendizaje">Resultados de aprendizaje</h2>
+<p>Al finalizar la sesión, la o el estudiante será capaz de:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">#</th>
+<th style="text-align: left;">Resultado de aprendizaje</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">RA1</td>
+<td style="text-align: left;"><strong>Explicar</strong> qué problema resuelve Git y por qué versionar no es guardar copias.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RA2</td>
+<td style="text-align: left;"><strong>Distinguir</strong> Git de GitLab, y qué ocurre en su computador frente a qué ocurre en la plataforma.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">RA3</td>
+<td style="text-align: left;"><strong>Clonar</strong> el repositorio del equipo desde el GitLab del Departamento.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RA4</td>
+<td style="text-align: left;"><strong>Ejecutar</strong> el ciclo <code>status</code> → <code>add</code> → <code>commit</code> → <code>push</code> → <code>pull</code>.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">RA5</td>
+<td style="text-align: left;"><strong>Crear una rama</strong> con <code>git switch -c</code> y trabajar en ella.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RA6</td>
+<td style="text-align: left;"><strong>Crear un Issue</strong> y <strong>abrir un Merge Request</strong> simple, y revisar el de un compañero.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">RA7</td>
+<td style="text-align: left;"><strong>Reconocer</strong> los errores más comunes y saber cómo salir de ellos.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">RA8</td>
+<td style="text-align: left;"><strong>Usar IA de forma responsable</strong> como apoyo en su flujo de trabajo.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="programa-minuto-a-minuto" class="level2">
+<h2 class="anchored" data-anchor-id="programa-minuto-a-minuto">Programa minuto a minuto</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Min</th>
+<th style="text-align: left;">Bloque</th>
+<th style="text-align: left;">Contenido</th>
+<th style="text-align: left;">Diapositivas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">00–05</td>
+<td style="text-align: left;"><strong>1. Introducción</strong></td>
+<td style="text-align: left;">El <code>.zip</code> con nombres imposibles · problemas sin control de versiones · Git como historial ordenado · objetivo y programa</td>
+<td style="text-align: left;">1–6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">05–20</td>
+<td style="text-align: left;"><strong>2. Git básico</strong></td>
+<td style="text-align: left;">Qué es Git · las 8 palabras · diagrama de las 4 zonas · los 7 comandos, uno por uno (qué hace / cuándo / ejemplo / error común) · mensajes de commit · para qué sirven las ramas</td>
+<td style="text-align: left;">7–19</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">20–30</td>
+<td style="text-align: left;"><strong>3. Flujo individual</strong></td>
+<td style="text-align: left;">Diagrama del ciclo completo · los pasos con comandos exactos · las dos costumbres clave · qué es un conflicto</td>
+<td style="text-align: left;">20–24</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">30–45</td>
+<td style="text-align: left;"><strong>4. GitLab básico</strong></td>
+<td style="text-align: left;">Git ≠ GitLab · qué ofrece GitLab · repositorio remoto · Issues · Merge Requests · revisión de código · tablero · flujo recomendado</td>
+<td style="text-align: left;">25–34</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">45–55</td>
+<td style="text-align: left;"><strong>5. Actividad práctica</strong></td>
+<td style="text-align: left;"><code>integrantes/nombre-apellido.md</code> → commit → push → Merge Request → revisión cruzada · alternativa por web</td>
+<td style="text-align: left;">35–37</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">55–60</td>
+<td style="text-align: left;"><strong>6. IA responsable</strong></td>
+<td style="text-align: left;">Dónde ayuda · las cuatro advertencias · cierre, checklist y glosario</td>
+<td style="text-align: left;">38–46</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p><strong>Margen real:</strong> el bloque 5 es el que se estira o encoge. Si vas atrasado, redúcelo a 6 minutos y deja el Merge Request como tarea.</p>
+</blockquote>
+<hr>
+</section>
+<section id="guion-breve-para-el-expositor" class="level2">
+<h2 class="anchored" data-anchor-id="guion-breve-para-el-expositor">Guion breve para el expositor</h2>
+<section id="bloque-1-introducción-0005" class="level3">
+<h3 class="anchored" data-anchor-id="bloque-1-introducción-0005">Bloque 1 — Introducción (00–05)</h3>
+<p><strong>Diapositiva del <code>.zip</code>.</strong> Ábrela sin decir nada y espera dos segundos. Alguien se va a reír.</p>
+<blockquote class="blockquote">
+<p><em>“¿Cuántos tienen una carpeta parecida a esta ahora mismo? Levanten la mano sin vergüenza… yo también la tuve.”</em></p>
+</blockquote>
+<p>La idea es que el problema lo pongan ellos, no tú. Pregunta: <em>“¿qué pasa cuando dos personas del grupo editan el mismo archivo?”</em> — deja que respondan.</p>
+<p><strong>Cierra el bloque con la idea central:</strong></p>
+<blockquote class="blockquote">
+<p><em>“El problema no es que sean desordenados. Es que están usando la herramienta equivocada. Git es la herramienta correcta: en vez de guardar copias, guarda la historia.”</em></p>
+</blockquote>
+<p><strong>Analogía del videojuego.</strong> Funciona muy bien con este público: el commit es un <em>save point</em>. Nadie juega sin guardar.</p>
+<hr>
+</section>
+<section id="bloque-2-git-básico-0520" class="level3">
+<h3 class="anchored" data-anchor-id="bloque-2-git-básico-0520">Bloque 2 — Git básico (05–20)</h3>
+<p>Este es el bloque más denso. <strong>No lo leas: muéstralo.</strong> Ten una terminal abierta al lado con un repositorio de prueba.</p>
+<p><strong>Las 8 palabras.</strong> No las expliques una por una en detalle — dilas rápido y aclara que es una tabla de referencia para volver cuando se pierdan. Lo que sí explicas bien es el <strong>diagrama de las cuatro zonas</strong>.</p>
+<blockquote class="blockquote">
+<p><em>“Todo lo que hagan con Git es mover cambios entre estas cuatro cajas. Nada más. Si entienden este dibujo, entienden Git.”</em></p>
+</blockquote>
+<p><strong>Los 7 comandos.</strong> Ritmo de ~1,5 min cada uno. Para cada uno: qué hace en una frase, cuándo se usa, y <strong>detente en el error común</strong> — ahí está el valor real.</p>
+<p>Los tres errores que más importan y que conviene enfatizar:</p>
+<ul>
+<li><strong><code>git add .</code> a ciegas</strong> → suben <code>venv/</code>, archivos gigantes o un <code>.env</code> con contraseñas.</li>
+<li><strong><code>push</code> rechazado</strong> → es <em>el</em> error que todos van a ver esta semana. Que memoricen: <strong><code>pull</code> y después <code>push</code></strong>.</li>
+<li><strong>Trabajar en <code>main</code> sin darse cuenta</strong> → por eso <code>git status</code> antes de escribir código.</li>
+</ul>
+<p><strong>Mensajes de commit.</strong> Diapositiva de ❌ / ✅. Pregunta al curso: <em>“¿alguien reconoce alguno de los de la izquierda?”</em></p>
+<p><strong>Ramas.</strong> Mantenlo simple: <code>main</code> es lo que funciona, cada uno trabaja en su rama. <strong>No entres en merge vs rebase ni en estrategias de branching</strong> — no es esta charla.</p>
+<hr>
+</section>
+<section id="bloque-3-flujo-individual-2030" class="level3">
+<h3 class="anchored" data-anchor-id="bloque-3-flujo-individual-2030">Bloque 3 — Flujo individual (20–30)</h3>
+<p><strong>Muestra el diagrama y recórrelo con el dedo</strong>, en voz alta, una vuelta completa.</p>
+<p>Luego <strong>haz la demo en vivo</strong>: edita un archivo, <code>git status</code>, <code>git add</code>, <code>git commit</code>, <code>git push</code>. Que vean la salida real de la terminal, incluidos los mensajes que no entienden todavía.</p>
+<blockquote class="blockquote">
+<p><em>“Esto es literalmente todo lo que van a hacer el 95 % del tiempo, durante todo el semestre.”</em></p>
+</blockquote>
+<p><strong>Conflictos.</strong> Muéstralos, pero baja el nivel de alarma:</p>
+<blockquote class="blockquote">
+<p><em>“Un conflicto no es que rompieron algo. Es Git diciendo: ‘ustedes dos escribieron cosas distintas en la misma línea, decidan ustedes’. Es lo más normal del mundo.”</em></p>
+</blockquote>
+<hr>
+</section>
+<section id="bloque-4-gitlab-básico-3045" class="level3">
+<h3 class="anchored" data-anchor-id="bloque-4-gitlab-básico-3045">Bloque 4 — GitLab básico (30–45)</h3>
+<p><strong>Cambio de escenario: cierra la terminal y abre el navegador.</strong> El cambio físico ayuda a marcar la diferencia entre Git y GitLab.</p>
+<p>Empieza por la tabla <strong>Git ≠ GitLab</strong> y la analogía del motor y el auto.</p>
+<p>Después <strong>navega el GitLab del Departamento en vivo</strong> — es mucho mejor que las capturas. Recorrido sugerido:</p>
+<ol type="1">
+<li>La portada del proyecto y el botón <strong>Code</strong> con la URL para clonar.</li>
+<li><strong>Issues</strong> → crea uno en vivo, con título y responsable. Que vean lo rápido que es.</li>
+<li><strong>Merge requests</strong> → abre uno ya existente y muestra la pestaña <strong>Changes</strong> con el diff.</li>
+<li>Deja un comentario en una línea, para que vean cómo se revisa.</li>
+</ol>
+<blockquote class="blockquote">
+<p><em>“Fíjense: acá no discutimos por WhatsApp ‘oye, ¿revisaste lo que subí?’. Queda escrito, en la línea exacta del código.”</em></p>
+</blockquote>
+<p><strong>El diagrama del flujo recomendado</strong> es el resumen del bloque. Recórrelo señalando qué parte pasa en la terminal (Issue→rama→commit→push) y qué parte en el navegador (MR→revisión→merge).</p>
+<hr>
+</section>
+<section id="bloque-5-actividad-práctica-4555" class="level3">
+<h3 class="anchored" data-anchor-id="bloque-5-actividad-práctica-4555">Bloque 5 — Actividad práctica (45–55)</h3>
+<p><strong>Lo más importante de este bloque: que todos completen la vuelta una vez.</strong> El contenido del archivo da lo mismo.</p>
+<p>Antes de soltarlos, di en voz alta:</p>
+<blockquote class="blockquote">
+<p><em>“No importa si se equivocan. De hecho, ojalá se equivoquen ahora, que estoy aquí para ayudarlos.”</em></p>
+</blockquote>
+<p><strong>Mientras trabajan, circula.</strong> Los tres problemas que vas a ver, en orden de frecuencia:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Problema</th>
+<th style="text-align: left;">Solución rápida</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Pide usuario y contraseña y falla</td>
+<td style="text-align: left;">Verificar que estén usando la URL <strong>HTTPS</strong> y su cuenta institucional</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>Please tell me who you are</code></td>
+<td style="text-align: left;">Faltó <code>git config --global user.name</code> y <code>user.email</code></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>push</code> rechazado</td>
+<td style="text-align: left;"><code>git pull</code> y después <code>git push</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ten lista la alternativa web.</strong> Siempre hay dos o tres sin Git instalado o con problemas de red. La diapositiva de “hazlo desde la web” los mantiene participando en vez de mirar el techo.</p>
+<p><strong>Cierra el bloque pidiendo que alguien muestre su Merge Request en el proyector.</strong> Vale más que cualquier explicación.</p>
+<hr>
+</section>
+<section id="bloque-6-ia-responsable-5560" class="level3">
+<h3 class="anchored" data-anchor-id="bloque-6-ia-responsable-5560">Bloque 6 — IA responsable (55–60)</h3>
+<p>Cinco minutos, tono conversacional. <strong>No lo plantees como una prohibición</strong> — ya la están usando.</p>
+<blockquote class="blockquote">
+<p><em>“La pregunta no es si van a usar IA. Es cómo. Y hay una forma que les sirve para aprender y otra que los deja botados en la evaluación.”</em></p>
+</blockquote>
+<p>Enfatiza dos cosas por sobre las demás:</p>
+<ol type="1">
+<li><strong>Nunca pegar credenciales.</strong> Concreto: nada de <code>.env</code>, tokens ni contraseñas.</li>
+<li><strong>No entregar código que no entienden.</strong> El criterio práctico: <em>“si no lo puedes explicar en la revisión, no lo subas”</em>.</li>
+</ol>
+<p><strong>Cierre de la charla.</strong> Termina con la diapositiva de “En Git casi nada se pierde”:</p>
+<blockquote class="blockquote">
+<p><em>“Si se llevan una sola cosa de esta hora, que sea esta: si hicieron commit, su trabajo está a salvo. Prueben, equivóquense, pregunten.”</em></p>
+</blockquote>
+<p>Menciona el checklist y el glosario como material de consulta, y deja la tarea de la semana.</p>
+<hr>
+</section>
+</section>
+<section id="actividad-práctica-en-detalle" class="level2">
+<h2 class="anchored" data-anchor-id="actividad-práctica-en-detalle">Actividad práctica en detalle</h2>
+<section id="preparación-previa-del-expositor" class="level3">
+<h3 class="anchored" data-anchor-id="preparación-previa-del-expositor">Preparación previa (del expositor)</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Crear el repositorio de práctica en el GitLab del Departamento.</label></li>
+<li><label><input type="checkbox">Crear la carpeta <code>integrantes/</code> con un archivo de ejemplo (<code>integrantes/ejemplo.md</code>), para que la carpeta exista.</label></li>
+<li><label><input type="checkbox">Dar acceso <strong>Developer</strong> a todo el curso (o al grupo correspondiente).</label></li>
+<li><label><input type="checkbox">Verificar que la rama <code>main</code> <strong>no</strong> esté tan protegida que impida abrir Merge Requests.</label></li>
+<li><label><input type="checkbox">Tener la URL corta a mano y proyectada durante toda la actividad.</label></li>
+</ul>
+</section>
+<section id="instrucciones-para-estudiantes-con-git-instalado" class="level3">
+<h3 class="anchored" data-anchor-id="instrucciones-para-estudiantes-con-git-instalado">Instrucciones para estudiantes — con Git instalado</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Clonar (una sola vez)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone URL_DEL_REPOSITORIO</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> nombre-del-repositorio</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Crear tu rama</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> switch <span class="at">-c</span> nombre-apellido</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Crear tu archivo en integrantes/nombre-apellido.md</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">#    Contenido: tu nombre, tu carrera y una línea sobre ti.</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Revisar, preparar y guardar</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Agrega ficha de Nombre Apellido"</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Subir tu rama</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push <span class="at">-u</span> origin nombre-apellido</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Luego, en GitLab:</p>
+<ol start="6" type="1">
+<li>Abrir el <strong>Merge Request</strong> (GitLab ofrece el enlace en la salida del <code>push</code>).</li>
+<li>Poner un título claro y asignar a un compañero como <strong>Reviewer</strong>.</li>
+<li><strong>Revisar el MR de otra persona</strong> y dejar al menos un comentario.</li>
+</ol>
+</section>
+<section id="alternativa-sin-git-instalado-todo-desde-la-web" class="level3">
+<h3 class="anchored" data-anchor-id="alternativa-sin-git-instalado-todo-desde-la-web">Alternativa sin Git instalado — todo desde la web</h3>
+<ol type="1">
+<li>Entrar al proyecto en GitLab y abrir la carpeta <code>integrantes/</code>.</li>
+<li>Botón <strong>+</strong> → <strong>New file</strong>, con el nombre <code>nombre-apellido.md</code>.</li>
+<li>Escribir el contenido en el editor web.</li>
+<li>En <strong>Commit message</strong>, escribir un mensaje claro.</li>
+<li>Elegir <strong>“Create a new branch”</strong> y ponerle el nombre propio.</li>
+<li>Marcar <strong>“Start a new merge request with these changes”</strong>.</li>
+<li><strong>Commit changes</strong> → el Merge Request se abre solo.</li>
+</ol>
+<blockquote class="blockquote">
+<p>Es exactamente el mismo flujo conceptual: rama → commit → Merge Request. Solo cambia dónde se escribe.</p>
+</blockquote>
+</section>
+<section id="criterio-de-logro" class="level3">
+<h3 class="anchored" data-anchor-id="criterio-de-logro">Criterio de logro</h3>
+<p>La actividad está lograda si cada estudiante tiene:</p>
+<ul>
+<li>Una rama con su nombre en el repositorio.</li>
+<li>Un commit propio con un mensaje comprensible.</li>
+<li>Un Merge Request abierto.</li>
+<li>Al menos un comentario dejado en el Merge Request de otra persona.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="checklist-final-para-estudiantes" class="level2">
+<h2 class="anchored" data-anchor-id="checklist-final-para-estudiantes">Checklist final para estudiantes</h2>
+<p><strong>En mi computador</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Git instalado y verificado con <code>git --version</code></label></li>
+<li><label><input type="checkbox">Mi nombre y correo configurados (<code>git config --global user.name</code> / <code>user.email</code>)</label></li>
+<li><label><input type="checkbox">Repositorio del equipo clonado</label></li>
+<li><label><input type="checkbox">Sé revisar en qué rama estoy con <code>git status</code></label></li>
+<li><label><input type="checkbox">Hice al menos un commit propio</label></li>
+<li><label><input type="checkbox">Hice al menos un push</label></li>
+</ul>
+<p><strong>En GitLab</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox">Entro con mi cuenta institucional</label></li>
+<li><label><input type="checkbox">Veo el proyecto de mi equipo</label></li>
+<li><label><input type="checkbox">Creé o me asignaron un Issue</label></li>
+<li><label><input type="checkbox">Abrí un Merge Request</label></li>
+<li><label><input type="checkbox">Revisé el Merge Request de un compañero</label></li>
+<li><label><input type="checkbox">Mi Merge Request quedó mergeado a <code>main</code></label></li>
+</ul>
+<hr>
+</section>
+<section id="mini-glosario" class="level2">
+<h2 class="anchored" data-anchor-id="mini-glosario">Mini glosario</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Término</th>
+<th style="text-align: left;">Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Repositorio (repo)</strong></td>
+<td style="text-align: left;">El proyecto más toda su historia de cambios.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Clonar</strong></td>
+<td style="text-align: left;">Copiar un repositorio de GitLab a tu computador.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Working directory</strong></td>
+<td style="text-align: left;">Los archivos tal como están ahora en tu carpeta.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Staging area</strong></td>
+<td style="text-align: left;">La bandeja con los cambios que entrarán al próximo commit.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Commit</strong></td>
+<td style="text-align: left;">Un punto guardado en la historia, con mensaje, autor y fecha.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Branch (rama)</strong></td>
+<td style="text-align: left;">Una línea de trabajo paralela a <code>main</code>.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong><code>main</code></strong></td>
+<td style="text-align: left;">La rama principal: la versión que siempre debe funcionar.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Remote</strong></td>
+<td style="text-align: left;">El repositorio que vive en GitLab, compartido con el equipo.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Push</strong></td>
+<td style="text-align: left;">Subir tus commits al remote.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Pull</strong></td>
+<td style="text-align: left;">Bajar los commits que subieron los demás.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Issue</strong></td>
+<td style="text-align: left;">Una tarea, error o idea registrada en GitLab.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Merge Request (MR)</strong></td>
+<td style="text-align: left;">Propuesta de integrar los cambios de tu rama a <code>main</code>. En GitHub se llama <em>Pull Request</em>.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Merge</strong></td>
+<td style="text-align: left;">Integrar efectivamente una rama en otra.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Conflicto</strong></td>
+<td style="text-align: left;">Dos versiones distintas de la misma línea; Git pide que tú decidas cuál queda.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Reviewer</strong></td>
+<td style="text-align: left;">La persona que revisa un Merge Request antes de aprobarlo.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="diagramas-de-referencia" class="level2">
+<h2 class="anchored" data-anchor-id="diagramas-de-referencia">Diagramas de referencia</h2>
+<section id="flujo-básico-individual" class="level3">
+<h3 class="anchored" data-anchor-id="flujo-básico-individual">Flujo básico individual</h3>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+    A[Modificar archivos] --&gt; B[git status]
+    B --&gt; C[git add]
+    C --&gt; D[git commit]
+    D --&gt; E[git push]
+    E --&gt; F[GitLab]
+    F --&gt; G[git pull]
+    G --&gt; A
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="flujo-de-trabajo-con-gitlab" class="level3">
+<h3 class="anchored" data-anchor-id="flujo-de-trabajo-con-gitlab">Flujo de trabajo con GitLab</h3>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TD
+    A[Issue] --&gt; B[Crear rama]
+    B --&gt; C[Trabajar localmente]
+    C --&gt; D[Commit]
+    D --&gt; E[Push]
+    E --&gt; F[Merge Request]
+    F --&gt; G[Revisión]
+    G --&gt; H{¿Aprobado?}
+    H --&gt;|No| C
+    H --&gt;|Sí| I[Merge a main]
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>En las diapositivas este segundo diagrama va en horizontal (<code>flowchart LR</code>), porque las láminas son 16:9 y en vertical queda demasiado pequeño. La lógica es idéntica.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="imágenes-por-capturar" class="level2">
+<h2 class="anchored" data-anchor-id="imágenes-por-capturar">Imágenes por capturar</h2>
+<p>La presentación tiene tres marcadores de imagen. Conviene tomar las capturas del <strong>GitLab real del Departamento</strong>, no de gitlab.com, para que reconozcan la interfaz que van a usar.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Marcador</th>
+<th style="text-align: left;">Qué capturar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>[Imagen sugerida: vista de repositorio en GitLab]</code></td>
+<td style="text-align: left;">Portada del proyecto: listado de archivos, botón <strong>Code</strong> desplegado con la URL HTTPS, y el menú lateral visible.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>[Imagen sugerida: vista de Issues en GitLab]</code></td>
+<td style="text-align: left;">Listado de Issues con títulos reales, responsables asignados y etiquetas; visible el botón <strong>New issue</strong>.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>[Imagen sugerida: vista de Merge Request en GitLab]</code></td>
+<td style="text-align: left;">Un MR abierto en la pestaña <strong>Changes</strong>, con el diff línea a línea, un comentario de revisión y el botón <strong>Merge</strong>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>Recomendación: censura nombres de estudiantes reales si vas a publicar las diapositivas.</p>
+</blockquote>
+<hr>
+</section>
+<section id="notas-de-logística" class="level2">
+<h2 class="anchored" data-anchor-id="notas-de-logística">Notas de logística</h2>
+<ul>
+<li><strong>Verifica el acceso al GitLab antes de la sesión.</strong> Si está fuera del campus, puede requerir VPN.</li>
+<li><strong>Terminal con fuente grande</strong> (≥ 18 pt) y prompt simplificado; el prompt largo con la ruta completa distrae.</li>
+<li><strong>Plan B:</strong> ten la demo grabada o capturas de respaldo por si el GitLab institucional no responde.</li>
+<li><strong>Pide que traigan el equipo formado.</strong> La actividad rinde mucho más si ya saben con quién trabajarán.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/falfaro\.xyz\/talks\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<input type="hidden" id="giscus-base-theme" value="light">
+<input type="hidden" id="giscus-alt-theme" value="dark">
+<script>
+  function loadGiscus() {
+    // Function to get the theme based on body class
+    const getTheme = () => {
+      let baseTheme = document.getElementById('giscus-base-theme').value;
+      let altTheme = document.getElementById('giscus-alt-theme').value;
+      return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+    };
+    const script = document.createElement("script");
+    script.src = "https://giscus.app/client.js";
+    script.async = true;
+    script.dataset.repo = "Seth-Nut/talks";
+    script.dataset.repoId = "R_kgDOM_kl2g";
+    script.dataset.category = "General";
+    script.dataset.categoryId = "DIC_kwDOM_kl2s4CjYAh";
+    script.dataset.mapping = "title";
+    script.dataset.reactionsEnabled = "1";
+    script.dataset.emitMetadata = "0";
+    script.dataset.inputPosition = "top";
+    script.dataset.theme = getTheme();
+    script.dataset.lang = "en";
+    script.crossOrigin = "anonymous";
+    // Append the script to the desired div instead of at the end of the body
+    document.getElementById("quarto-content").appendChild(script);
+  }
+  loadGiscus();
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Website creado con <a href="https://quarto.org/">Quarto</a> por Francisco Alfaro. Licencia: <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/fralfaro/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/faam/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://falfaro.xyz/portfolio/">
+      <i class="bi bi-globe" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
