@@ -1,0 +1,330 @@
+---
+title: "Guion del expositor — Git y GitLab sin miedo"
+subtitle: "Charla-taller de 60 minutos · Análisis y Diseño de Software"
+author: "Francisco Alfaro Medina"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+---
+
+| | |
+|:--|:--|
+| **Charla** | Git y GitLab sin miedo — el flujo mínimo para trabajar en equipo |
+| **Curso** | Análisis y Diseño de Software |
+| **Duración** | 60 minutos |
+| **Modalidad** | Charla-taller (expositivo + práctica en vivo) |
+| **Plataforma** | GitLab institucional del Departamento |
+| **Presentación** | [`git_gitlab_60min.qmd`](git_gitlab_60min.html) |
+
+---
+
+## Objetivo general
+
+Que las y los estudiantes entiendan y puedan ejecutar el **flujo mínimo de trabajo con Git y GitLab** —clonar, revisar cambios, hacer commits, subir y actualizar, usar ramas básicas, crear Issues y abrir Merge Requests simples— y que salgan de la sesión **sin miedo a equivocarse**.
+
+## Resultados de aprendizaje
+
+Al finalizar la sesión, la o el estudiante será capaz de:
+
+| # | Resultado de aprendizaje |
+|:--|:--|
+| RA1 | **Explicar** qué problema resuelve Git y por qué versionar no es guardar copias. |
+| RA2 | **Distinguir** Git de GitLab, y qué ocurre en su computador frente a qué ocurre en la plataforma. |
+| RA3 | **Clonar** el repositorio del equipo desde el GitLab del Departamento. |
+| RA4 | **Ejecutar** el ciclo `status` → `add` → `commit` → `push` → `pull`. |
+| RA5 | **Crear una rama** con `git switch -c` y trabajar en ella. |
+| RA6 | **Crear un Issue** y **abrir un Merge Request** simple, y revisar el de un compañero. |
+| RA7 | **Reconocer** los errores más comunes y saber cómo salir de ellos. |
+| RA8 | **Usar IA de forma responsable** como apoyo en su flujo de trabajo. |
+
+---
+
+## Programa minuto a minuto
+
+| Min | Bloque | Contenido | Diapositivas |
+|:--|:--|:--|:--|
+| 00–05 | **1. Introducción** | El `.zip` con nombres imposibles · problemas sin control de versiones · Git como historial ordenado · objetivo y programa | 1–6 |
+| 05–20 | **2. Git básico** | Qué es Git · las 8 palabras · diagrama de las 4 zonas · los 7 comandos, uno por uno (qué hace / cuándo / ejemplo / error común) · mensajes de commit · para qué sirven las ramas | 7–19 |
+| 20–30 | **3. Flujo individual** | Diagrama del ciclo completo · los pasos con comandos exactos · las dos costumbres clave · qué es un conflicto | 20–24 |
+| 30–45 | **4. GitLab básico** | Git ≠ GitLab · qué ofrece GitLab · repositorio remoto · Issues · Merge Requests · revisión de código · tablero · flujo recomendado | 25–34 |
+| 45–55 | **5. Actividad práctica** | `integrantes/nombre-apellido.md` → commit → push → Merge Request → revisión cruzada · alternativa por web | 35–37 |
+| 55–60 | **6. IA responsable** | Dónde ayuda · las cuatro advertencias · cierre, checklist y glosario | 38–46 |
+
+> **Margen real:** el bloque 5 es el que se estira o encoge. Si vas atrasado, redúcelo a 6 minutos y deja el Merge Request como tarea.
+
+---
+
+## Guion breve para el expositor
+
+### Bloque 1 — Introducción (00–05)
+
+**Diapositiva del `.zip`.** Ábrela sin decir nada y espera dos segundos. Alguien se va a reír.
+
+> *"¿Cuántos tienen una carpeta parecida a esta ahora mismo? Levanten la mano sin vergüenza… yo también la tuve."*
+
+La idea es que el problema lo pongan ellos, no tú. Pregunta: *"¿qué pasa cuando dos personas del grupo editan el mismo archivo?"* — deja que respondan.
+
+**Cierra el bloque con la idea central:**
+
+> *"El problema no es que sean desordenados. Es que están usando la herramienta equivocada. Git es la herramienta correcta: en vez de guardar copias, guarda la historia."*
+
+**Analogía del videojuego.** Funciona muy bien con este público: el commit es un *save point*. Nadie juega sin guardar.
+
+---
+
+### Bloque 2 — Git básico (05–20)
+
+Este es el bloque más denso. **No lo leas: muéstralo.** Ten una terminal abierta al lado con un repositorio de prueba.
+
+**Las 8 palabras.** No las expliques una por una en detalle — dilas rápido y aclara que es una tabla de referencia para volver cuando se pierdan. Lo que sí explicas bien es el **diagrama de las cuatro zonas**.
+
+> *"Todo lo que hagan con Git es mover cambios entre estas cuatro cajas. Nada más. Si entienden este dibujo, entienden Git."*
+
+**Los 7 comandos.** Ritmo de ~1,5 min cada uno. Para cada uno: qué hace en una frase, cuándo se usa, y **detente en el error común** — ahí está el valor real.
+
+Los tres errores que más importan y que conviene enfatizar:
+
+- **`git add .` a ciegas** → suben `venv/`, archivos gigantes o un `.env` con contraseñas.
+- **`push` rechazado** → es *el* error que todos van a ver esta semana. Que memoricen: **`pull` y después `push`**.
+- **Trabajar en `main` sin darse cuenta** → por eso `git status` antes de escribir código.
+
+**Mensajes de commit.** Diapositiva de ❌ / ✅. Pregunta al curso: *"¿alguien reconoce alguno de los de la izquierda?"*
+
+**Ramas.** Mantenlo simple: `main` es lo que funciona, cada uno trabaja en su rama. **No entres en merge vs rebase ni en estrategias de branching** — no es esta charla.
+
+---
+
+### Bloque 3 — Flujo individual (20–30)
+
+**Muestra el diagrama y recórrelo con el dedo**, en voz alta, una vuelta completa.
+
+Luego **haz la demo en vivo**: edita un archivo, `git status`, `git add`, `git commit`, `git push`. Que vean la salida real de la terminal, incluidos los mensajes que no entienden todavía.
+
+> *"Esto es literalmente todo lo que van a hacer el 95 % del tiempo, durante todo el semestre."*
+
+**Conflictos.** Muéstralos, pero baja el nivel de alarma:
+
+> *"Un conflicto no es que rompieron algo. Es Git diciendo: 'ustedes dos escribieron cosas distintas en la misma línea, decidan ustedes'. Es lo más normal del mundo."*
+
+---
+
+### Bloque 4 — GitLab básico (30–45)
+
+**Cambio de escenario: cierra la terminal y abre el navegador.** El cambio físico ayuda a marcar la diferencia entre Git y GitLab.
+
+Empieza por la tabla **Git ≠ GitLab** y la analogía del motor y el auto.
+
+Después **navega el GitLab del Departamento en vivo** — es mucho mejor que las capturas. Recorrido sugerido:
+
+1. La portada del proyecto y el botón **Code** con la URL para clonar.
+2. **Issues** → crea uno en vivo, con título y responsable. Que vean lo rápido que es.
+3. **Merge requests** → abre uno ya existente y muestra la pestaña **Changes** con el diff.
+4. Deja un comentario en una línea, para que vean cómo se revisa.
+
+> *"Fíjense: acá no discutimos por WhatsApp 'oye, ¿revisaste lo que subí?'. Queda escrito, en la línea exacta del código."*
+
+**El diagrama del flujo recomendado** es el resumen del bloque. Recórrelo señalando qué parte pasa en la terminal (Issue→rama→commit→push) y qué parte en el navegador (MR→revisión→merge).
+
+---
+
+### Bloque 5 — Actividad práctica (45–55)
+
+**Lo más importante de este bloque: que todos completen la vuelta una vez.** El contenido del archivo da lo mismo.
+
+Antes de soltarlos, di en voz alta:
+
+> *"No importa si se equivocan. De hecho, ojalá se equivoquen ahora, que estoy aquí para ayudarlos."*
+
+**Mientras trabajan, circula.** Los tres problemas que vas a ver, en orden de frecuencia:
+
+| Problema | Solución rápida |
+|:--|:--|
+| Pide usuario y contraseña y falla | Verificar que estén usando la URL **HTTPS** y su cuenta institucional |
+| `Please tell me who you are` | Faltó `git config --global user.name` y `user.email` |
+| `push` rechazado | `git pull` y después `git push` |
+
+**Ten lista la alternativa web.** Siempre hay dos o tres sin Git instalado o con problemas de red. La diapositiva de "hazlo desde la web" los mantiene participando en vez de mirar el techo.
+
+**Cierra el bloque pidiendo que alguien muestre su Merge Request en el proyector.** Vale más que cualquier explicación.
+
+---
+
+### Bloque 6 — IA responsable (55–60)
+
+Cinco minutos, tono conversacional. **No lo plantees como una prohibición** — ya la están usando.
+
+> *"La pregunta no es si van a usar IA. Es cómo. Y hay una forma que les sirve para aprender y otra que los deja botados en la evaluación."*
+
+Enfatiza dos cosas por sobre las demás:
+
+1. **Nunca pegar credenciales.** Concreto: nada de `.env`, tokens ni contraseñas.
+2. **No entregar código que no entienden.** El criterio práctico: *"si no lo puedes explicar en la revisión, no lo subas"*.
+
+**Cierre de la charla.** Termina con la diapositiva de "En Git casi nada se pierde":
+
+> *"Si se llevan una sola cosa de esta hora, que sea esta: si hicieron commit, su trabajo está a salvo. Prueben, equivóquense, pregunten."*
+
+Menciona el checklist y el glosario como material de consulta, y deja la tarea de la semana.
+
+---
+
+## Actividad práctica en detalle
+
+### Preparación previa (del expositor)
+
+- [ ] Crear el repositorio de práctica en el GitLab del Departamento.
+- [ ] Crear la carpeta `integrantes/` con un archivo de ejemplo (`integrantes/ejemplo.md`), para que la carpeta exista.
+- [ ] Dar acceso **Developer** a todo el curso (o al grupo correspondiente).
+- [ ] Verificar que la rama `main` **no** esté tan protegida que impida abrir Merge Requests.
+- [ ] Tener la URL corta a mano y proyectada durante toda la actividad.
+
+### Instrucciones para estudiantes — con Git instalado
+
+```bash
+# 1. Clonar (una sola vez)
+git clone URL_DEL_REPOSITORIO
+cd nombre-del-repositorio
+
+# 2. Crear tu rama
+git switch -c nombre-apellido
+
+# 3. Crear tu archivo en integrantes/nombre-apellido.md
+#    Contenido: tu nombre, tu carrera y una línea sobre ti.
+
+# 4. Revisar, preparar y guardar
+git status
+git add .
+git commit -m "Agrega ficha de Nombre Apellido"
+
+# 5. Subir tu rama
+git push -u origin nombre-apellido
+```
+
+Luego, en GitLab:
+
+6. Abrir el **Merge Request** (GitLab ofrece el enlace en la salida del `push`).
+7. Poner un título claro y asignar a un compañero como **Reviewer**.
+8. **Revisar el MR de otra persona** y dejar al menos un comentario.
+
+### Alternativa sin Git instalado — todo desde la web
+
+1. Entrar al proyecto en GitLab y abrir la carpeta `integrantes/`.
+2. Botón **+** → **New file**, con el nombre `nombre-apellido.md`.
+3. Escribir el contenido en el editor web.
+4. En **Commit message**, escribir un mensaje claro.
+5. Elegir **"Create a new branch"** y ponerle el nombre propio.
+6. Marcar **"Start a new merge request with these changes"**.
+7. **Commit changes** → el Merge Request se abre solo.
+
+> Es exactamente el mismo flujo conceptual: rama → commit → Merge Request. Solo cambia dónde se escribe.
+
+### Criterio de logro
+
+La actividad está lograda si cada estudiante tiene:
+
+- Una rama con su nombre en el repositorio.
+- Un commit propio con un mensaje comprensible.
+- Un Merge Request abierto.
+- Al menos un comentario dejado en el Merge Request de otra persona.
+
+---
+
+## Checklist final para estudiantes
+
+**En mi computador**
+
+- [ ] Git instalado y verificado con `git --version`
+- [ ] Mi nombre y correo configurados (`git config --global user.name` / `user.email`)
+- [ ] Repositorio del equipo clonado
+- [ ] Sé revisar en qué rama estoy con `git status`
+- [ ] Hice al menos un commit propio
+- [ ] Hice al menos un push
+
+**En GitLab**
+
+- [ ] Entro con mi cuenta institucional
+- [ ] Veo el proyecto de mi equipo
+- [ ] Creé o me asignaron un Issue
+- [ ] Abrí un Merge Request
+- [ ] Revisé el Merge Request de un compañero
+- [ ] Mi Merge Request quedó mergeado a `main`
+
+---
+
+## Mini glosario
+
+| Término | Significado |
+|:---|:---|
+| **Repositorio (repo)** | El proyecto más toda su historia de cambios. |
+| **Clonar** | Copiar un repositorio de GitLab a tu computador. |
+| **Working directory** | Los archivos tal como están ahora en tu carpeta. |
+| **Staging area** | La bandeja con los cambios que entrarán al próximo commit. |
+| **Commit** | Un punto guardado en la historia, con mensaje, autor y fecha. |
+| **Branch (rama)** | Una línea de trabajo paralela a `main`. |
+| **`main`** | La rama principal: la versión que siempre debe funcionar. |
+| **Remote** | El repositorio que vive en GitLab, compartido con el equipo. |
+| **Push** | Subir tus commits al remote. |
+| **Pull** | Bajar los commits que subieron los demás. |
+| **Issue** | Una tarea, error o idea registrada en GitLab. |
+| **Merge Request (MR)** | Propuesta de integrar los cambios de tu rama a `main`. En GitHub se llama *Pull Request*. |
+| **Merge** | Integrar efectivamente una rama en otra. |
+| **Conflicto** | Dos versiones distintas de la misma línea; Git pide que tú decidas cuál queda. |
+| **Reviewer** | La persona que revisa un Merge Request antes de aprobarlo. |
+
+---
+
+## Diagramas de referencia
+
+### Flujo básico individual
+
+```{mermaid}
+flowchart LR
+    A[Modificar archivos] --> B[git status]
+    B --> C[git add]
+    C --> D[git commit]
+    D --> E[git push]
+    E --> F[GitLab]
+    F --> G[git pull]
+    G --> A
+```
+
+### Flujo de trabajo con GitLab
+
+```{mermaid}
+flowchart TD
+    A[Issue] --> B[Crear rama]
+    B --> C[Trabajar localmente]
+    C --> D[Commit]
+    D --> E[Push]
+    E --> F[Merge Request]
+    F --> G[Revisión]
+    G --> H{¿Aprobado?}
+    H -->|No| C
+    H -->|Sí| I[Merge a main]
+```
+
+> En las diapositivas este segundo diagrama va en horizontal (`flowchart LR`), porque las láminas son 16:9 y en vertical queda demasiado pequeño. La lógica es idéntica.
+
+---
+
+## Imágenes por capturar
+
+La presentación tiene tres marcadores de imagen. Conviene tomar las capturas del **GitLab real del Departamento**, no de gitlab.com, para que reconozcan la interfaz que van a usar.
+
+| Marcador | Qué capturar |
+|:---|:---|
+| `[Imagen sugerida: vista de repositorio en GitLab]` | Portada del proyecto: listado de archivos, botón **Code** desplegado con la URL HTTPS, y el menú lateral visible. |
+| `[Imagen sugerida: vista de Issues en GitLab]` | Listado de Issues con títulos reales, responsables asignados y etiquetas; visible el botón **New issue**. |
+| `[Imagen sugerida: vista de Merge Request en GitLab]` | Un MR abierto en la pestaña **Changes**, con el diff línea a línea, un comentario de revisión y el botón **Merge**. |
+
+> Recomendación: censura nombres de estudiantes reales si vas a publicar las diapositivas.
+
+---
+
+## Notas de logística
+
+- **Verifica el acceso al GitLab antes de la sesión.** Si está fuera del campus, puede requerir VPN.
+- **Terminal con fuente grande** (≥ 18 pt) y prompt simplificado; el prompt largo con la ruta completa distrae.
+- **Plan B:** ten la demo grabada o capturas de respaldo por si el GitLab institucional no responde.
+- **Pide que traigan el equipo formado.** La actividad rinde mucho más si ya saben con quién trabajarán.

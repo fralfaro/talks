@@ -1,0 +1,248 @@
+/*-- scss:defaults --*/
+
+// Paleta principal: académica, oscura, limpia
+$primary:       #0F2044;   // azul marino profundo
+$secondary:     #1A3A6B;   // azul medio
+$accent:        #4A9FD4;   // azul claro (énfasis)
+$light:         #F5F7FA;   // fondo claro
+$muted:         #6B7A8D;   // texto secundario
+$white:         #FFFFFF;
+$dark:          #1C2B3A;
+
+// Tipografía
+$font-family-sans-serif: "Georgia", "Times New Roman", serif;
+$font-family-monospace: "Consolas", "Courier New", monospace;
+$presentation-font-size-root: 32px;
+$presentation-heading-font: "Georgia", serif;
+$presentation-heading-color: $primary;
+$presentation-heading-font-weight: bold;
+$body-color: #2C3E50;
+$link-color: $accent;
+
+// Slide base
+$presentation-background-color: $white;
+$presentation-h1-font-size: 1.6em;
+$presentation-h2-font-size: 1.3em;
+$presentation-h3-font-size: 1.1em;
+
+/*-- scss:rules --*/
+
+// === SLIDE BASE ===
+.reveal .slides {
+  font-family: "Georgia", serif;
+}
+
+.reveal h2 {
+  border-bottom: 2px solid $accent;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.6em;
+  color: $primary;
+  font-size: 1.25em;
+  letter-spacing: -0.01em;
+}
+
+.reveal h3 {
+  color: $secondary;
+  font-size: 1.05em;
+  margin-bottom: 0.4em;
+}
+
+// === SLIDE DE TÍTULO ===
+.title-slide .title-block {
+  font-size: 2em;
+  font-weight: bold;
+  color: $white;
+  margin-top: 1.5em;
+  margin-bottom: 0.3em;
+  line-height: 1.2;
+}
+
+.title-slide .subtitle-block {
+  font-size: 1em;
+  color: #A8C4E0;
+  margin-bottom: 1.5em;
+  font-style: italic;
+}
+
+.title-slide .author-block {
+  font-size: 0.8em;
+  color: #7A9FC0;
+  border-top: 1px solid #2A5080;
+  padding-top: 0.8em;
+}
+
+// === SLIDE FINAL ===
+.final-slide .center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: $white;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.final-slide .center-content strong {
+  font-size: 1.8em;
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+.final-slide .center-content hr {
+  border-color: #2A5080;
+  width: 60%;
+  margin: 1em auto;
+}
+
+// === CALLOUTS ===
+.reveal .callout {
+  border-radius: 4px;
+  font-size: 0.85em;
+  margin: 0.5em 0;
+  border-left-width: 4px;
+}
+
+.reveal .callout-note {
+  background-color: #EBF4FB;
+  border-left-color: $accent;
+}
+
+.reveal .callout-tip {
+  background-color: #EAFAF1;
+  border-left-color: #27AE60;
+}
+
+.reveal .callout-important {
+  background-color: #FEF9E7;
+  border-left-color: #F39C12;
+}
+
+.reveal .callout-title {
+  font-weight: bold;
+  font-size: 0.9em;
+  color: $primary;
+}
+
+// === TABLAS ===
+.reveal table {
+  font-size: 0.78em;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.5em 0;
+}
+
+.reveal table th {
+  background-color: $primary;
+  color: $white;
+  padding: 0.4em 0.6em;
+  text-align: left;
+  font-weight: bold;
+}
+
+.reveal table td {
+  padding: 0.35em 0.6em;
+  border-bottom: 1px solid #D5DCE4;
+}
+
+.reveal table tr:nth-child(even) {
+  background-color: #F0F4F8;
+}
+
+.reveal table tr:hover {
+  background-color: #E3ECF5;
+}
+
+// === CÓDIGO / MONOSPACE ===
+.reveal code {
+  background-color: #F0F4F8;
+  color: $dark;
+  border-radius: 3px;
+  padding: 0.1em 0.3em;
+  font-size: 0.82em;
+  font-family: "Consolas", monospace;
+}
+
+.reveal pre {
+  background-color: #1E2D3D;
+  color: #CDD9E5;
+  border-radius: 6px;
+  padding: 0.8em 1em;
+  font-size: 0.72em;
+  line-height: 1.5;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.reveal pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+// === COLUMNAS ===
+.reveal .columns {
+  gap: 2em;
+}
+
+// === MATH ===
+.reveal .math {
+  font-size: 0.95em;
+}
+
+// === RESULT BOXES (slide final) ===
+.result-box {
+  background-color: #EBF4FB;
+  border: 1px solid #A8C4E0;
+  border-top: 4px solid $accent;
+  border-radius: 4px;
+  padding: 0.8em 1em;
+  font-size: 0.82em;
+  height: 100%;
+}
+
+.result-box strong {
+  display: block;
+  color: $primary;
+  font-size: 1em;
+  margin-bottom: 0.4em;
+}
+
+// === FOOTER ===
+.reveal .footer {
+  font-size: 0.55em;
+  color: $muted;
+  font-family: "Calibri", sans-serif;
+}
+
+// === SLIDE NUMBER ===
+.reveal .slide-number {
+  font-size: 0.55em;
+  color: $muted;
+  background: none;
+}
+
+// === PROGRESS BAR ===
+.reveal .progress {
+  background: rgba(74, 159, 212, 0.2);
+}
+
+.reveal .progress span {
+  background: $accent;
+}
+
+// === FRAGMENT ===
+.reveal .fragment {
+  transition: opacity 0.3s ease;
+}
+
+// === QUOTE ===
+.reveal blockquote {
+  border-left: 3px solid $accent;
+  background-color: #F5F7FA;
+  padding: 0.5em 1em;
+  font-style: italic;
+  color: $muted;
+  font-size: 0.85em;
+  margin: 0.5em 0;
+}

@@ -9,13 +9,7 @@ format:
 
 ## Diplomados
 
-::: card
-### Diplomado en la Toma de Decisiones Estratégicas (PUCV)
 
-Transforma datos en historias visuales interactivas usando A.I. y herramientas dinámicas.\
-**Presentaciones:**\
-[M2-Semana 01]() · [M2-Semana 02]() ·[M2-Semana 03]() · [M2-Semana 04]()
-:::
 
 ::: card
 ### Diplomado en Estrategias de Transformación Digital (USM)
@@ -25,41 +19,35 @@ Aprende a crear paneles interactivos y visualizaciones narrativas con Shiny.\
 [M3-Semana 01](usm_dtd/semana_01.html) · [M3-Semana 02](usm_dtd/semana_02.html) ·[M3-Semana 03](usm_dtd/semana_03.html)
 :::
 
+::: card
+### Mini Diplomado de GENAI (UTFSM)
+
+Programa dirigido a docentes, académicos y funcionarios para usar la AI.\
+**Presentaciones:**\
+[Taller 1: docencia](ai/taller_1_ia_docencia.html) · [Taller 2: investigación](ai/taller_2_ia_investigacion_productividad.html)
+:::
+
+
+::: card
+###  Mini Diplomado en Herramientas Digitales (USM)
+
+Herramientas modernas para la universidad: Quarto, LaTeX, GitHub, Google Colab y Python para datos.\
+**Presentaciones:**\
+[Quarto](tools/quarto/presentacion.html) · [LaTeX](tools/latex/presentacion.html) · [GitHub](tools/github/presentacion.html) · [Colab](tools/colab/presentacion.html) · [Python datos](tools/python-datos/presentacion.html)
+:::
+
+
 ## Cursos
 
 ::: card
-### Talleres de Inteligencia Artificial Generativa (UTFSM)
+### Análisis y Diseño de Software (USM)
 
-Programa dirigido a docentes, académicos y funcionarios para usar ChatGPT y Claude de forma efectiva y responsable en docencia, investigación y productividad diaria.\
+Taller introductorio de control de versiones y trabajo colaborativo con el GitLab del Departamento.\
 **Presentaciones:**\
-[Taller 1: Fundamentos de IA Generativa y su Aplicación a la Docencia](ai/taller_1_ia_docencia.html) · [Taller 2: IA Generativa Aplicada a la Investigación y la Productividad](ai/taller_2_ia_investigacion_productividad.html)
+[Git y GitLab (60 min)](ads/git_gitlab_60min.html) · [Guion del expositor](ads/guion_60min.html) · [Git y GitLab (taller 3 h)](ads/git_gitlab.html) · [Programa del taller 3 h](ads/programa.html)
 :::
 
-::: card
-### Herramientas Digitales para la Docencia (USM)
-
-MOOC propedéutico para modernizar la práctica académica: GitHub, Google Colab, LaTeX/Overleaf, Quarto e IA — todo desde el navegador, sin instalar nada.\
-**Presentaciones:**\
-[Presentación](tools/eds_presentation.html)
-:::
-
-::: card
-### Ofimática Avanzada (USM)
-
-Herramientas modernas de documentación y colaboración: Quarto, LaTeX, GitHub y Google Colab.\
-**Presentaciones:**\
-[Quarto](tools/quarto/presentacion.html) · [LaTeX](tools/latex/presentacion.html) · [GitHub](tools/github/presentacion.html) · [Colab](tools/colab/presentacion.html)
-:::
-
-::: card
-### Seminario Avanzado De TIC - IPD446 (USM)
-
-Curso en focado en temas de aprendizaje por refuerzo.\
-**Presentaciones:**\
-[Charla Capítulo 13](ipd446/talk1.html) · [Avance del Tema](ipd446/talk2.html) ·[Presentación Final](ipd446/talk3.html)
-:::
-
-## Charlas Cursos
+## Charlas
 
 ::: card
 ### Del Dato al Impacto
@@ -67,8 +55,6 @@ Curso en focado en temas de aprendizaje por refuerzo.\
 Presentaciones finales del curso sobre data storytelling e inteligencia artificial.\
 **Presentaciones:** [Datastorytelling + A.I.](ai/presentacion_mat281.html)
 :::
-
-## Charlas
 
 ::: card
 ### Lo que nadie te dice sobre la IA generativa

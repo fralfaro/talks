@@ -1068,7 +1068,7 @@
     "href": "index.html#diplomados",
     "title": "🎉 Presentaciones",
     "section": "Diplomados",
-    "text": "Diplomados\n\nDiplomado en la Toma de Decisiones Estratégicas (PUCV)\nTransforma datos en historias visuales interactivas usando A.I. y herramientas dinámicas.\nPresentaciones:\nM2-Semana 01 · M2-Semana 02 ·M2-Semana 03 · M2-Semana 04\n\n\nDiplomado en Estrategias de Transformación Digital (USM)\nAprende a crear paneles interactivos y visualizaciones narrativas con Shiny.\nPresentaciones:\nM3-Semana 01 · M3-Semana 02 ·M3-Semana 03"
+    "text": "Diplomados\n\nDiplomado en Estrategias de Transformación Digital (USM)\nAprende a crear paneles interactivos y visualizaciones narrativas con Shiny.\nPresentaciones:\nM3-Semana 01 · M3-Semana 02 ·M3-Semana 03\n\n\nMini Diplomado de GENAI (UTFSM)\nPrograma dirigido a docentes, académicos y funcionarios para usar la AI.\nPresentaciones:\nTaller 1: docencia · Taller 2: investigación\n\n\nMini Diplomado en Herramientas Digitales (USM)\nHerramientas modernas para la universidad: Quarto, LaTeX, GitHub, Google Colab y Python para datos.\nPresentaciones:\nQuarto · LaTeX · GitHub · Colab · Python datos"
   },
   {
     "objectID": "usm_dtd/presentacion.html#a.i.-en-el-día-a-día",
@@ -2419,7 +2419,7 @@
     "href": "index.html#cursos",
     "title": "🎉 Presentaciones",
     "section": "Cursos",
-    "text": "Cursos\n\nTalleres de Inteligencia Artificial Generativa (UTFSM)\nPrograma dirigido a docentes, académicos y funcionarios para usar ChatGPT y Claude de forma efectiva y responsable en docencia, investigación y productividad diaria.\nPresentaciones:\nTaller 1: Fundamentos de IA Generativa y su Aplicación a la Docencia · Taller 2: IA Generativa Aplicada a la Investigación y la Productividad\n\n\nHerramientas Digitales para la Docencia (USM)\nMOOC propedéutico para modernizar la práctica académica: GitHub, Google Colab, LaTeX/Overleaf, Quarto e IA — todo desde el navegador, sin instalar nada.\nPresentaciones:\nPresentación\n\n\nOfimática Avanzada (USM)\nHerramientas modernas de documentación y colaboración: Quarto, LaTeX, GitHub y Google Colab.\nPresentaciones:\nQuarto · LaTeX · GitHub · Colab\n\n\nSeminario Avanzado De TIC - IPD446 (USM)\nCurso en focado en temas de aprendizaje por refuerzo.\nPresentaciones:\nCharla Capítulo 13 · Avance del Tema ·Presentación Final"
+    "text": "Cursos\n\nAnálisis y Diseño de Software (USM)\nTaller introductorio de control de versiones y trabajo colaborativo con el GitLab del Departamento.\nPresentaciones:\nGit y GitLab (60 min) · Guion del expositor · Git y GitLab (taller 3 h) · Programa del taller 3 h"
   },
   {
     "objectID": "ipd446/talk3.html#a.i.-en-el-día-a-día",
@@ -3413,7 +3413,7 @@
     "href": "index.html#charlas",
     "title": "🎉 Presentaciones",
     "section": "Charlas",
-    "text": "Charlas\n\nLo que nadie te dice sobre la IA generativa\nUna mirada a las capacidades reales, los límites técnicos y las tendencias emergentes de la IA.\nPresentaciones: Lo que nadie te dice sobre la IA generativa\n\n\nDatos, storytelling e IA: el nuevo arte de contar con datos\nCómo la inteligencia artificial transforma la narrativa con datos (técnicas, herramientas y más).\nPresentaciones: Datos, storytelling e IA\n\n\nCrea, Innova y Presenta: Data Storytelling + A.I.\nFundamentos cognitivos y sociológicos del storytelling con datos (Visualización + IA).\nPresentaciones: Crea, Innova y Presenta"
+    "text": "Charlas\n\nDel Dato al Impacto\nPresentaciones finales del curso sobre data storytelling e inteligencia artificial.\nPresentaciones: Datastorytelling + A.I.\n\n\nLo que nadie te dice sobre la IA generativa\nUna mirada a las capacidades reales, los límites técnicos y las tendencias emergentes de la IA.\nPresentaciones: Lo que nadie te dice sobre la IA generativa\n\n\nDatos, storytelling e IA: el nuevo arte de contar con datos\nCómo la inteligencia artificial transforma la narrativa con datos (técnicas, herramientas y más).\nPresentaciones: Datos, storytelling e IA\n\n\nCrea, Innova y Presenta: Data Storytelling + A.I.\nFundamentos cognitivos y sociológicos del storytelling con datos (Visualización + IA).\nPresentaciones: Crea, Innova y Presenta"
   },
   {
     "objectID": "ai/mas_alla_bien_mal.html#section",
@@ -5716,7 +5716,7 @@
     "href": "tools/github/presentacion.html#gracias-por-participar",
     "title": "GitHub",
     "section": "🎉 ¡Gracias por Participar!",
-    "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 ¡Disfrutar del Curso!\n\n\n\n\n\n🔗 Nuestro Sitio Web: educacionadistancia.usm.cl/"
+    "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 ¡Disfrutar del Curso!\n\n\n\n\n🔗 Nuestro Sitio Web: educacionadistancia.usm.cl/"
   },
   {
     "objectID": "tools/github/presentacion_github.html#title",
@@ -5996,14 +5996,14 @@
     "href": "tools/latex/presentacion.html#cómo-empezar",
     "title": "LaTeX y Overleaf para la Docencia",
     "section": "¿Cómo empezar?",
-    "text": "¿Cómo empezar?\n\n\n\n\n\n\n\n\nEditor recomendado:\n\nOverleaf (en línea, sin instalación)\n\nInstalaciones locales:\n\nTeX Live, MiKTeX, MacTeX\n\nEditores útiles:\n\nTeXstudio, VSCode + LaTeX Workshop\n\n\n\n\n\n\n\n🌿 En este taller nos centraremos en Overleaf, fácil y en línea."
+    "text": "¿Cómo empezar?\n\n\n\n\n\n\n\n\nEditor recomendado:\n\nOverleaf (en línea, sin instalación)\n\nInstalaciones locales:\n\nTeX Live, MiKTeX, MacTeX\n\nEditores útiles:\n\nTeXstudio, VSCode + LaTeX Workshop\n\n\n\n\n\n\n🌿 En este taller nos centraremos en Overleaf, fácil y en línea."
   },
   {
     "objectID": "tools/latex/presentacion.html#overleaf-latex-online",
     "href": "tools/latex/presentacion.html#overleaf-latex-online",
     "title": "LaTeX y Overleaf para la Docencia",
     "section": "Overleaf: LaTeX Online",
-    "text": "Overleaf: LaTeX Online\n\n\n\n\n\n\n\n\n¿Qué es?\n\nPlataforma en línea para escribir y compilar documentos en LaTeX sin instalación.\n\n¿Por qué usarlo?\n\nEdición colaborativa en tiempo real.\n\nIntegración con GitHub y la nube.\n\nCompilación y previsualización instantánea.\n\n\n\n\n\n\n\n🌿 Para este taller, crea tu cuenta gratuita en Overleaf."
+    "text": "Overleaf: LaTeX Online\n\n\n\n\n\n\n\n\n¿Qué es?\n\nPlataforma en línea para escribir y compilar documentos en LaTeX sin instalación.\n\n¿Por qué usarlo?\n\nEdición colaborativa en tiempo real.\n\nIntegración con GitHub y la nube.\n\nCompilación y previsualización instantánea.\n\n\n\n\n\n\n🌿 Para este taller, crea tu cuenta gratuita en Overleaf."
   },
   {
     "objectID": "tools/latex/presentacion.html#ejemplos-en-overleaf",
@@ -6038,7 +6038,7 @@
     "href": "tools/latex/presentacion.html#overleaf-gallery",
     "title": "LaTeX y Overleaf para la Docencia",
     "section": "Overleaf Gallery",
-    "text": "Overleaf Gallery\n\n\n\n\n\n\n\n\nPlantillas listas para usar:\n\nArtículos, tesis, pósters y presentaciones.\n\nAprende explorando:\n\nAbre una plantilla y estudia su código.\n\nPersonaliza y reutiliza:\n\nCambia texto, imágenes y estilo.\n\n\n\n\n\n\n🌿 Veamos algunos ejemplos en Overleaf Gallery."
+    "text": "Overleaf Gallery\n\n\n\n\n\n\n\n\nPlantillas listas para usar:\n\nArtículos, tesis, pósters y presentaciones.\n\nAprende explorando:\n\nAbre una plantilla y estudia su código.\n\nPersonaliza y reutiliza:\n\nCambia texto, imágenes y estilo.\n\n\n\n\n\n🌿 Veamos algunos ejemplos en Overleaf Gallery."
   },
   {
     "objectID": "tools/latex/presentacion.html#ejemplos-de-plantillas",
@@ -6073,14 +6073,14 @@
     "href": "tools/latex/presentacion.html#latex-inteligencia-artificial",
     "title": "LaTeX y Overleaf para la Docencia",
     "section": "LaTeX + Inteligencia Artificial",
-    "text": "LaTeX + Inteligencia Artificial\n\n\n\n\n\n\n\n\nChatGPT, Gemini, Claude:\n\nGeneran y corrigen código LaTeX.\nCrean ecuaciones, tablas y bibliografía.\nExplican comandos y paquetes.\nMejoran el formato y detectan errores.\n\n\n\n\n\n\n🤖 Consejo: usa prompts claros, incluye tu código y pide explicaciones paso a paso."
+    "text": "LaTeX + Inteligencia Artificial\n\n\n\n\n\n\n\n\nChatGPT, Gemini, Claude:\n\nGeneran y corrigen código LaTeX.\nCrean ecuaciones, tablas y bibliografía.\nExplican comandos y paquetes.\nMejoran el formato y detectan errores.\n\n\n\n\n\n🤖 Consejo: usa prompts claros, incluye tu código y pide explicaciones paso a paso."
   },
   {
     "objectID": "tools/latex/presentacion.html#ejemplos-de-prompts",
     "href": "tools/latex/presentacion.html#ejemplos-de-prompts",
     "title": "LaTeX y Overleaf para la Docencia",
     "section": "Ejemplos de Prompts",
-    "text": "Ejemplos de Prompts\n\nFórmulasTablasCorrecciónBibliografía\n\n\n\n\n✨ Prompt:\n\n“Escríbeme en LaTeX la fórmula de la distribución normal estándar, con una breve explicación de cada parámetro.”\n\n\n✅ Resultado:\nf(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}}\n       \\exp\\left(-\\frac{(x-\\mu)^2}{2\\sigma^2}\\right)\nDonde \\(\\mu\\) es la media, \\(\\sigma\\) la desviación estándar y \\(x\\) el valor observado.\n\n\n\n\n\n\n✨ Prompt:\n\n“Crea una tabla en LaTeX con booktabs que compare tres lenguajes de programación: Python, R y Julia, según velocidad, facilidad de uso y comunidad.”\n\n\n✅ Resultado:\n\\begin{table}[h]\n\\centering\n\\begin{tabular}{lccc}\n\\toprule\n\\textbf{Criterio} & \\textbf{Python} & \\textbf{R} & \\textbf{Julia} \\\\\n\\midrule\nVelocidad    & Media  & Baja  & Alta \\\\\nFacilidad    & Alta   & Media & Media \\\\\nComunidad    & Grande & Grande & Pequeña \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{Comparación de lenguajes}\n\\end{table}\n\n\n\n\n\n\n✨ Prompt:\n\n“Este código LaTeX no compila, ¿qué está mal?”\n\n\\begin{equation}\nf(x) = \\int_0^\\infty e^-x^2 dx\n\\end{equation}\n\n✅ Resultado:\nSe detectan 2 errores:\n❌ e^-x^2 — el exponente debe ir entre llaves: e^{-x^2}\n❌ dx sin espacio — mejor tipografía con \\,dx\n✅ Versión corregida:\n\\begin{equation}\nf(x) = \\int_0^\\infty e^{-x^2}\\,dx\n\\end{equation}\n\n\n\n\n\n\n✨ Prompt:\n\n“Genera la entrada BibTeX para el libro The Elements of Statistical Learning de Hastie, Tibshirani y Friedman (2009, Springer).”\n\n\n✅ Resultado:\n@book{hastie2009elements,\n  title     = {The Elements of Statistical Learning},\n  author    = {Hastie, Trevor and Tibshirani, Robert\n               and Friedman, Jerome},\n  year      = {2009},\n  publisher = {Springer},\n  edition   = {2nd},\n  url       = {https://hastie.su.domains/ElemStatLearn/}\n}"
+    "text": "Ejemplos de Prompts\n\nFórmulasTablasCorrecciónBibliografía\n\n\n\n\n✨ Prompt:\n\n“Escríbeme en LaTeX la fórmula de la distribución normal estándar, con una breve explicación de cada parámetro.”\n\n\n✅ Resultado:\nf(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}}\n       \\exp\\left(-\\frac{(x-\\mu)^2}{2\\sigma^2}\\right)\nDonde \\(\\mu\\) es la media, \\(\\sigma\\) la desviación estándar y \\(x\\) el valor observado.\n\n\n\n\n\n✨ Prompt:\n\n“Crea una tabla en LaTeX con booktabs que compare tres lenguajes de programación: Python, R y Julia, según velocidad, facilidad de uso y comunidad.”\n\n\n✅ Resultado:\n\\begin{table}[h]\n\\centering\n\\begin{tabular}{lccc}\n\\toprule\n\\textbf{Criterio} & \\textbf{Python} & \\textbf{R} & \\textbf{Julia} \\\\\n\\midrule\nVelocidad    & Media  & Baja  & Alta \\\\\nFacilidad    & Alta   & Media & Media \\\\\nComunidad    & Grande & Grande & Pequeña \\\\\n\\bottomrule\n\\end{tabular}\n\\caption{Comparación de lenguajes}\n\\end{table}\n\n\n\n\n\n✨ Prompt:\n\n“Este código LaTeX no compila, ¿qué está mal?”\n\n\\begin{equation}\nf(x) = \\int_0^\\infty e^-x^2 dx\n\\end{equation}\n\n✅ Resultado:\nSe detectan 2 errores:\n❌ e^-x^2 — el exponente debe ir entre llaves: e^{-x^2}\n❌ dx sin espacio — mejor tipografía con \\,dx\n✅ Versión corregida:\n\\begin{equation}\nf(x) = \\int_0^\\infty e^{-x^2}\\,dx\n\\end{equation}\n\n\n\n\n\n✨ Prompt:\n\n“Genera la entrada BibTeX para el libro The Elements of Statistical Learning de Hastie, Tibshirani y Friedman (2009, Springer).”\n\n\n✅ Resultado:\n@book{hastie2009elements,\n  title     = {The Elements of Statistical Learning},\n  author    = {Hastie, Trevor and Tibshirani, Robert\n               and Friedman, Jerome},\n  year      = {2009},\n  publisher = {Springer},\n  edition   = {2nd},\n  url       = {https://hastie.su.domains/ElemStatLearn/}\n}"
   },
   {
     "objectID": "tools/latex/presentacion.html#section-4",
@@ -6115,7 +6115,7 @@
     "href": "tools/latex/presentacion.html#gracias-por-participar",
     "title": "LaTeX y Overleaf para la Docencia",
     "section": "🎉 ¡Gracias por Participar!",
-    "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 Disfrutar del Curso!\n\n\n\n\n\n🔗 Nuestro Sitio Web: educacionadistancia.usm.cl/"
+    "text": "🎉 ¡Gracias por Participar!\n\n\n\n❓¿Preguntas?\n👏 Responder encuesta\n🥳 Disfrutar del Curso!\n\n\n\n\n🔗 Nuestro Sitio Web: educacionadistancia.usm.cl/"
   },
   {
     "objectID": "tools/colab/presentacion.html#hello-quarto-title",
@@ -6220,7 +6220,7 @@
     "href": "tools/latex/presentacion.html#actividad-paper-con-ia-en-overleaf",
     "title": "LaTeX y Overleaf para la Docencia",
     "section": "Actividad: Paper con IA en Overleaf",
-    "text": "Actividad: Paper con IA en Overleaf\n\n\n\n\n\n\n\n\nElige una plantilla en Overleaf Academic Journal Templates.\nEscoge un tema libre (IA, redes sociales, clima, deporte, etc.).\nAbre un asistente IA (ChatGPT, Gemini, Claude, Copilot…) y pide:\n\nEstructura del paper con título, abstract y secciones.\nUna ecuación relevante al tema.\nUna tabla comparativa con booktabs.\nDos referencias en BibTeX con \\cite{}.\n\nCopia cada respuesta en Overleaf y compila.\n(Extra) Pídele al asistente que corrija algún error de compilación.\n\n\n\n\n\n⏱️ Tiempo de la actividad: 15–20 minutos."
+    "text": "Actividad: Paper con IA en Overleaf\n\n\n\n\n\n\n\n\nElige una plantilla en Overleaf Academic Journal Templates.\nEscoge un tema libre (IA, redes sociales, clima, deporte, etc.).\nAbre un asistente IA (ChatGPT, Gemini, Claude, Copilot…) y pide:\n\nEstructura del paper con título, abstract y secciones.\nUna ecuación relevante al tema.\nUna tabla comparativa con booktabs.\nDos referencias en BibTeX con \\cite{}.\n\nCopia cada respuesta en Overleaf y compila.\n(Extra) Pídele al asistente que corrija algún error de compilación.\n\n\n\n\n⏱️ Tiempo de la actividad: 15–20 minutos."
   },
   {
     "objectID": "tools/github/presentacion.html#te-ha-pasado-esto",
@@ -6255,7 +6255,7 @@
     "href": "tools/github/presentacion.html#crear-una-cuenta",
     "title": "GitHub",
     "section": "Crear una cuenta",
-    "text": "Crear una cuenta\n\n\n\n\n\n\n\n\nPaso a paso:\n\nVe a github.com y haz clic en Sign up.\nIngresa tu correo, crea una contraseña y elige un nombre de usuario.\nVerifica tu cuenta y completa el perfil básico.\n\nConsejos:\n\nUsa un nombre de usuario profesional (ej: francisco-alfaro).\nAgrega foto de perfil y una bio breve.\n\n\n\n\n\n\n🌿 Con una cuenta gratuita tienes acceso a repositorios públicos y privados ilimitados."
+    "text": "Crear una cuenta\n\n\n\n\n\n\n\n\nPaso a paso:\n\nVe a github.com y haz clic en Sign up.\nIngresa tu correo, crea una contraseña y elige un nombre de usuario.\nVerifica tu cuenta y completa el perfil básico.\n\nConsejos:\n\nUsa un nombre de usuario profesional (ej: francisco-alfaro).\nAgrega foto de perfil y una bio breve.\n\n\n\n\n\n🌿 Con una cuenta gratuita tienes acceso a repositorios públicos y privados ilimitados."
   },
   {
     "objectID": "tools/github/presentacion.html#section-2",
@@ -6276,7 +6276,7 @@
     "href": "tools/github/presentacion.html#crear-un-repositorio",
     "title": "GitHub",
     "section": "Crear un repositorio",
-    "text": "Crear un repositorio\n\n\n\n\n\n\n\n\nEn tu perfil, haz clic en New repository.\nPon un nombre descriptivo (ej: mat281-apuntes).\nElige Public o Private según el caso.\nMarca ✅ Add a README file.\nHaz clic en Create repository.\n\n\n\n\n\n🌿 Desde la web puedes subir archivos, editar texto y organizar carpetas sin instalar nada."
+    "text": "Crear un repositorio\n\n\n\n\n\n\n\n\nEn tu perfil, haz clic en New repository.\nPon un nombre descriptivo (ej: mat281-apuntes).\nElige Public o Private según el caso.\nMarca ✅ Add a README file.\nHaz clic en Create repository.\n\n\n\n\n🌿 Desde la web puedes subir archivos, editar texto y organizar carpetas sin instalar nada."
   },
   {
     "objectID": "tools/github/presentacion.html#ejemplos-de-repositorios",
@@ -6297,7 +6297,7 @@
     "href": "tools/github/presentacion.html#qué-es-el-readme",
     "title": "GitHub",
     "section": "¿Qué es el README?",
-    "text": "¿Qué es el README?\n\n\n\n\n\n\n\n\n¿Qué es?\n\nEl archivo README.md es la “portada” de tu repositorio.\n\n¿Para qué sirve?\n\nExplica de qué trata el proyecto.\n\nGuía a quien visita el repositorio.\n\nEn docencia: describe el curso, los contenidos y cómo navegar los materiales.\n\n\n\n\n\n\n🌿 Se escribe en Markdown, un lenguaje simple y legible."
+    "text": "¿Qué es el README?\n\n\n\n\n\n\n\n\n¿Qué es?\n\nEl archivo README.md es la “portada” de tu repositorio.\n\n¿Para qué sirve?\n\nExplica de qué trata el proyecto.\n\nGuía a quien visita el repositorio.\n\nEn docencia: describe el curso, los contenidos y cómo navegar los materiales.\n\n\n\n\n\n🌿 Se escribe en Markdown, un lenguaje simple y legible."
   },
   {
     "objectID": "tools/github/presentacion.html#markdown-lo-esencial",
@@ -6325,14 +6325,14 @@
     "href": "tools/github/presentacion.html#github-profile",
     "title": "GitHub",
     "section": "GitHub Profile",
-    "text": "GitHub Profile\n\n\n\n\n\n\n\n\n¿Qué es?\n\nTu página pública en GitHub: muestra quién eres y qué has hecho.\n\n¿Por qué importa?\n\nFunciona como un portafolio académico y profesional.\n\nEs lo primero que ven empleadores, colegas y estudiantes.\n\nRefleja tu actividad, proyectos y áreas de interés.\n\n\n\n\n\n\n🌿 Crear un perfil atractivo es más fácil de lo que parece — y marca la diferencia."
+    "text": "GitHub Profile\n\n\n\n\n\n\n\n\n¿Qué es?\n\nTu página pública en GitHub: muestra quién eres y qué has hecho.\n\n¿Por qué importa?\n\nFunciona como un portafolio académico y profesional.\n\nEs lo primero que ven empleadores, colegas y estudiantes.\n\nRefleja tu actividad, proyectos y áreas de interés.\n\n\n\n\n\n🌿 Crear un perfil atractivo es más fácil de lo que parece — y marca la diferencia."
   },
   {
     "objectID": "tools/github/presentacion.html#cómo-crear-tu-perfil-especial",
     "href": "tools/github/presentacion.html#cómo-crear-tu-perfil-especial",
     "title": "GitHub",
     "section": "Cómo crear tu perfil especial",
-    "text": "Cómo crear tu perfil especial\n\n\n\n\n\n\n\n\nCrea un repositorio con el mismo nombre que tu usuario (ej: fralfaro/fralfaro).\nGitHub lo reconoce automáticamente como tu perfil README.\nEdita el README.md con tu presentación personal.\n¡Se muestra en la portada de tu perfil para todo el mundo!\n\n\n\n\n\n🌿 Es un repositorio especial — cuando el nombre coincide con tu usuario, GitHub lo usa como tu página de perfil."
+    "text": "Cómo crear tu perfil especial\n\n\n\n\n\n\n\n\nCrea un repositorio con el mismo nombre que tu usuario (ej: fralfaro/fralfaro).\nGitHub lo reconoce automáticamente como tu perfil README.\nEdita el README.md con tu presentación personal.\n¡Se muestra en la portada de tu perfil para todo el mundo!\n\n\n\n\n🌿 Es un repositorio especial — cuando el nombre coincide con tu usuario, GitHub lo usa como tu página de perfil."
   },
   {
     "objectID": "tools/github/presentacion.html#tips-para-un-buen-perfil",
@@ -6353,7 +6353,7 @@
     "href": "tools/github/presentacion.html#actividad-tu-repositorio-en-github",
     "title": "GitHub",
     "section": "Actividad: Tu Repositorio en GitHub",
-    "text": "Actividad: Tu Repositorio en GitHub\n\n\n\n\n\n\n\n\nCrea tu cuenta en github.com (si aún no tienes).\nCrea un repositorio llamado mi-curso-herramientas.\nAgrega un README.md usando la estructura de syllabus vista en clase.\nIncluye: título, descripción, tabla de contenidos y al menos un link.\n(Extra) Crea tu repositorio de perfil con tu nombre de usuario.\n\n\n\n\n\n⏱️ Tiempo de la actividad: 15–20 minutos."
+    "text": "Actividad: Tu Repositorio en GitHub\n\n\n\n\n\n\n\n\nCrea tu cuenta en github.com (si aún no tienes).\nCrea un repositorio llamado mi-curso-herramientas.\nAgrega un README.md usando la estructura de syllabus vista en clase.\nIncluye: título, descripción, tabla de contenidos y al menos un link.\n(Extra) Crea tu repositorio de perfil con tu nombre de usuario.\n\n\n\n\n⏱️ Tiempo de la actividad: 15–20 minutos."
   },
   {
     "objectID": "tools/github/presentacion.html#section-6",
@@ -11394,5 +11394,1468 @@
     "title": "Taller 2: IA Generativa Aplicada a la Investigación y la Productividad",
     "section": "",
     "text": "Programa de Talleres de Inteligencia Artificial Generativa\nGracias\nEl siguiente paso no es aprender más herramientas. Es usar tres plantillas durante un mes y corregirlas cuando fallen.\nUniversidad Técnica Federico Santa María · Agosto 2026"
+  },
+  {
+    "objectID": "ads/git_gitlab.html#section",
+    "href": "ads/git_gitlab.html#section",
+    "title": "Git y GitLab",
+    "section": "",
+    "text": "Git y GitLab\nCómo organizar el trabajo de tu equipo\n\n\nCommits · Ramas · Issues · Merge Requests · CI/CD\nAnálisis y Diseño de Software — Semestre 2026\n\n\nFrancisco Alfaro Medina\nDepartamento de Informática · UTFSM\nAgosto 2026"
+  },
+  {
+    "objectID": "ads/git_gitlab.html#te-ha-pasado-esto",
+    "href": "ads/git_gitlab.html#te-ha-pasado-esto",
+    "title": "Git y GitLab",
+    "section": "¿Te ha pasado esto?",
+    "text": "¿Te ha pasado esto?\n\n\n\n📁 proyecto_ads/\n├── main.py\n├── main_v2.py\n├── main_final.py\n├── main_final_BUENO.py\n├── main_final_v2_ahora_si.py\n├── main_final_v2_ahora_si_JUAN.py\n├── main_ESTE_NO_BORRAR.py\n└── main_final_final (copia).py\n\n\n\n¿Cuál era la versión que funcionaba?\n¿Qué cambió Juan exactamente?\n¿Por qué dejó de compilar?\n¿Dónde está el avance de ayer?\n\n\n\n\n\n😰 Si alguna te resultó familiar, este taller es para ti."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#objetivos",
+    "href": "ads/git_gitlab.html#objetivos",
+    "title": "Git y GitLab",
+    "section": "Objetivos",
+    "text": "Objetivos\n\n\n\n\n\n\n\n\nEntender Git: qué problema resuelve y cómo piensa.\nDominar el ciclo básico: clone, add, commit, push, pull.\nTrabajar con ramas: desarrollar sin romper lo que funciona.\nUsar GitLab: Issues, Merge Requests, Boards y revisión de código.\nColaborar de verdad: un flujo que tu equipo pueda sostener todo el semestre.\nUsar IA con criterio: dónde ayuda y dónde te mete en problemas."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#agenda",
+    "href": "ads/git_gitlab.html#agenda",
+    "title": "Git y GitLab",
+    "section": "Agenda",
+    "text": "Agenda\n\n\n\n\nBloque\nContenido\nTiempo\n\n\n\n\nI\nGit — el motor del control de versiones\n60 min\n\n\n🔨\nLaboratorio 1: tu primer commit\n20 min\n\n\nII\nGitLab — la plataforma de colaboración\n55 min\n\n\n🔨\nLaboratorio 2: Issue → rama → Merge Request\n25 min\n\n\nIII\nIA responsable en flujos Git y GitLab\n15 min\n\n\n—\nCierre, cómo deshacer errores y chuleta\n10 min\n\n\n\n\n\n\n⚠️ Este taller es con las manos en el teclado. Abre tu terminal ahora."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#section-1",
+    "href": "ads/git_gitlab.html#section-1",
+    "title": "Git y GitLab",
+    "section": "",
+    "text": "Parte I\nGit: control de versiones"
+  },
+  {
+    "objectID": "ads/git_gitlab.html#qué-es-git",
+    "href": "ads/git_gitlab.html#qué-es-git",
+    "title": "Git y GitLab",
+    "section": "¿Qué es Git?",
+    "text": "¿Qué es Git?\n\n\n\n\ngit\n\nSistema de control\nde versiones\ndistribuido\n\n\n\n\nControl de versiones\n\nRegistra cada cambio en tus archivos a lo largo del tiempo.\nTe permite volver a cualquier estado anterior.\n\nDistribuido\n\nCada persona tiene una copia completa del historial.\nFunciona sin conexión a internet.\n\nCreado en 2005 por Linus Torvalds para el kernel de Linux.\n\n\n\n\n\n🌿 Git no guarda tus archivos: guarda la historia de cómo llegaron a ser lo que son."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#guardar-archivos-versionar-software",
+    "href": "ads/git_gitlab.html#guardar-archivos-versionar-software",
+    "title": "Git y GitLab",
+    "section": "Guardar archivos ≠ versionar software",
+    "text": "Guardar archivos ≠ versionar software\n\n\n\n\n\n\n\n\n\n\n📁 Guardar copias\n🌿 Versionar con Git\n\n\n\n\nArchivos\nMuchos, con nombres inventados\nUno solo, muchas versiones\n\n\nHistorial\nEn tu cabeza\nExplícito y consultable\n\n\nMotivo del cambio\nSe pierde\nQueda en el mensaje del commit\n\n\nAutoría\n“creo que fue Ana”\ngit blame lo dice exacto\n\n\nTrabajo paralelo\nImposible de combinar\nRamas + merge\n\n\nVolver atrás\nBuscar entre carpetas\nUn comando\n\n\n\n\n\n\n💡 La diferencia clave: Git guarda cambios con contexto, no archivos sueltos."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#los-tres-conceptos-que-hay-que-entender-hoy",
+    "href": "ads/git_gitlab.html#los-tres-conceptos-que-hay-que-entender-hoy",
+    "title": "Git y GitLab",
+    "section": "Los tres conceptos que hay que entender hoy",
+    "text": "Los tres conceptos que hay que entender hoy\n\n\n\n\n📦 Repositorio\nTu proyecto más todo su historial.\nVive en la carpeta oculta .git/.\nSi la borras, pierdes la historia (no los archivos actuales).\n\n\n\n📌 Commit\nUn punto de control: una foto del proyecto en un instante.\nTiene autor, fecha, mensaje y un identificador único (hash).\nSiempre puedes volver a él.\n\n\n\n🌿 Rama\nUna línea alternativa de trabajo.\nTe permite desarrollar algo nuevo sin tocar lo que ya funciona.\nCrear una rama es instantáneo y gratis.\n\n\n\n\n\n🎮 Analogía: el commit es un save point, la rama es una partida paralela, el merge es traer lo bueno de vuelta."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#por-qué-usar-git-los-problemas-que-resuelve",
+    "href": "ads/git_gitlab.html#por-qué-usar-git-los-problemas-que-resuelve",
+    "title": "Git y GitLab",
+    "section": "¿Por qué usar Git? Los problemas que resuelve",
+    "text": "¿Por qué usar Git? Los problemas que resuelve\n\n\n\n\n\n\n\n\n😩 Problema típico\n🌿 Qué hace Git\n\n\n\n\nmain_final_v2_ahora_si.py\nUn archivo, historial completo de versiones\n\n\n“Se me borró el avance de ayer”\nTodo commit es recuperable — incluso los “perdidos”\n\n\nDos personas editan el mismo archivo\nRamas + merge, con aviso explícito de conflicto\n\n\n“¿Quién cambió esto y por qué?”\ngit blame y git log responden en segundos\n\n\n“El martes funcionaba”\ngit diff y git revert para volver atrás\n\n\nMandar el proyecto por WhatsApp\nUn repositorio remoto compartido\n\n\n“No sé en qué va mi compañero”\nRamas visibles + Issues + Merge Requests"
+  },
+  {
+    "objectID": "ads/git_gitlab.html#modelo-mental-de-git",
+    "href": "ads/git_gitlab.html#modelo-mental-de-git",
+    "title": "Git y GitLab",
+    "section": "Modelo mental de Git",
+    "text": "Modelo mental de Git\n\nTodo lo que hagas con Git ocurre entre cuatro zonas:\n\n\n\n\n\n\n%%{init: {'flowchart': {'padding': 26, 'nodeSpacing': 45, 'rankSpacing': 60}}}%%\nflowchart LR\n    A[\"💻 Working Directory&lt;br/&gt;&lt;i&gt;archivos que editas&lt;/i&gt;\"] --&gt;|git add| B[\"📋 Staging Area&lt;br/&gt;&lt;i&gt;lo que va al próximo commit&lt;/i&gt;\"]\n    B --&gt;|git commit| C[\"📦 Local Repository&lt;br/&gt;&lt;i&gt;historial en tu máquina&lt;/i&gt;\"]\n    C --&gt;|git push| D[\"☁️ Remote Repository&lt;br/&gt;&lt;i&gt;GitLab del Departamento&lt;/i&gt;\"]\n    D --&gt;|git pull| A\n\n    style A fill:#e8f0fe,stroke:#0F2044,stroke-width:2px\n    style B fill:#dbe7fb,stroke:#2a5298,stroke-width:2px\n    style C fill:#c9dcf8,stroke:#3a6bc4,stroke-width:2px\n    style D fill:#FEE9D9,stroke:#FC6D26,stroke-width:2px\n\n\n\n\n\n\n\n\n\n🔑 Si entiendes este diagrama, entiendes el 80 % de Git."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#las-cuatro-zonas-una-por-una",
+    "href": "ads/git_gitlab.html#las-cuatro-zonas-una-por-una",
+    "title": "Git y GitLab",
+    "section": "Las cuatro zonas, una por una",
+    "text": "Las cuatro zonas, una por una\n\n\n💻 Working Directory — la carpeta que ves en tu editor. Aquí escribes código. Git observa, pero todavía no guarda nada.\n📋 Staging Area (index) — la “antesala”. Con git add seleccionas qué cambios entrarán en el próximo commit. Puedes elegir solo algunos.\n📦 Local Repository — con git commit los cambios pasan al historial de tu máquina. Ya son permanentes y recuperables. Aún nadie más los ve.\n☁️ Remote Repository — con git push los envías al GitLab del Departamento. Recién ahí tu equipo puede verlos.\n\n\n\n\n\n❓ ¿Para qué sirve el Staging Area? Para armar commits atómicos: si tocaste tres cosas distintas, puedes hacer tres commits coherentes en vez de uno llamado “cambios varios”."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#configuración-inicial-una-sola-vez",
+    "href": "ads/git_gitlab.html#configuración-inicial-una-sola-vez",
+    "title": "Git y GitLab",
+    "section": "Configuración inicial (una sola vez)",
+    "text": "Configuración inicial (una sola vez)\n\n# Quién eres — aparecerá en cada commit que hagas\ngit config --global user.name \"Ana Pérez\"\ngit config --global user.email \"ana.perez@usm.cl\"\n\n# Rama principal por defecto\ngit config --global init.defaultBranch main\n\n# Editor para mensajes de commit\ngit config --global core.editor \"code --wait\"\n\n# Verificar la configuración\ngit config --list\n\n\n\n⚠️ Usa tu correo institucional. Si el correo no coincide con tu cuenta de GitLab, tus commits aparecerán como de un usuario desconocido y no se te atribuirá el trabajo."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#el-ciclo-básico-de-trabajo",
+    "href": "ads/git_gitlab.html#el-ciclo-básico-de-trabajo",
+    "title": "Git y GitLab",
+    "section": "El ciclo básico de trabajo",
+    "text": "El ciclo básico de trabajo\n\n\n\n\n\n\n%%{init: {'flowchart': {'padding': 26, 'nodeSpacing': 45, 'rankSpacing': 60}}}%%\nflowchart LR\n    A[\"git clone&lt;br/&gt;&lt;i&gt;una vez&lt;/i&gt;\"] --&gt; B[\"git pull&lt;br/&gt;&lt;i&gt;antes de trabajar&lt;/i&gt;\"]\n    B --&gt; C[\"✏️ editar\"]\n    C --&gt; D[\"git status&lt;br/&gt;&lt;i&gt;¿qué cambió?&lt;/i&gt;\"]\n    D --&gt; E[\"git add&lt;br/&gt;&lt;i&gt;seleccionar&lt;/i&gt;\"]\n    E --&gt; F[\"git commit&lt;br/&gt;&lt;i&gt;guardar&lt;/i&gt;\"]\n    F --&gt; G[\"git push&lt;br/&gt;&lt;i&gt;compartir&lt;/i&gt;\"]\n    G --&gt; B\n\n    style A fill:#0F2044,color:#fff,stroke:#0F2044\n    style C fill:#fff,stroke:#6B7A8D,stroke-dasharray: 4 3\n    style G fill:#FEE9D9,stroke:#FC6D26,stroke-width:2px\n\n\n\n\n\n\n\n\n\n🔁 Este ciclo lo repetirás decenas de veces por semana. Que se te haga automático."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#los-seis-comandos-que-necesitas-hoy",
+    "href": "ads/git_gitlab.html#los-seis-comandos-que-necesitas-hoy",
+    "title": "Git y GitLab",
+    "section": "Los seis comandos que necesitas hoy",
+    "text": "Los seis comandos que necesitas hoy\n\n\n# 1. Traer el repositorio del equipo a tu máquina (una sola vez)\ngit clone git@gitlab.usm.cl:grupo-07/proyecto-ads.git\ncd proyecto-ads\n\n# 2. Ver el estado: qué cambió, qué está en staging, en qué rama estás\ngit status\n\n# 3. Seleccionar cambios para el próximo commit\ngit add main.py            # un archivo\ngit add src/               # una carpeta\ngit add .                  # todo lo modificado (¡con cuidado!)\n\n# 4. Guardar el punto de control\ngit commit -m \"Agrega validación de RUT en registro\"\n\n# 5. Traer lo que hicieron los demás\ngit pull\n\n# 6. Enviar tus commits al servidor\ngit push\n\n\n\n\n💡 Regla práctica: git status antes y después de cada comando. Es gratis y te evita sorpresas."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#leyendo-el-historial",
+    "href": "ads/git_gitlab.html#leyendo-el-historial",
+    "title": "Git y GitLab",
+    "section": "Leyendo el historial",
+    "text": "Leyendo el historial\n\n\n\n# Historial completo\ngit log\n\n# Versión compacta y legible\ngit log --oneline --graph --all\n\n# Últimos 5 commits\ngit log -5\n\n# Quién escribió cada línea\ngit blame main.py\n\n# Qué cambió respecto al último commit\ngit diff\n\n$ git log --oneline --graph\n* a3f9c21 (HEAD -&gt; main) Corrige cálculo\n* 8b2e17d Agrega tests de validación\n* 4d81ba0 Implementa login de usuario\n* 1c93f5e Configura estructura inicial\n* 0a72d34 Primer commit\n\n\n\n\n🔍 El historial es documentación viva del proyecto. Por eso importan los mensajes de commit."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#buenas-prácticas-commits",
+    "href": "ads/git_gitlab.html#buenas-prácticas-commits",
+    "title": "Git y GitLab",
+    "section": "Buenas prácticas: commits",
+    "text": "Buenas prácticas: commits\n\n\n\n❌ Commits que no ayudan\n\"cambios\"\n\"asdasd\"\n\"arreglo\"\n\"ahora si funciona\"\n\"commit final\"\n\"cambios del viernes\"\nTocan 15 archivos, mezclan tres cosas distintas y nadie sabe qué pasó.\n\n✅ Commits útiles\n\"Agrega validación de RUT en registro\"\n\"Corrige división por cero en promedio()\"\n\"Refactoriza capa de acceso a datos\"\n\"Actualiza README con instrucciones\"\n\"Agrega tests para el módulo de login\"\nCada uno hace una cosa y se entiende sin abrir el código.\n\n\n\n\n📏 Regla: si en el mensaje necesitas escribir “y”, probablemente deberían ser dos commits."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#una-convención-útil-conventional-commits",
+    "href": "ads/git_gitlab.html#una-convención-útil-conventional-commits",
+    "title": "Git y GitLab",
+    "section": "Una convención útil: Conventional Commits",
+    "text": "Una convención útil: Conventional Commits\n\n&lt;tipo&gt;(&lt;alcance opcional&gt;): &lt;descripción en imperativo&gt;\n\n\n\n\n\n\n\n\n\n\nTipo\nCuándo se usa\nEjemplo\n\n\n\n\nfeat\nNueva funcionalidad\nfeat(auth): agrega login con correo institucional\n\n\nfix\nCorrección de un error\nfix(api): corrige error 500 al listar usuarios\n\n\ndocs\nDocumentación\ndocs: actualiza instrucciones de instalación\n\n\ntest\nTests\ntest(login): agrega casos de contraseña inválida\n\n\nrefactor\nReorganizar sin cambiar comportamiento\nrefactor: extrae lógica de validación\n\n\nchore\nTareas de mantenimiento\nchore: actualiza dependencias\n\n\n\n\n\n\n\n🎯 No es obligatorio, pero acuerden una convención como equipo y respétenla. La consistencia vale más que la convención específica."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#gitignore-lo-que-no-debe-versionarse",
+    "href": "ads/git_gitlab.html#gitignore-lo-que-no-debe-versionarse",
+    "title": "Git y GitLab",
+    "section": ".gitignore: lo que NO debe versionarse",
+    "text": ".gitignore: lo que NO debe versionarse\n\n\n\n# Entornos virtuales y dependencias\nvenv/\nnode_modules/\n__pycache__/\n\n# Secretos — NUNCA al repositorio\n.env\nconfig/secrets.yml\n*.key\n\n# Archivos del sistema y del editor\n.DS_Store\n.vscode/\n.idea/\n\n# Compilados y datos pesados\n*.pyc\ndist/\ndata/*.csv\n\n\n\nQué excluir: dependencias, compilados, archivos temporales, datos pesados.\nQué NUNCA subir: contraseñas, tokens, claves de API, archivos .env.\nPlantillas listas por lenguaje: gitignore.io\n\n\n\n\n\n🚨 Si subes una credencial, borrarla en un commit posterior NO la elimina: sigue en el historial. Hay que rotarla de inmediato."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#section-2",
+    "href": "ads/git_gitlab.html#section-2",
+    "title": "Git y GitLab",
+    "section": "",
+    "text": "Git\nRamas: trabajar sin romper nada"
+  },
+  {
+    "objectID": "ads/git_gitlab.html#qué-es-una-rama",
+    "href": "ads/git_gitlab.html#qué-es-una-rama",
+    "title": "Git y GitLab",
+    "section": "¿Qué es una rama?",
+    "text": "¿Qué es una rama?\n\nUna línea de desarrollo independiente. Te permite construir algo nuevo mientras main sigue funcionando.\n\n\n\n\n\n\n%%{init: {'theme':'base','themeVariables':{\n  'git0':'#0F2044','git1':'#FC6D26','git2':'#27AE60',\n  'gitBranchLabel0':'#ffffff','gitBranchLabel1':'#ffffff','gitBranchLabel2':'#ffffff',\n  'commitLabelColor':'#2C3E50','commitLabelBackground':'#F5F7FA','commitLabelFontSize':'13px'\n}}}%%\ngitGraph\n    commit id: \"estructura inicial\"\n    commit id: \"modelo de datos\"\n    branch feature/login\n    checkout feature/login\n    commit id: \"formulario\"\n    commit id: \"validación\"\n    checkout main\n    branch fix/promedio\n    checkout fix/promedio\n    commit id: \"corrige división\"\n    checkout main\n    merge fix/promedio\n    checkout feature/login\n    commit id: \"tests\"\n    checkout main\n    merge feature/login\n    commit id: \"versión 1.0\""
+  },
+  {
+    "objectID": "ads/git_gitlab.html#trabajar-con-ramas",
+    "href": "ads/git_gitlab.html#trabajar-con-ramas",
+    "title": "Git y GitLab",
+    "section": "Trabajar con ramas",
+    "text": "Trabajar con ramas\n\n\n# Ver las ramas existentes (* marca la actual)\ngit branch\n\n# Crear una rama y cambiarse a ella\ngit switch -c feature/login\n\n# Cambiar entre ramas\ngit switch main\ngit switch feature/login\n\n# Subir tu rama al remoto por primera vez\ngit push -u origin feature/login\n\n# Integrar una rama en main (localmente)\ngit switch main\ngit merge feature/login\n\n# Borrar una rama ya integrada\ngit branch -d feature/login\n\n\n\n\n💡 git switch es la versión moderna de git checkout para cambiar de rama. Ambos funcionan; switch es más claro."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#convención-de-nombres-de-ramas",
+    "href": "ads/git_gitlab.html#convención-de-nombres-de-ramas",
+    "title": "Git y GitLab",
+    "section": "Convención de nombres de ramas",
+    "text": "Convención de nombres de ramas\n\n\n\n\nPrefijo\nPara qué\nEjemplo\n\n\n\n\nfeature/\nNueva funcionalidad\nfeature/registro-usuarios\n\n\nfix/\nCorrección de un error\nfix/error-calculo-promedio\n\n\ndocs/\nDocumentación\ndocs/manual-instalacion\n\n\nrefactor/\nReorganización interna\nrefactor/capa-persistencia\n\n\ntest/\nPruebas\ntest/cobertura-login\n\n\n\n\n\n\n💡 Truco que funciona muy bien en el curso: incluye el número del Issue en el nombre de la rama → feature/12-registro-usuarios. GitLab las vincula automáticamente."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#estrategias-de-branching",
+    "href": "ads/git_gitlab.html#estrategias-de-branching",
+    "title": "Git y GitLab",
+    "section": "Estrategias de branching",
+    "text": "Estrategias de branching\n\n\n\nTodo en main\nNadie crea ramas.\n✅ Simple\n❌ Conflictos constantes\n❌ main se rompe seguido\nPara el curso: ❌ no\n\n\n\nGitLab Flow\nmain protegida + una rama por funcionalidad + Merge Request.\n✅ Equilibrado\n✅ Revisión de código\n✅ Fácil de explicar\nPara el curso: ✅ sí\n\n\n\nGit Flow\nmain, develop, release/, hotfix/, feature/.\n✅ Muy estructurado\n❌ Pesado para 4 personas\n❌ Mucha ceremonia\nPara el curso: ⚠️ excesivo\n\n\n\n\n\n🎯 Nuestra estrategia: main siempre funcionando + una rama por Issue + integración vía Merge Request revisado por un par."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#merge-vs.-rebase",
+    "href": "ads/git_gitlab.html#merge-vs.-rebase",
+    "title": "Git y GitLab",
+    "section": "Merge vs. Rebase",
+    "text": "Merge vs. Rebase\n\n\n\n🔀 git merge\nUne dos ramas creando un commit de merge.\ngit switch main\ngit merge feature/login\n✅ Conserva la historia real\n✅ Seguro, no reescribe nada\n❌ El grafo puede verse enredado\n\n📏 git rebase\nReescribe tus commits sobre la punta de otra rama.\ngit switch feature/login\ngit rebase main\n✅ Historial lineal y limpio\n❌ Reescribe hashes\n❌ Peligroso en ramas compartidas\n\n\n\n\n⛔ Regla de oro: nunca hagas rebase de una rama que otra persona ya descargó. Para este curso: usa merge y déjate de problemas."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#conflictos-qué-son-y-por-qué-ocurren",
+    "href": "ads/git_gitlab.html#conflictos-qué-son-y-por-qué-ocurren",
+    "title": "Git y GitLab",
+    "section": "Conflictos: qué son y por qué ocurren",
+    "text": "Conflictos: qué son y por qué ocurren\n\n\n\nOcurre cuando:\n\nDos personas modifican las mismas líneas del mismo archivo.\nGit no puede decidir cuál versión es la correcta.\n\n\nNo ocurre cuando:\n\nEditan archivos distintos.\nEditan partes distintas del mismo archivo.\n\n\ndef calcular_promedio(notas):\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\n    if not notas:\n        return 0\n    return sum(notas) / len(notas)\n=======\n    if len(notas) == 0:\n        raise ValueError(\"Lista vacía\")\n    return sum(notas) / len(notas)\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature/validacion\n\n\n\n\n🧠 Un conflicto no es un error. Es Git diciéndote: “aquí hay dos decisiones humanas distintas, decide tú”."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#resolver-un-conflicto-paso-a-paso",
+    "href": "ads/git_gitlab.html#resolver-un-conflicto-paso-a-paso",
+    "title": "Git y GitLab",
+    "section": "Resolver un conflicto, paso a paso",
+    "text": "Resolver un conflicto, paso a paso\n\n\n\nGit te avisa al hacer pull o merge: CONFLICT (content): Merge conflict in main.py\nAbre el archivo y busca los marcadores:\n\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD → tu versión\n======= → separador\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; otra-rama → la versión que llega\n\nDecide: quedarte con una, con la otra, o escribir una tercera que combine ambas.\nBorra los marcadores &lt;&lt;&lt;&lt;&lt;&lt;&lt;, =======, &gt;&gt;&gt;&gt;&gt;&gt;&gt;. Deben desaparecer por completo.\nConfirma la resolución:\ngit add main.py\ngit commit -m \"Resuelve conflicto en calcular_promedio\"\n\n\n\n\n\n💬 Ante la duda, habla con quien escribió la otra versión. El conflicto es técnico; la solución es de equipo."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#section-3",
+    "href": "ads/git_gitlab.html#section-3",
+    "title": "Git y GitLab",
+    "section": "",
+    "text": "🔨\nLaboratorio 1"
+  },
+  {
+    "objectID": "ads/git_gitlab.html#laboratorio-1-tu-primer-commit",
+    "href": "ads/git_gitlab.html#laboratorio-1-tu-primer-commit",
+    "title": "Git y GitLab",
+    "section": "Laboratorio 1 — Tu primer commit",
+    "text": "Laboratorio 1 — Tu primer commit\n\n\n\n\n\n\n\n\nConfigura tu identidad: git config --global user.name / user.email.\nClona el repositorio del equipo desde el GitLab del Departamento.\nCrea una rama con tu nombre: git switch -c docs/tu-nombre.\nEdita el README.md: agrega tu nombre y tu rol en el equipo.\nHaz git status, git add, git commit con un mensaje descriptivo.\nSube tu rama: git push -u origin docs/tu-nombre.\nVerifica en GitLab que tu rama aparece.\n\n\n\n\n\n⏱️ 20 minutos. Levanta la mano ante cualquier error — los errores de hoy son el aprendizaje del semestre."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#section-4",
+    "href": "ads/git_gitlab.html#section-4",
+    "title": "Git y GitLab",
+    "section": "",
+    "text": "Parte II\nGitLab: colaborar en equipo"
+  },
+  {
+    "objectID": "ads/git_gitlab.html#git-gitlab",
+    "href": "ads/git_gitlab.html#git-gitlab",
+    "title": "Git y GitLab",
+    "section": "Git ≠ GitLab",
+    "text": "Git ≠ GitLab\n\n\n\n\n\n\n\n\n\n\n🌿 Git\n🦊 GitLab\n\n\n\n\nQué es\nUn programa de control de versiones\nUna plataforma web de colaboración\n\n\nDónde vive\nEn tu computador\nEn el servidor del Departamento\n\n\nSirve para\nVersionar el código\nCoordinar al equipo\n\n\nSe usa desde\nTerminal / editor\nNavegador\n\n\nSin internet\n✅ Funciona\n❌ No funciona\n\n\nQuién lo creó\nLinus Torvalds (2005)\nGitLab Inc. (2011)\n\n\n\n\n\n\n🚗 Analogía: Git es el motor. GitLab es el auto completo: motor, tablero, espejos, copiloto y taller mecánico."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#qué-es-gitlab",
+    "href": "ads/git_gitlab.html#qué-es-gitlab",
+    "title": "Git y GitLab",
+    "section": "¿Qué es GitLab?",
+    "text": "¿Qué es GitLab?\n\n\n\n\n🦊\nGitLab\n\nPlataforma DevOps\ncompleta\n\n\n\n\nAloja repositorios Git en un servidor accesible para todo el equipo.\nGestiona el trabajo: Issues, Boards, Milestones.\nPermite revisar código mediante Merge Requests.\nAutomatiza verificaciones con CI/CD Pipelines.\nDocumenta: Wiki, Snippets, README.\nEs autoalojable: por eso el Departamento tiene su propia instancia.\n\n\n\n\n\n🏛️ En este curso usamos el GitLab institucional del Departamento: tus datos y tu código quedan en la universidad."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#si-vienes-de-github-mapa-de-equivalencias",
+    "href": "ads/git_gitlab.html#si-vienes-de-github-mapa-de-equivalencias",
+    "title": "Git y GitLab",
+    "section": "Si vienes de GitHub: mapa de equivalencias",
+    "text": "Si vienes de GitHub: mapa de equivalencias\n\n\n\n\n\n\n\n\n\n🐙 GitHub\n🦊 GitLab\nPara qué sirve\n\n\n\n\nRepository\nProject / Repository\nEl proyecto y su código\n\n\nPull Request\nMerge Request (MR)\nProponer integrar cambios\n\n\nIssues\nIssues\nTareas, bugs, preguntas\n\n\nProjects (tablero)\nBoards\nTablero kanban del equipo\n\n\nMilestones\nMilestones\nHitos y entregas\n\n\nGitHub Actions\nCI/CD Pipelines\nAutomatización y verificación\n\n\nOrganizations\nGroups\nAgrupación de proyectos\n\n\nDiscussions\nThreads / Wiki\nConversación y documentación\n\n\nCopilot\nGitLab Duo\nAsistencia con IA\n\n\n\n\n\n\n📌 El concepto que más se confunde: en GitLab no existe “Pull Request” — se llama Merge Request."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#primer-acceso-al-gitlab-del-departamento",
+    "href": "ads/git_gitlab.html#primer-acceso-al-gitlab-del-departamento",
+    "title": "Git y GitLab",
+    "section": "Primer acceso al GitLab del Departamento",
+    "text": "Primer acceso al GitLab del Departamento\n\n\n\nIngresa con tu cuenta institucional (según indique el Departamento).\nConfigura la autenticación para poder hacer push:\n\nOpción A — SSH (recomendada): generas un par de claves y registras la pública en GitLab.\nOpción B — Token: creas un Personal Access Token y lo usas como contraseña en HTTPS.\n\nGenera tu clave SSH (si eliges la opción A):\nssh-keygen -t ed25519 -C \"tu.correo@usm.cl\"\ncat ~/.ssh/id_ed25519.pub    # copia esta salida\nPégala en GitLab: Avatar → Preferences → SSH Keys → Add new key.\nVerifica la conexión: ssh -T git@gitlab.&lt;departamento&gt;.usm.cl\n\n\n\n\n⚠️ Si estás fuera del campus, es posible que necesites VPN institucional. Verifícalo antes de la primera entrega."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#estructura-groups-y-projects",
+    "href": "ads/git_gitlab.html#estructura-groups-y-projects",
+    "title": "Git y GitLab",
+    "section": "Estructura: Groups y Projects",
+    "text": "Estructura: Groups y Projects\n\n\n\n\n\n\n%%{init: {'flowchart': {'padding': 26, 'nodeSpacing': 45, 'rankSpacing': 60}}}%%\nflowchart TD\n    G[\"🏛️ Group&lt;br/&gt;&lt;b&gt;analisis-diseno-software-2026&lt;/b&gt;\"]\n    G --&gt; S1[\"👥 Subgroup&lt;br/&gt;&lt;b&gt;grupo-07&lt;/b&gt;\"]\n    G --&gt; S2[\"👥 Subgroup&lt;br/&gt;&lt;b&gt;grupo-08&lt;/b&gt;\"]\n    S1 --&gt; P1[\"📦 Project&lt;br/&gt;&lt;b&gt;proyecto-ads&lt;/b&gt;\"]\n    S1 --&gt; P2[\"📦 Project&lt;br/&gt;&lt;b&gt;documentacion&lt;/b&gt;\"]\n    P1 --&gt; R[\"📁 Repository · Issues · MRs&lt;br/&gt;Boards · Milestones · CI/CD · Wiki\"]\n\n    style G fill:#FEE9D9,stroke:#FC6D26,stroke-width:2px\n    style S1 fill:#e8f0fe,stroke:#0F2044,stroke-width:2px\n    style S2 fill:#f5f7fa,stroke:#6B7A8D\n    style P1 fill:#dbe7fb,stroke:#2a5298,stroke-width:2px\n    style P2 fill:#f5f7fa,stroke:#6B7A8D\n    style R fill:#fff,stroke:#3a6bc4"
+  },
+  {
+    "objectID": "ads/git_gitlab.html#roles-y-permisos",
+    "href": "ads/git_gitlab.html#roles-y-permisos",
+    "title": "Git y GitLab",
+    "section": "Roles y permisos",
+    "text": "Roles y permisos\n\n\n\n\n\n\n\n\n\nRol\nQué puede hacer\nEn tu equipo\n\n\n\n\nGuest\nVer Issues, comentar\nInvitados externos\n\n\nReporter\nAdemás: ver el código, gestionar Issues\n—\n\n\nDeveloper\nAdemás: crear ramas, hacer push, abrir MRs\nLa mayoría del equipo\n\n\nMaintainer\nAdemás: mergear a ramas protegidas, configurar el proyecto\n1–2 personas\n\n\nOwner\nAdemás: administrar el grupo, eliminar el proyecto\nProfesor / ayudante\n\n\n\n\n\n\n🔐 Buena práctica: que la rama main esté protegida y que nadie pueda hacer push directo a ella. Todo entra por Merge Request."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#issues-la-unidad-de-trabajo",
+    "href": "ads/git_gitlab.html#issues-la-unidad-de-trabajo",
+    "title": "Git y GitLab",
+    "section": "Issues: la unidad de trabajo",
+    "text": "Issues: la unidad de trabajo\n\n\n\nUn Issue es una tarea, un bug, una pregunta o una idea. Es la pieza básica de organización del equipo.\n\n\n\nTitle — claro y accionable\nDescription — contexto y criterios de aceptación\nAssignee — quién es responsable\nLabels — bug, feature, docs, bloqueante\nMilestone — a qué entrega pertenece\nDue date — cuándo debe estar listo\nChecklist — subtareas con - [ ]\n\n\n\n## Título\nImplementar validación de RUT en registro\n\n## Contexto\nEl formulario acepta RUTs inválidos, lo que\ngenera datos corruptos en la base.\n\n## Criterios de aceptación\n- [ ] Valida el dígito verificador\n- [ ] Muestra mensaje de error claro\n- [ ] Tiene tests unitarios\n- [ ] Documentado en el README\n\n## Notas\nVer algoritmo módulo 11.\nLabels: feature prioridad::alta\nAssignee: @ana.perez · Milestone: Entrega 1"
+  },
+  {
+    "objectID": "ads/git_gitlab.html#un-buen-issue-vs.-un-mal-issue",
+    "href": "ads/git_gitlab.html#un-buen-issue-vs.-un-mal-issue",
+    "title": "Git y GitLab",
+    "section": "Un buen Issue vs. un mal Issue",
+    "text": "Un buen Issue vs. un mal Issue\n\n\n\n❌ Mal Issue\nTítulo: \"arreglar el login\"\n\nDescripción: (vacía)\n\nAssignee: nadie\nLabels: ninguna\n\nProblemas: ¿qué está mal?, ¿cómo se reproduce?, ¿cuándo está listo?, ¿quién lo hace?\n\n✅ Buen Issue\nTítulo: \"Login falla con correos en mayúsculas\"\n\nDescripción:\n- Pasos: ingresar ANA@USM.CL\n- Esperado: inicia sesión\n- Obtenido: \"usuario no encontrado\"\n- Causa probable: falta normalizar a minúsculas\n\nCriterios: [ ] normaliza [ ] test [ ] documentado\n\nAssignee: @juan · Labels: bug, prioridad::alta\nMilestone: Entrega 1\n\n\n\n\n🎯 Un buen Issue permite que otra persona del equipo lo tome sin preguntarte nada."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#milestones-organizar-las-entregas",
+    "href": "ads/git_gitlab.html#milestones-organizar-las-entregas",
+    "title": "Git y GitLab",
+    "section": "Milestones: organizar las entregas",
+    "text": "Milestones: organizar las entregas\n\n\n\n\n\nUn Milestone agrupa Issues y Merge Requests bajo un objetivo con fecha.\nEn este curso: un Milestone por entrega del semestre.\nGitLab muestra el progreso automático: cuántos Issues quedan abiertos y cuántos días faltan.\nSirve para responder la pregunta más importante del equipo: ¿llegamos o no llegamos?\n\n\n📍 Entrega 1 — Análisis de requisitos\n   Vence: 2026-09-05\n   ████████████░░░░  12/16 issues\n\n📍 Entrega 2 — Diseño arquitectónico\n   Vence: 2026-10-10\n   ███░░░░░░░░░░░░░   3/18 issues\n\n📍 Entrega 3 — Implementación\n   Vence: 2026-11-21\n   ░░░░░░░░░░░░░░░░   0/24 issues\n\n\n\n\n📅 Consejo: crea los Milestones del semestre la primera semana, con las fechas reales del programa del curso."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#boards-el-estado-del-equipo-de-un-vistazo",
+    "href": "ads/git_gitlab.html#boards-el-estado-del-equipo-de-un-vistazo",
+    "title": "Git y GitLab",
+    "section": "Boards: el estado del equipo de un vistazo",
+    "text": "Boards: el estado del equipo de un vistazo\n\n\n\n\n\n\n%%{init: {'flowchart': {'padding': 26, 'nodeSpacing': 45, 'rankSpacing': 60}}}%%\nflowchart LR\n    A[\"📋 &lt;b&gt;Open&lt;/b&gt;&lt;br/&gt;―――――――&lt;br/&gt;#18 Exportar PDF&lt;br/&gt;#21 Filtro por fecha&lt;br/&gt;#22 Refactor DAO\"]\n    B[\"🔨 &lt;b&gt;Doing&lt;/b&gt;&lt;br/&gt;―――――――&lt;br/&gt;#12 Validar RUT&lt;br/&gt;&lt;i&gt;@ana&lt;/i&gt;&lt;br/&gt;#15 Login SSO&lt;br/&gt;&lt;i&gt;@juan&lt;/i&gt;\"]\n    C[\"👀 &lt;b&gt;Review&lt;/b&gt;&lt;br/&gt;―――――――&lt;br/&gt;#09 Modelo datos&lt;br/&gt;&lt;i&gt;MR !14&lt;/i&gt;\"]\n    D[\"✅ &lt;b&gt;Closed&lt;/b&gt;&lt;br/&gt;―――――――&lt;br/&gt;#03 Estructura&lt;br/&gt;#05 README&lt;br/&gt;#07 CI básico\"]\n\n    A --&gt; B --&gt; C --&gt; D\n\n    style A fill:#f5f7fa,stroke:#6B7A8D,stroke-width:2px\n    style B fill:#e8f0fe,stroke:#0F2044,stroke-width:2px\n    style C fill:#FEE9D9,stroke:#FC6D26,stroke-width:2px\n    style D fill:#E8F6EF,stroke:#27AE60,stroke-width:2px\n\n\n\n\n\n\n\n\n\n🗂️ Mover una tarjeta en el Board cambia las labels del Issue automáticamente. El tablero y los Issues son lo mismo, vistos de dos formas."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#merge-request-el-corazón-de-la-colaboración",
+    "href": "ads/git_gitlab.html#merge-request-el-corazón-de-la-colaboración",
+    "title": "Git y GitLab",
+    "section": "Merge Request: el corazón de la colaboración",
+    "text": "Merge Request: el corazón de la colaboración\n\n\n\nUn Merge Request es una propuesta: “quiero integrar los cambios de mi rama a main; revísenlos antes”.\n\nQué permite:\n\nVer exactamente qué cambia (diff línea a línea).\nComentar líneas específicas del código.\nEjecutar verificaciones automáticas (pipeline).\nAprobar o pedir cambios.\nDejar registro de por qué se integró algo.\n\n\n!14  Agrega validación de RUT en registro\n─────────────────────────────────────────\nDe:    feature/12-validar-rut\nHacia: main\n\nAutor:    @ana.perez\nRevisor:  @juan.soto\nMilestone: Entrega 1\n\n✅ Pipeline passed (2 jobs)\n✅ 1 approval\n💬 3 threads (2 resueltos)\n\nCloses #12\n\n  [ Merge ]  [ Close ]\n\n\n\n\n🔑 El MR es donde ocurre el aprendizaje del equipo: es donde se discute el código, no en el chat del grupo."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#crear-un-merge-request-paso-a-paso",
+    "href": "ads/git_gitlab.html#crear-un-merge-request-paso-a-paso",
+    "title": "Git y GitLab",
+    "section": "Crear un Merge Request, paso a paso",
+    "text": "Crear un Merge Request, paso a paso\n\n\n\nTrabaja en tu rama y súbela:\ngit switch -c feature/12-validar-rut\n# ... editar, add, commit ...\ngit push -u origin feature/12-validar-rut\nGitLab te muestra un enlace en la terminal tras el push: “Create merge request”. También puedes ir a Merge requests → New.\nCompleta el MR:\n\nSource: tu rama · Target: main\nTítulo descriptivo\nDescripción: qué cambia, por qué, cómo probarlo\nCloses #12 → cierra el Issue automáticamente al mergear\nAssignee (tú) y Reviewer (un compañero)\n\nEspera el pipeline y la revisión. Responde los comentarios.\nMerge cuando esté aprobado. Borra la rama."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#plantilla-de-descripción-de-mr",
+    "href": "ads/git_gitlab.html#plantilla-de-descripción-de-mr",
+    "title": "Git y GitLab",
+    "section": "Plantilla de descripción de MR",
+    "text": "Plantilla de descripción de MR\n\n## ¿Qué hace este cambio?\nAgrega validación del dígito verificador del RUT en el\nformulario de registro, usando el algoritmo módulo 11.\n\n## ¿Por qué?\nCloses #12 — estábamos guardando RUTs inválidos en la base.\n\n## ¿Cómo probarlo?\n1. Levantar la app: `python app.py`\n2. Ir a /registro e ingresar RUT 11.111.111-1 → debe rechazarlo\n3. Ingresar un RUT válido → debe aceptarlo\n\n## Checklist\n- [x] Tests agregados y pasando\n- [x] README actualizado\n- [ ] Requiere migración de datos existentes (issue #19)\n\n## Uso de IA\nUsé Claude para generar los casos de prueba límite.\nRevisé y ajusté 2 de los 8 casos propuestos."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#revisión-de-código-qué-mirar",
+    "href": "ads/git_gitlab.html#revisión-de-código-qué-mirar",
+    "title": "Git y GitLab",
+    "section": "Revisión de código: qué mirar",
+    "text": "Revisión de código: qué mirar\n\n\n\n🔍 Como revisor\n\n\n¿Entiendo qué hace este cambio?\n¿Resuelve realmente el Issue?\n¿Hay casos borde sin cubrir?\n¿Hay nombres confusos o código duplicado?\n¿Hay secretos o datos sensibles?\n¿Los tests prueban algo real?\n¿Está documentado lo necesario?\n\n\n\n✍️ Como autor\n\n\nMRs pequeños: menos de ~300 líneas se revisan bien.\nExplica el porqué, no solo el qué.\nResponde todos los comentarios.\nNo te lo tomes personal: se revisa el código, no a la persona.\nSi no estás de acuerdo, argumenta — la revisión es conversación.\n\n\n\n\n\n\n💬 Comenta el código, no a la persona. ❌ “esto está pésimo” → ✅ “¿qué pasa si notas viene vacío? Creo que revienta acá”."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#herramientas-de-revisión-en-gitlab",
+    "href": "ads/git_gitlab.html#herramientas-de-revisión-en-gitlab",
+    "title": "Git y GitLab",
+    "section": "Herramientas de revisión en GitLab",
+    "text": "Herramientas de revisión en GitLab\n\n\n\nComentario en línea — clic en el número de línea del diff. Queda anclado a esa línea exacta.\nSuggestion — propones el cambio y el autor lo aplica con un botón:\n```suggestion\nif not notas:\n    raise ValueError(\"La lista de notas no puede estar vacía\")\n```\nThreads — cada conversación se resuelve explícitamente (Resolve thread). Un MR listo no debería tener threads abiertos.\nApprove — aprobación formal. Se puede exigir N aprobaciones antes de mergear.\nDraft MR — marca el MR como Draft: para pedir opinión temprana sin que se pueda mergear todavía."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#cicd-pipelines-verificación-automática",
+    "href": "ads/git_gitlab.html#cicd-pipelines-verificación-automática",
+    "title": "Git y GitLab",
+    "section": "CI/CD Pipelines: verificación automática",
+    "text": "CI/CD Pipelines: verificación automática\n\n\n\n\n\nUn Pipeline ejecuta tareas automáticamente en cada push.\nSe configura en un archivo .gitlab-ci.yml en la raíz del repositorio.\nEn el MR aparece un semáforo: ✅ verde o ❌ rojo.\nPara el curso basta con lo esencial: que el código corra y que los tests pasen.\n\n\nstages:\n  - test\n\ntest:\n  stage: test\n  image: python:3.11\n  script:\n    - pip install -r requirements.txt\n    - pip install pytest ruff\n    - ruff check .          # estilo\n    - pytest -v             # pruebas\n  rules:\n    - if: $CI_PIPELINE_SOURCE == \"merge_request_event\"\n    - if: $CI_COMMIT_BRANCH == \"main\"\n\n\n\n\n🤖 El pipeline es un revisor que nunca se cansa: revisa lo mecánico para que las personas revisen lo importante."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#el-flujo-completo-del-equipo",
+    "href": "ads/git_gitlab.html#el-flujo-completo-del-equipo",
+    "title": "Git y GitLab",
+    "section": "El flujo completo del equipo",
+    "text": "El flujo completo del equipo\n\n\n\n\n\n\n%%{init: {'flowchart': {'padding': 26, 'nodeSpacing': 45, 'rankSpacing': 60}}}%%\nflowchart LR\n    A[\"📋 Issue&lt;br/&gt;&lt;i&gt;se define la tarea&lt;/i&gt;\"] --&gt; B[\"🌿 Rama&lt;br/&gt;&lt;i&gt;feature/12-...&lt;/i&gt;\"]\n    B --&gt; C[\"💻 Commits&lt;br/&gt;&lt;i&gt;trabajo local&lt;/i&gt;\"]\n    C --&gt; D[\"⬆️ Push&lt;br/&gt;&lt;i&gt;al GitLab&lt;/i&gt;\"]\n    D --&gt; E[\"🔀 Merge Request&lt;br/&gt;&lt;i&gt;Closes #12&lt;/i&gt;\"]\n    E --&gt; F[\"🤖 Pipeline&lt;br/&gt;&lt;i&gt;tests + lint&lt;/i&gt;\"]\n    F --&gt; G[\"👀 Revisión&lt;br/&gt;&lt;i&gt;de un par&lt;/i&gt;\"]\n    G --&gt;|cambios solicitados| C\n    G --&gt;|aprobado| H[\"✅ Merge a main&lt;br/&gt;&lt;i&gt;Issue cerrado&lt;/i&gt;\"]\n\n    style A fill:#f5f7fa,stroke:#6B7A8D,stroke-width:2px\n    style E fill:#FEE9D9,stroke:#FC6D26,stroke-width:2px\n    style G fill:#e8f0fe,stroke:#0F2044,stroke-width:2px\n    style H fill:#E8F6EF,stroke:#27AE60,stroke-width:2px\n\n\n\n\n\n\n\n\n\n🔁 Este ciclo se repite por cada tarea, durante todo el semestre. Es el hábito que queremos instalar hoy."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#section-5",
+    "href": "ads/git_gitlab.html#section-5",
+    "title": "Git y GitLab",
+    "section": "",
+    "text": "🔨\nLaboratorio 2"
+  },
+  {
+    "objectID": "ads/git_gitlab.html#laboratorio-2-issue-rama-mr-revisión",
+    "href": "ads/git_gitlab.html#laboratorio-2-issue-rama-mr-revisión",
+    "title": "Git y GitLab",
+    "section": "Laboratorio 2 — Issue → Rama → MR → Revisión",
+    "text": "Laboratorio 2 — Issue → Rama → MR → Revisión\n\n\n\n\n\n\n\nEn equipo:\n\nCreen 3 Issues reales de su proyecto, con descripción, labels y assignee.\nCreen 1 Milestone con la fecha de la primera entrega y asócienle los Issues.\nConfiguren un Board con las columnas Open · Doing · Review · Closed.\nCada integrante toma un Issue, crea su rama feature/N-descripcion y hace al menos un commit.\nAbran un Merge Request con la plantilla de descripción vista.\nRevisen el MR de un compañero: dejen al menos un comentario en línea y una suggestion.\nMergeen un MR aprobado y verifiquen que el Issue se cerró solo.\n\n\n\n\n⏱️ 25 minutos. Al final de este laboratorio su repositorio ya debería estar listo para el semestre."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#section-6",
+    "href": "ads/git_gitlab.html#section-6",
+    "title": "Git y GitLab",
+    "section": "",
+    "text": "Parte III\nIA responsable en Git y GitLab"
+  },
+  {
+    "objectID": "ads/git_gitlab.html#la-ia-ya-está-en-tu-flujo-de-trabajo",
+    "href": "ads/git_gitlab.html#la-ia-ya-está-en-tu-flujo-de-trabajo",
+    "title": "Git y GitLab",
+    "section": "La IA ya está en tu flujo de trabajo",
+    "text": "La IA ya está en tu flujo de trabajo\n\n\n\n\n\nAsistentes en el editor: Copilot, Claude Code, Cursor, Codeium.\nAsistentes integrados en la plataforma: GitLab Duo.\nChats generales usados para dudas de Git y revisión de código.\n\n\nLa pregunta ya no es si la vas a usar,\nsino cómo la vas a usar.\n\n\nEl principio que ordena todo\n\nLa IA es un asistente que redacta y sugiere.\n\nTú eres quien entiende, decide y firma.\n\nEn un Merge Request, la responsabilidad del código es tuya — no de la herramienta."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#dónde-la-ia-aporta-valor-real",
+    "href": "ads/git_gitlab.html#dónde-la-ia-aporta-valor-real",
+    "title": "Git y GitLab",
+    "section": "Dónde la IA aporta valor real",
+    "text": "Dónde la IA aporta valor real\n\n\n\n\n\n\n\n\n\nTarea\nCómo ayuda la IA\nQuién decide\n\n\n\n\nMensaje de commit\nRedacta a partir del diff\n🧑 Tú\n\n\nDescripción de MR\nResume el cambio y su motivación\n🧑 Tú\n\n\nRevisión previa\nDetecta errores antes de pedir revisión humana\n🧑 Tú\n\n\nConflictos\nExplica qué hizo cada lado y las opciones\n🧑 Tú\n\n\n.gitlab-ci.yml\nGenera un pipeline base\n🧑 Tú\n\n\nTests\nPropone casos borde que no habías pensado\n🧑 Tú\n\n\nComandos Git\nExplica qué hace un comando antes de ejecutarlo\n🧑 Tú\n\n\nDocumentación\nRedacta README y docstrings\n🧑 Tú\n\n\n\n\n\n\n👀 Fíjate en la última columna: no cambia nunca."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#prompts-que-sí-funcionan",
+    "href": "ads/git_gitlab.html#prompts-que-sí-funcionan",
+    "title": "Git y GitLab",
+    "section": "Prompts que sí funcionan",
+    "text": "Prompts que sí funcionan\n\n\n\nMensaje de commit\n“Este es el diff de mis cambios: [pegar git diff --staged]. Escribe un mensaje de commit en español siguiendo Conventional Commits, en imperativo, máximo 72 caracteres en la primera línea.”\n\n\nRevisión previa\n“Revisa este código como si fueras un revisor exigente de un Merge Request. Busca casos borde no cubiertos, errores de manejo de nulos y nombres poco claros. No reescribas el código: dime qué revisarías y por qué.”\n\n\nEntender un conflicto\n“Tengo este conflicto de merge [pegar el bloque con marcadores]. Explícame qué intentaba hacer cada versión y cuáles son mis opciones. No elijas por mí.”\n\n\nEntender antes de ejecutar\n“¿Qué hace exactamente git reset --hard HEAD~2? ¿Qué pierdo? ¿Hay forma de recuperarlo? Dame una alternativa más segura.”"
+  },
+  {
+    "objectID": "ads/git_gitlab.html#los-riesgos-que-sí-importan",
+    "href": "ads/git_gitlab.html#los-riesgos-que-sí-importan",
+    "title": "Git y GitLab",
+    "section": "Los riesgos que sí importan",
+    "text": "Los riesgos que sí importan\n\n\n\n🔓 Filtración de secretos y código privado — pegar un .env, un token o código del proyecto en un chat externo puede ser una fuga de datos. Nunca pegues credenciales.\n🎭 Alucinaciones con aire de autoridad — la IA inventa comandos, banderas y APIs que no existen, con total seguridad. git push --force-with-safety no existe.\n💥 Comandos destructivos — un git reset --hard o un push --force mal aplicado borra trabajo del equipo. Entiende antes de ejecutar.\n🧠 Dependencia y pérdida de aprendizaje — si nunca resuelves un conflicto por tu cuenta, no aprendes a resolverlos. Y en la evaluación estás solo.\n⚖️ Atribución y honestidad académica — presentar como propio código que no entiendes es un problema de integridad, no de tecnología."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#las-5-reglas-del-curso",
+    "href": "ads/git_gitlab.html#las-5-reglas-del-curso",
+    "title": "Git y GitLab",
+    "section": "Las 5 reglas del curso",
+    "text": "Las 5 reglas del curso\n\n\n\n1️⃣ Nunca pegues credenciales, tokens ni archivos .env en una herramienta de IA.\n\n\n2️⃣ Nunca hagas merge de código que no entiendes — lo hayas escrito tú, la IA o un compañero.\n\n\n3️⃣ La IA no reemplaza la revisión humana: todo MR necesita la aprobación de un par.\n\n\n4️⃣ Declara el uso de IA en la descripción del Merge Request, en la sección “Uso de IA”.\n\n\n5️⃣ La responsabilidad del código es del equipo, siempre. La herramienta no responde por ustedes.\n\n\n\n\n\n✅ Usar IA no está penalizado. Usarla sin entender lo que entregas, sí."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#section-7",
+    "href": "ads/git_gitlab.html#section-7",
+    "title": "Git y GitLab",
+    "section": "",
+    "text": "Cierre\nCuando algo sale mal"
+  },
+  {
+    "objectID": "ads/git_gitlab.html#cómo-deshacer-errores-comunes",
+    "href": "ads/git_gitlab.html#cómo-deshacer-errores-comunes",
+    "title": "Git y GitLab",
+    "section": "Cómo deshacer errores comunes",
+    "text": "Cómo deshacer errores comunes\n\n\n\n\n\n\n\n\n\n\nSituación\nComando\nRiesgo\n\n\n\n\nModifiqué un archivo y quiero descartarlo\ngit restore archivo.py\n⚠️ Pierdes los cambios\n\n\nHice add de más\ngit restore --staged archivo.py\n✅ Seguro\n\n\nEl mensaje del último commit está mal\ngit commit --amend -m \"nuevo mensaje\"\n⚠️ Solo si no hiciste push\n\n\nQuiero deshacer un commit ya publicado\ngit revert &lt;hash&gt;\n✅ Seguro, crea un commit inverso\n\n\nNecesito guardar cambios a medio hacer\ngit stash / git stash pop\n✅ Seguro\n\n\nMe cambié de rama sin querer\ngit switch -\n✅ Seguro\n\n\nCreo que perdí commits\ngit reflog\n✅ Casi todo es recuperable\n\n\n\n\n\n\n\n🚨 Los dos comandos peligrosos: git reset --hard (borra trabajo local sin red de seguridad) y git push --force (puede borrar el trabajo de tus compañeros en el servidor). Ante la duda: pregunta antes de ejecutar."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#chuleta-de-comandos",
+    "href": "ads/git_gitlab.html#chuleta-de-comandos",
+    "title": "Git y GitLab",
+    "section": "Chuleta de comandos",
+    "text": "Chuleta de comandos\n\n\n\n\nEmpezar\ngit clone &lt;url&gt;          # clonar\ngit init                 # iniciar repo\ngit remote -v            # ver remotos\nDía a día\ngit status               # estado\ngit add &lt;archivo&gt;        # a staging\ngit commit -m \"mensaje\"  # guardar\ngit pull                 # traer cambios\ngit push                 # subir cambios\nExplorar\ngit log --oneline --graph\ngit diff\ngit blame &lt;archivo&gt;\ngit show &lt;hash&gt;\n\n\n\nRamas\ngit branch                    # listar\ngit switch -c feature/x       # crear\ngit switch main               # cambiar\ngit merge feature/x           # integrar\ngit branch -d feature/x       # borrar\ngit push -u origin feature/x  # publicar\nDeshacer\ngit restore &lt;archivo&gt;          # descartar\ngit restore --staged &lt;archivo&gt; # sacar de staging\ngit revert &lt;hash&gt;              # revertir publicado\ngit stash / git stash pop      # guardar temporal\ngit reflog                     # historial de todo"
+  },
+  {
+    "objectID": "ads/git_gitlab.html#checklist-el-repositorio-de-tu-equipo",
+    "href": "ads/git_gitlab.html#checklist-el-repositorio-de-tu-equipo",
+    "title": "Git y GitLab",
+    "section": "Checklist: el repositorio de tu equipo",
+    "text": "Checklist: el repositorio de tu equipo\n\n\n\n📦 Repositorio\n\nREADME.md con proyecto, equipo y cómo ejecutarlo\n.gitignore apropiado al lenguaje\nCONTRIBUTING.md con el flujo acordado\nRama main protegida\nTodos los integrantes con rol Developer\nAl menos un Maintainer\n\n\n🗂️ Organización\n\nMilestones del semestre creados con fechas\nBoard configurado (Open · Doing · Review · Closed)\nLabels definidas (bug, feature, docs, prioridad)\nIssues iniciales creados y asignados\nConvención de nombres de ramas acordada\nPipeline mínimo funcionando\n\n\n\n\n\n✅ Meta: que esto esté listo antes de terminar la semana 3. Después el proyecto avanza solo sobre estos rieles."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#conclusiones",
+    "href": "ads/git_gitlab.html#conclusiones",
+    "title": "Git y GitLab",
+    "section": "Conclusiones",
+    "text": "Conclusiones\n\n\n\n\n✅ Git versiona tu código y guarda el porqué de cada cambio, no solo el qué.\n\n\n✅ El modelo mental —working directory, staging, local, remoto— explica casi todo Git.\n\n\n✅ Las ramas permiten trabajar en paralelo sin romper lo que ya funciona.\n\n\n✅ GitLab convierte el repositorio en un espacio de coordinación: Issues, Boards, Milestones.\n\n\n✅ El Merge Request es donde el equipo revisa, discute y aprende junto.\n\n\n🤖 La IA te ayuda a redactar y revisar; entender y decidir sigue siendo tuyo."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#para-seguir-aprendiendo",
+    "href": "ads/git_gitlab.html#para-seguir-aprendiendo",
+    "title": "Git y GitLab",
+    "section": "Para seguir aprendiendo",
+    "text": "Para seguir aprendiendo\n\n\n\n📚 Documentación\n\nGitLab Docs — documentación oficial\nPro Git (libro, gratis y en español)\nGit Reference — todos los comandos\n\n🎮 Práctica interactiva\n\nLearn Git Branching — ramas visualmente\nOh My Git! — juego para aprender Git\n\n\n🛟 Cuando te atascas\n\nOh Shit, Git!?! — cómo salir de errores comunes\nGit Explorer — “quiero hacer X, ¿qué comando uso?”\n\n📐 Convenciones\n\nConventional Commits\ngitignore.io — plantillas de .gitignore\n\n\n\n\n\n💡 Si solo vas a hacer una cosa: juega Learn Git Branching durante 30 minutos. Es la mejor inversión de tiempo para entender ramas."
+  },
+  {
+    "objectID": "ads/git_gitlab.html#gracias",
+    "href": "ads/git_gitlab.html#gracias",
+    "title": "Git y GitLab",
+    "section": "🎉 ¡Gracias!",
+    "text": "🎉 ¡Gracias!\n\n\n\n\n❓ ¿Preguntas?\n\n🔨 Tarea para esta semana: dejar el repositorio del equipo con el checklist completo.\n\n📅 Próxima sesión: revisamos juntos los repositorios y resolvemos dudas.\n\n\n\nGit y GitLab\n\nAnálisis y Diseño de Software\nDepartamento de Informática\nUTFSM · 2026\n\nFrancisco Alfaro Medina"
+  },
+  {
+    "objectID": "ads/programa.html",
+    "href": "ads/programa.html",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "",
+    "text": "Curso\nAnálisis y Diseño de Software\n\n\nModalidad\nTaller práctico (presentación + laboratorio en equipo)\n\n\nMomento sugerido\nSemanas 1–3 del semestre (agosto)\n\n\nPlataforma\nGitLab institucional del Departamento\n\n\nRelator\nFrancisco Alfaro Medina\n\n\nPresentación\ngit_gitlab.qmd"
+  },
+  {
+    "objectID": "ads/programa.html#objetivo-general",
+    "href": "ads/programa.html#objetivo-general",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "1. Objetivo general",
+    "text": "1. Objetivo general\n\nQue las y los estudiantes sean capaces de organizar el trabajo de su equipo de desarrollo usando control de versiones con Git y la plataforma GitLab del Departamento, aplicando un flujo de trabajo colaborativo —ramas, commits, Merge Requests, Issues y revisión de código— que les permita construir el proyecto del semestre de forma trazable, coordinada y verificable, incorporando además criterios de uso responsable de herramientas de inteligencia artificial.\n\nEn lenguaje directo para el estudiante:\n“Al terminar este taller vas a saber trabajar en un proyecto de software con otras personas sin pisarte el trabajo, sin perder cambios y sin mandar archivos por WhatsApp. Vas a tener un repositorio en el GitLab del Departamento, con tareas repartidas, ramas por funcionalidad y un historial que muestra quién hizo qué y por qué.”"
+  },
+  {
+    "objectID": "ads/programa.html#objetivos-específicos",
+    "href": "ads/programa.html#objetivos-específicos",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "2. Objetivos específicos",
+    "text": "2. Objetivos específicos\nAl finalizar el taller, la o el estudiante será capaz de:\n\nBloque A — Git (fundamentos)\n\n\n\n\n\n\n\n\n#\nObjetivo específico\nNivel (Bloom)\n\n\n\n\nA1\nExplicar qué problema resuelve Git y por qué versionar no es lo mismo que guardar copias de archivos.\nComprender\n\n\nA2\nDiferenciar Git de GitLab, identificando qué ocurre en la máquina local y qué en la plataforma remota.\nComprender\n\n\nA3\nAplicar el ciclo básico de trabajo: clone, status, add, commit, push, pull.\nAplicar\n\n\nA4\nExplicar el modelo mental de Git: working directory, staging area, repositorio local y repositorio remoto.\nComprender\n\n\nA5\nCrear y manejar ramas, aplicando una estrategia básica de branching adecuada a un proyecto de curso.\nAplicar\n\n\nA6\nResolver conflictos simples de merge, entendiendo por qué se producen.\nAplicar\n\n\nA7\nAplicar buenas prácticas de commits (atómicos, mensajes descriptivos), nombres de ramas y uso de .gitignore.\nAplicar\n\n\n\n\n\nBloque B — GitLab (colaboración)\n\n\n\n\n\n\n\n\n#\nObjetivo específico\nNivel (Bloom)\n\n\n\n\nB1\nNavegar el GitLab institucional: grupos, proyectos, roles y permisos.\nComprender\n\n\nB2\nCrear y gestionar Issues con descripción, etiquetas, responsable y estimación.\nAplicar\n\n\nB3\nCrear Merge Requests, vincularlos a Issues y describir el cambio para quien revisa.\nAplicar\n\n\nB4\nRevisar código de un par: comentar líneas, proponer cambios (suggestions), aprobar o pedir ajustes.\nAnalizar\n\n\nB5\nOrganizar entregas con Milestones y Boards (tablero de tareas del equipo).\nAplicar\n\n\nB6\nReconocer el rol de los Pipelines CI/CD como verificación automática antes de integrar cambios.\nComprender\n\n\nB7\nDefinir el flujo de trabajo del equipo y dejarlo documentado en el repositorio (CONTRIBUTING.md).\nCrear\n\n\n\n\n\nBloque C — IA responsable en flujos Git/GitLab\n\n\n\n\n\n\n\n\n#\nObjetivo específico\nNivel (Bloom)\n\n\n\n\nC1\nIdentificar dónde la IA aporta valor real en el flujo: mensajes de commit, descripciones de MR, revisión previa, tests, CI.\nComprender\n\n\nC2\nUsar IA como asistente de revisión, no como autor sin supervisión.\nAplicar\n\n\nC3\nReconocer los riesgos: filtración de credenciales y código privado, alucinaciones, dependencia y pérdida de aprendizaje.\nComprender\n\n\nC4\nAplicar la política de uso y atribución de IA del curso al declarar el aporte de la herramienta en el Merge Request.\nAplicar"
+  },
+  {
+    "objectID": "ads/programa.html#audiencia",
+    "href": "ads/programa.html#audiencia",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "3. Audiencia",
+    "text": "3. Audiencia\nPerfil esperado\n\nEstudiantes de pregrado de Ingeniería (Informática / Civil Informática / afines).\nCursando Análisis y Diseño de Software, típicamente en años intermedios de la carrera.\nCon conocimientos básicos de programación (al menos un lenguaje: Python, Java, JavaScript, C++), manejo de archivos y terminal a nivel elemental.\nPoca o nula experiencia previa con Git/GitLab. Es habitual que hayan visto Git de pasada, que sepan hacer git clone y poco más, o que solo hayan usado la interfaz web para descargar un ZIP.\nTrabajarán en equipos de 3 a 5 personas durante todo el semestre sobre un proyecto común.\n\nSupuestos y necesidades\n\n\n\n\n\n\n\n\nAspecto\nSituación esperada\nImplicancia para el diseño\n\n\n\n\nTerminal\nUso básico e inseguro\nMostrar cada comando en pantalla, sin asumir fluidez\n\n\nCuentas\nCuenta institucional activa\nVerificar acceso al GitLab del Departamento antes de la sesión\n\n\nEquipos\nYa conformados o en formación\nLas actividades se hacen en equipo real, no simulado\n\n\nMiedo típico\n“Si me equivoco, rompo el repositorio”\nDedicar un bloque explícito a “cómo deshacer”\n\n\nHeterogeneidad\n1–2 personas por equipo con experiencia\nUsarlas como apoyo entre pares durante el laboratorio\n\n\n\nRequisitos previos a la sesión (enviar por correo con 48 h de anticipación):\n\nGit instalado y verificado con git --version.\nAcceso confirmado al GitLab del Departamento (login institucional).\nEditor de código instalado (VS Code recomendado).\nEquipo de proyecto definido, con un integrante designado como Maintainer."
+  },
+  {
+    "objectID": "ads/programa.html#duración-sugerida",
+    "href": "ads/programa.html#duración-sugerida",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "4. Duración sugerida",
+    "text": "4. Duración sugerida\nSe propone una sesión de 3 horas (180 min) en formato taller, con laboratorio integrado. Es la duración que permite cubrir Git + GitLab y dejar el repositorio del equipo efectivamente configurado antes de salir de la sala — que es el resultado que realmente importa en las primeras semanas.\n\nVersión recomendada — Taller de 3 horas\n\n\n\n\n\n\n\n\n\nBloque\nContenido\nTiempo\nModalidad\n\n\n\n\n0\nApertura, diagnóstico rápido y objetivos\n10 min\nExpositivo\n\n\n1\nGit: qué es, qué problema resuelve, versionar ≠ guardar\n15 min\nExpositivo\n\n\n2\nModelo mental: working directory → staging → local → remoto\n15 min\nExpositivo + demo\n\n\n3\nCiclo básico: clone, status, add, commit, push, pull\n20 min\nDemo en vivo\n\n\n4\n🔨 Laboratorio 1 — primer commit y push al repo del equipo\n20 min\nPráctica en equipo\n\n\n—\n☕ Pausa\n10 min\n—\n\n\n5\nRamas y estrategias de branching; merge y conflictos\n25 min\nExpositivo + demo\n\n\n6\nGitLab: grupos, proyectos, roles; Issues y Milestones\n20 min\nExpositivo + demo\n\n\n7\nMerge Requests y revisión de código; Boards; CI/CD\n20 min\nExpositivo + demo\n\n\n8\n🔨 Laboratorio 2 — Issue → rama → MR → revisión cruzada\n25 min\nPráctica en equipo\n\n\n9\nIA responsable en flujos Git/GitLab: usos, riesgos y política\n15 min\nExpositivo + demo\n\n\n10\nCómo deshacer errores, chuleta de comandos y cierre\n10 min\nExpositivo\n\n\n\nTotal\n180 min\n\n\n\n\n\n\nVersión reducida — Charla de 90 minutos\nCuando no hay bloque de laboratorio disponible, se recomienda charla de 90 min + tarea guiada (el laboratorio se hace en ayudantía o de forma asíncrona).\n\n\n\nBloque\nContenido\nTiempo\n\n\n\n\n0\nApertura y objetivos\n5 min\n\n\n1\nGit: qué es y por qué (modelo mental incluido)\n20 min\n\n\n2\nCiclo básico + demo en vivo\n15 min\n\n\n3\nRamas, merge y conflictos\n15 min\n\n\n4\nGitLab: Issues, Merge Requests, revisión de código\n20 min\n\n\n5\nBoards, Milestones y CI/CD (panorámica)\n5 min\n\n\n6\nIA responsable en el flujo\n5 min\n\n\n7\nCierre, chuleta y tarea guiada\n5 min\n\n\n\nTotal\n90 min\n\n\n\n\n\nVersión intermedia — 2 horas\nEstructura de 3 h eliminando el Laboratorio 1 (se reemplaza por demo guiada de 5 min) y acortando el Laboratorio 2 a 15 min. Total: 120 min.\n\nRecomendación: si existe la opción, 3 horas. Git se aprende con las manos, no mirando diapositivas; los laboratorios son el bloque que no conviene sacrificar."
+  },
+  {
+    "objectID": "ads/programa.html#estructura-de-la-charla",
+    "href": "ads/programa.html#estructura-de-la-charla",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "5. Estructura de la charla",
+    "text": "5. Estructura de la charla\nLa presentación se organiza en tres partes: Git (la herramienta), GitLab (la plataforma) y IA responsable (el complemento transversal)."
+  },
+  {
+    "objectID": "ads/programa.html#qué-es-git",
+    "href": "ads/programa.html#qué-es-git",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "5.1 Qué es Git",
+    "text": "5.1 Qué es Git\nIdeas centrales a transmitir\n\nControl de versiones: un sistema que registra los cambios de un conjunto de archivos a lo largo del tiempo, permitiendo recuperar cualquier estado anterior.\nHistorial del proyecto: Git no guarda solo el estado actual, guarda la secuencia de decisiones que llevaron hasta él. El historial es documentación.\nGuardar archivos ≠ versionar software:\n\n\n\nGuardar archivos\nVersionar software\n\n\n\n\nCopias con nombres distintos\nUn solo archivo, muchas versiones\n\n\n“¿Cuál era la buena?”\nHistorial lineal y explícito\n\n\nSin razón del cambio\nCada cambio con mensaje y autor\n\n\nNo se puede fusionar\nTrabajo paralelo integrable\n\n\nSin trazabilidad\ngit blame, git log, git diff\n\n\n\nRepositorio local: la carpeta .git dentro del proyecto contiene todo el historial. Git funciona sin conexión — no se necesita servidor para versionar.\nCommits como puntos de control: una foto del proyecto en un instante, con autor, fecha, mensaje e identificador único (hash). Se puede volver a cualquiera.\nRamas como líneas alternativas de trabajo: permiten desarrollar una funcionalidad sin tocar la versión estable, y luego integrarla.\n\nAnalogía sugerida para clase: un videojuego. El commit es el save point; la rama es una partida paralela para probar otra estrategia; el merge es traer a la partida principal lo que resultó bien."
+  },
+  {
+    "objectID": "ads/programa.html#por-qué-usar-git",
+    "href": "ads/programa.html#por-qué-usar-git",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "5.2 Por qué usar Git",
+    "text": "5.2 Por qué usar Git\nPartir del dolor conocido — es el gancho más efectivo con estudiantes:\n\n\n\n\n\n\n\nProblema típico\nQué resuelve Git\n\n\n\n\ninforme_final_final_v2_ahora_si.py\nUn archivo, historial completo de versiones\n\n\n“Se me borró el avance de ayer”\nTodo commit es recuperable (git reflog)\n\n\nDos personas editando el mismo archivo\nRamas + merge con detección de conflictos\n\n\n“¿Quién cambió esto y por qué?”\ngit blame y git log\n\n\n“Funcionaba el martes y ahora no”\ngit diff, git revert, git bisect\n\n\nEnviar el proyecto por correo/WhatsApp\nUn repositorio remoto como fuente única de verdad\n\n\n“No sé qué está haciendo mi compañero”\nRamas visibles, Issues y Merge Requests"
+  },
+  {
+    "objectID": "ads/programa.html#modelo-mental-de-git",
+    "href": "ads/programa.html#modelo-mental-de-git",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "5.3 Modelo mental de Git",
+    "text": "5.3 Modelo mental de Git\nEs el concepto que más cuesta y el que más rinde. Cuatro zonas:\n\nWorking Directory — los archivos que ves y editas.\nStaging Area (index) — la antesala: lo que seleccionaste para el próximo commit.\nLocal Repository — el historial confirmado en tu máquina (.git).\nRemote Repository — el repositorio en el GitLab del Departamento, compartido con el equipo.\n\n\n\n\n\n\nflowchart LR\n    A[Working Directory] --&gt;|git add| B[Staging Area]\n    B --&gt;|git commit| C[Local Repository]\n    C --&gt;|git push| D[Remote Repository]\n    D --&gt;|git pull| A\n\n\n\n\n\n\nPor qué existe el staging area (pregunta frecuente): permite construir commits atómicos. Si tocaste tres cosas distintas, puedes hacer tres commits separados y coherentes en lugar de uno gigante llamado “cambios varios”."
+  },
+  {
+    "objectID": "ads/programa.html#ciclo-básico-de-trabajo",
+    "href": "ads/programa.html#ciclo-básico-de-trabajo",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "5.4 Ciclo básico de trabajo",
+    "text": "5.4 Ciclo básico de trabajo\nclone → status → add → commit → pull → push, con demostración en vivo sobre un repositorio real del curso."
+  },
+  {
+    "objectID": "ads/programa.html#ramas-y-estrategia-de-branching",
+    "href": "ads/programa.html#ramas-y-estrategia-de-branching",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "5.5 Ramas y estrategia de branching",
+    "text": "5.5 Ramas y estrategia de branching\n\nQué es una rama y por qué es barata en Git.\nConvención de nombres: feature/, fix/, docs/.\nEstrategia recomendada para el curso: rama main protegida + una rama por Issue + integración vía Merge Request.\nmerge vs rebase: cuándo cada uno (y la regla de oro: no reescribir historia compartida)."
+  },
+  {
+    "objectID": "ads/programa.html#conflictos",
+    "href": "ads/programa.html#conflictos",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "5.6 Conflictos",
+    "text": "5.6 Conflictos\nPor qué ocurren, cómo se ven los marcadores &lt;&lt;&lt;&lt;&lt;&lt;&lt;, =======, &gt;&gt;&gt;&gt;&gt;&gt;&gt;, y cómo resolverlos paso a paso. Incluye el mensaje clave: un conflicto no es un error, es Git pidiendo una decisión humana."
+  },
+  {
+    "objectID": "ads/programa.html#qué-es-gitlab-y-en-qué-se-diferencia-de-git",
+    "href": "ads/programa.html#qué-es-gitlab-y-en-qué-se-diferencia-de-git",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "5.7 Qué es GitLab y en qué se diferencia de Git",
+    "text": "5.7 Qué es GitLab y en qué se diferencia de Git\n\n\n\n\n\n\n\n\n\nGit\nGitLab\n\n\n\n\nQué es\nPrograma de control de versiones\nPlataforma web de colaboración\n\n\nDónde vive\nTu computador\nServidor del Departamento\n\n\nSirve para\nVersionar código\nCoordinar al equipo\n\n\nSe usa con\nTerminal / editor\nNavegador\n\n\nSin internet\nFunciona\nNo funciona\n\n\n\nAnalogía: Git es el motor; GitLab es el auto completo (motor + tablero + espejos + copiloto)."
+  },
+  {
+    "objectID": "ads/programa.html#equivalencias-github-gitlab",
+    "href": "ads/programa.html#equivalencias-github-gitlab",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "5.8 Equivalencias GitHub → GitLab",
+    "text": "5.8 Equivalencias GitHub → GitLab\n\n\n\n\n\n\n\n\nGitHub\nGitLab\nPara qué sirve\n\n\n\n\nRepository\nRepository / Project\nEl proyecto y su código\n\n\nPull Request\nMerge Request (MR)\nProponer integrar cambios\n\n\nIssues\nIssues\nTareas, bugs, preguntas\n\n\nProjects\nBoards\nTablero kanban del equipo\n\n\nMilestones\nMilestones\nHitos y entregas\n\n\nActions\nCI/CD Pipelines\nAutomatización y verificación\n\n\nOrganizations\nGroups\nAgrupación de proyectos\n\n\nWiki / Discussions\nWiki / Threads\nDocumentación y conversación"
+  },
+  {
+    "objectID": "ads/programa.html#contenidos-gitlab",
+    "href": "ads/programa.html#contenidos-gitlab",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "5.9 Contenidos GitLab",
+    "text": "5.9 Contenidos GitLab\n\nEstructura y roles: Groups → Projects; Guest / Reporter / Developer / Maintainer / Owner.\nRepository: archivos, ramas, tags, protected branches.\nIssues: anatomía de un buen Issue, labels, assignee, due date, checklists.\nMilestones: mapear las entregas del semestre.\nBoards: To Do → Doing → Review → Done; el tablero como estado del equipo.\nMerge Requests: creación, descripción, Closes #12, Draft, approvals, squash.\nRevisión de código: comentarios en línea, suggestions, threads resueltos, qué mirar al revisar.\nCI/CD Pipelines: .gitlab-ci.yml, ejemplo mínimo (lint + tests), semáforo verde/rojo en el MR.\nFlujo completo del equipo: Issue → rama → commits → MR → pipeline → revisión → merge → cierre del Issue."
+  },
+  {
+    "objectID": "ads/programa.html#dónde-ayuda",
+    "href": "ads/programa.html#dónde-ayuda",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "5.10 Dónde ayuda",
+    "text": "5.10 Dónde ayuda\n\n\n\n\n\n\n\n\nTarea\nAporte de la IA\nQuién decide\n\n\n\n\nMensaje de commit\nRedactar desde el diff\nTú\n\n\nDescripción de MR\nResumir el cambio y su motivación\nTú\n\n\nRevisión previa\nDetectar errores antes de pedir revisión humana\nTú\n\n\nConflictos\nExplicar qué cambió cada lado\nTú\n\n\n.gitlab-ci.yml\nGenerar un pipeline base\nTú\n\n\nTests\nProponer casos de prueba\nTú\n\n\nComandos Git\nExplicar qué hace un comando antes de ejecutarlo\nTú"
+  },
+  {
+    "objectID": "ads/programa.html#riesgos-y-reglas-del-curso",
+    "href": "ads/programa.html#riesgos-y-reglas-del-curso",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "5.11 Riesgos y reglas del curso",
+    "text": "5.11 Riesgos y reglas del curso\n\nNunca pegar credenciales, tokens ni .env en un chat de IA.\nNunca hacer merge de código que no entiendes, venga de donde venga.\nLa IA no reemplaza la revisión humana — el MR sigue necesitando aprobación de un par.\nDeclarar el uso de IA en la descripción del Merge Request (sección “Uso de IA”).\nLa responsabilidad del código es del equipo, no de la herramienta."
+  },
+  {
+    "objectID": "ads/programa.html#cierre",
+    "href": "ads/programa.html#cierre",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "5.12 Cierre",
+    "text": "5.12 Cierre\n\nCómo deshacer errores comunes: restore, reset, revert, stash, reflog.\nChuleta de comandos imprimible.\nChecklist de configuración del repositorio del equipo.\nRecursos para seguir aprendiendo."
+  },
+  {
+    "objectID": "ads/programa.html#evaluación-sugerida-opcional",
+    "href": "ads/programa.html#evaluación-sugerida-opcional",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "6. Evaluación sugerida (opcional)",
+    "text": "6. Evaluación sugerida (opcional)\nSi el taller se evalúa, se propone una rúbrica de proceso aplicada al repositorio del equipo al final de la semana 3:\n\n\n\n\n\n\n\n\n\n\nCriterio\nInsuficiente (1)\nSuficiente (2)\nBueno (3)\nDestacado (4)\n\n\n\n\nUso de commits\nMenos de 3 commits, mensajes vacíos\nCommits regulares, mensajes básicos\nCommits atómicos con mensajes claros\nConvención consistente (ej. Conventional Commits)\n\n\nRamas\nTodo en main\nAlguna rama creada\nUna rama por funcionalidad\nConvención de nombres + main protegida\n\n\nIssues\nSin Issues\nIssues creados sin detalle\nIssues descritos y asignados\nIssues con labels, milestone y criterios de aceptación\n\n\nMerge Requests\nSin MR\nMR sin descripción\nMR descritos y vinculados a Issues\nMR revisados por pares con comentarios sustantivos\n\n\nParticipación\n1 persona commitea\n2 personas\nTodo el equipo contribuye\nContribución equilibrada y revisión cruzada\n\n\nUso de IA\nNo declarado / código no comprendido\nDeclarado parcialmente\nDeclarado y comprendido\nDeclarado, comprendido y críticamente evaluado\n\n\n\nEntregable de la semana 3: enlace al proyecto en el GitLab del Departamento con:\n\nREADME.md con nombre del proyecto, equipo y cómo ejecutarlo\n.gitignore apropiado al lenguaje\nCONTRIBUTING.md con el flujo de trabajo acordado por el equipo\nRama main protegida\nAl menos 5 Issues creados y asignados\nAl menos 1 Milestone con fecha de entrega\nUn Board configurado\nAl menos 1 Merge Request mergeado tras revisión de un par"
+  },
+  {
+    "objectID": "ads/programa.html#materiales-y-logística",
+    "href": "ads/programa.html#materiales-y-logística",
+    "title": "Propuesta formativa — Git y GitLab",
+    "section": "7. Materiales y logística",
+    "text": "7. Materiales y logística\nPara el relator\n\nPresentación: git_gitlab.qmd (Quarto + reveal.js)\nRepositorio de demostración en el GitLab del Departamento, preparado con conflicto sembrado para el bloque 5\nTerminal con fuente grande (≥ 18 pt) y prompt simplificado\nPlan B: si el GitLab institucional falla, tener la demo grabada o capturas de respaldo\n\nPara estudiantes\n\nGit instalado, acceso a GitLab verificado, editor instalado\nChuleta de comandos (última sección de la presentación, exportable a PDF)\n\nAmbiente\n\nSala con computadores o política BYOD\nConectividad a la red institucional (el GitLab del Departamento puede requerir VPN fuera del campus — verificar antes)"
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#section",
+    "href": "ads/git_gitlab_60min.html#section",
+    "title": "Git y GitLab sin miedo",
+    "section": "",
+    "text": "Git y GitLab sin miedo\nEl flujo mínimo para trabajar en equipo\n\n\nClonar · Commit · Push · Pull · Ramas · Issues · Merge Requests\nAnálisis y Diseño de Software — 2026\n\n\nFrancisco Alfaro Medina\nDepartamento de Informática · UTFSM"
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#te-ha-pasado-esto",
+    "href": "ads/git_gitlab_60min.html#te-ha-pasado-esto",
+    "title": "Git y GitLab sin miedo",
+    "section": "¿Te ha pasado esto?",
+    "text": "¿Te ha pasado esto?\n\n\n\n📁 Descargas/\n├── proyecto-final.zip\n├── proyecto-final-v2.zip\n├── proyecto-final-v2-ahora-si.zip\n├── proyecto-final-BUENO.zip\n├── proyecto-final-ESTE-NO-BORRAR.zip\n└── proyecto-final-v2-ahora-si (1).zip\n\n\n\n¿Cuál era el que funcionaba?\n¿Qué cambió entre uno y otro?\n¿Y si dos personas editan a la vez?\n\n\n\n\n\n😅 Todos hemos estado ahí. Hoy vemos cómo no volver."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#los-problemas-de-trabajar-sin-control-de-versiones",
+    "href": "ads/git_gitlab_60min.html#los-problemas-de-trabajar-sin-control-de-versiones",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "Los problemas de trabajar sin control de versiones",
+    "text": "Los problemas de trabajar sin control de versiones\n\n\n\n\n\n\n\n\n😩 Lo que pasa\n😰 Por qué duele\n\n\n\n\nCopias con nombres inventados\nNadie sabe cuál es la versión buena\n\n\n“Se me borró lo de ayer”\nNo hay forma de volver atrás\n\n\nDos personas editan el mismo archivo\nAlguien pierde su trabajo\n\n\nSe juntan los avances por WhatsApp\nCopiar y pegar a mano, con errores\n\n\n“¿Quién cambió esto?”\nNadie se acuerda\n\n\n\n\n\n\n💡 No es falta de orden. Es que el problema necesita una herramienta."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#git-es-el-historial-ordenado-de-tu-proyecto",
+    "href": "ads/git_gitlab_60min.html#git-es-el-historial-ordenado-de-tu-proyecto",
+    "title": "Git y GitLab sin miedo",
+    "section": "Git es el historial ordenado de tu proyecto",
+    "text": "Git es el historial ordenado de tu proyecto\n\n\n\n\n📁 Sin Git\nGuardas copias del proyecto.\nCada copia es un archivo distinto.\nEl “por qué” de cada cambio se pierde.\n\n\n\n🌿 Con Git\nGuardas un solo proyecto con toda su historia.\nCada cambio queda registrado: qué, quién, cuándo y por qué.\nPuedes volver a cualquier punto.\n\n\n\n\n\n🎮 Como los save points de un videojuego: avanzas tranquilo porque siempre puedes volver."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#al-final-de-esta-hora-vas-a-poder",
+    "href": "ads/git_gitlab_60min.html#al-final-de-esta-hora-vas-a-poder",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "Al final de esta hora vas a poder…",
+    "text": "Al final de esta hora vas a poder…\n\n\n\n\n\n\n\n\nClonar el repositorio de tu equipo.\nRevisar qué cambiaste.\nGuardar tus cambios con un commit.\nSubir y bajar cambios (push / pull).\nCrear una rama para trabajar tranquilo.\nAbrir un Issue y un Merge Request en GitLab.\n\n\n\n\n\n🎯 Nada más. Con eso alcanza para todo el semestre."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#agenda",
+    "href": "ads/git_gitlab_60min.html#agenda",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "Agenda",
+    "text": "Agenda\n\n\n\n\nBloque\nContenido\nTiempo\n\n\n\n\n1\n¿Por qué necesitamos Git?\n5 min\n\n\n2\nGit básico: conceptos y comandos mínimos\n15 min\n\n\n3\n🔨 Práctica guiada: tu primer commit\n10 min\n\n\n4\nGitLab: Issues y Merge Requests\n15 min\n\n\n5\n🔨 Práctica guiada: Issue → rama → MR\n8 min\n\n\n6\nPerder el miedo: cómo deshacer + chuleta\n7 min\n\n\n\nTotal\n60 min"
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#section-1",
+    "href": "ads/git_gitlab_60min.html#section-1",
+    "title": "Git y GitLab sin miedo",
+    "section": "",
+    "text": "Bloque 2\nGit básico"
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#qué-es-git",
+    "href": "ads/git_gitlab_60min.html#qué-es-git",
+    "title": "Git y GitLab sin miedo",
+    "section": "¿Qué es Git?",
+    "text": "¿Qué es Git?\n\n\nUn programa que guarda la historia de tu proyecto\n\ny te deja volver a cualquier punto de esa historia.\n\n\n\n\n\nSe instala en tu computador y funciona sin internet.\nNo sirve solo para código: sirve para cualquier archivo de texto.\nEs la herramienta estándar de la industria — la vas a usar toda tu carrera."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#las-palabras-que-hay-que-conocer",
+    "href": "ads/git_gitlab_60min.html#las-palabras-que-hay-que-conocer",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "Las palabras que hay que conocer",
+    "text": "Las palabras que hay que conocer\n\n\n\n\n\n\n\n\n\nPalabra\nEn simple\n\n\n\n\nRepositorio\nTu proyecto + toda su historia. Es una carpeta con un .git adentro.\n\n\nWorking directory\nLos archivos que ves y editas ahora mismo.\n\n\nStaging area\nLa “bandeja” donde pones los cambios que quieres guardar.\n\n\nCommit\nUn punto guardado en la historia, con un mensaje que explica qué hiciste.\n\n\nBranch (rama)\nUna línea de trabajo paralela, para no romper lo que ya funciona.\n\n\nRemote\nLa copia del repositorio que vive en GitLab, compartida con tu equipo.\n\n\nPush\nSubir tus commits al remote.\n\n\nPull\nBajar los commits que subieron los demás.\n\n\n\n\n\n\n🧭 Vuelve a esta tabla cada vez que te pierdas. Son ocho palabras, no ochenta."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#cómo-se-mueven-tus-cambios",
+    "href": "ads/git_gitlab_60min.html#cómo-se-mueven-tus-cambios",
+    "title": "Git y GitLab sin miedo",
+    "section": "Cómo se mueven tus cambios",
+    "text": "Cómo se mueven tus cambios\n\n\n\n\n\n\n%%{init: {'flowchart': {'padding': 26, 'nodeSpacing': 45, 'rankSpacing': 60}}}%%\nflowchart LR\n    A[\"💻 Working&lt;br/&gt;Directory\"] --&gt;|git add| B[\"📋 Staging&lt;br/&gt;Area\"]\n    B --&gt;|git commit| C[\"📦 Repositorio&lt;br/&gt;local\"]\n    C --&gt;|git push| D[\"☁️ GitLab&lt;br/&gt;&lt;i&gt;remote&lt;/i&gt;\"]\n    D --&gt;|git pull| A\n\n    style A fill:#e8f0fe,stroke:#0F2044,stroke-width:2px\n    style B fill:#dbe7fb,stroke:#2a5298,stroke-width:2px\n    style C fill:#c9dcf8,stroke:#3a6bc4,stroke-width:2px\n    style D fill:#FEE9D9,stroke:#FC6D26,stroke-width:2px\n\n\n\n\n\n\n\n\n\n🔑 Si entiendes este dibujo, ya entendiste lo esencial de Git."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#un-commit-es-un-punto-de-guardado",
+    "href": "ads/git_gitlab_60min.html#un-commit-es-un-punto-de-guardado",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "Un commit es un punto de guardado",
+    "text": "Un commit es un punto de guardado\n\n\n\n\nCada commit tiene:\n\nLos cambios que hiciste.\nUn mensaje que explica qué hiciste.\nTu nombre y la fecha.\nUn código único (hash).\n\n\nY lo más importante: siempre puedes volver a él.\n\n$ git log --oneline\n\na3f9c21  Corrige cálculo del promedio\n8b2e17d  Agrega pantalla de login\n4d81ba0  Crea estructura del proyecto\n0a72d34  Primer commit\n\n\nEsto es la historia de tu proyecto, contada por ustedes mismos."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#el-mensaje-del-commit-importa",
+    "href": "ads/git_gitlab_60min.html#el-mensaje-del-commit-importa",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "El mensaje del commit importa",
+    "text": "El mensaje del commit importa\n\n\n\n❌ No ayudan\n\"cambios\"\n\"asdasd\"\n\"arreglo\"\n\"ahora si\"\n\"commit\"\nDentro de dos semanas, ni tú vas a saber qué hiciste.\n\n✅ Ayudan\n\"Agrega pantalla de login\"\n\"Corrige error al dividir por cero\"\n\"Actualiza el README\"\n\"Agrega validación del formulario\"\nSe entienden sin abrir el código.\n\n\n\n\n📏 Regla simple: escribe qué hiciste, en pocas palabras y en presente."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#una-rama-es-una-línea-de-trabajo-paralela",
+    "href": "ads/git_gitlab_60min.html#una-rama-es-una-línea-de-trabajo-paralela",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "Una rama es una línea de trabajo paralela",
+    "text": "Una rama es una línea de trabajo paralela\n\n\n\n\n\n\n%%{init: {'theme':'base','themeVariables':{\n  'git0':'#0F2044','git1':'#FC6D26',\n  'gitBranchLabel0':'#ffffff','gitBranchLabel1':'#ffffff',\n  'commitLabelColor':'#2C3E50','commitLabelBackground':'#F5F7FA','commitLabelFontSize':'13px'\n}}}%%\ngitGraph\n    commit id: \"proyecto base\"\n    commit id: \"modelo de datos\"\n    branch mi-rama\n    checkout mi-rama\n    commit id: \"pantalla login\"\n    commit id: \"validación\"\n    checkout main\n    merge mi-rama\n    commit id: \"seguimos\"\n\n\n\n\n\n\n\n\n\n🌿 Trabajas en tu rama, sin romper nada. Cuando funciona, se integra a main."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#para-qué-sirven-las-ramas-en-tu-equipo",
+    "href": "ads/git_gitlab_60min.html#para-qué-sirven-las-ramas-en-tu-equipo",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "¿Para qué sirven las ramas en tu equipo?",
+    "text": "¿Para qué sirven las ramas en tu equipo?\n\n\n\n\n\nmain es la versión que siempre funciona.\nCada persona trabaja en su propia rama.\nNadie pisa el trabajo de nadie.\nCuando algo está listo, se integra a main.\n\n\n# Crear una rama y cambiarse a ella\ngit switch -c pantalla-login\n\n# Ver en qué rama estoy\ngit branch\n\n# Volver a main\ngit switch main\n\n\n💡 Nombres claros: pantalla-login, arregla-promedio, documentacion."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#los-comandos-mínimos",
+    "href": "ads/git_gitlab_60min.html#los-comandos-mínimos",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "Los comandos mínimos",
+    "text": "Los comandos mínimos\n\n# Traer el repositorio del equipo a tu computador (una sola vez)\ngit clone URL_DEL_REPOSITORIO\n\n# ¿Qué cambié? — úsalo TODO el tiempo, es gratis\ngit status\n\n# Preparar los cambios para guardarlos\ngit add .\n\n# Guardar el punto de control\ngit commit -m \"mensaje claro\"\n\n# Bajar lo que hicieron los demás\ngit pull\n\n# Subir lo que hiciste tú\ngit push\n\n# Crear una rama nueva y cambiarse a ella\ngit switch -c nombre-rama"
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#el-ciclo-de-todos-los-días",
+    "href": "ads/git_gitlab_60min.html#el-ciclo-de-todos-los-días",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "El ciclo de todos los días",
+    "text": "El ciclo de todos los días\n\n\n\n\n\n\n%%{init: {'flowchart': {'padding': 26, 'nodeSpacing': 45, 'rankSpacing': 60}}}%%\nflowchart LR\n    A[\"git pull&lt;br/&gt;&lt;i&gt;antes de empezar&lt;/i&gt;\"] --&gt; B[\"✏️ programar\"]\n    B --&gt; C[\"git status&lt;br/&gt;&lt;i&gt;¿qué cambié?&lt;/i&gt;\"]\n    C --&gt; D[\"git add .&lt;br/&gt;&lt;i&gt;preparar&lt;/i&gt;\"]\n    D --&gt; E[\"git commit&lt;br/&gt;&lt;i&gt;guardar&lt;/i&gt;\"]\n    E --&gt; F[\"git push&lt;br/&gt;&lt;i&gt;compartir&lt;/i&gt;\"]\n    F --&gt; A\n\n    style A fill:#e8f0fe,stroke:#0F2044,stroke-width:2px\n    style B fill:#fff,stroke:#6B7A8D,stroke-dasharray: 4 3\n    style F fill:#FEE9D9,stroke:#FC6D26,stroke-width:2px\n\n\n\n\n\n\n\n\n\n🔁 Este ciclo lo vas a repetir cientos de veces. Que se te haga automático."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#dos-costumbres-que-te-evitan-el-90-de-los-problemas",
+    "href": "ads/git_gitlab_60min.html#dos-costumbres-que-te-evitan-el-90-de-los-problemas",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "Dos costumbres que te evitan el 90 % de los problemas",
+    "text": "Dos costumbres que te evitan el 90 % de los problemas\n\n\n\n\n1️⃣ git pull antes de empezar\nSiempre. Antes de escribir la primera línea.\nAsí trabajas sobre la versión más nueva y evitas choques con tus compañeros.\n\n\n\n2️⃣ Commits pequeños y seguidos\nNo esperes a “terminar todo” para guardar.\nUn commit por cada cosa que funciona. Es más fácil volver atrás."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#section-2",
+    "href": "ads/git_gitlab_60min.html#section-2",
+    "title": "Git y GitLab sin miedo",
+    "section": "",
+    "text": "Bloque 3\nFlujo básico individual"
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#práctica-1-tu-primer-commit",
+    "href": "ads/git_gitlab_60min.html#práctica-1-tu-primer-commit",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "Práctica 1 — Tu primer commit",
+    "text": "Práctica 1 — Tu primer commit\n\n\n\n\n\n\n\n\nConfigura tu nombre y correo (una sola vez):\ngit config --global user.name \"Tu Nombre\"\ngit config --global user.email \"tu.correo@usm.cl\"\nClona el repositorio del equipo: git clone URL\nCrea tu rama: git switch -c tu-nombre\nEdita el README.md: agrega tu nombre.\nGuarda y sube: git status → git add . → git commit -m \"...\" → git push -u origin tu-nombre\n\n\n\n\n⏱️ 10 minutos. Levanta la mano apenas algo no funcione — para eso estamos."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#section-3",
+    "href": "ads/git_gitlab_60min.html#section-3",
+    "title": "Git y GitLab sin miedo",
+    "section": "",
+    "text": "Bloque 4\nGitLab básico"
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#git-no-es-gitlab",
+    "href": "ads/git_gitlab_60min.html#git-no-es-gitlab",
+    "title": "Git y GitLab sin miedo",
+    "section": "Git no es GitLab",
+    "text": "Git no es GitLab\n\n\n\n\n\n\n\n\n\n\n🌿 Git\n🦊 GitLab\n\n\n\n\nQué es\nUn programa\nUn sitio web\n\n\nDónde está\nEn tu computador\nEn el servidor del Departamento\n\n\nPara qué sirve\nGuardar la historia del proyecto\nCompartir y coordinarse con el equipo\n\n\nSe usa desde\nLa terminal\nEl navegador\n\n\nSin internet\n✅ Funciona\n❌ No funciona\n\n\n\n\n\n\n🚗 Git es el motor. GitLab es el auto completo: motor, tablero y copiloto."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#qué-nos-da-gitlab",
+    "href": "ads/git_gitlab_60min.html#qué-nos-da-gitlab",
+    "title": "Git y GitLab sin miedo",
+    "section": "¿Qué nos da GitLab?",
+    "text": "¿Qué nos da GitLab?\n\n\n\n\n\n\n\n\n\nHerramienta\nPara qué sirve en tu equipo\n\n\n\n\nRepositorio remoto\nLa versión oficial del proyecto. Todos clonan y suben ahí.\n\n\nIssues\nLa lista de tareas: qué hay que hacer y quién lo hace.\n\n\nRamas\nSe ven todas las ramas del equipo y en qué van.\n\n\nMerge Requests\nProponer que tu trabajo entre a main.\n\n\nRevisión de código\nComentar el código de un compañero, línea por línea.\n\n\nTablero (Board)\nVer de un vistazo qué está por hacer, en curso y listo.\n\n\n\n\n\n\n\n🏛️ En este curso usamos el GitLab del Departamento, con tu cuenta institucional."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#si-alguna-vez-viste-github",
+    "href": "ads/git_gitlab_60min.html#si-alguna-vez-viste-github",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "Si alguna vez viste GitHub",
+    "text": "Si alguna vez viste GitHub\n\n\n\n\n🐙 GitHub\n🦊 GitLab\n\n\n\n\nRepository\nProject\n\n\nPull Request\nMerge Request (MR)\n\n\nIssues\nIssues\n\n\n\n\n\n\n📌 Es la confusión más común: en GitLab no se dice “Pull Request”. Se dice Merge Request. Es exactamente lo mismo."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#clonar-desde-gitlab",
+    "href": "ads/git_gitlab_60min.html#clonar-desde-gitlab",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "Clonar desde GitLab",
+    "text": "Clonar desde GitLab\n\n\n\n\n\nEntra al proyecto de tu equipo en GitLab.\nBotón azul Code (arriba a la derecha).\nCopia la URL HTTPS.\nEn tu terminal:\ngit clone &lt;pega-la-url-aquí&gt;\ncd nombre-del-proyecto\nTe pedirá tu usuario y contraseña institucional.\n\n\n┌──────────────────────────────┐\n│  proyecto-ads       [ Code ▾ ]│\n├──────────────────────────────┤\n│  Clone with HTTPS            │\n│  ┌────────────────────────┐  │\n│  │ https://gitlab.../...  │📋│\n│  └────────────────────────┘  │\n│                              │\n│  Clone with SSH              │\n│  ┌────────────────────────┐  │\n│  │ git@gitlab.../...      │📋│\n│  └────────────────────────┘  │\n└──────────────────────────────┘\n\n\n\n💡 Empieza con HTTPS. Es lo más simple. SSH lo puedes configurar después."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#issues-la-lista-de-tareas-del-equipo",
+    "href": "ads/git_gitlab_60min.html#issues-la-lista-de-tareas-del-equipo",
+    "title": "Git y GitLab sin miedo",
+    "section": "Issues: la lista de tareas del equipo",
+    "text": "Issues: la lista de tareas del equipo\n\n\n\nUn Issue es una tarea, un error o una idea.\n\nResponde tres preguntas:\n\n¿Qué hay que hacer?\n¿Quién lo está haciendo?\n¿Ya está listo?\n\n\nSe crea en: Issues → New issue\n\nTítulo:\n  Agregar validación al formulario\n\nDescripción:\n  El formulario acepta campos vacíos.\n  Hay que mostrar un mensaje de error.\n\n  - [ ] Validar campos obligatorios\n  - [ ] Mostrar mensaje al usuario\n\nAssignee:  @ana\n\n\n\n🎯 Un buen Issue se entiende sin tener que preguntarte nada."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#merge-request-revisen-esto-antes-de-integrarlo",
+    "href": "ads/git_gitlab_60min.html#merge-request-revisen-esto-antes-de-integrarlo",
+    "title": "Git y GitLab sin miedo",
+    "section": "Merge Request: “revisen esto antes de integrarlo”",
+    "text": "Merge Request: “revisen esto antes de integrarlo”\n\n\n\nUn Merge Request dice:\n\n“Trabajé en mi rama. Quiero que esto entre a main. ¿Lo revisan?”\n\n\nSirve para:\n\nVer exactamente qué cambió.\nComentar y sugerir mejoras.\nDejar registro de por qué se integró.\nQue main no se rompa.\n\n\n!7  Agrega validación del formulario\n──────────────────────────────────────\nDe:    pantalla-login\nHacia: main\n\nAutor:    @ana\nRevisor:  @juan\n\n💬 2 comentarios\n✅ Aprobado\n\n      [ Merge ]\n\n\n\n📌 En GitLab no se dice “Pull Request” (eso es GitHub). Aquí es Merge Request."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#abrir-un-merge-request-en-4-pasos",
+    "href": "ads/git_gitlab_60min.html#abrir-un-merge-request-en-4-pasos",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "Abrir un Merge Request en 4 pasos",
+    "text": "Abrir un Merge Request en 4 pasos\n\n\n\nSube tu rama:\ngit push -u origin nombre-rama\nGitLab te muestra un enlace en la terminal: “Create merge request”. Haz clic.\n(o entra a GitLab → Merge requests → New)\nCompleta: título claro, breve descripción de qué hiciste, y asigna a un compañero como Reviewer.\nEspera la revisión. Cuando tu compañero apruebe → botón Merge.\n\n\n\n\n\n✅ Listo. Tu trabajo ya es parte de main y todo el equipo lo tiene con un git pull."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#revisar-el-código-de-un-compañero",
+    "href": "ads/git_gitlab_60min.html#revisar-el-código-de-un-compañero",
+    "title": "Git y GitLab sin miedo",
+    "section": "Revisar el código de un compañero",
+    "text": "Revisar el código de un compañero\n\n\n\n🔍 Qué mirar\n\n¿Entiendo qué hace?\n¿Hace lo que dice el Issue?\n¿Se le quedó algo a medias?\n¿Los nombres se entienden?\n\n\n💬 Cómo comentar\nHaz clic en el número de línea y escribe.\n❌ “esto está malo”\n✅ “¿qué pasa si la lista viene vacía? creo que falla acá”\n\n\n\n\n🤝 Se revisa el código, no a la persona. Y revisar es la forma más rápida de aprender de tus compañeros."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#el-flujo-completo-de-tu-equipo",
+    "href": "ads/git_gitlab_60min.html#el-flujo-completo-de-tu-equipo",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "El flujo completo de tu equipo",
+    "text": "El flujo completo de tu equipo\n\n\n\n\n\n\n%%{init: {'flowchart': {'padding': 26, 'nodeSpacing': 45, 'rankSpacing': 60}}}%%\nflowchart LR\n    A[\"📋 Issue&lt;br/&gt;&lt;i&gt;qué hay que hacer&lt;/i&gt;\"] --&gt; B[\"🌿 Rama&lt;br/&gt;&lt;i&gt;git switch -c&lt;/i&gt;\"]\n    B --&gt; C[\"💻 Commits&lt;br/&gt;&lt;i&gt;add + commit&lt;/i&gt;\"]\n    C --&gt; D[\"⬆️ Push&lt;br/&gt;&lt;i&gt;git push&lt;/i&gt;\"]\n    D --&gt; E[\"🔀 Merge Request&lt;br/&gt;&lt;i&gt;en GitLab&lt;/i&gt;\"]\n    E --&gt; F[\"👀 Revisión&lt;br/&gt;&lt;i&gt;un compañero&lt;/i&gt;\"]\n    F --&gt; G[\"✅ Merge&lt;br/&gt;&lt;i&gt;entra a main&lt;/i&gt;\"]\n\n    style A fill:#f5f7fa,stroke:#6B7A8D,stroke-width:2px\n    style E fill:#FEE9D9,stroke:#FC6D26,stroke-width:2px\n    style G fill:#E8F6EF,stroke:#27AE60,stroke-width:2px\n\n\n\n\n\n\n\n\n\n🔁 Una vuelta por cada tarea. Así se trabaja en la industria y así trabajaremos este semestre."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#section-4",
+    "href": "ads/git_gitlab_60min.html#section-4",
+    "title": "Git y GitLab sin miedo",
+    "section": "",
+    "text": "Bloque 5\nMini actividad práctica"
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#práctica-2-de-la-tarea-al-merge-request",
+    "href": "ads/git_gitlab_60min.html#práctica-2-de-la-tarea-al-merge-request",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "Práctica 2 — De la tarea al Merge Request",
+    "text": "Práctica 2 — De la tarea al Merge Request\n\n\n\n\n\n\n\nEn equipo:\n\nCreen un Issue con una tarea real de su proyecto y asígnenselo a alguien.\nEsa persona crea su rama y hace un commit pequeño.\nSube la rama y abre un Merge Request.\nOtro integrante lo revisa y deja al menos un comentario.\nAprueben y hagan Merge.\n\n\n\n\n\n⏱️ 8 minutos. No importa que el cambio sea mínimo — lo que importa es hacer la vuelta completa una vez."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#section-5",
+    "href": "ads/git_gitlab_60min.html#section-5",
+    "title": "Git y GitLab sin miedo",
+    "section": "",
+    "text": "Bloque 6\nUso responsable de IA"
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#lo-más-importante-de-todo",
+    "href": "ads/git_gitlab_60min.html#lo-más-importante-de-todo",
+    "title": "Git y GitLab sin miedo",
+    "section": "Lo más importante de todo",
+    "text": "Lo más importante de todo\n\n\nEn Git casi nada se pierde.\n\nSi hiciste un commit, tu trabajo está a salvo.\nSiempre hay forma de volver.\n\n\n\n\n\nEl miedo típico es “voy a romper el repositorio”. Es muy difícil romperlo de verdad.\nLo peor que suele pasar es que quede desordenado — y eso se arregla.\nAnte la duda: pregunta antes de ejecutar. No hay preguntas tontas con Git."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#errores-típicos-y-qué-hacer",
+    "href": "ads/git_gitlab_60min.html#errores-típicos-y-qué-hacer",
+    "title": "Git y GitLab sin miedo",
+    "section": "Errores típicos y qué hacer",
+    "text": "Errores típicos y qué hacer\n\n\n\n\n\n\n\n\n\n😬 Te pasó esto\n🛠️ Haz esto\n\n\n\n\nCambiaste un archivo y quieres dejarlo como estaba\ngit restore archivo.py\n\n\nHiciste git add de algo que no querías\ngit restore --staged archivo.py\n\n\nEl mensaje del commit quedó malo (y aún no hiciste push)\ngit commit --amend -m \"mensaje nuevo\"\n\n\ngit push rechazado: “updates were rejected”\nPrimero git pull, después git push\n\n\nApareció un conflicto\nElige qué versión queda, borra las marcas, y haz commit\n\n\nCrees que perdiste commits\ngit reflog — casi siempre están ahí\n\n\n\n\n\n\n\n🚨 Los únicos dos comandos que sí pueden borrar trabajo: git reset --hard y git push --force. No los uses sin preguntar."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#un-conflicto-no-es-un-error",
+    "href": "ads/git_gitlab_60min.html#un-conflicto-no-es-un-error",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "Un conflicto no es un error",
+    "text": "Un conflicto no es un error\n\n\n\ndef promedio(notas):\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\n    return sum(notas) / len(notas)\n=======\n    if not notas:\n        return 0\n    return sum(notas) / len(notas)\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; mi-rama\n\n\nPasa cuando dos personas editaron la misma línea.\nGit no puede adivinar cuál está bien, así que te pregunta a ti.\n\nQué haces: eliges qué código queda, borras las tres marcas, y haces git add + git commit.\n\n\n\n\n💬 Y si tienes dudas, habla con quien escribió la otra versión. Es una conversación, no una pelea."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#chuleta-todo-lo-de-hoy-en-una-diapositiva",
+    "href": "ads/git_gitlab_60min.html#chuleta-todo-lo-de-hoy-en-una-diapositiva",
+    "title": "Git y GitLab en 60 minutos",
+    "section": "Chuleta: todo lo de hoy en una diapositiva",
+    "text": "Chuleta: todo lo de hoy en una diapositiva\n\n\n\n\nEmpezar\ngit clone URL          # traer el repo\ngit config --global user.name \"...\"\ngit config --global user.email \"...\"\nTodos los días\ngit pull               # antes de empezar\ngit status             # ¿qué cambié?\ngit add .              # preparar\ngit commit -m \"...\"    # guardar\ngit push               # compartir\n\n\n\nRamas\ngit switch -c mi-rama          # crear\ngit switch main                # cambiar\ngit branch                     # listar\ngit push -u origin mi-rama     # subir\nSi algo sale mal\ngit restore archivo            # descartar cambios\ngit restore --staged archivo   # sacar del staging\ngit log --oneline              # ver la historia\ngit reflog                     # recuperar"
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#para-practicar-por-tu-cuenta",
+    "href": "ads/git_gitlab_60min.html#para-practicar-por-tu-cuenta",
+    "title": "Git y GitLab sin miedo",
+    "section": "Para practicar por tu cuenta",
+    "text": "Para practicar por tu cuenta\n\n\n\n🎮 Lo más útil\n\nLearn Git Branching\nRamas de forma visual, en español. 30 minutos aquí valen más que un manual completo.\nOh Shit, Git!?!\nCómo salir de los errores más comunes.\n\n\n📚 Para consultar\n\nPro Git — el libro oficial, gratis y en español.\nGitLab Docs — documentación de la plataforma.\nGit Explorer — “quiero hacer X, ¿qué comando uso?”"
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#lo-que-hay-que-recordar",
+    "href": "ads/git_gitlab_60min.html#lo-que-hay-que-recordar",
+    "title": "Git y GitLab sin miedo",
+    "section": "Lo que hay que recordar",
+    "text": "Lo que hay que recordar\n\n\n\n\n✅ Git guarda la historia de tu proyecto. GitLab es donde la comparten.\n\n\n✅ El ciclo diario: pull → programar → status → add → commit → push.\n\n\n✅ Trabaja en tu rama; integra a main con un Merge Request revisado.\n\n\n✅ Commits pequeños y seguidos, con mensajes que se entiendan.\n\n\n✅ No tengas miedo: si hiciste commit, tu trabajo está a salvo."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#gracias",
+    "href": "ads/git_gitlab_60min.html#gracias",
+    "title": "Git y GitLab sin miedo",
+    "section": "🎉 ¡Gracias!",
+    "text": "🎉 ¡Gracias!\n\n\n\n\n❓ ¿Preguntas?\n\n🔨 Para esta semana: que todo el equipo tenga el repositorio clonado, su archivo en integrantes/ y al menos un Merge Request mergeado.\n\n🌿 Nos vemos en el proyecto.\n\n\n\nGit y GitLab sin miedo\n\nAnálisis y Diseño de Software\nDepartamento de Informática\nUTFSM\n\nFrancisco Alfaro Medina"
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#trabajar-sin-control-de-versiones-duele",
+    "href": "ads/git_gitlab_60min.html#trabajar-sin-control-de-versiones-duele",
+    "title": "Git y GitLab sin miedo",
+    "section": "Trabajar sin control de versiones duele",
+    "text": "Trabajar sin control de versiones duele\n\n\n\n\n\n\n\n\n😩 Lo que pasa\n😰 Por qué duele\n\n\n\n\nCopias con nombres inventados\nNadie sabe cuál es la versión buena\n\n\n“Se me borró lo de ayer”\nNo hay forma de volver atrás\n\n\nDos personas editan el mismo archivo\nAlguien pierde su trabajo\n\n\nSe juntan los avances por WhatsApp\nCopiar y pegar a mano, con errores\n\n\n“¿Quién cambió esto y por qué?”\nNadie se acuerda\n\n\n\n\n\n\n💡 No es falta de orden. Es que el problema necesita una herramienta."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#objetivo-y-resultados-de-aprendizaje",
+    "href": "ads/git_gitlab_60min.html#objetivo-y-resultados-de-aprendizaje",
+    "title": "Git y GitLab sin miedo",
+    "section": "Objetivo y resultados de aprendizaje",
+    "text": "Objetivo y resultados de aprendizaje\n\n\nObjetivo: que entiendas el flujo mínimo de trabajo con Git y GitLab\ny lo puedas usar en tu proyecto desde esta semana.\n\n\n\nAl terminar esta hora vas a ser capaz de:\n\nClonar el repositorio de tu equipo desde el GitLab del Departamento.\nRevisar qué cambiaste con git status.\nCrear commits con mensajes claros.\nSubir y actualizar tu trabajo con push y pull.\nCrear una rama para trabajar sin romper nada.\nCrear un Issue y abrir un Merge Request simple en GitLab."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#programa-de-la-hora",
+    "href": "ads/git_gitlab_60min.html#programa-de-la-hora",
+    "title": "Git y GitLab sin miedo",
+    "section": "Programa de la hora",
+    "text": "Programa de la hora\n\n\n\n\n#\nBloque\nTiempo\n\n\n\n\n1\n¿Por qué necesitamos Git?\n5 min\n\n\n2\nGit básico: conceptos y comandos mínimos\n15 min\n\n\n3\nFlujo básico individual\n10 min\n\n\n4\nGitLab básico: Issues y Merge Requests\n15 min\n\n\n5\n🔨 Mini actividad práctica\n10 min\n\n\n6\nUso responsable de IA\n5 min\n\n\n\nTotal\n60 min\n\n\n\n\n\n\n⚠️ Es un taller: ten la terminal abierta. Vamos a escribir comandos de verdad."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#las-ocho-palabras-que-hay-que-conocer",
+    "href": "ads/git_gitlab_60min.html#las-ocho-palabras-que-hay-que-conocer",
+    "title": "Git y GitLab sin miedo",
+    "section": "Las ocho palabras que hay que conocer",
+    "text": "Las ocho palabras que hay que conocer\n\n\n\n\n\n\n\n\n\nPalabra\nEn simple\n\n\n\n\nRepositorio\nTu proyecto + toda su historia. Es una carpeta con un .git adentro.\n\n\nWorking directory\nLos archivos que ves y editas ahora mismo.\n\n\nStaging area\nLa “bandeja” donde pones los cambios que quieres guardar.\n\n\nCommit\nUn punto guardado en la historia, con un mensaje que explica qué hiciste.\n\n\nBranch (rama)\nUna línea de trabajo paralela, para no romper lo que ya funciona.\n\n\nRemote\nLa copia del repositorio que vive en GitLab, compartida con tu equipo.\n\n\nPush\nSubir tus commits al remote.\n\n\nPull\nBajar los commits que subieron los demás.\n\n\n\n\n\n\n🧭 Son ocho palabras, no ochenta. Vuelve a esta tabla cada vez que te pierdas."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#los-7-comandos-que-necesitas",
+    "href": "ads/git_gitlab_60min.html#los-7-comandos-que-necesitas",
+    "title": "Git y GitLab sin miedo",
+    "section": "Los 7 comandos que necesitas",
+    "text": "Los 7 comandos que necesitas\n\ngit clone URL_DEL_REPOSITORIO     # 1. traer el repositorio\ngit status                        # 2. ¿qué cambié?\ngit add .                         # 3. preparar los cambios\ngit commit -m \"mensaje claro\"     # 4. guardar el punto de control\ngit pull                          # 5. bajar lo del equipo\ngit push                          # 6. subir lo tuyo\ngit switch -c nombre-rama         # 7. crear una rama\n\n\n\n👉 Ahora los vemos uno por uno: qué hace, cuándo se usa, un ejemplo y el error típico."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#git-clone",
+    "href": "ads/git_gitlab_60min.html#git-clone",
+    "title": "Git y GitLab sin miedo",
+    "section": "1️⃣ git clone",
+    "text": "1️⃣ git clone\n\n\n\n\n🔧 Qué hace\nCopia el repositorio completo desde GitLab a tu computador, con toda su historia.\n\n\n⏰ Cuándo se usa\nUna sola vez por proyecto, al principio.\n\n\ngit clone URL_DEL_REPOSITORIO\ncd proyecto-ads\n\n\n\n❌ Error común: clonar dentro de otro repositorio, o clonarlo de nuevo cada vez que quieres actualizar.\n✅ Para actualizar no se clona: se usa git pull."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#git-status",
+    "href": "ads/git_gitlab_60min.html#git-status",
+    "title": "Git y GitLab sin miedo",
+    "section": "2️⃣ git status",
+    "text": "2️⃣ git status\n\n\n\n\n🔧 Qué hace\nTe dice en qué rama estás, qué archivos cambiaste y qué está listo para guardar.\n\n\n⏰ Cuándo se usa\nTodo el tiempo. Antes y después de cada comando. Es gratis.\n\n\n$ git status\nOn branch pantalla-login\nChanges not staged for commit:\n     modified:  src/login.py\nUntracked files:\n     nuevo_archivo.py\n\n\n\n❌ Error común: no usarlo nunca y trabajar a ciegas.\n✅ Si algo raro pasa, git status casi siempre te dice qué es y qué hacer."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#git-add",
+    "href": "ads/git_gitlab_60min.html#git-add",
+    "title": "Git y GitLab sin miedo",
+    "section": "3️⃣ git add",
+    "text": "3️⃣ git add\n\n\n\n\n🔧 Qué hace\nPone tus cambios en la “bandeja” (staging area) para el próximo commit.\n\n\n⏰ Cuándo se usa\nJusto antes de hacer un commit.\n\n\ngit add .              # todo\ngit add src/login.py   # un archivo\n\n\n\n❌ Error común: hacer git add . sin mirar y subir cosas que no correspondían (archivos gigantes, contraseñas, carpetas del entorno).\n✅ Corre git status antes. Si agregaste algo por error: git restore --staged archivo."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#git-commit",
+    "href": "ads/git_gitlab_60min.html#git-commit",
+    "title": "Git y GitLab sin miedo",
+    "section": "4️⃣ git commit",
+    "text": "4️⃣ git commit\n\n\n\n\n🔧 Qué hace\nGuarda un punto de control en la historia, con tu mensaje, tu nombre y la fecha.\n\n\n⏰ Cuándo se usa\nCada vez que terminas algo que funciona. Mejor seguido y pequeño.\n\n\ngit commit -m \"Agrega validación\n   del formulario\"\n\n\n\n❌ Error común: un solo commit gigante al final llamado \"cambios\".\n✅ El commit vive en tu computador hasta que hagas push. Commitear no comparte nada todavía."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#un-buen-mensaje-de-commit",
+    "href": "ads/git_gitlab_60min.html#un-buen-mensaje-de-commit",
+    "title": "Git y GitLab sin miedo",
+    "section": "Un buen mensaje de commit",
+    "text": "Un buen mensaje de commit\n\n\n\n❌ No ayudan\n\"cambios\"\n\"asdasd\"\n\"arreglo\"\n\"ahora si\"\n\"commit final\"\nDentro de dos semanas, ni tú vas a saber qué hiciste.\n\n✅ Ayudan\n\"Agrega pantalla de login\"\n\"Corrige error al dividir por cero\"\n\"Actualiza el README\"\n\"Agrega validación del formulario\"\nSe entienden sin abrir el código.\n\n\n\n\n📏 Regla simple: escribe qué hiciste, en pocas palabras. Si necesitas escribir “y”, probablemente son dos commits."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#git-pull",
+    "href": "ads/git_gitlab_60min.html#git-pull",
+    "title": "Git y GitLab sin miedo",
+    "section": "5️⃣ git pull",
+    "text": "5️⃣ git pull\n\n\n\n\n🔧 Qué hace\nBaja a tu computador los commits que tus compañeros subieron a GitLab.\n\n\n⏰ Cuándo se usa\nSiempre antes de empezar a trabajar. Y antes de hacer push.\n\n\ngit pull\n\n\n\n❌ Error común: trabajar toda la tarde sin hacer pull y después chocar con los cambios de todos.\n✅ Si aparece un conflicto, no es un error: Git te está pidiendo que elijas. Lo vemos en el bloque 3."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#git-push",
+    "href": "ads/git_gitlab_60min.html#git-push",
+    "title": "Git y GitLab sin miedo",
+    "section": "6️⃣ git push",
+    "text": "6️⃣ git push\n\n\n\n\n🔧 Qué hace\nSube tus commits a GitLab para que el equipo los tenga.\n\n\n⏰ Cuándo se usa\nCuando terminaste algo y quieres compartirlo.\n\n\ngit push          # rama ya existente\n\n# primera vez que subes la rama:\ngit push -u origin nombre-rama\n\n\n\n❌ Error común: ! [rejected] ... fetch first. Significa que hay cambios en GitLab que tú no tienes.\n✅ La solución es siempre la misma: git pull y después git push."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#git-switch--c",
+    "href": "ads/git_gitlab_60min.html#git-switch--c",
+    "title": "Git y GitLab sin miedo",
+    "section": "7️⃣ git switch -c",
+    "text": "7️⃣ git switch -c\n\n\n\n\n🔧 Qué hace\nCrea una rama nueva y te cambia a ella. Una rama es una línea de trabajo paralela.\n\n\n⏰ Cuándo se usa\nAl empezar cualquier tarea nueva. Nunca trabajes directo en main.\n\n\ngit switch -c pantalla-login\ngit switch main\ngit branch\n\n\n\n❌ Error común: hacer commits en main sin darse cuenta, o crear la rama después de trabajar.\n✅ Antes de escribir código: git status para confirmar en qué rama estás."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#para-qué-sirven-las-ramas",
+    "href": "ads/git_gitlab_60min.html#para-qué-sirven-las-ramas",
+    "title": "Git y GitLab sin miedo",
+    "section": "¿Para qué sirven las ramas?",
+    "text": "¿Para qué sirven las ramas?\n\nmain es la versión que siempre funciona. Cada persona trabaja en su propia rama y, cuando algo está listo, se integra a main. Así nadie pisa el trabajo de nadie.\n\n\n\n\n\n%%{init: {'theme':'base','themeVariables':{\n  'git0':'#0F2044','git1':'#FC6D26',\n  'gitBranchLabel0':'#ffffff','gitBranchLabel1':'#ffffff',\n  'commitLabelColor':'#2C3E50','commitLabelBackground':'#F5F7FA','commitLabelFontSize':'13px'\n}}}%%\ngitGraph\n    commit id: \"proyecto base\"\n    commit id: \"modelo de datos\"\n    branch mi-rama\n    checkout mi-rama\n    commit id: \"pantalla login\"\n    commit id: \"validación\"\n    checkout main\n    merge mi-rama\n    commit id: \"seguimos\"\n\n\n\n\n\n\n\n\n🌿 Nombres claros: pantalla-login, arregla-promedio, documentacion."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#el-flujo-completo-de-principio-a-fin",
+    "href": "ads/git_gitlab_60min.html#el-flujo-completo-de-principio-a-fin",
+    "title": "Git y GitLab sin miedo",
+    "section": "El flujo completo, de principio a fin",
+    "text": "El flujo completo, de principio a fin\n\n\n\n\n\n\n%%{init: {'flowchart': {'padding': 26, 'nodeSpacing': 45, 'rankSpacing': 55}}}%%\nflowchart LR\n    A[\"✏️ Modificar&lt;br/&gt;archivos\"] --&gt; B[\"git status\"]\n    B --&gt; C[\"git add\"]\n    C --&gt; D[\"git commit\"]\n    D --&gt; E[\"git push\"]\n    E --&gt; F[\"☁️ GitLab\"]\n    F --&gt; G[\"git pull\"]\n    G --&gt; A\n\n    style A fill:#fff,stroke:#6B7A8D,stroke-dasharray: 4 3\n    style F fill:#FEE9D9,stroke:#FC6D26,stroke-width:2px\n    style E fill:#e8f0fe,stroke:#0F2044,stroke-width:2px\n    style G fill:#e8f0fe,stroke:#0F2044,stroke-width:2px\n\n\n\n\n\n\n\n\n\n🔁 Este ciclo lo vas a repetir cientos de veces. Que se te haga automático."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#los-pasos-con-los-comandos-exactos",
+    "href": "ads/git_gitlab_60min.html#los-pasos-con-los-comandos-exactos",
+    "title": "Git y GitLab sin miedo",
+    "section": "Los pasos, con los comandos exactos",
+    "text": "Los pasos, con los comandos exactos\n\n\n# 0. Una sola vez: traer el repositorio\ngit clone https://gitlab.usm.cl/grupo-07/proyecto-ads.git\ncd proyecto-ads\n\n# 1. Antes de empezar: traer lo que hicieron los demás\ngit pull\n\n# 2. Crear tu rama para la tarea\ngit switch -c pantalla-login\n\n# 3. ... programar ...\n\n# 4. Revisar qué cambiaste\ngit status\n\n# 5. Preparar y guardar\ngit add .\ngit commit -m \"Agrega pantalla de login\"\n\n# 6. Subir tu trabajo\ngit push -u origin pantalla-login"
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#dos-costumbres-que-evitan-el-90-de-los-problemas",
+    "href": "ads/git_gitlab_60min.html#dos-costumbres-que-evitan-el-90-de-los-problemas",
+    "title": "Git y GitLab sin miedo",
+    "section": "Dos costumbres que evitan el 90 % de los problemas",
+    "text": "Dos costumbres que evitan el 90 % de los problemas\n\n\n\n\n1️⃣ git pull antes de empezar\nSiempre. Antes de escribir la primera línea.\nAsí trabajas sobre la versión más nueva y evitas choques con tus compañeros.\n\n\n\n2️⃣ Commits pequeños y seguidos\nNo esperes a “terminar todo” para guardar.\nUn commit por cada cosa que funciona. Es más fácil volver atrás."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#si-aparece-un-conflicto-no-es-un-error",
+    "href": "ads/git_gitlab_60min.html#si-aparece-un-conflicto-no-es-un-error",
+    "title": "Git y GitLab sin miedo",
+    "section": "Si aparece un conflicto, no es un error",
+    "text": "Si aparece un conflicto, no es un error\n\n\n\ndef promedio(notas):\n&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD\n    return sum(notas) / len(notas)\n=======\n    if not notas:\n        return 0\n    return sum(notas) / len(notas)\n&gt;&gt;&gt;&gt;&gt;&gt;&gt; mi-rama\n\n\nPasa cuando dos personas editaron la misma línea.\nGit no puede adivinar cuál está bien, así que te pregunta a ti.\n\nQué haces: eliges qué código queda, borras las tres marcas, y haces git add + git commit.\n\n\n\n\n💬 Si tienes dudas, habla con quien escribió la otra versión. Es una conversación, no una pelea."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#el-repositorio-en-gitlab",
+    "href": "ads/git_gitlab_60min.html#el-repositorio-en-gitlab",
+    "title": "Git y GitLab sin miedo",
+    "section": "El repositorio en GitLab",
+    "text": "El repositorio en GitLab\n\n\n[Imagen sugerida: vista de repositorio en GitLab]\n\nPantalla principal del proyecto: archivos, botón Code con la URL para clonar,\ny el menú lateral con Issues y Merge requests.\n\n\n\n\nPara clonarlo: botón azul Code → copia la URL HTTPS → en tu terminal git clone &lt;url&gt;.\n\n\n💡 Empieza con HTTPS: te pide usuario y contraseña institucional y listo. SSH lo configuras después."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#los-issues-en-gitlab",
+    "href": "ads/git_gitlab_60min.html#los-issues-en-gitlab",
+    "title": "Git y GitLab sin miedo",
+    "section": "Los Issues en GitLab",
+    "text": "Los Issues en GitLab\n\n\n[Imagen sugerida: vista de Issues en GitLab]\n\nListado de Issues del proyecto con títulos, responsables asignados\ny etiquetas; y el botón New issue.\n\n\n\n\n🗂️ Con los Issues bien puestos, el tablero del equipo se arma solo."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#los-merge-requests-en-gitlab",
+    "href": "ads/git_gitlab_60min.html#los-merge-requests-en-gitlab",
+    "title": "Git y GitLab sin miedo",
+    "section": "Los Merge Requests en GitLab",
+    "text": "Los Merge Requests en GitLab\n\n\n[Imagen sugerida: vista de Merge Request en GitLab]\n\nUn MR abierto mostrando la pestaña Changes con el diff línea a línea,\nun comentario de revisión y el botón Merge."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#un-tablero-simple-para-el-equipo",
+    "href": "ads/git_gitlab_60min.html#un-tablero-simple-para-el-equipo",
+    "title": "Git y GitLab sin miedo",
+    "section": "Un tablero simple para el equipo",
+    "text": "Un tablero simple para el equipo\n\n\n\n\n\nColumna\nQué hay ahí\n\n\n\n\n📋 Por hacer\nIssues creados que nadie tomó todavía\n\n\n🔨 En curso\nAlguien lo está trabajando en su rama\n\n\n👀 En revisión\nYa hay un Merge Request esperando revisión\n\n\n✅ Listo\nMergeado a main, Issue cerrado\n\n\n\n\n\n\n\n🗂️ En GitLab está en Issues → Boards. Arrastras la tarjeta de una columna a otra y el Issue se actualiza solo."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#el-flujo-recomendado-para-tu-equipo",
+    "href": "ads/git_gitlab_60min.html#el-flujo-recomendado-para-tu-equipo",
+    "title": "Git y GitLab sin miedo",
+    "section": "El flujo recomendado para tu equipo",
+    "text": "El flujo recomendado para tu equipo\n\n\n\n\n\n\n%%{init: {'flowchart': {'padding': 26, 'nodeSpacing': 40, 'rankSpacing': 50}}}%%\nflowchart LR\n    A[\"📋 Issue\"] --&gt; B[\"🌿 Crear rama\"]\n    B --&gt; C[\"💻 Trabajar&lt;br/&gt;localmente\"]\n    C --&gt; D[\"📌 Commit\"]\n    D --&gt; E[\"⬆️ Push\"]\n    E --&gt; F[\"🔀 Merge&lt;br/&gt;Request\"]\n    F --&gt; G[\"👀 Revisión\"]\n    G --&gt; H{\"¿Aprobado?\"}\n    H --&gt;|No| C\n    H --&gt;|Sí| I[\"✅ Merge&lt;br/&gt;a main\"]\n\n    style A fill:#f5f7fa,stroke:#6B7A8D,stroke-width:2px\n    style F fill:#FEE9D9,stroke:#FC6D26,stroke-width:2px\n    style H fill:#FFF4E5,stroke:#FC6D26,stroke-width:2px\n    style I fill:#E8F6EF,stroke:#27AE60,stroke-width:2px\n\n\n\n\n\n\n\n\n\n🔁 Una vuelta por cada tarea. Así se trabaja en la industria y así trabajaremos este semestre."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#actividad-tu-archivo-en-el-repositorio-del-curso",
+    "href": "ads/git_gitlab_60min.html#actividad-tu-archivo-en-el-repositorio-del-curso",
+    "title": "Git y GitLab sin miedo",
+    "section": "Actividad — Tu archivo en el repositorio del curso",
+    "text": "Actividad — Tu archivo en el repositorio del curso\n\n\n\n\n\n\n\nMeta: crear integrantes/nombre-apellido.md y hacer la vuelta completa.\ngit clone URL_DEL_REPOSITORIO\ncd proyecto-ads\ngit switch -c ana-perez\nCrea el archivo integrantes/ana-perez.md con tu nombre, tu carrera y una línea sobre ti.\ngit status\ngit add .\ngit commit -m \"Agrega ficha de Ana Pérez\"\ngit push -u origin ana-perez\nLuego, en GitLab: abre un Merge Request y pídele a un compañero que lo revise.\n\n\n\n⏱️ 10 minutos. Levanta la mano apenas algo no funcione — para eso estamos."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#no-tienes-git-instalado-hazlo-desde-la-web",
+    "href": "ads/git_gitlab_60min.html#no-tienes-git-instalado-hazlo-desde-la-web",
+    "title": "Git y GitLab sin miedo",
+    "section": "¿No tienes Git instalado? Hazlo desde la web",
+    "text": "¿No tienes Git instalado? Hazlo desde la web\n\n\nTodo lo anterior se puede hacer sin instalar nada, desde el navegador:\n\nEntra al proyecto en GitLab y abre la carpeta integrantes/.\nBotón + → New file. Nómbralo nombre-apellido.md.\nEscribe tu contenido en el editor web.\nAbajo, en Commit message, escribe un mensaje claro.\nElige “Create a new branch” y ponle tu nombre.\nMarca ✅ “Start a new merge request with these changes”.\nBotón Commit changes → se abre el Merge Request solo.\n\n\n\n\n\n💡 Es exactamente el mismo flujo: rama → commit → Merge Request. Solo cambia dónde lo escribes."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#la-ia-te-puede-ayudar-mucho-con-git",
+    "href": "ads/git_gitlab_60min.html#la-ia-te-puede-ayudar-mucho-con-git",
+    "title": "Git y GitLab sin miedo",
+    "section": "La IA te puede ayudar mucho con Git",
+    "text": "La IA te puede ayudar mucho con Git\n\n\n\n\n\n\n\n\n\nPara qué\nEjemplo de lo que le puedes pedir\n\n\n\n\nEntender un error\n“¿Qué significa este error de Git? ¿Cómo lo soluciono?”\n\n\nRedactar un commit\n“Escribe un mensaje de commit corto y claro para estos cambios”\n\n\nMejorar un Issue\n“Reescribe este Issue para que quede claro qué hay que hacer”\n\n\nResumir un MR\n“Resume qué cambia este Merge Request y qué debería revisar”\n\n\nEntender un conflicto\n“Explícame qué hacía cada versión de este conflicto”\n\n\nEntender un comando\n“¿Qué hace exactamente este comando? ¿Qué riesgo tiene?”\n\n\n\n\n\n\n\n💡 Especialmente útil al principio: pídele que te explique el error antes de ejecutar nada."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#cuatro-advertencias",
+    "href": "ads/git_gitlab_60min.html#cuatro-advertencias",
+    "title": "Git y GitLab sin miedo",
+    "section": "Cuatro advertencias",
+    "text": "Cuatro advertencias\n\n\n\n🔓 Nunca pegues contraseñas, tokens ni credenciales en una herramienta de IA.\n\n\n🧠 No entregues código que no entiendes. Si no lo puedes explicar, no lo subas.\n\n\n🔍 Verifica siempre. La IA inventa comandos que no existen, con total seguridad.\n\n\n⚖️ La responsabilidad final es tuya, no de la herramienta.\n\n\n\n\n\n✅ Usar IA no está penalizado. Entregar algo que no entiendes, sí."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#section-6",
+    "href": "ads/git_gitlab_60min.html#section-6",
+    "title": "Git y GitLab sin miedo",
+    "section": "",
+    "text": "Cierre\nPara llevarte"
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#checklist-estoy-listo-para-el-proyecto",
+    "href": "ads/git_gitlab_60min.html#checklist-estoy-listo-para-el-proyecto",
+    "title": "Git y GitLab sin miedo",
+    "section": "Checklist: ¿estoy listo para el proyecto?",
+    "text": "Checklist: ¿estoy listo para el proyecto?\n\n\n\n💻 En mi computador\n\nGit instalado (git --version)\nMi nombre y correo configurados\nRepositorio del equipo clonado\nSé en qué rama estoy (git status)\nHice al menos un commit propio\nHice al menos un push\n\n\n🦊 En GitLab\n\nEntro con mi cuenta institucional\nVeo el proyecto de mi equipo\nCreé o me asignaron un Issue\nAbrí un Merge Request\nRevisé el MR de un compañero\nMi Merge Request quedó mergeado\n\n\n\n\n\n✅ Si marcas todo, ya sabes lo suficiente para trabajar todo el semestre."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#mini-glosario",
+    "href": "ads/git_gitlab_60min.html#mini-glosario",
+    "title": "Git y GitLab sin miedo",
+    "section": "Mini glosario",
+    "text": "Mini glosario\n\n\n\n\n\n\n\n\n\nTérmino\nSignificado\n\n\n\n\nRepositorio (repo)\nEl proyecto más toda su historia de cambios.\n\n\nClonar\nCopiar un repositorio de GitLab a tu computador.\n\n\nWorking directory\nLos archivos tal como están ahora en tu carpeta.\n\n\nStaging area\nLa bandeja con los cambios que entrarán al próximo commit.\n\n\nCommit\nUn punto guardado en la historia, con mensaje y autor.\n\n\nBranch (rama)\nUna línea de trabajo paralela a main.\n\n\nmain\nLa rama principal: la versión que siempre debe funcionar.\n\n\nRemote\nEl repositorio en GitLab, compartido con el equipo.\n\n\nPush / Pull\nSubir tus commits / bajar los de los demás.\n\n\nIssue\nUna tarea, error o idea registrada en GitLab.\n\n\nMerge Request (MR)\nPropuesta de integrar los cambios de tu rama a main.\n\n\nMerge\nIntegrar efectivamente una rama en otra.\n\n\nConflicto\nDos versiones distintas de la misma línea; tú decides cuál queda."
+  },
+  {
+    "objectID": "ads/git_gitlab_60min.html#chuleta-todo-en-una-diapositiva",
+    "href": "ads/git_gitlab_60min.html#chuleta-todo-en-una-diapositiva",
+    "title": "Git y GitLab sin miedo",
+    "section": "Chuleta: todo en una diapositiva",
+    "text": "Chuleta: todo en una diapositiva\n\n\n\n\nEmpezar\ngit clone URL          # traer el repo\ngit config --global user.name \"...\"\ngit config --global user.email \"...\"\nTodos los días\ngit pull               # antes de empezar\ngit status             # ¿qué cambié?\ngit add .              # preparar\ngit commit -m \"...\"    # guardar\ngit push               # compartir\n\n\n\nRamas\ngit switch -c mi-rama          # crear\ngit switch main                # cambiar\ngit branch                     # listar\ngit push -u origin mi-rama     # subir\nSi algo sale mal\ngit restore archivo            # descartar cambios\ngit restore --staged archivo   # sacar del staging\ngit log --oneline              # ver la historia\ngit reflog                     # recuperar"
+  },
+  {
+    "objectID": "ads/guion_60min.html",
+    "href": "ads/guion_60min.html",
+    "title": "Guion del expositor — Git y GitLab sin miedo",
+    "section": "",
+    "text": "Charla\nGit y GitLab sin miedo — el flujo mínimo para trabajar en equipo\n\n\nCurso\nAnálisis y Diseño de Software\n\n\nDuración\n60 minutos\n\n\nModalidad\nCharla-taller (expositivo + práctica en vivo)\n\n\nPlataforma\nGitLab institucional del Departamento\n\n\nPresentación\ngit_gitlab_60min.qmd"
+  },
+  {
+    "objectID": "ads/guion_60min.html#objetivo-general",
+    "href": "ads/guion_60min.html#objetivo-general",
+    "title": "Guion del expositor — Git y GitLab sin miedo",
+    "section": "Objetivo general",
+    "text": "Objetivo general\nQue las y los estudiantes entiendan y puedan ejecutar el flujo mínimo de trabajo con Git y GitLab —clonar, revisar cambios, hacer commits, subir y actualizar, usar ramas básicas, crear Issues y abrir Merge Requests simples— y que salgan de la sesión sin miedo a equivocarse."
+  },
+  {
+    "objectID": "ads/guion_60min.html#resultados-de-aprendizaje",
+    "href": "ads/guion_60min.html#resultados-de-aprendizaje",
+    "title": "Guion del expositor — Git y GitLab sin miedo",
+    "section": "Resultados de aprendizaje",
+    "text": "Resultados de aprendizaje\nAl finalizar la sesión, la o el estudiante será capaz de:\n\n\n\n\n\n\n\n#\nResultado de aprendizaje\n\n\n\n\nRA1\nExplicar qué problema resuelve Git y por qué versionar no es guardar copias.\n\n\nRA2\nDistinguir Git de GitLab, y qué ocurre en su computador frente a qué ocurre en la plataforma.\n\n\nRA3\nClonar el repositorio del equipo desde el GitLab del Departamento.\n\n\nRA4\nEjecutar el ciclo status → add → commit → push → pull.\n\n\nRA5\nCrear una rama con git switch -c y trabajar en ella.\n\n\nRA6\nCrear un Issue y abrir un Merge Request simple, y revisar el de un compañero.\n\n\nRA7\nReconocer los errores más comunes y saber cómo salir de ellos.\n\n\nRA8\nUsar IA de forma responsable como apoyo en su flujo de trabajo."
+  },
+  {
+    "objectID": "ads/guion_60min.html#programa-minuto-a-minuto",
+    "href": "ads/guion_60min.html#programa-minuto-a-minuto",
+    "title": "Guion del expositor — Git y GitLab sin miedo",
+    "section": "Programa minuto a minuto",
+    "text": "Programa minuto a minuto\n\n\n\n\n\n\n\n\n\nMin\nBloque\nContenido\nDiapositivas\n\n\n\n\n00–05\n1. Introducción\nEl .zip con nombres imposibles · problemas sin control de versiones · Git como historial ordenado · objetivo y programa\n1–6\n\n\n05–20\n2. Git básico\nQué es Git · las 8 palabras · diagrama de las 4 zonas · los 7 comandos, uno por uno (qué hace / cuándo / ejemplo / error común) · mensajes de commit · para qué sirven las ramas\n7–19\n\n\n20–30\n3. Flujo individual\nDiagrama del ciclo completo · los pasos con comandos exactos · las dos costumbres clave · qué es un conflicto\n20–24\n\n\n30–45\n4. GitLab básico\nGit ≠ GitLab · qué ofrece GitLab · repositorio remoto · Issues · Merge Requests · revisión de código · tablero · flujo recomendado\n25–34\n\n\n45–55\n5. Actividad práctica\nintegrantes/nombre-apellido.md → commit → push → Merge Request → revisión cruzada · alternativa por web\n35–37\n\n\n55–60\n6. IA responsable\nDónde ayuda · las cuatro advertencias · cierre, checklist y glosario\n38–46\n\n\n\n\nMargen real: el bloque 5 es el que se estira o encoge. Si vas atrasado, redúcelo a 6 minutos y deja el Merge Request como tarea."
+  },
+  {
+    "objectID": "ads/guion_60min.html#guion-breve-para-el-expositor",
+    "href": "ads/guion_60min.html#guion-breve-para-el-expositor",
+    "title": "Guion del expositor — Git y GitLab sin miedo",
+    "section": "Guion breve para el expositor",
+    "text": "Guion breve para el expositor\n\nBloque 1 — Introducción (00–05)\nDiapositiva del .zip. Ábrela sin decir nada y espera dos segundos. Alguien se va a reír.\n\n“¿Cuántos tienen una carpeta parecida a esta ahora mismo? Levanten la mano sin vergüenza… yo también la tuve.”\n\nLa idea es que el problema lo pongan ellos, no tú. Pregunta: “¿qué pasa cuando dos personas del grupo editan el mismo archivo?” — deja que respondan.\nCierra el bloque con la idea central:\n\n“El problema no es que sean desordenados. Es que están usando la herramienta equivocada. Git es la herramienta correcta: en vez de guardar copias, guarda la historia.”\n\nAnalogía del videojuego. Funciona muy bien con este público: el commit es un save point. Nadie juega sin guardar.\n\n\n\nBloque 2 — Git básico (05–20)\nEste es el bloque más denso. No lo leas: muéstralo. Ten una terminal abierta al lado con un repositorio de prueba.\nLas 8 palabras. No las expliques una por una en detalle — dilas rápido y aclara que es una tabla de referencia para volver cuando se pierdan. Lo que sí explicas bien es el diagrama de las cuatro zonas.\n\n“Todo lo que hagan con Git es mover cambios entre estas cuatro cajas. Nada más. Si entienden este dibujo, entienden Git.”\n\nLos 7 comandos. Ritmo de ~1,5 min cada uno. Para cada uno: qué hace en una frase, cuándo se usa, y detente en el error común — ahí está el valor real.\nLos tres errores que más importan y que conviene enfatizar:\n\ngit add . a ciegas → suben venv/, archivos gigantes o un .env con contraseñas.\npush rechazado → es el error que todos van a ver esta semana. Que memoricen: pull y después push.\nTrabajar en main sin darse cuenta → por eso git status antes de escribir código.\n\nMensajes de commit. Diapositiva de ❌ / ✅. Pregunta al curso: “¿alguien reconoce alguno de los de la izquierda?”\nRamas. Mantenlo simple: main es lo que funciona, cada uno trabaja en su rama. No entres en merge vs rebase ni en estrategias de branching — no es esta charla.\n\n\n\nBloque 3 — Flujo individual (20–30)\nMuestra el diagrama y recórrelo con el dedo, en voz alta, una vuelta completa.\nLuego haz la demo en vivo: edita un archivo, git status, git add, git commit, git push. Que vean la salida real de la terminal, incluidos los mensajes que no entienden todavía.\n\n“Esto es literalmente todo lo que van a hacer el 95 % del tiempo, durante todo el semestre.”\n\nConflictos. Muéstralos, pero baja el nivel de alarma:\n\n“Un conflicto no es que rompieron algo. Es Git diciendo: ‘ustedes dos escribieron cosas distintas en la misma línea, decidan ustedes’. Es lo más normal del mundo.”\n\n\n\n\nBloque 4 — GitLab básico (30–45)\nCambio de escenario: cierra la terminal y abre el navegador. El cambio físico ayuda a marcar la diferencia entre Git y GitLab.\nEmpieza por la tabla Git ≠ GitLab y la analogía del motor y el auto.\nDespués navega el GitLab del Departamento en vivo — es mucho mejor que las capturas. Recorrido sugerido:\n\nLa portada del proyecto y el botón Code con la URL para clonar.\nIssues → crea uno en vivo, con título y responsable. Que vean lo rápido que es.\nMerge requests → abre uno ya existente y muestra la pestaña Changes con el diff.\nDeja un comentario en una línea, para que vean cómo se revisa.\n\n\n“Fíjense: acá no discutimos por WhatsApp ‘oye, ¿revisaste lo que subí?’. Queda escrito, en la línea exacta del código.”\n\nEl diagrama del flujo recomendado es el resumen del bloque. Recórrelo señalando qué parte pasa en la terminal (Issue→rama→commit→push) y qué parte en el navegador (MR→revisión→merge).\n\n\n\nBloque 5 — Actividad práctica (45–55)\nLo más importante de este bloque: que todos completen la vuelta una vez. El contenido del archivo da lo mismo.\nAntes de soltarlos, di en voz alta:\n\n“No importa si se equivocan. De hecho, ojalá se equivoquen ahora, que estoy aquí para ayudarlos.”\n\nMientras trabajan, circula. Los tres problemas que vas a ver, en orden de frecuencia:\n\n\n\n\n\n\n\nProblema\nSolución rápida\n\n\n\n\nPide usuario y contraseña y falla\nVerificar que estén usando la URL HTTPS y su cuenta institucional\n\n\nPlease tell me who you are\nFaltó git config --global user.name y user.email\n\n\npush rechazado\ngit pull y después git push\n\n\n\nTen lista la alternativa web. Siempre hay dos o tres sin Git instalado o con problemas de red. La diapositiva de “hazlo desde la web” los mantiene participando en vez de mirar el techo.\nCierra el bloque pidiendo que alguien muestre su Merge Request en el proyector. Vale más que cualquier explicación.\n\n\n\nBloque 6 — IA responsable (55–60)\nCinco minutos, tono conversacional. No lo plantees como una prohibición — ya la están usando.\n\n“La pregunta no es si van a usar IA. Es cómo. Y hay una forma que les sirve para aprender y otra que los deja botados en la evaluación.”\n\nEnfatiza dos cosas por sobre las demás:\n\nNunca pegar credenciales. Concreto: nada de .env, tokens ni contraseñas.\nNo entregar código que no entienden. El criterio práctico: “si no lo puedes explicar en la revisión, no lo subas”.\n\nCierre de la charla. Termina con la diapositiva de “En Git casi nada se pierde”:\n\n“Si se llevan una sola cosa de esta hora, que sea esta: si hicieron commit, su trabajo está a salvo. Prueben, equivóquense, pregunten.”\n\nMenciona el checklist y el glosario como material de consulta, y deja la tarea de la semana."
+  },
+  {
+    "objectID": "ads/guion_60min.html#actividad-práctica-en-detalle",
+    "href": "ads/guion_60min.html#actividad-práctica-en-detalle",
+    "title": "Guion del expositor — Git y GitLab sin miedo",
+    "section": "Actividad práctica en detalle",
+    "text": "Actividad práctica en detalle\n\nPreparación previa (del expositor)\n\nCrear el repositorio de práctica en el GitLab del Departamento.\nCrear la carpeta integrantes/ con un archivo de ejemplo (integrantes/ejemplo.md), para que la carpeta exista.\nDar acceso Developer a todo el curso (o al grupo correspondiente).\nVerificar que la rama main no esté tan protegida que impida abrir Merge Requests.\nTener la URL corta a mano y proyectada durante toda la actividad.\n\n\n\nInstrucciones para estudiantes — con Git instalado\n# 1. Clonar (una sola vez)\ngit clone URL_DEL_REPOSITORIO\ncd nombre-del-repositorio\n\n# 2. Crear tu rama\ngit switch -c nombre-apellido\n\n# 3. Crear tu archivo en integrantes/nombre-apellido.md\n#    Contenido: tu nombre, tu carrera y una línea sobre ti.\n\n# 4. Revisar, preparar y guardar\ngit status\ngit add .\ngit commit -m \"Agrega ficha de Nombre Apellido\"\n\n# 5. Subir tu rama\ngit push -u origin nombre-apellido\nLuego, en GitLab:\n\nAbrir el Merge Request (GitLab ofrece el enlace en la salida del push).\nPoner un título claro y asignar a un compañero como Reviewer.\nRevisar el MR de otra persona y dejar al menos un comentario.\n\n\n\nAlternativa sin Git instalado — todo desde la web\n\nEntrar al proyecto en GitLab y abrir la carpeta integrantes/.\nBotón + → New file, con el nombre nombre-apellido.md.\nEscribir el contenido en el editor web.\nEn Commit message, escribir un mensaje claro.\nElegir “Create a new branch” y ponerle el nombre propio.\nMarcar “Start a new merge request with these changes”.\nCommit changes → el Merge Request se abre solo.\n\n\nEs exactamente el mismo flujo conceptual: rama → commit → Merge Request. Solo cambia dónde se escribe.\n\n\n\nCriterio de logro\nLa actividad está lograda si cada estudiante tiene:\n\nUna rama con su nombre en el repositorio.\nUn commit propio con un mensaje comprensible.\nUn Merge Request abierto.\nAl menos un comentario dejado en el Merge Request de otra persona."
+  },
+  {
+    "objectID": "ads/guion_60min.html#checklist-final-para-estudiantes",
+    "href": "ads/guion_60min.html#checklist-final-para-estudiantes",
+    "title": "Guion del expositor — Git y GitLab sin miedo",
+    "section": "Checklist final para estudiantes",
+    "text": "Checklist final para estudiantes\nEn mi computador\n\nGit instalado y verificado con git --version\nMi nombre y correo configurados (git config --global user.name / user.email)\nRepositorio del equipo clonado\nSé revisar en qué rama estoy con git status\nHice al menos un commit propio\nHice al menos un push\n\nEn GitLab\n\nEntro con mi cuenta institucional\nVeo el proyecto de mi equipo\nCreé o me asignaron un Issue\nAbrí un Merge Request\nRevisé el Merge Request de un compañero\nMi Merge Request quedó mergeado a main"
+  },
+  {
+    "objectID": "ads/guion_60min.html#mini-glosario",
+    "href": "ads/guion_60min.html#mini-glosario",
+    "title": "Guion del expositor — Git y GitLab sin miedo",
+    "section": "Mini glosario",
+    "text": "Mini glosario\n\n\n\n\n\n\n\nTérmino\nSignificado\n\n\n\n\nRepositorio (repo)\nEl proyecto más toda su historia de cambios.\n\n\nClonar\nCopiar un repositorio de GitLab a tu computador.\n\n\nWorking directory\nLos archivos tal como están ahora en tu carpeta.\n\n\nStaging area\nLa bandeja con los cambios que entrarán al próximo commit.\n\n\nCommit\nUn punto guardado en la historia, con mensaje, autor y fecha.\n\n\nBranch (rama)\nUna línea de trabajo paralela a main.\n\n\nmain\nLa rama principal: la versión que siempre debe funcionar.\n\n\nRemote\nEl repositorio que vive en GitLab, compartido con el equipo.\n\n\nPush\nSubir tus commits al remote.\n\n\nPull\nBajar los commits que subieron los demás.\n\n\nIssue\nUna tarea, error o idea registrada en GitLab.\n\n\nMerge Request (MR)\nPropuesta de integrar los cambios de tu rama a main. En GitHub se llama Pull Request.\n\n\nMerge\nIntegrar efectivamente una rama en otra.\n\n\nConflicto\nDos versiones distintas de la misma línea; Git pide que tú decidas cuál queda.\n\n\nReviewer\nLa persona que revisa un Merge Request antes de aprobarlo."
+  },
+  {
+    "objectID": "ads/guion_60min.html#diagramas-de-referencia",
+    "href": "ads/guion_60min.html#diagramas-de-referencia",
+    "title": "Guion del expositor — Git y GitLab sin miedo",
+    "section": "Diagramas de referencia",
+    "text": "Diagramas de referencia\n\nFlujo básico individual\n\n\n\n\n\nflowchart LR\n    A[Modificar archivos] --&gt; B[git status]\n    B --&gt; C[git add]\n    C --&gt; D[git commit]\n    D --&gt; E[git push]\n    E --&gt; F[GitLab]\n    F --&gt; G[git pull]\n    G --&gt; A\n\n\n\n\n\n\n\n\nFlujo de trabajo con GitLab\n\n\n\n\n\nflowchart TD\n    A[Issue] --&gt; B[Crear rama]\n    B --&gt; C[Trabajar localmente]\n    C --&gt; D[Commit]\n    D --&gt; E[Push]\n    E --&gt; F[Merge Request]\n    F --&gt; G[Revisión]\n    G --&gt; H{¿Aprobado?}\n    H --&gt;|No| C\n    H --&gt;|Sí| I[Merge a main]\n\n\n\n\n\n\n\nEn las diapositivas este segundo diagrama va en horizontal (flowchart LR), porque las láminas son 16:9 y en vertical queda demasiado pequeño. La lógica es idéntica."
+  },
+  {
+    "objectID": "ads/guion_60min.html#imágenes-por-capturar",
+    "href": "ads/guion_60min.html#imágenes-por-capturar",
+    "title": "Guion del expositor — Git y GitLab sin miedo",
+    "section": "Imágenes por capturar",
+    "text": "Imágenes por capturar\nLa presentación tiene tres marcadores de imagen. Conviene tomar las capturas del GitLab real del Departamento, no de gitlab.com, para que reconozcan la interfaz que van a usar.\n\n\n\n\n\n\n\nMarcador\nQué capturar\n\n\n\n\n[Imagen sugerida: vista de repositorio en GitLab]\nPortada del proyecto: listado de archivos, botón Code desplegado con la URL HTTPS, y el menú lateral visible.\n\n\n[Imagen sugerida: vista de Issues en GitLab]\nListado de Issues con títulos reales, responsables asignados y etiquetas; visible el botón New issue.\n\n\n[Imagen sugerida: vista de Merge Request en GitLab]\nUn MR abierto en la pestaña Changes, con el diff línea a línea, un comentario de revisión y el botón Merge.\n\n\n\n\nRecomendación: censura nombres de estudiantes reales si vas a publicar las diapositivas."
+  },
+  {
+    "objectID": "ads/guion_60min.html#notas-de-logística",
+    "href": "ads/guion_60min.html#notas-de-logística",
+    "title": "Guion del expositor — Git y GitLab sin miedo",
+    "section": "Notas de logística",
+    "text": "Notas de logística\n\nVerifica el acceso al GitLab antes de la sesión. Si está fuera del campus, puede requerir VPN.\nTerminal con fuente grande (≥ 18 pt) y prompt simplificado; el prompt largo con la ruta completa distrae.\nPlan B: ten la demo grabada o capturas de respaldo por si el GitLab institucional no responde.\nPide que traigan el equipo formado. La actividad rinde mucho más si ya saben con quién trabajarán."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#section",
+    "href": "tools/python-datos/presentacion.html#section",
+    "title": "Talks",
+    "section": "",
+    "text": "Manipulación de datos con Python\nDel archivo al análisis reproducible\n\n\nPython · Google Colab · GitHub\nManagement Analytics\n\n\nFrancisco Alfaro Medina\nDocente USM - 2026"
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#qué-aprenderemos",
+    "href": "tools/python-datos/presentacion.html#qué-aprenderemos",
+    "title": "Talks",
+    "section": "¿Qué aprenderemos?",
+    "text": "¿Qué aprenderemos?\n\n\n\n\n\n\n\n\nEntender el flujo de trabajo: desde datos crudos hasta resultados comunicables.\nUsar notebooks: combinar código, texto, tablas y gráficos en un solo lugar.\nManipular datos: cargar, filtrar, transformar, resumir y ordenar información.\nVisualizar patrones: explorar datos con Matplotlib y Seaborn.\nCompartir el trabajo: publicar notebooks y proyectos con GitHub."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#section-1",
+    "href": "tools/python-datos/presentacion.html#section-1",
+    "title": "Talks",
+    "section": "",
+    "text": "Ecosistema\nHerramientas para trabajar con datos"
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#mapa-de-herramientas",
+    "href": "tools/python-datos/presentacion.html#mapa-de-herramientas",
+    "title": "Manipulación de datos con Python",
+    "section": "Mapa de herramientas",
+    "text": "Mapa de herramientas\n\n\n\n\n\nflowchart LR\n  A[Datos&lt;br/&gt;CSV · Excel · Web] --&gt; B[Google Colab&lt;br/&gt;Notebook]\n  B --&gt; C[Python]\n  C --&gt; D[NumPy&lt;br/&gt;cálculo numérico]\n  C --&gt; E[pandas&lt;br/&gt;tablas y limpieza]\n  E --&gt; F[Matplotlib&lt;br/&gt;gráficos base]\n  E --&gt; G[Seaborn&lt;br/&gt;gráficos estadísticos]\n  B --&gt; H[GitHub&lt;br/&gt;portafolio y colaboración]\n\n  classDef main fill:#0F2044,color:#ffffff,stroke:#0F2044;\n  classDef lib fill:#EBF4FB,color:#0F2044,stroke:#4A9FD4;\n  class B,C,H main;\n  class A,D,E,F,G lib;\n\n\n\n\n\n\n\n\n\n\n\n\nNota\n\n\nLa idea central: no memorizar comandos sueltos, sino construir un flujo repetible para analizar datos."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#python-lenguaje-para-pensar-con-datos",
+    "href": "tools/python-datos/presentacion.html#python-lenguaje-para-pensar-con-datos",
+    "title": "Manipulación de datos con Python",
+    "section": "Python: lenguaje para pensar con datos",
+    "text": "Python: lenguaje para pensar con datos\n\n\nedad = 21\npromedio = 5.8\naprobado = promedio &gt;= 4.0\n\nprint(aprobado)\n\n\n\nSintaxis simple y legible.\nGran comunidad académica y profesional.\nLibrerías maduras para datos, visualización, IA y automatización.\nFunciona en el navegador con Google Colab."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#google-colab-y-notebooks",
+    "href": "tools/python-datos/presentacion.html#google-colab-y-notebooks",
+    "title": "Manipulación de datos con Python",
+    "section": "Google Colab y notebooks",
+    "text": "Google Colab y notebooks\n\n\n\n\n\n\n\n\nNotebook: documento vivo con celdas de texto y código.\nSin instalación: basta una cuenta de Google y navegador.\nDatos y resultados juntos: ideal para tareas, laboratorios e informes.\nCompartible: se puede enlazar, descargar o versionar en GitHub."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#github-bitácora-y-portafolio",
+    "href": "tools/python-datos/presentacion.html#github-bitácora-y-portafolio",
+    "title": "Manipulación de datos con Python",
+    "section": "GitHub: bitácora y portafolio",
+    "text": "GitHub: bitácora y portafolio\n\n\n\n\n\n\n\n\nGuarda notebooks, datos pequeños, scripts y documentación.\nPermite mostrar proyectos como evidencia de aprendizaje.\nAyuda a colaborar sin perder versiones.\nConvierte un análisis en un proyecto reproducible.\n\n\n\n\n\n\n\n\nTip\n\n\nUna buena entrega no es solo el resultado: también debe mostrar cómo llegaste a él."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#section-2",
+    "href": "tools/python-datos/presentacion.html#section-2",
+    "title": "Talks",
+    "section": "",
+    "text": "Librerías\nHerramientas de Python para datos"
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#primer-contacto-con-pandas",
+    "href": "tools/python-datos/presentacion.html#primer-contacto-con-pandas",
+    "title": "Manipulación de datos con Python",
+    "section": "Primer contacto con pandas",
+    "text": "Primer contacto con pandas\nimport pandas as pd\n\ndf = pd.read_csv(\"estudiantes.csv\")\n\ndf.head()\n\n\n\nnombre\ncarrera\nsemestre\nnota\nasistencia\n\n\n\n\nAna\nCivil\n2\n5.8\n0.91\n\n\nBruno\nInformática\n4\n4.6\n0.78\n\n\nCarla\nIndustrial\n3\n6.2\n0.95\n\n\n\n\n\n\n\n\n\nNota\n\n\nUn DataFrame es una tabla con filas, columnas, índices y métodos para transformarla."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#preguntas-básicas",
+    "href": "tools/python-datos/presentacion.html#preguntas-básicas",
+    "title": "Talks",
+    "section": "Preguntas básicas",
+    "text": "Preguntas básicas\n\n\n\n\n\ndf.shape\ndf.info()\ndf.describe()\n\n\n\n¿Cuántas filas y columnas hay?\n¿Qué tipo de dato tiene cada columna?\n¿Hay valores faltantes?"
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#seleccionar-columnas-y-filtrar-filas",
+    "href": "tools/python-datos/presentacion.html#seleccionar-columnas-y-filtrar-filas",
+    "title": "Talks",
+    "section": "Seleccionar columnas y filtrar filas",
+    "text": "Seleccionar columnas y filtrar filas\n\n\n\ncolumnas = [\"carrera\", \"nota\", \"asistencia\"]\n\ndf[columnas]\naprobados = df[df[\"nota\"] &gt;= 4.0]\nalta_asistencia = df[df[\"asistencia\"] &gt;= 0.85]\n\n\n\nSeleccionar columnas reduce ruido.\nFiltrar filas permite responder preguntas.\nCada filtro debe tener una razón analítica."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#crear-variables-nuevas",
+    "href": "tools/python-datos/presentacion.html#crear-variables-nuevas",
+    "title": "Manipulación de datos con Python",
+    "section": "Crear variables nuevas",
+    "text": "Crear variables nuevas\nimport numpy as np\n\ndf[\"estado\"] = np.where(df[\"nota\"] &gt;= 4.0, \"aprobado\", \"reprobado\")\n\ndf[\"participacion\"] = df[\"asistencia\"] * 100\n\n\n\n\n\n\nImportante\n\n\nManipular datos no es decorar una tabla: es construir variables que ayuden a interpretar un fenómeno."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#agrupar-y-resumir",
+    "href": "tools/python-datos/presentacion.html#agrupar-y-resumir",
+    "title": "Manipulación de datos con Python",
+    "section": "Agrupar y resumir",
+    "text": "Agrupar y resumir\nresumen = (\n    df\n    .groupby(\"carrera\")\n    .agg(\n        nota_promedio=(\"nota\", \"mean\"),\n        asistencia_promedio=(\"asistencia\", \"mean\"),\n        estudiantes=(\"nombre\", \"count\")\n    )\n    .reset_index()\n)\n\nresumen"
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#numpy-el-motor-numérico",
+    "href": "tools/python-datos/presentacion.html#numpy-el-motor-numérico",
+    "title": "Manipulación de datos con Python",
+    "section": "NumPy: el motor numérico",
+    "text": "NumPy: el motor numérico\n\n\nimport numpy as np\n\nnotas = np.array([5.8, 4.6, 6.2, 3.9])\n\nnp.mean(notas)\nnp.std(notas)\nnp.percentile(notas, 75)\n\n\n\nTrabaja con arreglos numéricos eficientes.\nEs la base técnica de muchas librerías científicas.\nPermite cálculos vectorizados sin escribir ciclos largos."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#section-3",
+    "href": "tools/python-datos/presentacion.html#section-3",
+    "title": "Talks",
+    "section": "",
+    "text": "Conclusiones\nConsejos Finales"
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#matplotlib-control-fino",
+    "href": "tools/python-datos/presentacion.html#matplotlib-control-fino",
+    "title": "Manipulación de datos con Python",
+    "section": "Matplotlib: control fino",
+    "text": "Matplotlib: control fino\nimport matplotlib.pyplot as plt\n\nplt.figure(figsize=(8, 4))\nplt.hist(df[\"nota\"], bins=10, color=\"#0F2044\", edgecolor=\"white\")\nplt.title(\"Distribución de notas\")\nplt.xlabel(\"Nota\")\nplt.ylabel(\"Cantidad de estudiantes\")\nplt.show()\n\n\n\n\n\n\nNota\n\n\nMatplotlib es la base: ofrece mucho control sobre cada elemento del gráfico."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#seaborn-gráficos-estadísticos",
+    "href": "tools/python-datos/presentacion.html#seaborn-gráficos-estadísticos",
+    "title": "Manipulación de datos con Python",
+    "section": "Seaborn: gráficos estadísticos",
+    "text": "Seaborn: gráficos estadísticos\nimport seaborn as sns\n\nsns.set_theme(style=\"whitegrid\")\n\nsns.boxplot(\n    data=df,\n    x=\"carrera\",\n    y=\"nota\",\n    color=\"#4A9FD4\"\n)\n\n\n\n\n\n\nTip\n\n\nSeaborn facilita comparar grupos, distribuciones y relaciones con menos código."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#elegir-el-gráfico-correcto",
+    "href": "tools/python-datos/presentacion.html#elegir-el-gráfico-correcto",
+    "title": "Manipulación de datos con Python",
+    "section": "Elegir el gráfico correcto",
+    "text": "Elegir el gráfico correcto\n\n\n\n\n\n\n\n\nPregunta\nGráfico sugerido\nLibrería\n\n\n\n\n¿Cómo se distribuye una variable?\nHistograma\nMatplotlib / Seaborn\n\n\n¿Cómo se comparan grupos?\nBarras o boxplot\nSeaborn\n\n\n¿Hay relación entre dos variables?\nDispersión\nSeaborn\n\n\n¿Cómo cambia algo en el tiempo?\nLínea\nMatplotlib"
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#buenas-prácticas-mínimas",
+    "href": "tools/python-datos/presentacion.html#buenas-prácticas-mínimas",
+    "title": "Manipulación de datos con Python",
+    "section": "Buenas prácticas mínimas",
+    "text": "Buenas prácticas mínimas\n\n\nNotebook\n\nTítulos y secciones claras.\nUna idea por celda.\nCódigo ejecutable de arriba hacia abajo.\nComentarios breves cuando aportan contexto.\n\n\nProyecto\n\nREADME.md con objetivo e instrucciones.\nCarpeta data/ para datos permitidos.\nCarpeta notebooks/ para exploración.\nCarpeta src/ para funciones reutilizables."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#flujo-recomendado",
+    "href": "tools/python-datos/presentacion.html#flujo-recomendado",
+    "title": "Talks",
+    "section": "Flujo recomendado",
+    "text": "Flujo recomendado\n\n\n\n\n\nflowchart TD\n  A[1. Definir pregunta] --&gt; B[2. Cargar datos]\n  B --&gt; C[3. Explorar estructura]\n  C --&gt; D[4. Limpiar y transformar]\n  D --&gt; E[5. Resumir y visualizar]\n  E --&gt; F[6. Interpretar resultados]\n  F --&gt; G[7. Documentar y compartir]\n\n  classDef step fill:#F0F4F8,color:#0F2044,stroke:#4A9FD4;\n  class A,B,C,D,E,F,G step;"
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#mini-ejercicio",
+    "href": "tools/python-datos/presentacion.html#mini-ejercicio",
+    "title": "Manipulación de datos con Python",
+    "section": "Mini ejercicio",
+    "text": "Mini ejercicio\n\n\n\n\n\n\nImportante\n\n\nCon un archivo ventas.csv, responde:\n\n\n\n\n\n\n¿Cuántas filas y columnas tiene?\n¿Qué columnas tienen valores faltantes?\n¿Cuál es la venta promedio?\n¿Qué categoría vende más?\n\n\nimport pandas as pd\n\nventas = pd.read_csv(\"ventas.csv\")\n\nventas.head()\nventas.info()\nventas.groupby(\"categoria\")[\"monto\"].sum()"
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#cierre",
+    "href": "tools/python-datos/presentacion.html#cierre",
+    "title": "Manipulación de datos con Python",
+    "section": "Cierre",
+    "text": "Cierre\n\n\nPython para datos\nExplorar · Transformar · Visualizar · Compartir\n\nEl objetivo no es aprender todas las funciones, sino construir criterio para hacer mejores preguntas con datos."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#te-ha-pasado-esto",
+    "href": "tools/python-datos/presentacion.html#te-ha-pasado-esto",
+    "title": "Talks",
+    "section": "¿Te ha pasado esto?",
+    "text": "¿Te ha pasado esto?"
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#qué-herramientas-usaremos",
+    "href": "tools/python-datos/presentacion.html#qué-herramientas-usaremos",
+    "title": "Manipulación de datos con Python",
+    "section": "¿Qué herramientas usaremos?",
+    "text": "¿Qué herramientas usaremos?\n\n\n\n\n\n\n\n\nPython: lenguaje principal para automatizar, analizar y visualizar datos.\nGoogle Colab: entorno de notebooks en la nube, sin instalación.\nGitHub: espacio para guardar, versionar y compartir proyectos.\nLibrerías: NumPy, pandas, Matplotlib y Seaborn para el trabajo diario con datos."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#herramienta-python",
+    "href": "tools/python-datos/presentacion.html#herramienta-python",
+    "title": "Manipulación de datos con Python",
+    "section": "Herramienta: Python",
+    "text": "Herramienta: Python\n\n\n\nPython\nLenguaje de programación\n\n\n\n\nSintaxis simple y legible.\nMuy usado en ciencia de datos, automatización e inteligencia artificial.\nPermite pasar de una pregunta a un análisis reproducible.\nTiene una comunidad enorme y muchas librerías listas para usar."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#ejemplo-python-básico",
+    "href": "tools/python-datos/presentacion.html#ejemplo-python-básico",
+    "title": "Manipulación de datos con Python",
+    "section": "Ejemplo: Python básico",
+    "text": "Ejemplo: Python básico\n\n\nprecios = [1200, 1500, 1800, 2100]\n\npromedio = sum(precios) / len(precios)\nmaximo = max(precios)\n\nprint(promedio)\nprint(maximo)\n\n\n\nCreamos una lista de valores.\nCalculamos una medida resumen.\nMostramos el resultado.\nLa lógica es pequeña, pero ya estamos automatizando una tarea."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#herramienta-google-colab",
+    "href": "tools/python-datos/presentacion.html#herramienta-google-colab",
+    "title": "Manipulación de datos con Python",
+    "section": "Herramienta: Google Colab",
+    "text": "Herramienta: Google Colab\n\n\n\n\n\n\n\n\nNotebook: documento vivo con celdas de texto y código.\nSin instalación: basta una cuenta de Google y navegador.\nDatos y resultados juntos: ideal para tareas, laboratorios e informes.\nCompartible: se puede enlazar, descargar o versionar en GitHub."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#ejemplo-una-celda-en-colab",
+    "href": "tools/python-datos/presentacion.html#ejemplo-una-celda-en-colab",
+    "title": "Manipulación de datos con Python",
+    "section": "Ejemplo: una celda en Colab",
+    "text": "Ejemplo: una celda en Colab\n\n\nimport pandas as pd\n\nurl = \"https://raw.githubusercontent.com/mwaskom/seaborn-data/master/tips.csv\"\ndatos = pd.read_csv(url)\n\ndatos.head()\n\n\n\nEjecutamos código desde el navegador.\nCargamos datos desde internet.\nVemos las primeras filas inmediatamente.\nEl resultado queda guardado junto al texto explicativo."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#herramienta-github",
+    "href": "tools/python-datos/presentacion.html#herramienta-github",
+    "title": "Manipulación de datos con Python",
+    "section": "Herramienta: GitHub",
+    "text": "Herramienta: GitHub\n\n\n\n\n\n\n\n\nGuarda notebooks, datos pequeños, scripts y documentación.\nPermite mostrar proyectos como evidencia de aprendizaje.\nAyuda a colaborar sin perder versiones.\nConvierte un análisis en un proyecto reproducible.\n\n\n\n\n\n\n\n\nTip\n\n\nUna buena entrega no es solo el resultado: también debe mostrar cómo llegaste a él."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#herramienta-numpy",
+    "href": "tools/python-datos/presentacion.html#herramienta-numpy",
+    "title": "Manipulación de datos con Python",
+    "section": "Herramienta: NumPy",
+    "text": "Herramienta: NumPy\n\n\n\nNumPy\nCálculo numérico\n\n\n\n\nTrabaja con arreglos y matrices.\nRealiza operaciones matemáticas rápidas.\nEvita escribir ciclos innecesarios.\nEs la base de muchas librerías científicas de Python."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#ejemplo-numpy",
+    "href": "tools/python-datos/presentacion.html#ejemplo-numpy",
+    "title": "Talks",
+    "section": "Ejemplo: NumPy",
+    "text": "Ejemplo: NumPy\n\n\n\nimport numpy as np\n\nventas = np.array([120, 135, 150, 160, 210])\n\nprint(ventas.mean())\nprint(ventas.max())\nprint(ventas * 1.19)\n\n\n\n155.0\n210\n[142.8 160.65 178.5 190.4 249.9]"
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#herramienta-pandas",
+    "href": "tools/python-datos/presentacion.html#herramienta-pandas",
+    "title": "Manipulación de datos con Python",
+    "section": "Herramienta: pandas",
+    "text": "Herramienta: pandas\n\n\n\npandas\nTablas y limpieza de datos\n\n\n\n\nLee archivos CSV, Excel y fuentes web.\nOrganiza datos como tablas llamadas DataFrame.\nFiltra, transforma, ordena y agrupa información.\nEs la herramienta central para manipulación de datos en Python."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#herramientas-matplotlib-y-seaborn",
+    "href": "tools/python-datos/presentacion.html#herramientas-matplotlib-y-seaborn",
+    "title": "Manipulación de datos con Python",
+    "section": "Herramientas: Matplotlib y Seaborn",
+    "text": "Herramientas: Matplotlib y Seaborn\n\n\n\nMatplotlib\nSeaborn\nLogos pendientes\n\n\n\n\nMatplotlib: control fino sobre figuras, ejes, títulos y estilos.\nSeaborn: gráficos estadísticos con menos código.\nJuntas permiten explorar distribuciones, grupos, relaciones y tendencias.\nUn buen gráfico ayuda a detectar patrones antes de modelar."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#ejemplo-visualización-rápida",
+    "href": "tools/python-datos/presentacion.html#ejemplo-visualización-rápida",
+    "title": "Manipulación de datos con Python",
+    "section": "Ejemplo: visualización rápida",
+    "text": "Ejemplo: visualización rápida\n\n\nimport seaborn as sns\n\nsns.scatterplot(\n    data=df,\n    x=\"asistencia\",\n    y=\"nota\",\n    hue=\"carrera\"\n)\n\n\n\nComparamos dos variables numéricas.\nUsamos color para separar grupos.\nBuscamos patrones, excepciones y posibles relaciones."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#conclusiones-finales",
+    "href": "tools/python-datos/presentacion.html#conclusiones-finales",
+    "title": "Talks",
+    "section": "Conclusiones finales",
+    "text": "Conclusiones finales\n\n\n\nIdeas clave\n\nPython permite automatizar análisis.\nColab elimina la barrera de instalación.\nNumPy y pandas resuelven la manipulación diaria.\nMatplotlib y Seaborn ayudan a explorar patrones.\n\n\nSiguiente paso\n\nElegir un conjunto de datos pequeño.\nFormular una pregunta simple.\nCargar, explorar, transformar y visualizar.\nDocumentar el proceso en un notebook.\n\n\n\n\n\n\n\n\nTip\n\n\nLa meta de esta primera clase es reconocer el ecosistema y perderle el miedo al flujo de trabajo."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#python",
+    "href": "tools/python-datos/presentacion.html#python",
+    "title": "Talks",
+    "section": "Python",
+    "text": "Python\n\n\n\n\n\n\n\n\n\nLenguaje principal para automatizar, analizar y visualizar datos.\nSintaxis simple y legible.\nMuy usado en ciencia de datos, automatización e IA.\nTiene una comunidad enorme y muchas librerías listas para usar."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#ejemplo-python",
+    "href": "tools/python-datos/presentacion.html#ejemplo-python",
+    "title": "Talks",
+    "section": "Ejemplo: Python",
+    "text": "Ejemplo: Python\n\n\n\nprecios = [1200, 1500, 1800, 2100]\n\npromedio = sum(precios) / len(precios)\nmaximo = max(precios)\n\nprint(promedio)\nprint(maximo)\n\n\n\n1500.0\n2100"
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#google-colab",
+    "href": "tools/python-datos/presentacion.html#google-colab",
+    "title": "Talks",
+    "section": "Google Colab",
+    "text": "Google Colab\n\n\n\n\n\n\n\n\n\nNotebook: documento vivo con celdas de texto y código.\nSin instalación: basta una cuenta de Google y navegador.\nResultados: ideal para tareas, laboratorios e informes.\nCompartible: se puede enlazar con GitHub."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#ejemplo-google-colab",
+    "href": "tools/python-datos/presentacion.html#ejemplo-google-colab",
+    "title": "Talks",
+    "section": "Ejemplo: Google Colab",
+    "text": "Ejemplo: Google Colab"
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#numpy",
+    "href": "tools/python-datos/presentacion.html#numpy",
+    "title": "Talks",
+    "section": "NumPy",
+    "text": "NumPy\n\n\n\n\n\n\n\n\n\nTrabaja con arreglos y matrices.\nRealiza operaciones matemáticas rápidas.\nEvita escribir ciclos innecesarios.\nEs la base de muchas librerías científicas de Python."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#pandas",
+    "href": "tools/python-datos/presentacion.html#pandas",
+    "title": "Talks",
+    "section": "pandas",
+    "text": "pandas\n\n\n\n\n\n\n\n\n\nLee archivos CSV, Excel y fuentes web.\nOrganiza datos como tablas llamadas DataFrame.\nFiltra, transforma, ordena y agrupa información.\nEs la herramienta central para manipulación de datos en Python."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#ejemplo-pandas",
+    "href": "tools/python-datos/presentacion.html#ejemplo-pandas",
+    "title": "Talks",
+    "section": "Ejemplo: pandas",
+    "text": "Ejemplo: pandas\n\n\n\nimport pandas as pd\n\ndf = pd.read_csv(\"estudiantes.csv\")\n\ndf.head()\n\n\n\n\nnombre\ncarrera\nsemestre\nnota\nasistencia\n\n\n\n\nAna\nCivil\n2\n5.8\n0.91\n\n\nBruno\nInformática\n4\n4.6\n0.78\n\n\nCarla\nIndustrial\n3\n6.2\n0.95\n\n\n\n\n\n\n\n\n\n\nNota\n\n\nUn DataFrame es una tabla con filas, columnas, índices y métodos para transformarla."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#matplotlib-seaborn",
+    "href": "tools/python-datos/presentacion.html#matplotlib-seaborn",
+    "title": "Talks",
+    "section": "Matplotlib + Seaborn",
+    "text": "Matplotlib + Seaborn\n\n\n\n\n\n\n\n\n\nMatplotlib: control fino sobre figuras, ejes, títulos y estilos.\nSeaborn: gráficos estadísticos con menos código.\nJuntas permiten explorar distribuciones, grupos, relaciones y tendencias.\nUn buen gráfico ayuda a detectar patrones antes de modelar."
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#ejemplo-matplotlib",
+    "href": "tools/python-datos/presentacion.html#ejemplo-matplotlib",
+    "title": "Talks",
+    "section": "Ejemplo: Matplotlib",
+    "text": "Ejemplo: Matplotlib\n\n\n\n\nimport matplotlib.pyplot as plt\n\nplt.figure(figsize=(8, 4))\nplt.hist(df[\"nota\"], bins=10, color=\"#0F2044\", edgecolor=\"white\")\nplt.title(\"Distribución de notas\")\nplt.xlabel(\"Nota\")\nplt.ylabel(\"Cantidad de estudiantes\")\nplt.show()\n\n\n\nDistribución de notas\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNota"
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#ejemplo-seaborn",
+    "href": "tools/python-datos/presentacion.html#ejemplo-seaborn",
+    "title": "Talks",
+    "section": "Ejemplo: Seaborn",
+    "text": "Ejemplo: Seaborn\n\n\n\nimport seaborn as sns\n\nsns.set_theme(style=\"whitegrid\")\n\nsns.boxplot(\n    data=df,\n    x=\"carrera\",\n    y=\"nota\",\n    color=\"#4A9FD4\"\n)\n\n\n\nNotas por carrera\n\n\n\n\n\n\n\n\n\n\n\n\n\nCivil · Informática · Industrial"
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#section-4",
+    "href": "tools/python-datos/presentacion.html#section-4",
+    "title": "Talks",
+    "section": "",
+    "text": "Muchas gracias\n\n\nPython · Google Colab · GitHub\n\n\nFrancisco Alfaro Medina\nDocente USM - 2026"
+  },
+  {
+    "objectID": "tools/python-datos/presentacion.html#muchas-gracias",
+    "href": "tools/python-datos/presentacion.html#muchas-gracias",
+    "title": "Manipulación de datos con Python",
+    "section": "Muchas gracias",
+    "text": "Muchas gracias\n\nMuchas gracias\n\n\nPython · Google Colab · GitHub · NumPy · pandas · Matplotlib · Seaborn\n\n\nFrancisco Alfaro Medina\nDocente USM - 2026"
   }
 ]

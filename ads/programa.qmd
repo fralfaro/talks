@@ -1,0 +1,341 @@
+---
+title: "Propuesta formativa — Git y GitLab"
+subtitle: "Taller de control de versiones y trabajo colaborativo"
+author: "Francisco Alfaro Medina"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+
+| | |
+|:--|:--|
+| **Curso** | Análisis y Diseño de Software |
+| **Modalidad** | Taller práctico (presentación + laboratorio en equipo) |
+| **Momento sugerido** | Semanas 1–3 del semestre (agosto) |
+| **Plataforma** | GitLab institucional del Departamento |
+| **Relator** | Francisco Alfaro Medina |
+| **Presentación** | [`git_gitlab.qmd`](git_gitlab.html) |
+
+---
+
+## 1. Objetivo general
+
+> Que las y los estudiantes sean capaces de **organizar el trabajo de su equipo de desarrollo usando control de versiones con Git y la plataforma GitLab del Departamento**, aplicando un flujo de trabajo colaborativo —ramas, commits, Merge Requests, Issues y revisión de código— que les permita construir el proyecto del semestre de forma trazable, coordinada y verificable, incorporando además criterios de uso responsable de herramientas de inteligencia artificial.
+
+En lenguaje directo para el estudiante:
+
+*"Al terminar este taller vas a saber trabajar en un proyecto de software con otras personas sin pisarte el trabajo, sin perder cambios y sin mandar archivos por WhatsApp. Vas a tener un repositorio en el GitLab del Departamento, con tareas repartidas, ramas por funcionalidad y un historial que muestra quién hizo qué y por qué."*
+
+---
+
+## 2. Objetivos específicos
+
+Al finalizar el taller, la o el estudiante será capaz de:
+
+### Bloque A — Git (fundamentos)
+
+| # | Objetivo específico | Nivel (Bloom) |
+|---|---------------------|---------------|
+| A1 | **Explicar qué problema resuelve Git** y por qué versionar no es lo mismo que guardar copias de archivos. | Comprender |
+| A2 | **Diferenciar Git de GitLab**, identificando qué ocurre en la máquina local y qué en la plataforma remota. | Comprender |
+| A3 | **Aplicar el ciclo básico de trabajo**: `clone`, `status`, `add`, `commit`, `push`, `pull`. | Aplicar |
+| A4 | **Explicar el modelo mental de Git**: working directory, staging area, repositorio local y repositorio remoto. | Comprender |
+| A5 | **Crear y manejar ramas**, aplicando una estrategia básica de branching adecuada a un proyecto de curso. | Aplicar |
+| A6 | **Resolver conflictos simples** de merge, entendiendo por qué se producen. | Aplicar |
+| A7 | **Aplicar buenas prácticas** de commits (atómicos, mensajes descriptivos), nombres de ramas y uso de `.gitignore`. | Aplicar |
+
+### Bloque B — GitLab (colaboración)
+
+| # | Objetivo específico | Nivel (Bloom) |
+|---|---------------------|---------------|
+| B1 | **Navegar el GitLab institucional**: grupos, proyectos, roles y permisos. | Comprender |
+| B2 | **Crear y gestionar Issues** con descripción, etiquetas, responsable y estimación. | Aplicar |
+| B3 | **Crear Merge Requests**, vincularlos a Issues y describir el cambio para quien revisa. | Aplicar |
+| B4 | **Revisar código** de un par: comentar líneas, proponer cambios (*suggestions*), aprobar o pedir ajustes. | Analizar |
+| B5 | **Organizar entregas** con Milestones y Boards (tablero de tareas del equipo). | Aplicar |
+| B6 | **Reconocer el rol de los Pipelines CI/CD** como verificación automática antes de integrar cambios. | Comprender |
+| B7 | **Definir el flujo de trabajo del equipo** y dejarlo documentado en el repositorio (`CONTRIBUTING.md`). | Crear |
+
+### Bloque C — IA responsable en flujos Git/GitLab
+
+| # | Objetivo específico | Nivel (Bloom) |
+|---|---------------------|---------------|
+| C1 | **Identificar dónde la IA aporta valor real** en el flujo: mensajes de commit, descripciones de MR, revisión previa, tests, CI. | Comprender |
+| C2 | **Usar IA como asistente de revisión**, no como autor sin supervisión. | Aplicar |
+| C3 | **Reconocer los riesgos**: filtración de credenciales y código privado, alucinaciones, dependencia y pérdida de aprendizaje. | Comprender |
+| C4 | **Aplicar la política de uso y atribución de IA** del curso al declarar el aporte de la herramienta en el Merge Request. | Aplicar |
+
+---
+
+## 3. Audiencia
+
+**Perfil esperado**
+
+- Estudiantes de **pregrado** de Ingeniería (Informática / Civil Informática / afines).
+- Cursando **Análisis y Diseño de Software**, típicamente en años intermedios de la carrera.
+- Con **conocimientos básicos de programación** (al menos un lenguaje: Python, Java, JavaScript, C++), manejo de archivos y terminal a nivel elemental.
+- **Poca o nula experiencia previa con Git/GitLab**. Es habitual que hayan visto Git de pasada, que sepan hacer `git clone` y poco más, o que solo hayan usado la interfaz web para descargar un ZIP.
+- Trabajarán en **equipos de 3 a 5 personas** durante todo el semestre sobre un proyecto común.
+
+**Supuestos y necesidades**
+
+| Aspecto | Situación esperada | Implicancia para el diseño |
+|---------|--------------------|----------------------------|
+| Terminal | Uso básico e inseguro | Mostrar cada comando en pantalla, sin asumir fluidez |
+| Cuentas | Cuenta institucional activa | Verificar acceso al GitLab del Departamento **antes** de la sesión |
+| Equipos | Ya conformados o en formación | Las actividades se hacen en equipo real, no simulado |
+| Miedo típico | "Si me equivoco, rompo el repositorio" | Dedicar un bloque explícito a "cómo deshacer" |
+| Heterogeneidad | 1–2 personas por equipo con experiencia | Usarlas como apoyo entre pares durante el laboratorio |
+
+**Requisitos previos a la sesión** (enviar por correo con 48 h de anticipación):
+
+1. Git instalado y verificado con `git --version`.
+2. Acceso confirmado al GitLab del Departamento (login institucional).
+3. Editor de código instalado (VS Code recomendado).
+4. Equipo de proyecto definido, con un integrante designado como *Maintainer*.
+
+---
+
+## 4. Duración sugerida
+
+Se propone una **sesión de 3 horas (180 min)** en formato taller, con laboratorio integrado. Es la duración que permite cubrir Git + GitLab **y** dejar el repositorio del equipo efectivamente configurado antes de salir de la sala — que es el resultado que realmente importa en las primeras semanas.
+
+### Versión recomendada — Taller de 3 horas
+
+| Bloque | Contenido | Tiempo | Modalidad |
+|--------|-----------|--------|-----------|
+| 0 | Apertura, diagnóstico rápido y objetivos | 10 min | Expositivo |
+| 1 | **Git**: qué es, qué problema resuelve, versionar ≠ guardar | 15 min | Expositivo |
+| 2 | **Modelo mental**: working directory → staging → local → remoto | 15 min | Expositivo + demo |
+| 3 | **Ciclo básico**: `clone`, `status`, `add`, `commit`, `push`, `pull` | 20 min | Demo en vivo |
+| 4 | 🔨 **Laboratorio 1** — primer commit y push al repo del equipo | 20 min | Práctica en equipo |
+| — | ☕ *Pausa* | 10 min | — |
+| 5 | **Ramas y estrategias de branching**; merge y conflictos | 25 min | Expositivo + demo |
+| 6 | **GitLab**: grupos, proyectos, roles; Issues y Milestones | 20 min | Expositivo + demo |
+| 7 | **Merge Requests y revisión de código**; Boards; CI/CD | 20 min | Expositivo + demo |
+| 8 | 🔨 **Laboratorio 2** — Issue → rama → MR → revisión cruzada | 25 min | Práctica en equipo |
+| 9 | **IA responsable** en flujos Git/GitLab: usos, riesgos y política | 15 min | Expositivo + demo |
+| 10 | Cómo deshacer errores, chuleta de comandos y cierre | 10 min | Expositivo |
+| | **Total** | **180 min** | |
+
+### Versión reducida — Charla de 90 minutos
+
+Cuando no hay bloque de laboratorio disponible, se recomienda **charla de 90 min + tarea guiada** (el laboratorio se hace en ayudantía o de forma asíncrona).
+
+| Bloque | Contenido | Tiempo |
+|--------|-----------|--------|
+| 0 | Apertura y objetivos | 5 min |
+| 1 | Git: qué es y por qué (modelo mental incluido) | 20 min |
+| 2 | Ciclo básico + demo en vivo | 15 min |
+| 3 | Ramas, merge y conflictos | 15 min |
+| 4 | GitLab: Issues, Merge Requests, revisión de código | 20 min |
+| 5 | Boards, Milestones y CI/CD (panorámica) | 5 min |
+| 6 | IA responsable en el flujo | 5 min |
+| 7 | Cierre, chuleta y tarea guiada | 5 min |
+| | **Total** | **90 min** |
+
+### Versión intermedia — 2 horas
+
+Estructura de 3 h **eliminando el Laboratorio 1** (se reemplaza por demo guiada de 5 min) y **acortando el Laboratorio 2 a 15 min**. Total: 120 min.
+
+> **Recomendación:** si existe la opción, 3 horas. Git se aprende con las manos, no mirando diapositivas; los laboratorios son el bloque que no conviene sacrificar.
+
+---
+
+## 5. Estructura de la charla
+
+La presentación se organiza en tres partes: **Git** (la herramienta), **GitLab** (la plataforma) y **IA responsable** (el complemento transversal).
+
+---
+
+# Parte I: Git
+
+## 5.1 Qué es Git
+
+**Ideas centrales a transmitir**
+
+- **Control de versiones**: un sistema que registra los cambios de un conjunto de archivos a lo largo del tiempo, permitiendo recuperar cualquier estado anterior.
+- **Historial del proyecto**: Git no guarda solo el estado actual, guarda *la secuencia de decisiones* que llevaron hasta él. El historial es documentación.
+- **Guardar archivos ≠ versionar software**:
+
+  | Guardar archivos | Versionar software |
+  |------------------|--------------------|
+  | Copias con nombres distintos | Un solo archivo, muchas versiones |
+  | "¿Cuál era la buena?" | Historial lineal y explícito |
+  | Sin razón del cambio | Cada cambio con mensaje y autor |
+  | No se puede fusionar | Trabajo paralelo integrable |
+  | Sin trazabilidad | `git blame`, `git log`, `git diff` |
+
+- **Repositorio local**: la carpeta `.git` dentro del proyecto contiene *todo* el historial. Git funciona sin conexión — no se necesita servidor para versionar.
+- **Commits como puntos de control**: una foto del proyecto en un instante, con autor, fecha, mensaje e identificador único (hash). Se puede volver a cualquiera.
+- **Ramas como líneas alternativas de trabajo**: permiten desarrollar una funcionalidad sin tocar la versión estable, y luego integrarla.
+
+**Analogía sugerida para clase:** un videojuego. El commit es el *save point*; la rama es una partida paralela para probar otra estrategia; el merge es traer a la partida principal lo que resultó bien.
+
+## 5.2 Por qué usar Git
+
+Partir del dolor conocido — es el gancho más efectivo con estudiantes:
+
+| Problema típico | Qué resuelve Git |
+|-----------------|------------------|
+| `informe_final_final_v2_ahora_si.py` | Un archivo, historial completo de versiones |
+| "Se me borró el avance de ayer" | Todo commit es recuperable (`git reflog`) |
+| Dos personas editando el mismo archivo | Ramas + merge con detección de conflictos |
+| "¿Quién cambió esto y por qué?" | `git blame` y `git log` |
+| "Funcionaba el martes y ahora no" | `git diff`, `git revert`, `git bisect` |
+| Enviar el proyecto por correo/WhatsApp | Un repositorio remoto como fuente única de verdad |
+| "No sé qué está haciendo mi compañero" | Ramas visibles, Issues y Merge Requests |
+
+## 5.3 Modelo mental de Git
+
+Es el concepto que más cuesta y el que más rinde. Cuatro zonas:
+
+1. **Working Directory** — los archivos que ves y editas.
+2. **Staging Area (index)** — la antesala: lo que seleccionaste para el próximo commit.
+3. **Local Repository** — el historial confirmado en tu máquina (`.git`).
+4. **Remote Repository** — el repositorio en el GitLab del Departamento, compartido con el equipo.
+
+```{mermaid}
+flowchart LR
+    A[Working Directory] -->|git add| B[Staging Area]
+    B -->|git commit| C[Local Repository]
+    C -->|git push| D[Remote Repository]
+    D -->|git pull| A
+```
+
+**Por qué existe el staging area** (pregunta frecuente): permite construir commits *atómicos*. Si tocaste tres cosas distintas, puedes hacer tres commits separados y coherentes en lugar de uno gigante llamado "cambios varios".
+
+## 5.4 Ciclo básico de trabajo
+
+`clone` → `status` → `add` → `commit` → `pull` → `push`, con demostración en vivo sobre un repositorio real del curso.
+
+## 5.5 Ramas y estrategia de branching
+
+- Qué es una rama y por qué es barata en Git.
+- Convención de nombres: `feature/`, `fix/`, `docs/`.
+- Estrategia recomendada para el curso: **rama `main` protegida + una rama por Issue + integración vía Merge Request**.
+- `merge` vs `rebase`: cuándo cada uno (y la regla de oro: no reescribir historia compartida).
+
+## 5.6 Conflictos
+
+Por qué ocurren, cómo se ven los marcadores `<<<<<<<`, `=======`, `>>>>>>>`, y cómo resolverlos paso a paso. Incluye el mensaje clave: **un conflicto no es un error, es Git pidiendo una decisión humana.**
+
+---
+
+# Parte II: GitLab
+
+## 5.7 Qué es GitLab y en qué se diferencia de Git
+
+| | **Git** | **GitLab** |
+|---|---------|------------|
+| Qué es | Programa de control de versiones | Plataforma web de colaboración |
+| Dónde vive | Tu computador | Servidor del Departamento |
+| Sirve para | Versionar código | Coordinar al equipo |
+| Se usa con | Terminal / editor | Navegador |
+| Sin internet | Funciona | No funciona |
+
+Analogía: Git es el motor; GitLab es el auto completo (motor + tablero + espejos + copiloto).
+
+## 5.8 Equivalencias GitHub → GitLab
+
+| GitHub | GitLab | Para qué sirve |
+|--------|--------|----------------|
+| Repository | **Repository / Project** | El proyecto y su código |
+| Pull Request | **Merge Request (MR)** | Proponer integrar cambios |
+| Issues | **Issues** | Tareas, bugs, preguntas |
+| Projects | **Boards** | Tablero kanban del equipo |
+| Milestones | **Milestones** | Hitos y entregas |
+| Actions | **CI/CD Pipelines** | Automatización y verificación |
+| Organizations | **Groups** | Agrupación de proyectos |
+| Wiki / Discussions | **Wiki / Threads** | Documentación y conversación |
+
+## 5.9 Contenidos GitLab
+
+- **Estructura y roles**: Groups → Projects; Guest / Reporter / Developer / Maintainer / Owner.
+- **Repository**: archivos, ramas, tags, *protected branches*.
+- **Issues**: anatomía de un buen Issue, labels, assignee, due date, checklists.
+- **Milestones**: mapear las entregas del semestre.
+- **Boards**: To Do → Doing → Review → Done; el tablero como estado del equipo.
+- **Merge Requests**: creación, descripción, `Closes #12`, *Draft*, approvals, *squash*.
+- **Revisión de código**: comentarios en línea, *suggestions*, threads resueltos, qué mirar al revisar.
+- **CI/CD Pipelines**: `.gitlab-ci.yml`, ejemplo mínimo (lint + tests), semáforo verde/rojo en el MR.
+- **Flujo completo del equipo**: Issue → rama → commits → MR → pipeline → revisión → merge → cierre del Issue.
+
+---
+
+# Parte III: IA responsable en flujos Git y GitLab
+
+## 5.10 Dónde ayuda
+
+| Tarea | Aporte de la IA | Quién decide |
+|-------|-----------------|--------------|
+| Mensaje de commit | Redactar desde el `diff` | Tú |
+| Descripción de MR | Resumir el cambio y su motivación | Tú |
+| Revisión previa | Detectar errores antes de pedir revisión humana | Tú |
+| Conflictos | Explicar qué cambió cada lado | Tú |
+| `.gitlab-ci.yml` | Generar un pipeline base | Tú |
+| Tests | Proponer casos de prueba | Tú |
+| Comandos Git | Explicar qué hace un comando antes de ejecutarlo | Tú |
+
+## 5.11 Riesgos y reglas del curso
+
+1. **Nunca pegar credenciales, tokens ni `.env`** en un chat de IA.
+2. **Nunca hacer merge de código que no entiendes**, venga de donde venga.
+3. **La IA no reemplaza la revisión humana** — el MR sigue necesitando aprobación de un par.
+4. **Declarar el uso de IA** en la descripción del Merge Request (sección "Uso de IA").
+5. **La responsabilidad del código es del equipo**, no de la herramienta.
+
+## 5.12 Cierre
+
+- Cómo deshacer errores comunes: `restore`, `reset`, `revert`, `stash`, `reflog`.
+- Chuleta de comandos imprimible.
+- Checklist de configuración del repositorio del equipo.
+- Recursos para seguir aprendiendo.
+
+---
+
+## 6. Evaluación sugerida (opcional)
+
+Si el taller se evalúa, se propone una **rúbrica de proceso** aplicada al repositorio del equipo al final de la semana 3:
+
+| Criterio | Insuficiente (1) | Suficiente (2) | Bueno (3) | Destacado (4) |
+|----------|------------------|----------------|-----------|---------------|
+| Uso de commits | Menos de 3 commits, mensajes vacíos | Commits regulares, mensajes básicos | Commits atómicos con mensajes claros | Convención consistente (ej. Conventional Commits) |
+| Ramas | Todo en `main` | Alguna rama creada | Una rama por funcionalidad | Convención de nombres + `main` protegida |
+| Issues | Sin Issues | Issues creados sin detalle | Issues descritos y asignados | Issues con labels, milestone y criterios de aceptación |
+| Merge Requests | Sin MR | MR sin descripción | MR descritos y vinculados a Issues | MR revisados por pares con comentarios sustantivos |
+| Participación | 1 persona commitea | 2 personas | Todo el equipo contribuye | Contribución equilibrada y revisión cruzada |
+| Uso de IA | No declarado / código no comprendido | Declarado parcialmente | Declarado y comprendido | Declarado, comprendido y críticamente evaluado |
+
+**Entregable de la semana 3:** enlace al proyecto en el GitLab del Departamento con:
+
+- [ ] `README.md` con nombre del proyecto, equipo y cómo ejecutarlo
+- [ ] `.gitignore` apropiado al lenguaje
+- [ ] `CONTRIBUTING.md` con el flujo de trabajo acordado por el equipo
+- [ ] Rama `main` protegida
+- [ ] Al menos 5 Issues creados y asignados
+- [ ] Al menos 1 Milestone con fecha de entrega
+- [ ] Un Board configurado
+- [ ] Al menos 1 Merge Request mergeado tras revisión de un par
+
+---
+
+## 7. Materiales y logística
+
+**Para el relator**
+
+- Presentación: [`git_gitlab.qmd`](git_gitlab.qmd) (Quarto + reveal.js)
+- Repositorio de demostración en el GitLab del Departamento, preparado con conflicto sembrado para el bloque 5
+- Terminal con fuente grande (≥ 18 pt) y prompt simplificado
+- Plan B: si el GitLab institucional falla, tener la demo grabada o capturas de respaldo
+
+**Para estudiantes**
+
+- Git instalado, acceso a GitLab verificado, editor instalado
+- Chuleta de comandos (última sección de la presentación, exportable a PDF)
+
+**Ambiente**
+
+- Sala con computadores o política BYOD
+- Conectividad a la red institucional (el GitLab del Departamento puede requerir VPN fuera del campus — **verificar antes**)

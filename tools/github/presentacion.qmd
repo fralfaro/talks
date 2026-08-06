@@ -34,7 +34,7 @@ execute:
 ::: title-block
 **GitHub**
 
-Organiza, comparte y colabora 
+Organiza, comparte y colabora
 :::
 
 ::: subtitle-block
@@ -62,12 +62,12 @@ Unidad de Educación a Distancia · 2026
 
 ## Objetivos
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/index2.png" alt="Objetivos" style="width: 100%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
@@ -77,7 +77,7 @@ Unidad de Educación a Distancia · 2026
 -   **README y Markdown**: Documentar tu trabajo de forma clara y profesional.
 -   **Perfil GitHub**: Construir un portafolio visible para el mundo.
 :::
-:::
+::::::
 
 ------------------------------------------------------------------------
 
@@ -93,12 +93,12 @@ Unidad de Educación a Distancia · 2026
 
 ## ¿Qué es GitHub?
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/github.png" alt="GitHub Logo" style="width: 100%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
@@ -110,13 +110,13 @@ Unidad de Educación a Distancia · 2026
     -   Permite compartir materiales con estudiantes y colegas.\
     -   Deja registro de cada cambio y versión de tu trabajo.
 :::
-:::
+::::::
 
 ------------------------------------------------------------------------
 
 ## Ejemplos
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ![](images/repos_02.png){fig-align="center" width="93%"}\
 [Repositorio del Curso](https://github.com/fralfaro/MAT281_2024)
@@ -126,18 +126,18 @@ Unidad de Educación a Distancia · 2026
 ![](images/repos_03.png){fig-align="center" width="80%"}\
 [Portafolio Estudiantes](https://github.com/fralfaro/MAT281-Portfolio)
 :::
-:::
+:::::
 
 ------------------------------------------------------------------------
 
 ## Crear una cuenta
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/github/signup.png" alt="GitHub Signup" style="width: 90%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
@@ -150,7 +150,7 @@ Unidad de Educación a Distancia · 2026
     -   Usa un nombre de usuario profesional *(ej: `francisco-alfaro`)*.
     -   Agrega foto de perfil y una bio breve.
 :::
-:::
+::::::
 
 . . .
 
@@ -172,8 +172,6 @@ Unidad de Educación a Distancia · 2026
 ![](images/github/acc_05.png){.fragment width="60%"}
 :::
 
-
-
 ------------------------------------------------------------------------
 
 ##  {background-image="images/background_slides3.png" background-opacity="0.3"}
@@ -188,12 +186,12 @@ Unidad de Educación a Distancia · 2026
 
 ## ¿Qué es un repositorio?
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/github/repos3.png" alt="Repositorio" style="width: 90%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
@@ -205,18 +203,18 @@ Unidad de Educación a Distancia · 2026
     -   Compartir materiales con un simple enlace.\
     -   Mantener un historial de cambios de tu trabajo.
 :::
-:::
+::::::
 
 ------------------------------------------------------------------------
 
 ## Crear un repositorio
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/github/repos3.png" alt="Repositorio" style="width: 90%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
@@ -227,7 +225,7 @@ Unidad de Educación a Distancia · 2026
 4.  Marca ✅ **Add a README file**.
 5.  Haz clic en **Create repository**.
 :::
-:::
+::::::
 
 . . .
 
@@ -257,12 +255,12 @@ Unidad de Educación a Distancia · 2026
 
 ## ¿Qué es el README?
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/github/readme.png" alt="README" style="width: 90%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
@@ -274,7 +272,7 @@ Unidad de Educación a Distancia · 2026
     -   Guía a quien visita el repositorio.\
     -   En docencia: describe el curso, los contenidos y cómo navegar los materiales.
 :::
-:::
+::::::
 
 . . .
 
@@ -308,12 +306,12 @@ Unidad de Educación a Distancia · 2026
 
 ## GitHub Profile
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/github/octo.png" alt="GitHub Profile" style="width: 100%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
@@ -325,7 +323,7 @@ Unidad de Educación a Distancia · 2026
     -   Es lo primero que ven empleadores, colegas y estudiantes.\
     -   Refleja tu actividad, proyectos y áreas de interés.
 :::
-:::
+::::::
 
 . . .
 
@@ -335,12 +333,12 @@ Unidad de Educación a Distancia · 2026
 
 ## Cómo crear tu perfil especial
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/github/octo.png" alt="GitHub Profile" style="width: 100%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
@@ -350,7 +348,7 @@ Unidad de Educación a Distancia · 2026
 3.  Edita el `README.md` con tu presentación personal.
 4.  ¡Se muestra en la portada de tu perfil para todo el mundo!
 :::
-:::
+::::::
 
 . . .
 
@@ -358,7 +356,7 @@ Unidad de Educación a Distancia · 2026
 
 ------------------------------------------------------------------------
 
-## Ejemplos de Profile 
+## Ejemplos de Profile
 
 ::: r-stack
 ![](images/github/img_04.png){.fragment .fade-in-then-out width="80%"}
@@ -386,12 +384,12 @@ Unidad de Educación a Distancia · 2026
 
 <br>
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/ejercicio.png" alt="Actividad" style="width: 80%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 1.  **Crea** tu cuenta en [github.com](https://github.com) *(si aún no tienes)*.
@@ -400,7 +398,7 @@ Unidad de Educación a Distancia · 2026
 4.  **Incluye**: título, descripción, tabla de contenidos y al menos un link.
 5.  *(Extra)* Crea tu **repositorio de perfil** con tu nombre de usuario.
 :::
-:::
+::::::
 
 . . .
 
@@ -422,8 +420,8 @@ Unidad de Educación a Distancia · 2026
 
 <br>
 
-::: fragment
-::: {style="display: flex; flex-direction: column; gap: 0.75em; font-size: 0.95em;"}
+::::::::: fragment
+:::::::: {style="display: flex; flex-direction: column; gap: 0.75em; font-size: 0.95em;"}
 ::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg, #e8f0fe, #f8f9ff); border-left: 4px solid #0F2044; border-radius: 8px; padding: 0.6em 1em;"}
 ✅   **GitHub** es una plataforma esencial para organizar y compartir trabajo académico.
 :::
@@ -443,14 +441,14 @@ Unidad de Educación a Distancia · 2026
 ::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg, #e8f0fe, #f8f9ff); border-left: 4px solid #4a84e0; border-radius: 8px; padding: 0.6em 1em;"}
 ✅   Todo se puede hacer **desde el navegador**, sin instalar nada.
 :::
-:::
-:::
+::::::::
+:::::::::
 
 ------------------------------------------------------------------------
 
 ## 🎉 ¡Gracias por Participar!
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 <br>
 
@@ -464,7 +462,7 @@ Unidad de Educación a Distancia · 2026
 ::: {.column width="50%" align="center"}
 ![](images/qr.png){width="400"}
 :::
-:::
+:::::
 
 > 🔗 Nuestro Sitio Web: [educacionadistancia.usm.cl/](https://educacionadistancia.usm.cl/)
 

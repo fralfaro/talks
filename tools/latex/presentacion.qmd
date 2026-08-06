@@ -62,12 +62,12 @@ Unidad de Educación a Distancia · 2026
 
 ## Objetivos
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/index2.png" alt="Tachado" style="width: 100%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
@@ -77,7 +77,7 @@ Unidad de Educación a Distancia · 2026
 -   **Elementos clave**: Texto, secciones, listas, imágenes y fórmulas.\
 -   **Buenas prácticas**: Organización, plantillas y recursos recomendados.
 :::
-:::
+::::::
 
 ------------------------------------------------------------------------
 
@@ -93,12 +93,12 @@ Unidad de Educación a Distancia · 2026
 
 ## ¿Qué es LaTeX?
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/latex.png" alt="Escribir Informe" style="width: 100%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
@@ -110,7 +110,7 @@ Unidad de Educación a Distancia · 2026
     -   Control total sobre formato y estructura.\
     -   Ideal para documentos extensos y complejos.
 :::
-:::
+::::::
 
 ------------------------------------------------------------------------
 
@@ -118,7 +118,7 @@ Unidad de Educación a Distancia · 2026
 
 <br>
 
-::: r-stack
+:::::: r-stack
 ::: {.fragment .fade-in-then-out}
 <iframe src="https://www.slideshare.net/slideshow/embed_code/key/6iH5QPCL3w1qwm?startSlide=1" width="960" height="600" frameborder="0" scrolling="no" style="max-width:100%; border:1px solid #CCC; border-radius:10px;" allowfullscreen>
 
@@ -136,18 +136,18 @@ Unidad de Educación a Distancia · 2026
 
 </iframe>
 :::
-:::
+::::::
 
 ------------------------------------------------------------------------
 
 ## ¿Cómo empezar?
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/tex.png" alt="Overleaf" style="width: 90%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
@@ -159,7 +159,7 @@ Unidad de Educación a Distancia · 2026
 -   **Editores útiles:**
     -   [TeXstudio](https://www.texstudio.org/), [VSCode + LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)\
 :::
-:::
+::::::
 
 . . .
 
@@ -169,12 +169,12 @@ Unidad de Educación a Distancia · 2026
 
 ## Overleaf: LaTeX Online
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/overleaf.png" alt="Overleaf Logo" style="width: 80%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
@@ -186,7 +186,7 @@ Unidad de Educación a Distancia · 2026
     -   Integración con GitHub y la nube.\
     -   Compilación y previsualización instantánea.\
 :::
-:::
+::::::
 
 . . .
 
@@ -216,12 +216,12 @@ Unidad de Educación a Distancia · 2026
 
 ## Overleaf Gallery
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/gallery.png" alt="Escribir Informe" style="width: 100%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
@@ -233,7 +233,7 @@ Unidad de Educación a Distancia · 2026
 -   **Personaliza y reutiliza**:
     -   Cambia texto, imágenes y estilo.
 :::
-:::
+::::::
 
 . . .
 
@@ -263,12 +263,12 @@ Unidad de Educación a Distancia · 2026
 
 ## Herramientas Útiles
 
-::: columns
-::: {.column width="45%"}
+:::::: columns
+:::: {.column width="45%"}
 ::: {style="text-align: center;"}
 <img src="images/tools.png" alt="Escribir Informe" style="width: 100%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="55%"}
 <br>
@@ -285,7 +285,7 @@ Unidad de Educación a Distancia · 2026
 -   🧠 [**Detexify**](http://detexify.kirelabs.org/classify.html)\
     Dibuja un símbolo y encuentra su comando LaTeX.
 :::
-:::
+::::::
 
 ------------------------------------------------------------------------
 
@@ -305,12 +305,12 @@ Unidad de Educación a Distancia · 2026
 
 ## LaTeX + Inteligencia Artificial
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/chatgpt.png" alt="Escribir Informe" style="width: 100%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br><br>
@@ -322,7 +322,7 @@ Unidad de Educación a Distancia · 2026
     -   Explican comandos y paquetes.
     -   Mejoran el formato y detectan errores.
 :::
-:::
+::::::
 
 . . .
 
@@ -332,10 +332,10 @@ Unidad de Educación a Distancia · 2026
 
 ## Ejemplos de Prompts
 
-::: panel-tabset
+::::::::::::::: panel-tabset
 ## Fórmulas
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ✨ **Prompt:**
 
@@ -352,11 +352,11 @@ f(x) = \frac{1}{\sigma\sqrt{2\pi}}
 
 Donde $\mu$ es la media, $\sigma$ la desviación estándar y $x$ el valor observado.
 :::
-:::
+:::::
 
 ## Tablas
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ✨ **Prompt:**
 
@@ -382,11 +382,11 @@ Comunidad    & Grande & Grande & Pequeña \\
 \end{table}
 ```
 :::
-:::
+:::::
 
 ## Corrección
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ✨ **Prompt:**
 
@@ -416,11 +416,11 @@ f(x) = \int_0^\infty e^{-x^2}\,dx
 \end{equation}
 ```
 :::
-:::
+:::::
 
 ## Bibliografía
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ✨ **Prompt:**
 
@@ -442,8 +442,8 @@ f(x) = \int_0^\infty e^{-x^2}\,dx
 }
 ```
 :::
-:::
-:::
+:::::
+:::::::::::::::
 
 ------------------------------------------------------------------------
 
@@ -461,12 +461,12 @@ f(x) = \int_0^\infty e^{-x^2}\,dx
 
 <br>
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/ejercicio.png" alt="Overleaf Logo" style="width: 80%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 1.  **Elige** una plantilla en [Overleaf Academic Journal Templates](https://www.overleaf.com/latex/templates/tagged/academic-journal).
@@ -479,7 +479,7 @@ f(x) = \int_0^\infty e^{-x^2}\,dx
 4.  **Copia** cada respuesta en Overleaf y **compila**.
 5.  *(Extra)* Pídele al asistente que corrija algún error de compilación.
 :::
-:::
+::::::
 
 . . .
 
@@ -501,8 +501,8 @@ f(x) = \int_0^\infty e^{-x^2}\,dx
 
 <br>
 
-::: fragment
-::: {style="display: flex; flex-direction: column; gap: 0.75em; font-size: 0.95em;"}
+::::::::: fragment
+:::::::: {style="display: flex; flex-direction: column; gap: 0.75em; font-size: 0.95em;"}
 ::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg, #e8f0fe, #f8f9ff); border-left: 4px solid #0F2044; border-radius: 8px; padding: 0.6em 1em;"}
 ✅   **LaTeX** permite redactar documentos con calidad profesional.
 :::
@@ -522,14 +522,14 @@ f(x) = \int_0^\infty e^{-x^2}\,dx
 ::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg, #e8f0fe, #f8f9ff); border-left: 4px solid #4a84e0; border-radius: 8px; padding: 0.6em 1em;"}
 ✅   **Overleaf** permite comenzar sin instalar nada, desde cualquier navegador.
 :::
-:::
-:::
+::::::::
+:::::::::
 
 ------------------------------------------------------------------------
 
 ## 🎉 ¡Gracias por Participar!
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 <br>
 
@@ -543,7 +543,7 @@ f(x) = \int_0^\infty e^{-x^2}\,dx
 ::: {.column width="50%" align="center"}
 ![](images/qr_cc.png){width="400"}
 :::
-:::
+:::::
 
 > 🔗 Nuestro Sitio Web: [educacionadistancia.usm.cl/](https://educacionadistancia.usm.cl/)
 

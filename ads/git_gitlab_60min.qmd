@@ -1,0 +1,1525 @@
+---
+title: "Git y GitLab sin miedo"
+subtitle: "El flujo mínimo para trabajar en equipo — en 60 minutos"
+author: "Francisco Alfaro Medina"
+institute: "Análisis y Diseño de Software · UTFSM"
+date: today
+date-format: "MMMM YYYY"
+
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    progress: true
+    history: false
+    transition: fade
+    transition-speed: fast
+    incremental: false
+    fig-align: center
+    # El tema pinta los bloques de código sobre fondo oscuro (#1E2D3D),
+    # así que el resaltado también debe ser oscuro para tener contraste.
+    highlight-style: nord
+    code-block-bg: true
+    center: false
+    width: 1600
+    height: 800
+    logo: "images/usm.png"
+    scrollable: false
+execute:
+  echo: false
+  warning: false
+---
+
+## {.title-slide background-color="#0F2044"}
+
+::: title-block
+**Git y GitLab sin miedo**
+
+El flujo mínimo para trabajar en equipo
+:::
+
+::: subtitle-block
+Clonar · Commit · Push · Pull · Ramas · Issues · Merge Requests\
+Análisis y Diseño de Software — 2026
+:::
+
+::: author-block
+Francisco Alfaro Medina\
+Departamento de Informática · UTFSM
+:::
+
+------------------------------------------------------------------------
+
+## ¿Te ha pasado esto?
+
+<br>
+
+::: columns
+::: {.column width="55%"}
+``` text
+📁 Descargas/
+├── proyecto-final.zip
+├── proyecto-final-v2.zip
+├── proyecto-final-v2-ahora-si.zip
+├── proyecto-final-BUENO.zip
+├── proyecto-final-ESTE-NO-BORRAR.zip
+└── proyecto-final-v2-ahora-si (1).zip
+```
+:::
+
+::: {.column .incremental width="45%"}
+<br>
+
+-   ¿Cuál era el que funcionaba?
+-   ¿Qué cambió entre uno y otro?
+-   ¿Y si dos personas editan a la vez?
+:::
+:::
+
+. . .
+
+<br>
+
+> 😅 Todos hemos estado ahí. Hoy vemos cómo no volver.
+
+------------------------------------------------------------------------
+
+## Trabajar sin control de versiones duele
+
+<br>
+
+| 😩 Lo que pasa | 😰 Por qué duele |
+|:---|:---|
+| Copias con nombres inventados | Nadie sabe cuál es la versión buena |
+| "Se me borró lo de ayer" | No hay forma de volver atrás |
+| Dos personas editan el mismo archivo | Alguien pierde su trabajo |
+| Se juntan los avances por WhatsApp | Copiar y pegar a mano, con errores |
+| "¿Quién cambió esto y por qué?" | Nadie se acuerda |
+
+. . .
+
+<br>
+
+> 💡 No es falta de orden. Es que **el problema necesita una herramienta**.
+
+------------------------------------------------------------------------
+
+## Git es el historial ordenado de tu proyecto
+
+<br>
+
+::: columns
+::: {.column width="45%"}
+::: {style="background:#f5f7fa; border-radius:10px; padding:1em; border-left:5px solid #6B7A8D; height:270px;"}
+### 📁 Sin Git
+
+Guardas **copias del proyecto**.
+
+Cada copia es un archivo distinto.
+
+El "por qué" de cada cambio se pierde.
+:::
+:::
+
+::: {.column width="55%"}
+::: {style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-radius:10px; padding:1em; border-left:5px solid #0F2044; height:270px;"}
+### 🌿 Con Git
+
+Guardas **un solo proyecto** con toda su historia.
+
+Cada cambio queda registrado: qué, quién, cuándo y **por qué**.
+
+Puedes volver a cualquier punto.
+:::
+:::
+:::
+
+. . .
+
+<br>
+
+> 🎮 Como los *save points* de un videojuego: avanzas tranquilo porque siempre puedes volver.
+
+------------------------------------------------------------------------
+
+## Objetivo y resultados de aprendizaje
+
+<br>
+
+::: {style="text-align:center; background:linear-gradient(160deg,#0F2044,#2a5298); color:white; border-radius:12px; padding:1.1em; width:88%; margin:0 auto;"}
+[**Objetivo:** que entiendas el flujo mínimo de trabajo con Git y GitLab\
+y lo puedas usar en tu proyecto desde esta semana.]{style="font-size:1.05em"}
+:::
+
+<br>
+
+::: {.incremental style="font-size:0.88em;"}
+**Al terminar esta hora vas a ser capaz de:**
+
+1.  **Clonar** el repositorio de tu equipo desde el GitLab del Departamento.
+2.  **Revisar** qué cambiaste con `git status`.
+3.  **Crear commits** con mensajes claros.
+4.  **Subir y actualizar** tu trabajo con `push` y `pull`.
+5.  **Crear una rama** para trabajar sin romper nada.
+6.  **Crear un Issue** y **abrir un Merge Request** simple en GitLab.
+:::
+
+------------------------------------------------------------------------
+
+## Programa de la hora
+
+<br>
+
+| # | Bloque | Tiempo |
+|:--|:-------|-------:|
+| 1 | ¿Por qué necesitamos Git? | 5 min |
+| 2 | **Git básico**: conceptos y comandos mínimos | 15 min |
+| 3 | **Flujo básico individual** | 10 min |
+| 4 | **GitLab básico**: Issues y Merge Requests | 15 min |
+| 5 | 🔨 **Mini actividad práctica** | 10 min |
+| 6 | Uso responsable de IA | 5 min |
+| | **Total** | **60 min** |
+
+. . .
+
+<br>
+
+> ⚠️ Es un taller: ten la terminal abierta. Vamos a escribir comandos de verdad.
+
+------------------------------------------------------------------------
+
+## {background-image="images/background_slides3.png" background-opacity="0.3"}
+
+::: {style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;"}
+[Bloque 2]{style="font-size: 2em"}
+
+[Git básico]{style="font-size: 2.5em"}
+:::
+
+------------------------------------------------------------------------
+
+## ¿Qué es Git?
+
+<br>
+
+::: {style="text-align:center; background:linear-gradient(160deg,#0F2044,#2a5298); color:white; border-radius:14px; padding:1.4em; width:82%; margin:0 auto;"}
+[Un programa que **guarda la historia de tu proyecto**]{style="font-size:1.3em"}
+
+<br>
+
+[y te deja volver a cualquier punto de esa historia.]{style="font-size:1.05em"}
+:::
+
+. . .
+
+<br>
+
+::: {.incremental style="font-size:0.9em;"}
+-   Se instala **en tu computador** y funciona sin internet.
+-   No sirve solo para código: sirve para cualquier archivo de texto.
+-   Es la herramienta estándar de la industria — la vas a usar toda tu carrera.
+:::
+
+------------------------------------------------------------------------
+
+## Las ocho palabras que hay que conocer
+
+<br>
+
+::: {style="font-size:0.88em;"}
+| Palabra | En simple |
+|:---|:---|
+| **Repositorio** | Tu proyecto **+ toda su historia**. Es una carpeta con un `.git` adentro. |
+| **Working directory** | Los archivos que ves y editas ahora mismo. |
+| **Staging area** | La "bandeja" donde pones los cambios que quieres guardar. |
+| **Commit** | Un punto guardado en la historia, con un mensaje que explica qué hiciste. |
+| **Branch** (rama) | Una línea de trabajo paralela, para no romper lo que ya funciona. |
+| **Remote** | La copia del repositorio que vive en GitLab, compartida con tu equipo. |
+| **Push** | Subir tus commits al remote. |
+| **Pull** | Bajar los commits que subieron los demás. |
+:::
+
+. . .
+
+> 🧭 Son ocho palabras, no ochenta. Vuelve a esta tabla cada vez que te pierdas.
+
+------------------------------------------------------------------------
+
+## Cómo se mueven tus cambios
+
+<br>
+
+```{mermaid}
+%%| fig-width: 12
+%%{init: {'flowchart': {'padding': 26, 'nodeSpacing': 45, 'rankSpacing': 60}}}%%
+flowchart LR
+    A["💻 Working<br/>Directory"] -->|git add| B["📋 Staging<br/>Area"]
+    B -->|git commit| C["📦 Repositorio<br/>local"]
+    C -->|git push| D["☁️ GitLab<br/><i>remote</i>"]
+    D -->|git pull| A
+
+    style A fill:#e8f0fe,stroke:#0F2044,stroke-width:2px
+    style B fill:#dbe7fb,stroke:#2a5298,stroke-width:2px
+    style C fill:#c9dcf8,stroke:#3a6bc4,stroke-width:2px
+    style D fill:#FEE9D9,stroke:#FC6D26,stroke-width:2px
+```
+
+. . .
+
+<br>
+
+> 🔑 Si entiendes este dibujo, ya entendiste lo esencial de Git.
+
+------------------------------------------------------------------------
+
+## Los 7 comandos que necesitas
+
+<br>
+
+``` bash
+git clone URL_DEL_REPOSITORIO     # 1. traer el repositorio
+git status                        # 2. ¿qué cambié?
+git add .                         # 3. preparar los cambios
+git commit -m "mensaje claro"     # 4. guardar el punto de control
+git pull                          # 5. bajar lo del equipo
+git push                          # 6. subir lo tuyo
+git switch -c nombre-rama         # 7. crear una rama
+```
+
+. . .
+
+<br>
+
+::: {style="background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #0F2044; border-radius: 8px; padding: 0.8em 1.2em;"}
+👉 Ahora los vemos **uno por uno**: qué hace, cuándo se usa, un ejemplo y el error típico.
+:::
+
+------------------------------------------------------------------------
+
+## 1️⃣ `git clone`
+
+<br>
+
+::: columns
+::: {.column width="54%"}
+::: {style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-left:5px solid #0F2044; border-radius:10px; padding:0.8em 1.1em; margin-bottom:0.7em;"}
+**🔧 Qué hace**
+
+Copia el repositorio completo desde GitLab a tu computador, con toda su historia.
+:::
+
+::: {style="background:linear-gradient(160deg,#FFF4E5,#FFFBF5); border-left:5px solid #FC6D26; border-radius:10px; padding:0.8em 1.1em;"}
+**⏰ Cuándo se usa**
+
+**Una sola vez** por proyecto, al principio.
+:::
+:::
+
+::: {.column width="46%"}
+``` bash
+git clone URL_DEL_REPOSITORIO
+cd proyecto-ads
+```
+:::
+:::
+
+. . .
+
+::: {style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;"}
+❌ **Error común:** clonar **dentro** de otro repositorio, o clonarlo de nuevo cada vez que quieres actualizar.\
+✅ Para actualizar no se clona: se usa `git pull`.
+:::
+
+------------------------------------------------------------------------
+
+## 2️⃣ `git status`
+
+<br>
+
+::: columns
+::: {.column width="54%"}
+::: {style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-left:5px solid #0F2044; border-radius:10px; padding:0.8em 1.1em; margin-bottom:0.7em;"}
+**🔧 Qué hace**
+
+Te dice en qué rama estás, qué archivos cambiaste y qué está listo para guardar.
+:::
+
+::: {style="background:linear-gradient(160deg,#FFF4E5,#FFFBF5); border-left:5px solid #FC6D26; border-radius:10px; padding:0.8em 1.1em;"}
+**⏰ Cuándo se usa**
+
+**Todo el tiempo.** Antes y después de cada comando. Es gratis.
+:::
+:::
+
+::: {.column width="46%"}
+``` text
+$ git status
+On branch pantalla-login
+Changes not staged for commit:
+     modified:  src/login.py
+Untracked files:
+     nuevo_archivo.py
+```
+:::
+:::
+
+. . .
+
+::: {style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;"}
+❌ **Error común:** no usarlo nunca y trabajar a ciegas.\
+✅ Si algo raro pasa, `git status` casi siempre te dice qué es **y qué hacer**.
+:::
+
+------------------------------------------------------------------------
+
+## 3️⃣ `git add`
+
+<br>
+
+::: columns
+::: {.column width="54%"}
+::: {style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-left:5px solid #0F2044; border-radius:10px; padding:0.8em 1.1em; margin-bottom:0.7em;"}
+**🔧 Qué hace**
+
+Pone tus cambios en la "bandeja" (*staging area*) para el próximo commit.
+:::
+
+::: {style="background:linear-gradient(160deg,#FFF4E5,#FFFBF5); border-left:5px solid #FC6D26; border-radius:10px; padding:0.8em 1.1em;"}
+**⏰ Cuándo se usa**
+
+Justo antes de hacer un commit.
+:::
+:::
+
+::: {.column width="46%"}
+``` bash
+git add .              # todo
+git add src/login.py   # un archivo
+```
+:::
+:::
+
+. . .
+
+::: {style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;"}
+❌ **Error común:** hacer `git add .` sin mirar y subir cosas que no correspondían (archivos gigantes, contraseñas, carpetas del entorno).\
+✅ Corre `git status` antes. Si agregaste algo por error: `git restore --staged archivo`.
+:::
+
+------------------------------------------------------------------------
+
+## 4️⃣ `git commit`
+
+<br>
+
+::: columns
+::: {.column width="54%"}
+::: {style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-left:5px solid #0F2044; border-radius:10px; padding:0.8em 1.1em; margin-bottom:0.7em;"}
+**🔧 Qué hace**
+
+Guarda un punto de control en la historia, con tu mensaje, tu nombre y la fecha.
+:::
+
+::: {style="background:linear-gradient(160deg,#FFF4E5,#FFFBF5); border-left:5px solid #FC6D26; border-radius:10px; padding:0.8em 1.1em;"}
+**⏰ Cuándo se usa**
+
+Cada vez que terminas algo que funciona. Mejor **seguido y pequeño**.
+:::
+:::
+
+::: {.column width="46%"}
+``` bash
+git commit -m "Agrega validación
+   del formulario"
+```
+:::
+:::
+
+. . .
+
+::: {style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;"}
+❌ **Error común:** un solo commit gigante al final llamado `"cambios"`.\
+✅ El commit vive en **tu computador** hasta que hagas `push`. Commitear no comparte nada todavía.
+:::
+
+------------------------------------------------------------------------
+
+## Un buen mensaje de commit
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+### ❌ No ayudan
+
+``` text
+"cambios"
+"asdasd"
+"arreglo"
+"ahora si"
+"commit final"
+```
+
+Dentro de dos semanas, ni tú vas a saber qué hiciste.
+:::
+
+::: {.column .fragment width="50%"}
+### ✅ Ayudan
+
+``` text
+"Agrega pantalla de login"
+"Corrige error al dividir por cero"
+"Actualiza el README"
+"Agrega validación del formulario"
+```
+
+Se entienden sin abrir el código.
+:::
+:::
+
+. . .
+
+<br>
+
+> 📏 Regla simple: **escribe qué hiciste, en pocas palabras.** Si necesitas escribir "y", probablemente son dos commits.
+
+------------------------------------------------------------------------
+
+## 5️⃣ `git pull`
+
+<br>
+
+::: columns
+::: {.column width="54%"}
+::: {style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-left:5px solid #0F2044; border-radius:10px; padding:0.8em 1.1em; margin-bottom:0.7em;"}
+**🔧 Qué hace**
+
+Baja a tu computador los commits que tus compañeros subieron a GitLab.
+:::
+
+::: {style="background:linear-gradient(160deg,#FFF4E5,#FFFBF5); border-left:5px solid #FC6D26; border-radius:10px; padding:0.8em 1.1em;"}
+**⏰ Cuándo se usa**
+
+**Siempre antes de empezar a trabajar.** Y antes de hacer `push`.
+:::
+:::
+
+::: {.column width="46%"}
+``` bash
+git pull
+```
+:::
+:::
+
+. . .
+
+::: {style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;"}
+❌ **Error común:** trabajar toda la tarde sin hacer `pull` y después chocar con los cambios de todos.\
+✅ Si aparece un **conflicto**, no es un error: Git te está pidiendo que elijas. Lo vemos en el bloque 3.
+:::
+
+------------------------------------------------------------------------
+
+## 6️⃣ `git push`
+
+<br>
+
+::: columns
+::: {.column width="54%"}
+::: {style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-left:5px solid #0F2044; border-radius:10px; padding:0.8em 1.1em; margin-bottom:0.7em;"}
+**🔧 Qué hace**
+
+Sube tus commits a GitLab para que el equipo los tenga.
+:::
+
+::: {style="background:linear-gradient(160deg,#FFF4E5,#FFFBF5); border-left:5px solid #FC6D26; border-radius:10px; padding:0.8em 1.1em;"}
+**⏰ Cuándo se usa**
+
+Cuando terminaste algo y quieres compartirlo.
+:::
+:::
+
+::: {.column width="46%"}
+``` bash
+git push          # rama ya existente
+
+# primera vez que subes la rama:
+git push -u origin nombre-rama
+```
+:::
+:::
+
+. . .
+
+::: {style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;"}
+❌ **Error común:** `! [rejected] ... fetch first`. Significa que hay cambios en GitLab que tú no tienes.\
+✅ La solución es siempre la misma: **`git pull` y después `git push`**.
+:::
+
+------------------------------------------------------------------------
+
+## 7️⃣ `git switch -c`
+
+<br>
+
+::: columns
+::: {.column width="54%"}
+::: {style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-left:5px solid #0F2044; border-radius:10px; padding:0.8em 1.1em; margin-bottom:0.7em;"}
+**🔧 Qué hace**
+
+Crea una rama nueva y te cambia a ella. Una rama es una línea de trabajo paralela.
+:::
+
+::: {style="background:linear-gradient(160deg,#FFF4E5,#FFFBF5); border-left:5px solid #FC6D26; border-radius:10px; padding:0.8em 1.1em;"}
+**⏰ Cuándo se usa**
+
+Al empezar cualquier tarea nueva. **Nunca trabajes directo en `main`.**
+:::
+:::
+
+::: {.column width="46%"}
+``` bash
+git switch -c pantalla-login
+git switch main
+git branch
+```
+:::
+:::
+
+. . .
+
+::: {style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;"}
+❌ **Error común:** hacer commits en `main` sin darse cuenta, o crear la rama **después** de trabajar.\
+✅ Antes de escribir código: `git status` para confirmar en qué rama estás.
+:::
+
+------------------------------------------------------------------------
+
+## ¿Para qué sirven las ramas?
+
+<br>
+
+`main` es la versión **que siempre funciona**. Cada persona trabaja en **su propia rama** y, cuando algo está listo, se integra a `main`. Así nadie pisa el trabajo de nadie.
+
+```{mermaid}
+%%| fig-width: 12
+%%{init: {'theme':'base','themeVariables':{
+  'git0':'#0F2044','git1':'#FC6D26',
+  'gitBranchLabel0':'#ffffff','gitBranchLabel1':'#ffffff',
+  'commitLabelColor':'#2C3E50','commitLabelBackground':'#F5F7FA','commitLabelFontSize':'13px'
+}}}%%
+gitGraph
+    commit id: "proyecto base"
+    commit id: "modelo de datos"
+    branch mi-rama
+    checkout mi-rama
+    commit id: "pantalla login"
+    commit id: "validación"
+    checkout main
+    merge mi-rama
+    commit id: "seguimos"
+```
+
+. . .
+
+> 🌿 Nombres claros: `pantalla-login`, `arregla-promedio`, `documentacion`.
+
+------------------------------------------------------------------------
+
+## {background-image="images/background_slides3.png" background-opacity="0.3"}
+
+::: {style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;"}
+[Bloque 3]{style="font-size: 2em"}
+
+[Flujo básico individual]{style="font-size: 2.5em"}
+:::
+
+------------------------------------------------------------------------
+
+## El flujo completo, de principio a fin
+
+<br>
+
+```{mermaid}
+%%| fig-width: 13
+%%{init: {'flowchart': {'padding': 26, 'nodeSpacing': 45, 'rankSpacing': 55}}}%%
+flowchart LR
+    A["✏️ Modificar<br/>archivos"] --> B["git status"]
+    B --> C["git add"]
+    C --> D["git commit"]
+    D --> E["git push"]
+    E --> F["☁️ GitLab"]
+    F --> G["git pull"]
+    G --> A
+
+    style A fill:#fff,stroke:#6B7A8D,stroke-dasharray: 4 3
+    style F fill:#FEE9D9,stroke:#FC6D26,stroke-width:2px
+    style E fill:#e8f0fe,stroke:#0F2044,stroke-width:2px
+    style G fill:#e8f0fe,stroke:#0F2044,stroke-width:2px
+```
+
+. . .
+
+<br>
+
+> 🔁 Este ciclo lo vas a repetir cientos de veces. Que se te haga automático.
+
+------------------------------------------------------------------------
+
+## Los pasos, con los comandos exactos
+
+<br>
+
+::: {style="font-size:0.86em;"}
+``` bash
+# 0. Una sola vez: traer el repositorio
+git clone https://gitlab.usm.cl/grupo-07/proyecto-ads.git
+cd proyecto-ads
+
+# 1. Antes de empezar: traer lo que hicieron los demás
+git pull
+
+# 2. Crear tu rama para la tarea
+git switch -c pantalla-login
+
+# 3. ... programar ...
+
+# 4. Revisar qué cambiaste
+git status
+
+# 5. Preparar y guardar
+git add .
+git commit -m "Agrega pantalla de login"
+
+# 6. Subir tu trabajo
+git push -u origin pantalla-login
+```
+:::
+
+------------------------------------------------------------------------
+
+## Dos costumbres que evitan el 90 % de los problemas
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+::: {style="background:linear-gradient(160deg,#e8f0fe,#f8f9ff); border-radius:12px; padding:1.2em; height:270px; border-left:5px solid #0F2044;"}
+### 1️⃣ `git pull` antes de empezar
+
+Siempre. Antes de escribir la primera línea.
+
+Así trabajas sobre la versión más nueva y evitas choques con tus compañeros.
+:::
+:::
+
+::: {.column width="50%"}
+::: {style="background:linear-gradient(160deg,#FFF4E5,#FFFBF5); border-radius:12px; padding:1.2em; height:270px; border-left:5px solid #FC6D26;"}
+### 2️⃣ Commits pequeños y seguidos
+
+No esperes a "terminar todo" para guardar.
+
+Un commit por cada cosa que funciona. Es más fácil volver atrás.
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Si aparece un conflicto, no es un error
+
+<br>
+
+::: columns
+::: {.column width="52%"}
+``` python
+def promedio(notas):
+<<<<<<< HEAD
+    return sum(notas) / len(notas)
+=======
+    if not notas:
+        return 0
+    return sum(notas) / len(notas)
+>>>>>>> mi-rama
+```
+:::
+
+::: {.column .incremental width="48%"}
+<br>
+
+Pasa cuando **dos personas editaron la misma línea**.
+
+Git no puede adivinar cuál está bien, así que **te pregunta a ti**.
+
+<br>
+
+**Qué haces:** eliges qué código queda, borras las tres marcas, y haces `git add` + `git commit`.
+:::
+:::
+
+. . .
+
+<br>
+
+> 💬 Si tienes dudas, habla con quien escribió la otra versión. Es una conversación, no una pelea.
+
+------------------------------------------------------------------------
+
+## {background-image="images/background_slides3.png" background-opacity="0.3"}
+
+::: {style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;"}
+[Bloque 4]{style="font-size: 2em"}
+
+[GitLab básico]{style="font-size: 2.5em"}
+:::
+
+------------------------------------------------------------------------
+
+## Git no es GitLab
+
+<br>
+
+| | 🌿 **Git** | 🦊 **GitLab** |
+|:---|:---|:---|
+| **Qué es** | Un programa | Un sitio web |
+| **Dónde está** | En tu computador | En el servidor del Departamento |
+| **Para qué sirve** | Guardar la historia del proyecto | Compartir y coordinarse con el equipo |
+| **Se usa desde** | La terminal | El navegador |
+| **Sin internet** | ✅ Funciona | ❌ No funciona |
+
+. . .
+
+<br>
+
+> 🚗 Git es el **motor**. GitLab es el **auto completo**: motor, tablero y copiloto.
+
+------------------------------------------------------------------------
+
+## ¿Qué nos da GitLab?
+
+<br>
+
+::: {style="font-size:0.88em;"}
+| Herramienta | Para qué sirve en tu equipo |
+|:---|:---|
+| **Repositorio remoto** | La versión oficial del proyecto. Todos clonan y suben ahí. |
+| **Issues** | La lista de tareas: qué hay que hacer y quién lo hace. |
+| **Ramas** | Se ven todas las ramas del equipo y en qué van. |
+| **Merge Requests** | Proponer que tu trabajo entre a `main`. |
+| **Revisión de código** | Comentar el código de un compañero, línea por línea. |
+| **Tablero (Board)** | Ver de un vistazo qué está *por hacer*, *en curso* y *listo*. |
+:::
+
+. . .
+
+<br>
+
+> 🏛️ En este curso usamos el **GitLab del Departamento**, con tu cuenta institucional.
+
+------------------------------------------------------------------------
+
+## El repositorio en GitLab
+
+<br>
+
+::: {style="text-align:center; border:2px dashed #6B7A8D; border-radius:12px; padding:2.2em; background:#f8f9ff; width:78%; margin:0 auto;"}
+[**\[Imagen sugerida: vista de repositorio en GitLab\]**]{style="font-size:1.05em; color:#0F2044;"}
+
+<br>
+
+[Pantalla principal del proyecto: archivos, botón **Code** con la URL para clonar,\
+y el menú lateral con Issues y Merge requests.]{style="font-size:0.8em; color:#6B7A8D;"}
+:::
+
+. . .
+
+<br>
+
+::: {style="font-size:0.85em;"}
+**Para clonarlo:** botón azul **Code** → copia la URL **HTTPS** → en tu terminal `git clone <url>`.
+:::
+
+> 💡 Empieza con **HTTPS**: te pide usuario y contraseña institucional y listo. SSH lo configuras después.
+
+------------------------------------------------------------------------
+
+## Issues: la lista de tareas del equipo
+
+<br>
+
+::: columns
+::: {.column .incremental width="48%"}
+Un **Issue** es una tarea, un error o una idea.
+
+<br>
+
+**Responde tres preguntas:**
+
+-   ¿Qué hay que hacer?
+-   ¿Quién lo está haciendo?
+-   ¿Ya está listo?
+
+<br>
+
+**Se crea en:** *Issues → New issue*
+:::
+
+::: {.column width="52%"}
+``` text
+Título:
+  Agregar validación al formulario
+
+Descripción:
+  El formulario acepta campos vacíos.
+  Hay que mostrar un mensaje de error.
+
+  - [ ] Validar campos obligatorios
+  - [ ] Mostrar mensaje al usuario
+
+Assignee:  @ana
+```
+:::
+:::
+
+. . .
+
+> 🎯 Un buen Issue se entiende **sin tener que preguntarte nada**.
+
+------------------------------------------------------------------------
+
+## Los Issues en GitLab
+
+<br>
+
+::: {style="text-align:center; border:2px dashed #6B7A8D; border-radius:12px; padding:2.2em; background:#f8f9ff; width:78%; margin:0 auto;"}
+[**\[Imagen sugerida: vista de Issues en GitLab\]**]{style="font-size:1.05em; color:#0F2044;"}
+
+<br>
+
+[Listado de Issues del proyecto con títulos, responsables asignados\
+y etiquetas; y el botón **New issue**.]{style="font-size:0.8em; color:#6B7A8D;"}
+:::
+
+. . .
+
+<br>
+
+> 🗂️ Con los Issues bien puestos, el tablero del equipo se arma solo.
+
+------------------------------------------------------------------------
+
+## Merge Request: "revisen esto antes de integrarlo"
+
+<br>
+
+::: columns
+::: {.column .incremental width="52%"}
+Un **Merge Request** dice:
+
+> *"Trabajé en mi rama. Quiero que esto entre a `main`. ¿Lo revisan?"*
+
+<br>
+
+**Sirve para:**
+
+-   Ver exactamente qué cambió.
+-   Comentar y sugerir mejoras.
+-   Dejar registro de por qué se integró.
+-   Que `main` no se rompa.
+:::
+
+::: {.column width="48%"}
+``` text
+!7  Agrega validación del formulario
+──────────────────────────────────────
+De:    pantalla-login
+Hacia: main
+
+Autor:    @ana
+Revisor:  @juan
+
+💬 2 comentarios
+✅ Aprobado
+
+      [ Merge ]
+```
+:::
+:::
+
+. . .
+
+> 📌 En GitLab **no se dice "Pull Request"** (eso es GitHub). Aquí es **Merge Request**.
+
+------------------------------------------------------------------------
+
+## Los Merge Requests en GitLab
+
+<br>
+
+::: {style="text-align:center; border:2px dashed #6B7A8D; border-radius:12px; padding:2.2em; background:#f8f9ff; width:78%; margin:0 auto;"}
+[**\[Imagen sugerida: vista de Merge Request en GitLab\]**]{style="font-size:1.05em; color:#0F2044;"}
+
+<br>
+
+[Un MR abierto mostrando la pestaña **Changes** con el diff línea a línea,\
+un comentario de revisión y el botón **Merge**.]{style="font-size:0.8em; color:#6B7A8D;"}
+:::
+
+------------------------------------------------------------------------
+
+## Revisar el código de un compañero
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+### 🔍 Qué mirar
+
+-   ¿Entiendo qué hace?
+-   ¿Hace lo que dice el Issue?
+-   ¿Se le quedó algo a medias?
+-   ¿Los nombres se entienden?
+:::
+
+::: {.column width="50%"}
+### 💬 Cómo comentar
+
+Haz clic en el número de línea y escribe.
+
+❌ *"esto está malo"*
+
+✅ *"¿qué pasa si la lista viene vacía? creo que falla acá"*
+:::
+:::
+
+. . .
+
+<br>
+
+::: {style="background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #0F2044; border-radius: 8px; padding: 0.8em 1.2em;"}
+🤝 Se revisa **el código**, no a la persona. Y revisar es la forma más rápida de aprender de tus compañeros.
+:::
+
+------------------------------------------------------------------------
+
+## Un tablero simple para el equipo
+
+<br>
+
+::: {style="font-size:0.9em;"}
+| Columna | Qué hay ahí |
+|:---|:---|
+| 📋 **Por hacer** | Issues creados que nadie tomó todavía |
+| 🔨 **En curso** | Alguien lo está trabajando en su rama |
+| 👀 **En revisión** | Ya hay un Merge Request esperando revisión |
+| ✅ **Listo** | Mergeado a `main`, Issue cerrado |
+:::
+
+. . .
+
+<br>
+
+::: {style="background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #0F2044; border-radius: 8px; padding: 0.8em 1.2em;"}
+🗂️ En GitLab está en **Issues → Boards**. Arrastras la tarjeta de una columna a otra y el Issue se actualiza solo.
+:::
+
+------------------------------------------------------------------------
+
+## El flujo recomendado para tu equipo
+
+<br>
+
+```{mermaid}
+%%| fig-width: 14
+%%{init: {'flowchart': {'padding': 26, 'nodeSpacing': 40, 'rankSpacing': 50}}}%%
+flowchart LR
+    A["📋 Issue"] --> B["🌿 Crear rama"]
+    B --> C["💻 Trabajar<br/>localmente"]
+    C --> D["📌 Commit"]
+    D --> E["⬆️ Push"]
+    E --> F["🔀 Merge<br/>Request"]
+    F --> G["👀 Revisión"]
+    G --> H{"¿Aprobado?"}
+    H -->|No| C
+    H -->|Sí| I["✅ Merge<br/>a main"]
+
+    style A fill:#f5f7fa,stroke:#6B7A8D,stroke-width:2px
+    style F fill:#FEE9D9,stroke:#FC6D26,stroke-width:2px
+    style H fill:#FFF4E5,stroke:#FC6D26,stroke-width:2px
+    style I fill:#E8F6EF,stroke:#27AE60,stroke-width:2px
+```
+
+. . .
+
+<br>
+
+> 🔁 Una vuelta por cada tarea. Así se trabaja en la industria y así trabajaremos este semestre.
+
+------------------------------------------------------------------------
+
+## {background-image="images/background_slides3.png" background-opacity="0.3"}
+
+::: {style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;"}
+[Bloque 5]{style="font-size: 2em"}
+
+[Mini actividad práctica]{style="font-size: 2.5em"}
+:::
+
+------------------------------------------------------------------------
+
+## Actividad — Tu archivo en el repositorio del curso
+
+<br>
+
+::: columns
+::: {.column width="32%"}
+::: {style="text-align: center;"}
+<img src="images/ejercicio.png" alt="Actividad" style="width: 88%; border-radius: 10px;"/>
+:::
+:::
+
+::: {.column .incremental width="68%"}
+**Meta:** crear `integrantes/nombre-apellido.md` y hacer la vuelta completa.
+
+``` bash
+git clone URL_DEL_REPOSITORIO
+cd proyecto-ads
+git switch -c ana-perez
+```
+
+Crea el archivo `integrantes/ana-perez.md` con tu nombre, tu carrera y una línea sobre ti.
+
+``` bash
+git status
+git add .
+git commit -m "Agrega ficha de Ana Pérez"
+git push -u origin ana-perez
+```
+
+Luego, en GitLab: **abre un Merge Request** y pídele a un compañero que lo revise.
+:::
+:::
+
+. . .
+
+> ⏱️ **10 minutos.** Levanta la mano apenas algo no funcione — para eso estamos.
+
+------------------------------------------------------------------------
+
+## ¿No tienes Git instalado? Hazlo desde la web
+
+<br>
+
+::: {.incremental style="font-size:0.92em;"}
+Todo lo anterior se puede hacer **sin instalar nada**, desde el navegador:
+
+1.  Entra al proyecto en GitLab y abre la carpeta `integrantes/`.
+2.  Botón **+** → **New file**. Nómbralo `nombre-apellido.md`.
+3.  Escribe tu contenido en el editor web.
+4.  Abajo, en **Commit message**, escribe un mensaje claro.
+5.  Elige **"Create a new branch"** y ponle tu nombre.
+6.  Marca ✅ **"Start a new merge request with these changes"**.
+7.  Botón **Commit changes** → se abre el Merge Request solo.
+:::
+
+. . .
+
+<br>
+
+::: {style="background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #0F2044; border-radius: 8px; padding: 0.8em 1.2em;"}
+💡 Es exactamente el mismo flujo: rama → commit → Merge Request. Solo cambia dónde lo escribes.
+:::
+
+------------------------------------------------------------------------
+
+## {background-image="images/background_slides3.png" background-opacity="0.3"}
+
+::: {style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;"}
+[Bloque 6]{style="font-size: 2em"}
+
+[Uso responsable de IA]{style="font-size: 2.5em"}
+:::
+
+------------------------------------------------------------------------
+
+## La IA te puede ayudar mucho con Git
+
+<br>
+
+::: {style="font-size:0.9em;"}
+| Para qué | Ejemplo de lo que le puedes pedir |
+|:---|:---|
+| **Entender un error** | *"¿Qué significa este error de Git? ¿Cómo lo soluciono?"* |
+| **Redactar un commit** | *"Escribe un mensaje de commit corto y claro para estos cambios"* |
+| **Mejorar un Issue** | *"Reescribe este Issue para que quede claro qué hay que hacer"* |
+| **Resumir un MR** | *"Resume qué cambia este Merge Request y qué debería revisar"* |
+| **Entender un conflicto** | *"Explícame qué hacía cada versión de este conflicto"* |
+| **Entender un comando** | *"¿Qué hace exactamente este comando? ¿Qué riesgo tiene?"* |
+:::
+
+. . .
+
+<br>
+
+> 💡 Especialmente útil al principio: **pídele que te explique el error antes de ejecutar nada.**
+
+------------------------------------------------------------------------
+
+## Cuatro advertencias
+
+<br>
+
+::: {style="display: flex; flex-direction: column; gap: 0.7em; font-size: 0.95em;"}
+::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1em;"}
+🔓   **Nunca** pegues contraseñas, tokens ni credenciales en una herramienta de IA.
+:::
+
+::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #0F2044; border-radius: 8px; padding: 0.7em 1em;"}
+🧠   **No entregues código que no entiendes.** Si no lo puedes explicar, no lo subas.
+:::
+
+::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #2a5298; border-radius: 8px; padding: 0.7em 1em;"}
+🔍   **Verifica siempre.** La IA inventa comandos que no existen, con total seguridad.
+:::
+
+::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#FFF4E5,#FFFBF5); border-left: 4px solid #FC6D26; border-radius: 8px; padding: 0.7em 1em;"}
+⚖️   **La responsabilidad final es tuya**, no de la herramienta.
+:::
+:::
+
+. . .
+
+<br>
+
+> ✅ Usar IA no está penalizado. Entregar algo que no entiendes, sí.
+
+------------------------------------------------------------------------
+
+## {background-image="images/background_slides3.png" background-opacity="0.3"}
+
+::: {style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;"}
+[Cierre]{style="font-size: 2em"}
+
+[Para llevarte]{style="font-size: 2.5em"}
+:::
+
+------------------------------------------------------------------------
+
+## Lo más importante de todo
+
+<br>
+
+::: {style="text-align:center; background:linear-gradient(160deg,#0F2044,#2a5298); color:white; border-radius:14px; padding:1.6em; width:85%; margin:0 auto;"}
+[**En Git casi nada se pierde.**]{style="font-size:1.5em"}
+
+<br>
+
+[Si hiciste un commit, tu trabajo está a salvo.\
+Siempre hay forma de volver.]{style="font-size:1em"}
+:::
+
+. . .
+
+<br>
+
+::: {.incremental style="font-size:0.9em;"}
+-   El miedo típico es *"voy a romper el repositorio"*. Es muy difícil romperlo de verdad.
+-   Lo peor que suele pasar es que quede desordenado — y eso se arregla.
+-   **Ante la duda: pregunta antes de ejecutar.** No hay preguntas tontas con Git.
+:::
+
+------------------------------------------------------------------------
+
+## Errores típicos y qué hacer
+
+<br>
+
+::: {style="font-size:0.87em;"}
+| 😬 Te pasó esto | 🛠️ Haz esto |
+|:---|:---|
+| Cambiaste un archivo y quieres dejarlo como estaba | `git restore archivo.py` |
+| Hiciste `git add` de algo que no querías | `git restore --staged archivo.py` |
+| El mensaje del commit quedó malo *(y aún no hiciste push)* | `git commit --amend -m "mensaje nuevo"` |
+| `git push` rechazado: *"updates were rejected"* | Primero `git pull`, después `git push` |
+| Apareció un **conflicto** | Elige qué versión queda, borra las marcas, y haz commit |
+| Crees que perdiste commits | `git reflog` — casi siempre están ahí |
+:::
+
+. . .
+
+<br>
+
+::: {style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em;"}
+🚨 Los únicos dos comandos que sí pueden borrar trabajo: `git reset --hard` y `git push --force`. **No los uses sin preguntar.**
+:::
+
+------------------------------------------------------------------------
+
+## Checklist: ¿estoy listo para el proyecto?
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+### 💻 En mi computador
+
+-   [ ] Git instalado (`git --version`)
+-   [ ] Mi nombre y correo configurados
+-   [ ] Repositorio del equipo clonado
+-   [ ] Sé en qué rama estoy (`git status`)
+-   [ ] Hice al menos **un commit propio**
+-   [ ] Hice al menos **un push**
+:::
+
+::: {.column width="50%"}
+### 🦊 En GitLab
+
+-   [ ] Entro con mi cuenta institucional
+-   [ ] Veo el proyecto de mi equipo
+-   [ ] Creé o me asignaron **un Issue**
+-   [ ] Abrí **un Merge Request**
+-   [ ] Revisé el MR de un compañero
+-   [ ] Mi Merge Request quedó mergeado
+:::
+:::
+
+. . .
+
+<br>
+
+> ✅ Si marcas todo, ya sabes lo suficiente para trabajar todo el semestre.
+
+------------------------------------------------------------------------
+
+## Mini glosario
+
+<br>
+
+::: {style="font-size:0.82em;"}
+| Término | Significado |
+|:---|:---|
+| **Repositorio (repo)** | El proyecto más toda su historia de cambios. |
+| **Clonar** | Copiar un repositorio de GitLab a tu computador. |
+| **Working directory** | Los archivos tal como están ahora en tu carpeta. |
+| **Staging area** | La bandeja con los cambios que entrarán al próximo commit. |
+| **Commit** | Un punto guardado en la historia, con mensaje y autor. |
+| **Branch (rama)** | Una línea de trabajo paralela a `main`. |
+| **`main`** | La rama principal: la versión que siempre debe funcionar. |
+| **Remote** | El repositorio en GitLab, compartido con el equipo. |
+| **Push / Pull** | Subir tus commits / bajar los de los demás. |
+| **Issue** | Una tarea, error o idea registrada en GitLab. |
+| **Merge Request (MR)** | Propuesta de integrar los cambios de tu rama a `main`. |
+| **Merge** | Integrar efectivamente una rama en otra. |
+| **Conflicto** | Dos versiones distintas de la misma línea; tú decides cuál queda. |
+:::
+
+------------------------------------------------------------------------
+
+## Chuleta: todo en una diapositiva
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+::: {style="font-size:0.8em;"}
+**Empezar**
+
+``` bash
+git clone URL          # traer el repo
+git config --global user.name "..."
+git config --global user.email "..."
+```
+
+**Todos los días**
+
+``` bash
+git pull               # antes de empezar
+git status             # ¿qué cambié?
+git add .              # preparar
+git commit -m "..."    # guardar
+git push               # compartir
+```
+:::
+:::
+
+::: {.column width="50%"}
+::: {style="font-size:0.8em;"}
+**Ramas**
+
+``` bash
+git switch -c mi-rama          # crear
+git switch main                # cambiar
+git branch                     # listar
+git push -u origin mi-rama     # subir
+```
+
+**Si algo sale mal**
+
+``` bash
+git restore archivo            # descartar cambios
+git restore --staged archivo   # sacar del staging
+git log --oneline              # ver la historia
+git reflog                     # recuperar
+```
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Para practicar por tu cuenta
+
+<br>
+
+::: columns
+::: {.column width="50%"}
+### 🎮 Lo más útil
+
+-   [**Learn Git Branching**](https://learngitbranching.js.org/?locale=es_ES)\
+    Ramas de forma visual, en español. 30 minutos aquí valen más que un manual completo.
+
+-   [**Oh Shit, Git!?!**](https://ohshitgit.com/es/)\
+    Cómo salir de los errores más comunes.
+:::
+
+::: {.column width="50%"}
+### 📚 Para consultar
+
+-   [**Pro Git**](https://git-scm.com/book/es/v2) — el libro oficial, gratis y en español.
+
+-   [**GitLab Docs**](https://docs.gitlab.com/) — documentación de la plataforma.
+
+-   [**Git Explorer**](https://gitexplorer.com/) — "quiero hacer X, ¿qué comando uso?"
+:::
+:::
+
+------------------------------------------------------------------------
+
+## Lo que hay que recordar
+
+<br>
+
+::: fragment
+::: {style="display: flex; flex-direction: column; gap: 0.7em; font-size: 0.93em;"}
+::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #0F2044; border-radius: 8px; padding: 0.6em 1em;"}
+✅   **Git** guarda la historia de tu proyecto. **GitLab** es donde la comparten.
+:::
+
+::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #2a5298; border-radius: 8px; padding: 0.6em 1em;"}
+✅   El ciclo diario: **`pull` → programar → `status` → `add` → `commit` → `push`**.
+:::
+
+::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #3a6bc4; border-radius: 8px; padding: 0.6em 1em;"}
+✅   Trabaja en **tu rama**; integra a `main` con un **Merge Request** revisado.
+:::
+
+::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#FFF4E5,#FFFBF5); border-left: 4px solid #FC6D26; border-radius: 8px; padding: 0.6em 1em;"}
+✅   Commits **pequeños y seguidos**, con mensajes que se entiendan.
+:::
+
+::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg,#E8F6EF,#F5FBF8); border-left: 4px solid #27AE60; border-radius: 8px; padding: 0.6em 1em;"}
+✅   **No tengas miedo**: si hiciste commit, tu trabajo está a salvo.
+:::
+:::
+:::
+
+------------------------------------------------------------------------
+
+## 🎉 ¡Gracias!
+
+<br>
+
+::: columns
+::: {.column width="55%"}
+<br>
+
+❓ **¿Preguntas?**
+
+<br>
+
+🔨 **Para esta semana:** que todo el equipo tenga el repositorio clonado, su archivo en `integrantes/` y al menos un Merge Request mergeado.
+
+<br>
+
+🌿 Nos vemos en el proyecto.
+:::
+
+::: {.column width="45%"}
+<br>
+
+::: {style="background: linear-gradient(160deg,#0F2044,#2a5298); color:white; border-radius:12px; padding:1.5em; text-align:center;"}
+[**Git y GitLab sin miedo**]{style="font-size:1.15em"}
+
+<br>
+
+[Análisis y Diseño de Software\
+Departamento de Informática\
+UTFSM]{style="font-size:0.75em"}
+
+<br>
+
+[Francisco Alfaro Medina]{style="font-size:0.8em"}
+:::
+:::
+:::
+
+```{=html}
+<style>
+.reveal .slides h1 {
+  font-size: 2em;
+}
+.reveal .slides h2 {
+  font-size: 1.5em;
+}
+.reveal .slides p {
+  font-size: 0.8em;
+}
+.reveal .slides table {
+  font-size: 0.75em;
+  width: 95%;
+  margin: 0 auto;
+}
+.reveal .slides ul {
+  font-size: 0.8em;
+}
+.reveal .slides ol {
+  font-size: 0.8em;
+}
+.reveal .slides pre code {
+  font-size: 0.95em;
+  line-height: 1.3;
+}
+.reveal .slide-logo {
+   max-height: 2.5em !important;
+}
+.reveal blockquote {
+  font-size: 0.82em;
+  width: 92%;
+}
+/* Los diagramas Mermaid nunca deben desbordar la diapositiva */
+.reveal .slides pre.mermaid-js,
+.reveal .slides .cell-output-display {
+  text-align: center;
+}
+.reveal .slides pre.mermaid-js svg {
+  max-width: 100% !important;
+  max-height: 62vh !important;
+  height: auto !important;
+  margin: 0 auto;
+}
+/* Mermaid calcula las cajas midiendo el texto con su fuente sans-serif.
+   Quarto pinta las etiquetas con var(--mermaid-font-family); si esa
+   variable no está definida, heredan la Georgia del tema y el texto se
+   desborda de las cajas. La definimos aquí. */
+:root,
+.reveal {
+  --mermaid-font-family: "trebuchet ms", verdana, arial, sans-serif;
+}
+.reveal .slides pre.mermaid-js svg text,
+.reveal .slides pre.mermaid-js svg .nodeLabel,
+.reveal .slides pre.mermaid-js svg .edgeLabel,
+.reveal .slides pre.mermaid-js svg foreignObject * {
+  font-family: "trebuchet ms", verdana, arial, sans-serif !important;
+}
+</style>
+```
