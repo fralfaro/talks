@@ -8,4 +8,3 @@ Este repositorio contiene materiales y recursos relacionados con mis charlas per
 - Recursos multimedia usados en charlas
 - Materiales de apoyo para exposiciones y sesiones
 - Ejemplos o demos asociadas a cada presentación
-
