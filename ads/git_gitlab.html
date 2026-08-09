@@ -7,8 +7,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-38902dcd73e7f8352ecceb5e549548c1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.18">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-aa0bfeffdde32bb1c7607de7a91446fc.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Francisco Alfaro Medina">
   <title>Talks – Git y GitLab</title>
@@ -18,16 +18,10 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
+    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: 1.5em;}
-    div.column{flex: auto;}
-    @media screen {
-    div.columns{gap: min(4vw, 1.5em);}
-    div.column{overflow-x: auto;}
-    }
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -102,7 +96,7 @@
     code span.vs { color: #a3be8c; } /* VerbatimString */
     code span.wa { color: #bf616a; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-5e2eac6f862afff12d8aa0b55071a979.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1c6ab66440c2db00d7b6104b001ca248.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -209,7 +203,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Francisco Alfaro Medina
+Francisco Alfaro Medina 
 </div>
         <p class="quarto-title-affiliation">
             Análisis y Diseño de Software · UTFSM
@@ -240,15 +234,15 @@ Agosto 2026</p>
 <p><br></p>
 <div class="columns">
 <div class="column" style="width:55%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a aria-label="1"></a>📁 proyecto_ads/</span>
-<span id="cb1-2"><a aria-label="2"></a>├── main.py</span>
-<span id="cb1-3"><a aria-label="3"></a>├── main_v2.py</span>
-<span id="cb1-4"><a aria-label="4"></a>├── main_final.py</span>
-<span id="cb1-5"><a aria-label="5"></a>├── main_final_BUENO.py</span>
-<span id="cb1-6"><a aria-label="6"></a>├── main_final_v2_ahora_si.py</span>
-<span id="cb1-7"><a aria-label="7"></a>├── main_final_v2_ahora_si_JUAN.py</span>
-<span id="cb1-8"><a aria-label="8"></a>├── main_ESTE_NO_BORRAR.py</span>
-<span id="cb1-9"><a aria-label="9"></a>└── main_final_final (copia).py</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>📁 proyecto_ads/</span>
+<span id="cb1-2"><a></a>├── main.py</span>
+<span id="cb1-3"><a></a>├── main_v2.py</span>
+<span id="cb1-4"><a></a>├── main_final.py</span>
+<span id="cb1-5"><a></a>├── main_final_BUENO.py</span>
+<span id="cb1-6"><a></a>├── main_final_v2_ahora_si.py</span>
+<span id="cb1-7"><a></a>├── main_final_v2_ahora_si_JUAN.py</span>
+<span id="cb1-8"><a></a>├── main_ESTE_NO_BORRAR.py</span>
+<span id="cb1-9"><a></a>└── main_final_final (copia).py</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:45%;">
 <p><br></p>
 <ul>
@@ -566,18 +560,18 @@ flowchart LR
 <section id="configuración-inicial-una-sola-vez" class="slide level2">
 <h2>Configuración inicial (una sola vez)</h2>
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a aria-label="1"></a><span class="co"># Quién eres — aparecerá en cada commit que hagas</span></span>
-<span id="cb2-2"><a aria-label="2"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Ana Pérez"</span></span>
-<span id="cb2-3"><a aria-label="3"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"ana.perez@usm.cl"</span></span>
-<span id="cb2-4"><a aria-label="4"></a></span>
-<span id="cb2-5"><a aria-label="5"></a><span class="co"># Rama principal por defecto</span></span>
-<span id="cb2-6"><a aria-label="6"></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultBranch main</span>
-<span id="cb2-7"><a aria-label="7"></a></span>
-<span id="cb2-8"><a aria-label="8"></a><span class="co"># Editor para mensajes de commit</span></span>
-<span id="cb2-9"><a aria-label="9"></a><span class="fu">git</span> config <span class="at">--global</span> core.editor <span class="st">"code --wait"</span></span>
-<span id="cb2-10"><a aria-label="10"></a></span>
-<span id="cb2-11"><a aria-label="11"></a><span class="co"># Verificar la configuración</span></span>
-<span id="cb2-12"><a aria-label="12"></a><span class="fu">git</span> config <span class="at">--list</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="co"># Quién eres — aparecerá en cada commit que hagas</span></span>
+<span id="cb2-2"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"Ana Pérez"</span></span>
+<span id="cb2-3"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"ana.perez@usm.cl"</span></span>
+<span id="cb2-4"><a></a></span>
+<span id="cb2-5"><a></a><span class="co"># Rama principal por defecto</span></span>
+<span id="cb2-6"><a></a><span class="fu">git</span> config <span class="at">--global</span> init.defaultBranch main</span>
+<span id="cb2-7"><a></a></span>
+<span id="cb2-8"><a></a><span class="co"># Editor para mensajes de commit</span></span>
+<span id="cb2-9"><a></a><span class="fu">git</span> config <span class="at">--global</span> core.editor <span class="st">"code --wait"</span></span>
+<span id="cb2-10"><a></a></span>
+<span id="cb2-11"><a></a><span class="co"># Verificar la configuración</span></span>
+<span id="cb2-12"><a></a><span class="fu">git</span> config <span class="at">--list</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="fragment">
 <p><br></p>
 <div style="background: linear-gradient(90deg,#FFF4E5,#FFFBF5); border-left: 4px solid #FC6D26; border-radius: 8px; padding: 0.8em 1.2em;">
@@ -623,26 +617,26 @@ flowchart LR
 <h2>Los seis comandos que necesitas hoy</h2>
 <p><br></p>
 <div style="font-size: 0.85em;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a aria-label="1"></a><span class="co"># 1. Traer el repositorio del equipo a tu máquina (una sola vez)</span></span>
-<span id="cb3-2"><a aria-label="2"></a><span class="fu">git</span> clone git@gitlab.usm.cl:grupo-07/proyecto-ads.git</span>
-<span id="cb3-3"><a aria-label="3"></a><span class="bu">cd</span> proyecto-ads</span>
-<span id="cb3-4"><a aria-label="4"></a></span>
-<span id="cb3-5"><a aria-label="5"></a><span class="co"># 2. Ver el estado: qué cambió, qué está en staging, en qué rama estás</span></span>
-<span id="cb3-6"><a aria-label="6"></a><span class="fu">git</span> status</span>
-<span id="cb3-7"><a aria-label="7"></a></span>
-<span id="cb3-8"><a aria-label="8"></a><span class="co"># 3. Seleccionar cambios para el próximo commit</span></span>
-<span id="cb3-9"><a aria-label="9"></a><span class="fu">git</span> add main.py            <span class="co"># un archivo</span></span>
-<span id="cb3-10"><a aria-label="10"></a><span class="fu">git</span> add src/               <span class="co"># una carpeta</span></span>
-<span id="cb3-11"><a aria-label="11"></a><span class="fu">git</span> add .                  <span class="co"># todo lo modificado (¡con cuidado!)</span></span>
-<span id="cb3-12"><a aria-label="12"></a></span>
-<span id="cb3-13"><a aria-label="13"></a><span class="co"># 4. Guardar el punto de control</span></span>
-<span id="cb3-14"><a aria-label="14"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Agrega validación de RUT en registro"</span></span>
-<span id="cb3-15"><a aria-label="15"></a></span>
-<span id="cb3-16"><a aria-label="16"></a><span class="co"># 5. Traer lo que hicieron los demás</span></span>
-<span id="cb3-17"><a aria-label="17"></a><span class="fu">git</span> pull</span>
-<span id="cb3-18"><a aria-label="18"></a></span>
-<span id="cb3-19"><a aria-label="19"></a><span class="co"># 6. Enviar tus commits al servidor</span></span>
-<span id="cb3-20"><a aria-label="20"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="co"># 1. Traer el repositorio del equipo a tu máquina (una sola vez)</span></span>
+<span id="cb3-2"><a></a><span class="fu">git</span> clone git@gitlab.usm.cl:grupo-07/proyecto-ads.git</span>
+<span id="cb3-3"><a></a><span class="bu">cd</span> proyecto-ads</span>
+<span id="cb3-4"><a></a></span>
+<span id="cb3-5"><a></a><span class="co"># 2. Ver el estado: qué cambió, qué está en staging, en qué rama estás</span></span>
+<span id="cb3-6"><a></a><span class="fu">git</span> status</span>
+<span id="cb3-7"><a></a></span>
+<span id="cb3-8"><a></a><span class="co"># 3. Seleccionar cambios para el próximo commit</span></span>
+<span id="cb3-9"><a></a><span class="fu">git</span> add main.py            <span class="co"># un archivo</span></span>
+<span id="cb3-10"><a></a><span class="fu">git</span> add src/               <span class="co"># una carpeta</span></span>
+<span id="cb3-11"><a></a><span class="fu">git</span> add .                  <span class="co"># todo lo modificado (¡con cuidado!)</span></span>
+<span id="cb3-12"><a></a></span>
+<span id="cb3-13"><a></a><span class="co"># 4. Guardar el punto de control</span></span>
+<span id="cb3-14"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Agrega validación de RUT en registro"</span></span>
+<span id="cb3-15"><a></a></span>
+<span id="cb3-16"><a></a><span class="co"># 5. Traer lo que hicieron los demás</span></span>
+<span id="cb3-17"><a></a><span class="fu">git</span> pull</span>
+<span id="cb3-18"><a></a></span>
+<span id="cb3-19"><a></a><span class="co"># 6. Enviar tus commits al servidor</span></span>
+<span id="cb3-20"><a></a><span class="fu">git</span> push</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <p><br></p>
@@ -656,27 +650,27 @@ flowchart LR
 <p><br></p>
 <div class="columns">
 <div class="column" style="width:52%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a aria-label="1"></a><span class="co"># Historial completo</span></span>
-<span id="cb4-2"><a aria-label="2"></a><span class="fu">git</span> log</span>
-<span id="cb4-3"><a aria-label="3"></a></span>
-<span id="cb4-4"><a aria-label="4"></a><span class="co"># Versión compacta y legible</span></span>
-<span id="cb4-5"><a aria-label="5"></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">--graph</span> <span class="at">--all</span></span>
-<span id="cb4-6"><a aria-label="6"></a></span>
-<span id="cb4-7"><a aria-label="7"></a><span class="co"># Últimos 5 commits</span></span>
-<span id="cb4-8"><a aria-label="8"></a><span class="fu">git</span> log <span class="at">-5</span></span>
-<span id="cb4-9"><a aria-label="9"></a></span>
-<span id="cb4-10"><a aria-label="10"></a><span class="co"># Quién escribió cada línea</span></span>
-<span id="cb4-11"><a aria-label="11"></a><span class="fu">git</span> blame main.py</span>
-<span id="cb4-12"><a aria-label="12"></a></span>
-<span id="cb4-13"><a aria-label="13"></a><span class="co"># Qué cambió respecto al último commit</span></span>
-<span id="cb4-14"><a aria-label="14"></a><span class="fu">git</span> diff</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a></a><span class="co"># Historial completo</span></span>
+<span id="cb4-2"><a></a><span class="fu">git</span> log</span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a><span class="co"># Versión compacta y legible</span></span>
+<span id="cb4-5"><a></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">--graph</span> <span class="at">--all</span></span>
+<span id="cb4-6"><a></a></span>
+<span id="cb4-7"><a></a><span class="co"># Últimos 5 commits</span></span>
+<span id="cb4-8"><a></a><span class="fu">git</span> log <span class="at">-5</span></span>
+<span id="cb4-9"><a></a></span>
+<span id="cb4-10"><a></a><span class="co"># Quién escribió cada línea</span></span>
+<span id="cb4-11"><a></a><span class="fu">git</span> blame main.py</span>
+<span id="cb4-12"><a></a></span>
+<span id="cb4-13"><a></a><span class="co"># Qué cambió respecto al último commit</span></span>
+<span id="cb4-14"><a></a><span class="fu">git</span> diff</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:48%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a aria-label="1"></a>$ git log --oneline --graph</span>
-<span id="cb5-2"><a aria-label="2"></a>* a3f9c21 (HEAD -&gt; main) Corrige cálculo</span>
-<span id="cb5-3"><a aria-label="3"></a>* 8b2e17d Agrega tests de validación</span>
-<span id="cb5-4"><a aria-label="4"></a>* 4d81ba0 Implementa login de usuario</span>
-<span id="cb5-5"><a aria-label="5"></a>* 1c93f5e Configura estructura inicial</span>
-<span id="cb5-6"><a aria-label="6"></a>* 0a72d34 Primer commit</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>$ git log --oneline --graph</span>
+<span id="cb5-2"><a></a>* a3f9c21 (HEAD -&gt; main) Corrige cálculo</span>
+<span id="cb5-3"><a></a>* 8b2e17d Agrega tests de validación</span>
+<span id="cb5-4"><a></a>* 4d81ba0 Implementa login de usuario</span>
+<span id="cb5-5"><a></a>* 1c93f5e Configura estructura inicial</span>
+<span id="cb5-6"><a></a>* 0a72d34 Primer commit</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <div class="fragment">
 <p><br></p>
@@ -691,20 +685,20 @@ flowchart LR
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3 id="commits-que-no-ayudan">❌ Commits que no ayudan</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a aria-label="1"></a>"cambios"</span>
-<span id="cb6-2"><a aria-label="2"></a>"asdasd"</span>
-<span id="cb6-3"><a aria-label="3"></a>"arreglo"</span>
-<span id="cb6-4"><a aria-label="4"></a>"ahora si funciona"</span>
-<span id="cb6-5"><a aria-label="5"></a>"commit final"</span>
-<span id="cb6-6"><a aria-label="6"></a>"cambios del viernes"</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a>"cambios"</span>
+<span id="cb6-2"><a></a>"asdasd"</span>
+<span id="cb6-3"><a></a>"arreglo"</span>
+<span id="cb6-4"><a></a>"ahora si funciona"</span>
+<span id="cb6-5"><a></a>"commit final"</span>
+<span id="cb6-6"><a></a>"cambios del viernes"</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Tocan 15 archivos, mezclan tres cosas distintas y nadie sabe qué pasó.</p>
 </div><div class="column fragment" style="width:50%;">
 <h3 id="commits-útiles">✅ Commits útiles</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a aria-label="1"></a>"Agrega validación de RUT en registro"</span>
-<span id="cb7-2"><a aria-label="2"></a>"Corrige división por cero en promedio()"</span>
-<span id="cb7-3"><a aria-label="3"></a>"Refactoriza capa de acceso a datos"</span>
-<span id="cb7-4"><a aria-label="4"></a>"Actualiza README con instrucciones"</span>
-<span id="cb7-5"><a aria-label="5"></a>"Agrega tests para el módulo de login"</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>"Agrega validación de RUT en registro"</span>
+<span id="cb7-2"><a></a>"Corrige división por cero en promedio()"</span>
+<span id="cb7-3"><a></a>"Refactoriza capa de acceso a datos"</span>
+<span id="cb7-4"><a></a>"Actualiza README con instrucciones"</span>
+<span id="cb7-5"><a></a>"Agrega tests para el módulo de login"</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Cada uno hace <strong>una cosa</strong> y se entiende sin abrir el código.</p>
 </div></div>
 <div class="fragment">
@@ -717,7 +711,7 @@ flowchart LR
 <section id="una-convención-útil-conventional-commits" class="slide level2">
 <h2>Una convención útil: Conventional Commits</h2>
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a aria-label="1"></a>&lt;tipo&gt;(&lt;alcance opcional&gt;): &lt;descripción en imperativo&gt;</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a>&lt;tipo&gt;(&lt;alcance opcional&gt;): &lt;descripción en imperativo&gt;</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><br></p>
 <div style="font-size: 0.9em;">
 <table class="caption-top">
@@ -779,25 +773,25 @@ flowchart LR
 <p><br></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a aria-label="1"></a><span class="co"># Entornos virtuales y dependencias</span></span>
-<span id="cb9-2"><a aria-label="2"></a><span class="ex">venv/</span></span>
-<span id="cb9-3"><a aria-label="3"></a><span class="ex">node_modules/</span></span>
-<span id="cb9-4"><a aria-label="4"></a><span class="ex">__pycache__/</span></span>
-<span id="cb9-5"><a aria-label="5"></a></span>
-<span id="cb9-6"><a aria-label="6"></a><span class="co"># Secretos — NUNCA al repositorio</span></span>
-<span id="cb9-7"><a aria-label="7"></a><span class="ex">.env</span></span>
-<span id="cb9-8"><a aria-label="8"></a><span class="ex">config/secrets.yml</span></span>
-<span id="cb9-9"><a aria-label="9"></a><span class="ex">*.key</span></span>
-<span id="cb9-10"><a aria-label="10"></a></span>
-<span id="cb9-11"><a aria-label="11"></a><span class="co"># Archivos del sistema y del editor</span></span>
-<span id="cb9-12"><a aria-label="12"></a><span class="ex">.DS_Store</span></span>
-<span id="cb9-13"><a aria-label="13"></a><span class="ex">.vscode/</span></span>
-<span id="cb9-14"><a aria-label="14"></a><span class="ex">.idea/</span></span>
-<span id="cb9-15"><a aria-label="15"></a></span>
-<span id="cb9-16"><a aria-label="16"></a><span class="co"># Compilados y datos pesados</span></span>
-<span id="cb9-17"><a aria-label="17"></a><span class="ex">*.pyc</span></span>
-<span id="cb9-18"><a aria-label="18"></a><span class="ex">dist/</span></span>
-<span id="cb9-19"><a aria-label="19"></a><span class="ex">data/*.csv</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a></a><span class="co"># Entornos virtuales y dependencias</span></span>
+<span id="cb9-2"><a></a><span class="ex">venv/</span></span>
+<span id="cb9-3"><a></a><span class="ex">node_modules/</span></span>
+<span id="cb9-4"><a></a><span class="ex">__pycache__/</span></span>
+<span id="cb9-5"><a></a></span>
+<span id="cb9-6"><a></a><span class="co"># Secretos — NUNCA al repositorio</span></span>
+<span id="cb9-7"><a></a><span class="ex">.env</span></span>
+<span id="cb9-8"><a></a><span class="ex">config/secrets.yml</span></span>
+<span id="cb9-9"><a></a><span class="ex">*.key</span></span>
+<span id="cb9-10"><a></a></span>
+<span id="cb9-11"><a></a><span class="co"># Archivos del sistema y del editor</span></span>
+<span id="cb9-12"><a></a><span class="ex">.DS_Store</span></span>
+<span id="cb9-13"><a></a><span class="ex">.vscode/</span></span>
+<span id="cb9-14"><a></a><span class="ex">.idea/</span></span>
+<span id="cb9-15"><a></a></span>
+<span id="cb9-16"><a></a><span class="co"># Compilados y datos pesados</span></span>
+<span id="cb9-17"><a></a><span class="ex">*.pyc</span></span>
+<span id="cb9-18"><a></a><span class="ex">dist/</span></span>
+<span id="cb9-19"><a></a><span class="ex">data/*.csv</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <p><br></p>
 <ul>
@@ -864,25 +858,25 @@ gitGraph
 <h2>Trabajar con ramas</h2>
 <p><br></p>
 <div style="font-size: 0.9em;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a aria-label="1"></a><span class="co"># Ver las ramas existentes (* marca la actual)</span></span>
-<span id="cb10-2"><a aria-label="2"></a><span class="fu">git</span> branch</span>
-<span id="cb10-3"><a aria-label="3"></a></span>
-<span id="cb10-4"><a aria-label="4"></a><span class="co"># Crear una rama y cambiarse a ella</span></span>
-<span id="cb10-5"><a aria-label="5"></a><span class="fu">git</span> switch <span class="at">-c</span> feature/login</span>
-<span id="cb10-6"><a aria-label="6"></a></span>
-<span id="cb10-7"><a aria-label="7"></a><span class="co"># Cambiar entre ramas</span></span>
-<span id="cb10-8"><a aria-label="8"></a><span class="fu">git</span> switch main</span>
-<span id="cb10-9"><a aria-label="9"></a><span class="fu">git</span> switch feature/login</span>
-<span id="cb10-10"><a aria-label="10"></a></span>
-<span id="cb10-11"><a aria-label="11"></a><span class="co"># Subir tu rama al remoto por primera vez</span></span>
-<span id="cb10-12"><a aria-label="12"></a><span class="fu">git</span> push <span class="at">-u</span> origin feature/login</span>
-<span id="cb10-13"><a aria-label="13"></a></span>
-<span id="cb10-14"><a aria-label="14"></a><span class="co"># Integrar una rama en main (localmente)</span></span>
-<span id="cb10-15"><a aria-label="15"></a><span class="fu">git</span> switch main</span>
-<span id="cb10-16"><a aria-label="16"></a><span class="fu">git</span> merge feature/login</span>
-<span id="cb10-17"><a aria-label="17"></a></span>
-<span id="cb10-18"><a aria-label="18"></a><span class="co"># Borrar una rama ya integrada</span></span>
-<span id="cb10-19"><a aria-label="19"></a><span class="fu">git</span> branch <span class="at">-d</span> feature/login</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a></a><span class="co"># Ver las ramas existentes (* marca la actual)</span></span>
+<span id="cb10-2"><a></a><span class="fu">git</span> branch</span>
+<span id="cb10-3"><a></a></span>
+<span id="cb10-4"><a></a><span class="co"># Crear una rama y cambiarse a ella</span></span>
+<span id="cb10-5"><a></a><span class="fu">git</span> switch <span class="at">-c</span> feature/login</span>
+<span id="cb10-6"><a></a></span>
+<span id="cb10-7"><a></a><span class="co"># Cambiar entre ramas</span></span>
+<span id="cb10-8"><a></a><span class="fu">git</span> switch main</span>
+<span id="cb10-9"><a></a><span class="fu">git</span> switch feature/login</span>
+<span id="cb10-10"><a></a></span>
+<span id="cb10-11"><a></a><span class="co"># Subir tu rama al remoto por primera vez</span></span>
+<span id="cb10-12"><a></a><span class="fu">git</span> push <span class="at">-u</span> origin feature/login</span>
+<span id="cb10-13"><a></a></span>
+<span id="cb10-14"><a></a><span class="co"># Integrar una rama en main (localmente)</span></span>
+<span id="cb10-15"><a></a><span class="fu">git</span> switch main</span>
+<span id="cb10-16"><a></a><span class="fu">git</span> merge feature/login</span>
+<span id="cb10-17"><a></a></span>
+<span id="cb10-18"><a></a><span class="co"># Borrar una rama ya integrada</span></span>
+<span id="cb10-19"><a></a><span class="fu">git</span> branch <span class="at">-d</span> feature/login</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <p><br></p>
@@ -982,16 +976,16 @@ gitGraph
 <div class="column" style="width:50%;">
 <h3 id="git-merge">🔀 <code>git merge</code></h3>
 <p>Une dos ramas creando un <strong>commit de merge</strong>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a aria-label="1"></a><span class="fu">git</span> switch main</span>
-<span id="cb11-2"><a aria-label="2"></a><span class="fu">git</span> merge feature/login</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a></a><span class="fu">git</span> switch main</span>
+<span id="cb11-2"><a></a><span class="fu">git</span> merge feature/login</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>✅ Conserva la historia real<br>
 ✅ Seguro, no reescribe nada<br>
 ❌ El grafo puede verse enredado</p>
 </div><div class="column" style="width:50%;">
 <h3 id="git-rebase">📏 <code>git rebase</code></h3>
 <p><strong>Reescribe</strong> tus commits sobre la punta de otra rama.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a aria-label="1"></a><span class="fu">git</span> switch feature/login</span>
-<span id="cb12-2"><a aria-label="2"></a><span class="fu">git</span> rebase main</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a></a><span class="fu">git</span> switch feature/login</span>
+<span id="cb12-2"><a></a><span class="fu">git</span> rebase main</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>✅ Historial lineal y limpio<br>
 ❌ Reescribe hashes<br>
 ❌ Peligroso en ramas compartidas</p>
@@ -1020,16 +1014,16 @@ gitGraph
 <li class="fragment">Editan partes distintas del mismo archivo.</li>
 </ul>
 </div><div class="column" style="width:55%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a aria-label="1"></a><span class="kw">def</span> calcular_promedio(notas):</span>
-<span id="cb13-2"><a aria-label="2"></a><span class="op">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD</span>
-<span id="cb13-3"><a aria-label="3"></a>    <span class="cf">if</span> <span class="kw">not</span> notas:</span>
-<span id="cb13-4"><a aria-label="4"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
-<span id="cb13-5"><a aria-label="5"></a>    <span class="cf">return</span> <span class="bu">sum</span>(notas) <span class="op">/</span> <span class="bu">len</span>(notas)</span>
-<span id="cb13-6"><a aria-label="6"></a><span class="op">=======</span></span>
-<span id="cb13-7"><a aria-label="7"></a>    <span class="cf">if</span> <span class="bu">len</span>(notas) <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb13-8"><a aria-label="8"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Lista vacía"</span>)</span>
-<span id="cb13-9"><a aria-label="9"></a>    <span class="cf">return</span> <span class="bu">sum</span>(notas) <span class="op">/</span> <span class="bu">len</span>(notas)</span>
-<span id="cb13-10"><a aria-label="10"></a><span class="op">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> feature<span class="op">/</span>validacion</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="kw">def</span> calcular_promedio(notas):</span>
+<span id="cb13-2"><a></a><span class="op">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD</span>
+<span id="cb13-3"><a></a>    <span class="cf">if</span> <span class="kw">not</span> notas:</span>
+<span id="cb13-4"><a></a>        <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb13-5"><a></a>    <span class="cf">return</span> <span class="bu">sum</span>(notas) <span class="op">/</span> <span class="bu">len</span>(notas)</span>
+<span id="cb13-6"><a></a><span class="op">=======</span></span>
+<span id="cb13-7"><a></a>    <span class="cf">if</span> <span class="bu">len</span>(notas) <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb13-8"><a></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Lista vacía"</span>)</span>
+<span id="cb13-9"><a></a>    <span class="cf">return</span> <span class="bu">sum</span>(notas) <span class="op">/</span> <span class="bu">len</span>(notas)</span>
+<span id="cb13-10"><a></a><span class="op">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> feature<span class="op">/</span>validacion</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <div class="fragment">
 <p><br></p>
@@ -1053,8 +1047,8 @@ gitGraph
 <li class="fragment"><p><strong>Decide</strong>: quedarte con una, con la otra, o escribir una tercera que combine ambas.</p></li>
 <li class="fragment"><p><strong>Borra los marcadores</strong> <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>, <code>=======</code>, <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>. Deben desaparecer por completo.</p></li>
 <li class="fragment"><p><strong>Confirma la resolución:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a aria-label="1"></a><span class="fu">git</span> add main.py</span>
-<span id="cb14-2"><a aria-label="2"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Resuelve conflicto en calcular_promedio"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a></a><span class="fu">git</span> add main.py</span>
+<span id="cb14-2"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Resuelve conflicto en calcular_promedio"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ol>
 </div>
 <div class="fragment">
@@ -1273,8 +1267,8 @@ completa</span></p>
 <li class="fragment"><strong>Opción B — Token</strong>: creas un <em>Personal Access Token</em> y lo usas como contraseña en HTTPS.</li>
 </ul></li>
 <li class="fragment"><p><strong>Genera tu clave SSH</strong> (si eliges la opción A):</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a aria-label="1"></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">"tu.correo@usm.cl"</span></span>
-<span id="cb15-2"><a aria-label="2"></a><span class="fu">cat</span> ~/.ssh/id_ed25519.pub    <span class="co"># copia esta salida</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a></a><span class="fu">ssh-keygen</span> <span class="at">-t</span> ed25519 <span class="at">-C</span> <span class="st">"tu.correo@usm.cl"</span></span>
+<span id="cb15-2"><a></a><span class="fu">cat</span> ~/.ssh/id_ed25519.pub    <span class="co"># copia esta salida</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li class="fragment"><p><strong>Pégala</strong> en GitLab: <em>Avatar → Preferences → SSH Keys → Add new key</em>.</p></li>
 <li class="fragment"><p><strong>Verifica</strong> la conexión: <code>ssh -T git@gitlab.&lt;departamento&gt;.usm.cl</code></p></li>
 </ol>
@@ -1385,21 +1379,21 @@ flowchart TD
 </ul>
 </div>
 </div><div class="column" style="width:52%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a aria-label="1"></a><span class="fu">## Título</span></span>
-<span id="cb16-2"><a aria-label="2"></a>Implementar validación de RUT en registro</span>
-<span id="cb16-3"><a aria-label="3"></a></span>
-<span id="cb16-4"><a aria-label="4"></a><span class="fu">## Contexto</span></span>
-<span id="cb16-5"><a aria-label="5"></a>El formulario acepta RUTs inválidos, lo que</span>
-<span id="cb16-6"><a aria-label="6"></a>genera datos corruptos en la base.</span>
-<span id="cb16-7"><a aria-label="7"></a></span>
-<span id="cb16-8"><a aria-label="8"></a><span class="fu">## Criterios de aceptación</span></span>
-<span id="cb16-9"><a aria-label="9"></a><span class="ss">- </span><span class="va">[ ]</span> Valida el dígito verificador</span>
-<span id="cb16-10"><a aria-label="10"></a><span class="ss">- </span><span class="va">[ ]</span> Muestra mensaje de error claro</span>
-<span id="cb16-11"><a aria-label="11"></a><span class="ss">- </span><span class="va">[ ]</span> Tiene tests unitarios</span>
-<span id="cb16-12"><a aria-label="12"></a><span class="ss">- </span><span class="va">[ ]</span> Documentado en el README</span>
-<span id="cb16-13"><a aria-label="13"></a></span>
-<span id="cb16-14"><a aria-label="14"></a><span class="fu">## Notas</span></span>
-<span id="cb16-15"><a aria-label="15"></a>Ver algoritmo módulo 11.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb16-1"><a></a><span class="fu">## Título</span></span>
+<span id="cb16-2"><a></a>Implementar validación de RUT en registro</span>
+<span id="cb16-3"><a></a></span>
+<span id="cb16-4"><a></a><span class="fu">## Contexto</span></span>
+<span id="cb16-5"><a></a>El formulario acepta RUTs inválidos, lo que</span>
+<span id="cb16-6"><a></a>genera datos corruptos en la base.</span>
+<span id="cb16-7"><a></a></span>
+<span id="cb16-8"><a></a><span class="fu">## Criterios de aceptación</span></span>
+<span id="cb16-9"><a></a><span class="ss">- </span><span class="va">[ ]</span> Valida el dígito verificador</span>
+<span id="cb16-10"><a></a><span class="ss">- </span><span class="va">[ ]</span> Muestra mensaje de error claro</span>
+<span id="cb16-11"><a></a><span class="ss">- </span><span class="va">[ ]</span> Tiene tests unitarios</span>
+<span id="cb16-12"><a></a><span class="ss">- </span><span class="va">[ ]</span> Documentado en el README</span>
+<span id="cb16-13"><a></a></span>
+<span id="cb16-14"><a></a><span class="fu">## Notas</span></span>
+<span id="cb16-15"><a></a>Ver algoritmo módulo 11.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Labels:</strong> <code>feature</code> <code>prioridad::alta</code><br>
 <strong>Assignee:</strong> <span class="citation" data-cites="ana.perez">@ana.perez</span> · <strong>Milestone:</strong> Entrega 1</p>
 </div></div>
@@ -1410,28 +1404,28 @@ flowchart TD
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3 id="mal-issue">❌ Mal Issue</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb17-1"><a aria-label="1"></a>Título: "arreglar el login"</span>
-<span id="cb17-2"><a aria-label="2"></a></span>
-<span id="cb17-3"><a aria-label="3"></a>Descripción: (vacía)</span>
-<span id="cb17-4"><a aria-label="4"></a></span>
-<span id="cb17-5"><a aria-label="5"></a>Assignee: nadie</span>
-<span id="cb17-6"><a aria-label="6"></a>Labels: ninguna</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb17-1"><a></a>Título: "arreglar el login"</span>
+<span id="cb17-2"><a></a></span>
+<span id="cb17-3"><a></a>Descripción: (vacía)</span>
+<span id="cb17-4"><a></a></span>
+<span id="cb17-5"><a></a>Assignee: nadie</span>
+<span id="cb17-6"><a></a>Labels: ninguna</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><br></p>
 <p><strong>Problemas:</strong> ¿qué está mal?, ¿cómo se reproduce?, ¿cuándo está listo?, ¿quién lo hace?</p>
 </div><div class="column fragment" style="width:50%;">
 <h3 id="buen-issue">✅ Buen Issue</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb18-1"><a aria-label="1"></a>Título: "Login falla con correos en mayúsculas"</span>
-<span id="cb18-2"><a aria-label="2"></a></span>
-<span id="cb18-3"><a aria-label="3"></a>Descripción:</span>
-<span id="cb18-4"><a aria-label="4"></a>- Pasos: ingresar ANA@USM.CL</span>
-<span id="cb18-5"><a aria-label="5"></a>- Esperado: inicia sesión</span>
-<span id="cb18-6"><a aria-label="6"></a>- Obtenido: "usuario no encontrado"</span>
-<span id="cb18-7"><a aria-label="7"></a>- Causa probable: falta normalizar a minúsculas</span>
-<span id="cb18-8"><a aria-label="8"></a></span>
-<span id="cb18-9"><a aria-label="9"></a>Criterios: [ ] normaliza [ ] test [ ] documentado</span>
-<span id="cb18-10"><a aria-label="10"></a></span>
-<span id="cb18-11"><a aria-label="11"></a>Assignee: @juan · Labels: bug, prioridad::alta</span>
-<span id="cb18-12"><a aria-label="12"></a>Milestone: Entrega 1</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb18-1"><a></a>Título: "Login falla con correos en mayúsculas"</span>
+<span id="cb18-2"><a></a></span>
+<span id="cb18-3"><a></a>Descripción:</span>
+<span id="cb18-4"><a></a>- Pasos: ingresar ANA@USM.CL</span>
+<span id="cb18-5"><a></a>- Esperado: inicia sesión</span>
+<span id="cb18-6"><a></a>- Obtenido: "usuario no encontrado"</span>
+<span id="cb18-7"><a></a>- Causa probable: falta normalizar a minúsculas</span>
+<span id="cb18-8"><a></a></span>
+<span id="cb18-9"><a></a>Criterios: [ ] normaliza [ ] test [ ] documentado</span>
+<span id="cb18-10"><a></a></span>
+<span id="cb18-11"><a></a>Assignee: @juan · Labels: bug, prioridad::alta</span>
+<span id="cb18-12"><a></a>Milestone: Entrega 1</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <div class="fragment">
 <p><br></p>
@@ -1453,17 +1447,17 @@ flowchart TD
 <li class="fragment">Sirve para responder la pregunta más importante del equipo: <em>¿llegamos o no llegamos?</em></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb19-1"><a aria-label="1"></a>📍 Entrega 1 — Análisis de requisitos</span>
-<span id="cb19-2"><a aria-label="2"></a>   Vence: 2026-09-05</span>
-<span id="cb19-3"><a aria-label="3"></a>   ████████████░░░░  12/16 issues</span>
-<span id="cb19-4"><a aria-label="4"></a></span>
-<span id="cb19-5"><a aria-label="5"></a>📍 Entrega 2 — Diseño arquitectónico</span>
-<span id="cb19-6"><a aria-label="6"></a>   Vence: 2026-10-10</span>
-<span id="cb19-7"><a aria-label="7"></a>   ███░░░░░░░░░░░░░   3/18 issues</span>
-<span id="cb19-8"><a aria-label="8"></a></span>
-<span id="cb19-9"><a aria-label="9"></a>📍 Entrega 3 — Implementación</span>
-<span id="cb19-10"><a aria-label="10"></a>   Vence: 2026-11-21</span>
-<span id="cb19-11"><a aria-label="11"></a>   ░░░░░░░░░░░░░░░░   0/24 issues</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb19-1"><a></a>📍 Entrega 1 — Análisis de requisitos</span>
+<span id="cb19-2"><a></a>   Vence: 2026-09-05</span>
+<span id="cb19-3"><a></a>   ████████████░░░░  12/16 issues</span>
+<span id="cb19-4"><a></a></span>
+<span id="cb19-5"><a></a>📍 Entrega 2 — Diseño arquitectónico</span>
+<span id="cb19-6"><a></a>   Vence: 2026-10-10</span>
+<span id="cb19-7"><a></a>   ███░░░░░░░░░░░░░   3/18 issues</span>
+<span id="cb19-8"><a></a></span>
+<span id="cb19-9"><a></a>📍 Entrega 3 — Implementación</span>
+<span id="cb19-10"><a></a>   Vence: 2026-11-21</span>
+<span id="cb19-11"><a></a>   ░░░░░░░░░░░░░░░░   0/24 issues</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <div class="fragment">
 <p><br></p>
@@ -1522,22 +1516,22 @@ flowchart LR
 <li class="fragment">Dejar registro de <strong>por qué</strong> se integró algo.</li>
 </ul>
 </div><div class="column" style="width:48%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb20-1"><a aria-label="1"></a>!14  Agrega validación de RUT en registro</span>
-<span id="cb20-2"><a aria-label="2"></a>─────────────────────────────────────────</span>
-<span id="cb20-3"><a aria-label="3"></a>De:    feature/12-validar-rut</span>
-<span id="cb20-4"><a aria-label="4"></a>Hacia: main</span>
-<span id="cb20-5"><a aria-label="5"></a></span>
-<span id="cb20-6"><a aria-label="6"></a>Autor:    @ana.perez</span>
-<span id="cb20-7"><a aria-label="7"></a>Revisor:  @juan.soto</span>
-<span id="cb20-8"><a aria-label="8"></a>Milestone: Entrega 1</span>
-<span id="cb20-9"><a aria-label="9"></a></span>
-<span id="cb20-10"><a aria-label="10"></a>✅ Pipeline passed (2 jobs)</span>
-<span id="cb20-11"><a aria-label="11"></a>✅ 1 approval</span>
-<span id="cb20-12"><a aria-label="12"></a>💬 3 threads (2 resueltos)</span>
-<span id="cb20-13"><a aria-label="13"></a></span>
-<span id="cb20-14"><a aria-label="14"></a>Closes #12</span>
-<span id="cb20-15"><a aria-label="15"></a></span>
-<span id="cb20-16"><a aria-label="16"></a>  [ Merge ]  [ Close ]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb20-1"><a></a>!14  Agrega validación de RUT en registro</span>
+<span id="cb20-2"><a></a>─────────────────────────────────────────</span>
+<span id="cb20-3"><a></a>De:    feature/12-validar-rut</span>
+<span id="cb20-4"><a></a>Hacia: main</span>
+<span id="cb20-5"><a></a></span>
+<span id="cb20-6"><a></a>Autor:    @ana.perez</span>
+<span id="cb20-7"><a></a>Revisor:  @juan.soto</span>
+<span id="cb20-8"><a></a>Milestone: Entrega 1</span>
+<span id="cb20-9"><a></a></span>
+<span id="cb20-10"><a></a>✅ Pipeline passed (2 jobs)</span>
+<span id="cb20-11"><a></a>✅ 1 approval</span>
+<span id="cb20-12"><a></a>💬 3 threads (2 resueltos)</span>
+<span id="cb20-13"><a></a></span>
+<span id="cb20-14"><a></a>Closes #12</span>
+<span id="cb20-15"><a></a></span>
+<span id="cb20-16"><a></a>  [ Merge ]  [ Close ]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <div class="fragment">
 <p><br></p>
@@ -1552,9 +1546,9 @@ flowchart LR
 <div style="font-size: 0.9em;">
 <ol type="1">
 <li class="fragment"><p><strong>Trabaja en tu rama</strong> y súbela:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a aria-label="1"></a><span class="fu">git</span> switch <span class="at">-c</span> feature/12-validar-rut</span>
-<span id="cb21-2"><a aria-label="2"></a><span class="co"># ... editar, add, commit ...</span></span>
-<span id="cb21-3"><a aria-label="3"></a><span class="fu">git</span> push <span class="at">-u</span> origin feature/12-validar-rut</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a></a><span class="fu">git</span> switch <span class="at">-c</span> feature/12-validar-rut</span>
+<span id="cb21-2"><a></a><span class="co"># ... editar, add, commit ...</span></span>
+<span id="cb21-3"><a></a><span class="fu">git</span> push <span class="at">-u</span> origin feature/12-validar-rut</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li class="fragment"><p><strong>GitLab te muestra un enlace</strong> en la terminal tras el push: <em>“Create merge request”</em>. También puedes ir a <em>Merge requests → New</em>.</p></li>
 <li class="fragment"><p><strong>Completa el MR</strong>:</p>
 <ul>
@@ -1572,26 +1566,26 @@ flowchart LR
 <section id="plantilla-de-descripción-de-mr" class="slide level2">
 <h2>Plantilla de descripción de MR</h2>
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a aria-label="1"></a><span class="fu">## ¿Qué hace este cambio?</span></span>
-<span id="cb22-2"><a aria-label="2"></a>Agrega validación del dígito verificador del RUT en el</span>
-<span id="cb22-3"><a aria-label="3"></a>formulario de registro, usando el algoritmo módulo 11.</span>
-<span id="cb22-4"><a aria-label="4"></a></span>
-<span id="cb22-5"><a aria-label="5"></a><span class="fu">## ¿Por qué?</span></span>
-<span id="cb22-6"><a aria-label="6"></a>Closes #12 — estábamos guardando RUTs inválidos en la base.</span>
-<span id="cb22-7"><a aria-label="7"></a></span>
-<span id="cb22-8"><a aria-label="8"></a><span class="fu">## ¿Cómo probarlo?</span></span>
-<span id="cb22-9"><a aria-label="9"></a><span class="ss">1. </span>Levantar la app: <span class="in">`python app.py`</span></span>
-<span id="cb22-10"><a aria-label="10"></a><span class="ss">2. </span>Ir a /registro e ingresar RUT 11.111.111-1 → debe rechazarlo</span>
-<span id="cb22-11"><a aria-label="11"></a><span class="ss">3. </span>Ingresar un RUT válido → debe aceptarlo</span>
-<span id="cb22-12"><a aria-label="12"></a></span>
-<span id="cb22-13"><a aria-label="13"></a><span class="fu">## Checklist</span></span>
-<span id="cb22-14"><a aria-label="14"></a><span class="ss">- </span><span class="va">[x]</span> Tests agregados y pasando</span>
-<span id="cb22-15"><a aria-label="15"></a><span class="ss">- </span><span class="va">[x]</span> README actualizado</span>
-<span id="cb22-16"><a aria-label="16"></a><span class="ss">- </span><span class="va">[ ]</span> Requiere migración de datos existentes (issue #19)</span>
-<span id="cb22-17"><a aria-label="17"></a></span>
-<span id="cb22-18"><a aria-label="18"></a><span class="fu">## Uso de IA</span></span>
-<span id="cb22-19"><a aria-label="19"></a>Usé Claude para generar los casos de prueba límite.</span>
-<span id="cb22-20"><a aria-label="20"></a>Revisé y ajusté 2 de los 8 casos propuestos.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb22-1"><a></a><span class="fu">## ¿Qué hace este cambio?</span></span>
+<span id="cb22-2"><a></a>Agrega validación del dígito verificador del RUT en el</span>
+<span id="cb22-3"><a></a>formulario de registro, usando el algoritmo módulo 11.</span>
+<span id="cb22-4"><a></a></span>
+<span id="cb22-5"><a></a><span class="fu">## ¿Por qué?</span></span>
+<span id="cb22-6"><a></a>Closes #12 — estábamos guardando RUTs inválidos en la base.</span>
+<span id="cb22-7"><a></a></span>
+<span id="cb22-8"><a></a><span class="fu">## ¿Cómo probarlo?</span></span>
+<span id="cb22-9"><a></a><span class="ss">1. </span>Levantar la app: <span class="in">`python app.py`</span></span>
+<span id="cb22-10"><a></a><span class="ss">2. </span>Ir a /registro e ingresar RUT 11.111.111-1 → debe rechazarlo</span>
+<span id="cb22-11"><a></a><span class="ss">3. </span>Ingresar un RUT válido → debe aceptarlo</span>
+<span id="cb22-12"><a></a></span>
+<span id="cb22-13"><a></a><span class="fu">## Checklist</span></span>
+<span id="cb22-14"><a></a><span class="ss">- </span><span class="va">[x]</span> Tests agregados y pasando</span>
+<span id="cb22-15"><a></a><span class="ss">- </span><span class="va">[x]</span> README actualizado</span>
+<span id="cb22-16"><a></a><span class="ss">- </span><span class="va">[ ]</span> Requiere migración de datos existentes (issue #19)</span>
+<span id="cb22-17"><a></a></span>
+<span id="cb22-18"><a></a><span class="fu">## Uso de IA</span></span>
+<span id="cb22-19"><a></a>Usé Claude para generar los casos de prueba límite.</span>
+<span id="cb22-20"><a></a>Revisé y ajusté 2 de los 8 casos propuestos.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="revisión-de-código-qué-mirar" class="slide level2">
 <h2>Revisión de código: qué mirar</h2>
@@ -1636,10 +1630,10 @@ flowchart LR
 <ul>
 <li class="fragment"><p><strong>Comentario en línea</strong> — clic en el número de línea del diff. Queda anclado a esa línea exacta.</p></li>
 <li class="fragment"><p><strong>Suggestion</strong> — propones el cambio y el autor lo aplica con un botón:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a aria-label="1"></a><span class="in">```suggestion</span></span>
-<span id="cb23-2"><a aria-label="2"></a><span class="in">if not notas:</span></span>
-<span id="cb23-3"><a aria-label="3"></a><span class="in">    raise ValueError("La lista de notas no puede estar vacía")</span></span>
-<span id="cb23-4"><a aria-label="4"></a><span class="in">```</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb23-1"><a></a><span class="in">```suggestion</span></span>
+<span id="cb23-2"><a></a><span class="in">if not notas:</span></span>
+<span id="cb23-3"><a></a><span class="in">    raise ValueError("La lista de notas no puede estar vacía")</span></span>
+<span id="cb23-4"><a></a><span class="in">```</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li class="fragment"><p><strong>Threads</strong> — cada conversación se resuelve explícitamente (<em>Resolve thread</em>). Un MR listo no debería tener threads abiertos.</p></li>
 <li class="fragment"><p><strong>Approve</strong> — aprobación formal. Se puede exigir N aprobaciones antes de mergear.</p></li>
 <li class="fragment"><p><strong>Draft MR</strong> — marca el MR como <code>Draft:</code> para pedir opinión temprana sin que se pueda mergear todavía.</p></li>
@@ -1659,20 +1653,20 @@ flowchart LR
 <li class="fragment">Para el curso basta con lo esencial: que el código <strong>corra</strong> y que los <strong>tests pasen</strong>.</li>
 </ul>
 </div><div class="column" style="width:55%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb24-1"><a aria-label="1"></a><span class="fu">stages</span><span class="kw">:</span></span>
-<span id="cb24-2"><a aria-label="2"></a><span class="at">  </span><span class="kw">-</span><span class="at"> test</span></span>
-<span id="cb24-3"><a aria-label="3"></a></span>
-<span id="cb24-4"><a aria-label="4"></a><span class="fu">test</span><span class="kw">:</span></span>
-<span id="cb24-5"><a aria-label="5"></a><span class="at">  </span><span class="fu">stage</span><span class="kw">:</span><span class="at"> test</span></span>
-<span id="cb24-6"><a aria-label="6"></a><span class="at">  </span><span class="fu">image</span><span class="kw">:</span><span class="at"> python:3.11</span></span>
-<span id="cb24-7"><a aria-label="7"></a><span class="at">  </span><span class="fu">script</span><span class="kw">:</span></span>
-<span id="cb24-8"><a aria-label="8"></a><span class="at">    </span><span class="kw">-</span><span class="at"> pip install -r requirements.txt</span></span>
-<span id="cb24-9"><a aria-label="9"></a><span class="at">    </span><span class="kw">-</span><span class="at"> pip install pytest ruff</span></span>
-<span id="cb24-10"><a aria-label="10"></a><span class="at">    </span><span class="kw">-</span><span class="at"> ruff check .</span><span class="co">          # estilo</span></span>
-<span id="cb24-11"><a aria-label="11"></a><span class="at">    </span><span class="kw">-</span><span class="at"> pytest -v</span><span class="co">             # pruebas</span></span>
-<span id="cb24-12"><a aria-label="12"></a><span class="at">  </span><span class="fu">rules</span><span class="kw">:</span></span>
-<span id="cb24-13"><a aria-label="13"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">if</span><span class="kw">:</span><span class="at"> $CI_PIPELINE_SOURCE == "merge_request_event"</span></span>
-<span id="cb24-14"><a aria-label="14"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">if</span><span class="kw">:</span><span class="at"> $CI_COMMIT_BRANCH == "main"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb24-1"><a></a><span class="fu">stages</span><span class="kw">:</span></span>
+<span id="cb24-2"><a></a><span class="at">  </span><span class="kw">-</span><span class="at"> test</span></span>
+<span id="cb24-3"><a></a></span>
+<span id="cb24-4"><a></a><span class="fu">test</span><span class="kw">:</span></span>
+<span id="cb24-5"><a></a><span class="at">  </span><span class="fu">stage</span><span class="kw">:</span><span class="at"> test</span></span>
+<span id="cb24-6"><a></a><span class="at">  </span><span class="fu">image</span><span class="kw">:</span><span class="at"> python:3.11</span></span>
+<span id="cb24-7"><a></a><span class="at">  </span><span class="fu">script</span><span class="kw">:</span></span>
+<span id="cb24-8"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> pip install -r requirements.txt</span></span>
+<span id="cb24-9"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> pip install pytest ruff</span></span>
+<span id="cb24-10"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> ruff check .</span><span class="co">          # estilo</span></span>
+<span id="cb24-11"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> pytest -v</span><span class="co">             # pruebas</span></span>
+<span id="cb24-12"><a></a><span class="at">  </span><span class="fu">rules</span><span class="kw">:</span></span>
+<span id="cb24-13"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">if</span><span class="kw">:</span><span class="at"> $CI_PIPELINE_SOURCE == "merge_request_event"</span></span>
+<span id="cb24-14"><a></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">if</span><span class="kw">:</span><span class="at"> $CI_COMMIT_BRANCH == "main"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <div class="fragment">
 <p><br></p>
@@ -1988,36 +1982,36 @@ sino <em>cómo</em> la vas a usar.</strong></p>
 <div class="column" style="width:50%;">
 <div style="font-size: 0.78em;">
 <p><strong>Empezar</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a aria-label="1"></a><span class="fu">git</span> clone <span class="op">&lt;</span>url<span class="op">&gt;</span>          <span class="co"># clonar</span></span>
-<span id="cb25-2"><a aria-label="2"></a><span class="fu">git</span> init                 <span class="co"># iniciar repo</span></span>
-<span id="cb25-3"><a aria-label="3"></a><span class="fu">git</span> remote <span class="at">-v</span>            <span class="co"># ver remotos</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a></a><span class="fu">git</span> clone <span class="op">&lt;</span>url<span class="op">&gt;</span>          <span class="co"># clonar</span></span>
+<span id="cb25-2"><a></a><span class="fu">git</span> init                 <span class="co"># iniciar repo</span></span>
+<span id="cb25-3"><a></a><span class="fu">git</span> remote <span class="at">-v</span>            <span class="co"># ver remotos</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Día a día</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a aria-label="1"></a><span class="fu">git</span> status               <span class="co"># estado</span></span>
-<span id="cb26-2"><a aria-label="2"></a><span class="fu">git</span> add <span class="op">&lt;</span>archivo<span class="op">&gt;</span>        <span class="co"># a staging</span></span>
-<span id="cb26-3"><a aria-label="3"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"mensaje"</span>  <span class="co"># guardar</span></span>
-<span id="cb26-4"><a aria-label="4"></a><span class="fu">git</span> pull                 <span class="co"># traer cambios</span></span>
-<span id="cb26-5"><a aria-label="5"></a><span class="fu">git</span> push                 <span class="co"># subir cambios</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a></a><span class="fu">git</span> status               <span class="co"># estado</span></span>
+<span id="cb26-2"><a></a><span class="fu">git</span> add <span class="op">&lt;</span>archivo<span class="op">&gt;</span>        <span class="co"># a staging</span></span>
+<span id="cb26-3"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"mensaje"</span>  <span class="co"># guardar</span></span>
+<span id="cb26-4"><a></a><span class="fu">git</span> pull                 <span class="co"># traer cambios</span></span>
+<span id="cb26-5"><a></a><span class="fu">git</span> push                 <span class="co"># subir cambios</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Explorar</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a aria-label="1"></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">--graph</span></span>
-<span id="cb27-2"><a aria-label="2"></a><span class="fu">git</span> diff</span>
-<span id="cb27-3"><a aria-label="3"></a><span class="fu">git</span> blame <span class="op">&lt;</span>archivo<span class="op">&gt;</span></span>
-<span id="cb27-4"><a aria-label="4"></a><span class="fu">git</span> show <span class="op">&lt;</span>hash<span class="op">&gt;</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a></a><span class="fu">git</span> log <span class="at">--oneline</span> <span class="at">--graph</span></span>
+<span id="cb27-2"><a></a><span class="fu">git</span> diff</span>
+<span id="cb27-3"><a></a><span class="fu">git</span> blame <span class="op">&lt;</span>archivo<span class="op">&gt;</span></span>
+<span id="cb27-4"><a></a><span class="fu">git</span> show <span class="op">&lt;</span>hash<span class="op">&gt;</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div style="font-size: 0.78em;">
 <p><strong>Ramas</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a aria-label="1"></a><span class="fu">git</span> branch                    <span class="co"># listar</span></span>
-<span id="cb28-2"><a aria-label="2"></a><span class="fu">git</span> switch <span class="at">-c</span> feature/x       <span class="co"># crear</span></span>
-<span id="cb28-3"><a aria-label="3"></a><span class="fu">git</span> switch main               <span class="co"># cambiar</span></span>
-<span id="cb28-4"><a aria-label="4"></a><span class="fu">git</span> merge feature/x           <span class="co"># integrar</span></span>
-<span id="cb28-5"><a aria-label="5"></a><span class="fu">git</span> branch <span class="at">-d</span> feature/x       <span class="co"># borrar</span></span>
-<span id="cb28-6"><a aria-label="6"></a><span class="fu">git</span> push <span class="at">-u</span> origin feature/x  <span class="co"># publicar</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a></a><span class="fu">git</span> branch                    <span class="co"># listar</span></span>
+<span id="cb28-2"><a></a><span class="fu">git</span> switch <span class="at">-c</span> feature/x       <span class="co"># crear</span></span>
+<span id="cb28-3"><a></a><span class="fu">git</span> switch main               <span class="co"># cambiar</span></span>
+<span id="cb28-4"><a></a><span class="fu">git</span> merge feature/x           <span class="co"># integrar</span></span>
+<span id="cb28-5"><a></a><span class="fu">git</span> branch <span class="at">-d</span> feature/x       <span class="co"># borrar</span></span>
+<span id="cb28-6"><a></a><span class="fu">git</span> push <span class="at">-u</span> origin feature/x  <span class="co"># publicar</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Deshacer</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a aria-label="1"></a><span class="fu">git</span> restore <span class="op">&lt;</span>archivo<span class="op">&gt;</span>          <span class="co"># descartar</span></span>
-<span id="cb29-2"><a aria-label="2"></a><span class="fu">git</span> restore <span class="at">--staged</span> <span class="op">&lt;</span>archivo<span class="op">&gt;</span> <span class="co"># sacar de staging</span></span>
-<span id="cb29-3"><a aria-label="3"></a><span class="fu">git</span> revert <span class="op">&lt;</span>hash<span class="op">&gt;</span>              <span class="co"># revertir publicado</span></span>
-<span id="cb29-4"><a aria-label="4"></a><span class="fu">git</span> stash / git stash pop      <span class="co"># guardar temporal</span></span>
-<span id="cb29-5"><a aria-label="5"></a><span class="fu">git</span> reflog                     <span class="co"># historial de todo</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a></a><span class="fu">git</span> restore <span class="op">&lt;</span>archivo<span class="op">&gt;</span>          <span class="co"># descartar</span></span>
+<span id="cb29-2"><a></a><span class="fu">git</span> restore <span class="at">--staged</span> <span class="op">&lt;</span>archivo<span class="op">&gt;</span> <span class="co"># sacar de staging</span></span>
+<span id="cb29-3"><a></a><span class="fu">git</span> revert <span class="op">&lt;</span>hash<span class="op">&gt;</span>              <span class="co"># revertir publicado</span></span>
+<span id="cb29-4"><a></a><span class="fu">git</span> stash / git stash pop      <span class="co"># guardar temporal</span></span>
+<span id="cb29-5"><a></a><span class="fu">git</span> reflog                     <span class="co"># historial de todo</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
 </section>

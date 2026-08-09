@@ -7,8 +7,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bb62276ab45c84d9efd712f51ff97b5a.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.18">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-8b4baf804e461d9b72633f0de59a0cac.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.27">
 
   <meta name="author" content="Francisco Alfaro Medina">
   <title>Talks – Google Colab</title>
@@ -18,16 +18,10 @@
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
-    /* Default styles provided by pandoc.
-    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
-    */
+    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: 1.5em;}
-    div.column{flex: auto;}
-    @media screen {
-    div.columns{gap: min(4vw, 1.5em);}
-    div.column{overflow-x: auto;}
-    }
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -102,7 +96,7 @@
     code span.vs { color: #032f62; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-e892a8df7267c7fe476b0a79cf24fc03.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-8b6b03e6775b7c3d7b0d045b3991d10c.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -206,7 +200,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Francisco Alfaro Medina
+Francisco Alfaro Medina 
 </div>
         <p class="quarto-title-affiliation">
             Dirección de Transformación Digital · UTFSM
@@ -340,15 +334,15 @@ Unidad de Educación a Distancia · 2026</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>✏️ <strong>Celda de texto (Markdown):</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a aria-label="1"></a><span class="fu"># Mi Análisis</span></span>
-<span id="cb1-2"><a aria-label="2"></a></span>
-<span id="cb1-3"><a aria-label="3"></a>Este notebook explora los datos de estudiantes</span>
-<span id="cb1-4"><a aria-label="4"></a>de la UTFSM durante el semestre 2026.</span>
-<span id="cb1-5"><a aria-label="5"></a></span>
-<span id="cb1-6"><a aria-label="6"></a><span class="fu">## Objetivos</span></span>
-<span id="cb1-7"><a aria-label="7"></a><span class="ss">- </span>Explorar distribuciones</span>
-<span id="cb1-8"><a aria-label="8"></a><span class="ss">- </span>Visualizar tendencias</span>
-<span id="cb1-9"><a aria-label="9"></a><span class="ss">- </span>Ajustar un modelo</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a></a><span class="fu"># Mi Análisis</span></span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a>Este notebook explora los datos de estudiantes</span>
+<span id="cb1-4"><a></a>de la UTFSM durante el semestre 2026.</span>
+<span id="cb1-5"><a></a></span>
+<span id="cb1-6"><a></a><span class="fu">## Objetivos</span></span>
+<span id="cb1-7"><a></a><span class="ss">- </span>Explorar distribuciones</span>
+<span id="cb1-8"><a></a><span class="ss">- </span>Visualizar tendencias</span>
+<span id="cb1-9"><a></a><span class="ss">- </span>Ajustar un modelo</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <p>👁️ <strong>Se renderiza así:</strong></p>
 <p>Título visible, secciones organizadas y texto formateado — igual que en GitHub README, pero dentro del notebook.</p>
@@ -361,17 +355,17 @@ Unidad de Educación a Distancia · 2026</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>✏️ <strong>Celda de código Python:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a aria-label="1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-2"><a aria-label="2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-3"><a aria-label="3"></a></span>
-<span id="cb2-4"><a aria-label="4"></a><span class="co"># Cargar datos</span></span>
-<span id="cb2-5"><a aria-label="5"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"datos.csv"</span>)</span>
-<span id="cb2-6"><a aria-label="6"></a></span>
-<span id="cb2-7"><a aria-label="7"></a><span class="co"># Visualizar</span></span>
-<span id="cb2-8"><a aria-label="8"></a>df[<span class="st">"nota"</span>].hist(bins<span class="op">=</span><span class="dv">20</span>, color<span class="op">=</span><span class="st">"#0F2044"</span>)</span>
-<span id="cb2-9"><a aria-label="9"></a>plt.title(<span class="st">"Distribución de notas"</span>)</span>
-<span id="cb2-10"><a aria-label="10"></a>plt.xlabel(<span class="st">"Nota"</span>)</span>
-<span id="cb2-11"><a aria-label="11"></a>plt.show()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a></a></span>
+<span id="cb2-4"><a></a><span class="co"># Cargar datos</span></span>
+<span id="cb2-5"><a></a>df <span class="op">=</span> pd.read_csv(<span class="st">"datos.csv"</span>)</span>
+<span id="cb2-6"><a></a></span>
+<span id="cb2-7"><a></a><span class="co"># Visualizar</span></span>
+<span id="cb2-8"><a></a>df[<span class="st">"nota"</span>].hist(bins<span class="op">=</span><span class="dv">20</span>, color<span class="op">=</span><span class="st">"#0F2044"</span>)</span>
+<span id="cb2-9"><a></a>plt.title(<span class="st">"Distribución de notas"</span>)</span>
+<span id="cb2-10"><a></a>plt.xlabel(<span class="st">"Nota"</span>)</span>
+<span id="cb2-11"><a></a>plt.show()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <p>👁️ <strong>¿Qué hace?</strong></p>
 <ul>
@@ -389,15 +383,15 @@ Unidad de Educación a Distancia · 2026</p>
 <div class="column" style="width:50%;">
 <p>✏️ <strong>Activar R en Colab:</strong></p>
 <p>En el menú: <strong>Runtime → Change runtime type → R</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-label="1"></a><span class="co"># Cargar datos</span></span>
-<span id="cb3-2"><a aria-label="2"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"datos.csv"</span>)</span>
-<span id="cb3-3"><a aria-label="3"></a></span>
-<span id="cb3-4"><a aria-label="4"></a><span class="co"># Visualizar con ggplot2</span></span>
-<span id="cb3-5"><a aria-label="5"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb3-6"><a aria-label="6"></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> nota)) <span class="sc">+</span></span>
-<span id="cb3-7"><a aria-label="7"></a>  <span class="fu">geom_histogram</span>(<span class="at">fill =</span> <span class="st">"#0F2044"</span>,</span>
-<span id="cb3-8"><a aria-label="8"></a>                 <span class="at">bins =</span> <span class="dv">20</span>) <span class="sc">+</span></span>
-<span id="cb3-9"><a aria-label="9"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribución de notas"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Cargar datos</span></span>
+<span id="cb3-2"><a></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"datos.csv"</span>)</span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a><span class="co"># Visualizar con ggplot2</span></span>
+<span id="cb3-5"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-6"><a></a><span class="fu">ggplot</span>(df, <span class="fu">aes</span>(<span class="at">x =</span> nota)) <span class="sc">+</span></span>
+<span id="cb3-7"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">fill =</span> <span class="st">"#0F2044"</span>,</span>
+<span id="cb3-8"><a></a>                 <span class="at">bins =</span> <span class="dv">20</span>) <span class="sc">+</span></span>
+<span id="cb3-9"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribución de notas"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <p>👁️ <strong>¿Qué hace?</strong></p>
 <ul>
@@ -444,17 +438,17 @@ Unidad de Educación a Distancia · 2026</p>
 </section>
 <section id="verificar-recursos-disponibles" class="slide level2">
 <h2>Verificar recursos disponibles</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a aria-label="1"></a><span class="co"># Ver RAM y CPU</span></span>
-<span id="cb4-2"><a aria-label="2"></a><span class="im">import</span> psutil, platform</span>
-<span id="cb4-3"><a aria-label="3"></a></span>
-<span id="cb4-4"><a aria-label="4"></a><span class="bu">print</span>(<span class="ss">f"Sistema: </span><span class="sc">{</span>platform<span class="sc">.</span>system()<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb4-5"><a aria-label="5"></a><span class="bu">print</span>(<span class="ss">f"CPU: </span><span class="sc">{</span>psutil<span class="sc">.</span>cpu_count()<span class="sc">}</span><span class="ss"> núcleos"</span>)</span>
-<span id="cb4-6"><a aria-label="6"></a><span class="bu">print</span>(<span class="ss">f"RAM total:     </span><span class="sc">{</span>psutil<span class="sc">.</span>virtual_memory()<span class="sc">.</span>total <span class="op">/</span> <span class="fl">1e9</span><span class="sc">:.1f}</span><span class="ss"> GB"</span>)</span>
-<span id="cb4-7"><a aria-label="7"></a><span class="bu">print</span>(<span class="ss">f"RAM disponible:</span><span class="sc">{</span>psutil<span class="sc">.</span>virtual_memory()<span class="sc">.</span>available <span class="op">/</span> <span class="fl">1e9</span><span class="sc">:.1f}</span><span class="ss"> GB"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a aria-label="1"></a><span class="co"># Ver GPU asignada</span></span>
-<span id="cb5-2"><a aria-label="2"></a><span class="op">!</span>nvidia<span class="op">-</span>smi <span class="op">--</span>query<span class="op">-</span>gpu<span class="op">=</span>name,memory.total <span class="op">--</span><span class="bu">format</span><span class="op">=</span>csv,noheader</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a aria-label="1"></a><span class="co"># Ver disco disponible</span></span>
-<span id="cb6-2"><a aria-label="2"></a><span class="op">!</span>df <span class="op">-</span>h <span class="op">/</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="co"># Ver RAM y CPU</span></span>
+<span id="cb4-2"><a></a><span class="im">import</span> psutil, platform</span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a><span class="bu">print</span>(<span class="ss">f"Sistema: </span><span class="sc">{</span>platform<span class="sc">.</span>system()<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb4-5"><a></a><span class="bu">print</span>(<span class="ss">f"CPU: </span><span class="sc">{</span>psutil<span class="sc">.</span>cpu_count()<span class="sc">}</span><span class="ss"> núcleos"</span>)</span>
+<span id="cb4-6"><a></a><span class="bu">print</span>(<span class="ss">f"RAM total:     </span><span class="sc">{</span>psutil<span class="sc">.</span>virtual_memory()<span class="sc">.</span>total <span class="op">/</span> <span class="fl">1e9</span><span class="sc">:.1f}</span><span class="ss"> GB"</span>)</span>
+<span id="cb4-7"><a></a><span class="bu">print</span>(<span class="ss">f"RAM disponible:</span><span class="sc">{</span>psutil<span class="sc">.</span>virtual_memory()<span class="sc">.</span>available <span class="op">/</span> <span class="fl">1e9</span><span class="sc">:.1f}</span><span class="ss"> GB"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="co"># Ver GPU asignada</span></span>
+<span id="cb5-2"><a></a><span class="op">!</span>nvidia<span class="op">-</span>smi <span class="op">--</span>query<span class="op">-</span>gpu<span class="op">=</span>name,memory.total <span class="op">--</span><span class="bu">format</span><span class="op">=</span>csv,noheader</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="co"># Ver disco disponible</span></span>
+<span id="cb6-2"><a></a><span class="op">!</span>df <span class="op">-</span>h <span class="op">/</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="fragment">
 <blockquote>
 <p>🌿 Corre estas celdas al inicio de tu sesión para saber con qué recursos cuentas.</p>
@@ -504,14 +498,14 @@ Unidad de Educación a Distancia · 2026</p>
 </div>
 </div><div class="column" style="width:50%;">
 <p><strong>📦 Instalar librerías extra:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a aria-label="1"></a><span class="co"># Con pip (Python)</span></span>
-<span id="cb7-2"><a aria-label="2"></a><span class="op">!</span>pip install polars lightgbm</span>
-<span id="cb7-3"><a aria-label="3"></a></span>
-<span id="cb7-4"><a aria-label="4"></a><span class="co"># Con apt (sistema)</span></span>
-<span id="cb7-5"><a aria-label="5"></a><span class="op">!</span>apt<span class="op">-</span>get install <span class="op">-</span>y libgdal<span class="op">-</span>dev</span>
-<span id="cb7-6"><a aria-label="6"></a></span>
-<span id="cb7-7"><a aria-label="7"></a><span class="co"># Para R (kernel R)</span></span>
-<span id="cb7-8"><a aria-label="8"></a>install.packages(<span class="st">"tidymodels"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="co"># Con pip (Python)</span></span>
+<span id="cb7-2"><a></a><span class="op">!</span>pip install polars lightgbm</span>
+<span id="cb7-3"><a></a></span>
+<span id="cb7-4"><a></a><span class="co"># Con apt (sistema)</span></span>
+<span id="cb7-5"><a></a><span class="op">!</span>apt<span class="op">-</span>get install <span class="op">-</span>y libgdal<span class="op">-</span>dev</span>
+<span id="cb7-6"><a></a></span>
+<span id="cb7-7"><a></a><span class="co"># Para R (kernel R)</span></span>
+<span id="cb7-8"><a></a>install.packages(<span class="st">"tidymodels"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div style="background: #fff3cd; border-left: 4px solid #e6a817; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; margin-top: 0.8em;">
 <p>⚠️ Las librerías instaladas con <code>!pip</code> se pierden al reiniciar la sesión.</p>
 </div>
@@ -560,9 +554,9 @@ Unidad de Educación a Distancia · 2026</p>
   → Subir archivo
   → Selecciona tu CSV o Excel</code></pre>
 <p>O desde código:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a aria-label="1"></a><span class="im">from</span> google.colab <span class="im">import</span> files</span>
-<span id="cb9-2"><a aria-label="2"></a>uploaded <span class="op">=</span> files.upload()</span>
-<span id="cb9-3"><a aria-label="3"></a><span class="co"># → abre un selector de archivos</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="im">from</span> google.colab <span class="im">import</span> files</span>
+<span id="cb9-2"><a></a>uploaded <span class="op">=</span> files.upload()</span>
+<span id="cb9-3"><a></a><span class="co"># → abre un selector de archivos</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <p>👁️ <strong>¿Cuándo usarlo?</strong></p>
 <ul>
@@ -578,19 +572,19 @@ Unidad de Educación a Distancia · 2026</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>✏️ <strong>Descargar desde internet:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a aria-label="1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb10-2"><a aria-label="2"></a></span>
-<span id="cb10-3"><a aria-label="3"></a><span class="co"># Desde GitHub (raw)</span></span>
-<span id="cb10-4"><a aria-label="4"></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/"</span><span class="op">\</span></span>
-<span id="cb10-5"><a aria-label="5"></a>      <span class="st">"usuario/repo/main/datos.csv"</span></span>
-<span id="cb10-6"><a aria-label="6"></a>df <span class="op">=</span> pd.read_csv(url)</span>
-<span id="cb10-7"><a aria-label="7"></a></span>
-<span id="cb10-8"><a aria-label="8"></a><span class="co"># Desde Google Sheets (publicado como CSV)</span></span>
-<span id="cb10-9"><a aria-label="9"></a>sheet_url <span class="op">=</span> <span class="st">"https://docs.google.com/spreadsheets"</span><span class="op">\</span></span>
-<span id="cb10-10"><a aria-label="10"></a>            <span class="st">"/d/ID/export?format=csv"</span></span>
-<span id="cb10-11"><a aria-label="11"></a>df <span class="op">=</span> pd.read_csv(sheet_url)</span>
-<span id="cb10-12"><a aria-label="12"></a></span>
-<span id="cb10-13"><a aria-label="13"></a>df.head()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb10-2"><a></a></span>
+<span id="cb10-3"><a></a><span class="co"># Desde GitHub (raw)</span></span>
+<span id="cb10-4"><a></a>url <span class="op">=</span> <span class="st">"https://raw.githubusercontent.com/"</span><span class="op">\</span></span>
+<span id="cb10-5"><a></a>      <span class="st">"usuario/repo/main/datos.csv"</span></span>
+<span id="cb10-6"><a></a>df <span class="op">=</span> pd.read_csv(url)</span>
+<span id="cb10-7"><a></a></span>
+<span id="cb10-8"><a></a><span class="co"># Desde Google Sheets (publicado como CSV)</span></span>
+<span id="cb10-9"><a></a>sheet_url <span class="op">=</span> <span class="st">"https://docs.google.com/spreadsheets"</span><span class="op">\</span></span>
+<span id="cb10-10"><a></a>            <span class="st">"/d/ID/export?format=csv"</span></span>
+<span id="cb10-11"><a></a>df <span class="op">=</span> pd.read_csv(sheet_url)</span>
+<span id="cb10-12"><a></a></span>
+<span id="cb10-13"><a></a>df.head()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <p>👁️ <strong>¿Cuándo usarlo?</strong></p>
 <ul>
@@ -606,15 +600,15 @@ Unidad de Educación a Distancia · 2026</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>✏️ <strong>Montar tu Drive:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a aria-label="1"></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
-<span id="cb11-2"><a aria-label="2"></a>drive.mount(<span class="st">"/content/drive"</span>)</span>
-<span id="cb11-3"><a aria-label="3"></a></span>
-<span id="cb11-4"><a aria-label="4"></a><span class="co"># Acceder a tus archivos como carpeta local</span></span>
-<span id="cb11-5"><a aria-label="5"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb11-6"><a aria-label="6"></a></span>
-<span id="cb11-7"><a aria-label="7"></a>ruta <span class="op">=</span> <span class="st">"/content/drive/MyDrive/datos/notas.csv"</span></span>
-<span id="cb11-8"><a aria-label="8"></a>df <span class="op">=</span> pd.read_csv(ruta)</span>
-<span id="cb11-9"><a aria-label="9"></a>df.head()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="im">from</span> google.colab <span class="im">import</span> drive</span>
+<span id="cb11-2"><a></a>drive.mount(<span class="st">"/content/drive"</span>)</span>
+<span id="cb11-3"><a></a></span>
+<span id="cb11-4"><a></a><span class="co"># Acceder a tus archivos como carpeta local</span></span>
+<span id="cb11-5"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb11-6"><a></a></span>
+<span id="cb11-7"><a></a>ruta <span class="op">=</span> <span class="st">"/content/drive/MyDrive/datos/notas.csv"</span></span>
+<span id="cb11-8"><a></a>df <span class="op">=</span> pd.read_csv(ruta)</span>
+<span id="cb11-9"><a></a>df.head()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <p>👁️ <strong>¿Por qué es lo mejor?</strong></p>
 <ul>
@@ -631,13 +625,13 @@ Unidad de Educación a Distancia · 2026</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>❌ <strong>Nunca hagas esto:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a aria-label="1"></a><span class="co"># Expone tu clave en el notebook</span></span>
-<span id="cb12-2"><a aria-label="2"></a>API_KEY <span class="op">=</span> <span class="st">"sk-abc123supersecreta"</span></span>
-<span id="cb12-3"><a aria-label="3"></a>PASSWORD <span class="op">=</span> <span class="st">"mi_clave_secreta"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="co"># Expone tu clave en el notebook</span></span>
+<span id="cb12-2"><a></a>API_KEY <span class="op">=</span> <span class="st">"sk-abc123supersecreta"</span></span>
+<span id="cb12-3"><a></a>PASSWORD <span class="op">=</span> <span class="st">"mi_clave_secreta"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>✅ <strong>Usa Secrets de Colab:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a aria-label="1"></a><span class="im">from</span> google.colab <span class="im">import</span> userdata</span>
-<span id="cb13-2"><a aria-label="2"></a></span>
-<span id="cb13-3"><a aria-label="3"></a>api_key <span class="op">=</span> userdata.get(<span class="st">"MI_API_KEY"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">from</span> google.colab <span class="im">import</span> userdata</span>
+<span id="cb13-2"><a></a></span>
+<span id="cb13-3"><a></a>api_key <span class="op">=</span> userdata.get(<span class="st">"MI_API_KEY"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <p>👁️ <strong>¿Cómo configurar Secrets?</strong></p>
 <pre><code>🔑 Ícono de llave (panel izquierdo)
@@ -704,28 +698,28 @@ Unidad de Educación a Distancia · 2026</p>
 </blockquote>
 </div><div class="column" style="width:50%;">
 <p>✅ <strong>Gemini genera:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a aria-label="1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb15-2"><a aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb15-3"><a aria-label="3"></a></span>
-<span id="cb15-4"><a aria-label="4"></a>carreras <span class="op">=</span> [<span class="st">"Ing. Civil"</span>, <span class="st">"Informática"</span>,</span>
-<span id="cb15-5"><a aria-label="5"></a>            <span class="st">"Electrónica"</span>, <span class="st">"Industrial"</span>]</span>
-<span id="cb15-6"><a aria-label="6"></a>promedios <span class="op">=</span> [<span class="fl">5.2</span>, <span class="fl">5.8</span>, <span class="fl">4.9</span>, <span class="fl">5.5</span>]</span>
-<span id="cb15-7"><a aria-label="7"></a></span>
-<span id="cb15-8"><a aria-label="8"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
-<span id="cb15-9"><a aria-label="9"></a>colors <span class="op">=</span> plt.cm.tab10(np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="bu">len</span>(carreras)))</span>
-<span id="cb15-10"><a aria-label="10"></a>ax.bar(carreras, promedios, color<span class="op">=</span>colors)</span>
-<span id="cb15-11"><a aria-label="11"></a>ax.set_title(<span class="st">"Promedio de notas por carrera"</span>)</span>
-<span id="cb15-12"><a aria-label="12"></a>ax.set_ylabel(<span class="st">"Nota promedio"</span>)</span>
-<span id="cb15-13"><a aria-label="13"></a>ax.set_ylim(<span class="dv">1</span>, <span class="dv">7</span>)</span>
-<span id="cb15-14"><a aria-label="14"></a>plt.tight_layout()</span>
-<span id="cb15-15"><a aria-label="15"></a>plt.show()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb15-2"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb15-3"><a></a></span>
+<span id="cb15-4"><a></a>carreras <span class="op">=</span> [<span class="st">"Ing. Civil"</span>, <span class="st">"Informática"</span>,</span>
+<span id="cb15-5"><a></a>            <span class="st">"Electrónica"</span>, <span class="st">"Industrial"</span>]</span>
+<span id="cb15-6"><a></a>promedios <span class="op">=</span> [<span class="fl">5.2</span>, <span class="fl">5.8</span>, <span class="fl">4.9</span>, <span class="fl">5.5</span>]</span>
+<span id="cb15-7"><a></a></span>
+<span id="cb15-8"><a></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb15-9"><a></a>colors <span class="op">=</span> plt.cm.tab10(np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="bu">len</span>(carreras)))</span>
+<span id="cb15-10"><a></a>ax.bar(carreras, promedios, color<span class="op">=</span>colors)</span>
+<span id="cb15-11"><a></a>ax.set_title(<span class="st">"Promedio de notas por carrera"</span>)</span>
+<span id="cb15-12"><a></a>ax.set_ylabel(<span class="st">"Nota promedio"</span>)</span>
+<span id="cb15-13"><a></a>ax.set_ylim(<span class="dv">1</span>, <span class="dv">7</span>)</span>
+<span id="cb15-14"><a></a>plt.tight_layout()</span>
+<span id="cb15-15"><a></a>plt.show()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </div>
 <div id="tabset-3-2">
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>✨ <strong>Tienes este error:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a aria-label="1"></a>df.groupby(<span class="st">"carrera"</span>)[<span class="st">"nota"</span>].means()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a>df.groupby(<span class="st">"carrera"</span>)[<span class="st">"nota"</span>].means()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <pre><code>AttributeError: 'SeriesGroupBy' object
 has no attribute 'means'</code></pre>
 <blockquote>
@@ -735,7 +729,7 @@ has no attribute 'means'</code></pre>
 <p>✅ <strong>Gemini explica:</strong></p>
 <p>❌ <code>means()</code> no existe — el método correcto es <code>mean()</code> (sin ‘s’).</p>
 <p>✅ <strong>Versión corregida:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a aria-label="1"></a>df.groupby(<span class="st">"carrera"</span>)[<span class="st">"nota"</span>].mean()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>df.groupby(<span class="st">"carrera"</span>)[<span class="st">"nota"</span>].mean()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div style="background: #f0f4ff; border-left: 4px solid #0F2044; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; margin-top: 0.8em;">
 <p>💡 Gemini también puede sugerir mejoras de eficiencia y estilo en tu código.</p>
 </div>
@@ -750,20 +744,20 @@ has no attribute 'means'</code></pre>
 </blockquote>
 </div><div class="column" style="width:50%;">
 <p>✅ <strong>Gemini propone:</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a aria-label="1"></a><span class="co"># Estadísticas descriptivas</span></span>
-<span id="cb19-2"><a aria-label="2"></a><span class="bu">print</span>(df.describe())</span>
-<span id="cb19-3"><a aria-label="3"></a><span class="bu">print</span>(df[<span class="st">"carrera"</span>].value_counts())</span>
-<span id="cb19-4"><a aria-label="4"></a></span>
-<span id="cb19-5"><a aria-label="5"></a><span class="co"># Distribución de notas</span></span>
-<span id="cb19-6"><a aria-label="6"></a>df[<span class="st">"nota"</span>].hist(bins<span class="op">=</span><span class="dv">15</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
-<span id="cb19-7"><a aria-label="7"></a></span>
-<span id="cb19-8"><a aria-label="8"></a><span class="co"># Notas por carrera</span></span>
-<span id="cb19-9"><a aria-label="9"></a>df.boxplot(column<span class="op">=</span><span class="st">"nota"</span>, by<span class="op">=</span><span class="st">"carrera"</span>,</span>
-<span id="cb19-10"><a aria-label="10"></a>           figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
-<span id="cb19-11"><a aria-label="11"></a></span>
-<span id="cb19-12"><a aria-label="12"></a><span class="co"># Evolución por año de ingreso</span></span>
-<span id="cb19-13"><a aria-label="13"></a>df.groupby(<span class="st">"año_ingreso"</span>)[<span class="st">"nota"</span>].mean()<span class="op">\</span></span>
-<span id="cb19-14"><a aria-label="14"></a>  .plot(marker<span class="op">=</span><span class="st">"o"</span>, title<span class="op">=</span><span class="st">"Promedio por año"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="co"># Estadísticas descriptivas</span></span>
+<span id="cb19-2"><a></a><span class="bu">print</span>(df.describe())</span>
+<span id="cb19-3"><a></a><span class="bu">print</span>(df[<span class="st">"carrera"</span>].value_counts())</span>
+<span id="cb19-4"><a></a></span>
+<span id="cb19-5"><a></a><span class="co"># Distribución de notas</span></span>
+<span id="cb19-6"><a></a>df[<span class="st">"nota"</span>].hist(bins<span class="op">=</span><span class="dv">15</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
+<span id="cb19-7"><a></a></span>
+<span id="cb19-8"><a></a><span class="co"># Notas por carrera</span></span>
+<span id="cb19-9"><a></a>df.boxplot(column<span class="op">=</span><span class="st">"nota"</span>, by<span class="op">=</span><span class="st">"carrera"</span>,</span>
+<span id="cb19-10"><a></a>           figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
+<span id="cb19-11"><a></a></span>
+<span id="cb19-12"><a></a><span class="co"># Evolución por año de ingreso</span></span>
+<span id="cb19-13"><a></a>df.groupby(<span class="st">"año_ingreso"</span>)[<span class="st">"nota"</span>].mean()<span class="op">\</span></span>
+<span id="cb19-14"><a></a>  .plot(marker<span class="op">=</span><span class="st">"o"</span>, title<span class="op">=</span><span class="st">"Promedio por año"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </div>
 </div>
