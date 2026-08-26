@@ -7,8 +7,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-f1aadacce99040138bbb613f9330654f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.27">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Universidad Técnica Federico Santa María">
   <meta name="dcterms.date" content="2026-08-25">
@@ -19,10 +19,16 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -97,7 +103,7 @@
     code span.vs { color: #9ecbff; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-b2b877e1b2f4a1a6f87ed443b730ce45.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c0ecab25cbec914f13e0868d85731132.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -201,14 +207,14 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Universidad Técnica Federico Santa María 
+Universidad Técnica Federico Santa María
 </div>
 </div>
 </div>
 
   <p class="date">2026-08-25</p>
 </section>
-<section id="section" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks/portada.png" data-background-opacity="0.18" data-state="no-logo">
 <h2></h2>
 <div style="display: flex; justify-content: center; align-items: center; height: 70vh; flex-direction: column; text-align: center;">
 <p><span style="font-size: 0.9em; color: #4A9FD4; text-transform: uppercase;">Programa de Talleres de Inteligencia Artificial Generativa</span></p>
@@ -330,7 +336,7 @@ Universidad Técnica Federico Santa María
 </div>
 </div>
 </section>
-<section id="section-1" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-1" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks/bloque0-encuadre.png" data-background-opacity="0.20" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 0 · 10 minutos</span></p>
@@ -474,7 +480,7 @@ Universidad Técnica Federico Santa María
 </div>
 </div></div>
 </section>
-<section id="section-2" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-2" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks/bloque1-fundamentos.png" data-background-opacity="0.20" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 1 · 15 minutos</span></p>
@@ -806,7 +812,7 @@ Universidad Técnica Federico Santa María
 </div>
 </div>
 </section>
-<section id="section-3" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-3" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks/bloque2-prompting.png" data-background-opacity="0.20" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 2 · 25 minutos</span></p>
@@ -852,7 +858,7 @@ Universidad Técnica Federico Santa María
 <div class="columns">
 <div class="column" style="width:45%;">
 <h3 id="débil">Débil</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>Haz una clase sobre aprendizaje activo.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a aria-label="1"></a>Haz una clase sobre aprendizaje activo.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Problemas:</p>
 <ul>
 <li>no define público;</li>
@@ -863,41 +869,41 @@ Universidad Técnica Federico Santa María
 </ul>
 </div><div class="column" style="width:55%;">
 <h3 id="útil">Útil</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>Actúa como diseñador instruccional universitario.</span>
-<span id="cb2-2"><a></a>Necesito planificar una clase de 90 minutos para estudiantes</span>
-<span id="cb2-3"><a></a>de primer año de ingeniería sobre aprendizaje activo.</span>
-<span id="cb2-4"><a></a></span>
-<span id="cb2-5"><a></a>Propón una secuencia con apertura, actividad central,</span>
-<span id="cb2-6"><a></a>cierre y evaluación formativa. Incluye tiempos, propósito</span>
-<span id="cb2-7"><a></a>pedagógico, instrucciones para estudiantes y criterios</span>
-<span id="cb2-8"><a></a>para observar participación.</span>
-<span id="cb2-9"><a></a></span>
-<span id="cb2-10"><a></a>Entrega la respuesta en una tabla.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a aria-label="1"></a>Actúa como diseñador instruccional universitario.</span>
+<span id="cb2-2"><a aria-label="2"></a>Necesito planificar una clase de 90 minutos para estudiantes</span>
+<span id="cb2-3"><a aria-label="3"></a>de primer año de ingeniería sobre aprendizaje activo.</span>
+<span id="cb2-4"><a aria-label="4"></a></span>
+<span id="cb2-5"><a aria-label="5"></a>Propón una secuencia con apertura, actividad central,</span>
+<span id="cb2-6"><a aria-label="6"></a>cierre y evaluación formativa. Incluye tiempos, propósito</span>
+<span id="cb2-7"><a aria-label="7"></a>pedagógico, instrucciones para estudiantes y criterios</span>
+<span id="cb2-8"><a aria-label="8"></a>para observar participación.</span>
+<span id="cb2-9"><a aria-label="9"></a></span>
+<span id="cb2-10"><a aria-label="10"></a>Entrega la respuesta en una tabla.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="plantilla-base-de-prompting" class="slide level2 prompt-slide">
 <h2>Plantilla base de prompting</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>Actúa como [rol].</span>
-<span id="cb3-2"><a></a></span>
-<span id="cb3-3"><a></a>Contexto:</span>
-<span id="cb3-4"><a></a>- Curso:</span>
-<span id="cb3-5"><a></a>- Nivel de estudiantes:</span>
-<span id="cb3-6"><a></a>- Duración:</span>
-<span id="cb3-7"><a></a>- Tema:</span>
-<span id="cb3-8"><a></a>- Restricciones:</span>
-<span id="cb3-9"><a></a></span>
-<span id="cb3-10"><a></a>Tarea:</span>
-<span id="cb3-11"><a></a>Necesito que [acción concreta].</span>
-<span id="cb3-12"><a></a></span>
-<span id="cb3-13"><a></a>Criterios:</span>
-<span id="cb3-14"><a></a>- Debe estar alineado con [meta / resultado].</span>
-<span id="cb3-15"><a></a>- Debe ser aplicable en [modalidad].</span>
-<span id="cb3-16"><a></a>- Debe considerar [condición relevante].</span>
-<span id="cb3-17"><a></a></span>
-<span id="cb3-18"><a></a>Formato de salida:</span>
-<span id="cb3-19"><a></a>Entrega [tabla / lista / rúbrica / pauta] con [columnas o secciones].</span>
-<span id="cb3-20"><a></a></span>
-<span id="cb3-21"><a></a>Antes de responder, pregunta si falta información crítica.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a aria-label="1"></a>Actúa como [rol].</span>
+<span id="cb3-2"><a aria-label="2"></a></span>
+<span id="cb3-3"><a aria-label="3"></a>Contexto:</span>
+<span id="cb3-4"><a aria-label="4"></a>- Curso:</span>
+<span id="cb3-5"><a aria-label="5"></a>- Nivel de estudiantes:</span>
+<span id="cb3-6"><a aria-label="6"></a>- Duración:</span>
+<span id="cb3-7"><a aria-label="7"></a>- Tema:</span>
+<span id="cb3-8"><a aria-label="8"></a>- Restricciones:</span>
+<span id="cb3-9"><a aria-label="9"></a></span>
+<span id="cb3-10"><a aria-label="10"></a>Tarea:</span>
+<span id="cb3-11"><a aria-label="11"></a>Necesito que [acción concreta].</span>
+<span id="cb3-12"><a aria-label="12"></a></span>
+<span id="cb3-13"><a aria-label="13"></a>Criterios:</span>
+<span id="cb3-14"><a aria-label="14"></a>- Debe estar alineado con [meta / resultado].</span>
+<span id="cb3-15"><a aria-label="15"></a>- Debe ser aplicable en [modalidad].</span>
+<span id="cb3-16"><a aria-label="16"></a>- Debe considerar [condición relevante].</span>
+<span id="cb3-17"><a aria-label="17"></a></span>
+<span id="cb3-18"><a aria-label="18"></a>Formato de salida:</span>
+<span id="cb3-19"><a aria-label="19"></a>Entrega [tabla / lista / rúbrica / pauta] con [columnas o secciones].</span>
+<span id="cb3-20"><a aria-label="20"></a></span>
+<span id="cb3-21"><a aria-label="21"></a>Antes de responder, pregunta si falta información crítica.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="cuatro-movimientos-que-suben-la-calidad" class="slide level2">
 <h2>Cuatro movimientos que suben la calidad</h2>
@@ -906,19 +912,19 @@ Universidad Técnica Federico Santa María
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3 id="pedir-preguntas-antes-de-la-respuesta">1 · Pedir preguntas antes de la respuesta</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>Antes de responder, hazme las 3 preguntas</span>
-<span id="cb4-2"><a></a>cuya respuesta más cambiaría tu propuesta.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a aria-label="1"></a>Antes de responder, hazme las 3 preguntas</span>
+<span id="cb4-2"><a aria-label="2"></a>cuya respuesta más cambiaría tu propuesta.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <h3 id="pedir-alternativas-contrastantes">2 · Pedir alternativas contrastantes</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>Dame 3 versiones con enfoques distintos</span>
-<span id="cb5-2"><a></a>y explica en una línea cuándo conviene cada una.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a aria-label="1"></a>Dame 3 versiones con enfoques distintos</span>
+<span id="cb5-2"><a aria-label="2"></a>y explica en una línea cuándo conviene cada una.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <h3 id="pedir-autocrítica">3 · Pedir autocrítica</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a>Revisa tu propia propuesta: ¿qué supuestos hiciste,</span>
-<span id="cb6-2"><a></a>qué podría fallar con estudiantes reales</span>
-<span id="cb6-3"><a></a>y qué le falta para ser aplicable el lunes?</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a aria-label="1"></a>Revisa tu propia propuesta: ¿qué supuestos hiciste,</span>
+<span id="cb6-2"><a aria-label="2"></a>qué podría fallar con estudiantes reales</span>
+<span id="cb6-3"><a aria-label="3"></a>y qué le falta para ser aplicable el lunes?</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <h3 id="pedir-el-rastro-de-decisiones">4 · Pedir el rastro de decisiones</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>Marca qué partes provienen de mi contexto</span>
-<span id="cb7-2"><a></a>y cuáles inventaste o asumiste.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a aria-label="1"></a>Marca qué partes provienen de mi contexto</span>
+<span id="cb7-2"><a aria-label="2"></a>y cuáles inventaste o asumiste.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="mostrar-el-estándar-no-solo-describirlo" class="slide level2">
@@ -935,20 +941,20 @@ Universidad Técnica Federico Santa María
 <li>una guía de laboratorio con el formato del departamento.</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a>Voy a mostrarte un ejemplo del estilo que necesito.</span>
-<span id="cb8-2"><a></a></span>
-<span id="cb8-3"><a></a>EJEMPLO (así deben verse los resultados):</span>
-<span id="cb8-4"><a></a>"Calcula el momento flector máximo de una viga</span>
-<span id="cb8-5"><a></a>simplemente apoyada, justificando el método elegido</span>
-<span id="cb8-6"><a></a>y comparando el resultado con una estimación previa."</span>
-<span id="cb8-7"><a></a></span>
-<span id="cb8-8"><a></a>Ahora genera 5 preguntas equivalentes para la unidad</span>
-<span id="cb8-9"><a></a>de [tema], manteniendo:</span>
-<span id="cb8-10"><a></a>- el mismo nivel de exigencia cognitiva;</span>
-<span id="cb8-11"><a></a>- la misma extensión;</span>
-<span id="cb8-12"><a></a>- la estructura "acción + justificación + contraste".</span>
-<span id="cb8-13"><a></a></span>
-<span id="cb8-14"><a></a>No cambies el formato del ejemplo.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a aria-label="1"></a>Voy a mostrarte un ejemplo del estilo que necesito.</span>
+<span id="cb8-2"><a aria-label="2"></a></span>
+<span id="cb8-3"><a aria-label="3"></a>EJEMPLO (así deben verse los resultados):</span>
+<span id="cb8-4"><a aria-label="4"></a>"Calcula el momento flector máximo de una viga</span>
+<span id="cb8-5"><a aria-label="5"></a>simplemente apoyada, justificando el método elegido</span>
+<span id="cb8-6"><a aria-label="6"></a>y comparando el resultado con una estimación previa."</span>
+<span id="cb8-7"><a aria-label="7"></a></span>
+<span id="cb8-8"><a aria-label="8"></a>Ahora genera 5 preguntas equivalentes para la unidad</span>
+<span id="cb8-9"><a aria-label="9"></a>de [tema], manteniendo:</span>
+<span id="cb8-10"><a aria-label="10"></a>- el mismo nivel de exigencia cognitiva;</span>
+<span id="cb8-11"><a aria-label="11"></a>- la misma extensión;</span>
+<span id="cb8-12"><a aria-label="12"></a>- la estructura "acción + justificación + contraste".</span>
+<span id="cb8-13"><a aria-label="13"></a></span>
+<span id="cb8-14"><a aria-label="14"></a>No cambies el formato del ejemplo.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="errores-frecuentes-de-prompting" class="slide level2">
@@ -1061,7 +1067,7 @@ Universidad Técnica Federico Santa María
 </div>
 </div>
 </section>
-<section id="section-4" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-4" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks/pausa.png" data-background-opacity="0.22" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Pausa · 5 minutos</span></p>
@@ -1069,7 +1075,7 @@ Universidad Técnica Federico Santa María
 <p><span style="font-size:0.9em; color:#C9A84C; margin-top:1.2em;">Al volver: de los prompts al diseño de la unidad.</span></p>
 </div>
 </section>
-<section id="section-5" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-5" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks/bloque3-diseno.png" data-background-opacity="0.20" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 3 · 15 minutos</span></p>
@@ -1167,24 +1173,24 @@ Universidad Técnica Federico Santa María
 <p><em>Verbo observable, objeto definido, evidencia implícita.</em></p>
 </div><div class="column" style="width:52%;">
 <h3 id="prompt-de-apoyo">Prompt de apoyo</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a></a>Actúa como diseñador instruccional universitario.</span>
-<span id="cb9-2"><a></a></span>
-<span id="cb9-3"><a></a>Transforma esta meta general en tres resultados de</span>
-<span id="cb9-4"><a></a>aprendizaje observables para estudiantes de [nivel]</span>
-<span id="cb9-5"><a></a>en [asignatura].</span>
-<span id="cb9-6"><a></a></span>
-<span id="cb9-7"><a></a>Meta:</span>
-<span id="cb9-8"><a></a>"Comprender la ética de la inteligencia artificial".</span>
-<span id="cb9-9"><a></a></span>
-<span id="cb9-10"><a></a>Para cada resultado indica:</span>
-<span id="cb9-11"><a></a>- verbo observable (evita "conocer", "comprender");</span>
-<span id="cb9-12"><a></a>- evidencia de logro concreta;</span>
-<span id="cb9-13"><a></a>- actividad breve que la produzca;</span>
-<span id="cb9-14"><a></a>- error común que debo prevenir;</span>
-<span id="cb9-15"><a></a>- cómo un estudiante podría "aprobar sin aprender".</span>
-<span id="cb9-16"><a></a></span>
-<span id="cb9-17"><a></a>Formato: tabla. Al final, señala cuál de los tres</span>
-<span id="cb9-18"><a></a>resultados es más exigente y por qué.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a aria-label="1"></a>Actúa como diseñador instruccional universitario.</span>
+<span id="cb9-2"><a aria-label="2"></a></span>
+<span id="cb9-3"><a aria-label="3"></a>Transforma esta meta general en tres resultados de</span>
+<span id="cb9-4"><a aria-label="4"></a>aprendizaje observables para estudiantes de [nivel]</span>
+<span id="cb9-5"><a aria-label="5"></a>en [asignatura].</span>
+<span id="cb9-6"><a aria-label="6"></a></span>
+<span id="cb9-7"><a aria-label="7"></a>Meta:</span>
+<span id="cb9-8"><a aria-label="8"></a>"Comprender la ética de la inteligencia artificial".</span>
+<span id="cb9-9"><a aria-label="9"></a></span>
+<span id="cb9-10"><a aria-label="10"></a>Para cada resultado indica:</span>
+<span id="cb9-11"><a aria-label="11"></a>- verbo observable (evita "conocer", "comprender");</span>
+<span id="cb9-12"><a aria-label="12"></a>- evidencia de logro concreta;</span>
+<span id="cb9-13"><a aria-label="13"></a>- actividad breve que la produzca;</span>
+<span id="cb9-14"><a aria-label="14"></a>- error común que debo prevenir;</span>
+<span id="cb9-15"><a aria-label="15"></a>- cómo un estudiante podría "aprobar sin aprender".</span>
+<span id="cb9-16"><a aria-label="16"></a></span>
+<span id="cb9-17"><a aria-label="17"></a>Formato: tabla. Al final, señala cuál de los tres</span>
+<span id="cb9-18"><a aria-label="18"></a>resultados es más exigente y por qué.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="verbos-el-detalle-que-decide-todo" class="slide level2">
@@ -1228,28 +1234,28 @@ Universidad Técnica Federico Santa María
 </section>
 <section id="prompt-reutilizable-secuencia-de-clase" class="slide level2 prompt-slide">
 <h2>Prompt reutilizable · secuencia de clase</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a></a>Actúa como diseñador instruccional universitario con experiencia en ingeniería.</span>
-<span id="cb10-2"><a></a></span>
-<span id="cb10-3"><a></a>Contexto:</span>
-<span id="cb10-4"><a></a>- Asignatura: [nombre] · Nivel: [año] · Tamaño del curso: [n]</span>
-<span id="cb10-5"><a></a>- Modalidad: [presencial / híbrida / online] · Duración del bloque: [min]</span>
-<span id="cb10-6"><a></a>- Resultado de aprendizaje: "[resultado observable]"</span>
-<span id="cb10-7"><a></a>- Conocimientos previos reales de mis estudiantes: [lo que sí y lo que no dominan]</span>
-<span id="cb10-8"><a></a>- Restricciones: [sala fija, sin laboratorio, sin internet, etc.]</span>
-<span id="cb10-9"><a></a></span>
-<span id="cb10-10"><a></a>Tarea:</span>
-<span id="cb10-11"><a></a>Diseña la secuencia del bloque con apertura, desarrollo, cierre y evaluación formativa.</span>
-<span id="cb10-12"><a></a></span>
-<span id="cb10-13"><a></a>Para cada momento entrega: tiempo, qué hace el docente, qué hacen los estudiantes,</span>
-<span id="cb10-14"><a></a>propósito pedagógico y evidencia observable de que está funcionando.</span>
-<span id="cb10-15"><a></a></span>
-<span id="cb10-16"><a></a>Criterios:</span>
-<span id="cb10-17"><a></a>- Al menos dos momentos deben ser de trabajo activo del estudiante.</span>
-<span id="cb10-18"><a></a>- Incluye un "plan B" si la actividad central toma más tiempo del previsto.</span>
-<span id="cb10-19"><a></a>- Indica en qué punto un estudiante podría resolver la tarea con IA sin aprender,</span>
-<span id="cb10-20"><a></a>  y cómo rediseñar ese punto.</span>
-<span id="cb10-21"><a></a></span>
-<span id="cb10-22"><a></a>Formato: tabla. Antes de responder, hazme las preguntas que falten para no asumir.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a aria-label="1"></a>Actúa como diseñador instruccional universitario con experiencia en ingeniería.</span>
+<span id="cb10-2"><a aria-label="2"></a></span>
+<span id="cb10-3"><a aria-label="3"></a>Contexto:</span>
+<span id="cb10-4"><a aria-label="4"></a>- Asignatura: [nombre] · Nivel: [año] · Tamaño del curso: [n]</span>
+<span id="cb10-5"><a aria-label="5"></a>- Modalidad: [presencial / híbrida / online] · Duración del bloque: [min]</span>
+<span id="cb10-6"><a aria-label="6"></a>- Resultado de aprendizaje: "[resultado observable]"</span>
+<span id="cb10-7"><a aria-label="7"></a>- Conocimientos previos reales de mis estudiantes: [lo que sí y lo que no dominan]</span>
+<span id="cb10-8"><a aria-label="8"></a>- Restricciones: [sala fija, sin laboratorio, sin internet, etc.]</span>
+<span id="cb10-9"><a aria-label="9"></a></span>
+<span id="cb10-10"><a aria-label="10"></a>Tarea:</span>
+<span id="cb10-11"><a aria-label="11"></a>Diseña la secuencia del bloque con apertura, desarrollo, cierre y evaluación formativa.</span>
+<span id="cb10-12"><a aria-label="12"></a></span>
+<span id="cb10-13"><a aria-label="13"></a>Para cada momento entrega: tiempo, qué hace el docente, qué hacen los estudiantes,</span>
+<span id="cb10-14"><a aria-label="14"></a>propósito pedagógico y evidencia observable de que está funcionando.</span>
+<span id="cb10-15"><a aria-label="15"></a></span>
+<span id="cb10-16"><a aria-label="16"></a>Criterios:</span>
+<span id="cb10-17"><a aria-label="17"></a>- Al menos dos momentos deben ser de trabajo activo del estudiante.</span>
+<span id="cb10-18"><a aria-label="18"></a>- Incluye un "plan B" si la actividad central toma más tiempo del previsto.</span>
+<span id="cb10-19"><a aria-label="19"></a>- Indica en qué punto un estudiante podría resolver la tarea con IA sin aprender,</span>
+<span id="cb10-20"><a aria-label="20"></a>  y cómo rediseñar ese punto.</span>
+<span id="cb10-21"><a aria-label="21"></a></span>
+<span id="cb10-22"><a aria-label="22"></a>Formato: tabla. Antes de responder, hazme las preguntas que falten para no asumir.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="actividad-2-rediseñar-una-meta" class="slide level2">
 <h2>Actividad 2 · rediseñar una meta</h2>
@@ -1287,7 +1293,7 @@ Universidad Técnica Federico Santa María
 </div>
 </div></div>
 </section>
-<section id="section-6" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-6" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks/bloque4-evaluacion.png" data-background-opacity="0.20" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 4 · 15 minutos</span></p>
@@ -1366,31 +1372,31 @@ Universidad Técnica Federico Santa María
 </section>
 <section id="prompt-reutilizable-rúbrica-analítica" class="slide level2 prompt-slide">
 <h2>Prompt reutilizable · rúbrica analítica</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a></a>Actúa como especialista en evaluación para el aprendizaje en educación superior.</span>
-<span id="cb11-2"><a></a></span>
-<span id="cb11-3"><a></a>Contexto:</span>
-<span id="cb11-4"><a></a>- Instrumento: [presentación oral de 8 min / informe / proyecto / examen]</span>
-<span id="cb11-5"><a></a>- Asignatura y nivel: [ ]</span>
-<span id="cb11-6"><a></a>- Resultado de aprendizaje evaluado:</span>
-<span id="cb11-7"><a></a>  "Comunicar una propuesta basada en evidencia, con argumento claro</span>
-<span id="cb11-8"><a></a>   y uso adecuado de fuentes".</span>
-<span id="cb11-9"><a></a>- Peso en la nota final: [ ] · Tiempo del que dispongo para corregir: [ ]</span>
-<span id="cb11-10"><a></a></span>
-<span id="cb11-11"><a></a>Tarea:</span>
-<span id="cb11-12"><a></a>Diseña una rúbrica analítica de 4 criterios y 4 niveles de desempeño.</span>
-<span id="cb11-13"><a></a></span>
-<span id="cb11-14"><a></a>Condiciones:</span>
-<span id="cb11-15"><a></a>- Cada descriptor debe ser observable: describe qué hace o produce el estudiante.</span>
-<span id="cb11-16"><a></a>- Prohibido usar "bueno", "excelente", "adecuado" sin conducta observable asociada.</span>
-<span id="cb11-17"><a></a>- La diferencia entre niveles debe estar en la evidencia, no en adverbios.</span>
-<span id="cb11-18"><a></a>- Agrega una columna con una frase de retroalimentación tipo por nivel.</span>
-<span id="cb11-19"><a></a></span>
-<span id="cb11-20"><a></a>Control de calidad (inclúyelo al final):</span>
-<span id="cb11-21"><a></a>1. ¿Qué criterio se solapa con otro y podría fusionarse?</span>
-<span id="cb11-22"><a></a>2. ¿Qué aspecto del resultado de aprendizaje quedó sin evaluar?</span>
-<span id="cb11-23"><a></a>3. ¿Qué sesgo podría introducir esta rúbrica contra algún perfil de estudiante?</span>
-<span id="cb11-24"><a></a></span>
-<span id="cb11-25"><a></a>Formato: tabla + las tres respuestas del control de calidad.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a aria-label="1"></a>Actúa como especialista en evaluación para el aprendizaje en educación superior.</span>
+<span id="cb11-2"><a aria-label="2"></a></span>
+<span id="cb11-3"><a aria-label="3"></a>Contexto:</span>
+<span id="cb11-4"><a aria-label="4"></a>- Instrumento: [presentación oral de 8 min / informe / proyecto / examen]</span>
+<span id="cb11-5"><a aria-label="5"></a>- Asignatura y nivel: [ ]</span>
+<span id="cb11-6"><a aria-label="6"></a>- Resultado de aprendizaje evaluado:</span>
+<span id="cb11-7"><a aria-label="7"></a>  "Comunicar una propuesta basada en evidencia, con argumento claro</span>
+<span id="cb11-8"><a aria-label="8"></a>   y uso adecuado de fuentes".</span>
+<span id="cb11-9"><a aria-label="9"></a>- Peso en la nota final: [ ] · Tiempo del que dispongo para corregir: [ ]</span>
+<span id="cb11-10"><a aria-label="10"></a></span>
+<span id="cb11-11"><a aria-label="11"></a>Tarea:</span>
+<span id="cb11-12"><a aria-label="12"></a>Diseña una rúbrica analítica de 4 criterios y 4 niveles de desempeño.</span>
+<span id="cb11-13"><a aria-label="13"></a></span>
+<span id="cb11-14"><a aria-label="14"></a>Condiciones:</span>
+<span id="cb11-15"><a aria-label="15"></a>- Cada descriptor debe ser observable: describe qué hace o produce el estudiante.</span>
+<span id="cb11-16"><a aria-label="16"></a>- Prohibido usar "bueno", "excelente", "adecuado" sin conducta observable asociada.</span>
+<span id="cb11-17"><a aria-label="17"></a>- La diferencia entre niveles debe estar en la evidencia, no en adverbios.</span>
+<span id="cb11-18"><a aria-label="18"></a>- Agrega una columna con una frase de retroalimentación tipo por nivel.</span>
+<span id="cb11-19"><a aria-label="19"></a></span>
+<span id="cb11-20"><a aria-label="20"></a>Control de calidad (inclúyelo al final):</span>
+<span id="cb11-21"><a aria-label="21"></a>1. ¿Qué criterio se solapa con otro y podría fusionarse?</span>
+<span id="cb11-22"><a aria-label="22"></a>2. ¿Qué aspecto del resultado de aprendizaje quedó sin evaluar?</span>
+<span id="cb11-23"><a aria-label="23"></a>3. ¿Qué sesgo podría introducir esta rúbrica contra algún perfil de estudiante?</span>
+<span id="cb11-24"><a aria-label="24"></a></span>
+<span id="cb11-25"><a aria-label="25"></a>Formato: tabla + las tres respuestas del control de calidad.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="actividad-3-su-instrumento-evaluativo" class="slide level2">
 <h2>Actividad 3 · su instrumento evaluativo</h2>
@@ -1429,7 +1435,7 @@ Universidad Técnica Federico Santa María
 </div>
 </div></div>
 </section>
-<section id="section-7" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-7" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks/bloque5-retroalimentacion.png" data-background-opacity="0.20" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 5 · 10 minutos</span></p>
@@ -1478,28 +1484,28 @@ Universidad Técnica Federico Santa María
 </section>
 <section id="prompt-reutilizable-retroalimentación" class="slide level2 prompt-slide">
 <h2>Prompt reutilizable · retroalimentación</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>Actúa como docente universitario que entrega retroalimentación formativa,</span>
-<span id="cb12-2"><a></a>clara y respetuosa.</span>
-<span id="cb12-3"><a></a></span>
-<span id="cb12-4"><a></a>Contexto:</span>
-<span id="cb12-5"><a></a>El estudiante entregó [tipo de trabajo] en [asignatura, nivel].</span>
-<span id="cb12-6"><a></a>Es su [primera / segunda] entrega del semestre.</span>
-<span id="cb12-7"><a></a></span>
-<span id="cb12-8"><a></a>Mis observaciones (usa SOLO estas, no agregues nada):</span>
-<span id="cb12-9"><a></a>- buena estructura general;</span>
-<span id="cb12-10"><a></a>- falta justificar la elección metodológica;</span>
-<span id="cb12-11"><a></a>- hay citas sin conexión con el argumento;</span>
-<span id="cb12-12"><a></a>- la conclusión repite resultados, pero no interpreta.</span>
-<span id="cb12-13"><a></a></span>
-<span id="cb12-14"><a></a>Tarea:</span>
-<span id="cb12-15"><a></a>Redacta una retroalimentación de máximo 180 palabras.</span>
-<span id="cb12-16"><a></a></span>
-<span id="cb12-17"><a></a>Condiciones:</span>
-<span id="cb12-18"><a></a>- Tono constructivo, dirigido al trabajo y no a la persona.</span>
-<span id="cb12-19"><a></a>- 2 fortalezas concretas y 3 acciones de mejora accionables antes de la próxima entrega.</span>
-<span id="cb12-20"><a></a>- Cierra con una pregunta que invite al estudiante a revisar su propio razonamiento.</span>
-<span id="cb12-21"><a></a>- No inventes información que no esté en mis observaciones.</span>
-<span id="cb12-22"><a></a>- Marca con [!] cualquier punto donde te falte información mía.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a aria-label="1"></a>Actúa como docente universitario que entrega retroalimentación formativa,</span>
+<span id="cb12-2"><a aria-label="2"></a>clara y respetuosa.</span>
+<span id="cb12-3"><a aria-label="3"></a></span>
+<span id="cb12-4"><a aria-label="4"></a>Contexto:</span>
+<span id="cb12-5"><a aria-label="5"></a>El estudiante entregó [tipo de trabajo] en [asignatura, nivel].</span>
+<span id="cb12-6"><a aria-label="6"></a>Es su [primera / segunda] entrega del semestre.</span>
+<span id="cb12-7"><a aria-label="7"></a></span>
+<span id="cb12-8"><a aria-label="8"></a>Mis observaciones (usa SOLO estas, no agregues nada):</span>
+<span id="cb12-9"><a aria-label="9"></a>- buena estructura general;</span>
+<span id="cb12-10"><a aria-label="10"></a>- falta justificar la elección metodológica;</span>
+<span id="cb12-11"><a aria-label="11"></a>- hay citas sin conexión con el argumento;</span>
+<span id="cb12-12"><a aria-label="12"></a>- la conclusión repite resultados, pero no interpreta.</span>
+<span id="cb12-13"><a aria-label="13"></a></span>
+<span id="cb12-14"><a aria-label="14"></a>Tarea:</span>
+<span id="cb12-15"><a aria-label="15"></a>Redacta una retroalimentación de máximo 180 palabras.</span>
+<span id="cb12-16"><a aria-label="16"></a></span>
+<span id="cb12-17"><a aria-label="17"></a>Condiciones:</span>
+<span id="cb12-18"><a aria-label="18"></a>- Tono constructivo, dirigido al trabajo y no a la persona.</span>
+<span id="cb12-19"><a aria-label="19"></a>- 2 fortalezas concretas y 3 acciones de mejora accionables antes de la próxima entrega.</span>
+<span id="cb12-20"><a aria-label="20"></a>- Cierra con una pregunta que invite al estudiante a revisar su propio razonamiento.</span>
+<span id="cb12-21"><a aria-label="21"></a>- No inventes información que no esté en mis observaciones.</span>
+<span id="cb12-22"><a aria-label="22"></a>- Marca con [!] cualquier punto donde te falte información mía.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="retroalimentación-para-el-curso-completo" class="slide level2">
 <h2>Retroalimentación para el curso completo</h2>
@@ -1514,24 +1520,24 @@ Universidad Técnica Federico Santa María
 </ul>
 <p>La IA es especialmente útil en la primera capa.</p>
 </div><div class="column" style="width:52%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a></a>Actúa como docente universitario.</span>
-<span id="cb13-2"><a></a></span>
-<span id="cb13-3"><a></a>Te entrego la lista de observaciones que anoté</span>
-<span id="cb13-4"><a></a>al corregir 40 informes, sin nombres ni datos</span>
-<span id="cb13-5"><a></a>de estudiantes:</span>
-<span id="cb13-6"><a></a></span>
-<span id="cb13-7"><a></a>[pegar lista de observaciones]</span>
-<span id="cb13-8"><a></a></span>
-<span id="cb13-9"><a></a>Tarea:</span>
-<span id="cb13-10"><a></a>1. Agrupa las observaciones en los 3 patrones</span>
-<span id="cb13-11"><a></a>   de error más frecuentes.</span>
-<span id="cb13-12"><a></a>2. Para cada patrón redacta: en qué consiste,</span>
-<span id="cb13-13"><a></a>   por qué ocurre y qué hacer distinto.</span>
-<span id="cb13-14"><a></a>3. Propón un ejercicio de 10 minutos para</span>
-<span id="cb13-15"><a></a>   trabajar el patrón más grave en la próxima clase.</span>
-<span id="cb13-16"><a></a></span>
-<span id="cb13-17"><a></a>Condiciones: no identifiques a nadie, ni siquiera</span>
-<span id="cb13-18"><a></a>de forma indirecta. Máximo 400 palabras.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a aria-label="1"></a>Actúa como docente universitario.</span>
+<span id="cb13-2"><a aria-label="2"></a></span>
+<span id="cb13-3"><a aria-label="3"></a>Te entrego la lista de observaciones que anoté</span>
+<span id="cb13-4"><a aria-label="4"></a>al corregir 40 informes, sin nombres ni datos</span>
+<span id="cb13-5"><a aria-label="5"></a>de estudiantes:</span>
+<span id="cb13-6"><a aria-label="6"></a></span>
+<span id="cb13-7"><a aria-label="7"></a>[pegar lista de observaciones]</span>
+<span id="cb13-8"><a aria-label="8"></a></span>
+<span id="cb13-9"><a aria-label="9"></a>Tarea:</span>
+<span id="cb13-10"><a aria-label="10"></a>1. Agrupa las observaciones en los 3 patrones</span>
+<span id="cb13-11"><a aria-label="11"></a>   de error más frecuentes.</span>
+<span id="cb13-12"><a aria-label="12"></a>2. Para cada patrón redacta: en qué consiste,</span>
+<span id="cb13-13"><a aria-label="13"></a>   por qué ocurre y qué hacer distinto.</span>
+<span id="cb13-14"><a aria-label="14"></a>3. Propón un ejercicio de 10 minutos para</span>
+<span id="cb13-15"><a aria-label="15"></a>   trabajar el patrón más grave en la próxima clase.</span>
+<span id="cb13-16"><a aria-label="16"></a></span>
+<span id="cb13-17"><a aria-label="17"></a>Condiciones: no identifiques a nadie, ni siquiera</span>
+<span id="cb13-18"><a aria-label="18"></a>de forma indirecta. Máximo 400 palabras.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="demostración-guiada-en-pantalla" class="slide level2">
@@ -1558,7 +1564,7 @@ Universidad Técnica Federico Santa María
 </div>
 </div>
 </section>
-<section id="section-8" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-8" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks/bloque6-clinica.png" data-background-opacity="0.20" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 6 · 20 minutos</span></p>
@@ -1702,29 +1708,29 @@ Universidad Técnica Federico Santa María
 </section>
 <section id="prompt-de-apoyo-para-la-clínica" class="slide level2 prompt-slide">
 <h2>Prompt de apoyo para la clínica</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a></a>Actúa como asesor de diseño instruccional. Trabajamos en grupo y vamos a</span>
-<span id="cb14-2"><a></a>construir una cadena de alineación completa. No avances a la siguiente</span>
-<span id="cb14-3"><a></a>casilla hasta que yo confirme la anterior.</span>
-<span id="cb14-4"><a></a></span>
-<span id="cb14-5"><a></a>Contexto del caso:</span>
-<span id="cb14-6"><a></a>- Asignatura y nivel: [ ]</span>
-<span id="cb14-7"><a></a>- N.º de estudiantes y recursos disponibles: [ ]</span>
-<span id="cb14-8"><a></a>- Unidad o evaluación: [ ]</span>
-<span id="cb14-9"><a></a>- Problema real que queremos resolver: [ ]</span>
-<span id="cb14-10"><a></a></span>
-<span id="cb14-11"><a></a>Procedimiento:</span>
-<span id="cb14-12"><a></a>1. Propón 3 versiones del resultado de aprendizaje y pregúntame cuál elijo.</span>
-<span id="cb14-13"><a></a>2. Con el elegido, propón la evidencia de logro y adviérteme si no lo demuestra.</span>
-<span id="cb14-14"><a></a>3. Diseña la actividad que produce esa evidencia, con tiempos realistas.</span>
-<span id="cb14-15"><a></a>4. Redacta 3 criterios observables con 3 niveles cada uno.</span>
-<span id="cb14-16"><a></a>5. Escribe una frase modelo de retroalimentación de nivel intermedio.</span>
-<span id="cb14-17"><a></a>6. Indica cómo un estudiante resolvería todo esto con IA sin aprender,</span>
-<span id="cb14-18"><a></a>   y propón dos rediseños posibles.</span>
-<span id="cb14-19"><a></a></span>
-<span id="cb14-20"><a></a>Reglas:</span>
-<span id="cb14-21"><a></a>- Marca con [SUPUESTO] cada cosa que asumas y que yo no te haya dicho.</span>
-<span id="cb14-22"><a></a>- No uses adjetivos evaluativos sin conducta observable asociada.</span>
-<span id="cb14-23"><a></a>- Si una casilla deja de conversar con la anterior, dilo de inmediato.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a aria-label="1"></a>Actúa como asesor de diseño instruccional. Trabajamos en grupo y vamos a</span>
+<span id="cb14-2"><a aria-label="2"></a>construir una cadena de alineación completa. No avances a la siguiente</span>
+<span id="cb14-3"><a aria-label="3"></a>casilla hasta que yo confirme la anterior.</span>
+<span id="cb14-4"><a aria-label="4"></a></span>
+<span id="cb14-5"><a aria-label="5"></a>Contexto del caso:</span>
+<span id="cb14-6"><a aria-label="6"></a>- Asignatura y nivel: [ ]</span>
+<span id="cb14-7"><a aria-label="7"></a>- N.º de estudiantes y recursos disponibles: [ ]</span>
+<span id="cb14-8"><a aria-label="8"></a>- Unidad o evaluación: [ ]</span>
+<span id="cb14-9"><a aria-label="9"></a>- Problema real que queremos resolver: [ ]</span>
+<span id="cb14-10"><a aria-label="10"></a></span>
+<span id="cb14-11"><a aria-label="11"></a>Procedimiento:</span>
+<span id="cb14-12"><a aria-label="12"></a>1. Propón 3 versiones del resultado de aprendizaje y pregúntame cuál elijo.</span>
+<span id="cb14-13"><a aria-label="13"></a>2. Con el elegido, propón la evidencia de logro y adviérteme si no lo demuestra.</span>
+<span id="cb14-14"><a aria-label="14"></a>3. Diseña la actividad que produce esa evidencia, con tiempos realistas.</span>
+<span id="cb14-15"><a aria-label="15"></a>4. Redacta 3 criterios observables con 3 niveles cada uno.</span>
+<span id="cb14-16"><a aria-label="16"></a>5. Escribe una frase modelo de retroalimentación de nivel intermedio.</span>
+<span id="cb14-17"><a aria-label="17"></a>6. Indica cómo un estudiante resolvería todo esto con IA sin aprender,</span>
+<span id="cb14-18"><a aria-label="18"></a>   y propón dos rediseños posibles.</span>
+<span id="cb14-19"><a aria-label="19"></a></span>
+<span id="cb14-20"><a aria-label="20"></a>Reglas:</span>
+<span id="cb14-21"><a aria-label="21"></a>- Marca con [SUPUESTO] cada cosa que asumas y que yo no te haya dicho.</span>
+<span id="cb14-22"><a aria-label="22"></a>- No uses adjetivos evaluativos sin conducta observable asociada.</span>
+<span id="cb14-23"><a aria-label="23"></a>- Si una casilla deja de conversar con la anterior, dilo de inmediato.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="puesta-en-común-revisión-cruzada" class="slide level2">
 <h2>Puesta en común · revisión cruzada</h2>
@@ -1795,7 +1801,7 @@ Universidad Técnica Federico Santa María
 <li>aplicar criterios de uso responsable definidos por la Universidad.</li>
 </ul>
 </section>
-<section id="section-9" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-9" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks/anuncio-taller2.png" data-background-opacity="0.18" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:72vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.85em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Jueves 27 de agosto · 14:30 a 16:30</span></p>
@@ -1804,7 +1810,7 @@ Universidad Técnica Federico Santa María
 <p><span style="font-size:0.8em; color:#C9A84C; margin-top:1.6em;">Las siguientes láminas son material de profundización para consultar después.</span></p>
 </div>
 </section>
-<section id="section-10" class="slide level2" data-background-color="#1A3A6B" data-state="no-logo">
+<section id="section-10" class="slide level2" data-background-color="#1A3A6B" data-background-image="images/blocks/anexo.png" data-background-opacity="0.15" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#C9A84C; text-transform:uppercase; letter-spacing:0.15em;">Anexo</span></p>
@@ -1864,30 +1870,30 @@ Universidad Técnica Federico Santa María
 <section id="anexo-política-de-ia-para-su-programa-de-curso" class="slide level2 prompt-slide">
 <h2>Anexo · política de IA para su programa de curso</h2>
 <p>Texto modelo para adaptar. Conviene declararlo el primer día de clases, no cuando aparece el problema.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a></a>USO DE INTELIGENCIA ARTIFICIAL EN ESTA ASIGNATURA</span>
-<span id="cb15-2"><a></a></span>
-<span id="cb15-3"><a></a>1. Uso permitido sin declaración</span>
-<span id="cb15-4"><a></a>   Corrección ortográfica y de estilo, traducción de material de estudio,</span>
-<span id="cb15-5"><a></a>   generación de ejercicios adicionales para practicar.</span>
-<span id="cb15-6"><a></a></span>
-<span id="cb15-7"><a></a>2. Uso permitido con declaración</span>
-<span id="cb15-8"><a></a>   Apoyo en la generación de ideas, estructuración de textos, depuración de</span>
-<span id="cb15-9"><a></a>   código y explicación de conceptos. Debe indicarse al final del trabajo:</span>
-<span id="cb15-10"><a></a>   qué herramienta se usó, para qué, y qué se modificó de la respuesta.</span>
-<span id="cb15-11"><a></a></span>
-<span id="cb15-12"><a></a>3. Uso no permitido</span>
-<span id="cb15-13"><a></a>   Generar la entrega completa o sustancial y presentarla como propia.</span>
-<span id="cb15-14"><a></a>   Producir datos, resultados o referencias que no fueron verificados.</span>
-<span id="cb15-15"><a></a>   Utilizar IA en evaluaciones presenciales o de ejecución individual.</span>
-<span id="cb15-16"><a></a></span>
-<span id="cb15-17"><a></a>4. Sobre la verificación</span>
-<span id="cb15-18"><a></a>   El estudiante es responsable de todo lo que entrega, incluidas las</span>
-<span id="cb15-19"><a></a>   afirmaciones o citas generadas por IA. Una referencia inexistente se</span>
-<span id="cb15-20"><a></a>   evalúa como cualquier otro error de fuente.</span>
-<span id="cb15-21"><a></a></span>
-<span id="cb15-22"><a></a>5. Sobre la defensa del trabajo</span>
-<span id="cb15-23"><a></a>   El equipo docente puede solicitar una explicación oral breve de las</span>
-<span id="cb15-24"><a></a>   decisiones tomadas en cualquier entrega.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a aria-label="1"></a>USO DE INTELIGENCIA ARTIFICIAL EN ESTA ASIGNATURA</span>
+<span id="cb15-2"><a aria-label="2"></a></span>
+<span id="cb15-3"><a aria-label="3"></a>1. Uso permitido sin declaración</span>
+<span id="cb15-4"><a aria-label="4"></a>   Corrección ortográfica y de estilo, traducción de material de estudio,</span>
+<span id="cb15-5"><a aria-label="5"></a>   generación de ejercicios adicionales para practicar.</span>
+<span id="cb15-6"><a aria-label="6"></a></span>
+<span id="cb15-7"><a aria-label="7"></a>2. Uso permitido con declaración</span>
+<span id="cb15-8"><a aria-label="8"></a>   Apoyo en la generación de ideas, estructuración de textos, depuración de</span>
+<span id="cb15-9"><a aria-label="9"></a>   código y explicación de conceptos. Debe indicarse al final del trabajo:</span>
+<span id="cb15-10"><a aria-label="10"></a>   qué herramienta se usó, para qué, y qué se modificó de la respuesta.</span>
+<span id="cb15-11"><a aria-label="11"></a></span>
+<span id="cb15-12"><a aria-label="12"></a>3. Uso no permitido</span>
+<span id="cb15-13"><a aria-label="13"></a>   Generar la entrega completa o sustancial y presentarla como propia.</span>
+<span id="cb15-14"><a aria-label="14"></a>   Producir datos, resultados o referencias que no fueron verificados.</span>
+<span id="cb15-15"><a aria-label="15"></a>   Utilizar IA en evaluaciones presenciales o de ejecución individual.</span>
+<span id="cb15-16"><a aria-label="16"></a></span>
+<span id="cb15-17"><a aria-label="17"></a>4. Sobre la verificación</span>
+<span id="cb15-18"><a aria-label="18"></a>   El estudiante es responsable de todo lo que entrega, incluidas las</span>
+<span id="cb15-19"><a aria-label="19"></a>   afirmaciones o citas generadas por IA. Una referencia inexistente se</span>
+<span id="cb15-20"><a aria-label="20"></a>   evalúa como cualquier otro error de fuente.</span>
+<span id="cb15-21"><a aria-label="21"></a></span>
+<span id="cb15-22"><a aria-label="22"></a>5. Sobre la defensa del trabajo</span>
+<span id="cb15-23"><a aria-label="23"></a>   El equipo docente puede solicitar una explicación oral breve de las</span>
+<span id="cb15-24"><a aria-label="24"></a>   decisiones tomadas en cualquier entrega.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="anexo-cinco-errores-frecuentes" class="slide level2">
 <h2>Anexo · cinco errores frecuentes</h2>
@@ -1920,44 +1926,44 @@ Universidad Técnica Federico Santa María
 <div class="columns">
 <div class="column" style="width:33%;">
 <h3 id="explicar-un-concepto-difícil">Explicar un concepto difícil</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a></a>Explica [concepto] de tres formas:</span>
-<span id="cb16-2"><a></a>una analogía cotidiana, una</span>
-<span id="cb16-3"><a></a>definición formal y un</span>
-<span id="cb16-4"><a></a>contraejemplo típico.</span>
-<span id="cb16-5"><a></a></span>
-<span id="cb16-6"><a></a>Público: estudiantes de [nivel]</span>
-<span id="cb16-7"><a></a>que ya saben [previo] pero</span>
-<span id="cb16-8"><a></a>suelen confundirlo con [error].</span>
-<span id="cb16-9"><a></a></span>
-<span id="cb16-10"><a></a>Máximo 120 palabras cada una.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb16-1"><a aria-label="1"></a>Explica [concepto] de tres formas:</span>
+<span id="cb16-2"><a aria-label="2"></a>una analogía cotidiana, una</span>
+<span id="cb16-3"><a aria-label="3"></a>definición formal y un</span>
+<span id="cb16-4"><a aria-label="4"></a>contraejemplo típico.</span>
+<span id="cb16-5"><a aria-label="5"></a></span>
+<span id="cb16-6"><a aria-label="6"></a>Público: estudiantes de [nivel]</span>
+<span id="cb16-7"><a aria-label="7"></a>que ya saben [previo] pero</span>
+<span id="cb16-8"><a aria-label="8"></a>suelen confundirlo con [error].</span>
+<span id="cb16-9"><a aria-label="9"></a></span>
+<span id="cb16-10"><a aria-label="10"></a>Máximo 120 palabras cada una.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:33%;">
 <h3 id="revisar-una-guía-o-prueba">Revisar una guía o prueba</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb17-1"><a></a>Revisa esta prueba como si</span>
-<span id="cb17-2"><a></a>fueras un estudiante promedio</span>
-<span id="cb17-3"><a></a>de [nivel].</span>
-<span id="cb17-4"><a></a></span>
-<span id="cb17-5"><a></a>Para cada pregunta indica:</span>
-<span id="cb17-6"><a></a>- qué entendiste que se pedía;</span>
-<span id="cb17-7"><a></a>- qué es ambiguo;</span>
-<span id="cb17-8"><a></a>- cuánto tiempo te tomaría;</span>
-<span id="cb17-9"><a></a>- si se puede responder sin</span>
-<span id="cb17-10"><a></a>  haber estudiado la unidad.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb17-1"><a aria-label="1"></a>Revisa esta prueba como si</span>
+<span id="cb17-2"><a aria-label="2"></a>fueras un estudiante promedio</span>
+<span id="cb17-3"><a aria-label="3"></a>de [nivel].</span>
+<span id="cb17-4"><a aria-label="4"></a></span>
+<span id="cb17-5"><a aria-label="5"></a>Para cada pregunta indica:</span>
+<span id="cb17-6"><a aria-label="6"></a>- qué entendiste que se pedía;</span>
+<span id="cb17-7"><a aria-label="7"></a>- qué es ambiguo;</span>
+<span id="cb17-8"><a aria-label="8"></a>- cuánto tiempo te tomaría;</span>
+<span id="cb17-9"><a aria-label="9"></a>- si se puede responder sin</span>
+<span id="cb17-10"><a aria-label="10"></a>  haber estudiado la unidad.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:33%;">
 <h3 id="adaptar-material-a-otro-nivel">Adaptar material a otro nivel</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb18-1"><a></a>Adapta este material para</span>
-<span id="cb18-2"><a></a>estudiantes de [nivel destino].</span>
-<span id="cb18-3"><a></a></span>
-<span id="cb18-4"><a></a>Mantén el rigor conceptual y</span>
-<span id="cb18-5"><a></a>ajusta solo el andamiaje:</span>
-<span id="cb18-6"><a></a>vocabulario, ejemplos y pasos</span>
-<span id="cb18-7"><a></a>intermedios.</span>
-<span id="cb18-8"><a></a></span>
-<span id="cb18-9"><a></a>Marca qué simplificaciones</span>
-<span id="cb18-10"><a></a>podrían generar errores</span>
-<span id="cb18-11"><a></a>conceptuales más adelante.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb18-1"><a aria-label="1"></a>Adapta este material para</span>
+<span id="cb18-2"><a aria-label="2"></a>estudiantes de [nivel destino].</span>
+<span id="cb18-3"><a aria-label="3"></a></span>
+<span id="cb18-4"><a aria-label="4"></a>Mantén el rigor conceptual y</span>
+<span id="cb18-5"><a aria-label="5"></a>ajusta solo el andamiaje:</span>
+<span id="cb18-6"><a aria-label="6"></a>vocabulario, ejemplos y pasos</span>
+<span id="cb18-7"><a aria-label="7"></a>intermedios.</span>
+<span id="cb18-8"><a aria-label="8"></a></span>
+<span id="cb18-9"><a aria-label="9"></a>Marca qué simplificaciones</span>
+<span id="cb18-10"><a aria-label="10"></a>podrían generar errores</span>
+<span id="cb18-11"><a aria-label="11"></a>conceptuales más adelante.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
-<section id="section-11" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-11" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks/gracias.png" data-background-opacity="0.18" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:72vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.85em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Programa de Talleres de Inteligencia Artificial Generativa</span></p>

@@ -7,8 +7,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-f1aadacce99040138bbb613f9330654f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.27">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Francisco Alfaro">
   <title>Talks – Gestión de Operaciones</title>
@@ -18,10 +18,16 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -96,7 +102,7 @@
     code span.vs { color: #9ecbff; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-d00722164563f5f30988ac1f2846ed8d.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-bf7c52dfdd1a25e965e814f6859a736f.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -200,7 +206,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Francisco Alfaro 
+Francisco Alfaro
 </div>
         <p class="quarto-title-affiliation">
             Departamento de Industrias · UTFSM
@@ -553,15 +559,15 @@ o en el ícono de cabeza de gato (macOS/Linux).</p>
 <p><br></p>
 <p><strong>¿Cómo se instala AMPL en Colab?</strong></p>
 <div style="font-size:0.72em; overflow:hidden;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="co"># Celda 1: instalar el cliente Python de AMPL</span></span>
-<span id="cb2-2"><a></a><span class="op">!</span>pip install amplpy <span class="op">-</span>q</span>
-<span id="cb2-3"><a></a></span>
-<span id="cb2-4"><a></a><span class="co"># Celda 2: descargar módulos y solvers</span></span>
-<span id="cb2-5"><a></a><span class="im">from</span> amplpy <span class="im">import</span> AMPL, tools</span>
-<span id="cb2-6"><a></a>tools.ampl_notebook(</span>
-<span id="cb2-7"><a></a>    modules<span class="op">=</span>[<span class="st">"highs"</span>, <span class="st">"cplex"</span>],</span>
-<span id="cb2-8"><a></a>    license_uuid<span class="op">=</span><span class="st">"default"</span></span>
-<span id="cb2-9"><a></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a aria-label="1"></a><span class="co"># Celda 1: instalar el cliente Python de AMPL</span></span>
+<span id="cb2-2"><a aria-label="2"></a><span class="op">!</span>pip install amplpy <span class="op">-</span>q</span>
+<span id="cb2-3"><a aria-label="3"></a></span>
+<span id="cb2-4"><a aria-label="4"></a><span class="co"># Celda 2: descargar módulos y solvers</span></span>
+<span id="cb2-5"><a aria-label="5"></a><span class="im">from</span> amplpy <span class="im">import</span> AMPL, tools</span>
+<span id="cb2-6"><a aria-label="6"></a>tools.ampl_notebook(</span>
+<span id="cb2-7"><a aria-label="7"></a>    modules<span class="op">=</span>[<span class="st">"highs"</span>, <span class="st">"cplex"</span>],</span>
+<span id="cb2-8"><a aria-label="8"></a>    license_uuid<span class="op">=</span><span class="st">"default"</span></span>
+<span id="cb2-9"><a aria-label="9"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -579,25 +585,25 @@ o en el ícono de cabeza de gato (macOS/Linux).</p>
 </div><div class="column" style="width:50%;">
 <p><strong>Resolver un problema completo en Colab</strong></p>
 <div style="font-size:0.72em; overflow:hidden;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">from</span> amplpy <span class="im">import</span> AMPL</span>
-<span id="cb3-2"><a></a></span>
-<span id="cb3-3"><a></a>ampl <span class="op">=</span> AMPL()</span>
-<span id="cb3-4"><a></a></span>
-<span id="cb3-5"><a></a><span class="co"># Modelo inline (también puede ser un archivo .mod)</span></span>
-<span id="cb3-6"><a></a>ampl.<span class="bu">eval</span>(<span class="st">"""</span></span>
-<span id="cb3-7"><a></a><span class="st">  var x &gt;= 0;</span></span>
-<span id="cb3-8"><a></a><span class="st">  var y &gt;= 0;</span></span>
-<span id="cb3-9"><a></a><span class="st">  maximize obj: 5*x + 4*y;</span></span>
-<span id="cb3-10"><a></a><span class="st">  s.t. c1: 6*x + 4*y &lt;= 24;</span></span>
-<span id="cb3-11"><a></a><span class="st">  s.t. c2:   x + 2*y &lt;=  6;</span></span>
-<span id="cb3-12"><a></a><span class="st">"""</span>)</span>
-<span id="cb3-13"><a></a></span>
-<span id="cb3-14"><a></a>ampl.option[<span class="st">"solver"</span>] <span class="op">=</span> <span class="st">"highs"</span></span>
-<span id="cb3-15"><a></a>ampl.solve()</span>
-<span id="cb3-16"><a></a></span>
-<span id="cb3-17"><a></a><span class="bu">print</span>(<span class="st">"x ="</span>, ampl.var[<span class="st">"x"</span>].value())</span>
-<span id="cb3-18"><a></a><span class="bu">print</span>(<span class="st">"y ="</span>, ampl.var[<span class="st">"y"</span>].value())</span>
-<span id="cb3-19"><a></a><span class="bu">print</span>(<span class="st">"obj ="</span>, ampl.obj[<span class="st">"obj"</span>].value())</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a aria-label="1"></a><span class="im">from</span> amplpy <span class="im">import</span> AMPL</span>
+<span id="cb3-2"><a aria-label="2"></a></span>
+<span id="cb3-3"><a aria-label="3"></a>ampl <span class="op">=</span> AMPL()</span>
+<span id="cb3-4"><a aria-label="4"></a></span>
+<span id="cb3-5"><a aria-label="5"></a><span class="co"># Modelo inline (también puede ser un archivo .mod)</span></span>
+<span id="cb3-6"><a aria-label="6"></a>ampl.<span class="bu">eval</span>(<span class="st">"""</span></span>
+<span id="cb3-7"><a aria-label="7"></a><span class="st">  var x &gt;= 0;</span></span>
+<span id="cb3-8"><a aria-label="8"></a><span class="st">  var y &gt;= 0;</span></span>
+<span id="cb3-9"><a aria-label="9"></a><span class="st">  maximize obj: 5*x + 4*y;</span></span>
+<span id="cb3-10"><a aria-label="10"></a><span class="st">  s.t. c1: 6*x + 4*y &lt;= 24;</span></span>
+<span id="cb3-11"><a aria-label="11"></a><span class="st">  s.t. c2:   x + 2*y &lt;=  6;</span></span>
+<span id="cb3-12"><a aria-label="12"></a><span class="st">"""</span>)</span>
+<span id="cb3-13"><a aria-label="13"></a></span>
+<span id="cb3-14"><a aria-label="14"></a>ampl.option[<span class="st">"solver"</span>] <span class="op">=</span> <span class="st">"highs"</span></span>
+<span id="cb3-15"><a aria-label="15"></a>ampl.solve()</span>
+<span id="cb3-16"><a aria-label="16"></a></span>
+<span id="cb3-17"><a aria-label="17"></a><span class="bu">print</span>(<span class="st">"x ="</span>, ampl.var[<span class="st">"x"</span>].value())</span>
+<span id="cb3-18"><a aria-label="18"></a><span class="bu">print</span>(<span class="st">"y ="</span>, ampl.var[<span class="st">"y"</span>].value())</span>
+<span id="cb3-19"><a aria-label="19"></a><span class="bu">print</span>(<span class="st">"obj ="</span>, ampl.obj[<span class="st">"obj"</span>].value())</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
 </section>
@@ -630,31 +636,31 @@ o en el ícono de cabeza de gato (macOS/Linux).</p>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb4-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb4-3"><a></a></span>
-<span id="cb4-4"><a></a><span class="co"># Extraer solución de AMPL a DataFrame</span></span>
-<span id="cb4-5"><a></a>resultados <span class="op">=</span> ampl.var[<span class="st">"x"</span>].to_pandas()</span>
-<span id="cb4-6"><a></a></span>
-<span id="cb4-7"><a></a><span class="co"># Visualizar producción óptima por período</span></span>
-<span id="cb4-8"><a></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
-<span id="cb4-9"><a></a>ax.bar(</span>
-<span id="cb4-10"><a></a>    resultados.index,</span>
-<span id="cb4-11"><a></a>    resultados[<span class="st">"x.val"</span>],</span>
-<span id="cb4-12"><a></a>    color<span class="op">=</span><span class="st">"#4A9FD4"</span></span>
-<span id="cb4-13"><a></a>)</span>
-<span id="cb4-14"><a></a>ax.set_title(<span class="st">"Plan de producción óptimo"</span>, fontsize<span class="op">=</span><span class="dv">13</span>)</span>
-<span id="cb4-15"><a></a>ax.set_xlabel(<span class="st">"Período"</span>)</span>
-<span id="cb4-16"><a></a>ax.set_ylabel(<span class="st">"Unidades producidas"</span>)</span>
-<span id="cb4-17"><a></a>ax.axhline(</span>
-<span id="cb4-18"><a></a>    y<span class="op">=</span>demanda_promedio,</span>
-<span id="cb4-19"><a></a>    color<span class="op">=</span><span class="st">"#C9A84C"</span>,</span>
-<span id="cb4-20"><a></a>    linestyle<span class="op">=</span><span class="st">"--"</span>,</span>
-<span id="cb4-21"><a></a>    label<span class="op">=</span><span class="st">"Demanda promedio"</span></span>
-<span id="cb4-22"><a></a>)</span>
-<span id="cb4-23"><a></a>ax.legend()</span>
-<span id="cb4-24"><a></a>plt.tight_layout()</span>
-<span id="cb4-25"><a></a>plt.show()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a aria-label="1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-2"><a aria-label="2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-3"><a aria-label="3"></a></span>
+<span id="cb4-4"><a aria-label="4"></a><span class="co"># Extraer solución de AMPL a DataFrame</span></span>
+<span id="cb4-5"><a aria-label="5"></a>resultados <span class="op">=</span> ampl.var[<span class="st">"x"</span>].to_pandas()</span>
+<span id="cb4-6"><a aria-label="6"></a></span>
+<span id="cb4-7"><a aria-label="7"></a><span class="co"># Visualizar producción óptima por período</span></span>
+<span id="cb4-8"><a aria-label="8"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
+<span id="cb4-9"><a aria-label="9"></a>ax.bar(</span>
+<span id="cb4-10"><a aria-label="10"></a>    resultados.index,</span>
+<span id="cb4-11"><a aria-label="11"></a>    resultados[<span class="st">"x.val"</span>],</span>
+<span id="cb4-12"><a aria-label="12"></a>    color<span class="op">=</span><span class="st">"#4A9FD4"</span></span>
+<span id="cb4-13"><a aria-label="13"></a>)</span>
+<span id="cb4-14"><a aria-label="14"></a>ax.set_title(<span class="st">"Plan de producción óptimo"</span>, fontsize<span class="op">=</span><span class="dv">13</span>)</span>
+<span id="cb4-15"><a aria-label="15"></a>ax.set_xlabel(<span class="st">"Período"</span>)</span>
+<span id="cb4-16"><a aria-label="16"></a>ax.set_ylabel(<span class="st">"Unidades producidas"</span>)</span>
+<span id="cb4-17"><a aria-label="17"></a>ax.axhline(</span>
+<span id="cb4-18"><a aria-label="18"></a>    y<span class="op">=</span>demanda_promedio,</span>
+<span id="cb4-19"><a aria-label="19"></a>    color<span class="op">=</span><span class="st">"#C9A84C"</span>,</span>
+<span id="cb4-20"><a aria-label="20"></a>    linestyle<span class="op">=</span><span class="st">"--"</span>,</span>
+<span id="cb4-21"><a aria-label="21"></a>    label<span class="op">=</span><span class="st">"Demanda promedio"</span></span>
+<span id="cb4-22"><a aria-label="22"></a>)</span>
+<span id="cb4-23"><a aria-label="23"></a>ax.legend()</span>
+<span id="cb4-24"><a aria-label="24"></a>plt.tight_layout()</span>
+<span id="cb4-25"><a aria-label="25"></a>plt.show()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="section-4" class="slide level2" data-background-color="#0F2044">

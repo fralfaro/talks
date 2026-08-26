@@ -7,8 +7,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-f1aadacce99040138bbb613f9330654f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.27">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Universidad Técnica Federico Santa María">
   <meta name="dcterms.date" content="2026-08-27">
@@ -19,10 +19,16 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -97,7 +103,7 @@
     code span.vs { color: #9ecbff; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-b2b877e1b2f4a1a6f87ed443b730ce45.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c0ecab25cbec914f13e0868d85731132.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -201,14 +207,14 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Universidad Técnica Federico Santa María 
+Universidad Técnica Federico Santa María
 </div>
 </div>
 </div>
 
   <p class="date">2026-08-27</p>
 </section>
-<section id="section" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks-t2/portada.png" data-background-opacity="0.18" data-state="no-logo">
 <h2></h2>
 <div style="display: flex; justify-content: center; align-items: center; height: 70vh; flex-direction: column; text-align: center;">
 <p><span style="font-size: 0.9em; color: #4A9FD4; text-transform: uppercase;">Programa de Talleres de Inteligencia Artificial Generativa</span></p>
@@ -349,7 +355,7 @@ Universidad Técnica Federico Santa María
 </div>
 </div>
 </section>
-<section id="section-1" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-1" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks-t2/bloque0-encuadre.png" data-background-opacity="0.20" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 0 · 10 minutos</span></p>
@@ -586,7 +592,7 @@ Universidad Técnica Federico Santa María
 </div>
 </div>
 </section>
-<section id="section-2" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-2" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks-t2/bloque1-literatura.png" data-background-opacity="0.20" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 1 · 20 minutos</span></p>
@@ -711,29 +717,29 @@ Universidad Técnica Federico Santa María
 </section>
 <section id="prompt-reutilizable-matriz-de-literatura" class="slide level2 prompt-slide">
 <h2>Prompt reutilizable · matriz de literatura</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>Actúa como asistente de investigación metodológicamente riguroso.</span>
-<span id="cb1-2"><a></a></span>
-<span id="cb1-3"><a></a>Contexto:</span>
-<span id="cb1-4"><a></a>Estoy revisando literatura sobre [tema] en [disciplina].</span>
-<span id="cb1-5"><a></a>Te entregaré resúmenes o fragmentos de artículos. Mi proyecto busca [objetivo].</span>
-<span id="cb1-6"><a></a></span>
-<span id="cb1-7"><a></a>Tarea:</span>
-<span id="cb1-8"><a></a>Construye una matriz de síntesis para comparar los textos.</span>
-<span id="cb1-9"><a></a></span>
-<span id="cb1-10"><a></a>Criterios (no negociables):</span>
-<span id="cb1-11"><a></a>- No inventes información que no esté en los fragmentos.</span>
-<span id="cb1-12"><a></a>- Distingue explícitamente hallazgos reportados, metodología, limitaciones e inferencias tuyas.</span>
-<span id="cb1-13"><a></a>- Marca "no indicado" cuando falte información: nunca completes por plausibilidad.</span>
-<span id="cb1-14"><a></a>- Cita para cada celda la frase o sección del fragmento que la respalda.</span>
-<span id="cb1-15"><a></a></span>
-<span id="cb1-16"><a></a>Formato:</span>
-<span id="cb1-17"><a></a>Tabla con columnas: autor/año · objetivo · método · muestra o datos ·</span>
-<span id="cb1-18"><a></a>hallazgos · limitaciones · relación con mi proyecto · evidencia textual.</span>
-<span id="cb1-19"><a></a></span>
-<span id="cb1-20"><a></a>Al cerrar, agrega tres listas breves:</span>
-<span id="cb1-21"><a></a>1. Coincidencias entre los textos.</span>
-<span id="cb1-22"><a></a>2. Contradicciones o tensiones.</span>
-<span id="cb1-23"><a></a>3. Vacíos que ninguno cubre y que mi proyecto podría abordar.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a aria-label="1"></a>Actúa como asistente de investigación metodológicamente riguroso.</span>
+<span id="cb1-2"><a aria-label="2"></a></span>
+<span id="cb1-3"><a aria-label="3"></a>Contexto:</span>
+<span id="cb1-4"><a aria-label="4"></a>Estoy revisando literatura sobre [tema] en [disciplina].</span>
+<span id="cb1-5"><a aria-label="5"></a>Te entregaré resúmenes o fragmentos de artículos. Mi proyecto busca [objetivo].</span>
+<span id="cb1-6"><a aria-label="6"></a></span>
+<span id="cb1-7"><a aria-label="7"></a>Tarea:</span>
+<span id="cb1-8"><a aria-label="8"></a>Construye una matriz de síntesis para comparar los textos.</span>
+<span id="cb1-9"><a aria-label="9"></a></span>
+<span id="cb1-10"><a aria-label="10"></a>Criterios (no negociables):</span>
+<span id="cb1-11"><a aria-label="11"></a>- No inventes información que no esté en los fragmentos.</span>
+<span id="cb1-12"><a aria-label="12"></a>- Distingue explícitamente hallazgos reportados, metodología, limitaciones e inferencias tuyas.</span>
+<span id="cb1-13"><a aria-label="13"></a>- Marca "no indicado" cuando falte información: nunca completes por plausibilidad.</span>
+<span id="cb1-14"><a aria-label="14"></a>- Cita para cada celda la frase o sección del fragmento que la respalda.</span>
+<span id="cb1-15"><a aria-label="15"></a></span>
+<span id="cb1-16"><a aria-label="16"></a>Formato:</span>
+<span id="cb1-17"><a aria-label="17"></a>Tabla con columnas: autor/año · objetivo · método · muestra o datos ·</span>
+<span id="cb1-18"><a aria-label="18"></a>hallazgos · limitaciones · relación con mi proyecto · evidencia textual.</span>
+<span id="cb1-19"><a aria-label="19"></a></span>
+<span id="cb1-20"><a aria-label="20"></a>Al cerrar, agrega tres listas breves:</span>
+<span id="cb1-21"><a aria-label="21"></a>1. Coincidencias entre los textos.</span>
+<span id="cb1-22"><a aria-label="22"></a>2. Contradicciones o tensiones.</span>
+<span id="cb1-23"><a aria-label="23"></a>3. Vacíos que ninguno cubre y que mi proyecto podría abordar.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="actividad-1-su-matriz-de-literatura" class="slide level2">
 <h2>Actividad 1 · su matriz de literatura</h2>
@@ -771,7 +777,7 @@ Universidad Técnica Federico Santa María
 </div>
 </div></div>
 </section>
-<section id="section-3" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-3" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks-t2/bloque2-datos.png" data-background-opacity="0.20" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 2 · 20 minutos</span></p>
@@ -858,52 +864,52 @@ Universidad Técnica Federico Santa María
 <li>el error, si aparece, es inspeccionable.</li>
 </ul>
 </div><div class="column" style="width:52%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>Actúa como analista de datos. Escribe código en</span>
-<span id="cb2-2"><a></a>[Python con pandas / R con tidyverse] que yo</span>
-<span id="cb2-3"><a></a>ejecutaré localmente. No necesitas ver los datos.</span>
-<span id="cb2-4"><a></a></span>
-<span id="cb2-5"><a></a>Estructura del archivo:</span>
-<span id="cb2-6"><a></a>- [columna]: [tipo y descripción]</span>
-<span id="cb2-7"><a></a>- [columna]: [tipo y descripción]</span>
-<span id="cb2-8"><a></a></span>
-<span id="cb2-9"><a></a>Tarea:</span>
-<span id="cb2-10"><a></a>Genera un análisis exploratorio que incluya:</span>
-<span id="cb2-11"><a></a>1. revisión de valores faltantes y fuera de rango;</span>
-<span id="cb2-12"><a></a>2. estadísticos descriptivos por grupo;</span>
-<span id="cb2-13"><a></a>3. tres gráficos pertinentes, con el motivo de cada uno.</span>
-<span id="cb2-14"><a></a></span>
-<span id="cb2-15"><a></a>Condiciones:</span>
-<span id="cb2-16"><a></a>- Comenta cada bloque explicando qué revisar en la salida.</span>
-<span id="cb2-17"><a></a>- Advierte qué supuestos estás haciendo sobre los datos.</span>
-<span id="cb2-18"><a></a>- No uses librerías que requieran instalación adicional.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a aria-label="1"></a>Actúa como analista de datos. Escribe código en</span>
+<span id="cb2-2"><a aria-label="2"></a>[Python con pandas / R con tidyverse] que yo</span>
+<span id="cb2-3"><a aria-label="3"></a>ejecutaré localmente. No necesitas ver los datos.</span>
+<span id="cb2-4"><a aria-label="4"></a></span>
+<span id="cb2-5"><a aria-label="5"></a>Estructura del archivo:</span>
+<span id="cb2-6"><a aria-label="6"></a>- [columna]: [tipo y descripción]</span>
+<span id="cb2-7"><a aria-label="7"></a>- [columna]: [tipo y descripción]</span>
+<span id="cb2-8"><a aria-label="8"></a></span>
+<span id="cb2-9"><a aria-label="9"></a>Tarea:</span>
+<span id="cb2-10"><a aria-label="10"></a>Genera un análisis exploratorio que incluya:</span>
+<span id="cb2-11"><a aria-label="11"></a>1. revisión de valores faltantes y fuera de rango;</span>
+<span id="cb2-12"><a aria-label="12"></a>2. estadísticos descriptivos por grupo;</span>
+<span id="cb2-13"><a aria-label="13"></a>3. tres gráficos pertinentes, con el motivo de cada uno.</span>
+<span id="cb2-14"><a aria-label="14"></a></span>
+<span id="cb2-15"><a aria-label="15"></a>Condiciones:</span>
+<span id="cb2-16"><a aria-label="16"></a>- Comenta cada bloque explicando qué revisar en la salida.</span>
+<span id="cb2-17"><a aria-label="17"></a>- Advierte qué supuestos estás haciendo sobre los datos.</span>
+<span id="cb2-18"><a aria-label="18"></a>- No uses librerías que requieran instalación adicional.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="prompt-reutilizable-plan-de-análisis-exploratorio" class="slide level2 prompt-slide">
 <h2>Prompt reutilizable · plan de análisis exploratorio</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>Actúa como analista de datos académico, cauteloso con la inferencia.</span>
-<span id="cb3-2"><a></a></span>
-<span id="cb3-3"><a></a>Contexto:</span>
-<span id="cb3-4"><a></a>Tengo una base de datos sobre [tema]. NO te entrego los datos, solo su estructura.</span>
-<span id="cb3-5"><a></a>- Unidad de observación: [ ] · N aproximado: [ ] · Período: [ ]</span>
-<span id="cb3-6"><a></a>- [variable 1]: [tipo, escala, descripción]</span>
-<span id="cb3-7"><a></a>- [variable 2]: [tipo, escala, descripción]</span>
-<span id="cb3-8"><a></a>- [variable 3]: [tipo, escala, descripción]</span>
-<span id="cb3-9"><a></a>Mi pregunta de investigación es: [ ]</span>
-<span id="cb3-10"><a></a></span>
-<span id="cb3-11"><a></a>Tarea:</span>
-<span id="cb3-12"><a></a>Propón un plan de análisis exploratorio inicial.</span>
-<span id="cb3-13"><a></a></span>
-<span id="cb3-14"><a></a>Condiciones:</span>
-<span id="cb3-15"><a></a>- No asumas causalidad; señala cuándo una lectura causal sería tentadora pero indebida.</span>
-<span id="cb3-16"><a></a>- Indica la visualización recomendada para cada pregunta y por qué esa y no otra.</span>
-<span id="cb3-17"><a></a>- Señala posibles problemas de calidad de datos y cómo detectarlos.</span>
-<span id="cb3-18"><a></a>- Sugiere preguntas interpretativas para discutir con el equipo.</span>
-<span id="cb3-19"><a></a></span>
-<span id="cb3-20"><a></a>Formato:</span>
-<span id="cb3-21"><a></a>Tabla con: pregunta · variables · gráfico sugerido · qué observar · cautela interpretativa.</span>
-<span id="cb3-22"><a></a></span>
-<span id="cb3-23"><a></a>Al final, lista los tres supuestos que estás haciendo sobre mis datos</span>
-<span id="cb3-24"><a></a>y que yo debería confirmar antes de usar este plan.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a aria-label="1"></a>Actúa como analista de datos académico, cauteloso con la inferencia.</span>
+<span id="cb3-2"><a aria-label="2"></a></span>
+<span id="cb3-3"><a aria-label="3"></a>Contexto:</span>
+<span id="cb3-4"><a aria-label="4"></a>Tengo una base de datos sobre [tema]. NO te entrego los datos, solo su estructura.</span>
+<span id="cb3-5"><a aria-label="5"></a>- Unidad de observación: [ ] · N aproximado: [ ] · Período: [ ]</span>
+<span id="cb3-6"><a aria-label="6"></a>- [variable 1]: [tipo, escala, descripción]</span>
+<span id="cb3-7"><a aria-label="7"></a>- [variable 2]: [tipo, escala, descripción]</span>
+<span id="cb3-8"><a aria-label="8"></a>- [variable 3]: [tipo, escala, descripción]</span>
+<span id="cb3-9"><a aria-label="9"></a>Mi pregunta de investigación es: [ ]</span>
+<span id="cb3-10"><a aria-label="10"></a></span>
+<span id="cb3-11"><a aria-label="11"></a>Tarea:</span>
+<span id="cb3-12"><a aria-label="12"></a>Propón un plan de análisis exploratorio inicial.</span>
+<span id="cb3-13"><a aria-label="13"></a></span>
+<span id="cb3-14"><a aria-label="14"></a>Condiciones:</span>
+<span id="cb3-15"><a aria-label="15"></a>- No asumas causalidad; señala cuándo una lectura causal sería tentadora pero indebida.</span>
+<span id="cb3-16"><a aria-label="16"></a>- Indica la visualización recomendada para cada pregunta y por qué esa y no otra.</span>
+<span id="cb3-17"><a aria-label="17"></a>- Señala posibles problemas de calidad de datos y cómo detectarlos.</span>
+<span id="cb3-18"><a aria-label="18"></a>- Sugiere preguntas interpretativas para discutir con el equipo.</span>
+<span id="cb3-19"><a aria-label="19"></a></span>
+<span id="cb3-20"><a aria-label="20"></a>Formato:</span>
+<span id="cb3-21"><a aria-label="21"></a>Tabla con: pregunta · variables · gráfico sugerido · qué observar · cautela interpretativa.</span>
+<span id="cb3-22"><a aria-label="22"></a></span>
+<span id="cb3-23"><a aria-label="23"></a>Al final, lista los tres supuestos que estás haciendo sobre mis datos</span>
+<span id="cb3-24"><a aria-label="24"></a>y que yo debería confirmar antes de usar este plan.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="actividad-2-preguntas-para-sus-datos" class="slide level2">
 <h2>Actividad 2 · preguntas para sus datos</h2>
@@ -942,7 +948,7 @@ Universidad Técnica Federico Santa María
 </div>
 </div></div>
 </section>
-<section id="section-4" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-4" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks-t2/pausa.png" data-background-opacity="0.22" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Pausa · 5 minutos</span></p>
@@ -950,7 +956,7 @@ Universidad Técnica Federico Santa María
 <p><span style="font-size:0.9em; color:#C9A84C; margin-top:1.2em;">Al volver: de los datos al texto.</span></p>
 </div>
 </section>
-<section id="section-5" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-5" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks-t2/bloque3-redaccion.png" data-background-opacity="0.20" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 3 · 20 minutos</span></p>
@@ -1060,33 +1066,33 @@ Universidad Técnica Federico Santa María
 </section>
 <section id="prompt-reutilizable-abstract" class="slide level2 prompt-slide">
 <h2>Prompt reutilizable · abstract</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>Actúa como editor académico exigente de una revista indexada de [disciplina].</span>
-<span id="cb4-2"><a></a></span>
-<span id="cb4-3"><a></a>Contexto:</span>
-<span id="cb4-4"><a></a>Estoy preparando un abstract para [artículo / ponencia / postulación a fondo].</span>
-<span id="cb4-5"><a></a>Revista o congreso de destino: [ ] · Límite de palabras: [ ]</span>
-<span id="cb4-6"><a></a></span>
-<span id="cb4-7"><a></a>Información base (usa SOLO esto):</span>
-<span id="cb4-8"><a></a>- Problema:</span>
-<span id="cb4-9"><a></a>- Objetivo:</span>
-<span id="cb4-10"><a></a>- Método:</span>
-<span id="cb4-11"><a></a>- Datos o muestra:</span>
-<span id="cb4-12"><a></a>- Resultados principales:</span>
-<span id="cb4-13"><a></a>- Contribución:</span>
-<span id="cb4-14"><a></a></span>
-<span id="cb4-15"><a></a>Tarea:</span>
-<span id="cb4-16"><a></a>Redacta un abstract de máximo [250] palabras.</span>
-<span id="cb4-17"><a></a></span>
-<span id="cb4-18"><a></a>Condiciones:</span>
-<span id="cb4-19"><a></a>- Tono académico claro; una idea por oración.</span>
-<span id="cb4-20"><a></a>- No agregues resultados, cifras ni implicancias que no estén en la información base.</span>
-<span id="cb4-21"><a></a>- Entrega además una versión de 150 palabras.</span>
-<span id="cb4-22"><a></a>- Propón tres títulos alternativos: uno descriptivo, uno con el hallazgo, uno con la contribución.</span>
-<span id="cb4-23"><a></a></span>
-<span id="cb4-24"><a></a>Control de calidad (inclúyelo al final):</span>
-<span id="cb4-25"><a></a>1. Tres puntos que debería verificar antes de enviar.</span>
-<span id="cb4-26"><a></a>2. Qué información falta en mi insumo y debilita el abstract.</span>
-<span id="cb4-27"><a></a>3. La pregunta más incómoda que haría un revisor al leerlo.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a aria-label="1"></a>Actúa como editor académico exigente de una revista indexada de [disciplina].</span>
+<span id="cb4-2"><a aria-label="2"></a></span>
+<span id="cb4-3"><a aria-label="3"></a>Contexto:</span>
+<span id="cb4-4"><a aria-label="4"></a>Estoy preparando un abstract para [artículo / ponencia / postulación a fondo].</span>
+<span id="cb4-5"><a aria-label="5"></a>Revista o congreso de destino: [ ] · Límite de palabras: [ ]</span>
+<span id="cb4-6"><a aria-label="6"></a></span>
+<span id="cb4-7"><a aria-label="7"></a>Información base (usa SOLO esto):</span>
+<span id="cb4-8"><a aria-label="8"></a>- Problema:</span>
+<span id="cb4-9"><a aria-label="9"></a>- Objetivo:</span>
+<span id="cb4-10"><a aria-label="10"></a>- Método:</span>
+<span id="cb4-11"><a aria-label="11"></a>- Datos o muestra:</span>
+<span id="cb4-12"><a aria-label="12"></a>- Resultados principales:</span>
+<span id="cb4-13"><a aria-label="13"></a>- Contribución:</span>
+<span id="cb4-14"><a aria-label="14"></a></span>
+<span id="cb4-15"><a aria-label="15"></a>Tarea:</span>
+<span id="cb4-16"><a aria-label="16"></a>Redacta un abstract de máximo [250] palabras.</span>
+<span id="cb4-17"><a aria-label="17"></a></span>
+<span id="cb4-18"><a aria-label="18"></a>Condiciones:</span>
+<span id="cb4-19"><a aria-label="19"></a>- Tono académico claro; una idea por oración.</span>
+<span id="cb4-20"><a aria-label="20"></a>- No agregues resultados, cifras ni implicancias que no estén en la información base.</span>
+<span id="cb4-21"><a aria-label="21"></a>- Entrega además una versión de 150 palabras.</span>
+<span id="cb4-22"><a aria-label="22"></a>- Propón tres títulos alternativos: uno descriptivo, uno con el hallazgo, uno con la contribución.</span>
+<span id="cb4-23"><a aria-label="23"></a></span>
+<span id="cb4-24"><a aria-label="24"></a>Control de calidad (inclúyelo al final):</span>
+<span id="cb4-25"><a aria-label="25"></a>1. Tres puntos que debería verificar antes de enviar.</span>
+<span id="cb4-26"><a aria-label="26"></a>2. Qué información falta en mi insumo y debilita el abstract.</span>
+<span id="cb4-27"><a aria-label="27"></a>3. La pregunta más incómoda que haría un revisor al leerlo.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="actividad-3-resumen-o-abstract" class="slide level2">
 <h2>Actividad 3 · resumen o abstract</h2>
@@ -1125,7 +1131,7 @@ Universidad Técnica Federico Santa María
 </div>
 </div></div>
 </section>
-<section id="section-6" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-6" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks-t2/bloque4-automatizacion.png" data-background-opacity="0.20" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 4 · 20 minutos</span></p>
@@ -1272,29 +1278,29 @@ Universidad Técnica Federico Santa María
 </section>
 <section id="prompt-reutilizable-correo-o-informe" class="slide level2 prompt-slide">
 <h2>Prompt reutilizable · correo o informe</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a></a>Actúa como asistente administrativo académico.</span>
-<span id="cb5-2"><a></a></span>
-<span id="cb5-3"><a></a>Contexto:</span>
-<span id="cb5-4"><a></a>Necesito redactar [correo / informe breve / minuta] para [destinatario y su rol]</span>
-<span id="cb5-5"><a></a>sobre [tema]. Relación previa: [formal / cercana]. Urgencia: [ ].</span>
-<span id="cb5-6"><a></a></span>
-<span id="cb5-7"><a></a>Información obligatoria (si falta alguna, pregúntame antes de redactar):</span>
-<span id="cb5-8"><a></a>- Propósito:</span>
-<span id="cb5-9"><a></a>- Fecha límite:</span>
-<span id="cb5-10"><a></a>- Documentos adjuntos:</span>
-<span id="cb5-11"><a></a>- Acción esperada del destinatario:</span>
-<span id="cb5-12"><a></a>- Tono:</span>
-<span id="cb5-13"><a></a></span>
-<span id="cb5-14"><a></a>Tarea:</span>
-<span id="cb5-15"><a></a>Redacta el texto de forma clara, breve y formal.</span>
-<span id="cb5-16"><a></a></span>
-<span id="cb5-17"><a></a>Condiciones:</span>
-<span id="cb5-18"><a></a>- No inventes datos, fechas, cargos ni compromisos.</span>
-<span id="cb5-19"><a></a>- Incluye asunto y una versión más breve (máximo 5 líneas).</span>
-<span id="cb5-20"><a></a>- Deja entre [corchetes] cualquier dato que yo deba completar.</span>
-<span id="cb5-21"><a></a>- Señala si falta información crítica antes de enviarlo.</span>
-<span id="cb5-22"><a></a>- Si el mensaje comunica una negativa o un plazo incómodo, dilo con claridad</span>
-<span id="cb5-23"><a></a>  en las primeras dos líneas: no lo entierres al final.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb5-1"><a aria-label="1"></a>Actúa como asistente administrativo académico.</span>
+<span id="cb5-2"><a aria-label="2"></a></span>
+<span id="cb5-3"><a aria-label="3"></a>Contexto:</span>
+<span id="cb5-4"><a aria-label="4"></a>Necesito redactar [correo / informe breve / minuta] para [destinatario y su rol]</span>
+<span id="cb5-5"><a aria-label="5"></a>sobre [tema]. Relación previa: [formal / cercana]. Urgencia: [ ].</span>
+<span id="cb5-6"><a aria-label="6"></a></span>
+<span id="cb5-7"><a aria-label="7"></a>Información obligatoria (si falta alguna, pregúntame antes de redactar):</span>
+<span id="cb5-8"><a aria-label="8"></a>- Propósito:</span>
+<span id="cb5-9"><a aria-label="9"></a>- Fecha límite:</span>
+<span id="cb5-10"><a aria-label="10"></a>- Documentos adjuntos:</span>
+<span id="cb5-11"><a aria-label="11"></a>- Acción esperada del destinatario:</span>
+<span id="cb5-12"><a aria-label="12"></a>- Tono:</span>
+<span id="cb5-13"><a aria-label="13"></a></span>
+<span id="cb5-14"><a aria-label="14"></a>Tarea:</span>
+<span id="cb5-15"><a aria-label="15"></a>Redacta el texto de forma clara, breve y formal.</span>
+<span id="cb5-16"><a aria-label="16"></a></span>
+<span id="cb5-17"><a aria-label="17"></a>Condiciones:</span>
+<span id="cb5-18"><a aria-label="18"></a>- No inventes datos, fechas, cargos ni compromisos.</span>
+<span id="cb5-19"><a aria-label="19"></a>- Incluye asunto y una versión más breve (máximo 5 líneas).</span>
+<span id="cb5-20"><a aria-label="20"></a>- Deja entre [corchetes] cualquier dato que yo deba completar.</span>
+<span id="cb5-21"><a aria-label="21"></a>- Señala si falta información crítica antes de enviarlo.</span>
+<span id="cb5-22"><a aria-label="22"></a>- Si el mensaje comunica una negativa o un plazo incómodo, dilo con claridad</span>
+<span id="cb5-23"><a aria-label="23"></a>  en las primeras dos líneas: no lo entierres al final.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="actividad-4-su-plantilla-de-productividad" class="slide level2">
 <h2>Actividad 4 · su plantilla de productividad</h2>
@@ -1332,7 +1338,7 @@ Universidad Técnica Federico Santa María
 </div>
 </div></div>
 </section>
-<section id="section-7" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-7" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks-t2/bloque5-prueba-cruzada.png" data-background-opacity="0.20" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Bloque 5 · 20 minutos</span></p>
@@ -1513,33 +1519,33 @@ Universidad Técnica Federico Santa María
 <section id="prompt-maestro-reutilizable" class="slide level2 prompt-slide">
 <h2>Prompt maestro reutilizable</h2>
 <p>Base para la fase 1. Complételo con el contexto del grupo.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a></a>Actúa como [rol experto].</span>
-<span id="cb6-2"><a></a></span>
-<span id="cb6-3"><a></a>Voy a usar este prompt de forma recurrente para [tarea], con frecuencia [ ].</span>
-<span id="cb6-4"><a></a></span>
-<span id="cb6-5"><a></a>Insumos que entregaré:</span>
-<span id="cb6-6"><a></a>- [insumo 1]</span>
-<span id="cb6-7"><a></a>- [insumo 2]</span>
-<span id="cb6-8"><a></a>- [insumo 3]</span>
-<span id="cb6-9"><a></a></span>
-<span id="cb6-10"><a></a>Tu tarea:</span>
-<span id="cb6-11"><a></a>[acción concreta].</span>
-<span id="cb6-12"><a></a></span>
-<span id="cb6-13"><a></a>Reglas:</span>
-<span id="cb6-14"><a></a>- No inventes información.</span>
-<span id="cb6-15"><a></a>- Si falta un dato esencial, pregunta antes de responder.</span>
-<span id="cb6-16"><a></a>- Separa hechos, inferencias y recomendaciones.</span>
-<span id="cb6-17"><a></a>- Mantén confidencialidad: no solicites datos personales innecesarios.</span>
-<span id="cb6-18"><a></a>- Deja entre [corchetes] todo lo que yo deba completar o verificar.</span>
-<span id="cb6-19"><a></a></span>
-<span id="cb6-20"><a></a>Formato:</span>
-<span id="cb6-21"><a></a>[tabla / correo / informe / lista / plantilla], con [secciones y extensión].</span>
-<span id="cb6-22"><a></a></span>
-<span id="cb6-23"><a></a>Control de calidad:</span>
-<span id="cb6-24"><a></a>Al final incluye una lista breve de aspectos que debo revisar manualmente</span>
-<span id="cb6-25"><a></a>antes de usar este resultado.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb6-1"><a aria-label="1"></a>Actúa como [rol experto].</span>
+<span id="cb6-2"><a aria-label="2"></a></span>
+<span id="cb6-3"><a aria-label="3"></a>Voy a usar este prompt de forma recurrente para [tarea], con frecuencia [ ].</span>
+<span id="cb6-4"><a aria-label="4"></a></span>
+<span id="cb6-5"><a aria-label="5"></a>Insumos que entregaré:</span>
+<span id="cb6-6"><a aria-label="6"></a>- [insumo 1]</span>
+<span id="cb6-7"><a aria-label="7"></a>- [insumo 2]</span>
+<span id="cb6-8"><a aria-label="8"></a>- [insumo 3]</span>
+<span id="cb6-9"><a aria-label="9"></a></span>
+<span id="cb6-10"><a aria-label="10"></a>Tu tarea:</span>
+<span id="cb6-11"><a aria-label="11"></a>[acción concreta].</span>
+<span id="cb6-12"><a aria-label="12"></a></span>
+<span id="cb6-13"><a aria-label="13"></a>Reglas:</span>
+<span id="cb6-14"><a aria-label="14"></a>- No inventes información.</span>
+<span id="cb6-15"><a aria-label="15"></a>- Si falta un dato esencial, pregunta antes de responder.</span>
+<span id="cb6-16"><a aria-label="16"></a>- Separa hechos, inferencias y recomendaciones.</span>
+<span id="cb6-17"><a aria-label="17"></a>- Mantén confidencialidad: no solicites datos personales innecesarios.</span>
+<span id="cb6-18"><a aria-label="18"></a>- Deja entre [corchetes] todo lo que yo deba completar o verificar.</span>
+<span id="cb6-19"><a aria-label="19"></a></span>
+<span id="cb6-20"><a aria-label="20"></a>Formato:</span>
+<span id="cb6-21"><a aria-label="21"></a>[tabla / correo / informe / lista / plantilla], con [secciones y extensión].</span>
+<span id="cb6-22"><a aria-label="22"></a></span>
+<span id="cb6-23"><a aria-label="23"></a>Control de calidad:</span>
+<span id="cb6-24"><a aria-label="24"></a>Al final incluye una lista breve de aspectos que debo revisar manualmente</span>
+<span id="cb6-25"><a aria-label="25"></a>antes de usar este resultado.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="section-8" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-8" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks-t2/cierre-repositorio.png" data-background-opacity="0.20" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Cierre · 5 minutos</span></p>
@@ -1553,11 +1559,11 @@ Universidad Técnica Federico Santa María
 <div class="column" style="width:50%;">
 <p><br></p>
 <p><strong>Un solo documento</strong>, con una sección por tarea:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>01_literatura_matriz</span>
-<span id="cb7-2"><a></a>02_analisis_exploratorio</span>
-<span id="cb7-3"><a></a>03_abstract</span>
-<span id="cb7-4"><a></a>04_correo_coordinacion</span>
-<span id="cb7-5"><a></a>05_informe_avance</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a aria-label="1"></a>01_literatura_matriz</span>
+<span id="cb7-2"><a aria-label="2"></a>02_analisis_exploratorio</span>
+<span id="cb7-3"><a aria-label="3"></a>03_abstract</span>
+<span id="cb7-4"><a aria-label="4"></a>04_correo_coordinacion</span>
+<span id="cb7-5"><a aria-label="5"></a>05_informe_avance</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Para cada uno anote tres cosas:</p>
 <ul>
 <li><strong>cuándo</strong> lo usa;</li>
@@ -1666,7 +1672,7 @@ Universidad Técnica Federico Santa María
 <li>optimizar tiempo y calidad con criterios de uso responsable.</li>
 </ul>
 </section>
-<section id="section-9" class="slide level2" data-background-color="#1A3A6B" data-state="no-logo">
+<section id="section-9" class="slide level2" data-background-color="#1A3A6B" data-background-image="images/blocks-t2/anexo.png" data-background-opacity="0.15" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.9em; color:#C9A84C; text-transform:uppercase; letter-spacing:0.15em;">Anexo</span></p>
@@ -1719,26 +1725,26 @@ Universidad Técnica Federico Santa María
 <section id="anexo-declaración-de-uso-de-ia" class="slide level2 prompt-slide">
 <h2>Anexo · declaración de uso de IA</h2>
 <p>Formulaciones para adaptar según lo que exija la revista, el congreso o el fondo.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a>USO ACOTADO A LA FORMA</span>
-<span id="cb8-2"><a></a>"Durante la preparación de este trabajo se utilizó [herramienta] para</span>
-<span id="cb8-3"><a></a>apoyar la edición de estilo y la revisión de redacción. Los autores</span>
-<span id="cb8-4"><a></a>revisaron y editaron el contenido y asumen plena responsabilidad por</span>
-<span id="cb8-5"><a></a>el contenido de la publicación."</span>
-<span id="cb8-6"><a></a></span>
-<span id="cb8-7"><a></a>USO EN ORGANIZACIÓN DE MATERIAL</span>
-<span id="cb8-8"><a></a>"Se utilizó [herramienta] para apoyar la organización y síntesis de la</span>
-<span id="cb8-9"><a></a>literatura previamente seleccionada por los autores. Todas las fuentes</span>
-<span id="cb8-10"><a></a>citadas fueron verificadas en su versión original. El análisis, la</span>
-<span id="cb8-11"><a></a>interpretación y las conclusiones son responsabilidad de los autores."</span>
-<span id="cb8-12"><a></a></span>
-<span id="cb8-13"><a></a>USO EN CÓDIGO O ANÁLISIS</span>
-<span id="cb8-14"><a></a>"Se utilizó [herramienta] como apoyo en la escritura y depuración del</span>
-<span id="cb8-15"><a></a>código de análisis. Los resultados fueron reproducidos y validados por</span>
-<span id="cb8-16"><a></a>los autores. Los datos no fueron compartidos con la herramienta."</span>
-<span id="cb8-17"><a></a></span>
-<span id="cb8-18"><a></a>NOTA</span>
-<span id="cb8-19"><a></a>La IA generativa no puede figurar como autora: no puede asumir</span>
-<span id="cb8-20"><a></a>responsabilidad sobre el contenido ni aprobar la versión final.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a aria-label="1"></a>USO ACOTADO A LA FORMA</span>
+<span id="cb8-2"><a aria-label="2"></a>"Durante la preparación de este trabajo se utilizó [herramienta] para</span>
+<span id="cb8-3"><a aria-label="3"></a>apoyar la edición de estilo y la revisión de redacción. Los autores</span>
+<span id="cb8-4"><a aria-label="4"></a>revisaron y editaron el contenido y asumen plena responsabilidad por</span>
+<span id="cb8-5"><a aria-label="5"></a>el contenido de la publicación."</span>
+<span id="cb8-6"><a aria-label="6"></a></span>
+<span id="cb8-7"><a aria-label="7"></a>USO EN ORGANIZACIÓN DE MATERIAL</span>
+<span id="cb8-8"><a aria-label="8"></a>"Se utilizó [herramienta] para apoyar la organización y síntesis de la</span>
+<span id="cb8-9"><a aria-label="9"></a>literatura previamente seleccionada por los autores. Todas las fuentes</span>
+<span id="cb8-10"><a aria-label="10"></a>citadas fueron verificadas en su versión original. El análisis, la</span>
+<span id="cb8-11"><a aria-label="11"></a>interpretación y las conclusiones son responsabilidad de los autores."</span>
+<span id="cb8-12"><a aria-label="12"></a></span>
+<span id="cb8-13"><a aria-label="13"></a>USO EN CÓDIGO O ANÁLISIS</span>
+<span id="cb8-14"><a aria-label="14"></a>"Se utilizó [herramienta] como apoyo en la escritura y depuración del</span>
+<span id="cb8-15"><a aria-label="15"></a>código de análisis. Los resultados fueron reproducidos y validados por</span>
+<span id="cb8-16"><a aria-label="16"></a>los autores. Los datos no fueron compartidos con la herramienta."</span>
+<span id="cb8-17"><a aria-label="17"></a></span>
+<span id="cb8-18"><a aria-label="18"></a>NOTA</span>
+<span id="cb8-19"><a aria-label="19"></a>La IA generativa no puede figurar como autora: no puede asumir</span>
+<span id="cb8-20"><a aria-label="20"></a>responsabilidad sobre el contenido ni aprobar la versión final.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="anexo-errores-frecuentes-en-investigación" class="slide level2">
 <h2>Anexo · errores frecuentes en investigación</h2>
@@ -1771,45 +1777,45 @@ Universidad Técnica Federico Santa María
 <div class="columns">
 <div class="column" style="width:33%;">
 <h3 id="revisor-adversarial">Revisor adversarial</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a></a>Actúa como revisor par escéptico</span>
-<span id="cb9-2"><a></a>de [revista/disciplina].</span>
-<span id="cb9-3"><a></a></span>
-<span id="cb9-4"><a></a>Lee este texto y escribe las 5</span>
-<span id="cb9-5"><a></a>objeciones más fuertes que harías,</span>
-<span id="cb9-6"><a></a>ordenadas por gravedad.</span>
-<span id="cb9-7"><a></a></span>
-<span id="cb9-8"><a></a>Para cada una indica qué evidencia</span>
-<span id="cb9-9"><a></a>adicional la desactivaría.</span>
-<span id="cb9-10"><a></a></span>
-<span id="cb9-11"><a></a>No hagas elogios.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a aria-label="1"></a>Actúa como revisor par escéptico</span>
+<span id="cb9-2"><a aria-label="2"></a>de [revista/disciplina].</span>
+<span id="cb9-3"><a aria-label="3"></a></span>
+<span id="cb9-4"><a aria-label="4"></a>Lee este texto y escribe las 5</span>
+<span id="cb9-5"><a aria-label="5"></a>objeciones más fuertes que harías,</span>
+<span id="cb9-6"><a aria-label="6"></a>ordenadas por gravedad.</span>
+<span id="cb9-7"><a aria-label="7"></a></span>
+<span id="cb9-8"><a aria-label="8"></a>Para cada una indica qué evidencia</span>
+<span id="cb9-9"><a aria-label="9"></a>adicional la desactivaría.</span>
+<span id="cb9-10"><a aria-label="10"></a></span>
+<span id="cb9-11"><a aria-label="11"></a>No hagas elogios.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:33%;">
 <h3 id="resumen-para-no-expertos">Resumen para no expertos</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a></a>Explica este resultado a</span>
-<span id="cb10-2"><a></a>[autoridad / estudiante / prensa].</span>
-<span id="cb10-3"><a></a></span>
-<span id="cb10-4"><a></a>Condiciones:</span>
-<span id="cb10-5"><a></a>- máximo 150 palabras;</span>
-<span id="cb10-6"><a></a>- sin tecnicismos sin definir;</span>
-<span id="cb10-7"><a></a>- una analogía concreta;</span>
-<span id="cb10-8"><a></a>- señala explícitamente qué NO</span>
-<span id="cb10-9"><a></a>  se puede concluir.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb10-1"><a aria-label="1"></a>Explica este resultado a</span>
+<span id="cb10-2"><a aria-label="2"></a>[autoridad / estudiante / prensa].</span>
+<span id="cb10-3"><a aria-label="3"></a></span>
+<span id="cb10-4"><a aria-label="4"></a>Condiciones:</span>
+<span id="cb10-5"><a aria-label="5"></a>- máximo 150 palabras;</span>
+<span id="cb10-6"><a aria-label="6"></a>- sin tecnicismos sin definir;</span>
+<span id="cb10-7"><a aria-label="7"></a>- una analogía concreta;</span>
+<span id="cb10-8"><a aria-label="8"></a>- señala explícitamente qué NO</span>
+<span id="cb10-9"><a aria-label="9"></a>  se puede concluir.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:33%;">
 <h3 id="minuta-de-reunión">Minuta de reunión</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a></a>Convierte estas notas en minuta:</span>
-<span id="cb11-2"><a></a></span>
-<span id="cb11-3"><a></a>[pegar notas]</span>
-<span id="cb11-4"><a></a></span>
-<span id="cb11-5"><a></a>Formato:</span>
-<span id="cb11-6"><a></a>- acuerdos (con responsable y plazo);</span>
-<span id="cb11-7"><a></a>- temas pendientes;</span>
-<span id="cb11-8"><a></a>- decisiones que requieren</span>
-<span id="cb11-9"><a></a>  aprobación superior.</span>
-<span id="cb11-10"><a></a></span>
-<span id="cb11-11"><a></a>Marca [!] donde falte responsable</span>
-<span id="cb11-12"><a></a>o plazo. No inventes ninguno.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb11-1"><a aria-label="1"></a>Convierte estas notas en minuta:</span>
+<span id="cb11-2"><a aria-label="2"></a></span>
+<span id="cb11-3"><a aria-label="3"></a>[pegar notas]</span>
+<span id="cb11-4"><a aria-label="4"></a></span>
+<span id="cb11-5"><a aria-label="5"></a>Formato:</span>
+<span id="cb11-6"><a aria-label="6"></a>- acuerdos (con responsable y plazo);</span>
+<span id="cb11-7"><a aria-label="7"></a>- temas pendientes;</span>
+<span id="cb11-8"><a aria-label="8"></a>- decisiones que requieren</span>
+<span id="cb11-9"><a aria-label="9"></a>  aprobación superior.</span>
+<span id="cb11-10"><a aria-label="10"></a></span>
+<span id="cb11-11"><a aria-label="11"></a>Marca [!] donde falte responsable</span>
+<span id="cb11-12"><a aria-label="12"></a>o plazo. No inventes ninguno.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
-<section id="section-10" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
+<section id="section-10" class="slide level2" data-background-color="#0F2044" data-background-image="images/blocks-t2/gracias.png" data-background-opacity="0.18" data-state="no-logo">
 <h2></h2>
 <div style="display:flex; justify-content:center; align-items:center; height:72vh; flex-direction:column; text-align:center;">
 <p><span style="font-size:0.85em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;">Programa de Talleres de Inteligencia Artificial Generativa</span></p>

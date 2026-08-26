@@ -7,11 +7,11 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-f1aadacce99040138bbb613f9330654f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.27">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Dirección de Transformación Digital · UTFSM">
-  <meta name="dcterms.date" content="2026-08-09">
+  <meta name="dcterms.date" content="2026-08-26">
   <title>Talks – Stack tecnológico del área de Analítica</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -19,10 +19,16 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -97,7 +103,7 @@
     code span.vs { color: #9ecbff; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-b2b877e1b2f4a1a6f87ed443b730ce45.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-c0ecab25cbec914f13e0868d85731132.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -201,12 +207,12 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Dirección de Transformación Digital · UTFSM 
+Dirección de Transformación Digital · UTFSM
 </div>
 </div>
 </div>
 
-  <p class="date">2026-08-09</p>
+  <p class="date">2026-08-26</p>
 </section>
 <section id="section" class="slide level2" data-background-color="#0F2044" data-state="no-logo">
 <h2></h2>
@@ -312,21 +318,21 @@ Dirección de Transformación Digital · UTFSM
 </div>
 </div><div class="column" style="width:48%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a></a><span class="im">from</span> sqlalchemy <span class="im">import</span> create_engine</span>
-<span id="cb1-3"><a></a></span>
-<span id="cb1-4"><a></a><span class="co"># Archivos planos</span></span>
-<span id="cb1-5"><a></a>df_csv <span class="op">=</span> pd.read_csv(<span class="st">"matriculas_2025.csv"</span>)</span>
-<span id="cb1-6"><a></a></span>
-<span id="cb1-7"><a></a><span class="co"># Base de datos institucional</span></span>
-<span id="cb1-8"><a></a>engine <span class="op">=</span> create_engine(</span>
-<span id="cb1-9"><a></a>    <span class="st">"oracle+oracledb://user:pwd@host:1521/dtd"</span></span>
-<span id="cb1-10"><a></a>)</span>
-<span id="cb1-11"><a></a>df_sql <span class="op">=</span> pd.read_sql(</span>
-<span id="cb1-12"><a></a>    <span class="st">"SELECT rut, carrera, promedio "</span></span>
-<span id="cb1-13"><a></a>    <span class="st">"FROM academico.alumnos"</span>,</span>
-<span id="cb1-14"><a></a>    engine,</span>
-<span id="cb1-15"><a></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a aria-label="1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a aria-label="2"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> create_engine</span>
+<span id="cb1-3"><a aria-label="3"></a></span>
+<span id="cb1-4"><a aria-label="4"></a><span class="co"># Archivos planos</span></span>
+<span id="cb1-5"><a aria-label="5"></a>df_csv <span class="op">=</span> pd.read_csv(<span class="st">"matriculas_2025.csv"</span>)</span>
+<span id="cb1-6"><a aria-label="6"></a></span>
+<span id="cb1-7"><a aria-label="7"></a><span class="co"># Base de datos institucional</span></span>
+<span id="cb1-8"><a aria-label="8"></a>engine <span class="op">=</span> create_engine(</span>
+<span id="cb1-9"><a aria-label="9"></a>    <span class="st">"oracle+oracledb://user:pwd@host:1521/dtd"</span></span>
+<span id="cb1-10"><a aria-label="10"></a>)</span>
+<span id="cb1-11"><a aria-label="11"></a>df_sql <span class="op">=</span> pd.read_sql(</span>
+<span id="cb1-12"><a aria-label="12"></a>    <span class="st">"SELECT rut, carrera, promedio "</span></span>
+<span id="cb1-13"><a aria-label="13"></a>    <span class="st">"FROM academico.alumnos"</span>,</span>
+<span id="cb1-14"><a aria-label="14"></a>    engine,</span>
+<span id="cb1-15"><a aria-label="15"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="validación-y-limpieza-con-pandas" class="slide level2">
@@ -356,28 +362,28 @@ Dirección de Transformación Digital · UTFSM
 </div>
 </div><div class="column" style="width:48%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-2"><a></a><span class="im">import</span> pandera <span class="im">as</span> pa</span>
-<span id="cb2-3"><a></a><span class="im">from</span> pandera <span class="im">import</span> Column, Check</span>
-<span id="cb2-4"><a></a></span>
-<span id="cb2-5"><a></a><span class="co"># 1 · Merge de fuentes heterogéneas (BD + CSV + forms)</span></span>
-<span id="cb2-6"><a></a>df <span class="op">=</span> (df_sql.merge(df_csv, on<span class="op">=</span><span class="st">"rut"</span>, how<span class="op">=</span><span class="st">"left"</span>, validate<span class="op">=</span><span class="st">"1:1"</span>)</span>
-<span id="cb2-7"><a></a>            .merge(df_forms, on<span class="op">=</span><span class="st">"rut"</span>, how<span class="op">=</span><span class="st">"left"</span>))</span>
-<span id="cb2-8"><a></a></span>
-<span id="cb2-9"><a></a><span class="co"># 2 · Casting de tipos y normalización</span></span>
-<span id="cb2-10"><a></a>df[<span class="st">"rut"</span>] <span class="op">=</span> df[<span class="st">"rut"</span>].astype(<span class="st">"string"</span>).<span class="bu">str</span>.replace(<span class="st">"."</span>, <span class="st">""</span>, regex<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb2-11"><a></a>df[<span class="st">"promedio"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"promedio"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
-<span id="cb2-12"><a></a>df[<span class="st">"asistencia"</span>] <span class="op">=</span> df[<span class="st">"asistencia"</span>].fillna(df[<span class="st">"asistencia"</span>].median())</span>
-<span id="cb2-13"><a></a>df[<span class="st">"carrera"</span>] <span class="op">=</span> df[<span class="st">"carrera"</span>].astype(<span class="st">"category"</span>)</span>
-<span id="cb2-14"><a></a></span>
-<span id="cb2-15"><a></a><span class="co"># 3 · Validación de esquema (contrato de datos)</span></span>
-<span id="cb2-16"><a></a>schema <span class="op">=</span> pa.DataFrameSchema({</span>
-<span id="cb2-17"><a></a>    <span class="st">"rut"</span>:        Column(<span class="st">"string"</span>, unique<span class="op">=</span><span class="va">True</span>),</span>
-<span id="cb2-18"><a></a>    <span class="st">"promedio"</span>:   Column(<span class="bu">float</span>, Check.in_range(<span class="fl">1.0</span>, <span class="fl">7.0</span>)),</span>
-<span id="cb2-19"><a></a>    <span class="st">"asistencia"</span>: Column(<span class="bu">float</span>, Check.in_range(<span class="dv">0</span>, <span class="dv">100</span>)),</span>
-<span id="cb2-20"><a></a>    <span class="st">"carrera"</span>:    Column(<span class="st">"category"</span>, nullable<span class="op">=</span><span class="va">False</span>),</span>
-<span id="cb2-21"><a></a>})</span>
-<span id="cb2-22"><a></a>df <span class="op">=</span> schema.validate(df, lazy<span class="op">=</span><span class="va">True</span>)   <span class="co"># acumula todos los errores</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a aria-label="1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a aria-label="2"></a><span class="im">import</span> pandera <span class="im">as</span> pa</span>
+<span id="cb2-3"><a aria-label="3"></a><span class="im">from</span> pandera <span class="im">import</span> Column, Check</span>
+<span id="cb2-4"><a aria-label="4"></a></span>
+<span id="cb2-5"><a aria-label="5"></a><span class="co"># 1 · Merge de fuentes heterogéneas (BD + CSV + forms)</span></span>
+<span id="cb2-6"><a aria-label="6"></a>df <span class="op">=</span> (df_sql.merge(df_csv, on<span class="op">=</span><span class="st">"rut"</span>, how<span class="op">=</span><span class="st">"left"</span>, validate<span class="op">=</span><span class="st">"1:1"</span>)</span>
+<span id="cb2-7"><a aria-label="7"></a>            .merge(df_forms, on<span class="op">=</span><span class="st">"rut"</span>, how<span class="op">=</span><span class="st">"left"</span>))</span>
+<span id="cb2-8"><a aria-label="8"></a></span>
+<span id="cb2-9"><a aria-label="9"></a><span class="co"># 2 · Casting de tipos y normalización</span></span>
+<span id="cb2-10"><a aria-label="10"></a>df[<span class="st">"rut"</span>] <span class="op">=</span> df[<span class="st">"rut"</span>].astype(<span class="st">"string"</span>).<span class="bu">str</span>.replace(<span class="st">"."</span>, <span class="st">""</span>, regex<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb2-11"><a aria-label="11"></a>df[<span class="st">"promedio"</span>] <span class="op">=</span> pd.to_numeric(df[<span class="st">"promedio"</span>], errors<span class="op">=</span><span class="st">"coerce"</span>)</span>
+<span id="cb2-12"><a aria-label="12"></a>df[<span class="st">"asistencia"</span>] <span class="op">=</span> df[<span class="st">"asistencia"</span>].fillna(df[<span class="st">"asistencia"</span>].median())</span>
+<span id="cb2-13"><a aria-label="13"></a>df[<span class="st">"carrera"</span>] <span class="op">=</span> df[<span class="st">"carrera"</span>].astype(<span class="st">"category"</span>)</span>
+<span id="cb2-14"><a aria-label="14"></a></span>
+<span id="cb2-15"><a aria-label="15"></a><span class="co"># 3 · Validación de esquema (contrato de datos)</span></span>
+<span id="cb2-16"><a aria-label="16"></a>schema <span class="op">=</span> pa.DataFrameSchema({</span>
+<span id="cb2-17"><a aria-label="17"></a>    <span class="st">"rut"</span>:        Column(<span class="st">"string"</span>, unique<span class="op">=</span><span class="va">True</span>),</span>
+<span id="cb2-18"><a aria-label="18"></a>    <span class="st">"promedio"</span>:   Column(<span class="bu">float</span>, Check.in_range(<span class="fl">1.0</span>, <span class="fl">7.0</span>)),</span>
+<span id="cb2-19"><a aria-label="19"></a>    <span class="st">"asistencia"</span>: Column(<span class="bu">float</span>, Check.in_range(<span class="dv">0</span>, <span class="dv">100</span>)),</span>
+<span id="cb2-20"><a aria-label="20"></a>    <span class="st">"carrera"</span>:    Column(<span class="st">"category"</span>, nullable<span class="op">=</span><span class="va">False</span>),</span>
+<span id="cb2-21"><a aria-label="21"></a>})</span>
+<span id="cb2-22"><a aria-label="22"></a>df <span class="op">=</span> schema.validate(df, lazy<span class="op">=</span><span class="va">True</span>)   <span class="co"># acumula todos los errores</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="section-2" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">
@@ -468,30 +474,30 @@ Dirección de Transformación Digital · UTFSM
 </div>
 </div><div class="column" style="width:52%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co"># Walk-forward: entrenar en el pasado, validar en el futuro</span></span>
-<span id="cb3-2"><a></a>cohortes <span class="op">=</span> [<span class="st">"M23"</span>, <span class="st">"M24"</span>, <span class="st">"M25"</span>]</span>
-<span id="cb3-3"><a></a>resultados <span class="op">=</span> []</span>
-<span id="cb3-4"><a></a></span>
-<span id="cb3-5"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(cohortes)):</span>
-<span id="cb3-6"><a></a>    train <span class="op">=</span> df[df[<span class="st">"cohorte"</span>].isin(cohortes[:i])]   <span class="co"># M23 → M23,M24</span></span>
-<span id="cb3-7"><a></a>    test  <span class="op">=</span> df[df[<span class="st">"cohorte"</span>] <span class="op">==</span> cohortes[i]]        <span class="co"># generación sgte.</span></span>
-<span id="cb3-8"><a></a></span>
-<span id="cb3-9"><a></a>    Xtr, ytr <span class="op">=</span> train.drop(columns<span class="op">=</span><span class="st">"riesgo"</span>), train[<span class="st">"riesgo"</span>]</span>
-<span id="cb3-10"><a></a>    Xte, yte <span class="op">=</span> test.drop(columns<span class="op">=</span><span class="st">"riesgo"</span>),  test[<span class="st">"riesgo"</span>]</span>
-<span id="cb3-11"><a></a></span>
-<span id="cb3-12"><a></a>    modelo <span class="op">=</span> XGBClassifier(</span>
-<span id="cb3-13"><a></a>        n_estimators<span class="op">=</span><span class="dv">400</span>, max_depth<span class="op">=</span><span class="dv">5</span>,</span>
-<span id="cb3-14"><a></a>        learning_rate<span class="op">=</span><span class="fl">0.05</span>, eval_metric<span class="op">=</span><span class="st">"auc"</span>,</span>
-<span id="cb3-15"><a></a>    ).fit(Xtr, ytr)</span>
-<span id="cb3-16"><a></a></span>
-<span id="cb3-17"><a></a>    proba <span class="op">=</span> modelo.predict_proba(Xte)[:, <span class="dv">1</span>]</span>
-<span id="cb3-18"><a></a>    resultados.append({</span>
-<span id="cb3-19"><a></a>        <span class="st">"valida_en"</span>: cohortes[i],</span>
-<span id="cb3-20"><a></a>        <span class="st">"auc"</span>: roc_auc_score(yte, proba),</span>
-<span id="cb3-21"><a></a>        <span class="st">"n"</span>: <span class="bu">len</span>(yte),</span>
-<span id="cb3-22"><a></a>    })</span>
-<span id="cb3-23"><a></a></span>
-<span id="cb3-24"><a></a>backtest <span class="op">=</span> pd.DataFrame(resultados)   <span class="co"># AUC por generación</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a aria-label="1"></a><span class="co"># Walk-forward: entrenar en el pasado, validar en el futuro</span></span>
+<span id="cb3-2"><a aria-label="2"></a>cohortes <span class="op">=</span> [<span class="st">"M23"</span>, <span class="st">"M24"</span>, <span class="st">"M25"</span>]</span>
+<span id="cb3-3"><a aria-label="3"></a>resultados <span class="op">=</span> []</span>
+<span id="cb3-4"><a aria-label="4"></a></span>
+<span id="cb3-5"><a aria-label="5"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(cohortes)):</span>
+<span id="cb3-6"><a aria-label="6"></a>    train <span class="op">=</span> df[df[<span class="st">"cohorte"</span>].isin(cohortes[:i])]   <span class="co"># M23 → M23,M24</span></span>
+<span id="cb3-7"><a aria-label="7"></a>    test  <span class="op">=</span> df[df[<span class="st">"cohorte"</span>] <span class="op">==</span> cohortes[i]]        <span class="co"># generación sgte.</span></span>
+<span id="cb3-8"><a aria-label="8"></a></span>
+<span id="cb3-9"><a aria-label="9"></a>    Xtr, ytr <span class="op">=</span> train.drop(columns<span class="op">=</span><span class="st">"riesgo"</span>), train[<span class="st">"riesgo"</span>]</span>
+<span id="cb3-10"><a aria-label="10"></a>    Xte, yte <span class="op">=</span> test.drop(columns<span class="op">=</span><span class="st">"riesgo"</span>),  test[<span class="st">"riesgo"</span>]</span>
+<span id="cb3-11"><a aria-label="11"></a></span>
+<span id="cb3-12"><a aria-label="12"></a>    modelo <span class="op">=</span> XGBClassifier(</span>
+<span id="cb3-13"><a aria-label="13"></a>        n_estimators<span class="op">=</span><span class="dv">400</span>, max_depth<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb3-14"><a aria-label="14"></a>        learning_rate<span class="op">=</span><span class="fl">0.05</span>, eval_metric<span class="op">=</span><span class="st">"auc"</span>,</span>
+<span id="cb3-15"><a aria-label="15"></a>    ).fit(Xtr, ytr)</span>
+<span id="cb3-16"><a aria-label="16"></a></span>
+<span id="cb3-17"><a aria-label="17"></a>    proba <span class="op">=</span> modelo.predict_proba(Xte)[:, <span class="dv">1</span>]</span>
+<span id="cb3-18"><a aria-label="18"></a>    resultados.append({</span>
+<span id="cb3-19"><a aria-label="19"></a>        <span class="st">"valida_en"</span>: cohortes[i],</span>
+<span id="cb3-20"><a aria-label="20"></a>        <span class="st">"auc"</span>: roc_auc_score(yte, proba),</span>
+<span id="cb3-21"><a aria-label="21"></a>        <span class="st">"n"</span>: <span class="bu">len</span>(yte),</span>
+<span id="cb3-22"><a aria-label="22"></a>    })</span>
+<span id="cb3-23"><a aria-label="23"></a></span>
+<span id="cb3-24"><a aria-label="24"></a>backtest <span class="op">=</span> pd.DataFrame(resultados)   <span class="co"># AUC por generación</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="métricas-de-evaluación-qué-medimos" class="slide level2">
@@ -519,22 +525,22 @@ Dirección de Transformación Digital · UTFSM
 </div>
 </div><div class="column" style="width:50%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> roc_auc_score, f1_score</span>
-<span id="cb4-2"><a></a></span>
-<span id="cb4-3"><a></a><span class="kw">def</span> precision_at_k(y_true, y_score, k):</span>
-<span id="cb4-4"><a></a>    <span class="co">"""Precisión entre los k estudiantes de mayor riesgo."""</span></span>
-<span id="cb4-5"><a></a>    top_k <span class="op">=</span> y_score.argsort()[::<span class="op">-</span><span class="dv">1</span>][:k]</span>
-<span id="cb4-6"><a></a>    <span class="cf">return</span> y_true.iloc[top_k].mean()</span>
-<span id="cb4-7"><a></a></span>
-<span id="cb4-8"><a></a>auc <span class="op">=</span> roc_auc_score(y_test, proba)        <span class="co"># ranking global</span></span>
-<span id="cb4-9"><a></a>f1  <span class="op">=</span> f1_score(y_test, proba <span class="op">&gt;</span> <span class="fl">0.5</span>)       <span class="co"># balance P/R</span></span>
-<span id="cb4-10"><a></a></span>
-<span id="cb4-11"><a></a><span class="co"># Las unidades solo pueden contactar a ~150 estudiantes</span></span>
-<span id="cb4-12"><a></a>p_at_150 <span class="op">=</span> precision_at_k(y_test, proba, k<span class="op">=</span><span class="dv">150</span>)</span>
-<span id="cb4-13"><a></a></span>
-<span id="cb4-14"><a></a><span class="bu">print</span>(<span class="ss">f"AUC-ROC      : </span><span class="sc">{</span>auc<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb4-15"><a></a><span class="bu">print</span>(<span class="ss">f"F1           : </span><span class="sc">{</span>f1<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
-<span id="cb4-16"><a></a><span class="bu">print</span>(<span class="ss">f"Precision@150: </span><span class="sc">{</span>p_at_150<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a aria-label="1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> roc_auc_score, f1_score</span>
+<span id="cb4-2"><a aria-label="2"></a></span>
+<span id="cb4-3"><a aria-label="3"></a><span class="kw">def</span> precision_at_k(y_true, y_score, k):</span>
+<span id="cb4-4"><a aria-label="4"></a>    <span class="co">"""Precisión entre los k estudiantes de mayor riesgo."""</span></span>
+<span id="cb4-5"><a aria-label="5"></a>    top_k <span class="op">=</span> y_score.argsort()[::<span class="op">-</span><span class="dv">1</span>][:k]</span>
+<span id="cb4-6"><a aria-label="6"></a>    <span class="cf">return</span> y_true.iloc[top_k].mean()</span>
+<span id="cb4-7"><a aria-label="7"></a></span>
+<span id="cb4-8"><a aria-label="8"></a>auc <span class="op">=</span> roc_auc_score(y_test, proba)        <span class="co"># ranking global</span></span>
+<span id="cb4-9"><a aria-label="9"></a>f1  <span class="op">=</span> f1_score(y_test, proba <span class="op">&gt;</span> <span class="fl">0.5</span>)       <span class="co"># balance P/R</span></span>
+<span id="cb4-10"><a aria-label="10"></a></span>
+<span id="cb4-11"><a aria-label="11"></a><span class="co"># Las unidades solo pueden contactar a ~150 estudiantes</span></span>
+<span id="cb4-12"><a aria-label="12"></a>p_at_150 <span class="op">=</span> precision_at_k(y_test, proba, k<span class="op">=</span><span class="dv">150</span>)</span>
+<span id="cb4-13"><a aria-label="13"></a></span>
+<span id="cb4-14"><a aria-label="14"></a><span class="bu">print</span>(<span class="ss">f"AUC-ROC      : </span><span class="sc">{</span>auc<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb4-15"><a aria-label="15"></a><span class="bu">print</span>(<span class="ss">f"F1           : </span><span class="sc">{</span>f1<span class="sc">:.3f}</span><span class="ss">"</span>)</span>
+<span id="cb4-16"><a aria-label="16"></a><span class="bu">print</span>(<span class="ss">f"Precision@150: </span><span class="sc">{</span>p_at_150<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="ejemplo-concreto-sat-e" class="slide level2">
@@ -630,31 +636,31 @@ Dirección de Transformación Digital · UTFSM
 <p>con <span class="math inline">\(x_{csb} \in \{0,1\}\)</span> · <span class="math inline">\(n_c\)</span> inscritos · <span class="math inline">\(\text{cap}_s\)</span> capacidad.</p>
 </div><div class="column" style="width:54%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">import</span> gurobipy <span class="im">as</span> gp</span>
-<span id="cb5-2"><a></a><span class="im">from</span> gurobipy <span class="im">import</span> GRB</span>
-<span id="cb5-3"><a></a></span>
-<span id="cb5-4"><a></a>m <span class="op">=</span> gp.Model(<span class="st">"scheduler_salas"</span>)</span>
-<span id="cb5-5"><a></a></span>
-<span id="cb5-6"><a></a><span class="co"># x[c,s,b] = 1 si el curso c se dicta en sala s, bloque b</span></span>
-<span id="cb5-7"><a></a>x <span class="op">=</span> m.addVars(cursos, salas, bloques, vtype<span class="op">=</span>GRB.BINARY, name<span class="op">=</span><span class="st">"x"</span>)</span>
-<span id="cb5-8"><a></a></span>
-<span id="cb5-9"><a></a><span class="co"># (1) Cada curso se asigna exactamente una vez</span></span>
-<span id="cb5-10"><a></a>m.addConstrs((gp.quicksum(x[c, s, b] <span class="cf">for</span> s <span class="kw">in</span> salas <span class="cf">for</span> b <span class="kw">in</span> bloques) <span class="op">==</span> <span class="dv">1</span></span>
-<span id="cb5-11"><a></a>              <span class="cf">for</span> c <span class="kw">in</span> cursos), name<span class="op">=</span><span class="st">"asignacion_unica"</span>)</span>
-<span id="cb5-12"><a></a></span>
-<span id="cb5-13"><a></a><span class="co"># (2) Una sala no puede tener dos cursos en el mismo bloque</span></span>
-<span id="cb5-14"><a></a>m.addConstrs((gp.quicksum(x[c, s, b] <span class="cf">for</span> c <span class="kw">in</span> cursos) <span class="op">&lt;=</span> <span class="dv">1</span></span>
-<span id="cb5-15"><a></a>              <span class="cf">for</span> s <span class="kw">in</span> salas <span class="cf">for</span> b <span class="kw">in</span> bloques), name<span class="op">=</span><span class="st">"sala_sin_choque"</span>)</span>
-<span id="cb5-16"><a></a></span>
-<span id="cb5-17"><a></a><span class="co"># (3) Capacidad: la sala debe caber al curso</span></span>
-<span id="cb5-18"><a></a>m.addConstrs((x[c, s, b] <span class="op">*</span> inscritos[c] <span class="op">&lt;=</span> capacidad[s]</span>
-<span id="cb5-19"><a></a>              <span class="cf">for</span> c <span class="kw">in</span> cursos <span class="cf">for</span> s <span class="kw">in</span> salas <span class="cf">for</span> b <span class="kw">in</span> bloques),</span>
-<span id="cb5-20"><a></a>             name<span class="op">=</span><span class="st">"capacidad"</span>)</span>
-<span id="cb5-21"><a></a></span>
-<span id="cb5-22"><a></a>m.setObjective(gp.quicksum(huecos[c, s, b] <span class="op">*</span> x[c, s, b]</span>
-<span id="cb5-23"><a></a>               <span class="cf">for</span> c <span class="kw">in</span> cursos <span class="cf">for</span> s <span class="kw">in</span> salas <span class="cf">for</span> b <span class="kw">in</span> bloques),</span>
-<span id="cb5-24"><a></a>               GRB.MINIMIZE)</span>
-<span id="cb5-25"><a></a>m.optimize()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a aria-label="1"></a><span class="im">import</span> gurobipy <span class="im">as</span> gp</span>
+<span id="cb5-2"><a aria-label="2"></a><span class="im">from</span> gurobipy <span class="im">import</span> GRB</span>
+<span id="cb5-3"><a aria-label="3"></a></span>
+<span id="cb5-4"><a aria-label="4"></a>m <span class="op">=</span> gp.Model(<span class="st">"scheduler_salas"</span>)</span>
+<span id="cb5-5"><a aria-label="5"></a></span>
+<span id="cb5-6"><a aria-label="6"></a><span class="co"># x[c,s,b] = 1 si el curso c se dicta en sala s, bloque b</span></span>
+<span id="cb5-7"><a aria-label="7"></a>x <span class="op">=</span> m.addVars(cursos, salas, bloques, vtype<span class="op">=</span>GRB.BINARY, name<span class="op">=</span><span class="st">"x"</span>)</span>
+<span id="cb5-8"><a aria-label="8"></a></span>
+<span id="cb5-9"><a aria-label="9"></a><span class="co"># (1) Cada curso se asigna exactamente una vez</span></span>
+<span id="cb5-10"><a aria-label="10"></a>m.addConstrs((gp.quicksum(x[c, s, b] <span class="cf">for</span> s <span class="kw">in</span> salas <span class="cf">for</span> b <span class="kw">in</span> bloques) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb5-11"><a aria-label="11"></a>              <span class="cf">for</span> c <span class="kw">in</span> cursos), name<span class="op">=</span><span class="st">"asignacion_unica"</span>)</span>
+<span id="cb5-12"><a aria-label="12"></a></span>
+<span id="cb5-13"><a aria-label="13"></a><span class="co"># (2) Una sala no puede tener dos cursos en el mismo bloque</span></span>
+<span id="cb5-14"><a aria-label="14"></a>m.addConstrs((gp.quicksum(x[c, s, b] <span class="cf">for</span> c <span class="kw">in</span> cursos) <span class="op">&lt;=</span> <span class="dv">1</span></span>
+<span id="cb5-15"><a aria-label="15"></a>              <span class="cf">for</span> s <span class="kw">in</span> salas <span class="cf">for</span> b <span class="kw">in</span> bloques), name<span class="op">=</span><span class="st">"sala_sin_choque"</span>)</span>
+<span id="cb5-16"><a aria-label="16"></a></span>
+<span id="cb5-17"><a aria-label="17"></a><span class="co"># (3) Capacidad: la sala debe caber al curso</span></span>
+<span id="cb5-18"><a aria-label="18"></a>m.addConstrs((x[c, s, b] <span class="op">*</span> inscritos[c] <span class="op">&lt;=</span> capacidad[s]</span>
+<span id="cb5-19"><a aria-label="19"></a>              <span class="cf">for</span> c <span class="kw">in</span> cursos <span class="cf">for</span> s <span class="kw">in</span> salas <span class="cf">for</span> b <span class="kw">in</span> bloques),</span>
+<span id="cb5-20"><a aria-label="20"></a>             name<span class="op">=</span><span class="st">"capacidad"</span>)</span>
+<span id="cb5-21"><a aria-label="21"></a></span>
+<span id="cb5-22"><a aria-label="22"></a>m.setObjective(gp.quicksum(huecos[c, s, b] <span class="op">*</span> x[c, s, b]</span>
+<span id="cb5-23"><a aria-label="23"></a>               <span class="cf">for</span> c <span class="kw">in</span> cursos <span class="cf">for</span> s <span class="kw">in</span> salas <span class="cf">for</span> b <span class="kw">in</span> bloques),</span>
+<span id="cb5-24"><a aria-label="24"></a>               GRB.MINIMIZE)</span>
+<span id="cb5-25"><a aria-label="25"></a>m.optimize()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="pipelines-kedro-pandas" class="slide level2">
@@ -683,21 +689,21 @@ Dirección de Transformación Digital · UTFSM
 </div>
 </div><div class="column" style="width:48%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="im">from</span> kedro.pipeline <span class="im">import</span> node, pipeline</span>
-<span id="cb6-2"><a></a></span>
-<span id="cb6-3"><a></a><span class="kw">def</span> entrenar_modelo(datos, params):</span>
-<span id="cb6-4"><a></a>    X, y <span class="op">=</span> datos.drop(<span class="st">"riesgo"</span>, axis<span class="op">=</span><span class="dv">1</span>), datos[<span class="st">"riesgo"</span>]</span>
-<span id="cb6-5"><a></a>    modelo <span class="op">=</span> XGBClassifier(<span class="op">**</span>params).fit(X, y)</span>
-<span id="cb6-6"><a></a>    <span class="cf">return</span> modelo</span>
-<span id="cb6-7"><a></a></span>
-<span id="cb6-8"><a></a>pipeline_sate <span class="op">=</span> pipeline([</span>
-<span id="cb6-9"><a></a>    node(</span>
-<span id="cb6-10"><a></a>        func<span class="op">=</span>entrenar_modelo,</span>
-<span id="cb6-11"><a></a>        inputs<span class="op">=</span>[<span class="st">"datos_limpios"</span>, <span class="st">"params:xgb"</span>],</span>
-<span id="cb6-12"><a></a>        outputs<span class="op">=</span><span class="st">"modelo_riesgo"</span>,</span>
-<span id="cb6-13"><a></a>        name<span class="op">=</span><span class="st">"entrenar_riesgo"</span>,</span>
-<span id="cb6-14"><a></a>    ),</span>
-<span id="cb6-15"><a></a>])</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a aria-label="1"></a><span class="im">from</span> kedro.pipeline <span class="im">import</span> node, pipeline</span>
+<span id="cb6-2"><a aria-label="2"></a></span>
+<span id="cb6-3"><a aria-label="3"></a><span class="kw">def</span> entrenar_modelo(datos, params):</span>
+<span id="cb6-4"><a aria-label="4"></a>    X, y <span class="op">=</span> datos.drop(<span class="st">"riesgo"</span>, axis<span class="op">=</span><span class="dv">1</span>), datos[<span class="st">"riesgo"</span>]</span>
+<span id="cb6-5"><a aria-label="5"></a>    modelo <span class="op">=</span> XGBClassifier(<span class="op">**</span>params).fit(X, y)</span>
+<span id="cb6-6"><a aria-label="6"></a>    <span class="cf">return</span> modelo</span>
+<span id="cb6-7"><a aria-label="7"></a></span>
+<span id="cb6-8"><a aria-label="8"></a>pipeline_sate <span class="op">=</span> pipeline([</span>
+<span id="cb6-9"><a aria-label="9"></a>    node(</span>
+<span id="cb6-10"><a aria-label="10"></a>        func<span class="op">=</span>entrenar_modelo,</span>
+<span id="cb6-11"><a aria-label="11"></a>        inputs<span class="op">=</span>[<span class="st">"datos_limpios"</span>, <span class="st">"params:xgb"</span>],</span>
+<span id="cb6-12"><a aria-label="12"></a>        outputs<span class="op">=</span><span class="st">"modelo_riesgo"</span>,</span>
+<span id="cb6-13"><a aria-label="13"></a>        name<span class="op">=</span><span class="st">"entrenar_riesgo"</span>,</span>
+<span id="cb6-14"><a aria-label="14"></a>    ),</span>
+<span id="cb6-15"><a aria-label="15"></a>])</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="kedro-el-data-catalog" class="slide level2">
@@ -726,30 +732,30 @@ Dirección de Transformación Digital · UTFSM
 </div>
 </div><div class="column" style="width:52%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a></a><span class="co"># conf/base/catalog.yml — contrato único de datos</span></span>
-<span id="cb7-2"><a></a></span>
-<span id="cb7-3"><a></a><span class="fu">matriculas_raw</span><span class="kw">:</span></span>
-<span id="cb7-4"><a></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> pandas.CSVDataset</span></span>
-<span id="cb7-5"><a></a><span class="at">  </span><span class="fu">filepath</span><span class="kw">:</span><span class="at"> data/01_raw/matriculas_2025.csv</span></span>
-<span id="cb7-6"><a></a><span class="at">  </span><span class="fu">load_args</span><span class="kw">:</span></span>
-<span id="cb7-7"><a></a><span class="at">    </span><span class="fu">sep</span><span class="kw">:</span><span class="at"> </span><span class="st">";"</span></span>
-<span id="cb7-8"><a></a><span class="at">    </span><span class="fu">encoding</span><span class="kw">:</span><span class="at"> latin-1</span></span>
-<span id="cb7-9"><a></a></span>
-<span id="cb7-10"><a></a><span class="fu">alumnos_bd</span><span class="kw">:</span></span>
-<span id="cb7-11"><a></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> pandas.SQLTableDataset</span></span>
-<span id="cb7-12"><a></a><span class="at">  </span><span class="fu">table_name</span><span class="kw">:</span><span class="at"> academico.alumnos</span></span>
-<span id="cb7-13"><a></a><span class="at">  </span><span class="fu">credentials</span><span class="kw">:</span><span class="at"> db_oracle</span></span>
-<span id="cb7-14"><a></a><span class="at">  </span><span class="fu">load_args</span><span class="kw">:</span></span>
-<span id="cb7-15"><a></a><span class="at">    </span><span class="fu">schema</span><span class="kw">:</span><span class="at"> dtd</span></span>
-<span id="cb7-16"><a></a></span>
-<span id="cb7-17"><a></a><span class="fu">datos_limpios</span><span class="kw">:</span></span>
-<span id="cb7-18"><a></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> pandas.ParquetDataset</span></span>
-<span id="cb7-19"><a></a><span class="at">  </span><span class="fu">filepath</span><span class="kw">:</span><span class="at"> data/03_primary/datos_limpios.parquet</span></span>
-<span id="cb7-20"><a></a></span>
-<span id="cb7-21"><a></a><span class="fu">modelo_riesgo</span><span class="kw">:</span></span>
-<span id="cb7-22"><a></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> pickle.PickleDataset</span></span>
-<span id="cb7-23"><a></a><span class="at">  </span><span class="fu">filepath</span><span class="kw">:</span><span class="at"> data/06_models/xgb_sate.pkl</span></span>
-<span id="cb7-24"><a></a><span class="at">  </span><span class="fu">versioned</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a aria-label="1"></a><span class="co"># conf/base/catalog.yml — contrato único de datos</span></span>
+<span id="cb7-2"><a aria-label="2"></a></span>
+<span id="cb7-3"><a aria-label="3"></a><span class="fu">matriculas_raw</span><span class="kw">:</span></span>
+<span id="cb7-4"><a aria-label="4"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> pandas.CSVDataset</span></span>
+<span id="cb7-5"><a aria-label="5"></a><span class="at">  </span><span class="fu">filepath</span><span class="kw">:</span><span class="at"> data/01_raw/matriculas_2025.csv</span></span>
+<span id="cb7-6"><a aria-label="6"></a><span class="at">  </span><span class="fu">load_args</span><span class="kw">:</span></span>
+<span id="cb7-7"><a aria-label="7"></a><span class="at">    </span><span class="fu">sep</span><span class="kw">:</span><span class="at"> </span><span class="st">";"</span></span>
+<span id="cb7-8"><a aria-label="8"></a><span class="at">    </span><span class="fu">encoding</span><span class="kw">:</span><span class="at"> latin-1</span></span>
+<span id="cb7-9"><a aria-label="9"></a></span>
+<span id="cb7-10"><a aria-label="10"></a><span class="fu">alumnos_bd</span><span class="kw">:</span></span>
+<span id="cb7-11"><a aria-label="11"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> pandas.SQLTableDataset</span></span>
+<span id="cb7-12"><a aria-label="12"></a><span class="at">  </span><span class="fu">table_name</span><span class="kw">:</span><span class="at"> academico.alumnos</span></span>
+<span id="cb7-13"><a aria-label="13"></a><span class="at">  </span><span class="fu">credentials</span><span class="kw">:</span><span class="at"> db_oracle</span></span>
+<span id="cb7-14"><a aria-label="14"></a><span class="at">  </span><span class="fu">load_args</span><span class="kw">:</span></span>
+<span id="cb7-15"><a aria-label="15"></a><span class="at">    </span><span class="fu">schema</span><span class="kw">:</span><span class="at"> dtd</span></span>
+<span id="cb7-16"><a aria-label="16"></a></span>
+<span id="cb7-17"><a aria-label="17"></a><span class="fu">datos_limpios</span><span class="kw">:</span></span>
+<span id="cb7-18"><a aria-label="18"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> pandas.ParquetDataset</span></span>
+<span id="cb7-19"><a aria-label="19"></a><span class="at">  </span><span class="fu">filepath</span><span class="kw">:</span><span class="at"> data/03_primary/datos_limpios.parquet</span></span>
+<span id="cb7-20"><a aria-label="20"></a></span>
+<span id="cb7-21"><a aria-label="21"></a><span class="fu">modelo_riesgo</span><span class="kw">:</span></span>
+<span id="cb7-22"><a aria-label="22"></a><span class="at">  </span><span class="fu">type</span><span class="kw">:</span><span class="at"> pickle.PickleDataset</span></span>
+<span id="cb7-23"><a aria-label="23"></a><span class="at">  </span><span class="fu">filepath</span><span class="kw">:</span><span class="at"> data/06_models/xgb_sate.pkl</span></span>
+<span id="cb7-24"><a aria-label="24"></a><span class="at">  </span><span class="fu">versioned</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="kedro-el-dag-del-pipeline-sat-e" class="slide level2">
@@ -833,22 +839,22 @@ Dirección de Transformación Digital · UTFSM
 </div>
 </div><div class="column" style="width:50%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="im">from</span> fastapi <span class="im">import</span> FastAPI</span>
-<span id="cb8-2"><a></a><span class="im">from</span> pydantic <span class="im">import</span> BaseModel</span>
-<span id="cb8-3"><a></a></span>
-<span id="cb8-4"><a></a>app <span class="op">=</span> FastAPI()</span>
-<span id="cb8-5"><a></a></span>
-<span id="cb8-6"><a></a><span class="kw">class</span> Alumno(BaseModel):</span>
-<span id="cb8-7"><a></a>    asistencia: <span class="bu">float</span></span>
-<span id="cb8-8"><a></a>    notas: <span class="bu">float</span></span>
-<span id="cb8-9"><a></a>    reprobados: <span class="bu">int</span></span>
-<span id="cb8-10"><a></a></span>
-<span id="cb8-11"><a></a><span class="at">@app.post</span>(<span class="st">"/predecir"</span>)</span>
-<span id="cb8-12"><a></a><span class="kw">def</span> predecir(a: Alumno):</span>
-<span id="cb8-13"><a></a>    score <span class="op">=</span> modelo.predict_proba(</span>
-<span id="cb8-14"><a></a>        [[a.asistencia, a.notas, a.reprobados]]</span>
-<span id="cb8-15"><a></a>    )[<span class="dv">0</span>, <span class="dv">1</span>]</span>
-<span id="cb8-16"><a></a>    <span class="cf">return</span> {<span class="st">"riesgo"</span>: <span class="bu">float</span>(score)}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a aria-label="1"></a><span class="im">from</span> fastapi <span class="im">import</span> FastAPI</span>
+<span id="cb8-2"><a aria-label="2"></a><span class="im">from</span> pydantic <span class="im">import</span> BaseModel</span>
+<span id="cb8-3"><a aria-label="3"></a></span>
+<span id="cb8-4"><a aria-label="4"></a>app <span class="op">=</span> FastAPI()</span>
+<span id="cb8-5"><a aria-label="5"></a></span>
+<span id="cb8-6"><a aria-label="6"></a><span class="kw">class</span> Alumno(BaseModel):</span>
+<span id="cb8-7"><a aria-label="7"></a>    asistencia: <span class="bu">float</span></span>
+<span id="cb8-8"><a aria-label="8"></a>    notas: <span class="bu">float</span></span>
+<span id="cb8-9"><a aria-label="9"></a>    reprobados: <span class="bu">int</span></span>
+<span id="cb8-10"><a aria-label="10"></a></span>
+<span id="cb8-11"><a aria-label="11"></a><span class="at">@app.post</span>(<span class="st">"/predecir"</span>)</span>
+<span id="cb8-12"><a aria-label="12"></a><span class="kw">def</span> predecir(a: Alumno):</span>
+<span id="cb8-13"><a aria-label="13"></a>    score <span class="op">=</span> modelo.predict_proba(</span>
+<span id="cb8-14"><a aria-label="14"></a>        [[a.asistencia, a.notas, a.reprobados]]</span>
+<span id="cb8-15"><a aria-label="15"></a>    )[<span class="dv">0</span>, <span class="dv">1</span>]</span>
+<span id="cb8-16"><a aria-label="16"></a>    <span class="cf">return</span> {<span class="st">"riesgo"</span>: <span class="bu">float</span>(score)}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="fastapi-estructura-del-proyecto" class="slide level2">
@@ -877,29 +883,29 @@ Dirección de Transformación Digital · UTFSM
 </div>
 </div><div class="column" style="width:52%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a></a>app/</span>
-<span id="cb9-2"><a></a>├── main.py              # crea FastAPI(), incluye routers</span>
-<span id="cb9-3"><a></a>├── routers/</span>
-<span id="cb9-4"><a></a>│   ├── predecir.py      # POST /predecir  (endpoints SAT-E)</span>
-<span id="cb9-5"><a></a>│   └── salud.py         # GET  /health</span>
-<span id="cb9-6"><a></a>├── schemas/</span>
-<span id="cb9-7"><a></a>│   └── alumno.py        # modelos Pydantic (entrada/salida)</span>
-<span id="cb9-8"><a></a>├── models/</span>
-<span id="cb9-9"><a></a>│   └── riesgo.py        # carga del modelo XGBoost (.pkl)</span>
-<span id="cb9-10"><a></a>├── services/</span>
-<span id="cb9-11"><a></a>│   └── scoring.py       # lógica de negocio: score + SHAP</span>
-<span id="cb9-12"><a></a>└── core/</span>
-<span id="cb9-13"><a></a>    └── config.py        # settings, variables de entorno</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="co"># app/routers/predecir.py</span></span>
-<span id="cb10-2"><a></a><span class="im">from</span> fastapi <span class="im">import</span> APIRouter</span>
-<span id="cb10-3"><a></a><span class="im">from</span> app.schemas.alumno <span class="im">import</span> AlumnoIn, RiesgoOut</span>
-<span id="cb10-4"><a></a><span class="im">from</span> app.services.scoring <span class="im">import</span> calcular_riesgo</span>
-<span id="cb10-5"><a></a></span>
-<span id="cb10-6"><a></a>router <span class="op">=</span> APIRouter(prefix<span class="op">=</span><span class="st">"/api"</span>, tags<span class="op">=</span>[<span class="st">"SAT-E"</span>])</span>
-<span id="cb10-7"><a></a></span>
-<span id="cb10-8"><a></a><span class="at">@router.post</span>(<span class="st">"/predecir"</span>, response_model<span class="op">=</span>RiesgoOut)</span>
-<span id="cb10-9"><a></a><span class="kw">def</span> predecir(alumno: AlumnoIn):</span>
-<span id="cb10-10"><a></a>    <span class="cf">return</span> calcular_riesgo(alumno)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb9-1"><a aria-label="1"></a>app/</span>
+<span id="cb9-2"><a aria-label="2"></a>├── main.py              # crea FastAPI(), incluye routers</span>
+<span id="cb9-3"><a aria-label="3"></a>├── routers/</span>
+<span id="cb9-4"><a aria-label="4"></a>│   ├── predecir.py      # POST /predecir  (endpoints SAT-E)</span>
+<span id="cb9-5"><a aria-label="5"></a>│   └── salud.py         # GET  /health</span>
+<span id="cb9-6"><a aria-label="6"></a>├── schemas/</span>
+<span id="cb9-7"><a aria-label="7"></a>│   └── alumno.py        # modelos Pydantic (entrada/salida)</span>
+<span id="cb9-8"><a aria-label="8"></a>├── models/</span>
+<span id="cb9-9"><a aria-label="9"></a>│   └── riesgo.py        # carga del modelo XGBoost (.pkl)</span>
+<span id="cb9-10"><a aria-label="10"></a>├── services/</span>
+<span id="cb9-11"><a aria-label="11"></a>│   └── scoring.py       # lógica de negocio: score + SHAP</span>
+<span id="cb9-12"><a aria-label="12"></a>└── core/</span>
+<span id="cb9-13"><a aria-label="13"></a>    └── config.py        # settings, variables de entorno</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a aria-label="1"></a><span class="co"># app/routers/predecir.py</span></span>
+<span id="cb10-2"><a aria-label="2"></a><span class="im">from</span> fastapi <span class="im">import</span> APIRouter</span>
+<span id="cb10-3"><a aria-label="3"></a><span class="im">from</span> app.schemas.alumno <span class="im">import</span> AlumnoIn, RiesgoOut</span>
+<span id="cb10-4"><a aria-label="4"></a><span class="im">from</span> app.services.scoring <span class="im">import</span> calcular_riesgo</span>
+<span id="cb10-5"><a aria-label="5"></a></span>
+<span id="cb10-6"><a aria-label="6"></a>router <span class="op">=</span> APIRouter(prefix<span class="op">=</span><span class="st">"/api"</span>, tags<span class="op">=</span>[<span class="st">"SAT-E"</span>])</span>
+<span id="cb10-7"><a aria-label="7"></a></span>
+<span id="cb10-8"><a aria-label="8"></a><span class="at">@router.post</span>(<span class="st">"/predecir"</span>, response_model<span class="op">=</span>RiesgoOut)</span>
+<span id="cb10-9"><a aria-label="9"></a><span class="kw">def</span> predecir(alumno: AlumnoIn):</span>
+<span id="cb10-10"><a aria-label="10"></a>    <span class="cf">return</span> calcular_riesgo(alumno)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="fastapi-autenticación-con-oauth2-jwt" class="slide level2">
@@ -928,31 +934,31 @@ Dirección de Transformación Digital · UTFSM
 </div>
 </div><div class="column" style="width:54%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="im">from</span> fastapi <span class="im">import</span> Depends, HTTPException, status</span>
-<span id="cb11-2"><a></a><span class="im">from</span> fastapi.security <span class="im">import</span> OAuth2PasswordBearer</span>
-<span id="cb11-3"><a></a><span class="im">from</span> jose <span class="im">import</span> jwt, JWTError</span>
-<span id="cb11-4"><a></a></span>
-<span id="cb11-5"><a></a>oauth2_scheme <span class="op">=</span> OAuth2PasswordBearer(tokenUrl<span class="op">=</span><span class="st">"api/token"</span>)</span>
-<span id="cb11-6"><a></a>SECRET, ALGO <span class="op">=</span> settings.jwt_secret, <span class="st">"HS256"</span></span>
-<span id="cb11-7"><a></a></span>
-<span id="cb11-8"><a></a><span class="kw">def</span> usuario_actual(token: <span class="bu">str</span> <span class="op">=</span> Depends(oauth2_scheme)):</span>
-<span id="cb11-9"><a></a>    cred_error <span class="op">=</span> HTTPException(</span>
-<span id="cb11-10"><a></a>        status_code<span class="op">=</span>status.HTTP_401_UNAUTHORIZED,</span>
-<span id="cb11-11"><a></a>        detail<span class="op">=</span><span class="st">"Token inválido o expirado"</span>,</span>
-<span id="cb11-12"><a></a>        headers<span class="op">=</span>{<span class="st">"WWW-Authenticate"</span>: <span class="st">"Bearer"</span>},</span>
-<span id="cb11-13"><a></a>    )</span>
-<span id="cb11-14"><a></a>    <span class="cf">try</span>:</span>
-<span id="cb11-15"><a></a>        payload <span class="op">=</span> jwt.decode(token, SECRET, algorithms<span class="op">=</span>[ALGO])</span>
-<span id="cb11-16"><a></a>        usuario <span class="op">=</span> payload.get(<span class="st">"sub"</span>)</span>
-<span id="cb11-17"><a></a>        <span class="cf">if</span> usuario <span class="kw">is</span> <span class="va">None</span>:</span>
-<span id="cb11-18"><a></a>            <span class="cf">raise</span> cred_error</span>
-<span id="cb11-19"><a></a>    <span class="cf">except</span> JWTError:</span>
-<span id="cb11-20"><a></a>        <span class="cf">raise</span> cred_error</span>
-<span id="cb11-21"><a></a>    <span class="cf">return</span> usuario</span>
-<span id="cb11-22"><a></a></span>
-<span id="cb11-23"><a></a><span class="at">@router.get</span>(<span class="st">"/alertas"</span>)</span>
-<span id="cb11-24"><a></a><span class="kw">def</span> listar_alertas(usuario: <span class="bu">str</span> <span class="op">=</span> Depends(usuario_actual)):</span>
-<span id="cb11-25"><a></a>    <span class="cf">return</span> obtener_alertas_unidad(usuario)   <span class="co"># solo autenticados</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a aria-label="1"></a><span class="im">from</span> fastapi <span class="im">import</span> Depends, HTTPException, status</span>
+<span id="cb11-2"><a aria-label="2"></a><span class="im">from</span> fastapi.security <span class="im">import</span> OAuth2PasswordBearer</span>
+<span id="cb11-3"><a aria-label="3"></a><span class="im">from</span> jose <span class="im">import</span> jwt, JWTError</span>
+<span id="cb11-4"><a aria-label="4"></a></span>
+<span id="cb11-5"><a aria-label="5"></a>oauth2_scheme <span class="op">=</span> OAuth2PasswordBearer(tokenUrl<span class="op">=</span><span class="st">"api/token"</span>)</span>
+<span id="cb11-6"><a aria-label="6"></a>SECRET, ALGO <span class="op">=</span> settings.jwt_secret, <span class="st">"HS256"</span></span>
+<span id="cb11-7"><a aria-label="7"></a></span>
+<span id="cb11-8"><a aria-label="8"></a><span class="kw">def</span> usuario_actual(token: <span class="bu">str</span> <span class="op">=</span> Depends(oauth2_scheme)):</span>
+<span id="cb11-9"><a aria-label="9"></a>    cred_error <span class="op">=</span> HTTPException(</span>
+<span id="cb11-10"><a aria-label="10"></a>        status_code<span class="op">=</span>status.HTTP_401_UNAUTHORIZED,</span>
+<span id="cb11-11"><a aria-label="11"></a>        detail<span class="op">=</span><span class="st">"Token inválido o expirado"</span>,</span>
+<span id="cb11-12"><a aria-label="12"></a>        headers<span class="op">=</span>{<span class="st">"WWW-Authenticate"</span>: <span class="st">"Bearer"</span>},</span>
+<span id="cb11-13"><a aria-label="13"></a>    )</span>
+<span id="cb11-14"><a aria-label="14"></a>    <span class="cf">try</span>:</span>
+<span id="cb11-15"><a aria-label="15"></a>        payload <span class="op">=</span> jwt.decode(token, SECRET, algorithms<span class="op">=</span>[ALGO])</span>
+<span id="cb11-16"><a aria-label="16"></a>        usuario <span class="op">=</span> payload.get(<span class="st">"sub"</span>)</span>
+<span id="cb11-17"><a aria-label="17"></a>        <span class="cf">if</span> usuario <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb11-18"><a aria-label="18"></a>            <span class="cf">raise</span> cred_error</span>
+<span id="cb11-19"><a aria-label="19"></a>    <span class="cf">except</span> JWTError:</span>
+<span id="cb11-20"><a aria-label="20"></a>        <span class="cf">raise</span> cred_error</span>
+<span id="cb11-21"><a aria-label="21"></a>    <span class="cf">return</span> usuario</span>
+<span id="cb11-22"><a aria-label="22"></a></span>
+<span id="cb11-23"><a aria-label="23"></a><span class="at">@router.get</span>(<span class="st">"/alertas"</span>)</span>
+<span id="cb11-24"><a aria-label="24"></a><span class="kw">def</span> listar_alertas(usuario: <span class="bu">str</span> <span class="op">=</span> Depends(usuario_actual)):</span>
+<span id="cb11-25"><a aria-label="25"></a>    <span class="cf">return</span> obtener_alertas_unidad(usuario)   <span class="co"># solo autenticados</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="nginx-como-gateway" class="slide level2">
@@ -979,22 +985,22 @@ Dirección de Transformación Digital · UTFSM
 </div>
 </div><div class="column" style="width:50%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource nginx number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>server {</span>
-<span id="cb12-2"><a></a>    listen 443 ssl;</span>
-<span id="cb12-3"><a></a>    server_name analitica.dtd.usm.cl;</span>
-<span id="cb12-4"><a></a></span>
-<span id="cb12-5"><a></a>    location /api/ {</span>
-<span id="cb12-6"><a></a>        proxy_pass http://127.0.0.1:8000/;</span>
-<span id="cb12-7"><a></a>    }</span>
-<span id="cb12-8"><a></a></span>
-<span id="cb12-9"><a></a>    location /app/ {</span>
-<span id="cb12-10"><a></a>        proxy_pass http://127.0.0.1:8501/;</span>
-<span id="cb12-11"><a></a>    }</span>
-<span id="cb12-12"><a></a></span>
-<span id="cb12-13"><a></a>    location / {</span>
-<span id="cb12-14"><a></a>        proxy_pass http://127.0.0.1:3000/;</span>
-<span id="cb12-15"><a></a>    }</span>
-<span id="cb12-16"><a></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource nginx number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a aria-label="1"></a>server {</span>
+<span id="cb12-2"><a aria-label="2"></a>    listen 443 ssl;</span>
+<span id="cb12-3"><a aria-label="3"></a>    server_name analitica.dtd.usm.cl;</span>
+<span id="cb12-4"><a aria-label="4"></a></span>
+<span id="cb12-5"><a aria-label="5"></a>    location /api/ {</span>
+<span id="cb12-6"><a aria-label="6"></a>        proxy_pass http://127.0.0.1:8000/;</span>
+<span id="cb12-7"><a aria-label="7"></a>    }</span>
+<span id="cb12-8"><a aria-label="8"></a></span>
+<span id="cb12-9"><a aria-label="9"></a>    location /app/ {</span>
+<span id="cb12-10"><a aria-label="10"></a>        proxy_pass http://127.0.0.1:8501/;</span>
+<span id="cb12-11"><a aria-label="11"></a>    }</span>
+<span id="cb12-12"><a aria-label="12"></a></span>
+<span id="cb12-13"><a aria-label="13"></a>    location / {</span>
+<span id="cb12-14"><a aria-label="14"></a>        proxy_pass http://127.0.0.1:3000/;</span>
+<span id="cb12-15"><a aria-label="15"></a>    }</span>
+<span id="cb12-16"><a aria-label="16"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="orquestación-con-docker-compose" class="slide level2">
@@ -1023,33 +1029,33 @@ Dirección de Transformación Digital · UTFSM
 </div>
 </div><div class="column" style="width:56%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a></a><span class="fu">services</span><span class="kw">:</span></span>
-<span id="cb13-2"><a></a><span class="at">  </span><span class="fu">api</span><span class="kw">:</span><span class="co">                          # FastAPI + XGBoost</span></span>
-<span id="cb13-3"><a></a><span class="at">    </span><span class="fu">build</span><span class="kw">:</span><span class="at"> ./api</span></span>
-<span id="cb13-4"><a></a><span class="at">    </span><span class="fu">expose</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"8000"</span><span class="kw">]</span></span>
-<span id="cb13-5"><a></a><span class="at">    </span><span class="fu">environment</span><span class="kw">:</span></span>
-<span id="cb13-6"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> MODEL_PATH=/models/xgb_sate.pkl</span></span>
-<span id="cb13-7"><a></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
-<span id="cb13-8"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./models:/models:ro</span></span>
-<span id="cb13-9"><a></a><span class="at">    </span><span class="fu">healthcheck</span><span class="kw">:</span></span>
-<span id="cb13-10"><a></a><span class="at">      </span><span class="fu">test</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"CMD"</span><span class="kw">,</span><span class="at"> </span><span class="st">"curl"</span><span class="kw">,</span><span class="at"> </span><span class="st">"-f"</span><span class="kw">,</span><span class="at"> </span><span class="st">"http://localhost:8000/health"</span><span class="kw">]</span></span>
-<span id="cb13-11"><a></a><span class="at">      </span><span class="fu">interval</span><span class="kw">:</span><span class="at"> 30s</span></span>
-<span id="cb13-12"><a></a><span class="at">      </span><span class="fu">retries</span><span class="kw">:</span><span class="at"> </span><span class="dv">3</span></span>
-<span id="cb13-13"><a></a></span>
-<span id="cb13-14"><a></a><span class="at">  </span><span class="fu">dashboard</span><span class="kw">:</span><span class="co">                    # Streamlit</span></span>
-<span id="cb13-15"><a></a><span class="at">    </span><span class="fu">build</span><span class="kw">:</span><span class="at"> ./dashboard</span></span>
-<span id="cb13-16"><a></a><span class="at">    </span><span class="fu">expose</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"8501"</span><span class="kw">]</span></span>
-<span id="cb13-17"><a></a><span class="at">    </span><span class="fu">depends_on</span><span class="kw">:</span></span>
-<span id="cb13-18"><a></a><span class="at">      </span><span class="fu">api</span><span class="kw">:</span></span>
-<span id="cb13-19"><a></a><span class="at">        </span><span class="fu">condition</span><span class="kw">:</span><span class="at"> service_healthy</span></span>
-<span id="cb13-20"><a></a></span>
-<span id="cb13-21"><a></a><span class="at">  </span><span class="fu">nginx</span><span class="kw">:</span><span class="co">                        # gateway público</span></span>
-<span id="cb13-22"><a></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> nginx:1.25-alpine</span></span>
-<span id="cb13-23"><a></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"443:443"</span><span class="kw">,</span><span class="at"> </span><span class="st">"80:80"</span><span class="kw">]</span></span>
-<span id="cb13-24"><a></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
-<span id="cb13-25"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./nginx.conf:/etc/nginx/nginx.conf:ro</span></span>
-<span id="cb13-26"><a></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./certs:/etc/nginx/certs:ro</span></span>
-<span id="cb13-27"><a></a><span class="at">    </span><span class="fu">depends_on</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">api</span><span class="kw">,</span><span class="at"> dashboard</span><span class="kw">]</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a aria-label="1"></a><span class="fu">services</span><span class="kw">:</span></span>
+<span id="cb13-2"><a aria-label="2"></a><span class="at">  </span><span class="fu">api</span><span class="kw">:</span><span class="co">                          # FastAPI + XGBoost</span></span>
+<span id="cb13-3"><a aria-label="3"></a><span class="at">    </span><span class="fu">build</span><span class="kw">:</span><span class="at"> ./api</span></span>
+<span id="cb13-4"><a aria-label="4"></a><span class="at">    </span><span class="fu">expose</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"8000"</span><span class="kw">]</span></span>
+<span id="cb13-5"><a aria-label="5"></a><span class="at">    </span><span class="fu">environment</span><span class="kw">:</span></span>
+<span id="cb13-6"><a aria-label="6"></a><span class="at">      </span><span class="kw">-</span><span class="at"> MODEL_PATH=/models/xgb_sate.pkl</span></span>
+<span id="cb13-7"><a aria-label="7"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb13-8"><a aria-label="8"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./models:/models:ro</span></span>
+<span id="cb13-9"><a aria-label="9"></a><span class="at">    </span><span class="fu">healthcheck</span><span class="kw">:</span></span>
+<span id="cb13-10"><a aria-label="10"></a><span class="at">      </span><span class="fu">test</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"CMD"</span><span class="kw">,</span><span class="at"> </span><span class="st">"curl"</span><span class="kw">,</span><span class="at"> </span><span class="st">"-f"</span><span class="kw">,</span><span class="at"> </span><span class="st">"http://localhost:8000/health"</span><span class="kw">]</span></span>
+<span id="cb13-11"><a aria-label="11"></a><span class="at">      </span><span class="fu">interval</span><span class="kw">:</span><span class="at"> 30s</span></span>
+<span id="cb13-12"><a aria-label="12"></a><span class="at">      </span><span class="fu">retries</span><span class="kw">:</span><span class="at"> </span><span class="dv">3</span></span>
+<span id="cb13-13"><a aria-label="13"></a></span>
+<span id="cb13-14"><a aria-label="14"></a><span class="at">  </span><span class="fu">dashboard</span><span class="kw">:</span><span class="co">                    # Streamlit</span></span>
+<span id="cb13-15"><a aria-label="15"></a><span class="at">    </span><span class="fu">build</span><span class="kw">:</span><span class="at"> ./dashboard</span></span>
+<span id="cb13-16"><a aria-label="16"></a><span class="at">    </span><span class="fu">expose</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"8501"</span><span class="kw">]</span></span>
+<span id="cb13-17"><a aria-label="17"></a><span class="at">    </span><span class="fu">depends_on</span><span class="kw">:</span></span>
+<span id="cb13-18"><a aria-label="18"></a><span class="at">      </span><span class="fu">api</span><span class="kw">:</span></span>
+<span id="cb13-19"><a aria-label="19"></a><span class="at">        </span><span class="fu">condition</span><span class="kw">:</span><span class="at"> service_healthy</span></span>
+<span id="cb13-20"><a aria-label="20"></a></span>
+<span id="cb13-21"><a aria-label="21"></a><span class="at">  </span><span class="fu">nginx</span><span class="kw">:</span><span class="co">                        # gateway público</span></span>
+<span id="cb13-22"><a aria-label="22"></a><span class="at">    </span><span class="fu">image</span><span class="kw">:</span><span class="at"> nginx:1.25-alpine</span></span>
+<span id="cb13-23"><a aria-label="23"></a><span class="at">    </span><span class="fu">ports</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="st">"443:443"</span><span class="kw">,</span><span class="at"> </span><span class="st">"80:80"</span><span class="kw">]</span></span>
+<span id="cb13-24"><a aria-label="24"></a><span class="at">    </span><span class="fu">volumes</span><span class="kw">:</span></span>
+<span id="cb13-25"><a aria-label="25"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./nginx.conf:/etc/nginx/nginx.conf:ro</span></span>
+<span id="cb13-26"><a aria-label="26"></a><span class="at">      </span><span class="kw">-</span><span class="at"> ./certs:/etc/nginx/certs:ro</span></span>
+<span id="cb13-27"><a aria-label="27"></a><span class="at">    </span><span class="fu">depends_on</span><span class="kw">:</span><span class="at"> </span><span class="kw">[</span><span class="at">api</span><span class="kw">,</span><span class="at"> dashboard</span><span class="kw">]</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="section-4" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">
@@ -1070,12 +1076,12 @@ Dirección de Transformación Digital · UTFSM
 <li>Para el área: <strong>dashboards exploratorios</strong>, demos de modelos y prototipos internos.</li>
 <li>De idea a interfaz funcional <strong>en minutos</strong>, sin frontend.</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
-<span id="cb14-2"><a></a></span>
-<span id="cb14-3"><a></a>st.title(<span class="st">"Riesgo académico — SAT-E"</span>)</span>
-<span id="cb14-4"><a></a>df <span class="op">=</span> cargar_cohorte()</span>
-<span id="cb14-5"><a></a>st.dataframe(df)</span>
-<span id="cb14-6"><a></a>st.plotly_chart(grafico_riesgo(df))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a aria-label="1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
+<span id="cb14-2"><a aria-label="2"></a></span>
+<span id="cb14-3"><a aria-label="3"></a>st.title(<span class="st">"Riesgo académico — SAT-E"</span>)</span>
+<span id="cb14-4"><a aria-label="4"></a>df <span class="op">=</span> cargar_cohorte()</span>
+<span id="cb14-5"><a aria-label="5"></a>st.dataframe(df)</span>
+<span id="cb14-6"><a aria-label="6"></a>st.plotly_chart(grafico_riesgo(df))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1126,26 +1132,26 @@ Dirección de Transformación Digital · UTFSM
 </div>
 </div><div class="column" style="width:52%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
-<span id="cb15-2"><a></a></span>
-<span id="cb15-3"><a></a><span class="co"># Estado inicial (solo la primera vez)</span></span>
-<span id="cb15-4"><a></a><span class="cf">if</span> <span class="st">"filtros"</span> <span class="kw">not</span> <span class="kw">in</span> st.session_state:</span>
-<span id="cb15-5"><a></a>    st.session_state.filtros <span class="op">=</span> {<span class="st">"campus"</span>: <span class="st">"Casa Central"</span>,</span>
-<span id="cb15-6"><a></a>                                <span class="st">"umbral"</span>: <span class="fl">0.7</span>}</span>
-<span id="cb15-7"><a></a></span>
-<span id="cb15-8"><a></a><span class="co"># Los widgets leen y escriben en session_state</span></span>
-<span id="cb15-9"><a></a>st.session_state.filtros[<span class="st">"campus"</span>] <span class="op">=</span> st.selectbox(</span>
-<span id="cb15-10"><a></a>    <span class="st">"Campus"</span>, CAMPUS,</span>
-<span id="cb15-11"><a></a>    index<span class="op">=</span>CAMPUS.index(st.session_state.filtros[<span class="st">"campus"</span>]),</span>
-<span id="cb15-12"><a></a>)</span>
-<span id="cb15-13"><a></a>st.session_state.filtros[<span class="st">"umbral"</span>] <span class="op">=</span> st.slider(</span>
-<span id="cb15-14"><a></a>    <span class="st">"Umbral de riesgo"</span>, <span class="fl">0.0</span>, <span class="fl">1.0</span>,</span>
-<span id="cb15-15"><a></a>    st.session_state.filtros[<span class="st">"umbral"</span>],</span>
-<span id="cb15-16"><a></a>)</span>
-<span id="cb15-17"><a></a></span>
-<span id="cb15-18"><a></a><span class="co"># El filtro sobrevive a cada rerun del script</span></span>
-<span id="cb15-19"><a></a>df_filtrado <span class="op">=</span> aplicar_filtros(df, st.session_state.filtros)</span>
-<span id="cb15-20"><a></a>st.metric(<span class="st">"Alumnos en alerta"</span>, <span class="bu">len</span>(df_filtrado))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a aria-label="1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
+<span id="cb15-2"><a aria-label="2"></a></span>
+<span id="cb15-3"><a aria-label="3"></a><span class="co"># Estado inicial (solo la primera vez)</span></span>
+<span id="cb15-4"><a aria-label="4"></a><span class="cf">if</span> <span class="st">"filtros"</span> <span class="kw">not</span> <span class="kw">in</span> st.session_state:</span>
+<span id="cb15-5"><a aria-label="5"></a>    st.session_state.filtros <span class="op">=</span> {<span class="st">"campus"</span>: <span class="st">"Casa Central"</span>,</span>
+<span id="cb15-6"><a aria-label="6"></a>                                <span class="st">"umbral"</span>: <span class="fl">0.7</span>}</span>
+<span id="cb15-7"><a aria-label="7"></a></span>
+<span id="cb15-8"><a aria-label="8"></a><span class="co"># Los widgets leen y escriben en session_state</span></span>
+<span id="cb15-9"><a aria-label="9"></a>st.session_state.filtros[<span class="st">"campus"</span>] <span class="op">=</span> st.selectbox(</span>
+<span id="cb15-10"><a aria-label="10"></a>    <span class="st">"Campus"</span>, CAMPUS,</span>
+<span id="cb15-11"><a aria-label="11"></a>    index<span class="op">=</span>CAMPUS.index(st.session_state.filtros[<span class="st">"campus"</span>]),</span>
+<span id="cb15-12"><a aria-label="12"></a>)</span>
+<span id="cb15-13"><a aria-label="13"></a>st.session_state.filtros[<span class="st">"umbral"</span>] <span class="op">=</span> st.slider(</span>
+<span id="cb15-14"><a aria-label="14"></a>    <span class="st">"Umbral de riesgo"</span>, <span class="fl">0.0</span>, <span class="fl">1.0</span>,</span>
+<span id="cb15-15"><a aria-label="15"></a>    st.session_state.filtros[<span class="st">"umbral"</span>],</span>
+<span id="cb15-16"><a aria-label="16"></a>)</span>
+<span id="cb15-17"><a aria-label="17"></a></span>
+<span id="cb15-18"><a aria-label="18"></a><span class="co"># El filtro sobrevive a cada rerun del script</span></span>
+<span id="cb15-19"><a aria-label="19"></a>df_filtrado <span class="op">=</span> aplicar_filtros(df, st.session_state.filtros)</span>
+<span id="cb15-20"><a aria-label="20"></a>st.metric(<span class="st">"Alumnos en alerta"</span>, <span class="bu">len</span>(df_filtrado))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="streamlit-fastapi-consumir-el-modelo" class="slide level2">
@@ -1174,26 +1180,26 @@ Dirección de Transformación Digital · UTFSM
 </div>
 </div><div class="column" style="width:52%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
-<span id="cb16-2"><a></a><span class="im">import</span> requests</span>
-<span id="cb16-3"><a></a></span>
-<span id="cb16-4"><a></a>API <span class="op">=</span> <span class="st">"https://analitica.dtd.usm.cl/api"</span></span>
-<span id="cb16-5"><a></a></span>
-<span id="cb16-6"><a></a><span class="at">@st.cache_data</span>(ttl<span class="op">=</span><span class="dv">300</span>)            <span class="co"># cachea 5 min, evita llamar de más</span></span>
-<span id="cb16-7"><a></a><span class="kw">def</span> consultar_riesgo(rut: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">dict</span>:</span>
-<span id="cb16-8"><a></a>    r <span class="op">=</span> requests.get(</span>
-<span id="cb16-9"><a></a>        <span class="ss">f"</span><span class="sc">{</span>API<span class="sc">}</span><span class="ss">/predecir/</span><span class="sc">{</span>rut<span class="sc">}</span><span class="ss">"</span>,</span>
-<span id="cb16-10"><a></a>        headers<span class="op">=</span>{<span class="st">"Authorization"</span>: <span class="ss">f"Bearer </span><span class="sc">{</span>st<span class="sc">.</span>session_state<span class="sc">.</span>token<span class="sc">}</span><span class="ss">"</span>},</span>
-<span id="cb16-11"><a></a>        timeout<span class="op">=</span><span class="dv">10</span>,</span>
-<span id="cb16-12"><a></a>    )</span>
-<span id="cb16-13"><a></a>    r.raise_for_status()</span>
-<span id="cb16-14"><a></a>    <span class="cf">return</span> r.json()</span>
-<span id="cb16-15"><a></a></span>
-<span id="cb16-16"><a></a>rut <span class="op">=</span> st.text_input(<span class="st">"RUT del estudiante"</span>)</span>
-<span id="cb16-17"><a></a><span class="cf">if</span> rut:</span>
-<span id="cb16-18"><a></a>    datos <span class="op">=</span> consultar_riesgo(rut)</span>
-<span id="cb16-19"><a></a>    st.metric(<span class="st">"Riesgo"</span>, <span class="ss">f"</span><span class="sc">{</span>datos[<span class="st">'riesgo'</span>]<span class="sc">:.0%}</span><span class="ss">"</span>)</span>
-<span id="cb16-20"><a></a>    st.bar_chart(datos[<span class="st">"shap"</span>])     <span class="co"># aporte de cada variable</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a aria-label="1"></a><span class="im">import</span> streamlit <span class="im">as</span> st</span>
+<span id="cb16-2"><a aria-label="2"></a><span class="im">import</span> requests</span>
+<span id="cb16-3"><a aria-label="3"></a></span>
+<span id="cb16-4"><a aria-label="4"></a>API <span class="op">=</span> <span class="st">"https://analitica.dtd.usm.cl/api"</span></span>
+<span id="cb16-5"><a aria-label="5"></a></span>
+<span id="cb16-6"><a aria-label="6"></a><span class="at">@st.cache_data</span>(ttl<span class="op">=</span><span class="dv">300</span>)            <span class="co"># cachea 5 min, evita llamar de más</span></span>
+<span id="cb16-7"><a aria-label="7"></a><span class="kw">def</span> consultar_riesgo(rut: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">dict</span>:</span>
+<span id="cb16-8"><a aria-label="8"></a>    r <span class="op">=</span> requests.get(</span>
+<span id="cb16-9"><a aria-label="9"></a>        <span class="ss">f"</span><span class="sc">{</span>API<span class="sc">}</span><span class="ss">/predecir/</span><span class="sc">{</span>rut<span class="sc">}</span><span class="ss">"</span>,</span>
+<span id="cb16-10"><a aria-label="10"></a>        headers<span class="op">=</span>{<span class="st">"Authorization"</span>: <span class="ss">f"Bearer </span><span class="sc">{</span>st<span class="sc">.</span>session_state<span class="sc">.</span>token<span class="sc">}</span><span class="ss">"</span>},</span>
+<span id="cb16-11"><a aria-label="11"></a>        timeout<span class="op">=</span><span class="dv">10</span>,</span>
+<span id="cb16-12"><a aria-label="12"></a>    )</span>
+<span id="cb16-13"><a aria-label="13"></a>    r.raise_for_status()</span>
+<span id="cb16-14"><a aria-label="14"></a>    <span class="cf">return</span> r.json()</span>
+<span id="cb16-15"><a aria-label="15"></a></span>
+<span id="cb16-16"><a aria-label="16"></a>rut <span class="op">=</span> st.text_input(<span class="st">"RUT del estudiante"</span>)</span>
+<span id="cb16-17"><a aria-label="17"></a><span class="cf">if</span> rut:</span>
+<span id="cb16-18"><a aria-label="18"></a>    datos <span class="op">=</span> consultar_riesgo(rut)</span>
+<span id="cb16-19"><a aria-label="19"></a>    st.metric(<span class="st">"Riesgo"</span>, <span class="ss">f"</span><span class="sc">{</span>datos[<span class="st">'riesgo'</span>]<span class="sc">:.0%}</span><span class="ss">"</span>)</span>
+<span id="cb16-20"><a aria-label="20"></a>    st.bar_chart(datos[<span class="st">"shap"</span>])     <span class="co"># aporte de cada variable</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="react-18-mui-5-spa-institucional" class="slide level2">
@@ -1209,18 +1215,18 @@ Dirección de Transformación Digital · UTFSM
 </ul>
 </div><div class="column" style="width:50%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource javascript number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb17-1"><a></a><span class="im">import</span> { DataGrid } <span class="im">from</span> <span class="st">'@mui/x-data-grid'</span><span class="op">;</span></span>
-<span id="cb17-2"><a></a></span>
-<span id="cb17-3"><a></a><span class="kw">const</span> columns <span class="op">=</span> [</span>
-<span id="cb17-4"><a></a>  { <span class="dt">field</span><span class="op">:</span> <span class="st">'rut'</span><span class="op">,</span> <span class="dt">headerName</span><span class="op">:</span> <span class="st">'RUT'</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">120</span> }<span class="op">,</span></span>
-<span id="cb17-5"><a></a>  { <span class="dt">field</span><span class="op">:</span> <span class="st">'carrera'</span><span class="op">,</span> <span class="dt">headerName</span><span class="op">:</span> <span class="st">'Carrera'</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">200</span> }<span class="op">,</span></span>
-<span id="cb17-6"><a></a>  { <span class="dt">field</span><span class="op">:</span> <span class="st">'riesgo'</span><span class="op">,</span> <span class="dt">headerName</span><span class="op">:</span> <span class="st">'Riesgo'</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">110</span> }<span class="op">,</span></span>
-<span id="cb17-7"><a></a>]<span class="op">;</span></span>
-<span id="cb17-8"><a></a></span>
-<span id="cb17-9"><a></a><span class="im">export</span> <span class="im">default</span> <span class="kw">function</span> <span class="fu">TablaRiesgo</span>({ rows }) {</span>
-<span id="cb17-10"><a></a>  <span class="cf">return</span> <span class="op">&lt;</span>DataGrid rows<span class="op">=</span>{rows} columns<span class="op">=</span>{columns}</span>
-<span id="cb17-11"><a></a>                   pageSize<span class="op">=</span>{<span class="dv">10</span>} checkboxSelection <span class="op">/&gt;;</span></span>
-<span id="cb17-12"><a></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource javascript number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb17-1"><a aria-label="1"></a><span class="im">import</span> { DataGrid } <span class="im">from</span> <span class="st">'@mui/x-data-grid'</span><span class="op">;</span></span>
+<span id="cb17-2"><a aria-label="2"></a></span>
+<span id="cb17-3"><a aria-label="3"></a><span class="kw">const</span> columns <span class="op">=</span> [</span>
+<span id="cb17-4"><a aria-label="4"></a>  { <span class="dt">field</span><span class="op">:</span> <span class="st">'rut'</span><span class="op">,</span> <span class="dt">headerName</span><span class="op">:</span> <span class="st">'RUT'</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">120</span> }<span class="op">,</span></span>
+<span id="cb17-5"><a aria-label="5"></a>  { <span class="dt">field</span><span class="op">:</span> <span class="st">'carrera'</span><span class="op">,</span> <span class="dt">headerName</span><span class="op">:</span> <span class="st">'Carrera'</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">200</span> }<span class="op">,</span></span>
+<span id="cb17-6"><a aria-label="6"></a>  { <span class="dt">field</span><span class="op">:</span> <span class="st">'riesgo'</span><span class="op">,</span> <span class="dt">headerName</span><span class="op">:</span> <span class="st">'Riesgo'</span><span class="op">,</span> <span class="dt">width</span><span class="op">:</span> <span class="dv">110</span> }<span class="op">,</span></span>
+<span id="cb17-7"><a aria-label="7"></a>]<span class="op">;</span></span>
+<span id="cb17-8"><a aria-label="8"></a></span>
+<span id="cb17-9"><a aria-label="9"></a><span class="im">export</span> <span class="im">default</span> <span class="kw">function</span> <span class="fu">TablaRiesgo</span>({ rows }) {</span>
+<span id="cb17-10"><a aria-label="10"></a>  <span class="cf">return</span> <span class="op">&lt;</span>DataGrid rows<span class="op">=</span>{rows} columns<span class="op">=</span>{columns}</span>
+<span id="cb17-11"><a aria-label="11"></a>                   pageSize<span class="op">=</span>{<span class="dv">10</span>} checkboxSelection <span class="op">/&gt;;</span></span>
+<span id="cb17-12"><a aria-label="12"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="power-bi-reportes-institucionales" class="slide level2">
@@ -1400,24 +1406,24 @@ Dirección de Transformación Digital · UTFSM
 </div>
 </div><div class="column" style="width:54%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="co"># tests/test_datos.py — pytest valida la lógica</span></span>
-<span id="cb18-2"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb18-3"><a></a><span class="im">from</span> pipelines.limpieza <span class="im">import</span> limpiar_datos</span>
-<span id="cb18-4"><a></a></span>
-<span id="cb18-5"><a></a><span class="kw">def</span> test_no_hay_ruts_duplicados():</span>
-<span id="cb18-6"><a></a>    df <span class="op">=</span> limpiar_datos(cargar_fixture(<span class="st">"muestra.csv"</span>))</span>
-<span id="cb18-7"><a></a>    <span class="cf">assert</span> df[<span class="st">"rut"</span>].is_unique</span>
-<span id="cb18-8"><a></a></span>
-<span id="cb18-9"><a></a><span class="kw">def</span> test_promedios_en_rango():</span>
-<span id="cb18-10"><a></a>    df <span class="op">=</span> limpiar_datos(cargar_fixture(<span class="st">"muestra.csv"</span>))</span>
-<span id="cb18-11"><a></a>    <span class="cf">assert</span> df[<span class="st">"promedio"</span>].between(<span class="fl">1.0</span>, <span class="fl">7.0</span>).<span class="bu">all</span>()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="co"># great_expectations — expectativas sobre el dataset</span></span>
-<span id="cb19-2"><a></a><span class="im">import</span> great_expectations <span class="im">as</span> gx</span>
-<span id="cb19-3"><a></a></span>
-<span id="cb19-4"><a></a>batch <span class="op">=</span> gx.read_csv(<span class="st">"data/03_primary/datos_limpios.parquet"</span>)</span>
-<span id="cb19-5"><a></a>batch.expect_column_values_to_not_be_null(<span class="st">"rut"</span>)</span>
-<span id="cb19-6"><a></a>batch.expect_column_values_to_be_between(<span class="st">"asistencia"</span>, <span class="dv">0</span>, <span class="dv">100</span>)</span>
-<span id="cb19-7"><a></a>batch.expect_column_values_to_be_in_set(<span class="st">"campus"</span>, CAMPUS_USM)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a aria-label="1"></a><span class="co"># tests/test_datos.py — pytest valida la lógica</span></span>
+<span id="cb18-2"><a aria-label="2"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb18-3"><a aria-label="3"></a><span class="im">from</span> pipelines.limpieza <span class="im">import</span> limpiar_datos</span>
+<span id="cb18-4"><a aria-label="4"></a></span>
+<span id="cb18-5"><a aria-label="5"></a><span class="kw">def</span> test_no_hay_ruts_duplicados():</span>
+<span id="cb18-6"><a aria-label="6"></a>    df <span class="op">=</span> limpiar_datos(cargar_fixture(<span class="st">"muestra.csv"</span>))</span>
+<span id="cb18-7"><a aria-label="7"></a>    <span class="cf">assert</span> df[<span class="st">"rut"</span>].is_unique</span>
+<span id="cb18-8"><a aria-label="8"></a></span>
+<span id="cb18-9"><a aria-label="9"></a><span class="kw">def</span> test_promedios_en_rango():</span>
+<span id="cb18-10"><a aria-label="10"></a>    df <span class="op">=</span> limpiar_datos(cargar_fixture(<span class="st">"muestra.csv"</span>))</span>
+<span id="cb18-11"><a aria-label="11"></a>    <span class="cf">assert</span> df[<span class="st">"promedio"</span>].between(<span class="fl">1.0</span>, <span class="fl">7.0</span>).<span class="bu">all</span>()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a aria-label="1"></a><span class="co"># great_expectations — expectativas sobre el dataset</span></span>
+<span id="cb19-2"><a aria-label="2"></a><span class="im">import</span> great_expectations <span class="im">as</span> gx</span>
+<span id="cb19-3"><a aria-label="3"></a></span>
+<span id="cb19-4"><a aria-label="4"></a>batch <span class="op">=</span> gx.read_csv(<span class="st">"data/03_primary/datos_limpios.parquet"</span>)</span>
+<span id="cb19-5"><a aria-label="5"></a>batch.expect_column_values_to_not_be_null(<span class="st">"rut"</span>)</span>
+<span id="cb19-6"><a aria-label="6"></a>batch.expect_column_values_to_be_between(<span class="st">"asistencia"</span>, <span class="dv">0</span>, <span class="dv">100</span>)</span>
+<span id="cb19-7"><a aria-label="7"></a>batch.expect_column_values_to_be_in_set(<span class="st">"campus"</span>, CAMPUS_USM)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="drift-detection-ks-test-y-psi" class="slide level2">
@@ -1446,24 +1452,24 @@ Dirección de Transformación Digital · UTFSM
 </div>
 </div><div class="column" style="width:54%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a><span class="im">from</span> scipy.stats <span class="im">import</span> ks_2samp</span>
-<span id="cb20-2"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb20-3"><a></a></span>
-<span id="cb20-4"><a></a><span class="kw">def</span> psi(esperado, actual, bins<span class="op">=</span><span class="dv">10</span>):</span>
-<span id="cb20-5"><a></a>    <span class="co">"""Population Stability Index entre train y producción."""</span></span>
-<span id="cb20-6"><a></a>    cortes <span class="op">=</span> np.quantile(esperado, np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, bins <span class="op">+</span> <span class="dv">1</span>))</span>
-<span id="cb20-7"><a></a>    e <span class="op">=</span> np.histogram(esperado, cortes)[<span class="dv">0</span>] <span class="op">/</span> <span class="bu">len</span>(esperado)</span>
-<span id="cb20-8"><a></a>    a <span class="op">=</span> np.histogram(actual,   cortes)[<span class="dv">0</span>] <span class="op">/</span> <span class="bu">len</span>(actual)</span>
-<span id="cb20-9"><a></a>    e, a <span class="op">=</span> np.clip(e, <span class="fl">1e-4</span>, <span class="va">None</span>), np.clip(a, <span class="fl">1e-4</span>, <span class="va">None</span>)</span>
-<span id="cb20-10"><a></a>    <span class="cf">return</span> np.<span class="bu">sum</span>((a <span class="op">-</span> e) <span class="op">*</span> np.log(a <span class="op">/</span> e))</span>
-<span id="cb20-11"><a></a></span>
-<span id="cb20-12"><a></a><span class="co"># KS test: ¿cambió la distribución de asistencia?</span></span>
-<span id="cb20-13"><a></a>stat, p <span class="op">=</span> ks_2samp(train[<span class="st">"asistencia"</span>], prod[<span class="st">"asistencia"</span>])</span>
-<span id="cb20-14"><a></a>hay_drift_ks <span class="op">=</span> p <span class="op">&lt;</span> <span class="fl">0.05</span></span>
-<span id="cb20-15"><a></a></span>
-<span id="cb20-16"><a></a>psi_asist <span class="op">=</span> psi(train[<span class="st">"asistencia"</span>], prod[<span class="st">"asistencia"</span>])</span>
-<span id="cb20-17"><a></a><span class="co"># PSI &gt; 0.25 → cambio severo, reentrenar el modelo</span></span>
-<span id="cb20-18"><a></a><span class="bu">print</span>(<span class="ss">f"KS p-value=</span><span class="sc">{</span>p<span class="sc">:.3f}</span><span class="ss">  ·  PSI=</span><span class="sc">{</span>psi_asist<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a aria-label="1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> ks_2samp</span>
+<span id="cb20-2"><a aria-label="2"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb20-3"><a aria-label="3"></a></span>
+<span id="cb20-4"><a aria-label="4"></a><span class="kw">def</span> psi(esperado, actual, bins<span class="op">=</span><span class="dv">10</span>):</span>
+<span id="cb20-5"><a aria-label="5"></a>    <span class="co">"""Population Stability Index entre train y producción."""</span></span>
+<span id="cb20-6"><a aria-label="6"></a>    cortes <span class="op">=</span> np.quantile(esperado, np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, bins <span class="op">+</span> <span class="dv">1</span>))</span>
+<span id="cb20-7"><a aria-label="7"></a>    e <span class="op">=</span> np.histogram(esperado, cortes)[<span class="dv">0</span>] <span class="op">/</span> <span class="bu">len</span>(esperado)</span>
+<span id="cb20-8"><a aria-label="8"></a>    a <span class="op">=</span> np.histogram(actual,   cortes)[<span class="dv">0</span>] <span class="op">/</span> <span class="bu">len</span>(actual)</span>
+<span id="cb20-9"><a aria-label="9"></a>    e, a <span class="op">=</span> np.clip(e, <span class="fl">1e-4</span>, <span class="va">None</span>), np.clip(a, <span class="fl">1e-4</span>, <span class="va">None</span>)</span>
+<span id="cb20-10"><a aria-label="10"></a>    <span class="cf">return</span> np.<span class="bu">sum</span>((a <span class="op">-</span> e) <span class="op">*</span> np.log(a <span class="op">/</span> e))</span>
+<span id="cb20-11"><a aria-label="11"></a></span>
+<span id="cb20-12"><a aria-label="12"></a><span class="co"># KS test: ¿cambió la distribución de asistencia?</span></span>
+<span id="cb20-13"><a aria-label="13"></a>stat, p <span class="op">=</span> ks_2samp(train[<span class="st">"asistencia"</span>], prod[<span class="st">"asistencia"</span>])</span>
+<span id="cb20-14"><a aria-label="14"></a>hay_drift_ks <span class="op">=</span> p <span class="op">&lt;</span> <span class="fl">0.05</span></span>
+<span id="cb20-15"><a aria-label="15"></a></span>
+<span id="cb20-16"><a aria-label="16"></a>psi_asist <span class="op">=</span> psi(train[<span class="st">"asistencia"</span>], prod[<span class="st">"asistencia"</span>])</span>
+<span id="cb20-17"><a aria-label="17"></a><span class="co"># PSI &gt; 0.25 → cambio severo, reentrenar el modelo</span></span>
+<span id="cb20-18"><a aria-label="18"></a><span class="bu">print</span>(<span class="ss">f"KS p-value=</span><span class="sc">{</span>p<span class="sc">:.3f}</span><span class="ss">  ·  PSI=</span><span class="sc">{</span>psi_asist<span class="sc">:.3f}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="registro-de-experimentos-mlflow" class="slide level2">
@@ -1492,26 +1498,26 @@ Dirección de Transformación Digital · UTFSM
 </div>
 </div><div class="column" style="width:54%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a><span class="im">import</span> mlflow, mlflow.sklearn</span>
-<span id="cb21-2"><a></a></span>
-<span id="cb21-3"><a></a>mlflow.set_experiment(<span class="st">"SAT-E"</span>)</span>
-<span id="cb21-4"><a></a></span>
-<span id="cb21-5"><a></a><span class="cf">with</span> mlflow.start_run(run_name<span class="op">=</span><span class="st">"xgb_M25_walkforward"</span>):</span>
-<span id="cb21-6"><a></a>    mlflow.log_params({</span>
-<span id="cb21-7"><a></a>        <span class="st">"n_estimators"</span>: <span class="dv">400</span>, <span class="st">"max_depth"</span>: <span class="dv">5</span>,</span>
-<span id="cb21-8"><a></a>        <span class="st">"learning_rate"</span>: <span class="fl">0.05</span>, <span class="st">"cohorte_train"</span>: <span class="st">"M23+M24"</span>,</span>
-<span id="cb21-9"><a></a>    })</span>
-<span id="cb21-10"><a></a></span>
-<span id="cb21-11"><a></a>    modelo <span class="op">=</span> XGBClassifier(<span class="op">**</span>params).fit(Xtr, ytr)</span>
-<span id="cb21-12"><a></a>    proba <span class="op">=</span> modelo.predict_proba(Xte)[:, <span class="dv">1</span>]</span>
-<span id="cb21-13"><a></a></span>
-<span id="cb21-14"><a></a>    mlflow.log_metrics({</span>
-<span id="cb21-15"><a></a>        <span class="st">"auc"</span>: roc_auc_score(yte, proba),</span>
-<span id="cb21-16"><a></a>        <span class="st">"f1"</span>:  f1_score(yte, proba <span class="op">&gt;</span> <span class="fl">0.5</span>),</span>
-<span id="cb21-17"><a></a>        <span class="st">"precision_at_150"</span>: precision_at_k(yte, proba, <span class="dv">150</span>),</span>
-<span id="cb21-18"><a></a>    })</span>
-<span id="cb21-19"><a></a>    mlflow.sklearn.log_model(</span>
-<span id="cb21-20"><a></a>        modelo, <span class="st">"modelo"</span>, registered_model_name<span class="op">=</span><span class="st">"sate"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a aria-label="1"></a><span class="im">import</span> mlflow, mlflow.sklearn</span>
+<span id="cb21-2"><a aria-label="2"></a></span>
+<span id="cb21-3"><a aria-label="3"></a>mlflow.set_experiment(<span class="st">"SAT-E"</span>)</span>
+<span id="cb21-4"><a aria-label="4"></a></span>
+<span id="cb21-5"><a aria-label="5"></a><span class="cf">with</span> mlflow.start_run(run_name<span class="op">=</span><span class="st">"xgb_M25_walkforward"</span>):</span>
+<span id="cb21-6"><a aria-label="6"></a>    mlflow.log_params({</span>
+<span id="cb21-7"><a aria-label="7"></a>        <span class="st">"n_estimators"</span>: <span class="dv">400</span>, <span class="st">"max_depth"</span>: <span class="dv">5</span>,</span>
+<span id="cb21-8"><a aria-label="8"></a>        <span class="st">"learning_rate"</span>: <span class="fl">0.05</span>, <span class="st">"cohorte_train"</span>: <span class="st">"M23+M24"</span>,</span>
+<span id="cb21-9"><a aria-label="9"></a>    })</span>
+<span id="cb21-10"><a aria-label="10"></a></span>
+<span id="cb21-11"><a aria-label="11"></a>    modelo <span class="op">=</span> XGBClassifier(<span class="op">**</span>params).fit(Xtr, ytr)</span>
+<span id="cb21-12"><a aria-label="12"></a>    proba <span class="op">=</span> modelo.predict_proba(Xte)[:, <span class="dv">1</span>]</span>
+<span id="cb21-13"><a aria-label="13"></a></span>
+<span id="cb21-14"><a aria-label="14"></a>    mlflow.log_metrics({</span>
+<span id="cb21-15"><a aria-label="15"></a>        <span class="st">"auc"</span>: roc_auc_score(yte, proba),</span>
+<span id="cb21-16"><a aria-label="16"></a>        <span class="st">"f1"</span>:  f1_score(yte, proba <span class="op">&gt;</span> <span class="fl">0.5</span>),</span>
+<span id="cb21-17"><a aria-label="17"></a>        <span class="st">"precision_at_150"</span>: precision_at_k(yte, proba, <span class="dv">150</span>),</span>
+<span id="cb21-18"><a aria-label="18"></a>    })</span>
+<span id="cb21-19"><a aria-label="19"></a>    mlflow.sklearn.log_model(</span>
+<span id="cb21-20"><a aria-label="20"></a>        modelo, <span class="st">"modelo"</span>, registered_model_name<span class="op">=</span><span class="st">"sate"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 </section>
 <section id="section-6" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">

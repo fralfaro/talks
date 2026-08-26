@@ -7,8 +7,8 @@
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-aa0bfeffdde32bb1c7607de7a91446fc.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.27">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-38902dcd73e7f8352ecceb5e549548c1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Francisco Alfaro Medina">
   <title>Talks – Git y GitLab sin miedo</title>
@@ -18,10 +18,16 @@
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -96,7 +102,7 @@
     code span.vs { color: #a3be8c; } /* VerbatimString */
     code span.wa { color: #bf616a; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-1c6ab66440c2db00d7b6104b001ca248.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto-5e2eac6f862afff12d8aa0b55071a979.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -203,7 +209,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Francisco Alfaro Medina 
+Francisco Alfaro Medina
 </div>
         <p class="quarto-title-affiliation">
             Análisis y Diseño de Software · UTFSM
@@ -233,13 +239,13 @@ Departamento de Informática · UTFSM</p>
 <p><br></p>
 <div class="columns">
 <div class="column" style="width:55%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>📁 Descargas/</span>
-<span id="cb1-2"><a></a>├── proyecto-final.zip</span>
-<span id="cb1-3"><a></a>├── proyecto-final-v2.zip</span>
-<span id="cb1-4"><a></a>├── proyecto-final-v2-ahora-si.zip</span>
-<span id="cb1-5"><a></a>├── proyecto-final-BUENO.zip</span>
-<span id="cb1-6"><a></a>├── proyecto-final-ESTE-NO-BORRAR.zip</span>
-<span id="cb1-7"><a></a>└── proyecto-final-v2-ahora-si (1).zip</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a aria-label="1"></a>📁 Descargas/</span>
+<span id="cb1-2"><a aria-label="2"></a>├── proyecto-final.zip</span>
+<span id="cb1-3"><a aria-label="3"></a>├── proyecto-final-v2.zip</span>
+<span id="cb1-4"><a aria-label="4"></a>├── proyecto-final-v2-ahora-si.zip</span>
+<span id="cb1-5"><a aria-label="5"></a>├── proyecto-final-BUENO.zip</span>
+<span id="cb1-6"><a aria-label="6"></a>├── proyecto-final-ESTE-NO-BORRAR.zip</span>
+<span id="cb1-7"><a aria-label="7"></a>└── proyecto-final-v2-ahora-si (1).zip</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:45%;">
 <p><br></p>
 <ul>
@@ -519,13 +525,13 @@ flowchart LR
 <section id="los-7-comandos-que-necesitas" class="slide level2">
 <h2>Los 7 comandos que necesitas</h2>
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a></a><span class="fu">git</span> clone URL_DEL_REPOSITORIO     <span class="co"># 1. traer el repositorio</span></span>
-<span id="cb2-2"><a></a><span class="fu">git</span> status                        <span class="co"># 2. ¿qué cambié?</span></span>
-<span id="cb2-3"><a></a><span class="fu">git</span> add .                         <span class="co"># 3. preparar los cambios</span></span>
-<span id="cb2-4"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"mensaje claro"</span>     <span class="co"># 4. guardar el punto de control</span></span>
-<span id="cb2-5"><a></a><span class="fu">git</span> pull                          <span class="co"># 5. bajar lo del equipo</span></span>
-<span id="cb2-6"><a></a><span class="fu">git</span> push                          <span class="co"># 6. subir lo tuyo</span></span>
-<span id="cb2-7"><a></a><span class="fu">git</span> switch <span class="at">-c</span> nombre-rama         <span class="co"># 7. crear una rama</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a aria-label="1"></a><span class="fu">git</span> clone URL_DEL_REPOSITORIO     <span class="co"># 1. traer el repositorio</span></span>
+<span id="cb2-2"><a aria-label="2"></a><span class="fu">git</span> status                        <span class="co"># 2. ¿qué cambié?</span></span>
+<span id="cb2-3"><a aria-label="3"></a><span class="fu">git</span> add .                         <span class="co"># 3. preparar los cambios</span></span>
+<span id="cb2-4"><a aria-label="4"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"mensaje claro"</span>     <span class="co"># 4. guardar el punto de control</span></span>
+<span id="cb2-5"><a aria-label="5"></a><span class="fu">git</span> pull                          <span class="co"># 5. bajar lo del equipo</span></span>
+<span id="cb2-6"><a aria-label="6"></a><span class="fu">git</span> push                          <span class="co"># 6. subir lo tuyo</span></span>
+<span id="cb2-7"><a aria-label="7"></a><span class="fu">git</span> switch <span class="at">-c</span> nombre-rama         <span class="co"># 7. crear una rama</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="fragment">
 <p><br></p>
 <div style="background: linear-gradient(90deg,#e8f0fe,#f8f9ff); border-left: 4px solid #0F2044; border-radius: 8px; padding: 0.8em 1.2em;">
@@ -547,8 +553,8 @@ flowchart LR
 <p><strong>Una sola vez</strong> por proyecto, al principio.</p>
 </div>
 </div><div class="column" style="width:46%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a></a><span class="fu">git</span> clone URL_DEL_REPOSITORIO</span>
-<span id="cb3-2"><a></a><span class="bu">cd</span> proyecto-ads</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a aria-label="1"></a><span class="fu">git</span> clone URL_DEL_REPOSITORIO</span>
+<span id="cb3-2"><a aria-label="2"></a><span class="bu">cd</span> proyecto-ads</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <div class="fragment">
 <div style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;">
@@ -571,12 +577,12 @@ flowchart LR
 <p><strong>Todo el tiempo.</strong> Antes y después de cada comando. Es gratis.</p>
 </div>
 </div><div class="column" style="width:46%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>$ git status</span>
-<span id="cb4-2"><a></a>On branch pantalla-login</span>
-<span id="cb4-3"><a></a>Changes not staged for commit:</span>
-<span id="cb4-4"><a></a>     modified:  src/login.py</span>
-<span id="cb4-5"><a></a>Untracked files:</span>
-<span id="cb4-6"><a></a>     nuevo_archivo.py</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a aria-label="1"></a>$ git status</span>
+<span id="cb4-2"><a aria-label="2"></a>On branch pantalla-login</span>
+<span id="cb4-3"><a aria-label="3"></a>Changes not staged for commit:</span>
+<span id="cb4-4"><a aria-label="4"></a>     modified:  src/login.py</span>
+<span id="cb4-5"><a aria-label="5"></a>Untracked files:</span>
+<span id="cb4-6"><a aria-label="6"></a>     nuevo_archivo.py</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <div class="fragment">
 <div style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;">
@@ -599,8 +605,8 @@ flowchart LR
 <p>Justo antes de hacer un commit.</p>
 </div>
 </div><div class="column" style="width:46%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a></a><span class="fu">git</span> add .              <span class="co"># todo</span></span>
-<span id="cb5-2"><a></a><span class="fu">git</span> add src/login.py   <span class="co"># un archivo</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a aria-label="1"></a><span class="fu">git</span> add .              <span class="co"># todo</span></span>
+<span id="cb5-2"><a aria-label="2"></a><span class="fu">git</span> add src/login.py   <span class="co"># un archivo</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <div class="fragment">
 <div style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;">
@@ -623,8 +629,8 @@ flowchart LR
 <p>Cada vez que terminas algo que funciona. Mejor <strong>seguido y pequeño</strong>.</p>
 </div>
 </div><div class="column" style="width:46%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Agrega validación</span></span>
-<span id="cb6-2"><a></a><span class="st">   del formulario"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a aria-label="1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Agrega validación</span></span>
+<span id="cb6-2"><a aria-label="2"></a><span class="st">   del formulario"</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <div class="fragment">
 <div style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;">
@@ -639,18 +645,18 @@ flowchart LR
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3 id="no-ayudan">❌ No ayudan</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a></a>"cambios"</span>
-<span id="cb7-2"><a></a>"asdasd"</span>
-<span id="cb7-3"><a></a>"arreglo"</span>
-<span id="cb7-4"><a></a>"ahora si"</span>
-<span id="cb7-5"><a></a>"commit final"</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb7-1"><a aria-label="1"></a>"cambios"</span>
+<span id="cb7-2"><a aria-label="2"></a>"asdasd"</span>
+<span id="cb7-3"><a aria-label="3"></a>"arreglo"</span>
+<span id="cb7-4"><a aria-label="4"></a>"ahora si"</span>
+<span id="cb7-5"><a aria-label="5"></a>"commit final"</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Dentro de dos semanas, ni tú vas a saber qué hiciste.</p>
 </div><div class="column fragment" style="width:50%;">
 <h3 id="ayudan">✅ Ayudan</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a></a>"Agrega pantalla de login"</span>
-<span id="cb8-2"><a></a>"Corrige error al dividir por cero"</span>
-<span id="cb8-3"><a></a>"Actualiza el README"</span>
-<span id="cb8-4"><a></a>"Agrega validación del formulario"</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb8-1"><a aria-label="1"></a>"Agrega pantalla de login"</span>
+<span id="cb8-2"><a aria-label="2"></a>"Corrige error al dividir por cero"</span>
+<span id="cb8-3"><a aria-label="3"></a>"Actualiza el README"</span>
+<span id="cb8-4"><a aria-label="4"></a>"Agrega validación del formulario"</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Se entienden sin abrir el código.</p>
 </div></div>
 <div class="fragment">
@@ -674,7 +680,7 @@ flowchart LR
 <p><strong>Siempre antes de empezar a trabajar.</strong> Y antes de hacer <code>push</code>.</p>
 </div>
 </div><div class="column" style="width:46%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a></a><span class="fu">git</span> pull</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a aria-label="1"></a><span class="fu">git</span> pull</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <div class="fragment">
 <div style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;">
@@ -697,10 +703,10 @@ flowchart LR
 <p>Cuando terminaste algo y quieres compartirlo.</p>
 </div>
 </div><div class="column" style="width:46%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a></a><span class="fu">git</span> push          <span class="co"># rama ya existente</span></span>
-<span id="cb10-2"><a></a></span>
-<span id="cb10-3"><a></a><span class="co"># primera vez que subes la rama:</span></span>
-<span id="cb10-4"><a></a><span class="fu">git</span> push <span class="at">-u</span> origin nombre-rama</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a aria-label="1"></a><span class="fu">git</span> push          <span class="co"># rama ya existente</span></span>
+<span id="cb10-2"><a aria-label="2"></a></span>
+<span id="cb10-3"><a aria-label="3"></a><span class="co"># primera vez que subes la rama:</span></span>
+<span id="cb10-4"><a aria-label="4"></a><span class="fu">git</span> push <span class="at">-u</span> origin nombre-rama</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <div class="fragment">
 <div style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;">
@@ -723,9 +729,9 @@ flowchart LR
 <p>Al empezar cualquier tarea nueva. <strong>Nunca trabajes directo en <code>main</code>.</strong></p>
 </div>
 </div><div class="column" style="width:46%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a></a><span class="fu">git</span> switch <span class="at">-c</span> pantalla-login</span>
-<span id="cb11-2"><a></a><span class="fu">git</span> switch main</span>
-<span id="cb11-3"><a></a><span class="fu">git</span> branch</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a aria-label="1"></a><span class="fu">git</span> switch <span class="at">-c</span> pantalla-login</span>
+<span id="cb11-2"><a aria-label="2"></a><span class="fu">git</span> switch main</span>
+<span id="cb11-3"><a aria-label="3"></a><span class="fu">git</span> branch</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <div class="fragment">
 <div style="background: linear-gradient(90deg,#FDE8E8,#FFF7F7); border-left: 4px solid #C0392B; border-radius: 8px; padding: 0.7em 1.2em; font-size:0.92em;">
@@ -816,27 +822,27 @@ flowchart LR
 <h2>Los pasos, con los comandos exactos</h2>
 <p><br></p>
 <div style="font-size:0.86em;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a></a><span class="co"># 0. Una sola vez: traer el repositorio</span></span>
-<span id="cb12-2"><a></a><span class="fu">git</span> clone https://gitlab.usm.cl/grupo-07/proyecto-ads.git</span>
-<span id="cb12-3"><a></a><span class="bu">cd</span> proyecto-ads</span>
-<span id="cb12-4"><a></a></span>
-<span id="cb12-5"><a></a><span class="co"># 1. Antes de empezar: traer lo que hicieron los demás</span></span>
-<span id="cb12-6"><a></a><span class="fu">git</span> pull</span>
-<span id="cb12-7"><a></a></span>
-<span id="cb12-8"><a></a><span class="co"># 2. Crear tu rama para la tarea</span></span>
-<span id="cb12-9"><a></a><span class="fu">git</span> switch <span class="at">-c</span> pantalla-login</span>
-<span id="cb12-10"><a></a></span>
-<span id="cb12-11"><a></a><span class="co"># 3. ... programar ...</span></span>
-<span id="cb12-12"><a></a></span>
-<span id="cb12-13"><a></a><span class="co"># 4. Revisar qué cambiaste</span></span>
-<span id="cb12-14"><a></a><span class="fu">git</span> status</span>
-<span id="cb12-15"><a></a></span>
-<span id="cb12-16"><a></a><span class="co"># 5. Preparar y guardar</span></span>
-<span id="cb12-17"><a></a><span class="fu">git</span> add .</span>
-<span id="cb12-18"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Agrega pantalla de login"</span></span>
-<span id="cb12-19"><a></a></span>
-<span id="cb12-20"><a></a><span class="co"># 6. Subir tu trabajo</span></span>
-<span id="cb12-21"><a></a><span class="fu">git</span> push <span class="at">-u</span> origin pantalla-login</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a aria-label="1"></a><span class="co"># 0. Una sola vez: traer el repositorio</span></span>
+<span id="cb12-2"><a aria-label="2"></a><span class="fu">git</span> clone https://gitlab.usm.cl/grupo-07/proyecto-ads.git</span>
+<span id="cb12-3"><a aria-label="3"></a><span class="bu">cd</span> proyecto-ads</span>
+<span id="cb12-4"><a aria-label="4"></a></span>
+<span id="cb12-5"><a aria-label="5"></a><span class="co"># 1. Antes de empezar: traer lo que hicieron los demás</span></span>
+<span id="cb12-6"><a aria-label="6"></a><span class="fu">git</span> pull</span>
+<span id="cb12-7"><a aria-label="7"></a></span>
+<span id="cb12-8"><a aria-label="8"></a><span class="co"># 2. Crear tu rama para la tarea</span></span>
+<span id="cb12-9"><a aria-label="9"></a><span class="fu">git</span> switch <span class="at">-c</span> pantalla-login</span>
+<span id="cb12-10"><a aria-label="10"></a></span>
+<span id="cb12-11"><a aria-label="11"></a><span class="co"># 3. ... programar ...</span></span>
+<span id="cb12-12"><a aria-label="12"></a></span>
+<span id="cb12-13"><a aria-label="13"></a><span class="co"># 4. Revisar qué cambiaste</span></span>
+<span id="cb12-14"><a aria-label="14"></a><span class="fu">git</span> status</span>
+<span id="cb12-15"><a aria-label="15"></a></span>
+<span id="cb12-16"><a aria-label="16"></a><span class="co"># 5. Preparar y guardar</span></span>
+<span id="cb12-17"><a aria-label="17"></a><span class="fu">git</span> add .</span>
+<span id="cb12-18"><a aria-label="18"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Agrega pantalla de login"</span></span>
+<span id="cb12-19"><a aria-label="19"></a></span>
+<span id="cb12-20"><a aria-label="20"></a><span class="co"># 6. Subir tu trabajo</span></span>
+<span id="cb12-21"><a aria-label="21"></a><span class="fu">git</span> push <span class="at">-u</span> origin pantalla-login</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="dos-costumbres-que-evitan-el-90-de-los-problemas" class="slide level2">
@@ -862,14 +868,14 @@ flowchart LR
 <p><br></p>
 <div class="columns">
 <div class="column" style="width:52%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="kw">def</span> promedio(notas):</span>
-<span id="cb13-2"><a></a><span class="op">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD</span>
-<span id="cb13-3"><a></a>    <span class="cf">return</span> <span class="bu">sum</span>(notas) <span class="op">/</span> <span class="bu">len</span>(notas)</span>
-<span id="cb13-4"><a></a><span class="op">=======</span></span>
-<span id="cb13-5"><a></a>    <span class="cf">if</span> <span class="kw">not</span> notas:</span>
-<span id="cb13-6"><a></a>        <span class="cf">return</span> <span class="dv">0</span></span>
-<span id="cb13-7"><a></a>    <span class="cf">return</span> <span class="bu">sum</span>(notas) <span class="op">/</span> <span class="bu">len</span>(notas)</span>
-<span id="cb13-8"><a></a><span class="op">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> mi<span class="op">-</span>rama</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a aria-label="1"></a><span class="kw">def</span> promedio(notas):</span>
+<span id="cb13-2"><a aria-label="2"></a><span class="op">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD</span>
+<span id="cb13-3"><a aria-label="3"></a>    <span class="cf">return</span> <span class="bu">sum</span>(notas) <span class="op">/</span> <span class="bu">len</span>(notas)</span>
+<span id="cb13-4"><a aria-label="4"></a><span class="op">=======</span></span>
+<span id="cb13-5"><a aria-label="5"></a>    <span class="cf">if</span> <span class="kw">not</span> notas:</span>
+<span id="cb13-6"><a aria-label="6"></a>        <span class="cf">return</span> <span class="dv">0</span></span>
+<span id="cb13-7"><a aria-label="7"></a>    <span class="cf">return</span> <span class="bu">sum</span>(notas) <span class="op">/</span> <span class="bu">len</span>(notas)</span>
+<span id="cb13-8"><a aria-label="8"></a><span class="op">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> mi<span class="op">-</span>rama</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:48%;">
 <p><br></p>
 <p>Pasa cuando <strong>dos personas editaron la misma línea</strong>.</p>
@@ -1027,17 +1033,17 @@ y el menú lateral con Issues y Merge requests.</span></p>
 <p><br></p>
 <p><strong>Se crea en:</strong> <em>Issues → New issue</em></p>
 </div><div class="column" style="width:52%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a></a>Título:</span>
-<span id="cb14-2"><a></a>  Agregar validación al formulario</span>
-<span id="cb14-3"><a></a></span>
-<span id="cb14-4"><a></a>Descripción:</span>
-<span id="cb14-5"><a></a>  El formulario acepta campos vacíos.</span>
-<span id="cb14-6"><a></a>  Hay que mostrar un mensaje de error.</span>
-<span id="cb14-7"><a></a></span>
-<span id="cb14-8"><a></a>  - [ ] Validar campos obligatorios</span>
-<span id="cb14-9"><a></a>  - [ ] Mostrar mensaje al usuario</span>
-<span id="cb14-10"><a></a></span>
-<span id="cb14-11"><a></a>Assignee:  @ana</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a aria-label="1"></a>Título:</span>
+<span id="cb14-2"><a aria-label="2"></a>  Agregar validación al formulario</span>
+<span id="cb14-3"><a aria-label="3"></a></span>
+<span id="cb14-4"><a aria-label="4"></a>Descripción:</span>
+<span id="cb14-5"><a aria-label="5"></a>  El formulario acepta campos vacíos.</span>
+<span id="cb14-6"><a aria-label="6"></a>  Hay que mostrar un mensaje de error.</span>
+<span id="cb14-7"><a aria-label="7"></a></span>
+<span id="cb14-8"><a aria-label="8"></a>  - [ ] Validar campos obligatorios</span>
+<span id="cb14-9"><a aria-label="9"></a>  - [ ] Mostrar mensaje al usuario</span>
+<span id="cb14-10"><a aria-label="10"></a></span>
+<span id="cb14-11"><a aria-label="11"></a>Assignee:  @ana</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <div class="fragment">
 <blockquote>
@@ -1079,18 +1085,18 @@ y etiquetas; y el botón <strong>New issue</strong>.</span></p>
 <li class="fragment">Que <code>main</code> no se rompa.</li>
 </ul>
 </div><div class="column" style="width:48%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a></a>!7  Agrega validación del formulario</span>
-<span id="cb15-2"><a></a>──────────────────────────────────────</span>
-<span id="cb15-3"><a></a>De:    pantalla-login</span>
-<span id="cb15-4"><a></a>Hacia: main</span>
-<span id="cb15-5"><a></a></span>
-<span id="cb15-6"><a></a>Autor:    @ana</span>
-<span id="cb15-7"><a></a>Revisor:  @juan</span>
-<span id="cb15-8"><a></a></span>
-<span id="cb15-9"><a></a>💬 2 comentarios</span>
-<span id="cb15-10"><a></a>✅ Aprobado</span>
-<span id="cb15-11"><a></a></span>
-<span id="cb15-12"><a></a>      [ Merge ]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a aria-label="1"></a>!7  Agrega validación del formulario</span>
+<span id="cb15-2"><a aria-label="2"></a>──────────────────────────────────────</span>
+<span id="cb15-3"><a aria-label="3"></a>De:    pantalla-login</span>
+<span id="cb15-4"><a aria-label="4"></a>Hacia: main</span>
+<span id="cb15-5"><a aria-label="5"></a></span>
+<span id="cb15-6"><a aria-label="6"></a>Autor:    @ana</span>
+<span id="cb15-7"><a aria-label="7"></a>Revisor:  @juan</span>
+<span id="cb15-8"><a aria-label="8"></a></span>
+<span id="cb15-9"><a aria-label="9"></a>💬 2 comentarios</span>
+<span id="cb15-10"><a aria-label="10"></a>✅ Aprobado</span>
+<span id="cb15-11"><a aria-label="11"></a></span>
+<span id="cb15-12"><a aria-label="12"></a>      [ Merge ]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <div class="fragment">
 <blockquote>
@@ -1225,14 +1231,14 @@ flowchart LR
 </div>
 </div><div class="column" style="width:68%;">
 <p><strong>Meta:</strong> crear <code>integrantes/nombre-apellido.md</code> y hacer la vuelta completa.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a></a><span class="fu">git</span> clone URL_DEL_REPOSITORIO</span>
-<span id="cb16-2"><a></a><span class="bu">cd</span> proyecto-ads</span>
-<span id="cb16-3"><a></a><span class="fu">git</span> switch <span class="at">-c</span> ana-perez</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a aria-label="1"></a><span class="fu">git</span> clone URL_DEL_REPOSITORIO</span>
+<span id="cb16-2"><a aria-label="2"></a><span class="bu">cd</span> proyecto-ads</span>
+<span id="cb16-3"><a aria-label="3"></a><span class="fu">git</span> switch <span class="at">-c</span> ana-perez</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Crea el archivo <code>integrantes/ana-perez.md</code> con tu nombre, tu carrera y una línea sobre ti.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a></a><span class="fu">git</span> status</span>
-<span id="cb17-2"><a></a><span class="fu">git</span> add .</span>
-<span id="cb17-3"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Agrega ficha de Ana Pérez"</span></span>
-<span id="cb17-4"><a></a><span class="fu">git</span> push <span class="at">-u</span> origin ana-perez</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a aria-label="1"></a><span class="fu">git</span> status</span>
+<span id="cb17-2"><a aria-label="2"></a><span class="fu">git</span> add .</span>
+<span id="cb17-3"><a aria-label="3"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Agrega ficha de Ana Pérez"</span></span>
+<span id="cb17-4"><a aria-label="4"></a><span class="fu">git</span> push <span class="at">-u</span> origin ana-perez</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Luego, en GitLab: <strong>abre un Merge Request</strong> y pídele a un compañero que lo revise.</p>
 </div></div>
 <div class="fragment">
@@ -1532,28 +1538,28 @@ Siempre hay forma de volver.</span></p>
 <div class="column" style="width:50%;">
 <div style="font-size:0.8em;">
 <p><strong>Empezar</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a></a><span class="fu">git</span> clone URL          <span class="co"># traer el repo</span></span>
-<span id="cb18-2"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"..."</span></span>
-<span id="cb18-3"><a></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"..."</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a aria-label="1"></a><span class="fu">git</span> clone URL          <span class="co"># traer el repo</span></span>
+<span id="cb18-2"><a aria-label="2"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"..."</span></span>
+<span id="cb18-3"><a aria-label="3"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"..."</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Todos los días</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a></a><span class="fu">git</span> pull               <span class="co"># antes de empezar</span></span>
-<span id="cb19-2"><a></a><span class="fu">git</span> status             <span class="co"># ¿qué cambié?</span></span>
-<span id="cb19-3"><a></a><span class="fu">git</span> add .              <span class="co"># preparar</span></span>
-<span id="cb19-4"><a></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"..."</span>    <span class="co"># guardar</span></span>
-<span id="cb19-5"><a></a><span class="fu">git</span> push               <span class="co"># compartir</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a aria-label="1"></a><span class="fu">git</span> pull               <span class="co"># antes de empezar</span></span>
+<span id="cb19-2"><a aria-label="2"></a><span class="fu">git</span> status             <span class="co"># ¿qué cambié?</span></span>
+<span id="cb19-3"><a aria-label="3"></a><span class="fu">git</span> add .              <span class="co"># preparar</span></span>
+<span id="cb19-4"><a aria-label="4"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"..."</span>    <span class="co"># guardar</span></span>
+<span id="cb19-5"><a aria-label="5"></a><span class="fu">git</span> push               <span class="co"># compartir</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column" style="width:50%;">
 <div style="font-size:0.8em;">
 <p><strong>Ramas</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a></a><span class="fu">git</span> switch <span class="at">-c</span> mi-rama          <span class="co"># crear</span></span>
-<span id="cb20-2"><a></a><span class="fu">git</span> switch main                <span class="co"># cambiar</span></span>
-<span id="cb20-3"><a></a><span class="fu">git</span> branch                     <span class="co"># listar</span></span>
-<span id="cb20-4"><a></a><span class="fu">git</span> push <span class="at">-u</span> origin mi-rama     <span class="co"># subir</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a aria-label="1"></a><span class="fu">git</span> switch <span class="at">-c</span> mi-rama          <span class="co"># crear</span></span>
+<span id="cb20-2"><a aria-label="2"></a><span class="fu">git</span> switch main                <span class="co"># cambiar</span></span>
+<span id="cb20-3"><a aria-label="3"></a><span class="fu">git</span> branch                     <span class="co"># listar</span></span>
+<span id="cb20-4"><a aria-label="4"></a><span class="fu">git</span> push <span class="at">-u</span> origin mi-rama     <span class="co"># subir</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p><strong>Si algo sale mal</strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a></a><span class="fu">git</span> restore archivo            <span class="co"># descartar cambios</span></span>
-<span id="cb21-2"><a></a><span class="fu">git</span> restore <span class="at">--staged</span> archivo   <span class="co"># sacar del staging</span></span>
-<span id="cb21-3"><a></a><span class="fu">git</span> log <span class="at">--oneline</span>              <span class="co"># ver la historia</span></span>
-<span id="cb21-4"><a></a><span class="fu">git</span> reflog                     <span class="co"># recuperar</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a aria-label="1"></a><span class="fu">git</span> restore archivo            <span class="co"># descartar cambios</span></span>
+<span id="cb21-2"><a aria-label="2"></a><span class="fu">git</span> restore <span class="at">--staged</span> archivo   <span class="co"># sacar del staging</span></span>
+<span id="cb21-3"><a aria-label="3"></a><span class="fu">git</span> log <span class="at">--oneline</span>              <span class="co"># ver la historia</span></span>
+<span id="cb21-4"><a aria-label="4"></a><span class="fu">git</span> reflog                     <span class="co"># recuperar</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
 </section>

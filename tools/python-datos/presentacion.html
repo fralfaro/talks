@@ -7,8 +7,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-f1aadacce99040138bbb613f9330654f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.27">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <title>Talks – Manipulación de datos con Python</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,10 +17,16 @@
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
   <style>
-    code{white-space: pre-wrap;}
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -95,7 +101,7 @@
     code span.vs { color: #9ecbff; } /* VerbatimString */
     code span.wa { color: #ff5555; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-dfdb32c03d84a1c2328a20554c520472.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-a9fd864c473bcc792c000f53adebbdf6.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -187,9 +193,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -280,13 +283,13 @@ Docente USM - 2026</p>
 <p><br><br></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>precios <span class="op">=</span> [<span class="dv">1200</span>, <span class="dv">1500</span>, <span class="dv">1800</span>, <span class="dv">2100</span>]</span>
-<span id="cb1-2"><a></a></span>
-<span id="cb1-3"><a></a>promedio <span class="op">=</span> <span class="bu">sum</span>(precios) <span class="op">/</span> <span class="bu">len</span>(precios)</span>
-<span id="cb1-4"><a></a>maximo <span class="op">=</span> <span class="bu">max</span>(precios)</span>
-<span id="cb1-5"><a></a></span>
-<span id="cb1-6"><a></a><span class="bu">print</span>(promedio)</span>
-<span id="cb1-7"><a></a><span class="bu">print</span>(maximo)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a aria-label="1"></a>precios <span class="op">=</span> [<span class="dv">1200</span>, <span class="dv">1500</span>, <span class="dv">1800</span>, <span class="dv">2100</span>]</span>
+<span id="cb1-2"><a aria-label="2"></a></span>
+<span id="cb1-3"><a aria-label="3"></a>promedio <span class="op">=</span> <span class="bu">sum</span>(precios) <span class="op">/</span> <span class="bu">len</span>(precios)</span>
+<span id="cb1-4"><a aria-label="4"></a>maximo <span class="op">=</span> <span class="bu">max</span>(precios)</span>
+<span id="cb1-5"><a aria-label="5"></a></span>
+<span id="cb1-6"><a aria-label="6"></a><span class="bu">print</span>(promedio)</span>
+<span id="cb1-7"><a aria-label="7"></a><span class="bu">print</span>(maximo)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <p><br></p>
 <div style="background: #0F2044; color: white; border-radius: 8px; padding: 1em; font-family: Consolas, monospace; font-size: 1.2em;">
@@ -353,13 +356,13 @@ Docente USM - 2026</p>
 <p><br><br></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-2"><a></a></span>
-<span id="cb2-3"><a></a>ventas <span class="op">=</span> np.array([<span class="dv">120</span>, <span class="dv">135</span>, <span class="dv">150</span>, <span class="dv">160</span>, <span class="dv">210</span>])</span>
-<span id="cb2-4"><a></a></span>
-<span id="cb2-5"><a></a><span class="bu">print</span>(ventas.mean())</span>
-<span id="cb2-6"><a></a><span class="bu">print</span>(ventas.<span class="bu">max</span>())</span>
-<span id="cb2-7"><a></a><span class="bu">print</span>(ventas <span class="op">*</span> <span class="fl">1.19</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a aria-label="1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a aria-label="2"></a></span>
+<span id="cb2-3"><a aria-label="3"></a>ventas <span class="op">=</span> np.array([<span class="dv">120</span>, <span class="dv">135</span>, <span class="dv">150</span>, <span class="dv">160</span>, <span class="dv">210</span>])</span>
+<span id="cb2-4"><a aria-label="4"></a></span>
+<span id="cb2-5"><a aria-label="5"></a><span class="bu">print</span>(ventas.mean())</span>
+<span id="cb2-6"><a aria-label="6"></a><span class="bu">print</span>(ventas.<span class="bu">max</span>())</span>
+<span id="cb2-7"><a aria-label="7"></a><span class="bu">print</span>(ventas <span class="op">*</span> <span class="fl">1.19</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <div style="background: #F0F4F8; border-left: 5px solid #4A9FD4; border-radius: 8px; padding: 1em; font-family: Consolas, monospace; font-size: 1em;">
 <p><br></p>
@@ -392,11 +395,11 @@ Docente USM - 2026</p>
 <p><br><br></p>
 <div class="columns">
 <div class="column" style="width:48%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb3-2"><a></a></span>
-<span id="cb3-3"><a></a>df <span class="op">=</span> pd.read_csv(<span class="st">"estudiantes.csv"</span>)</span>
-<span id="cb3-4"><a></a></span>
-<span id="cb3-5"><a></a>df.head()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a aria-label="1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-2"><a aria-label="2"></a></span>
+<span id="cb3-3"><a aria-label="3"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"estudiantes.csv"</span>)</span>
+<span id="cb3-4"><a aria-label="4"></a></span>
+<span id="cb3-5"><a aria-label="5"></a>df.head()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:52%;">
 <table class="caption-top">
 <thead>
@@ -453,10 +456,10 @@ Docente USM - 2026</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><br></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a></span>
-<span id="cb4-2"><a></a>df.shape</span>
-<span id="cb4-3"><a></a>df.info()</span>
-<span id="cb4-4"><a></a>df.describe()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a aria-label="1"></a></span>
+<span id="cb4-2"><a aria-label="2"></a>df.shape</span>
+<span id="cb4-3"><a aria-label="3"></a>df.info()</span>
+<span id="cb4-4"><a aria-label="4"></a>df.describe()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <p><br></p>
 <ul>
@@ -471,11 +474,11 @@ Docente USM - 2026</p>
 <p><br><br></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>columnas <span class="op">=</span> [<span class="st">"carrera"</span>, <span class="st">"nota"</span>, <span class="st">"asistencia"</span>]</span>
-<span id="cb5-2"><a></a></span>
-<span id="cb5-3"><a></a>df[columnas]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>aprobados <span class="op">=</span> df[df[<span class="st">"nota"</span>] <span class="op">&gt;=</span> <span class="fl">4.0</span>]</span>
-<span id="cb6-2"><a></a>alta_asistencia <span class="op">=</span> df[df[<span class="st">"asistencia"</span>] <span class="op">&gt;=</span> <span class="fl">0.85</span>]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a aria-label="1"></a>columnas <span class="op">=</span> [<span class="st">"carrera"</span>, <span class="st">"nota"</span>, <span class="st">"asistencia"</span>]</span>
+<span id="cb5-2"><a aria-label="2"></a></span>
+<span id="cb5-3"><a aria-label="3"></a>df[columnas]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a aria-label="1"></a>aprobados <span class="op">=</span> df[df[<span class="st">"nota"</span>] <span class="op">&gt;=</span> <span class="fl">4.0</span>]</span>
+<span id="cb6-2"><a aria-label="2"></a>alta_asistencia <span class="op">=</span> df[df[<span class="st">"asistencia"</span>] <span class="op">&gt;=</span> <span class="fl">0.85</span>]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <p><br></p>
 <ul>
@@ -508,15 +511,15 @@ Docente USM - 2026</p>
 <p><br><br></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a></span>
-<span id="cb7-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb7-3"><a></a></span>
-<span id="cb7-4"><a></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
-<span id="cb7-5"><a></a>plt.hist(df[<span class="st">"nota"</span>], bins<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">"#0F2044"</span>, edgecolor<span class="op">=</span><span class="st">"white"</span>)</span>
-<span id="cb7-6"><a></a>plt.title(<span class="st">"Distribución de notas"</span>)</span>
-<span id="cb7-7"><a></a>plt.xlabel(<span class="st">"Nota"</span>)</span>
-<span id="cb7-8"><a></a>plt.ylabel(<span class="st">"Cantidad de estudiantes"</span>)</span>
-<span id="cb7-9"><a></a>plt.show()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a aria-label="1"></a></span>
+<span id="cb7-2"><a aria-label="2"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb7-3"><a aria-label="3"></a></span>
+<span id="cb7-4"><a aria-label="4"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
+<span id="cb7-5"><a aria-label="5"></a>plt.hist(df[<span class="st">"nota"</span>], bins<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">"#0F2044"</span>, edgecolor<span class="op">=</span><span class="st">"white"</span>)</span>
+<span id="cb7-6"><a aria-label="6"></a>plt.title(<span class="st">"Distribución de notas"</span>)</span>
+<span id="cb7-7"><a aria-label="7"></a>plt.xlabel(<span class="st">"Nota"</span>)</span>
+<span id="cb7-8"><a aria-label="8"></a>plt.ylabel(<span class="st">"Cantidad de estudiantes"</span>)</span>
+<span id="cb7-9"><a aria-label="9"></a>plt.show()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <div style="height: 360px; border: 2px solid #D5DCE4; border-radius: 8px; padding: 0.8em; display: flex; flex-direction: column; justify-content: center; align-items: center;">
 <div style="font-size: 0.9em; color: #0F2044; margin-bottom: 0.6em;">
@@ -550,16 +553,16 @@ Docente USM - 2026</p>
 <p><br><br></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb8-2"><a></a></span>
-<span id="cb8-3"><a></a>sns.set_theme(style<span class="op">=</span><span class="st">"whitegrid"</span>)</span>
-<span id="cb8-4"><a></a></span>
-<span id="cb8-5"><a></a>sns.boxplot(</span>
-<span id="cb8-6"><a></a>    data<span class="op">=</span>df,</span>
-<span id="cb8-7"><a></a>    x<span class="op">=</span><span class="st">"carrera"</span>,</span>
-<span id="cb8-8"><a></a>    y<span class="op">=</span><span class="st">"nota"</span>,</span>
-<span id="cb8-9"><a></a>    color<span class="op">=</span><span class="st">"#4A9FD4"</span></span>
-<span id="cb8-10"><a></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a aria-label="1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb8-2"><a aria-label="2"></a></span>
+<span id="cb8-3"><a aria-label="3"></a>sns.set_theme(style<span class="op">=</span><span class="st">"whitegrid"</span>)</span>
+<span id="cb8-4"><a aria-label="4"></a></span>
+<span id="cb8-5"><a aria-label="5"></a>sns.boxplot(</span>
+<span id="cb8-6"><a aria-label="6"></a>    data<span class="op">=</span>df,</span>
+<span id="cb8-7"><a aria-label="7"></a>    x<span class="op">=</span><span class="st">"carrera"</span>,</span>
+<span id="cb8-8"><a aria-label="8"></a>    y<span class="op">=</span><span class="st">"nota"</span>,</span>
+<span id="cb8-9"><a aria-label="9"></a>    color<span class="op">=</span><span class="st">"#4A9FD4"</span></span>
+<span id="cb8-10"><a aria-label="10"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:50%;">
 <div style="height: 360px; border: 2px solid #D5DCE4; border-radius: 8px; padding: 0.8em; display: flex; flex-direction: column; justify-content: center; align-items: center;">
 <div style="font-size: 0.9em; color: #0F2044; margin-bottom: 0.6em;">
@@ -584,26 +587,8 @@ Docente USM - 2026</p>
 </section>
 <section id="flujo-recomendado" class="slide level2">
 <h2>Flujo recomendado</h2>
-<div class="cell" data-reveal="true" data-layout-align="center">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-  A[1. Definir pregunta] --&gt; B[2. Cargar datos]
-  B --&gt; C[3. Explorar estructura]
-  C --&gt; D[4. Limpiar y transformar]
-  D --&gt; E[5. Resumir y visualizar]
-  E --&gt; F[6. Interpretar resultados]
-  F --&gt; G[7. Documentar y compartir]
-
-  classDef step fill:#F0F4F8,color:#0F2044,stroke:#4A9FD4;
-  class A,B,C,D,E,F,G step;
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
+<div style="text-align: center;">
+<p><img src="images/kdd.jpg" alt="Python" style="width: 45%; border-radius: 10px;"></p>
 </div>
 </section>
 <section id="section-3" class="slide level2" data-background-image="images/background_slides3.png" data-background-opacity="0.3">
