@@ -11,7 +11,7 @@ format:
     transition-speed: fast
     incremental: false
     fig-align: center
-    highlight-style: github
+    highlight-style: github-dark
     code-block-bg: true
     center: false
     width: 1600
@@ -486,18 +486,9 @@ Civil · Informática · Industrial
 
 ## Flujo recomendado
 
-```{mermaid}
-flowchart TD
-  A[1. Definir pregunta] --> B[2. Cargar datos]
-  B --> C[3. Explorar estructura]
-  C --> D[4. Limpiar y transformar]
-  D --> E[5. Resumir y visualizar]
-  E --> F[6. Interpretar resultados]
-  F --> G[7. Documentar y compartir]
-
-  classDef step fill:#F0F4F8,color:#0F2044,stroke:#4A9FD4;
-  class A,B,C,D,E,F,G step;
-```
+::: {style="text-align: center;"}
+<img src="images/kdd.jpg" alt="Python" style="width: 45%; border-radius: 10px;"/>
+:::
 
 
 ##  {background-image="images/background_slides3.png" background-opacity="0.3"}

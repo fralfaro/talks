@@ -44,10 +44,17 @@ Herramientas modernas para la universidad: Quarto, LaTeX, GitHub, Google Colab y
 
 Taller introductorio de control de versiones y trabajo colaborativo con el GitLab del Departamento.\
 **Presentaciones:**\
-[Git y GitLab (60 min)](ads/git_gitlab_60min.html) · [Guion del expositor](ads/guion_60min.html) · [Git y GitLab (taller 3 h)](ads/git_gitlab.html) · [Programa del taller 3 h](ads/programa.html)
+[Git](ads/git.html) · [GitLab](ads/gitlab.html) · [Git y GitLab (60 min)](ads/git_gitlab_60min.html) · [Guion del expositor](ads/guion_60min.html) · [Git y GitLab (taller 3 h)](ads/git_gitlab.html) · [Programa del taller 3 h](ads/programa.html)
 :::
 
 ## Charlas
+
+::: card
+### Hola Quarto
+
+Compartir • colaborar • enseñar • reimaginar.\
+**Presentaciones:** [RSLA 2026](hello-quarto/presentacion_rsla26.html) · [UAH](hello-quarto/presentacion_uah.html)
+:::
 
 ::: card
 ### Del Dato al Impacto

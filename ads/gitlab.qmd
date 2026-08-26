@@ -1,0 +1,507 @@
+---
+title: "GitLab desde cero"
+subtitle: "Crear un repositorio y conectarlo con VS Code"
+author: "Francisco Alfaro Medina"
+institute: "Análisis y Diseño de Software · UTFSM"
+date: today
+date-format: "MMMM YYYY"
+
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    progress: true
+    history: false
+    transition: fade
+    transition-speed: fast
+    incremental: false
+    fig-align: center
+    highlight-style: nord
+    code-block-bg: true
+    center: false
+    width: 1600
+    height: 800
+    logo: "images/usm.png"
+    scrollable: false
+execute:
+  echo: false
+  warning: false
+---
+
+##  {.title-slide background-color="#0F2044"}
+
+::: title-block
+**GitLab desde cero**
+
+Crear un repositorio y conectarlo con VS Code
+:::
+
+::: subtitle-block
+Repositorio · README · Clone · Commit · Push · Merge Request\
+Análisis y Diseño de Software
+:::
+
+::: author-block
+Francisco Alfaro Medina\
+Departamento de Informática · UTFSM\
+2026
+:::
+
+------------------------------------------------------------------------
+
+## ¿Qué haremos hoy?
+
+:::::: columns
+:::: {.column width="40%"}
+::: {style="text-align: center;"}
+<img src="images/index2.png" alt="Objetivos" style="width: 100%; border-radius: 10px;"/>
+:::
+::::
+
+::: {.column .incremental width="60%"}
+<br>
+
+-   Entrar a GitLab.
+-   Crear un repositorio simple.
+-   Agregar un `README.md`.
+-   Clonar el repositorio en VS Code.
+-   Hacer cambios locales.
+-   Subir cambios a GitLab.
+-   Crear un Merge Request simple.
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## Antes de empezar
+
+<br>
+
+| Necesitas | Para qué |
+|:---|:---|
+| Cuenta de GitLab | Crear y acceder al repositorio |
+| Git instalado | Clonar, commitear y subir cambios |
+| Visual Studio Code | Editar el proyecto |
+| Acceso a internet | Sincronizar con GitLab |
+
+<br>
+
+``` bash
+git --version
+code --version
+```
+
+------------------------------------------------------------------------
+
+## ¿Qué es GitLab?
+
+<br><br>
+
+:::::: columns
+:::: {.column width="40%"}
+::: {style="text-align: center; background: linear-gradient(160deg,#FC6D26,#E24329); color: white; border-radius: 10px; padding: 1.4em;"}
+[**GitLab**]{style="font-size: 2em"}
+
+<br>
+
+[tu proyecto\
+en la nube]{style="font-size: 0.9em;"}
+:::
+::::
+
+::: {.column .incremental width="60%"}
+<br>
+
+-   Guarda una copia remota del repositorio.
+-   Permite trabajar con otras personas.
+-   Muestra archivos, commits y ramas en el navegador.
+-   Permite revisar cambios antes de unirlos.
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## Git y GitLab
+
+<br>
+
+| Git | GitLab |
+|:---|:---|
+| Está en tu computador | Está en internet o servidor institucional |
+| Guarda commits localmente | Guarda una copia compartida |
+| Se usa desde terminal o VS Code | Se usa desde navegador y Git |
+| Permite versionar | Permite colaborar |
+
+------------------------------------------------------------------------
+
+## Entrar a GitLab
+
+<br>
+
+::: {.incremental}
+1.  Abre la URL de GitLab indicada por el curso.
+2.  Entra con tu cuenta institucional o la cuenta asignada.
+3.  Busca el grupo, curso o espacio de trabajo.
+4.  Revisa si puedes crear proyectos.
+5.  Si no puedes, pide permiso al responsable del grupo.
+:::
+
+<br>
+
+> Si GitLab no carga fuera del campus, puede que necesites VPN.
+
+------------------------------------------------------------------------
+
+## Crear un repositorio
+
+<br>
+
+::: {.incremental}
+1.  Click en **New project**.
+2.  Elige **Create blank project**.
+3.  Nombre: `mi-primer-repo`.
+4.  Visibilidad: la indicada por el curso.
+5.  Marca **Initialize repository with a README**.
+6.  Click en **Create project**.
+:::
+
+<br>
+
+``` text
+mi-primer-repo
+```
+
+------------------------------------------------------------------------
+
+## Agregar o editar el README
+
+<br>
+
+En GitLab, abre `README.md` y edítalo:
+
+``` markdown
+# Mi primer repo en GitLab
+
+Este repositorio fue creado para practicar Git y GitLab.
+
+## Integrante
+- Tu nombre
+```
+
+<br>
+
+Escribe un mensaje de commit y guarda el cambio.
+
+------------------------------------------------------------------------
+
+## Conectar con VS Code
+
+<br><br>
+
+:::::: columns
+::: {.column width="50%"}
+En GitLab:
+
+<br>
+
+1.  Click en **Code**.
+2.  Copia la URL del repositorio.
+3.  Usa HTTPS o SSH según indique el curso.
+:::
+
+::: {.column width="50%"}
+En VS Code:
+
+<br>
+
+1.  Abre una carpeta de trabajo.
+2.  Abre la terminal integrada.
+3.  Ejecuta `git clone`.
+4.  Abre la carpeta clonada.
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## Clonar el repositorio
+
+<br><br>
+
+:::::: columns
+::: {.column width="50%"}
+``` bash
+git clone <url-del-repositorio>
+cd mi-primer-repo
+code .
+```
+:::
+
+::: {.column .incremental width="50%"}
+<br>
+
+-   `clone` descarga el proyecto.
+-   La carpeta ya viene conectada a GitLab.
+-   VS Code detecta Git automáticamente.
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## Hacer un cambio local
+
+<br>
+
+Edita el `README.md` desde VS Code:
+
+``` markdown
+## Objetivo
+
+Aprender a conectar Git, GitLab y VS Code.
+```
+
+<br>
+
+Luego revisa el estado:
+
+``` bash
+git status
+```
+
+------------------------------------------------------------------------
+
+## Guardar y subir cambios
+
+<br><br>
+
+:::::: columns
+::: {.column width="50%"}
+``` bash
+git add README.md
+git commit -m "Actualiza objetivo del repositorio"
+git push
+```
+:::
+
+::: {.column .incremental width="50%"}
+<br>
+
+-   `add` selecciona el archivo.
+-   `commit` guarda el cambio local.
+-   `push` sube el cambio a GitLab.
+-   Al refrescar GitLab, el cambio aparece en el navegador.
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## Crear una rama feature
+
+<br><br>
+
+:::::: columns
+::: {.column width="50%"}
+``` bash
+git switch -c feature/agrega-presentacion
+
+# editar README.md
+
+git add README.md
+git commit -m "Agrega seccion de presentacion"
+git push -u origin feature/agrega-presentacion
+```
+:::
+
+::: {.column .incremental width="50%"}
+<br>
+
+-   Trabajamos en una rama separada.
+-   GitLab detecta la rama nueva.
+-   Desde ahí podemos abrir un Merge Request.
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## Crear un Merge Request
+
+<br>
+
+::: {.incremental}
+1.  En GitLab, entra al repositorio.
+2.  GitLab suele mostrar un botón para crear MR desde la rama nueva.
+3.  Source: `feature/agrega-presentacion`.
+4.  Target: `main`.
+5.  Escribe título y descripción breve.
+6.  Asigna un revisor si corresponde.
+7.  Crea el Merge Request.
+:::
+
+------------------------------------------------------------------------
+
+## Qué revisar en un MR simple
+
+<br>
+
+:::::: columns
+::: {.column width="50%"}
+### Autor
+
+-   El cambio es pequeño.
+-   El título se entiende.
+-   La descripción explica qué hice.
+-   No subí archivos innecesarios.
+:::
+
+::: {.column width="50%"}
+### Revisor
+
+-   El README se ve bien.
+-   El cambio corresponde al objetivo.
+-   No hay errores evidentes.
+-   Se puede aprobar o comentar.
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## Flujo completo
+
+<br>
+
+```{mermaid}
+%%| fig-width: 13
+%%{init: {'flowchart': {'padding': 26, 'nodeSpacing': 45, 'rankSpacing': 60}}}%%
+flowchart LR
+    A["Crear repo<br/>en GitLab"] --> B["Clonar<br/>en VS Code"]
+    B --> C["Editar<br/>README"]
+    C --> D["Commit"]
+    D --> E["Push"]
+    E --> F["Crear rama<br/>feature"]
+    F --> G["Merge Request"]
+    G --> H["Merge a main"]
+
+    style A fill:#FEE9D9,stroke:#FC6D26,stroke-width:2px
+    style B fill:#e8f0fe,stroke:#0F2044,stroke-width:2px
+    style G fill:#dbe7fb,stroke:#2a5298,stroke-width:2px
+    style H fill:#E8F6EF,stroke:#27AE60,stroke-width:2px
+```
+
+------------------------------------------------------------------------
+
+## Problemas típicos
+
+<br>
+
+| Problema | Qué revisar |
+|:---|:---|
+| No puedo entrar | Cuenta, permisos o VPN |
+| `git clone` falla | URL correcta, internet, credenciales |
+| `git push` falla | Permisos o autenticación |
+| VS Code no muestra cambios | Abriste archivo suelto en vez de carpeta |
+| No aparece el MR | Revisa si hiciste `push` de la rama |
+
+------------------------------------------------------------------------
+
+## Actividad final
+
+<br>
+
+:::::: columns
+:::: {.column width="35%"}
+::: {style="text-align: center;"}
+<img src="images/ejercicio.png" alt="Actividad" style="width: 85%; border-radius: 10px;"/>
+:::
+::::
+
+::: {.column .incremental width="65%"}
+1.  Crea un repositorio `mi-primer-repo`.
+2.  Inicialízalo con `README.md`.
+3.  Clónalo en VS Code.
+4.  Edita el README y haz `commit`.
+5.  Sube el cambio con `push`.
+6.  Crea una rama `feature/tu-nombre`.
+7.  Haz otro cambio y súbelo.
+8.  Abre un Merge Request hacia `main`.
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## Resultado esperado
+
+<br>
+
+En GitLab deberías tener:
+
+<br>
+
+::: {.incremental}
+-   Un repositorio creado.
+-   Un `README.md` editado.
+-   Al menos dos commits.
+-   Una rama `feature/tu-nombre`.
+-   Un Merge Request abierto o fusionado.
+:::
+
+------------------------------------------------------------------------
+
+## {.title-slide background-color="#0F2044"}
+
+::: title-block
+**Gracias**
+
+GitLab desde cero
+:::
+
+::: subtitle-block
+Ya tienes el circuito básico: repo remoto, VS Code, commit, push y Merge Request.
+:::
+
+::: author-block
+Francisco Alfaro Medina\
+Departamento de Informática · UTFSM
+:::
+
+```{=html}
+<style>
+.reveal .slides h1 { font-size: 2em; }
+.reveal .slides h2 { font-size: 1.5em; }
+.reveal .slides p { font-size: 0.8em; }
+.reveal .slides table {
+  font-size: 0.72em;
+  width: 95%;
+  margin: 0 auto;
+}
+.reveal .slides ul,
+.reveal .slides ol { font-size: 0.8em; }
+.reveal .slides pre code {
+  font-size: 0.95em;
+  line-height: 1.25;
+}
+.reveal .slide-logo { max-height: 2.5em !important; }
+.reveal blockquote {
+  font-size: 0.8em;
+  width: 92%;
+}
+.reveal .slides pre.mermaid-js,
+.reveal .slides .cell-output-display { text-align: center; }
+.reveal .slides pre.mermaid-js svg {
+  max-width: 100% !important;
+  max-height: 62vh !important;
+  height: auto !important;
+  margin: 0 auto;
+}
+:root,
+.reveal {
+  --mermaid-font-family: "trebuchet ms", verdana, arial, sans-serif;
+}
+.reveal .slides pre.mermaid-js svg text,
+.reveal .slides pre.mermaid-js svg .nodeLabel,
+.reveal .slides pre.mermaid-js svg .edgeLabel,
+.reveal .slides pre.mermaid-js svg foreignObject * {
+  font-family: "trebuchet ms", verdana, arial, sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+}
+</style>
+```

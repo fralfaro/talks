@@ -25,7 +25,7 @@ execute:
   warning: false
 ---
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks-t2/portada.png" background-opacity="0.18" data-state="no-logo"}
 
 ::: {style="display: flex; justify-content: center; align-items: center; height: 70vh; flex-direction: column; text-align: center;"}
 [Programa de Talleres de Inteligencia Artificial Generativa]{style="font-size: 0.9em; color: #4A9FD4; text-transform: uppercase;"}
@@ -104,7 +104,7 @@ Al final hay un **anexo** con material de profundización: verificación de refe
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks-t2/bloque0-encuadre.png" background-opacity="0.20" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Bloque 0 · 10 minutos]{style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}
@@ -272,7 +272,7 @@ La respuesta a la pregunta 3 es, muy probablemente, su Producto 4 del día, y el
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks-t2/bloque1-literatura.png" background-opacity="0.20" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Bloque 1 · 20 minutos]{style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}
@@ -454,7 +454,7 @@ Una buena matriz no reemplaza la lectura. La hace más visible, ordenada y discu
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks-t2/bloque2-datos.png" background-opacity="0.20" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Bloque 2 · 20 minutos]{style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}
@@ -628,7 +628,7 @@ Prueba de estrés: pida a la IA que argumente la interpretación **contraria** a
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks-t2/pausa.png" background-opacity="0.22" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Pausa · 5 minutos]{style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}
@@ -640,7 +640,7 @@ Prueba de estrés: pida a la IA que argumente la interpretación **contraria** a
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks-t2/bloque3-redaccion.png" background-opacity="0.20" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Bloque 3 · 20 minutos]{style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}
@@ -774,7 +774,7 @@ Lea el abstract en voz alta. Si hay una frase que usted no defendería frente a 
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks-t2/bloque4-automatizacion.png" background-opacity="0.20" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Bloque 4 · 20 minutos]{style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}
@@ -913,7 +913,7 @@ El paso 4 es el que la mayoría se salta y el que convierte un prompt en herrami
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks-t2/bloque5-prueba-cruzada.png" background-opacity="0.20" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Bloque 5 · 20 minutos]{style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}
@@ -1111,7 +1111,7 @@ antes de usar este resultado.
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks-t2/cierre-repositorio.png" background-opacity="0.20" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Cierre · 5 minutos]{style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}
@@ -1225,7 +1225,7 @@ Al finalizar este taller, los participantes serán capaces de:
 
 ------------------------------------------------------------------------
 
-##  {background-color="#1A3A6B" data-state="no-logo"}
+##  {background-color="#1A3A6B" background-image="images/blocks-t2/anexo.png" background-opacity="0.15" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Anexo]{style="font-size:0.9em; color:#C9A84C; text-transform:uppercase; letter-spacing:0.15em;"}
@@ -1385,7 +1385,7 @@ o plazo. No inventes ninguno.
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks-t2/gracias.png" background-opacity="0.18" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:72vh; flex-direction:column; text-align:center;"}
 [Programa de Talleres de Inteligencia Artificial Generativa]{style="font-size:0.85em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}

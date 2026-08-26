@@ -25,7 +25,7 @@ execute:
   warning: false
 ---
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks/portada.png" background-opacity="0.18" data-state="no-logo"}
 
 ::: {style="display: flex; justify-content: center; align-items: center; height: 70vh; flex-direction: column; text-align: center;"}
 [Programa de Talleres de Inteligencia Artificial Generativa]{style="font-size: 0.9em; color: #4A9FD4; text-transform: uppercase;"}
@@ -81,7 +81,7 @@ Al final hay un **anexo** con material de profundización: glosario, texto model
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks/bloque0-encuadre.png" background-opacity="0.20" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Bloque 0 · 10 minutos]{style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}
@@ -244,7 +244,7 @@ Recogemos dos o tres respuestas en voz alta antes de continuar.
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks/bloque1-fundamentos.png" background-opacity="0.20" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Bloque 1 · 15 minutos]{style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}
@@ -494,7 +494,7 @@ Práctica recomendada: para decisiones importantes, haga la **misma** pregunta e
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks/bloque2-prompting.png" background-opacity="0.20" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Bloque 2 · 25 minutos]{style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}
@@ -759,7 +759,7 @@ Lo que descartamos es tan informativo como lo que aceptamos: muestra dónde el m
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks/pausa.png" background-opacity="0.22" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Pausa · 5 minutos]{style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}
@@ -771,7 +771,7 @@ Lo que descartamos es tan informativo como lo que aceptamos: muestra dónde el m
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks/bloque3-diseno.png" background-opacity="0.20" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Bloque 3 · 15 minutos]{style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}
@@ -998,7 +998,7 @@ Guarde esto: es uno de los insumos posibles para el trabajo grupal del último b
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks/bloque4-evaluacion.png" background-opacity="0.20" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Bloque 4 · 15 minutos]{style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}
@@ -1146,7 +1146,7 @@ Truco de validación: pida a la IA que aplique su propia rúbrica a dos respuest
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks/bloque5-retroalimentacion.png" background-opacity="0.20" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Bloque 5 · 10 minutos]{style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}
@@ -1285,7 +1285,7 @@ Producto 4 del kit: cada participante adapta este comentario a un estudiante pro
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks/bloque6-clinica.png" background-opacity="0.20" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Bloque 6 · 20 minutos]{style="font-size:0.9em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}
@@ -1513,7 +1513,7 @@ Al finalizar este taller, los participantes serán capaces de:
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks/anuncio-taller2.png" background-opacity="0.18" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:72vh; flex-direction:column; text-align:center;"}
 [Jueves 27 de agosto · 14:30 a 16:30]{style="font-size:0.85em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}
@@ -1527,7 +1527,7 @@ Al finalizar este taller, los participantes serán capaces de:
 
 ------------------------------------------------------------------------
 
-##  {background-color="#1A3A6B" data-state="no-logo"}
+##  {background-color="#1A3A6B" background-image="images/blocks/anexo.png" background-opacity="0.15" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:70vh; flex-direction:column; text-align:center;"}
 [Anexo]{style="font-size:0.9em; color:#C9A84C; text-transform:uppercase; letter-spacing:0.15em;"}
@@ -1676,7 +1676,7 @@ conceptuales más adelante.
 
 ------------------------------------------------------------------------
 
-##  {background-color="#0F2044" data-state="no-logo"}
+##  {background-color="#0F2044" background-image="images/blocks/gracias.png" background-opacity="0.18" data-state="no-logo"}
 
 ::: {style="display:flex; justify-content:center; align-items:center; height:72vh; flex-direction:column; text-align:center;"}
 [Programa de Talleres de Inteligencia Artificial Generativa]{style="font-size:0.85em; color:#4A9FD4; text-transform:uppercase; letter-spacing:0.1em;"}

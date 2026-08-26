@@ -1,0 +1,458 @@
+---
+title: "Git desde cero"
+subtitle: "Instalar, crear un proyecto y guardar cambios"
+author: "Francisco Alfaro Medina"
+institute: "Análisis y Diseño de Software · UTFSM"
+date: today
+date-format: "MMMM YYYY"
+
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    slide-number: true
+    progress: true
+    history: false
+    transition: fade
+    transition-speed: fast
+    incremental: false
+    fig-align: center
+    highlight-style: nord
+    code-block-bg: true
+    center: false
+    width: 1600
+    height: 800
+    logo: "images/usm.png"
+    scrollable: false
+execute:
+  echo: false
+  warning: false
+---
+
+##  {.title-slide background-color="#0F2044"}
+
+::: title-block
+**Git desde cero**
+
+Instalar, crear un proyecto y guardar cambios
+:::
+
+::: subtitle-block
+Git · Terminal · Visual Studio Code · Commits · Ramas\
+Análisis y Diseño de Software
+:::
+
+::: author-block
+Francisco Alfaro Medina\
+Departamento de Informática · UTFSM\
+2026
+:::
+
+------------------------------------------------------------------------
+
+## ¿Qué haremos hoy?
+
+:::::: columns
+:::: {.column width="40%"}
+::: {style="text-align: center;"}
+<img src="images/index2.png" alt="Objetivos" style="width: 100%; border-radius: 10px;"/>
+:::
+::::
+
+::: {.column .incremental width="60%"}
+<br>
+
+-   Revisar qué es Git y para qué sirve.
+-   Instalar y verificar Git.
+-   Preparar Visual Studio Code.
+-   Crear un proyecto simple.
+-   Guardar cambios con `add` y `commit`.
+-   Crear una rama para trabajar sin romper lo principal.
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## ¿Qué es Git?
+
+<br><br>
+
+:::::: columns
+:::: {.column width="40%"}
+::: {style="text-align: center; background: #0F2044; color: white; border-radius: 10px; padding: 1.4em;"}
+[**git**]{style="font-size: 2.4em; font-family: monospace;"}
+
+<br>
+
+[historial\
+del proyecto]{style="font-size: 0.9em;"}
+:::
+::::
+
+::: {.column .incremental width="60%"}
+<br>
+
+-   Guarda versiones de tus archivos.
+-   Permite saber qué cambió, cuándo y quién lo hizo.
+-   Permite volver atrás si algo sale mal.
+-   Ayuda a trabajar con otras personas sin pisarse.
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## Antes de empezar
+
+<br>
+
+| Herramienta | Para qué la usamos | Cómo verificar |
+|:---|:---|:---|
+| **Git** | Versionar el proyecto | `git --version` |
+| **VS Code** | Editar archivos y usar Git visualmente | Abrir la app |
+| **Terminal** | Ejecutar comandos | Terminal integrada de VS Code |
+| **Carpeta de trabajo** | Guardar el proyecto | Escritorio o Documentos |
+
+<br>
+
+> Si Git o VS Code no están instalados, este es el primer paso del taller.
+
+------------------------------------------------------------------------
+
+## Instalar Git
+
+<br>
+
+::: {.incremental}
+-   **Windows**: descargar desde [git-scm.com](https://git-scm.com/) e instalar con opciones por defecto.
+-   **macOS**: instalar desde [git-scm.com](https://git-scm.com/) o usar herramientas de línea de comandos de Apple.
+-   **Linux**: instalar con el gestor de paquetes de la distribución.
+:::
+
+<br>
+
+``` bash
+git --version
+```
+
+------------------------------------------------------------------------
+
+## Preparar VS Code
+
+<br><br>
+
+:::::: columns
+::: {.column .incremental width="55%"}
+-   Instala **Visual Studio Code**.
+-   Abre una carpeta, no archivos sueltos.
+-   Usa la terminal integrada: **Terminal → New Terminal**.
+-   Revisa el panel **Source Control** para ver cambios.
+-   Opcional: instala la extensión **GitLens**.
+:::
+
+::: {.column width="45%"}
+``` bash
+# abrir VS Code desde terminal
+code .
+
+# si no funciona, abre la carpeta
+# manualmente desde VS Code
+```
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## Configurar tu identidad
+
+<br>
+
+Git necesita saber quién está creando los commits.
+
+<br>
+
+``` bash
+git config --global user.name "Nombre Apellido"
+git config --global user.email "correo@institucion.cl"
+
+git config --list
+```
+
+<br>
+
+> Usa el mismo correo que usarás en GitLab.
+
+------------------------------------------------------------------------
+
+## Crear un proyecto simple
+
+<br><br>
+
+:::::: columns
+::: {.column width="50%"}
+``` bash
+mkdir mi-primer-proyecto
+cd mi-primer-proyecto
+
+code .
+```
+:::
+
+::: {.column width="50%"}
+``` text
+mi-primer-proyecto/
+└── README.md
+```
+:::
+::::::
+
+<br>
+
+En VS Code, crea un archivo llamado `README.md`.
+
+------------------------------------------------------------------------
+
+## Iniciar Git en el proyecto
+
+<br><br>
+
+:::::: columns
+::: {.column width="50%"}
+``` bash
+git init
+git status
+```
+:::
+
+::: {.column .incremental width="50%"}
+<br>
+
+-   `git init` convierte la carpeta en repositorio.
+-   `git status` muestra qué cambió.
+-   Al principio, el archivo aparece como no versionado.
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## Primer commit
+
+<br><br>
+
+:::::: columns
+::: {.column width="50%"}
+``` bash
+git add README.md
+git commit -m "Agrega README inicial"
+
+git status
+```
+:::
+
+::: {.column .incremental width="50%"}
+<br>
+
+-   `git add` selecciona cambios.
+-   `git commit` guarda una versión.
+-   El mensaje debe explicar el cambio.
+-   `git status` confirma que todo quedó limpio.
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## Editar y guardar otro cambio
+
+<br>
+
+Agrega esto al `README.md`:
+
+``` markdown
+# Mi primer proyecto
+
+Este repositorio es una práctica inicial de Git.
+
+## Integrantes
+- Tu nombre
+```
+
+<br>
+
+``` bash
+git status
+git add README.md
+git commit -m "Actualiza descripcion del proyecto"
+```
+
+------------------------------------------------------------------------
+
+## Ver el historial
+
+<br><br>
+
+:::::: columns
+::: {.column width="50%"}
+``` bash
+git log
+
+git log --oneline
+```
+:::
+
+::: {.column width="50%"}
+``` text
+a3f9c21 Actualiza descripcion del proyecto
+8b2e17d Agrega README inicial
+```
+:::
+::::::
+
+<br>
+
+> El historial cuenta la historia del proyecto.
+
+------------------------------------------------------------------------
+
+## Crear una rama
+
+<br><br>
+
+:::::: columns
+::: {.column width="50%"}
+``` bash
+git switch -c feature/agrega-notas
+
+# editar README.md
+
+git add README.md
+git commit -m "Agrega notas de uso"
+```
+:::
+
+::: {.column .incremental width="50%"}
+<br>
+
+-   Una rama separa trabajo en progreso.
+-   Puedes probar ideas sin tocar la rama principal.
+-   Usa nombres simples y descriptivos.
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## Comandos mínimos
+
+<br>
+
+| Comando | Para qué sirve |
+|:---|:---|
+| `git init` | Iniciar repositorio |
+| `git status` | Ver estado |
+| `git add archivo` | Seleccionar cambios |
+| `git commit -m "mensaje"` | Guardar cambios |
+| `git log --oneline` | Ver historial |
+| `git switch -c nombre-rama` | Crear rama |
+| `git switch main` | Volver a rama principal |
+
+------------------------------------------------------------------------
+
+## Buenas prácticas simples
+
+<br>
+
+::: {.incremental}
+-   Haz commits pequeños.
+-   Escribe mensajes claros.
+-   Usa `git status` muchas veces.
+-   No guardes contraseñas ni archivos `.env`.
+-   No trabajes todo en un único commit llamado "final".
+:::
+
+------------------------------------------------------------------------
+
+## Actividad final
+
+<br>
+
+:::::: columns
+:::: {.column width="35%"}
+::: {style="text-align: center;"}
+<img src="images/ejercicio.png" alt="Actividad" style="width: 85%; border-radius: 10px;"/>
+:::
+::::
+
+::: {.column .incremental width="65%"}
+1.  Verifica que Git esté instalado.
+2.  Abre VS Code.
+3.  Crea la carpeta `mi-primer-proyecto`.
+4.  Crea un `README.md`.
+5.  Ejecuta `git init`.
+6.  Haz dos commits.
+7.  Crea una rama `feature/tu-nombre`.
+8.  Agrega una línea nueva y haz un tercer commit.
+:::
+::::::
+
+------------------------------------------------------------------------
+
+## Resultado esperado
+
+<br>
+
+``` text
+mi-primer-proyecto/
+└── README.md
+```
+
+<br>
+
+``` bash
+git log --oneline
+```
+
+``` text
+c7d3a91 Agrega notas de uso
+a3f9c21 Actualiza descripcion del proyecto
+8b2e17d Agrega README inicial
+```
+
+------------------------------------------------------------------------
+
+## {.title-slide background-color="#0F2044"}
+
+::: title-block
+**Gracias**
+
+Git desde cero
+:::
+
+::: subtitle-block
+Próximo paso: subir este proyecto a GitLab y trabajar con Merge Requests.
+:::
+
+::: author-block
+Francisco Alfaro Medina\
+Departamento de Informática · UTFSM
+:::
+
+```{=html}
+<style>
+.reveal .slides h1 { font-size: 2em; }
+.reveal .slides h2 { font-size: 1.5em; }
+.reveal .slides p { font-size: 0.8em; }
+.reveal .slides table {
+  font-size: 0.72em;
+  width: 95%;
+  margin: 0 auto;
+}
+.reveal .slides ul,
+.reveal .slides ol { font-size: 0.8em; }
+.reveal .slides pre code {
+  font-size: 0.95em;
+  line-height: 1.25;
+}
+.reveal .slide-logo { max-height: 2.5em !important; }
+.reveal blockquote {
+  font-size: 0.8em;
+  width: 92%;
+}
+</style>
+```
