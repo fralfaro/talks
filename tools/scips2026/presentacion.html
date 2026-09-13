@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<link href="../../images/logo_fam.png" rel="icon" type="image/png">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
+
+  <title>Talks – SCIPS: estéreo fotométrico de una sola captura desde una imagen multiespectral comprimida</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-539acd4dc3b58918a835379b37efb7c3.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="section" class="slide level2 title-slide center" data-background-color="#0F2044">
+<h2></h2>
+<div class="title-block">
+<p><strong>SCIPS: Single-Shot Photometric Stereo from a <br> Snapshot Compressed Multispectral Image</strong></p>
+<p><span style="font-size: 0.45em; font-weight: normal; font-style: italic;">Una exposición, una medición 2D, un mapa de normales</span></p>
+</div>
+<div class="subtitle-block">
+<p>Yunhao Li · Yanan Hu · Xiaodong Wang · Yuze Yang · Ziyi Meng · Xin Yuan · Peidong Liu<br>
+Zhejiang University · Westlake University · ICIP 2026</p>
+</div>
+<div class="author-block">
+<p>Presentación de paper — Francisco Alfaro Medina<br>
+Doctorado en Ingeniería Electrónica · Universidad Técnica Federico Santa María</p>
+</div>
+<aside class="notes">
+<ul>
+<li>Bienvenida. Hoy presento SCIPS, publicado en ICIP 2026 por un grupo de Zhejiang y Westlake University.</li>
+<li>La afirmación en una línea: recuperar un mapa de normales de alta calidad desde una <em>única</em> medición 2D comprimida.</li>
+<li>Voy a dedicar ~4 minutos al problema, ~4 al método y ~4 a la evidencia.</li>
+<li>Tiempo: 45 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="la-promesa-y-el-precio-del-estéreo-fotométrico" class="slide level2">
+<h2>La promesa y el precio del estéreo fotométrico</h2>
+<div class="columns">
+<div class="column" style="width:52%;">
+<p><br></p>
+<ul>
+<li class="fragment">El <strong>estéreo fotométrico</strong> (Woodham, 1980) recupera normales de superficie a partir de imágenes bajo iluminación variable — sigue siendo el estándar de oro para el detalle geométrico <em>fino</em>.</li>
+<li class="fragment">El costo: <strong>una imagen por cada fuente de luz</strong>, capturadas de forma secuencial.</li>
+<li class="fragment">Adquisición lenta, mucho almacenamiento, nada de sujetos en movimiento.</li>
+<li class="fragment">SCIPS hace una pregunta directa: ¿se puede lograr con <strong>una sola exposición de 10–20 ms</strong> y <strong>un único cuadro 2D</strong>?</li>
+</ul>
+</div><div class="column" style="width:48%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/fig1-teaser.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+</figure>
+</div>
+</div></div>
+<aside class="notes">
+<ul>
+<li>El estéreo fotométrico entrega normales por píxel, mucho más detalle que el estéreo multivista.</li>
+<li>Pero el montaje clásico enciende luces blancas de a una: N luces, N imágenes.</li>
+<li>Eso lo descarta para captura de humanos digitales o inspección industrial en línea.</li>
+<li>Apuntar a la figura: (a) el montaje de captura, (b) el único cuadro comprimido, (c) el mapa de normales que SCIPS recupera de él.</li>
+<li>Tiempo: 70 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-1" class="slide level2" data-background-image="../python-datos/images/background_slides3.png" data-background-opacity="0.3">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 2em">El problema</span></p>
+<p><span style="font-size: 2.5em">Todo camino hacia el PS de una captura tiene un cuello de botella</span></p>
+</div>
+</section>
+<section id="tres-caminos-tres-cuellos-de-botella" class="slide level2">
+<h2>Tres caminos, tres cuellos de botella</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 36%">
+<col style="width: 38%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Enfoque</th>
+<th>Cómo separa las luces</th>
+<th>Cuello de botella</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>PS convencional</strong> [1,2]</td>
+<td>Tiempo — una luz blanca por cuadro</td>
+<td>Captura secuencial: lenta y costosa en almacenamiento</td>
+</tr>
+<tr class="even">
+<td><strong>PS multiespectral RGB</strong> [3,4]</td>
+<td>Longitud de onda — 3 canales del sensor</td>
+<td>Solo ~3 fuentes de luz efectivas; los filtros de color o las luces alternadas reintroducen la captura secuencial</td>
+</tr>
+<tr class="odd">
+<td><strong>PS hiperespectral</strong></td>
+<td>Longitud de onda — muchos canales</td>
+<td>Las cámaras hiperespectrales son caras y poco prácticas de desplegar</td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<div class="info-box">
+<p><strong>La brecha.</strong> El multiplexado espectral es la idea correcta — codificar la dirección de iluminación en la longitud de onda y encender todas las luces a la vez — pero un sensor RGB estándar no tiene canales suficientes, y una cámara hiperespectral no es una respuesta práctica.</p>
+</div>
+<aside class="notes">
+<ul>
+<li>El PS multiespectral es la idea clave: darle a cada luz una longitud de onda distinta, encenderlas simultáneamente y demultiplexar por espectro.</li>
+<li>Con un sensor RGB se obtienen tres luces. No alcanza para una estimación bien condicionada sobre superficies no lambertianas.</li>
+<li>El hardware hiperespectral resuelve el número de canales y crea un problema de costo.</li>
+<li>Entonces: necesitamos muchos canales espectrales sobre un sensor barato. Eso es exactamente lo que ofrece el sensado compresivo.</li>
+<li>Tiempo: 70 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section>
+<section id="imagen-compresiva-de-una-captura-sci-el-modelo-directo" class="slide level2">
+<h2>Imagen compresiva de una captura (SCI): el modelo directo</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p>Un cubo multiespectral <span class="math inline">\(I \in \mathbb{R}^{H \times W \times N_\lambda}\)</span> es <strong>codificado</strong>, <strong>cizallado</strong> y <strong>colapsado</strong> sobre un único sensor 2D:</p>
+<div class="equation-highlight">
+<p><span class="math display">\[I' = I \odot M\]</span> <span class="math display">\[I''(x, y, n_\lambda) = I'\big(x + d(\lambda_{n_\lambda} - \lambda_c),\, y,\, n_\lambda\big)\]</span> <span class="math display">\[Y = \sum_{n_\lambda=1}^{N_\lambda} I''(:,:,n_\lambda) + Z\]</span></p>
+</div>
+<p><span class="math inline">\(M\)</span>: máscara de apertura codificada · <span class="math inline">\(d\)</span>: paso de dispersión · <span class="math inline">\(Z\)</span>: ruido del sensor · <span class="math inline">\(Y\)</span>: el único cuadro capturado</p>
+</div><div class="column" style="width:45%;">
+<p><br><br></p>
+<ul>
+<li class="fragment">Con <span class="math inline">\(d = 1\)</span>, la medición es <span class="math inline">\(\dfrac{W \cdot N_\lambda}{W + N_\lambda - 1}\)</span> veces más eficiente en memoria que el cubo.</li>
+<li class="fragment">Para <span class="math inline">\(W = 1024\)</span>, <span class="math inline">\(N_\lambda = 12\)</span>: <strong>≈ 11,9× de compresión</strong>, sobre un sensor CMOS estándar.</li>
+<li class="fragment">El precio: recuperar <span class="math inline">\(I\)</span> a partir de <span class="math inline">\(Y\)</span> es un problema <strong>severamente mal planteado</strong>.</li>
+</ul>
+</div></div>
+<aside class="notes">
+<ul>
+<li>Tres operaciones físicas: una apertura codificada multiplica el cubo por una máscara binaria; un dispersor óptico desplaza cada longitud de onda a lo largo de x; el sensor integra sobre la longitud de onda.</li>
+<li>Ojo con esto: es un modelo directo <em>conocido y diferenciable</em>. Eso va a importar muchísimo en un momento.</li>
+<li>La compresión es real: doce canales al costo de aproximadamente un cuadro.</li>
+<li>Pero invertirlo es la parte difícil, y ahí es donde el trabajo previo tropieza.</li>
+<li>Tiempo: 80 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="por-qué-falla-el-pipeline-obvio" class="slide level2">
+<h2>Por qué falla el pipeline obvio</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<div style="background: #FDECEC; border-left: 5px solid #C0392B; border-radius: 8px; padding: 0.9em; height: 430px; font-size: 0.8em;">
+<p><strong>Línea base en dos etapas</strong></p>
+<p><code>medición SCI</code><br>
+↓ <em>reconstrucción SCI</em> (MST, SSR)<br>
+<code>cubo multiespectral</code><br>
+↓ <em>estéreo fotométrico</em> (SDM-UniPS, NeuralMPS, MultispectralPS)<br>
+<code>mapa de normales</code></p>
+<ul>
+<li>Los errores de la etapa 1 <strong>se propagan y se acumulan</strong> en la etapa 2.</li>
+<li>Ambas etapas son redes preentrenadas → <strong>generalización limitada</strong>, sobre todo hacia datos SCI reales.</li>
+<li>La etapa 1 optimiza un objetivo <em>espectral</em>, ciego a la tarea <em>geométrica</em> que viene después.</li>
+</ul>
+</div>
+</div><div class="column" style="width:48%;">
+<div style="background: #EAFAF1; border-left: 5px solid #27AE60; border-radius: 8px; padding: 0.9em; height: 430px; font-size: 0.8em;">
+<p><strong>SCIPS: una sola etapa</strong></p>
+<p><code>medición SCI</code><br>
+↓ <em>renderizado inverso neuronal con el modelo SCI dentro del lazo</em><br>
+<code>normales + albedo + iluminación</code></p>
+<ul>
+<li>El cubo <strong>nunca se reconstruye</strong>: es una cantidad intermedia dentro de un renderizador diferenciable.</li>
+<li><strong>Optimización por escena</strong> en tiempo de inferencia → sin brecha de dominio entre entrenamiento y test.</li>
+<li>Un solo objetivo: consistencia fotométrica con la medición efectivamente capturada.</li>
+</ul>
+</div>
+</div></div>
+<aside class="notes">
+<ul>
+<li>Este es el argumento central del paper, así que darle tiempo.</li>
+<li>La respuesta natural de ingeniería sería: reconstruir el cubo con un método SCI del estado del arte y después correr un método PS del estado del arte. El paper muestra que esa descomposición está mal.</li>
+<li>La red de reconstrucción SCI minimiza error espectral, no error de normales. Sus modos de falla —crosstalk, amplificación de ruido— son justamente aquellos a los que el PS es sensible.</li>
+<li>SCIPS mantiene el cubo implícito y deja que una sola pérdida gobierne todo.</li>
+<li>Tiempo: 80 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-2" class="slide level2" data-background-image="../python-datos/images/background_slides3.png" data-background-opacity="0.3">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 2em">El método</span></p>
+<p><span style="font-size: 2.5em">Meter la física de la cámara dentro de la optimización</span></p>
+</div>
+</section>
+<section id="scips-en-tres-ideas" class="slide level2">
+<h2>SCIPS en tres ideas</h2>
+<div class="columns">
+<div class="column" style="width:32%;">
+<div class="pillar pillar-a">
+<p><strong>1 · Renderizado inverso neuronal</strong></p>
+<p>Dos MLP mapean coordenadas de píxel <span class="math inline">\((x,y)\)</span> a la normal de superficie <span class="math inline">\(n\)</span> y al albedo difuso y especular <span class="math inline">\(\rho_d, \rho_s\)</span>.</p>
+<p>Sin predicción feed-forward: la representación de la escena se <strong>optimiza por objeto</strong>, y eso es lo que la hace robusta entre escenas.</p>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="pillar pillar-b">
+<p><strong>2 · Formación SCI explícita</strong></p>
+<p>El cubo renderizado se hace pasar por el modelo <em>real</em> de máscara y cizalle de las Ec. (1)–(3) para sintetizar una medición.</p>
+<p>Como ese modelo es diferenciable, la pérdida se calcula <strong>donde realmente viven los datos</strong>: en el espacio de medición.</p>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="pillar pillar-c">
+<p><strong>3 · Iluminación no calibrada</strong></p>
+<p>Un módulo CNN de estimación de luz inicializa <span class="math inline">\(l_i, l_d\)</span> y se <strong>ajusta de forma conjunta</strong> con la geometría.</p>
+<p>Sin paso de calibración lumínica ni direcciones de luz conocidas — un requisito práctico para un montaje desplegable.</p>
+</div>
+</div></div>
+<div class="info-box">
+<p>Las tres están gobernadas por una <strong>única pérdida fotométrica</strong> contra un solo cuadro capturado. En todo el pipeline no hay supervisión con normales de referencia.</p>
+</div>
+<aside class="notes">
+<ul>
+<li>Presentar estas tres como las contribuciones que reclama el paper.</li>
+<li>La idea 1 sigue a Taniai &amp; Maehara y a Li &amp; Li: MLP sobre coordenadas como representación de escena.</li>
+<li>La idea 2 es la parte genuinamente nueva: el operador SCI no se aprende, es la física de su propia cámara.</li>
+<li>La idea 3 es lo que lo hace usable: al ser no calibrado, se puede mover el montaje.</li>
+<li>Recalcar el último recuadro: esto es autosupervisado. La única señal es “¿mi cuadro sintetizado calza con el que capturé?”.</li>
+<li>Tiempo: 80 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="el-framework-de-punta-a-punta" class="slide level2">
+<h2>El framework, de punta a punta</h2>
+
+<img data-src="images/fig2-framework.png" class="quarto-figure quarto-figure-center r-stretch" style="width:86.0%"><aside class="notes">
+<ul>
+<li>Recorrer de izquierda a derecha y después seguir el lazo de vuelta.</li>
+<li>Abajo a la izquierda: la medición capturada alimenta el módulo de estimación de luz; las coordenadas de píxel alimentan los dos MLP.</li>
+<li>Al centro: normales, albedo e iluminación entran a la ecuación de rendering y producen 12 imágenes espectrales renderizadas.</li>
+<li>A la derecha: máscara, cizalle y suma —síntesis de medición— producen un cuadro sintetizado.</li>
+<li>Abajo al centro: la pérdida compara sintetizado contra capturado, y los gradientes vuelven atravesando la física hasta los pesos de los MLP.</li>
+<li>Tiempo: 70 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="rendering-de-coordenadas-a-imágenes-espectrales" class="slide level2">
+<h2>Rendering: de coordenadas a imágenes espectrales</h2>
+<div class="columns">
+<div class="column" style="width:52%;">
+<p>Cámara ortográfica, dirección de vista fija en <span class="math inline">\(v = [0,0,1]^{\top}\)</span>. Cada canal espectral ve el objeto bajo <strong>una</strong> luz direccional:</p>
+<div class="equation-highlight">
+<p><span class="math display">\[\hat{I} = l_i\,\rho(n, l_d)\,\max(n^{\top} l_d, 0)\]</span></p>
+</div>
+<p>La BRDF se separa en componente difusa y especular, <span class="math inline">\(\rho(n, l_d) = \rho_d + \rho_s(n, l_d)\)</span> — de modo que el modelo <strong>no</strong> queda restringido a superficies lambertianas:</p>
+<div class="equation-highlight">
+<p><span class="math display">\[\hat{I} = l_i\big(\rho_d + \rho_s(n, l_d)\big)\max(n^{\top} l_d, 0)\]</span></p>
+</div>
+</div><div class="column" style="width:48%;">
+<p><strong>Los dos MLP sobre coordenadas</strong></p>
+<div class="equation-highlight">
+<p><span class="math display">\[n = \mathrm{MLP}_{\text{normal}}(x, y)\]</span> <span class="math display">\[\{\rho_d, \rho_s\} = \mathrm{MLP}_{\text{albedo}}(x, y)\]</span></p>
+</div>
+<ul>
+<li>8 capas totalmente conectadas, 256 canales cada una</li>
+<li>El MLP de albedo agrega una cabeza de predicción de 128 canales</li>
+<li>Las entradas llevan <strong>codificación posicional</strong> — eso es lo que permite a una red sobre coordenadas representar detalle superficial de alta frecuencia</li>
+<li>Módulo de luz adaptado de Li &amp; Li [20]</li>
+</ul>
+</div></div>
+<aside class="notes">
+<ul>
+<li>La ecuación 4 es simplemente la ecuación de rendering bajo el supuesto del PS multiespectral: el canal n_lambda equivale al objeto iluminado por la luz n_lambda.</li>
+<li>El término max(n·l, 0) es el manejo de sombras propias.</li>
+<li>Separar la BRDF importa para los objetos especulares del benchmark, sobre todo Ball y Pot.</li>
+<li>La codificación posicional es el truco estándar tipo NeRF; sin ella el MLP es un filtro pasabajos y se pierde justamente el detalle fino que hace valioso al PS.</li>
+<li>Tiempo: 75 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="cerrando-el-lazo-la-pérdida-fotométrica" class="slide level2">
+<h2>Cerrando el lazo: la pérdida fotométrica</h2>
+<div class="equation-highlight">
+<p><span class="math display">\[\mathcal{L}_{\text{photo}} = \Big| \; Y - \sum_{n_\lambda=1}^{N_\lambda} T_{d(\lambda_{n_\lambda} - \lambda_c)}\big(\hat{I} \odot M\big)(:,:,n_\lambda) \; \Big|\]</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Qué dice la ecuación</strong></p>
+<ul>
+<li>Renderizar el cubo <span class="math inline">\(\hat{I}\)</span>, modularlo con la <strong>máscara real</strong> <span class="math inline">\(M\)</span>, cizallarlo con <span class="math inline">\(T\)</span> y sumar sobre la longitud de onda.</li>
+<li>Comparar contra el <strong>único cuadro capturado</strong> <span class="math inline">\(Y\)</span>.</li>
+<li>Una sola pérdida escalar actualiza conjuntamente <span class="math inline">\(n\)</span>, <span class="math inline">\(\rho_d\)</span>, <span class="math inline">\(\rho_s\)</span>, <span class="math inline">\(l_i\)</span> y <span class="math inline">\(l_d\)</span>.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Cuánto cuesta</strong></p>
+<ul>
+<li>Adam, tasa de aprendizaje inicial <span class="math inline">\(5 \times 10^{-4}\)</span></li>
+<li>10K–20K iteraciones, una sola NVIDIA RTX 4090</li>
+<li><strong>10–15 minutos por objeto</strong> (dataset sintético)</li>
+<li>Tiempo de captura: una sola exposición de <strong>10–20 ms</strong></li>
+</ul>
+</div></div>
+<div class="info-box">
+<p>La optimización en tiempo de inferencia suele ser una desventaja. Acá es justamente el punto: el modelo se ajusta a <em>esta</em> medición de <em>esta</em> cámara, así que no hay brecha de dominio entre los datos de entrenamiento y el montaje SCI real.</p>
+</div>
+<aside class="notes">
+<ul>
+<li>Esta diapositiva es el método completo en una línea; vale la pena hacer una pausa.</li>
+<li>Notar que la pérdida es una L1 en el espacio de medición, no en el espacio del cubo. En ningún momento se le pide a la red producir un cubo espectral “correcto”.</li>
+<li>Ser honesto con el trade-off: 10-15 minutos por objeto es offline. La <em>captura</em> es de 10-20 ms, que es la afirmación relevante para sujetos en movimiento y montajes con memoria limitada; la reconstrucción no es tiempo real.</li>
+<li>Tiempo: 75 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-3" class="slide level2" data-background-image="../python-datos/images/background_slides3.png" data-background-opacity="0.3">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 2em">La evidencia</span></p>
+<p><span style="font-size: 2.5em">Benchmarks sintéticos y un prototipo real</span></p>
+</div>
+</section>
+<section id="datasets-sintético-y-un-prototipo-físico" class="slide level2">
+<h2>Datasets: sintético y un prototipo físico</h2>
+<div class="columns">
+<div class="column" style="width:42%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/fig3-setup.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div><div class="column" style="width:58%;">
+<p><strong>Sintético</strong> — renderizado en Blender</p>
+<ul>
+<li>10 objetos: Ball, Bear, Bird, Bunny, Cat, Cabbage, Fish, Moai, Pot, Pumpkin</li>
+<li><span class="math inline">\(N_\lambda\)</span> = 12 canales, resolución <span class="math inline">\(612 \times 512\)</span></li>
+<li>Blender solo renderiza RGB, así que cada luz monocromática se renderiza por separado y se promedia por banda</li>
+</ul>
+<p><strong>Real</strong> — un sistema SCI-MPS construido para esto</p>
+<ul>
+<li>Apertura codificada + dispersor óptico + sistema de lentes + CMOS</li>
+<li>12 LED de banda angosta, <strong>460–665 nm</strong>, resolución <span class="math inline">\(1024 \times 1024\)</span></li>
+<li>Geometría escaneada con un Shining3D EinScan Pro 2X Plus V2</li>
+</ul>
+<div title="Limitación del dataset real">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Limitación del dataset real</strong></p>
+</div>
+<div class="callout-content">
+<p>La ausencia de marcadores de calibración y la adquisición por separado implican que los datos reales <strong>no tienen ground truth alineado a nivel de píxel</strong> — los resultados reales son solo cualitativos.</p>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<aside class="notes">
+<ul>
+<li>Construir el montaje es una contribución real: hay una escasez genuina de datasets SCI <em>reales</em>, y por eso los métodos SCI generalizan mal.</li>
+<li>Señalar la limitación con honestidad, y esperar una pregunta al respecto: la malla escaneada no está registrada con la cámara, así que no pueden reportar MAE sobre datos reales. Todo lo que afirman del mundo real es visual.</li>
+<li>Tiempo: 70 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="resultados-cuantitativos-error-angular-medio-en-grados-menor-es-mejor" class="slide level2">
+<h2>Resultados cuantitativos — error angular medio en grados (menor es mejor)</h2>
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 39%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 10%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Método</th>
+<th>Ball</th>
+<th>Bunny</th>
+<th>Fish</th>
+<th>Moai</th>
+<th>Pumpkin</th>
+<th><strong>Promedio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MST [6] + MultispectralPS [4]</td>
+<td>2.40</td>
+<td>13.76</td>
+<td>18.40</td>
+<td>16.45</td>
+<td>9.41</td>
+<td>11.63</td>
+</tr>
+<tr class="even">
+<td>MST [6] + NeuralMPS [3]</td>
+<td>9.82</td>
+<td>14.53</td>
+<td>15.82</td>
+<td>7.85</td>
+<td>5.51</td>
+<td>10.62</td>
+</tr>
+<tr class="odd">
+<td>MST [6] + SDM-UniPS [18]</td>
+<td>2.42</td>
+<td>7.18</td>
+<td>12.81</td>
+<td>5.30</td>
+<td>13.35</td>
+<td>7.60</td>
+</tr>
+<tr class="even">
+<td>SSR [7] + MultispectralPS [4]</td>
+<td>2.21</td>
+<td>13.64</td>
+<td>18.16</td>
+<td>17.18</td>
+<td>9.98</td>
+<td>11.81</td>
+</tr>
+<tr class="odd">
+<td>SSR [7] + NeuralMPS [3]</td>
+<td>9.98</td>
+<td>11.89</td>
+<td>14.20</td>
+<td>10.48</td>
+<td>5.08</td>
+<td>10.73</td>
+</tr>
+<tr class="even">
+<td>SSR [7] + SDM-UniPS [18]</td>
+<td>2.57</td>
+<td>6.97</td>
+<td>13.70</td>
+<td>6.18</td>
+<td>12.99</td>
+<td>7.90</td>
+</tr>
+<tr class="odd">
+<td><strong>SCIPS (propuesto)</strong></td>
+<td><strong>0.55</strong></td>
+<td><strong>4.96</strong></td>
+<td><strong>9.73</strong></td>
+<td><strong>2.54</strong></td>
+<td><strong>1.12</strong></td>
+<td><strong>4.39</strong></td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:32%;">
+<div class="metric-row">
+<p><span class="metric">4,39°</span> <span class="metric-label">MAE promedio sobre los 10 objetos</span></p>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="metric-row">
+<p><span class="metric">−42%</span> <span class="metric-label">frente a la mejor línea base de dos etapas (7,60°)</span></p>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="metric-row">
+<p><span class="metric">8,03° / 0,09</span> <span class="metric-label">MAE de dirección de luz / error de intensidad</span></p>
+</div>
+</div></div>
+<aside class="notes">
+<ul>
+<li>La tabla muestra 5 de los 10 objetos; la columna de promedio es sobre los diez.</li>
+<li>SCIPS gana en casi todos los objetos. El margen es mayor justamente donde los pipelines de dos etapas acumulan errores.</li>
+<li>Ser franco: Cat (5.05 contra 3.95 de MST+SDM-UniPS) es un caso donde una línea base le gana. “Consistentemente superior en casi todos los objetos” es la redacción del propio paper.</li>
+<li>Los números de iluminación importan porque la luz nunca fue calibrada: 8 grados de error en dirección de luz y aun así 4,4 grados de error en las normales.</li>
+<li>Tiempo: 90 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="comparación-cualitativa" class="slide level2">
+<h2>Comparación cualitativa</h2>
+<div class="r-stack">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/fig4-synthetic.png" class="fragment fade-in-then-out quarto-figure quarto-figure-center" style="width:84.0%"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/fig5-real.png" class="fragment quarto-figure quarto-figure-center" style="width:58.0%"></p>
+</figure>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Primer clic: sintético (Fig. 4). Cinco líneas base, luego el método propuesto, luego el ground truth. Arriba el mapa de normales, abajo el mapa de error en escala jet; azul es error bajo.</li>
+<li>Bear, de izquierda a derecha: MAE 11.82 / 7.85 / 7.51 / 2.32, y el propuesto en 1.21. Bird: 12.65 / 7.90 / 9.46 / 5.04, y el propuesto en 2.31.</li>
+<li>Los mapas jet son el argumento: las líneas base se encienden justo en las orejas, el hocico y el ala — las zonas de alta curvatura donde el error de reconstrucción SCI se convierte en error de normales.</li>
+<li>Segundo clic: datos reales (Fig. 5), alcancía y gato de la suerte, contra MST+SDM-UniPS y una referencia escaneada. Esa referencia NO está alineada a nivel de píxel, así que esto es solo comparación visual: no se puede citar un MAE.</li>
+<li>Juzgar los artefactos: la línea base muestra ruido y moteado por crosstalk en las regiones planas; SCIPS es más suave y conserva el relieve fino.</li>
+<li>Esta es la diapositiva que responde “¿sobrevive la ventaja sintética a la óptica real?”.</li>
+<li>Tiempo: 70 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ablación-qué-aporta-cada-componente" class="slide level2">
+<h2>Ablación: qué aporta cada componente</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Configuración</th>
+<th>MAE ↓</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Propuesto <strong>sin LEM</strong> (módulo de estimación de luz)</td>
+<td>8.97</td>
+</tr>
+<tr class="even">
+<td>Propuesto <strong>sin LO</strong> (optimización de luz)</td>
+<td>7.04</td>
+</tr>
+<tr class="odd">
+<td><strong>Propuesto (completo)</strong></td>
+<td><strong>4.39</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="info-box">
+<p>Quitar el módulo de estimación de luz cuesta <strong>+4,6°</strong>: más que duplica el error. La iluminación no es un detalle de este pipeline, es la mitad del problema.</p>
+</div>
+</div><div class="column" style="width:52%;">
+<p><br></p>
+<ul>
+<li class="fragment"><strong>Sin LEM</strong>, la iluminación parte de una inicialización pobre y la optimización conjunta no tiene un punto confiable desde el cual descender.</li>
+<li class="fragment"><strong>Sin LO</strong>, la iluminación se estima una vez y se congela: los errores en <span class="math inline">\(l_i, l_d\)</span> se absorben en las normales, la falla clásica del PS no calibrado.</li>
+<li class="fragment">Ambos son <strong>complementarios</strong>: una buena inicialización <em>y</em> la libertad de refinarla.</li>
+<li class="fragment">Notar que <strong>solo sin LO (7,04°) ya supera a todas las líneas base de dos etapas</strong> — la formulación de una sola etapa es la ganancia, y el refinamiento de luz abre la brecha.</li>
+</ul>
+</div></div>
+<aside class="notes">
+<ul>
+<li>Esta es la ablación que exigiría un revisor, y es la única que trae el paper.</li>
+<li>Una crítica justa: no hay ablación sobre la codificación posicional, el ancho de la red ni el número de canales espectrales.</li>
+<li>Tiempo: 65 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="conclusiones" class="slide level2">
+<h2>Conclusiones</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="lo-que-el-paper-establece">Lo que el paper establece</h3>
+<ul>
+<li class="fragment">Se pueden recuperar normales de superficie desde una <strong>única medición 2D comprimida</strong>, sin reconstruir el cubo.</li>
+<li class="fragment">Poner el <strong>modelo directo de SCI dentro</strong> de un renderizador diferenciable supera al esquema reconstruir-y-después-estimar: <strong>4,39°</strong> contra <strong>7,60°</strong> de MAE.</li>
+<li class="fragment">La optimización por escena junto a la estimación conjunta de luz elimina de una vez el paso de <strong>calibración</strong> y la <strong>brecha de dominio</strong>.</li>
+<li class="fragment">Un prototipo funcional y dos datasets nuevos hacen que la afirmación sea verificable sobre óptica real.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="lo-que-queda-abierto">Lo que queda abierto</h3>
+<ul>
+<li class="fragment"><strong>10–15 min por objeto</strong>: la captura es rápida, la reconstrucción no. El renderizado inverso en tiempo real es el próximo objetivo evidente.</li>
+<li class="fragment"><strong>Sin evaluación cuantitativa en datos reales</strong> — un ground truth registrado zanjaría esa afirmación.</li>
+<li class="fragment">Un objeto, una vista, cámara ortográfica; sin interreflexiones ni sombras proyectadas más allá del término <span class="math inline">\(\max(\cdot, 0)\)</span>.</li>
+<li class="fragment">¿Cuánto se degrada al bajar <span class="math inline">\(N_\lambda\)</span>, o cuando la máscara se aparta de la calibrada?</li>
+</ul>
+</div></div>
+<aside class="notes">
+<ul>
+<li>La contribución que yo defendería es la descomposición, no la arquitectura. Los MLP son estándar; la idea es elegir <em>no</em> reconstruir el cubo.</li>
+<li>La limitación honesta: esto es reconstrucción offline a partir de una captura rápida. Para captura de humanos digitales está bien; para inspección industrial en línea todavía no.</li>
+<li>Invitar aquí las preguntas del comité.</li>
+<li>Tiempo: 75 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-4" class="slide level2 title-slide center" data-background-color="#0F2044">
+<h2></h2>
+<div class="title-block">
+<p><strong>Gracias</strong></p>
+<p><span style="font-size: 0.45em; font-weight: normal; font-style: italic;">¿Preguntas?</span></p>
+</div>
+<div class="subtitle-block">
+<p>SCIPS: Single-Shot Photometric Stereo from a Snapshot Compressed Multispectral Image<br>
+Li, Hu, Wang, Yang, Meng, Yuan &amp; Liu · ICIP 2026 · DOI 10.1109/ICIP61757.2026.11630570</p>
+</div>
+<div class="author-block">
+<p>Francisco Alfaro Medina · Universidad Técnica Federico Santa María<br>
+<a href="https://github.com/fralfaro/talks" class="uri">https://github.com/fralfaro/talks</a></p>
+</div>
+<aside class="notes">
+<ul>
+<li>Dejar esta diapositiva mientras dure la ronda de preguntas.</li>
+<li>Preguntas probables que conviene tener listas: por qué no ajustar el reconstructor SCI de punta a punta para la tarea de PS; qué tan sensible es al error de calibración de la máscara; qué pasa con menos LED.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<style>
+.reveal .slides h2 {
+  font-size: 1.3em;
+}
+.reveal .slides p {
+  font-size: 0.95em;
+}
+.reveal .slides ul {
+  font-size: 0.9em;
+}
+.reveal .slide-logo {
+   max-height: 2.5em !important;
+}
+</style>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../python-datos/images/usm.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>ICIP 2026 · SCIPS: Single-Shot Photometric Stereo from a Snapshot Compressed Multispectral Image</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copiado");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copiado");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/falfaro\.xyz\/talks\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <input type="hidden" id="giscus-base-theme" value="light">
+    <input type="hidden" id="giscus-alt-theme" value="dark">
+    <script>
+      function loadGiscus() {
+        // Function to get the theme based on body class
+        const getTheme = () => {
+          let baseTheme = document.getElementById('giscus-base-theme').value;
+          let altTheme = document.getElementById('giscus-alt-theme').value;
+          return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+        };
+        const script = document.createElement("script");
+        script.src = "https://giscus.app/client.js";
+        script.async = true;
+        script.dataset.repo = "Seth-Nut/talks";
+        script.dataset.repoId = "R_kgDOM_kl2g";
+        script.dataset.category = "General";
+        script.dataset.categoryId = "DIC_kwDOM_kl2s4CjYAh";
+        script.dataset.mapping = "title";
+        script.dataset.reactionsEnabled = "1";
+        script.dataset.emitMetadata = "0";
+        script.dataset.inputPosition = "top";
+        script.dataset.theme = getTheme();
+        script.dataset.lang = "en";
+        script.crossOrigin = "anonymous";
+        // Append the script to the desired div instead of at the end of the body
+        document.getElementById("quarto-content").appendChild(script);
+      }
+      loadGiscus();
+    </script>
+    
+
+</body></html>

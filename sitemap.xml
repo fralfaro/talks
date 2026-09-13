@@ -1,175 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://falfaro.xyz/talks/ai/taller_2_ia_investigacion_productividad.html</loc>
-    <lastmod>2026-08-26T13:18:32.306Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ai/datafrontiers_2026.html</loc>
-    <lastmod>2026-08-26T13:18:31.677Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ai/presentacion_datasaturday.html</loc>
-    <lastmod>2026-08-26T13:18:32.305Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ai/datasaturday_2026.html</loc>
-    <lastmod>2026-08-26T13:18:31.677Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ai/pyday_2026_v2.html</loc>
-    <lastmod>2026-08-26T13:18:32.305Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ai/pyday_2026.html</loc>
-    <lastmod>2026-08-26T13:18:32.305Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/usm_dtd/geo.html</loc>
-    <lastmod>2026-08-26T13:18:33.573Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/usm_dtd/semana_03.html</loc>
-    <lastmod>2026-08-26T13:18:33.744Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/tools/eds_presentation.html</loc>
-    <lastmod>2026-08-26T13:18:32.766Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/tools/github/presentacion.html</loc>
-    <lastmod>2026-08-26T13:18:33.173Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/tools/latex/presentacion.html</loc>
-    <lastmod>2026-08-26T13:18:33.187Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/index.html</loc>
-    <lastmod>2026-08-26T13:18:32.707Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ipd446/talk3.html</loc>
-    <lastmod>2026-08-26T13:18:32.752Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ipd446/talk2.html</loc>
-    <lastmod>2026-08-26T13:18:32.752Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ipd446/talk1.html</loc>
-    <lastmod>2026-08-26T13:18:32.752Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/datacuber/clase-2.html</loc>
-    <lastmod>2026-08-26T13:18:32.338Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion_rsla26.html</loc>
-    <lastmod>2026-08-26T13:18:32.705Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion.html</loc>
-    <lastmod>2026-08-26T13:18:32.705Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion_pycon.html</loc>
-    <lastmod>2026-08-26T13:18:32.705Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ads/git_gitlab.html</loc>
-    <lastmod>2026-08-26T13:18:31.673Z</lastmod>
-  </url>
-  <url>
     <loc>https://falfaro.xyz/talks/ads/git_gitlab_60min.html</loc>
-    <lastmod>2026-08-26T13:18:31.674Z</lastmod>
+    <lastmod>2026-09-13T16:18:31.887Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/ads/programa.html</loc>
-    <lastmod>2026-08-26T13:18:31.676Z</lastmod>
+    <lastmod>2026-09-13T16:18:31.889Z</lastmod>
   </url>
   <url>
-    <loc>https://falfaro.xyz/talks/ads/gitlab.html</loc>
-    <lastmod>2026-08-26T13:18:31.674Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ads/guion_60min.html</loc>
-    <lastmod>2026-08-26T13:18:31.674Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ads/git.html</loc>
-    <lastmod>2026-08-26T13:18:31.673Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/hello-quarto/index.html</loc>
-    <lastmod>2026-08-26T13:18:32.705Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion_uah.html</loc>
-    <lastmod>2026-08-26T13:18:32.705Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/datacuber/clase-0.html</loc>
-    <lastmod>2026-08-26T13:18:32.337Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/datacuber/lab-0.html</loc>
-    <lastmod>2026-08-26T13:18:32.369Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ipd446/talk22.html</loc>
-    <lastmod>2026-08-26T13:18:32.752Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ipd446/talk1-speech.html</loc>
-    <lastmod>2026-08-26T13:18:32.751Z</lastmod>
+    <loc>https://falfaro.xyz/talks/ads/git_gitlab.html</loc>
+    <lastmod>2026-09-13T16:18:31.887Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/ipd446/talk1-glosario.html</loc>
-    <lastmod>2026-08-26T13:18:32.751Z</lastmod>
+    <lastmod>2026-09-13T16:18:32.974Z</lastmod>
   </url>
   <url>
-    <loc>https://falfaro.xyz/talks/tools/quarto/presentacion.html</loc>
-    <lastmod>2026-08-26T13:18:33.572Z</lastmod>
+    <loc>https://falfaro.xyz/talks/ipd446/talk3.html</loc>
+    <lastmod>2026-09-13T16:18:32.974Z</lastmod>
   </url>
   <url>
-    <loc>https://falfaro.xyz/talks/tools/python-datos/presentacion.html</loc>
-    <lastmod>2026-08-26T13:18:33.190Z</lastmod>
+    <loc>https://falfaro.xyz/talks/ipd446/talk1-speech.html</loc>
+    <lastmod>2026-09-13T16:18:32.974Z</lastmod>
   </url>
   <url>
-    <loc>https://falfaro.xyz/talks/tools/colab/presentacion.html</loc>
-    <lastmod>2026-08-26T13:18:32.766Z</lastmod>
+    <loc>https://falfaro.xyz/talks/datacuber/lab-0.html</loc>
+    <lastmod>2026-09-13T16:18:32.587Z</lastmod>
   </url>
   <url>
-    <loc>https://falfaro.xyz/talks/usm_dtd/semana_02.html</loc>
-    <lastmod>2026-08-26T13:18:33.744Z</lastmod>
+    <loc>https://falfaro.xyz/talks/datacuber/clase-0.html</loc>
+    <lastmod>2026-09-13T16:18:32.556Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/usm_dtd/semana_03.html</loc>
+    <lastmod>2026-09-13T16:18:34.057Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/usm_dtd/semana_01.html</loc>
-    <lastmod>2026-08-26T13:18:33.744Z</lastmod>
+    <lastmod>2026-09-13T16:18:34.056Z</lastmod>
   </url>
   <url>
-    <loc>https://falfaro.xyz/talks/ai/taller_1_ia_docencia.html</loc>
-    <lastmod>2026-08-26T13:18:32.305Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ai/IMAGENES_REQUERIDAS.html</loc>
-    <lastmod>2026-08-26T13:18:31.677Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ai/presentacion_mat281.html</loc>
-    <lastmod>2026-08-26T13:18:32.305Z</lastmod>
-  </url>
-  <url>
-    <loc>https://falfaro.xyz/talks/ai/analitica_dtd.html</loc>
-    <lastmod>2026-08-26T13:18:31.677Z</lastmod>
+    <loc>https://falfaro.xyz/talks/ai/datafrontiers_2026.html</loc>
+    <lastmod>2026-09-13T16:18:31.890Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/ai/Programa_Talleres_IA_Generativa_UTFSM.html</loc>
-    <lastmod>2026-08-26T13:18:31.677Z</lastmod>
+    <lastmod>2026-09-13T16:18:31.890Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ai/taller_1_ia_docencia.html</loc>
+    <lastmod>2026-09-13T16:18:32.524Z</lastmod>
   </url>
   <url>
     <loc>https://falfaro.xyz/talks/ai/CHANGELOG.html</loc>
-    <lastmod>2026-08-26T13:18:31.676Z</lastmod>
+    <lastmod>2026-09-13T16:18:31.889Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ai/analitica_dtd.html</loc>
+    <lastmod>2026-09-13T16:18:31.890Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ai/presentacion_mat281.html</loc>
+    <lastmod>2026-09-13T16:18:32.524Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion_uah.html</loc>
+    <lastmod>2026-09-13T16:18:32.928Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion.html</loc>
+    <lastmod>2026-09-13T16:18:32.928Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/tools/quarto/presentacion.html</loc>
+    <lastmod>2026-09-13T16:18:33.818Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/tools/python-datos/presentacion.html</loc>
+    <lastmod>2026-09-13T16:18:33.435Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/tools/sate/presentacion.html</loc>
+    <lastmod>2026-09-13T16:18:33.851Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/tools/3ds-compression/presentacion.html</loc>
+    <lastmod>2026-09-13T16:18:32.997Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/tools/conte2026/presentacion.html</loc>
+    <lastmod>2026-09-13T16:18:33.016Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/index.html</loc>
+    <lastmod>2026-09-13T16:18:32.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/tools/github/presentacion.html</loc>
+    <lastmod>2026-09-13T16:18:33.419Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/tools/colab/presentacion.html</loc>
+    <lastmod>2026-09-13T16:18:33.011Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/tools/eds_presentation.html</loc>
+    <lastmod>2026-09-13T16:18:33.016Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/tools/latex/presentacion.html</loc>
+    <lastmod>2026-09-13T16:18:33.432Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/tools/scips2026/presentacion.html</loc>
+    <lastmod>2026-09-13T16:18:33.885Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/hello-quarto/index.html</loc>
+    <lastmod>2026-09-13T16:18:32.927Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion_rsla26.html</loc>
+    <lastmod>2026-09-13T16:18:32.928Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/hello-quarto/presentacion_pycon.html</loc>
+    <lastmod>2026-09-13T16:18:32.928Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ai/pyday_2026_v2.html</loc>
+    <lastmod>2026-09-13T16:18:32.524Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ai/pyday_2026.html</loc>
+    <lastmod>2026-09-13T16:18:32.524Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ai/taller_2_ia_investigacion_productividad.html</loc>
+    <lastmod>2026-09-13T16:18:32.525Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ai/presentacion_datasaturday.html</loc>
+    <lastmod>2026-09-13T16:18:32.524Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ai/datasaturday_2026.html</loc>
+    <lastmod>2026-09-13T16:18:31.890Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ai/IMAGENES_REQUERIDAS.html</loc>
+    <lastmod>2026-09-13T16:18:31.890Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/usm_dtd/semana_02.html</loc>
+    <lastmod>2026-09-13T16:18:34.057Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/usm_dtd/geo.html</loc>
+    <lastmod>2026-09-13T16:18:33.886Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/datacuber/clase-2.html</loc>
+    <lastmod>2026-09-13T16:18:32.557Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ipd446/talk1.html</loc>
+    <lastmod>2026-09-13T16:18:32.974Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ipd446/talk22.html</loc>
+    <lastmod>2026-09-13T16:18:32.974Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ipd446/talk2.html</loc>
+    <lastmod>2026-09-13T16:18:32.974Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ads/guion_60min.html</loc>
+    <lastmod>2026-09-13T16:18:31.887Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ads/git.html</loc>
+    <lastmod>2026-09-13T16:18:31.886Z</lastmod>
+  </url>
+  <url>
+    <loc>https://falfaro.xyz/talks/ads/gitlab.html</loc>
+    <lastmod>2026-09-13T16:18:31.887Z</lastmod>
   </url>
 </urlset>

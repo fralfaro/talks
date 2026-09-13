@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<link href="../../images/logo_fam.png" rel="icon" type="image/png">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-5a1953863e1f72ef3b996ef827f01ca7.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
+
+  <title>Talks – Making Fisher Work: compresión en tiempo de entrenamiento para 3D Gaussian Splatting</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto-143a2942866e20eb925024c7a21f9895.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="section" class="slide level2 title-slide center" data-background-color="#0F2044">
+<h2></h2>
+<div class="title-block">
+<p><strong>Making Fisher Work: Train-Time Compression <br> for 3D Gaussian Splatting</strong></p>
+<p><span style="font-size: 0.45em; font-weight: normal; font-style: italic;">Comprimir mientras se entrena, no después</span></p>
+</div>
+<div class="subtitle-block">
+<p>P G Arun Madhav · Chandra Sekhar Seelamantula<br>
+Department of Electrical Engineering, Indian Institute of Science, Bangalore · ICIP 2026</p>
+</div>
+<div class="author-block">
+<p>Presentación de paper — Francisco Alfaro Medina<br>
+Doctorado en Ingeniería Electrónica · Universidad Técnica Federico Santa María</p>
+</div>
+<aside class="notes">
+<ul>
+<li>Bienvenida. Presento “Making Fisher Work”, de ICIP 2026, del Indian Institute of Science.</li>
+<li>La afirmación en una línea: <strong>95% de reducción de almacenamiento</strong> en 3D Gaussian Splatting, preservando la calidad de renderizado.</li>
+<li>La tesis del paper no es “cuantizar más”: es <strong>controlar cuándo se forma la redundancia</strong> durante el entrenamiento.</li>
+<li>Voy a dedicar ~4 minutos al problema, ~5 al método y ~3 a la evidencia.</li>
+<li>Tiempo: 45 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="el-problema-calidad-en-tiempo-real-a-un-costo-de-almacenamiento-enorme" class="slide level2">
+<h2>El problema: calidad en tiempo real, a un costo de almacenamiento enorme</h2>
+<div class="columns">
+<div class="column" style="width:54%;">
+<div class="paper-figure">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/fig1-compression.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+<div class="caption">
+<p>Escena <em>train</em> de Tanks&amp;Temples: 281 MB → 23 MB, un <strong>92,24 %</strong> de compresión, con una caída de PSNR de apenas 0,12 dB (Fig. 1 del paper).</p>
+</div>
+</div><div class="column" style="width:46%;">
+<p><br></p>
+<ul>
+<li class="fragment">3D-GS [1] logra síntesis de vistas nuevas de alta calidad con renderizado <strong>en tiempo real</strong>.</li>
+<li class="fragment">Pero una reconstrucción de calidad necesita <strong>millones de primitivas gaussianas</strong>.</li>
+<li class="fragment">El resultado: mucha memoria y una huella de almacenamiento enorme.</li>
+<li class="fragment">Es eficiente en inferencia y poco escalable en almacenamiento: ese es el cuello de botella para desplegarlo.</li>
+</ul>
+</div></div>
+<aside class="notes">
+<ul>
+<li>3D-GS reemplazó a los NeRF en velocidad: rasteriza en vez de trazar rayos, y eso le da tiempo real.</li>
+<li>El precio es la representación explícita: millones de primitivas, cada una con decenas de parámetros.</li>
+<li>La figura hace concreto el problema: la misma escena, 281 MB contra 23 MB, y los recuadros de zoom muestran que la cadena y el detalle fino se conservan.</li>
+<li>Nota honesta sobre la figura: el PSNR baja de 21,92 a 21,80 dB. No es gratis, pero es un costo mínimo.</li>
+<li>Tiempo: 60 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-1" class="slide level2" data-background-image="../python-datos/images/background_slides3.png" data-background-opacity="0.3">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 2em">El problema</span></p>
+<p><span style="font-size: 2.5em">La redundancia se forma durante el entrenamiento</span></p>
+</div>
+</section>
+<section id="qué-hay-exactamente-que-comprimir" class="slide level2">
+<h2>Qué hay exactamente que comprimir</h2>
+<div class="columns">
+<div class="column" style="width:47%;">
+<p>Cada escena es un conjunto de primitivas gaussianas 3D:</p>
+<div class="equation-highlight">
+<p><span class="math display">\[G = \{G_i = \{\mu_i, s_i, r_i, b_i, h_i, o_i\}\}_{i=1}^{N}\]</span></p>
+</div>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Parámetro</th>
+<th>Dimensión</th>
+<th>Rol</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\mu_i\)</span></td>
+<td><span class="math inline">\(\mathbb{R}^3\)</span></td>
+<td>centro</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(s_i\)</span></td>
+<td><span class="math inline">\(\mathbb{R}^3\)</span></td>
+<td>escala</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(r_i\)</span></td>
+<td><span class="math inline">\(\mathbb{R}^4\)</span></td>
+<td>rotación</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(b_i\)</span></td>
+<td><span class="math inline">\(\mathbb{R}^3\)</span></td>
+<td>color base</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(h_i\)</span></td>
+<td><span class="math inline">\(\mathbb{R}^{15\times 3}\)</span></td>
+<td>armónicos esféricos (SH)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(o_i\)</span></td>
+<td><span class="math inline">\(\mathbb{R}\)</span></td>
+<td>opacidad</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:53%;">
+<p>Un rasterizador diferenciable proyecta las primitivas desde la pose <span class="math inline">\(\phi\)</span> y produce <span class="math inline">\(I_G(\phi)\)</span>, optimizada con:</p>
+<div class="equation-highlight">
+<p><span class="math display">\[L = (1-\lambda)\,L_1 + \lambda\,L_{\text{D-SSIM}}, \qquad \lambda = 0{,}2\]</span></p>
+</div>
+<div class="param-card">
+<p><strong>Geometría</strong> — posición, escala y rotación ubican y orientan cada gaussiana anisotrópica en el espacio 3D.</p>
+</div>
+<div class="param-card">
+<p><strong>Apariencia</strong> — el color base y los SH modelan la radiancia dependiente del punto de vista.</p>
+</div>
+<div title="Dónde está el presupuesto">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Dónde está el presupuesto</strong></p>
+</div>
+<div class="callout-content">
+<p>Con grado cúbico de SH, los coeficientes <span class="math inline">\(h_i\)</span> concentran <strong>más del 80 %</strong> del presupuesto de almacenamiento por gaussiana.</p>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<aside class="notes">
+<ul>
+<li>No hace falta entrar en el rasterizador; lo que importa son los grupos de parámetros y la pérdida.</li>
+<li>Subrayar el último recuadro: son 15 coeficientes por canal RGB, o sea 45 números por primitiva solo para la apariencia dependiente de la vista.</li>
+<li>Ese desbalance es la oportunidad estructural: los grupos de parámetros no son intercambiables, y tratarlos igual desperdicia capacidad.</li>
+<li>Ese dato justifica el decodificador DFT especializado que aparece más adelante.</li>
+<li>Tiempo: 60 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="trabajo-previo-por-qué-no-basta" class="slide level2">
+<h2>Trabajo previo: por qué no basta</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 33%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Método</th>
+<th>Idea principal</th>
+<th>Limitación para comprimir en entrenamiento</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Compact 3D-GS</strong> [4]</td>
+<td>Códigos latentes discretos aprendidos</td>
+<td>Trata de forma genérica parámetros heterogéneos</td>
+</tr>
+<tr class="even">
+<td><strong>EAGLES</strong> [5]</td>
+<td>Representación multiescala + poda</td>
+<td>No regula la introducción de detalle</td>
+</tr>
+<tr class="odd">
+<td><strong>LightGaussian</strong> [6]</td>
+<td>Puntaje de significancia global + baja precisión</td>
+<td>Poda y cuantiza <em>después</em> de que la redundancia se formó</td>
+</tr>
+<tr class="even">
+<td><strong>PUP 3D-GS</strong> [7]</td>
+<td>Puntaje de sensibilidad por Hessiano / Fisher</td>
+<td>Principiado, pero <strong>solo aplicable cerca de la convergencia</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="fragment">
+<div class="info-box">
+<p><strong>La brecha.</strong> Los métodos existentes preguntan <em>¿qué primitivas se pueden eliminar?</em>. Este trabajo agrega la pregunta que faltaba: <em>¿cuándo hay que dejar que aparezca la redundancia?</em> Podar temprano es inestable, porque la optimización temprana todavía no decidió qué primitivas son necesarias.</p>
+</div>
+<aside class="notes">
+<ul>
+<li>PUP es la línea base conceptual más cercana y es el “método padre” del que parte este trabajo.</li>
+<li>El puntaje de PUP es teóricamente sólido, pero supone residual despreciable, lo que solo ocurre al converger. Entonces solo sirve como post-proceso.</li>
+<li>El aporte del paper es <strong>fabricar</strong> ese régimen de residual bajo mucho antes, usando pirámides de imagen.</li>
+<li>Transición: de ahí salen las tres piezas del diseño.</li>
+<li>Tiempo: 60 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</div>
+</section>
+<section id="section-2" class="slide level2" data-background-image="../python-datos/images/background_slides3.png" data-background-opacity="0.3">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 2em">El método</span></p>
+<p><span style="font-size: 2.5em">Estabilizar, medir importancia, asignar bits</span></p>
+</div>
+</section>
+<section id="el-framework-en-tres-piezas" class="slide level2">
+<h2>El framework en tres piezas</h2>
+<div class="columns">
+<div class="column" style="width:32%;">
+<div class="pillar pillar-a">
+<p><strong>1 · Entrenamiento piramidal progresivo (PPT)</strong></p>
+<p>Supervisar la escena de <strong>grueso a fino</strong>: la estructura global se estabiliza antes de que llegue el detalle de alta frecuencia.</p>
+<p>Lleva la optimización a un régimen de <strong>residual <span class="math inline">\(L_1\)</span> bajo</strong> en los niveles gruesos.</p>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="pillar pillar-b">
+<p><strong>2 · Poda basada en la FIM</strong></p>
+<p>Un puntaje de sensibilidad por gaussiana, derivado de la matriz de información de Fisher, ordena las primitivas por importancia.</p>
+<p>El régimen de residual bajo es lo que vuelve <strong>confiable</strong> ese puntaje <em>durante</em> el entrenamiento.</p>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="pillar pillar-c">
+<p><strong>3 · Cuantización consciente de la correlación (CAQ)</strong></p>
+<p>Decodificadores por grupo de parámetros: latentes escalares para los decorrelacionados, base DFT para los SH.</p>
+<p>Gasta bits donde efectivamente hay estructura que explotar.</p>
+</div>
+</div></div>
+<div class="info-box">
+<p>Las tres se combinan en un único lazo de entrenamiento y logran <strong>95 % de reducción promedio de almacenamiento</strong> preservando la calidad del renderizado.</p>
+</div>
+<aside class="notes">
+<ul>
+<li>Presentar estas tres como las contribuciones que reclama el paper.</li>
+<li>Son complementarias, no alternativas: PPT controla <em>cuánta</em> redundancia se crea, la FIM decide <em>cuál</em> se elimina y CAQ reduce <em>los bits</em> de las que sobreviven.</li>
+<li>El orden importa: sin PPT, el puntaje de Fisher no es confiable y la poda temprana destruye primitivas necesarias.</li>
+<li>Tiempo: 50 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="el-lazo-de-entrenamiento-de-punta-a-punta" class="slide level2">
+<h2>El lazo de entrenamiento, de punta a punta</h2>
+<div class="paper-figure">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/fig2-framework.png" class="quarto-figure quarto-figure-center" style="width:92.0%"></p>
+</figure>
+</div>
+</div>
+<div class="caption">
+<ol type="a">
+<li>Lazo que combina decodificación de latentes, rasterización, supervisión piramidal y puntaje de Fisher. (b) Formación de la pirámide con la transformación <span class="math inline">\(f\)</span> a lo largo de <span class="math inline">\(L\)</span> niveles (Fig. 2 del paper).</li>
+</ol>
+</div>
+<aside class="notes">
+<ul>
+<li>Recorrer el panel (a) de izquierda a derecha: los parámetros latentes (h, r, o) pasan por el STE y sus decodificadores; μ, s y b van directo.</li>
+<li>Los parámetros decodificados entran al rasterizador, que renderiza según la pose φ.</li>
+<li>Arriba a la derecha: la pérdida L2 evaluada en el nivel piramidal ℓ alimenta la FIM y de ahí el puntaje de Fisher, que vuelve a la izquierda para podar.</li>
+<li>Abajo: la pérdida (1−λ)L₁ + λL_D-SSIM en el nivel ℓ gobierna la densificación y el paso del optimizador; las flechas rojas son el flujo de gradiente hacia los latentes.</li>
+<li>Panel (b): la pirámide es simplemente suavizado gaussiano más submuestreo, aplicado ℓ veces.</li>
+<li>Tiempo: 70 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ppt-primero-estabilizar-después-el-detalle" class="slide level2">
+<h2>PPT: primero estabilizar, después el detalle</h2>
+<p>La pirámide se construye con suavizado gaussiano seguido de submuestreo:</p>
+<div class="equation-highlight">
+<p><span class="math display">\[f: \mathbb{R}^{H\times W}\rightarrow\mathbb{R}^{\frac{H}{2}\times\frac{W}{2}}, \qquad f_\ell = \underbrace{f\circ f\circ\cdots\circ f}_{\ell\text{ veces}}, \qquad L_\ell = (1-\lambda)L_1^\ell + \lambda L_{\text{D-SSIM}}^\ell\]</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:33%;">
+<div class="stage stage-2">
+<p><strong>Nivel 2 · el más grueso</strong></p>
+<p>Iteraciones 0 – 5.000</p>
+<p>Estructura global, paisaje de pérdida suave, residual muy bajo.</p>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="stage stage-1">
+<p><strong>Nivel 1 · intermedio</strong></p>
+<p>Iteraciones 5.000 – 10.000</p>
+<p>Se introduce detalle intermedio de forma gradual.</p>
+</div>
+</div><div class="column" style="width:33%;">
+<div class="stage stage-0">
+<p><strong>Nivel 0 · resolución completa</strong></p>
+<p>Iteraciones 10.000 – 30.000</p>
+<p>Detalle fino de apariencia sobre un conjunto ya depurado.</p>
+</div>
+</div></div>
+<div title="Ojo con esto">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Ojo con esto</strong></p>
+</div>
+<div class="callout-content">
+<p>La pirámide cambia <strong>la supervisión</strong>, no el objetivo final: el modelo se sigue evaluando a resolución completa.</p>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>El 3D-GS estándar exige desde la iteración 0 que las primitivas expliquen variaciones de alta frecuencia. Eso genera un paisaje de pérdida complejo justo cuando la optimización es más inestable.</li>
+<li>La pirámide difiere esa exigencia: primero la estructura global, después el detalle.</li>
+<li>Las transiciones a 5.000 y 10.000 iteraciones son las del paper.</li>
+<li>Recalcar el callout: no se está renderizando en baja resolución, se está <em>supervisando</em> en baja resolución.</li>
+<li>Tiempo: 65 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="el-residual-bajo-es-lo-que-habilita-todo" class="slide level2">
+<h2>El residual bajo es lo que habilita todo</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<div class="paper-figure">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/fig3-residuals.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+<div class="caption">
+<p>Residual <span class="math inline">\(L_1\)</span> por iteración para los tres niveles. La línea roja punteada es el residual de un 3D-GS ya convergido (Fig. 3 del paper).</p>
+</div>
+</div><div class="column" style="width:45%;">
+<p><br></p>
+<ul>
+<li class="fragment">El nivel 2 baja del residual del 3D-GS <strong>convergido</strong> en la iteración <strong>1.800</strong>; el nivel 1, en la <strong>4.550</strong>.</li>
+<li class="fragment">Es decir: el régimen que PUP solo alcanza al converger (30k iteraciones) aquí está disponible <strong>casi desde el principio</strong>.</li>
+<li class="fragment">Los picos periódicos son los eventos de <strong>densificación</strong>: cada uno inyecta primitivas nuevas y vuelve a subir el residual.</li>
+<li class="fragment">Con el residual bajo, los términos de segundo orden que dependen del residual se vuelven despreciables → la aproximación del Hessiano es utilizable.</li>
+</ul>
+</div></div>
+<aside class="notes">
+<ul>
+<li>Esta es la diapositiva bisagra del paper: conecta el entrenamiento progresivo con la validez del puntaje de Fisher.</li>
+<li>Los marcadores 1800 y 4550 son el dato duro: no es una afirmación cualitativa, está medido sobre Tanks&amp;Temples.</li>
+<li>Poner el contraste en voz alta: PUP necesita 30.000 iteraciones para poder puntuar; acá se puede puntuar desde la 1.800.</li>
+<li>Si preguntan por los picos: son las rondas de densificación propias del 3D-GS, no un artefacto del método.</li>
+<li>Tiempo: 70 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="de-la-sensibilidad-de-fisher-a-un-puntaje-escalar" class="slide level2">
+<h2>De la sensibilidad de Fisher a un puntaje escalar</h2>
+<p>Derivando dos veces el error de reconstrucción <span class="math inline">\(L_2\)</span> bajo supervisión piramidal y aplicando la regla de la cadena, en el régimen de residual bajo el segundo término se anula:</p>
+<div class="equation-highlight">
+<p><span class="math display">\[\nabla_G^2 L_2 \approx \sum_{i=1}^{K} J_{f_\ell}\,\nabla_G I_G(\phi_i)\,\nabla_G I_G(\phi_i)^\top J_{f_\ell}^{\top}\]</span></p>
+</div>
+<p>Restringiendo al bloque diagonal de cada gaussiana <span class="math inline">\(G_j\)</span> y resumiéndolo con el log-determinante:</p>
+<div class="equation-highlight">
+<p><span class="math display">\[H_j = \sum_{i=1}^{K} J_{f_\ell}\,\nabla_{G_j} I_G(\phi_i)\,\nabla_{G_j} I_G(\phi_i)^\top J_{f_\ell}^{\top}, \qquad U_j = \log|H_j|\]</span></p>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="result-box">
+<p><strong><span class="math inline">\(U_j\)</span> alto</strong> — las imágenes renderizadas son sensibles a perturbar <span class="math inline">\(G_j\)</span> → se conserva.</p>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="result-box" style="border-top-color: #C0392B; background: #FDEEEE;">
+<p><strong><span class="math inline">\(U_j\)</span> bajo</strong> — la primitiva aporta poco bajo la supervisión actual → candidata a poda.</p>
+</div>
+</div></div>
+<aside class="notes">
+<ul>
+<li><span class="math inline">\(J_{f_\ell}\)</span> es el jacobiano de la transformación piramidal: es lo que distingue esta derivación de la de PUP.</li>
+<li>La matriz de Fisher captura qué tan fuerte responde la formación de imagen a perturbaciones de los parámetros.</li>
+<li>La aproximación bloque-diagonal es lo que hace tratable el cálculo: se ignoran las interacciones entre gaussianas distintas.</li>
+<li>El log-determinante reduce una matriz de sensibilidad a un único número ordenable.</li>
+<li>Si preguntan por qué log-determinante: es el volumen del elipsoide de sensibilidad, o sea cuánta información aporta esa primitiva en conjunto sobre todos sus parámetros.</li>
+<li>Tiempo: 70 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="dos-regímenes-de-poda" class="slide level2">
+<h2>Dos regímenes de poda</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<h3 id="poda-piramidal">Poda piramidal</h3>
+<ul>
+<li>Se puntúa bajo el nivel piramidal vigente y se eliminan las gaussianas de baja sensibilidad <strong>antes</strong> de pasar a supervisión más fina.</li>
+<li>Actúa como <strong>mecanismo de regularización</strong>: evita que la redundancia formada en niveles gruesos se propague y sesgue la optimización de escala fina.</li>
+<li>Al reducir el conjunto efectivo de optimización, también mejora la eficiencia del entrenamiento.</li>
+</ul>
+<h3 id="poda-iterativa">Poda iterativa</h3>
+<ul>
+<li>Cada <strong>3.000 iteraciones</strong>, entre la <strong>21.000</strong> y la <strong>27.000</strong>.</li>
+<li>Se apoya en la estabilidad temporal de los rankings cerca de la convergencia.</li>
+</ul>
+</div><div class="column" style="width:52%;">
+<div class="paper-figure">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/fig4-spearman.png" class="quarto-figure quarto-figure-center" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+<div class="caption">
+<p>Correlación de rangos de Spearman entre el ranking de sensibilidad en cada iteración y el de un 3D-GS totalmente convergido (Fig. 4 del paper).</p>
+</div>
+<div title="La idea clave">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>La idea clave</strong></p>
+</div>
+<div class="callout-content">
+<p>El puntaje no necesita ser perfecto en la iteración 0: necesita ser <strong>confiable antes de cada decisión de poda</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<aside class="notes">
+<ul>
+<li>Leer la Fig. 4 con precisión: parte en ~0,87 para DeepBlending y ~0,90 para Tanks&amp;Temples en la iteración 20k, y ambas llegan a 1,0 en la 30k.</li>
+<li>Ambas curvas cruzan 0,90 alrededor de la iteración 21.500, que es justo cuando arranca la poda iterativa (21k). Esa coincidencia es el argumento del cronograma.</li>
+<li>Distinguir los dos mecanismos: la poda piramidal es un regularizador por etapas; la iterativa es una compresión final aprovechando rankings ya estables.</li>
+<li>Tiempo: 65 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="caq-gastar-bits-donde-hay-estructura" class="slide level2">
+<h2>CAQ: gastar bits donde hay estructura</h2>
+<div class="columns">
+<div class="column" style="width:42%;">
+<p><strong>El problema de la cuantización genérica</strong></p>
+<p>Los parámetros de una gaussiana no comparten estadísticas. Un único cuantizador aplicado de forma uniforme desperdicia capacidad en grupos con estructuras de correlación distintas.</p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p>Los coeficientes SH dominan el almacenamiento <strong>y</strong> exhiben fuerte correlación entre canales, inducida por su estructura en el dominio de la frecuencia.</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:58%;">
+<table class="caption-top">
+<colgroup>
+<col style="width: 28%">
+<col style="width: 28%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Grupo</th>
+<th>Decodificador</th>
+<th>Justificación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Rotación <span class="math inline">\(r\)</span>, opacidad <span class="math inline">\(o\)</span></td>
+<td>Lineal compacto <span class="math inline">\(D\)</span></td>
+<td>Están <strong>decorrelacionados</strong> → bastan latentes escalares</td>
+</tr>
+<tr class="even">
+<td>Coeficientes SH <span class="math inline">\(h\)</span></td>
+<td>Basado en DFT, <span class="math inline">\(D_{\mathrm{DFT}}\)</span></td>
+<td>La base de frecuencia explota la correlación entre canales</td>
+</tr>
+</tbody>
+</table>
+<div class="equation-highlight">
+<p><span class="math display">\[h = D_{\mathrm{DFT}}(\operatorname{STE}(h^\ell)), \qquad r, o = D(\operatorname{STE}(r^\ell, o^\ell))\]</span></p>
+</div>
+<div class="param-card">
+<p>El <strong>estimador de paso directo (STE)</strong> discretiza en el paso hacia adelante y preserva el flujo de gradiente hacia atrás: latentes y decodificadores se optimizan <strong>junto con</strong> el 3D-GS.</p>
+</div>
+</div></div>
+<div class="info-box">
+<p>Después del entrenamiento: los latentes continuos se discretizan, se codifican por entropía y se almacenan junto con sus decodificadores.</p>
+</div>
+<aside class="notes">
+<ul>
+<li>La clave es que la cuantización vive dentro del lazo de entrenamiento, así que el decodificador se adapta a la escena.</li>
+<li>El STE resuelve el problema de que la discretización tiene gradiente cero en casi todas partes.</li>
+<li>El decodificador DFT está dirigido específicamente a los SH; no es una transformada universal para todos los parámetros. Esa selectividad es justamente el aporte.</li>
+<li>Tiempo: 65 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-3" class="slide level2" data-background-image="../python-datos/images/background_slides3.png" data-background-opacity="0.3">
+<h2></h2>
+<div style="display: flex; justify-content: center; align-items: center; height: 60vh; flex-direction: column; text-align: center;">
+<p><span style="font-size: 2em">La evidencia</span></p>
+<p><span style="font-size: 2.5em">Tres benchmarks y una ablación</span></p>
+</div>
+</section>
+<section id="resultados-sobre-tres-benchmarks" class="slide level2">
+<h2>Resultados sobre tres benchmarks</h2>
+<div class="wide-table">
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th rowspan="2" data-quarto-table-cell-role="th">Método</th>
+<th colspan="4" data-quarto-table-cell-role="th">Mip-NeRF 360</th>
+<th colspan="4" data-quarto-table-cell-role="th">Tanks&amp;Temples</th>
+<th colspan="4" data-quarto-table-cell-role="th">Deep Blending</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">PSNR↑</th>
+<th data-quarto-table-cell-role="th">SSIM↑</th>
+<th data-quarto-table-cell-role="th">LPIPS↓</th>
+<th data-quarto-table-cell-role="th">MB↓</th>
+<th data-quarto-table-cell-role="th">PSNR↑</th>
+<th data-quarto-table-cell-role="th">SSIM↑</th>
+<th data-quarto-table-cell-role="th">LPIPS↓</th>
+<th data-quarto-table-cell-role="th">MB↓</th>
+<th data-quarto-table-cell-role="th">PSNR↑</th>
+<th data-quarto-table-cell-role="th">SSIM↑</th>
+<th data-quarto-table-cell-role="th">LPIPS↓</th>
+<th data-quarto-table-cell-role="th">MB↓</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3D-GS [1]</td>
+<td><strong>27.44</strong></td>
+<td><strong>0.813</strong></td>
+<td>0.218</td>
+<td>822.6</td>
+<td><strong>23.67</strong></td>
+<td><strong>0.844</strong></td>
+<td><strong>0.179</strong></td>
+<td>452.4</td>
+<td>29.48</td>
+<td>0.900</td>
+<td>0.246</td>
+<td>692.5</td>
+</tr>
+<tr class="even">
+<td>Compact [4]</td>
+<td>26.95</td>
+<td>0.797</td>
+<td>0.244</td>
+<td><strong>26.31</strong></td>
+<td>23.33</td>
+<td>0.831</td>
+<td>0.202</td>
+<td><strong>18.97</strong></td>
+<td>29.71</td>
+<td>0.901</td>
+<td>0.257</td>
+<td><strong>25.75</strong></td>
+</tr>
+<tr class="odd">
+<td>EAGLES [5]</td>
+<td>27.07</td>
+<td>0.801</td>
+<td>0.240</td>
+<td>59.49</td>
+<td>23.14</td>
+<td>0.833</td>
+<td>0.203</td>
+<td>30.18</td>
+<td>29.72</td>
+<td>0.906</td>
+<td>0.249</td>
+<td>54.45</td>
+</tr>
+<tr class="even">
+<td>LightGaussian [6]</td>
+<td>26.90</td>
+<td>0.800</td>
+<td>0.240</td>
+<td>53.96</td>
+<td>23.32</td>
+<td>0.829</td>
+<td>0.204</td>
+<td>29.94</td>
+<td>29.12</td>
+<td>0.895</td>
+<td>0.262</td>
+<td>45.25</td>
+</tr>
+<tr class="odd">
+<td>PUP [7]</td>
+<td>26.67</td>
+<td>0.786</td>
+<td>0.271</td>
+<td>74.65</td>
+<td>22.72</td>
+<td>0.801</td>
+<td>0.244</td>
+<td>43.37</td>
+<td>28.85</td>
+<td>0.881</td>
+<td>0.301</td>
+<td>69.98</td>
+</tr>
+<tr class="even">
+<td><strong>Propuesto</strong></td>
+<td>27.01</td>
+<td>0.801</td>
+<td><strong>0.239</strong></td>
+<td>32.78</td>
+<td>23.38</td>
+<td>0.837</td>
+<td><strong>0.202</strong></td>
+<td>23.93</td>
+<td><strong>29.87</strong></td>
+<td><strong>0.912</strong></td>
+<td><strong>0.248</strong></td>
+<td>30.07</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="columns">
+<div class="column" style="width:32%;">
+<div class="metric-row">
+<p><span class="metric">≈95 %</span> <span class="metric-label">reducción promedio de almacenamiento</span></p>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="metric-row">
+<p><span class="metric">+0,39 dB</span> <span class="metric-label">PSNR en Deep Blending: supera al 3D-GS original</span></p>
+</div>
+</div><div class="column" style="width:32%;">
+<div class="metric-row">
+<p><span class="metric">25×</span> <span class="metric-label">modelo más liviano que 3D-GS en Mip-NeRF 360</span></p>
+</div>
+</div></div>
+<aside class="notes">
+<ul>
+<li>Empezar por el titular: ~95 % de reducción promedio, con calidad de renderizado preservada.</li>
+<li>Contra el 3D-GS base: 822,6 → 32,78 MB en Mip-360 (25×), 452,4 → 23,93 en T&amp;T, 692,5 → 30,07 en Deep Blending.</li>
+<li>En Deep Blending el método <strong>supera</strong> al 3D-GS original en las tres métricas de calidad, no solo en tamaño. Probablemente porque la poda actúa como regularizador.</li>
+<li>Ser franco, porque es lo primero que va a preguntar el comité: <strong>Compact 3D-GS logra modelos más chicos en los tres datasets</strong> (26,31 / 18,97 / 25,75 MB). El argumento del paper no es ser el más chico, sino la mejor relación calidad-tamaño: el propuesto le gana a Compact en PSNR, SSIM y LPIPS en todos los datasets.</li>
+<li>PUP, el método padre, es el peor de la tabla en tamaño. Eso muestra cuánto aporta hacer la poda durante el entrenamiento en vez de después.</li>
+<li>Tiempo: 90 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="ablación-qué-aporta-cada-componente" class="slide level2">
+<h2>Ablación: qué aporta cada componente</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
+<table class="caption-top" style="width:100%;">
+<colgroup>
+<col style="width: 37%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 11%">
+<col style="width: 18%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Configuración</th>
+<th>PSNR↑</th>
+<th>SSIM↑</th>
+<th>LPIPS↓</th>
+<th>Primitivas↓</th>
+<th>MB↓</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>3D-GS base</td>
+<td>32.25</td>
+<td>0.946</td>
+<td>0.181</td>
+<td>1,25 M</td>
+<td>294.55</td>
+</tr>
+<tr class="even">
+<td>+ CAQ</td>
+<td>31.36</td>
+<td>0.937</td>
+<td>0.216</td>
+<td>0,98 M</td>
+<td>44.22</td>
+</tr>
+<tr class="odd">
+<td>+ PPT</td>
+<td>31.35</td>
+<td>0.936</td>
+<td>0.216</td>
+<td>0,80 M</td>
+<td>36.82</td>
+</tr>
+<tr class="even">
+<td>+ Poda piramidal (PP)</td>
+<td>30.94</td>
+<td>0.933</td>
+<td>0.219</td>
+<td>0,66 M</td>
+<td>30.88</td>
+</tr>
+<tr class="odd">
+<td>+ Poda iterativa (IP)</td>
+<td>30.91</td>
+<td>0.932</td>
+<td>0.224</td>
+<td>0,33 M</td>
+<td>15.24</td>
+</tr>
+<tr class="even">
+<td><strong>Propuesto (completo)</strong></td>
+<td>30.92</td>
+<td>0.932</td>
+<td>0.224</td>
+<td><strong>0,33 M</strong></td>
+<td><strong>15.28</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="caption">
+<p>Ablación sobre la escena <em>bonsai</em> de Mip-NeRF 360 (Tabla 2 del paper).</p>
+</div>
+</div><div class="column" style="width:45%;">
+<p><br></p>
+<ul>
+<li class="fragment"><strong>CAQ</strong> produce la primera gran caída: 294,55 → 44,22 MB (<strong>85 %</strong>) con un costo moderado de calidad.</li>
+<li class="fragment"><strong>PPT</strong> y las dos podas ya no atacan los bits por primitiva, sino <strong>cuántas primitivas sobreviven</strong>: 1,25 M → 0,33 M.</li>
+<li class="fragment">La <strong>poda iterativa</strong> es la que más primitivas elimina (0,66 M → 0,33 M) por apenas 0,03 dB de PSNR.</li>
+<li class="fragment">El modelo final conserva solo el <strong>26,4 %</strong> de las primitivas del base, con <strong>19×</strong> menos almacenamiento.</li>
+</ul>
+</div></div>
+<aside class="notes">
+<ul>
+<li>Leer la ablación como una cadena causal, no como un ranking: CAQ cambia los bits por primitiva; PPT y las podas cambian cuántas primitivas hay.</li>
+<li>La caída de calidad es gradual y acotada: de 32,25 a 30,92 dB, o sea 1,33 dB en total, a cambio de 19× de compresión.</li>
+<li>La diferencia entre “+ IP” y “Propuesto” es de 0,04 MB: la combinación final preserva esencialmente la misma solución compacta.</li>
+<li>Una crítica justa: el orden de la ablación es acumulativo, así que no se puede aislar el aporte individual de PPT sin CAQ.</li>
+<li>Tiempo: 65 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="conclusiones" class="slide level2">
+<h2>Conclusiones</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="lo-que-el-paper-establece">Lo que el paper establece</h3>
+<ul>
+<li class="fragment">La supervisión piramidal progresiva <strong>crea</strong> un régimen de residual bajo desde la iteración ~1.800, en vez de esperar la convergencia.</li>
+<li class="fragment">Eso vuelve confiables los puntajes de Fisher <strong>durante</strong> el entrenamiento, y con ellos la poda deja de ser un post-proceso.</li>
+<li class="fragment">Los decodificadores estructurados explotan las correlaciones distintas de SH, rotación y opacidad.</li>
+<li class="fragment">El framework unificado logra <strong>≈95 % de reducción</strong> preservando la calidad de renderizado.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="límites-y-preguntas-abiertas">Límites y preguntas abiertas</h3>
+<ul>
+<li class="fragment"><strong>Limitación declarada</strong>: se asume que la supervisión en niveles gruesos produce residuales suficientemente pequeños para que la aproximación FIM sea válida.</li>
+<li class="fragment">Los cronogramas (5k / 10k, poda cada 3k entre 21k y 27k) son <strong>fijos y empíricos</strong>: ¿pueden adaptarse al contenido?</li>
+<li class="fragment">¿Qué bases aprendidas superarían al decodificador DFT?</li>
+<li class="fragment">No se reporta en el paper principal el efecto sobre <strong>velocidad de renderizado</strong> ni tiempo de entrenamiento (van al material suplementario).</li>
+</ul>
+</div></div>
+<div class="info-box">
+<p><strong>Idea para llevarse:</strong> la compresión confiable empieza por <strong>moldear la trayectoria de optimización</strong>, después medir importancia y recién entonces asignar bits según la estructura. El <em>cuándo</em> importa tanto como el operador de compresión.</p>
+</div>
+<aside class="notes">
+<ul>
+<li>Resumir la lógica en una frase: estabilizar, puntuar, comprimir.</li>
+<li>El aporte metodológico que yo defendería: el momento de comprimir es tan importante como el operador de compresión. Eso es transferible más allá de 3D-GS.</li>
+<li>Mencionar la limitación tal como la declaran los autores, sin suavizarla.</li>
+<li>Invitar preguntas sobre cronogramas adaptativos, bases alternativas y despliegue.</li>
+<li>Tiempo: 75 s.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section-4" class="slide level2 title-slide center" data-background-color="#0F2044">
+<h2></h2>
+<div class="title-block">
+<p><strong>Gracias</strong></p>
+<p><span style="font-size: 0.45em; font-weight: normal; font-style: italic;">¿Preguntas?</span></p>
+</div>
+<div class="subtitle-block">
+<p>P. G. Arun Madhav y C. S. Seelamantula, “Making Fisher Work: Train-Time Compression for 3D Gaussian Splatting”<br>
+IEEE ICIP 2026 · DOI 10.1109/ICIP61757.2026.11630029</p>
+</div>
+<div class="author-block">
+<p>Francisco Alfaro Medina · Universidad Técnica Federico Santa María<br>
+<a href="https://github.com/fralfaro/talks" class="uri">https://github.com/fralfaro/talks</a></p>
+</div>
+<aside class="notes">
+<ul>
+<li>Dejar esta diapositiva durante la ronda de preguntas.</li>
+<li>Preguntas probables: por qué DFT y no una base aprendida; qué pasa si la escena no tolera supervisión gruesa (mucha textura de alta frecuencia); cómo se eligen las tasas de poda por escena (están en el material suplementario); si la poda mejora o empeora los FPS.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<style>
+.reveal .slides h2 {
+  font-size: 1.3em;
+}
+.reveal .slides p {
+  font-size: 0.95em;
+}
+.reveal .slides ul {
+  font-size: 0.9em;
+}
+.reveal .slide-logo {
+   max-height: 2.5em !important;
+}
+</style>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="../python-datos/images/usm.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p>ICIP 2026 · Making Fisher Work: Train-Time Compression for 3D Gaussian Splatting</p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1600,
+
+        height: 900,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copiado");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copiado");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/falfaro\.xyz\/talks\/");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    <input type="hidden" id="giscus-base-theme" value="light">
+    <input type="hidden" id="giscus-alt-theme" value="dark">
+    <script>
+      function loadGiscus() {
+        // Function to get the theme based on body class
+        const getTheme = () => {
+          let baseTheme = document.getElementById('giscus-base-theme').value;
+          let altTheme = document.getElementById('giscus-alt-theme').value;
+          return document.body.classList.contains('quarto-dark') ? altTheme : baseTheme;
+        };
+        const script = document.createElement("script");
+        script.src = "https://giscus.app/client.js";
+        script.async = true;
+        script.dataset.repo = "Seth-Nut/talks";
+        script.dataset.repoId = "R_kgDOM_kl2g";
+        script.dataset.category = "General";
+        script.dataset.categoryId = "DIC_kwDOM_kl2s4CjYAh";
+        script.dataset.mapping = "title";
+        script.dataset.reactionsEnabled = "1";
+        script.dataset.emitMetadata = "0";
+        script.dataset.inputPosition = "top";
+        script.dataset.theme = getTheme();
+        script.dataset.lang = "en";
+        script.crossOrigin = "anonymous";
+        // Append the script to the desired div instead of at the end of the body
+        document.getElementById("quarto-content").appendChild(script);
+      }
+      loadGiscus();
+    </script>
+    
+
+</body></html>
