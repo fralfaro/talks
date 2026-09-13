@@ -9,45 +9,52 @@ format:
 
 ## Diplomados
 
-
-
 ::: card
 ### Diplomado en Estrategias de Transformación Digital (USM)
 
-Aprende a crear paneles interactivos y visualizaciones narrativas con Shiny.\
+Módulo de toma de decisiones en la transformación digital.\
 **Presentaciones:**\
 [M3-Semana 01](usm_dtd/semana_01.html) · [M3-Semana 02](usm_dtd/semana_02.html) ·[M3-Semana 03](usm_dtd/semana_03.html)
 :::
 
 ::: card
-### Mini Diplomado de GENAI (UTFSM)
+### Diplomado Marketing Analytics (USM)
 
-Programa dirigido a docentes, académicos y funcionarios para usar la AI.\
+Módulo de análisis de datos y toma de decisiones en marketing.\
 **Presentaciones:**\
-[Taller 1: docencia](ai/taller_1_ia_docencia.html) · [Taller 2: investigación](ai/taller_2_ia_investigacion_productividad.html)
+[M3-Introducción](tools/python-datos/presentacion.html)
 :::
 
-
 ::: card
-###  Mini Diplomado en Herramientas Digitales (USM)
+### Curso Herramientas Digitales (USM)
 
 Herramientas modernas para la universidad: Quarto, LaTeX, GitHub, Google Colab y Python para datos.\
 **Presentaciones:**\
-[Quarto](tools/quarto/presentacion.html) · [LaTeX](tools/latex/presentacion.html) · [GitHub](tools/github/presentacion.html) · [Colab](tools/colab/presentacion.html) · [Python datos](tools/python-datos/presentacion.html)
+[Quarto](tools/quarto/presentacion.html) · [LaTeX](tools/latex/presentacion.html) · [GitHub](tools/github/presentacion.html) · [Colab](tools/colab/presentacion.html) 
 :::
 
 
-## Cursos
+
+## Papers
 
 ::: card
-### Análisis y Diseño de Software (USM)
+### Publicaciones de investigación
 
-Taller introductorio de control de versiones y trabajo colaborativo con el GitLab del Departamento.\
+Papers y presentaciones asociadas a trabajos de investigación.\
+**Papers:**\
+[Making Fisher Work: Train-Time Compression for 3D Gaussian Splatting](papers/Making_Fisherwork_Train-Time_Compression_for_3D_Gaussian_Splatting.pdf) <br> [SCIPS: Single-Shot Photometric Stereo from a Snapshot Compressed Multispectral Image](papers/SCIPS_Single-Shot_Photometric_Stereo_from_a_Snapshot_Compressed_Multispectral_Image.pdf)\
 **Presentaciones:**\
-[Git](ads/git.html) · [GitLab](ads/gitlab.html) · [Git y GitLab (60 min)](ads/git_gitlab_60min.html) · [Guion del expositor](ads/guion_60min.html) · [Git y GitLab (taller 3 h)](ads/git_gitlab.html) · [Programa del taller 3 h](ads/programa.html)
+[Making Fisher Work](tools/3ds-compression/presentacion.html) · [SCIPS](tools/scips2026/presentacion.html)
 :::
 
-## Charlas
+## Congresos
+
+::: card
+### Herramientas digitales (docencia universitaria)
+
+Diseño de un MOOC para el desarrollo de competencias digitales académicas.\
+**Presentación:** [CONTE 2026](tools/conte2026/presentacion.html) 
+:::
 
 ::: card
 ### Hola Quarto
@@ -56,49 +63,25 @@ Compartir • colaborar • enseñar • reimaginar.\
 **Presentaciones:** [RSLA 2026](hello-quarto/presentacion_rsla26.html) · [UAH](hello-quarto/presentacion_uah.html)
 :::
 
-::: card
-### Del Dato al Impacto
-
-Presentaciones finales del curso sobre data storytelling e inteligencia artificial.\
-**Presentaciones:** [Datastorytelling + A.I.](ai/presentacion_mat281.html)
-:::
 
 ::: card
 ### Lo que nadie te dice sobre la IA generativa
 
 Una mirada a las capacidades reales, los límites técnicos y las tendencias emergentes de la IA.\
-**Presentaciones:** [Lo que nadie te dice sobre la IA generativa](ai/pyday_2026.html)
+**Presentaciones:** [PyDay 2026](ai/pyday_2026.html)
 :::
 
-::: card
-### Datos, storytelling e IA: el nuevo arte de contar con datos
 
-Cómo la inteligencia artificial transforma la narrativa con datos (técnicas, herramientas y más).\
-**Presentaciones:** [Datos, storytelling e IA](ai/datasaturday_2026.html)
-:::
 
 ::: card
 ### Crea, Innova y Presenta: Data Storytelling + A.I.
 
 Fundamentos cognitivos y sociológicos del storytelling con datos (Visualización + IA).\
-**Presentaciones:** [Crea, Innova y Presenta](ai/datafrontiers_2026.html)
+**Presentaciones:** [DataFrontiers 2026](ai/datafrontiers_2026.html)
 :::
 
-## Más Charlas
+## Otros Temas
 
-::: card
-### Más allá del bien y el mal
-
-IA, poder y los valores que nadie eligió — Nietzsche, Karen Hao y Eliezer Yudkowsky.\
-**Presentaciones:** [Más allá del bien y el mal](ai/mas_alla_bien_mal.html)
-:::
-
-::: card
-### Límites y proyecciones de la IA generativa
-
-Prompts, RAG, agentes, vibe coding y seguridad — para audiencias no técnicas.\
-**Presentaciones:** [Límites y proyecciones de la IA](ai/limites_proyecciones_ia.html)
-:::
 
 ::: card
 ### Gestión de Operaciones I y II

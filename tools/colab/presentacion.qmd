@@ -29,7 +29,6 @@ execute:
   warning: false
 ---
 
-
 ##  {.title-slide background-color="#0F2044"}
 
 ::: title-block
@@ -49,12 +48,10 @@ Dirección de Transformación Digital · UTFSM\
 Unidad de Educación a Distancia · 2026
 :::
 
-
 ## ¿Te ha pasado esto?
 
 ::: r-stack
 <br>
-
 
 ![](images/intro_01.jpg){.fragment .fade-in-then-out fig-align="center" width="100%"}
 
@@ -67,12 +64,12 @@ Unidad de Educación a Distancia · 2026
 
 ## Objetivos
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/index2.png" alt="Objetivos" style="width: 100%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
@@ -82,7 +79,7 @@ Unidad de Educación a Distancia · 2026
 -   **Recursos y datos**: RAM, CPU, librerías, kernels y cómo subir archivos.
 -   **Integraciones**: Google Drive, credenciales seguras y Gemini IA.
 :::
-:::
+::::::
 
 ------------------------------------------------------------------------
 
@@ -98,12 +95,12 @@ Unidad de Educación a Distancia · 2026
 
 ## ¿Qué es Google Colab?
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/colab.png" alt="Google Colab Logo" style="width: 100%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
@@ -115,7 +112,7 @@ Unidad de Educación a Distancia · 2026
     -   Compartir análisis, tareas y proyectos con un enlace.\
     -   Acceder a GPU/TPU gratuita para proyectos de datos e IA.
 :::
-:::
+::::::
 
 . . .
 
@@ -123,16 +120,14 @@ Unidad de Educación a Distancia · 2026
 
 ------------------------------------------------------------------------
 
-## Ejemplos 
+## Ejemplos
 
 <br>
 
 ::: r-stack
 <br>
 
-
 ![](images/example_01.png){.fragment .fade-in-then-out fig-align="center" width="80%"}
-
 
 ![](images/example_02.png){.fragment fig-align="center" width="90%"}
 :::
@@ -151,15 +146,14 @@ Unidad de Educación a Distancia · 2026
 
 ## Celdas: el corazón de Colab
 
-::: panel-tabset
-
+::::::::::::::: panel-tabset
 ## Markdown
 
-::: columns
+:::::: columns
 ::: {.column width="50%"}
 ✏️ **Celda de texto (Markdown):**
 
-```markdown
+``` markdown
 # Mi Análisis
 
 Este notebook explora los datos de estudiantes
@@ -172,7 +166,7 @@ de la UTFSM durante el semestre 2026.
 ```
 :::
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 👁️ **Se renderiza así:**
 
 Título visible, secciones organizadas y texto formateado — igual que en GitHub README, pero dentro del notebook.
@@ -180,16 +174,16 @@ Título visible, secciones organizadas y texto formateado — igual que en GitHu
 ::: {style="background: #f0f4ff; border-left: 4px solid #0F2044; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; margin-top: 1em;"}
 💡 Usa celdas de texto para explicar cada paso. Un buen notebook se lee como un informe.
 :::
-:::
-:::
+::::
+::::::
 
 ## Python
 
-::: columns
+:::::: columns
 ::: {.column width="50%"}
 ✏️ **Celda de código Python:**
 
-```python
+``` python
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -204,28 +198,28 @@ plt.show()
 ```
 :::
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 👁️ **¿Qué hace?**
 
-- Importa librerías ya instaladas en Colab.
-- Carga un archivo CSV.
-- Genera un histograma directo en el notebook.
+-   Importa librerías ya instaladas en Colab.
+-   Carga un archivo CSV.
+-   Genera un histograma directo en el notebook.
 
 ::: {style="background: #f0f4ff; border-left: 4px solid #0F2044; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; margin-top: 1em;"}
 💡 Python es el lenguaje principal de Colab — y el más usado en ciencia de datos.
 :::
-:::
-:::
+::::
+::::::
 
 ## R
 
-::: columns
+:::::: columns
 ::: {.column width="50%"}
 ✏️ **Activar R en Colab:**
 
 En el menú: **Runtime → Change runtime type → R**
 
-```r
+``` r
 # Cargar datos
 df <- read.csv("datos.csv")
 
@@ -238,20 +232,19 @@ ggplot(df, aes(x = nota)) +
 ```
 :::
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 👁️ **¿Qué hace?**
 
-- Cambia el kernel de Python a R con un clic.
-- Permite usar R y sus librerías (`ggplot2`, `dplyr`, `tidyr`) directamente.
-- Ideal si tu curso usa R como lenguaje principal.
+-   Cambia el kernel de Python a R con un clic.
+-   Permite usar R y sus librerías (`ggplot2`, `dplyr`, `tidyr`) directamente.
+-   Ideal si tu curso usa R como lenguaje principal.
 
 ::: {style="background: #f0f4ff; border-left: 4px solid #0F2044; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; margin-top: 1em;"}
 💡 No necesitas instalar R en tu computador — Colab lo tiene listo.
 :::
-:::
-:::
-
-:::
+::::
+::::::
+:::::::::::::::
 
 ------------------------------------------------------------------------
 
@@ -267,23 +260,22 @@ ggplot(df, aes(x = nota)) +
 
 ## ¿Qué tiene la máquina?
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/vm.png" alt="Runtime" style="width: 90%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
 
--   **CPU**: ~2 núcleos Intel Xeon — suficiente para análisis de datos típicos.
--   **RAM**: ~12 GB — para datasets medianos sin problema.
--   **Disco**: ~100 GB temporales — se borran al cerrar la sesión.
+-   **CPU**: \~2 núcleos Intel Xeon — suficiente para análisis de datos típicos.
+-   **RAM**: \~12 GB — para datasets medianos sin problema.
+-   **Disco**: \~100 GB temporales — se borran al cerrar la sesión.
 -   **GPU T4** *(gratis)*: disponible bajo demanda para modelos de ML.
-
 :::
-:::
+::::::
 
 . . .
 
@@ -293,7 +285,7 @@ ggplot(df, aes(x = nota)) +
 
 ## Verificar recursos disponibles
 
-```python
+``` python
 # Ver RAM y CPU
 import psutil, platform
 
@@ -303,12 +295,12 @@ print(f"RAM total:     {psutil.virtual_memory().total / 1e9:.1f} GB")
 print(f"RAM disponible:{psutil.virtual_memory().available / 1e9:.1f} GB")
 ```
 
-```python
+``` python
 # Ver GPU asignada
 !nvidia-smi --query-gpu=name,memory.total --format=csv,noheader
 ```
 
-```python
+``` python
 # Ver disco disponible
 !df -h /
 ```
@@ -321,29 +313,26 @@ print(f"RAM disponible:{psutil.virtual_memory().available / 1e9:.1f} GB")
 
 ## Librerías: ya instaladas vs. extras
 
-::: columns
-::: {.column width="50%"}
-
+::::::: columns
+:::: {.column width="50%"}
 **✅ Ya vienen instaladas:**
 
 ::: {style="font-size: 0.85em;"}
-| Librería | Para qué sirve |
-|---|---|
-| `pandas` | Datos tabulares |
-| `numpy` | Álgebra numérica |
-| `matplotlib` | Gráficos básicos |
-| `scikit-learn` | Machine Learning |
-| `tensorflow` | Deep Learning |
-| `seaborn` | Visualización estadística |
+| Librería       | Para qué sirve            |
+|----------------|---------------------------|
+| `pandas`       | Datos tabulares           |
+| `numpy`        | Álgebra numérica          |
+| `matplotlib`   | Gráficos básicos          |
+| `scikit-learn` | Machine Learning          |
+| `tensorflow`   | Deep Learning             |
+| `seaborn`      | Visualización estadística |
 :::
+::::
 
-:::
-
-::: {.column width="50%"}
-
+:::: {.column width="50%"}
 **📦 Instalar librerías extra:**
 
-```python
+``` python
 # Con pip (Python)
 !pip install polars lightgbm
 
@@ -357,20 +346,19 @@ install.packages("tidymodels")
 ::: {style="background: #fff3cd; border-left: 4px solid #e6a817; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; margin-top: 0.8em;"}
 ⚠️ Las librerías instaladas con `!pip` se pierden al reiniciar la sesión.
 :::
-
-:::
-:::
+::::
+:::::::
 
 ------------------------------------------------------------------------
 
 ## Cambiar el Kernel (Runtime)
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/runtime.png" alt="Cambiar Kernel" style="width: 90%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
@@ -381,9 +369,8 @@ install.packages("tidymodels")
 -   **GPU T4**: para entrenamiento de modelos de ML/DL.
 -   **TPU**: para modelos muy grandes con TensorFlow.
 -   **R**: para cambiar completamente el lenguaje del entorno.
-
 :::
-:::
+::::::
 
 . . .
 
@@ -403,15 +390,14 @@ install.packages("tidymodels")
 
 ## Subir datos a Colab
 
-::: panel-tabset
-
+::::::::::::::::::: panel-tabset
 ## Subida directa
 
-::: columns
+:::::: columns
 ::: {.column width="50%"}
 ✏️ **Desde el panel lateral:**
 
-```
+```         
 📁 Ícono de carpeta (izquierda)
   → Subir archivo
   → Selecciona tu CSV o Excel
@@ -419,32 +405,32 @@ install.packages("tidymodels")
 
 O desde código:
 
-```python
+``` python
 from google.colab import files
 uploaded = files.upload()
 # → abre un selector de archivos
 ```
 :::
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 👁️ **¿Cuándo usarlo?**
 
-- Archivos pequeños (< 50 MB).
-- Uso puntual en una sola sesión.
+-   Archivos pequeños (\< 50 MB).
+-   Uso puntual en una sola sesión.
 
 ::: {style="background: #fff3cd; border-left: 4px solid #e6a817; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; margin-top: 1em;"}
 ⚠️ El archivo desaparece al cerrar la sesión. No es la opción más estable.
 :::
-:::
-:::
+::::
+::::::
 
 ## Desde URL
 
-::: columns
+:::::: columns
 ::: {.column width="50%"}
 ✏️ **Descargar desde internet:**
 
-```python
+``` python
 import pandas as pd
 
 # Desde GitHub (raw)
@@ -461,25 +447,25 @@ df.head()
 ```
 :::
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 👁️ **¿Cuándo usarlo?**
 
-- Datos públicos en GitHub o repositorios abiertos.
-- Google Sheets compartidos del curso.
+-   Datos públicos en GitHub o repositorios abiertos.
+-   Google Sheets compartidos del curso.
 
 ::: {style="background: #f0f4ff; border-left: 4px solid #0F2044; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; margin-top: 1em;"}
 💡 Es la forma más **reproducible** — el notebook funciona para cualquiera que lo abra.
 :::
-:::
-:::
+::::
+::::::
 
 ## Google Drive
 
-::: columns
+:::::: columns
 ::: {.column width="50%"}
 ✏️ **Montar tu Drive:**
 
-```python
+``` python
 from google.colab import drive
 drive.mount("/content/drive")
 
@@ -492,27 +478,26 @@ df.head()
 ```
 :::
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 👁️ **¿Por qué es lo mejor?**
 
-- Los archivos **persisten** aunque se reinicie la sesión.
-- Organiza datos en carpetas de Drive como si fuera tu escritorio.
-- Funciona igual que una carpeta local.
+-   Los archivos **persisten** aunque se reinicie la sesión.
+-   Organiza datos en carpetas de Drive como si fuera tu escritorio.
+-   Funciona igual que una carpeta local.
 
 ::: {style="background: #f0f4ff; border-left: 4px solid #0F2044; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; margin-top: 1em;"}
 💡 Recomendado para proyectos que se retoman en múltiples sesiones.
 :::
-:::
-:::
+::::
+::::::
 
 ## Credenciales Seguras
 
-::: columns
+:::::: columns
 ::: {.column width="50%"}
-
 ❌ **Nunca hagas esto:**
 
-```python
+``` python
 # Expone tu clave en el notebook
 API_KEY = "sk-abc123supersecreta"
 PASSWORD = "mi_clave_secreta"
@@ -520,17 +505,17 @@ PASSWORD = "mi_clave_secreta"
 
 ✅ **Usa Secrets de Colab:**
 
-```python
+``` python
 from google.colab import userdata
 
 api_key = userdata.get("MI_API_KEY")
 ```
 :::
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 👁️ **¿Cómo configurar Secrets?**
 
-```
+```         
 🔑 Ícono de llave (panel izquierdo)
   → "Add new secret"
   → Nombre: MI_API_KEY
@@ -541,10 +526,9 @@ api_key = userdata.get("MI_API_KEY")
 ::: {style="background: #fde8e8; border-left: 4px solid #c0392b; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; margin-top: 1em;"}
 🔐 Nunca compartas un notebook con claves escritas directamente en el código.
 :::
-:::
-:::
-
-:::
+::::
+::::::
+:::::::::::::::::::
 
 ------------------------------------------------------------------------
 
@@ -560,12 +544,12 @@ api_key = userdata.get("MI_API_KEY")
 
 ## Gemini en Colab
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/gemini.gif" alt="Gemini en Colab" style="width: 100%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
 <br>
@@ -577,7 +561,7 @@ api_key = userdata.get("MI_API_KEY")
     -   Corregir errores y sugerir mejoras.\
     -   Responder preguntas sobre librerías y análisis sin salir de Colab.
 :::
-:::
+::::::
 
 . . .
 
@@ -587,11 +571,10 @@ api_key = userdata.get("MI_API_KEY")
 
 ## Gemini: ejemplos prácticos
 
-::: panel-tabset
-
+::::::::::::: panel-tabset
 ## Generar código
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ✨ **Le pides a Gemini:**
 
@@ -601,7 +584,7 @@ api_key = userdata.get("MI_API_KEY")
 ::: {.column width="50%"}
 ✅ **Gemini genera:**
 
-```python
+``` python
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -619,19 +602,19 @@ plt.tight_layout()
 plt.show()
 ```
 :::
-:::
+:::::
 
 ## Explicar errores
 
-::: columns
+:::::: columns
 ::: {.column width="50%"}
 ✨ **Tienes este error:**
 
-```python
+``` python
 df.groupby("carrera")["nota"].means()
 ```
 
-```
+```         
 AttributeError: 'SeriesGroupBy' object
 has no attribute 'means'
 ```
@@ -639,26 +622,26 @@ has no attribute 'means'
 > *"¿Por qué da este error y cómo lo corrijo?"*
 :::
 
-::: {.column width="50%"}
+:::: {.column width="50%"}
 ✅ **Gemini explica:**
 
 ❌ `means()` no existe — el método correcto es `mean()` (sin 's').
 
 ✅ **Versión corregida:**
 
-```python
+``` python
 df.groupby("carrera")["nota"].mean()
 ```
 
 ::: {style="background: #f0f4ff; border-left: 4px solid #0F2044; border-radius: 6px; padding: 0.5em 1em; font-size: 0.85em; margin-top: 0.8em;"}
 💡 Gemini también puede sugerir mejoras de eficiencia y estilo en tu código.
 :::
-:::
-:::
+::::
+::::::
 
 ## Analizar datos
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ✨ **Le pides a Gemini:**
 
@@ -668,7 +651,7 @@ df.groupby("carrera")["nota"].mean()
 ::: {.column width="50%"}
 ✅ **Gemini propone:**
 
-```python
+``` python
 # Estadísticas descriptivas
 print(df.describe())
 print(df["carrera"].value_counts())
@@ -685,9 +668,8 @@ df.groupby("año_ingreso")["nota"].mean()\
   .plot(marker="o", title="Promedio por año")
 ```
 :::
-:::
-
-:::
+:::::
+:::::::::::::
 
 ------------------------------------------------------------------------
 
@@ -705,22 +687,22 @@ df.groupby("año_ingreso")["nota"].mean()\
 
 <br>
 
-::: columns
-::: {.column width="40%"}
+:::::: columns
+:::: {.column width="40%"}
 ::: {style="text-align: center;"}
 <img src="images/ejercicio.png" alt="Actividad" style="width: 80%; border-radius: 10px;"/>
 :::
-:::
+::::
 
 ::: {.column .incremental width="60%"}
-1. **Abre** [colab.research.google.com](https://colab.research.google.com) y crea un nuevo notebook.
-2. **Agrega** una celda de texto con título, descripción y objetivos en Markdown.
-3. **Carga** un dataset desde URL *(puedes usar datos de [seaborn-data](https://github.com/mwaskom/seaborn-data))*.
-4. **Explora** los datos: `.head()`, `.describe()`, `.info()`.
-5. **Crea** al menos un gráfico con `matplotlib` o `seaborn`.
-6. *(Extra)* Usa **Gemini** para generar o mejorar alguna celda de código.
+1.  **Abre** [colab.research.google.com](https://colab.research.google.com) y crea un nuevo notebook.
+2.  **Agrega** una celda de texto con título, descripción y objetivos en Markdown.
+3.  **Carga** un dataset desde URL *(puedes usar datos de [seaborn-data](https://github.com/mwaskom/seaborn-data))*.
+4.  **Explora** los datos: `.head()`, `.describe()`, `.info()`.
+5.  **Crea** al menos un gráfico con `matplotlib` o `seaborn`.
+6.  *(Extra)* Usa **Gemini** para generar o mejorar alguna celda de código.
 :::
-:::
+::::::
 
 . . .
 
@@ -742,37 +724,35 @@ df.groupby("año_ingreso")["nota"].mean()\
 
 <br>
 
-::: fragment
-::: {style="display: flex; flex-direction: column; gap: 0.75em; font-size: 0.95em;"}
-
+::::::::: fragment
+:::::::: {style="display: flex; flex-direction: column; gap: 0.75em; font-size: 0.95em;"}
 ::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg, #e8f0fe, #f8f9ff); border-left: 4px solid #0F2044; border-radius: 8px; padding: 0.6em 1em;"}
-✅ &nbsp; **Google Colab** permite ejecutar código Python y R sin instalar nada.
+✅   **Google Colab** permite ejecutar código Python y R sin instalar nada.
 :::
 
 ::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg, #e8f0fe, #f8f9ff); border-left: 4px solid #1a3a6b; border-radius: 8px; padding: 0.6em 1em;"}
-✅ &nbsp; Los **notebooks** combinan código, texto y visualizaciones en un solo lugar.
+✅   Los **notebooks** combinan código, texto y visualizaciones en un solo lugar.
 :::
 
 ::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg, #e8f0fe, #f8f9ff); border-left: 4px solid #2a5298; border-radius: 8px; padding: 0.6em 1em;"}
-✅ &nbsp; **Google Drive** es la forma más estable de persistir datos entre sesiones.
+✅   **Google Drive** es la forma más estable de persistir datos entre sesiones.
 :::
 
 ::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg, #e8f0fe, #f8f9ff); border-left: 4px solid #3a6bc4; border-radius: 8px; padding: 0.6em 1em;"}
-✅ &nbsp; Las **credenciales** deben guardarse en Secrets, nunca escritas en el código.
+✅   Las **credenciales** deben guardarse en Secrets, nunca escritas en el código.
 :::
 
 ::: {style="display: flex; align-items: center; gap: 1em; background: linear-gradient(90deg, #e8f0fe, #f8f9ff); border-left: 4px solid #4a84e0; border-radius: 8px; padding: 0.6em 1em;"}
-✅ &nbsp; **Gemini** integrado acelera el aprendizaje y la escritura de código.
+✅   **Gemini** integrado acelera el aprendizaje y la escritura de código.
 :::
-
-:::
-:::
+::::::::
+:::::::::
 
 ------------------------------------------------------------------------
 
 ## 🎉 ¡Gracias por Participar!
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 <br>
 
@@ -786,7 +766,7 @@ df.groupby("año_ingreso")["nota"].mean()\
 ::: {.column width="50%" align="center"}
 ![](images/qr.png){width="400"}
 :::
-:::
+:::::
 
 > 🔗 Nuestro Sitio Web: [educacionadistancia.usm.cl/](https://educacionadistancia.usm.cl/)
 

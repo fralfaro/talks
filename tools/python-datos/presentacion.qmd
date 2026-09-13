@@ -129,11 +129,8 @@ print(maximo)
 ```
 :::
 
-
 :::: {.column width="50%"}
-
 <br>
-
 
 ::: {style="background: #0F2044; color: white; border-radius: 8px; padding: 1em; font-family: Consolas, monospace; font-size: 1.2em;"}
 1500.0
@@ -170,14 +167,9 @@ print(maximo)
 
 ## Ejemplo: Google Colab
 
-
-
 ::: {.fragment style="text-align: center;"}
 ![](https://miro.medium.com/v2/1*nLjcqvMkvZ5TRHF4pZjbHg.gif){fig-align="center" width="80%"}
 :::
-
-
-
 
 ------------------------------------------------------------------------
 
@@ -233,7 +225,6 @@ print(ventas * 1.19)
 
 :::: {.column width="50%"}
 ::: {style="background: #F0F4F8; border-left: 5px solid #4A9FD4; border-radius: 8px; padding: 1em; font-family: Consolas, monospace; font-size: 1em;"}
-
 <br>
 
 155.0
@@ -274,7 +265,6 @@ print(ventas * 1.19)
 
 <br><br>
 
-
 ::::: columns
 ::: {.column width="48%"}
 ``` python
@@ -307,7 +297,6 @@ Un `DataFrame` es una tabla con filas, columnas, índices y métodos para transf
 
 ::::: columns
 ::: {.column width="50%"}
-
 <br>
 
 ``` python
@@ -315,7 +304,6 @@ Un `DataFrame` es una tabla con filas, columnas, índices y métodos para transf
 df.shape
 df.info()
 df.describe()
-
 ```
 :::
 
@@ -356,10 +344,6 @@ alta_asistencia = df[df["asistencia"] >= 0.85]
 -   Cada filtro debe tener una razón analítica.
 :::
 :::::
-
-
-
-
 
 ------------------------------------------------------------------------
 
@@ -481,7 +465,6 @@ Civil · Informática · Industrial
 ::::::::::
 ::::::::::::
 
-
 ------------------------------------------------------------------------
 
 ## Flujo recomendado
@@ -489,7 +472,6 @@ Civil · Informática · Industrial
 ::: {style="text-align: center;"}
 <img src="images/kdd.jpg" alt="Python" style="width: 45%; border-radius: 10px;"/>
 :::
-
 
 ##  {background-image="images/background_slides3.png" background-opacity="0.3"}
 
@@ -529,7 +511,7 @@ La meta de esta primera clase es reconocer el ecosistema y perderle el miedo al 
 
 ------------------------------------------------------------------------
 
-## {.title-slide background-color="#0F2044"}
+##  {.title-slide background-color="#0F2044"}
 
 ::: title-block
 **Muchas gracias**
@@ -543,7 +525,6 @@ Python · Google Colab · GitHub
 Francisco Alfaro Medina\
 Docente USM - 2026
 :::
-
 
 ```{=html}
 <style>
