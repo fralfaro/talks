@@ -90,12 +90,15 @@ Universidad Técnica Federico Santa María
 
 ## La idea correcta, atrapada por el hardware
 
+:::{.fragment}
 
 | Enfoque | Cómo separa las luces | Cuello de botella |
 |------------------|--------------------------|---------------------------|
 | **PS convencional** [1,2] | Tiempo — una luz blanca por cuadro | Captura secuencial: lenta y costosa en almacenamiento |
 | **PS multiespectral RGB** [3,4] | Longitud de onda — 3 canales del sensor | Solo ~3 fuentes de luz efectivas; filtros de color o luces alternadas reintroducen la secuencialidad |
 | **PS hiperespectral** | Longitud de onda — muchos canales | Cámaras caras y poco prácticas de desplegar |
+:::
+
 
 <br>
 
@@ -356,6 +359,8 @@ Cada canal $n_\lambda$ se desplaza $d(\lambda_{n_\lambda}-\lambda_c)$ píxeles a
 
 ## Referencias
 
+<br><br>
+
 ::::: columns
 :::: {.column width="50%"}
 :::: {.references style="font-size: 0.62em; line-height: 1.22;"}
@@ -382,6 +387,8 @@ Y. Li, Y. Hu, X. Wang, Y. Yang, Z. Meng, X. Yuan & P. Liu.<br>
 
 :::: {.column width="50%"}
 :::: {.references style="font-size: 0.62em; line-height: 1.22;"}
+
+<br>
 
 **[4]** H. Guo et al.<br>
 *Multispectral Photometric Stereo for Spatially-Varying Spectral Reflectances.* IJCV, 2022.<br>
