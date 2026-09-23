@@ -33,7 +33,7 @@ execute:
 ::: title-block
 **SCIPS: Single-Shot Photometric Stereo from a <br> Snapshot Compressed Multispectral Image**
 
-[Una exposición, una medición 2D, un mapa de normales]{style="font-size: 0.45em; font-weight: normal; font-style: italic;"}
+
 :::
 
 ::: subtitle-block
@@ -43,7 +43,7 @@ Zhejiang University · Westlake University · ICIP 2026
 
 ::: author-block
 Presentación de paper — Francisco Alfaro Medina\
-Doctorado en Ingeniería Electrónica · Universidad Técnica Federico Santa María
+Universidad Técnica Federico Santa María
 :::
 
 ::: notes
@@ -354,6 +354,57 @@ Cada canal $n_\lambda$ se desplaza $d(\lambda_{n_\lambda}-\lambda_c)$ píxeles a
 :::
 ------------------------------------------------------------------------
 
+## Referencias
+
+::::: columns
+:::: {.column width="50%"}
+:::: {.references style="font-size: 0.62em; line-height: 1.22;"}
+
+**Paper presentado**<br>
+Y. Li, Y. Hu, X. Wang, Y. Yang, Z. Meng, X. Yuan & P. Liu.<br>
+*SCIPS: Single-Shot Photometric Stereo from a Snapshot Compressed Multispectral Image.* ICIP, 2026.<br>
+[`doi:10.1109/ICIP61757.2026.11630570`](https://doi.org/10.1109/ICIP61757.2026.11630570)
+
+**[1]** R. J. Woodham.<br>
+*Photometric Method for Determining Surface Orientation from Multiple Images.* Optical Engineering, 1980.<br>
+[`doi:10.1117/12.7972479`](https://doi.org/10.1117/12.7972479)
+
+**[2]** B. Shi et al.<br>
+*A Benchmark Dataset and Evaluation for Non-Lambertian and Uncalibrated Photometric Stereo.* CVPR, 2016.<br>
+[`doi:10.1109/CVPR.2016.403`](https://doi.org/10.1109/CVPR.2016.403)
+
+**[3]** J. Lv et al.<br>
+*Non-Lambertian Multispectral Photometric Stereo via Spectral Reflectance Decomposition.* IJCAI, 2023.<br>
+[`doi:10.24963/ijcai.2023/139`](https://doi.org/10.24963/ijcai.2023/139)
+
+::::
+::::
+
+:::: {.column width="50%"}
+:::: {.references style="font-size: 0.62em; line-height: 1.22;"}
+
+**[4]** H. Guo et al.<br>
+*Multispectral Photometric Stereo for Spatially-Varying Spectral Reflectances.* IJCV, 2022.<br>
+[`doi:10.1007/s11263-022-01634-4`](https://doi.org/10.1007/s11263-022-01634-4)
+
+**[6]** Y. Cai et al.<br>
+*Mask-guided Spectral-wise Transformer for Efficient Hyperspectral Image Reconstruction.* CVPR, 2022.<br>
+[`doi:10.1109/CVPR52688.2022.01698`](https://doi.org/10.1109/CVPR52688.2022.01698)
+
+**[7]** J. Zhang et al.<br>
+*Improving Spectral Snapshot Reconstruction with Spectral-Spatial Rectification.* CVPR, 2024.<br>
+[`doi:10.1109/CVPR52733.2024.02439`](https://doi.org/10.1109/CVPR52733.2024.02439)
+
+**[18]** S. Ikehata.<br>
+*Scalable, Detailed and Mask-Free Universal Photometric Stereo.* CVPR, 2023.<br>
+[`doi:10.1109/CVPR52729.2023.01268`](https://doi.org/10.1109/CVPR52729.2023.01268)
+
+::::
+::::
+:::::
+
+------------------------------------------------------------------------
+
 ##  {.title-slide background-color="#0F2044"}
 
 ::: title-block
@@ -369,7 +420,7 @@ Li, Hu, Wang, Yang, Meng, Yuan & Liu · ICIP 2026 · DOI 10.1109/ICIP61757.2026.
 
 ::: author-block
 Francisco Alfaro Medina · Universidad Técnica Federico Santa María\
-<https://github.com/fralfaro/talks>
+<https://fralfaro.github.io/talks/>
 :::
 
 ::: notes
