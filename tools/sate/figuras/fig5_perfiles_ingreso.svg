@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="780" viewBox="0 0 1600 780" role="img" aria-labelledby="title desc">
+  <title id="title">Distribución de perfiles de ingreso por cohorte</title>
+  <desc id="desc">Barras apiladas para las cohortes 2023 a 2026, con los perfiles Sin riesgo, Bajo riesgo, Medio riesgo y Alto riesgo.</desc>
+  <rect width="1600" height="780" fill="#ffffff"/>
+  <text x="70" y="58" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#183b56">Perfiles de ingreso: distribución por cohorte</text>
+  <text x="70" y="96" font-family="Arial, sans-serif" font-size="22" fill="#55667c">Reglas de E1 calculadas dentro de cada categoría de carrera · porcentajes dentro de la cohorte</text>
+
+  <g font-family="Arial, sans-serif" font-size="19" fill="#6b7785">
+    <text x="290" y="153">0%</text><text x="570" y="153">25%</text><text x="850" y="153">50%</text><text x="1130" y="153">75%</text><text x="1390" y="153">100%</text>
+  </g>
+  <g stroke="#dce5ee" stroke-width="2">
+    <line x1="300" y1="165" x2="300" y2="650"/><line x1="580" y1="165" x2="580" y2="650"/><line x1="860" y1="165" x2="860" y2="650"/><line x1="1140" y1="165" x2="1140" y2="650"/><line x1="1420" y1="165" x2="1420" y2="650"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#183b56" text-anchor="end">
+    <text x="265" y="248">2023</text><text x="265" y="358">2024</text><text x="265" y="468">2025</text><text x="265" y="578">2026</text>
+  </g>
+  <!-- 2023 -->
+  <g><rect x="300" y="210" width="96.32" height="54" fill="#8bb7e6"/><rect x="396.32" y="210" width="189.28" height="54" fill="#4d91dc"/><rect x="585.60" y="210" width="593.60" height="54" fill="#2165aa"/><rect x="1179.20" y="210" width="240.80" height="54" fill="#133d73"/>
+  <g font-family="Arial, sans-serif" font-size="19" fill="#ffffff" text-anchor="middle"><text x="348" y="244">8.6%</text><text x="491" y="244">16.9%</text><text x="883" y="244">53.0%</text><text x="1299" y="244">21.5%</text></g></g>
+  <!-- 2024 -->
+  <g><rect x="300" y="320" width="110.88" height="54" fill="#8bb7e6"/><rect x="410.88" y="320" width="191.52" height="54" fill="#4d91dc"/><rect x="602.40" y="320" width="586.88" height="54" fill="#2165aa"/><rect x="1189.28" y="320" width="229.60" height="54" fill="#133d73"/>
+  <g font-family="Arial, sans-serif" font-size="19" fill="#ffffff" text-anchor="middle"><text x="355" y="354">9.9%</text><text x="507" y="354">17.1%</text><text x="896" y="354">52.4%</text><text x="1304" y="354">20.5%</text></g></g>
+  <!-- 2025 -->
+  <g><rect x="300" y="430" width="137.76" height="54" fill="#8bb7e6"/><rect x="437.76" y="430" width="191.52" height="54" fill="#4d91dc"/><rect x="629.28" y="430" width="586.88" height="54" fill="#2165aa"/><rect x="1216.16" y="430" width="203.84" height="54" fill="#133d73"/>
+  <g font-family="Arial, sans-serif" font-size="19" fill="#ffffff" text-anchor="middle"><text x="369" y="464">12.3%</text><text x="534" y="464">17.1%</text><text x="923" y="464">52.4%</text><text x="1318" y="464">18.2%</text></g></g>
+  <!-- 2026 -->
+  <g><rect x="300" y="540" width="134.40" height="54" fill="#8bb7e6"/><rect x="434.40" y="540" width="222.88" height="54" fill="#4d91dc"/><rect x="657.28" y="540" width="607.04" height="54" fill="#2165aa"/><rect x="1264.32" y="540" width="154.56" height="54" fill="#133d73"/>
+  <g font-family="Arial, sans-serif" font-size="19" fill="#ffffff" text-anchor="middle"><text x="367" y="574">12.0%</text><text x="546" y="574">19.9%</text><text x="961" y="574">54.2%</text><text x="1342" y="574">13.8%</text></g></g>
+
+  <g font-family="Arial, sans-serif" font-size="21" fill="#183b56">
+    <rect x="390" y="690" width="24" height="24" fill="#8bb7e6"/><text x="425" y="710">Sin riesgo</text>
+    <rect x="610" y="690" width="24" height="24" fill="#4d91dc"/><text x="645" y="710">Bajo riesgo</text>
+    <rect x="850" y="690" width="24" height="24" fill="#2165aa"/><text x="885" y="710">Medio riesgo</text>
+    <rect x="1115" y="690" width="24" height="24" fill="#133d73"/><text x="1150" y="710">Alto riesgo</text>
+  </g>
+</svg>

@@ -1,0 +1,208 @@
+/*-- scss:defaults --*/
+// Mismo tema base que CONTE 2026 (tipografía Georgia, azules, fondos claros).
+@import "../python-datos/custom.scss";
+
+// Paleta CONTE 2026: custom.scss + tarjetas de conte2026/presentacion.qmd.
+// No agregar colores fuera de esta lista.
+$teal:      #0F8B8D;
+$green:     #27AE60;
+$orange:    #F39C12;
+$red:       #C0392B;
+$border:    #D5DCE4;
+$on-dark:   #A8C4E0;
+$bg-blue:   #EBF4FB;
+$bg-orange: #FFF7E6;
+$bg-teal:   #EAF7F5;
+$bg-navy:   #EEF0FA;
+$bg-green:  #EAFAF1;
+$bg-red:    #FDECEC;
+
+/*-- scss:rules --*/
+
+// Un color por alerta, el mismo de la figura de AUC (azul, naranja, verde).
+$a0: #4A9FD4;   // = $accent
+$a1: $orange;
+$a2: $green;
+
+
+// === BASE ===
+.reveal .slides h2 { font-size: 1.4em; margin-bottom: 0.55em; }
+.reveal .slides h3 { margin-top: 0; }
+.reveal .slides section p { margin: 0.3em 0; }
+.reveal .slides li { line-height: 1.3; margin-bottom: 0.25em; }
+.reveal .slide-logo { max-height: 2.5em !important; }
+.no-logo .slide-logo { display: none !important; }
+
+.lead { color: $muted; font-size: 0.9em; line-height: 1.4; }
+
+.eyebrow {
+  color: $teal;
+  font-size: 0.6em;
+  font-weight: bold;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.grid-2, .grid-3 { display: grid; gap: 0.8em; align-items: stretch; }
+.grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.stack { display: flex; flex-direction: column; gap: 0.5em; }
+
+// === TARJETAS (estilo "Cada módulo produce un artefacto" de CONTE) ===
+.card {
+  background: $light;
+  border-radius: 10px;
+  border-top: 6px solid $accent;
+  font-size: 0.9em;
+  padding: 0.7em 0.95em;
+}
+.card h3 { color: $primary; font-size: 1.05em; margin: 0 0 0.3em; }
+.card ul, .card ol { margin: 0.2em 0 0 1.1em; }
+.card li { font-size: 0.95em; }
+
+.card.a0, .kpi.a0 { background: $bg-blue;   border-top-color: $a0; }
+.card.a1, .kpi.a1 { background: $bg-orange; border-top-color: $a1; }
+.card.a2, .kpi.a2 { background: $bg-green;  border-top-color: $a2; }
+.card.done  { background: $bg-green;  border-top-color: $green; }
+.card.limit { background: $light;     border-top-color: $muted; }
+.card.next  { background: $bg-orange; border-top-color: $orange; }
+
+// Insignia circular A0 / A1 / A2
+.badge {
+  align-items: center;
+  border-radius: 50%;
+  color: $white;
+  display: flex;
+  font-size: 0.9em;
+  font-weight: bold;
+  height: 2.2em;
+  justify-content: center;
+  margin: 0 auto 0.4em;
+  width: 2.2em;
+}
+.a0 .badge { background: $a0; }
+.a1 .badge { background: $a1; color: $primary; }
+.a2 .badge { background: $a2; color: $primary; }
+.timeline .card { text-align: center; }
+.timeline .card p { line-height: 1.3; }
+
+// Diapositivas con poco texto: tarjetas más grandes para ocupar el espacio
+.grid-3.roomy { margin-top: 0.8em; }
+.grid-3.roomy .card { font-size: 1em; padding: 1em 1.1em; }
+.box.roomy { font-size: 1em; padding: 0.8em 1.1em; }
+.panel-dark.roomy { font-size: 1.1em; padding: 1.1em 1.3em; }
+
+// === CIFRAS DESTACADAS ===
+.kpi {
+  background: $light;
+  border-radius: 10px;
+  border-top: 6px solid $accent;
+  padding: 0.5em 0.85em;
+}
+.kpi .value { color: $primary; display: block; font-size: 2.3em; font-weight: bold; line-height: 1.05; }
+.kpi .tag {
+  border-radius: 4px;
+  color: $white;
+  display: inline-block;
+  font-size: 0.6em;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  padding: 0.05em 0.45em;
+}
+.kpi.a0 .tag { background: $a0; }
+.kpi.a1 .tag { background: $a1; color: $primary; }
+.kpi.a2 .tag { background: $a2; color: $primary; }
+.kpi p { color: $body-color; font-size: 0.8em; line-height: 1.3; }
+.kpi.compact .value { font-size: 1.7em; }
+
+// === CAJAS CON BORDE IZQUIERDO (estilo "IA: apoyo al aprendizaje" de CONTE) ===
+.box {
+  background: $bg-blue;
+  border-left: 5px solid $accent;
+  border-radius: 8px;
+  font-size: 0.85em;
+  line-height: 1.35;
+  margin-top: 0.5em;
+  padding: 0.55em 0.85em;
+}
+.box > p:first-child > strong:first-child {
+  color: $primary;
+  display: block;
+  font-size: 0.8em;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.15em;
+  text-transform: uppercase;
+}
+.box.teal  { background: $bg-teal;   border-left-color: $teal; }
+.box.ok    { background: $bg-green;  border-left-color: $green; }
+.box.warn  { background: $bg-orange; border-left-color: $orange; }
+.box.risk  { background: $bg-red;    border-left-color: $red; }
+.box.gray  { background: $light;     border-left-color: $muted; }
+
+// Panel oscuro: mismo azul marino del cierre de CONTE
+.panel-dark {
+  background: $primary;
+  border-radius: 12px;
+  color: $white;
+  padding: 0.8em 1em;
+}
+.panel-dark h3 { color: $white; font-size: 0.95em; margin: 0 0 0.3em; }
+.panel-dark p { color: $white; }
+.panel-dark .muted-on-dark { color: $on-dark; font-size: 0.6em; }
+
+// Tesis y cifras de la portada interna
+.thesis .mark-top { color: $on-dark; font-size: 0.55em; font-weight: bold; letter-spacing: 0.14em; text-transform: uppercase; }
+.thesis .mark-title { color: $white; font-size: 1.25em; font-weight: bold; line-height: 1.15; margin: 0.4em 0 0.6em; }
+.thesis .mark-line { align-items: center; border-top: 1px solid $secondary; display: flex; justify-content: space-between; padding: 0.35em 0; }
+.thesis .mark-line strong { color: $white; font-size: 1.3em; }
+.thesis .mark-line span { color: $on-dark; font-size: 0.62em; line-height: 1.25; text-align: right; }
+
+.question-col h3 { color: $primary; font-size: 1.45em; line-height: 1.15; margin: 0.3em 0 0.45em; }
+
+// Escala de grupos de riesgo
+.risk-scale { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0.6em 0 0.3em; }
+.risk-scale span { font-size: 0.62em; font-weight: bold; padding: 0.55em 0.3em; text-align: center; }
+.risk-scale .si { background: $muted;  color: $white; }
+.risk-scale .sr { background: $green;  color: $primary; }
+.risk-scale .rm { background: $orange; color: $primary; }
+.risk-scale .ra { background: $red;    color: $white; }
+
+// === FIGURAS ===
+// La altura máxima se ajusta por diapositiva con style="--h: 560px".
+.fig { text-align: center; }
+.fig figure, .fig p { margin: 0 !important; }
+.fig img {
+  height: auto;
+  max-height: var(--h, 600px) !important;
+  max-width: 100% !important;
+  object-fit: contain;
+  width: auto;
+}
+.fig-caption { color: $muted; font-size: 0.55em; font-style: italic; margin-top: 0.3em; text-align: center; }
+
+// Recorte ampliado de una figura grande (diapositivas de apoyo), sin crear
+// archivos nuevos. Variables en píxeles de la imagen original:
+// --iw ancho total, --x/--y esquina del recorte, --cw/--ch tamaño del recorte.
+.crop {
+  aspect-ratio: calc(var(--cw) / var(--ch));
+  border: 1px solid $border;
+  border-radius: 8px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.crop img {
+  left: calc(-100% * var(--x) / var(--cw));
+  margin: 0 !important;
+  max-height: none !important;
+  max-width: none !important;
+  position: absolute;
+  top: calc(-100% * var(--y) / var(--ch));
+  width: calc(100% * var(--iw) / var(--cw));
+}
+
+// === CIERRE ===
+.references { font-size: 0.85em; line-height: 1.4; }
+.references h3 { font-size: 1.1em; margin: 0.6em 0 0.2em; }
+.questions-panel { align-items: center; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+.questions-panel .big { color: $white; font-size: 1.6em; font-weight: bold; }

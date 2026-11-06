@@ -22,25 +22,18 @@ format:
 execute:
   echo: false
   warning: false
+include-in-header:
+  - text: |
+      <style>
+      .no-logo .slide-logo {
+        display: none !important;
+      }
+      </style>
 ---
 
-##  {.title-slide background-color="#0F2044"}
+##  {data-state="no-logo" background-image="images/slide0.png" background-size="contain" background-position="center" background-color="#000000"}
 
-::: title-block
-**Diseño de un MOOC para el desarrollo de** <br> competencias digitales académicas
-
-Un puente entre la escuela y la universidad
-:::
-
-::: subtitle-block
-GitHub · Google Colab · LaTeX · Quarto\
-CONTE 2026
-:::
-
-::: author-block
-Francisco Alfaro Medina · Patricio Olivares Roncagliolo\
-Universidad Técnica Federico Santa María · Chile
-:::
+##  {data-state="no-logo" background-image="images/slide1.png" background-size="contain" background-position="center" background-color="#000000"}
 
 ------------------------------------------------------------------------
 
@@ -156,30 +149,7 @@ La vitrina para publicar y compartir.
 
 ------------------------------------------------------------------------
 
-## GitHub
-
-<br><br>
-
-:::::: columns
-:::: {.column width="40%"}
-::: {style="text-align: center;"}
-<img src="../github/images/github.png" alt="GitHub" style="width: 65%; border-radius: 10px;"/>
-:::
-::::
-
-::: {.column .incremental width="60%"}
-<br><br>
-
--   **Repositorio**: un espacio para guardar y compartir el proyecto.
--   **README**: explica qué contiene el trabajo y cómo usarlo.
--   **Commits**: dejan registro de cada cambio.
--   **Portafolio**: el trabajo queda visible bajo la identidad del estudiante.
-:::
-::::::
-
-------------------------------------------------------------------------
-
-## Ejemplo: GitHub como memoria
+## GitHub como memoria
 
 ::: r-stack
 ![](../github/images/repos_03.png){.fragment .fade-in-then-out fig-align="center" width="80%"}
@@ -189,30 +159,7 @@ La vitrina para publicar y compartir.
 
 ------------------------------------------------------------------------
 
-## Google Colab
-
-<br><br>
-
-:::::: columns
-:::: {.column width="40%"}
-::: {style="text-align: center;"}
-<img src="../colab/images/colab.png" alt="Google Colab" style="width: 100%; border-radius: 10px;"/>
-:::
-::::
-
-::: {.column .incremental width="60%"}
-<br><br>
-
--   **Notebook**: combina celdas de texto, código y resultados.
--   **Sin instalación**: basta un navegador y una cuenta de Google.
--   **Experimentación**: permite explorar datos y probar ideas.
--   **Compartir**: el notebook se enlaza con GitHub y Drive.
-:::
-::::::
-
-------------------------------------------------------------------------
-
-## Ejemplo: un notebook que se puede leer
+## Google Colab: un notebook que se puede leer
 
 ::::: columns
 ::: {.column width="50%"}
@@ -252,28 +199,7 @@ El notebook no solo guarda el resultado: deja visible el camino que llevó a él
 
 ------------------------------------------------------------------------
 
-## LaTeX y Overleaf
-
-:::::: columns
-:::: {.column width="40%"}
-::: {style="text-align: center;"}
-<img src="../latex/images/latex.png" alt="LaTeX" style="width: 85%; border-radius: 10px;"/>
-:::
-::::
-
-::: {.column .incremental width="60%"}
-<br><br><br>
-
--   **Plantillas**: comenzar con una estructura académica lista para usar.
--   **Contenido**: concentrarse en el argumento, no en ajustar márgenes.
--   **Colaboración**: editar y compilar desde el navegador.
--   **Informe**: producir un documento formal con figuras y referencias.
-:::
-::::::
-
-------------------------------------------------------------------------
-
-## Ejemplo: del código al informe
+## Overleaf: del código al informe
 
 ::: r-stack
 ![](../latex/images/overleaf1.jpg){.fragment .fade-in-then-out fig-align="center" width="80%"}
@@ -283,37 +209,13 @@ El notebook no solo guarda el resultado: deja visible el camino que llevó a él
 
 ------------------------------------------------------------------------
 
-## Quarto
-
-<br><br>
-
-:::::: columns
-:::: {.column width="40%"}
-::: {style="text-align: center;"}
-<img src="images/quarto2.png" alt="Quarto" style="width: 70%; border-radius: 10px;"/>
-:::
-::::
-
-::: {.column .incremental width="60%"}
-<br><br>
-
--   **Un documento, múltiples salidas**: HTML, PDF, Word, etc.
--   **Markdown + código**: texto y visualizaciones en un mismo lugar.
--   **Publicación**: Quarto Pub o GitHub Pages.
--   **Portafolio**: reúne los productos construidos en los módulos anteriores.
-:::
-::::::
-
-------------------------------------------------------------------------
-
-## Ejemplo: una fuente, varias publicaciones
+## Quarto: una fuente, varias publicaciones
 
 <br>
 
 ::: {style="text-align: center;"}
 <img src="../quarto/images/horst_quarto_schematic.png" alt="Quarto: entradas y formatos de salida" style="width: 88%; border-radius: 10px;"/>
 :::
-
 
 ------------------------------------------------------------------------
 
@@ -357,67 +259,63 @@ Sitio personal con portafolio integrado.
 
 . . .
 
-> El resultado final no es una tarea aislada: es una trayectoria que se puede mostrar, retomar y reutilizar.
-> Además, cada módulo combina un cuestionario breve con un trabajo práctico relacionado con su objetivo.
+> El resultado final no es una tarea aislada: es una trayectoria que se puede mostrar, retomar y reutilizar. Además, cada módulo combina un cuestionario breve con un trabajo práctico relacionado con su objetivo.
 
 ------------------------------------------------------------------------
 
-
-
 ## IA: apoyo al aprendizaje, no sustitución
 
-::::: columns
-::: {.column width="50%"}
-
+:::::::: columns
+:::::: {.column width="50%"}
 <br>
 
-:::: {style="background: #EAFAF1; border-left: 5px solid #27AE60; border-radius: 8px; padding: 0.8em; margin-bottom: 1em;"}
+::: {style="background: #EAFAF1; border-left: 5px solid #27AE60; border-radius: 8px; padding: 0.8em; margin-bottom: 1em;"}
 **Aceptable**: Explicar un concepto, sugerir una pista o identificar la causa probable de un error.
-::::
-
-:::: {style="background: #dededd; border-left: 5px solid #dededd; border-radius: 8px; padding: 0.8em; margin-bottom: 1em;"}
-**Zona gris**: Reescribir un párrafo propio o sugerir la estructura de un informe.
-::::
-
-:::: {style="background: #FDECEC; border-left: 5px solid #C0392B; border-radius: 8px; padding: 0.8em;"}
-**Inaceptable**: Presentar como propio texto generado íntegramente o referencias no verificadas.
-::::
-
 :::
+
+::: {style="background: #dededd; border-left: 5px solid #dededd; border-radius: 8px; padding: 0.8em; margin-bottom: 1em;"}
+**Zona gris**: Reescribir un párrafo propio o sugerir la estructura de un informe.
+:::
+
+::: {style="background: #FDECEC; border-left: 5px solid #C0392B; border-radius: 8px; padding: 0.8em;"}
+**Inaceptable**: Presentar como propio texto generado íntegramente o referencias no verificadas.
+:::
+::::::
 
 ::: {.column width="50%"}
 ![](images/choice.jpeg){fig-align="center"}
 :::
-:::::
-
+::::::::
 
 ------------------------------------------------------------------------
 
-## Conclusiones 
+## Conclusiones
 
 <br><br>
 
+::: {style="text-align: center; margin-top: -0.2em; margin-bottom: 0.8em; color: #6B7A8D;"}
+El MOOC está en producción: módulos breves, de menos de 10 minutos, para acompañar la transición escuela–universidad.
+:::
+
 ::::: columns
-::: {.column .incremental width="50%"}
+::: {.column .incremental style="width: 50%; box-sizing: border-box; background: #F5F7FA; border-top: 6px solid #4A9FD4; border-radius: 12px; padding: 0.7em 1em 0.5em;"}
 ### Ideas clave
 
--   El MOOC enseña un **flujo**, no cuatro herramientas desconectadas.
--   El diseño cloud-first reduce la barrera de instalación.
--   El portafolio hace visible el proceso de aprendizaje.
--   La propuesta está dirigida a la transición escuela–universidad.
+-   **Un solo flujo**: organizar, explorar, escribir y publicar.
+-   **Cloud-first**: comenzar sin instalar ni configurar.
+-   **Proceso**: portafolio muestra cómo se aprende.
+-   **Puente temprano**: preparar el salto a la universidad.
 :::
 
-::: {.column .incremental width="50%"}
+::: {.column .incremental style="width: 50%; box-sizing: border-box; background: #F5F7FA; border-top: 6px solid #27AE60; border-radius: 12px; padding: 0.7em 1em 0.5em;"}
 ### Siguiente paso
 
--   Implementar el MOOC y calibrar sus 40 preguntas.
--   Medir su relación con el desempeño en primer año.
--   Comparar los contextos previos: MAT281, ICS-294 y talks.
--   Convertir el marco de IA en una rúbrica de autoevaluación.
+-   **Cerrar producción**: terminar las grabaciones.
+-   **Publicar**: liberar el MOOC en `aprende.usm.cl`.
+-   **Evaluar**: preguntas para medir desempeño en 1° año.
+-   **Transferir**: contextos y uso de IA en una rúbrica.
 :::
 :::::
-
-
 
 ------------------------------------------------------------------------
 
@@ -428,13 +326,13 @@ Sitio personal con portafolio integrado.
 :::
 
 ::: subtitle-block
-Francisco Alfaro Medina <br>  Patricio Olivares Roncagliolo\
+Francisco Alfaro Medina <br> Patricio Olivares Roncagliolo\
 CONTE 2026
 :::
 
 ::: author-block
 <https://fralfaro.github.io/docencia-digital/>\
-<https://github.com/fralfaro/talks>
+<https://aprende.usm.cl/>
 :::
 
 ```{=html}
